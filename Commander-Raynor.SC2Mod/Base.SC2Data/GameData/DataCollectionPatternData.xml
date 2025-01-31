@@ -30,5 +30,8 @@
         <Fields Reference="Unit,^ParamId^,CardLayouts"/>
         <Fields Reference="Unit,^ParamId^,Sight"/>
         <Fields Reference="Unit,^ParamId^,CargoSize"/>
+        <Fields Reference="Unit,^ParamId^,Speed"/>
+        <Fields Reference="Unit,^ParamId^,Acceleration"/>
+        <Fields Reference="Unit,^ParamId^,Deceleration"/>
     </CDataCollectionPattern>
 </Catalog>

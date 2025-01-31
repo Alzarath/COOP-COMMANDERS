@@ -72,7 +72,7 @@
             <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
         </TerrainSquibs>
         <WalkAnimMoveSpeed value="2.25"/>
-        <AbilSoundArray AbilCmd="RaynorCommanderStimpack,255" Sound="RaynorCommanderMarine@StimPackVO"/>
+        <AbilSoundArray AbilCmd="RaynorCommanderStimpack,Execute" Sound="RaynorCommanderMarine@StimPackVO"/>
         <BarOffset value="40"/>
         <BarWidth value="36"/>
         <GlossaryAnim value="Spell"/>

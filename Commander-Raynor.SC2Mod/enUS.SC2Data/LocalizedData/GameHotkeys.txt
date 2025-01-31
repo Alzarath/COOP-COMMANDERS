@@ -1,1 +1,1 @@
-﻿Button/Hotkey/RaynorCommanderMarine@Stim=T
+﻿Button/Hotkey/RaynorCommanderStimpack=T

@@ -5,7 +5,7 @@
         <Kind value="Ranged"/>
         <Amount value="6"/>
     </CEffectDamage>
-    <CEffectApplyBehavior id="Stimpack2">
+    <CEffectApplyBehavior id="RaynorCommanderStimpack@AB">
         <EditorCategories value="Race:Terran"/>
         <Behavior value="RaynorCommanderStimpack@Stimpack"/>
     </CEffectApplyBehavior>

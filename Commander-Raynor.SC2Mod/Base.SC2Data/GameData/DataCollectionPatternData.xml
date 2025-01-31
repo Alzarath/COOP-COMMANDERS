@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollectionPattern id="CommanderAbilities_AB">
+        <Fields Reference="Abil,^ParamId^,Name"/>
+        <Fields Reference="Effect,^ParamId^@AB,Behavior"/>
+    </CDataCollectionPattern>
     <CDataCollectionPattern id="CommanderUnits">
+        <Fields Reference="Actor,^ParamId^,UnitIcon"/>
+        <Fields Reference="Actor,^ParamId^,LifeArmorIcon"/>
+        <Fields Reference="Actor,^ParamId^,SoundArray"/>
+        <Fields Reference="Actor,^ParamId^,AbilSoundArray"/>
+        <Fields Reference="Actor,^ParamId^,DeathArray"/>
         <Fields Reference="Unit,^ParamId^,LifeStart"/>
+        <Fields Reference="Unit,^ParamId^,LifeMax"/>
+        <Fields Reference="Unit,^ParamId^,LifeRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,ShieldsStart"/>
+        <Fields Reference="Unit,^ParamId^,ShieldsMax"/>
+        <Fields Reference="Unit,^ParamId^,ShieldRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,EnergyStart"/>
+        <Fields Reference="Unit,^ParamId^,EnergyMax"/>
+        <Fields Reference="Unit,^ParamId^,EnergyRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,WeaponArray"/>
+        <Fields Reference="Unit,^ParamId^,Mover"/>
+        <Fields Reference="Unit,^ParamId^,Collide"/>
+        <Fields Reference="Unit,^ParamId^,Attributes"/>
+        <Fields Reference="Unit,^ParamId^,Name"/>
+        <Fields Reference="Unit,^ParamId^,Description"/>
+        <Fields Reference="Unit,^ParamId^,BehaviorArray"/>
+        <Fields Reference="Unit,^ParamId^,AbilArray"/>
+        <Fields Reference="Unit,^ParamId^,CardLayouts"/>
+        <Fields Reference="Unit,^ParamId^,Sight"/>
+        <Fields Reference="Unit,^ParamId^,CargoSize"/>
     </CDataCollectionPattern>
 </Catalog>

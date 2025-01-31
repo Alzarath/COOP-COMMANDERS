@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollectionAbil id="RaynorCommanderAbility">
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_AB"/>
+    </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderMarine">
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
-        <DataRecord Entry="Unit,RaynorCommanderMarine@Marine"/>
-        <DataRecord Entry="Actor,RaynorCommanderMarine@Marine"/>
-        <DataRecord Entry="Button,RaynorCommanderMarine@Stim"/>
+        <DataRecord Entry="Unit,RaynorCommanderMarine"/>
+        <DataRecord Entry="Actor,RaynorCommanderMarine"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@Marine"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeath"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathAcid"/>
@@ -14,21 +18,27 @@
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathFire"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathRagdoll"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@MarinePortrait"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Ready"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Help"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_What"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Yes"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Attack"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Pissed"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXBloodSpray"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXEat"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXEviscerate"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXFire"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_StimPackVO"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Help"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@What"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Yes"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Attack"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Pissed"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXBloodSpray"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXEat"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXEviscerate"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXFire"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@StimPackVO"/>
         <Pattern value="CommanderUnits"/>
-        <TechInfoUnit value="RaynorCommanderMarine@Marine"/>
+        <EditorIconSource value="Unit"/>
+        <Button value="Marine"/>
     </CDataCollectionUnit>
-    <CDataCollectionAbil id="RaynorCommanderStimpack">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+    <CDataCollectionAbil id="RaynorCommanderStimpack" parent="RaynorCommanderAbility">
+        <DataRecord Entry="Behavior,RaynorCommanderStimpack@Stimpack"/>
+        <DataRecord Entry="Button,RaynorCommanderStimpack"/>
+        <DataRecord Entry="Abil,RaynorCommanderStimpack"/>
+        <DataRecord Entry="Effect,RaynorCommanderStimpack@AB"/>
+        <Name value="DataCollection/Name/RaynorCommanderStimpack"/>
+        <Button value="RaynorCommanderStimpack"/>
     </CDataCollectionAbil>
 </Catalog>

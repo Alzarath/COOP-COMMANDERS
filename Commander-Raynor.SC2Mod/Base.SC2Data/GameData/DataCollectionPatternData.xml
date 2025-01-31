@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionPattern id="CommanderUnits">
+        <Fields Reference="Unit,^ParamId^,LifeStart"/>
+    </CDataCollectionPattern>
+</Catalog>

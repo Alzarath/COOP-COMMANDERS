@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="RaynorCommanderMarine@Marine" parent="MarineBase">
+        <Model value="Assets\Units\Terran\Marine\Marine.m3"/>
+    </CModel>
+    <CModel id="MarineAttackImpact2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MarineAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MarineBunkerAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="MarineAttackLaunch"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarineDeath" parent="MarineDeathBase">
+        <Model value="Assets\Units\Terran\MarineDeathEx1\MarineDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarineDeathAcid" parent="MarineDeathAcidBase">
+        <Model value="Assets\Units\Terran\MarineDeathAcid\MarineDeathAcid.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarineDeathBlast" parent="MarineDeathBlastBase">
+        <Model value="Assets\Units\Terran\MarineDeathBlastEx1\MarineDeathBlastEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarineDeathEat" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\MarineDeathEat\MarineDeathEat.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarineDeathEviscerate" parent="MarineDeathEviscerateBase">
+        <Model value="Assets\Units\Terran\MarineDeathEviscerateEx1\MarineDeathEviscerateEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarineDeathFire" parent="MarineDeathFireBase">
+        <Model value="Assets\Units\Terran\MarineDeathFire\MarineDeathFire.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarineDeathRagdoll" parent="MarineDeathRagdollBase">
+        <Model value="Assets\Units\Terran\MarineDeathRagdoll\MarineDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarine@MarinePortrait" parent="MarinePortraitBase">
+        <Model value="Assets\Portraits\Terran\MarinePortrait\MarinePortrait.m3"/>
+        <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
+        <Lighting value="MarinePortrait"/>
+    </CModel>
+    <CModel id="StimpackEndImpact2" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+</Catalog>

@@ -1,3 +1,13 @@
-﻿DocInfo/DescLong=Completely devoid of any description whatsoever.
+﻿Abil/Name/Stimpack2=Stimpack
+Behavior/Name/RaynorCommanderStimpack@Stimpack=Stimpack
+Behavior/Tooltip/RaynorCommanderStimpack@Stimpack=This unit moves and attacks more quickly while under the effects of Stimpack.
+Button/Name/RaynorCommanderMarine@Stim=Use Stimpack
+Button/Tooltip/RaynorCommanderMarine@Marine=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/RaynorCommanderMarine@Stim=Injects the unit with powerful stimulants that greatly increase attack and movement speeds for a few seconds. Injures the unit for 10 of the unit's life.
+DataCollection/Name/RaynorCommanderMarine=Raynor Commander - Marine
+DataCollection/Name/RaynorCommanderStimpack=Raynor Commander - Stimpack
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/GuassRifle2=Guass Rifle
+Effect/Name/Stimpack2=Stim Pack (Apply Buff)
+Unit/Name/RaynorCommanderMarine@Marine=Marine

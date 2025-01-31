@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionUnit id="RaynorCommanderMarine">
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Unit,RaynorCommanderMarine@Marine"/>
+        <DataRecord Entry="Actor,RaynorCommanderMarine@Marine"/>
+        <DataRecord Entry="Button,RaynorCommanderMarine@Stim"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@Marine"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeath"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathAcid"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathBlast"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathEat"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathEviscerate"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathFire"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathRagdoll"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@MarinePortrait"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Help"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_What"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Yes"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Attack"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_Pissed"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXBloodSpray"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXEat"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXEviscerate"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_DeathFXFire"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Marine_StimPackVO"/>
+        <Pattern value="CommanderUnits"/>
+        <TechInfoUnit value="RaynorCommanderMarine@Marine"/>
+    </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderStimpack">
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+    </CDataCollectionAbil>
+</Catalog>

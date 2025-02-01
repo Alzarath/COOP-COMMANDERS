@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="FusionCutter2" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="RaynorCommanderStimpackMara@AB">
+        <ValidatorArray index="0" value="StimpackTargetFilters"/>
+        <EditorCategories value="Race:Terran"/>
+        <Marker Link="Effect/Stimpack"/>
+        <Behavior value="RaynorCommanderStimpackMara"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="WeaponRaynorSCV" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Amount value="5"/>
+    </CEffectDamage>
     <CEffectDamage id="GuassRifle2" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
@@ -7,6 +21,20 @@
     </CEffectDamage>
     <CEffectApplyBehavior id="RaynorCommanderStimpack@AB">
         <EditorCategories value="Race:Terran"/>
-        <Behavior value="RaynorCommanderStimpack@Stimpack"/>
+        <Behavior value="RaynorCommanderStimpack"/>
     </CEffectApplyBehavior>
+    <CEffectCreateHealer id="Repair2">
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="NotVortexd"/>
+        <ValidatorArray value="NotStasis"/>
+        <EditorCategories value="Race:Terran"/>
+        <DrainResourceCostFactor index="Minerals" value="0.25"/>
+        <DrainResourceCostFactor index="Vespene" value="0.25"/>
+        <DrainResourceCostFactor index="Terrazine" value="0.25"/>
+        <DrainResourceCostFactor index="Custom" value="0.25"/>
+        <RechargeVitalRate value="1"/>
+        <TimeFactor value="1"/>
+    </CEffectCreateHealer>
 </Catalog>

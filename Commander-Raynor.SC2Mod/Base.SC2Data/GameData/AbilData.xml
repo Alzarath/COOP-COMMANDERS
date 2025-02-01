@@ -10,7 +10,82 @@
             <Vital index="Life" value="10"/>
         </Cost>
         <AINotifyEffect value="RaynorCommanderStimpack@AB"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderStimpack" Requirements="UseStimpack">
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderStimpack" Requirements="RaynorCommanderStimpack">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilBuild id="RaynorCommanderBuildSCV">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <FlagArray index="Interruptible" value="1"/>
+        <FlagArray index="PeonDisableCollision" value="1"/>
+        <InfoArray index="Build1" Unit="CommandCenter" Time="100">
+            <Button DefaultButtonFace="CommandCenter" State="Suppressed"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="SupplyDepot" Time="30">
+            <Button DefaultButtonFace="SupplyDepot"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="Refinery" Time="30">
+            <Button DefaultButtonFace="Refinery"/>
+            <ValidatorArray value="HasVespene2"/>
+        </InfoArray>
+        <InfoArray index="Build4" Unit="Barracks" Time="65">
+            <Button DefaultButtonFace="Barracks" State="Suppressed" Requirements="RaynorCommanderHaveSupplyDepot"/>
+        </InfoArray>
+        <InfoArray index="Build5" Unit="EngineeringBay" Time="35">
+            <Button DefaultButtonFace="EngineeringBay" State="Suppressed" Requirements="RaynorCommanderHaveCommandCenter"/>
+        </InfoArray>
+        <InfoArray index="Build6" Unit="MissileTurret" Time="25">
+            <Button DefaultButtonFace="MissileTurret" State="Restricted" Requirements="RaynorCommanderHaveEngineeringBay"/>
+        </InfoArray>
+        <InfoArray index="Build7" Unit="Bunker" Time="40">
+            <Button DefaultButtonFace="Bunker" State="Restricted" Requirements="RaynorCommanderHaveBarracks"/>
+        </InfoArray>
+        <InfoArray index="Build8" Unit="RefineryRich" Time="30">
+            <Button DefaultButtonFace="Refinery"/>
+            <ValidatorArray value="HasVespene2"/>
+        </InfoArray>
+        <InfoArray index="Build9" Unit="SensorTower" Time="25">
+            <Button DefaultButtonFace="SensorTower" State="Restricted" Requirements="RaynorCommanderHaveEngineeringBay"/>
+        </InfoArray>
+        <InfoArray index="Build10" Unit="GhostAcademy" Time="40">
+            <Button DefaultButtonFace="GhostAcademy" State="Suppressed" Requirements="RaynorCommanderHaveBarracks"/>
+        </InfoArray>
+        <InfoArray index="Build11" Unit="Factory" Time="60">
+            <Button DefaultButtonFace="Factory" State="Suppressed" Requirements="RaynorCommanderHaveBarracks"/>
+        </InfoArray>
+        <InfoArray index="Build12" Unit="Starport" Time="50">
+            <Button DefaultButtonFace="Starport" State="Suppressed" Requirements="RaynorCommanderHaveFactory"/>
+        </InfoArray>
+        <InfoArray index="Build13" Time="50">
+            <Button State="Suppressed" Requirements="RaynorCommanderHaveBarracks"/>
+        </InfoArray>
+        <InfoArray index="Build14" Unit="Armory" Time="65">
+            <Button DefaultButtonFace="Armory" State="Suppressed" Requirements="RaynorCommanderHaveFactory"/>
+        </InfoArray>
+        <InfoArray index="Build16" Unit="FusionCore" Time="65">
+            <Button DefaultButtonFace="FusionCore" State="Suppressed" Requirements="RaynorCommanderHaveStarport"/>
+        </InfoArray>
+        <InfoArray index="Build30" Unit="BomberLaunchPad" Time="30">
+            <Button DefaultButtonFace="BuildBomberLaunchPad" Requirements="RaynorCommanderHaveFactory"/>
+        </InfoArray>
+        <FidgetDelayMin value="5"/>
+        <FidgetDelayMax value="10"/>
+        <ConstructionMover value="Construction"/>
+    </CAbilBuild>
+    <CAbilEffectInstant id="RaynorCommanderStimpackMara">
+        <AbilSetId value="Stimpack"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="1"/>
+        <Effect index="0" value="RaynorCommanderStimpackMara@AB"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Life" value="20"/>
+            <Charge Link="Abil/Stimpack"/>
+            <Cooldown Link="Abil/Stimpack"/>
+        </Cost>
+        <Marker Link="Abil/Stimpack"/>
+        <AINotifyEffect value="Stimpack"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderStimpackMara" Requirements="UseStimpack">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>

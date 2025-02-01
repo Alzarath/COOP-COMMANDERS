@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionAbil id="CommanderAbilityBuild">
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_Build"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit id="CommanderUnit">
+        <EditorIconSource value="Unit"/>
+        <Pattern value="CommanderUnits"/>
+    </CDataCollectionUnit>
+    <CDataCollectionAbil id="CommanderAbilityAB">
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_ABEffectInstant"/>
+    </CDataCollectionAbil>
+    <CDataCollectionPattern id="CommanderAbilities_ABEffectInstant">
+        <Fields Reference="Sound,^ParamId^@Cast,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundCast"/>
+        <Fields Reference="Sound,^ParamId^@Finish,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundFinish"/>
+        <Fields Reference="Actor,^ParamId^@StartImpact,Model" NameOverride="DataCollectionPattern/CommandersAbilityAB/StartImpactModel"/>
+        <Fields Reference="Actor,^ParamId^@EndImpact,Model" NameOverride="DataCollectionPattern/CommandersAbilityAB/EndImpactModel"/>
+        <Fields Reference="Abil,^ParamId^,Name"/>
+        <Fields Reference="Abil,^ParamId^,Cost"/>
+        <Fields Reference="Abil,^ParamId^,CmdButtonArray.Requirements"/>
+        <Fields Reference="Effect,^ParamId^@AB,Behavior"/>
+        <Fields Reference="Requirement,^ParamId^,NodeArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/NodeRequirement"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.AttackSpeedMultiplier"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.MoveSpeedMultiplier"/>
+        <Fields Reference="Button,^ParamId^,Name" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonName"/>
+        <Fields Reference="Button,^ParamId^,Tooltip" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonTooltip"/>
+        <Fields Reference="Button,^ParamId^,Icon" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonIcon"/>
+        <Fields Reference="Button,^ParamId^,AlertIcon" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonAlertIcon"/>
+    </CDataCollectionPattern>
+    <CDataCollectionPattern id="CommanderAbilities_Build">
+        <Fields Reference="Abil,^ParamId^,InfoArray"/>
+    </CDataCollectionPattern>
+    <CDataCollectionPattern id="CommanderUnits">
+        <Fields Reference="Actor,^ParamId^,UnitIcon"/>
+        <Fields Reference="Actor,^ParamId^,LifeArmorIcon"/>
+        <Fields Reference="Actor,^ParamId^,SoundArray"/>
+        <Fields Reference="Actor,^ParamId^,AbilSoundArray"/>
+        <Fields Reference="Actor,^ParamId^,DeathArray"/>
+        <Fields Reference="Unit,^ParamId^,LifeStart"/>
+        <Fields Reference="Unit,^ParamId^,LifeMax"/>
+        <Fields Reference="Unit,^ParamId^,LifeRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,ShieldsStart"/>
+        <Fields Reference="Unit,^ParamId^,ShieldsMax"/>
+        <Fields Reference="Unit,^ParamId^,ShieldRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,EnergyStart"/>
+        <Fields Reference="Unit,^ParamId^,EnergyMax"/>
+        <Fields Reference="Unit,^ParamId^,EnergyRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,WeaponArray"/>
+        <Fields Reference="Unit,^ParamId^,Mover"/>
+        <Fields Reference="Unit,^ParamId^,Collide"/>
+        <Fields Reference="Unit,^ParamId^,Attributes"/>
+        <Fields Reference="Unit,^ParamId^,Name"/>
+        <Fields Reference="Unit,^ParamId^,Description"/>
+        <Fields Reference="Unit,^ParamId^,BehaviorArray"/>
+        <Fields Reference="Unit,^ParamId^,AbilArray"/>
+        <Fields Reference="Unit,^ParamId^,CardLayouts"/>
+        <Fields Reference="Unit,^ParamId^,Sight"/>
+        <Fields Reference="Unit,^ParamId^,CargoSize"/>
+        <Fields Reference="Unit,^ParamId^,Speed"/>
+        <Fields Reference="Unit,^ParamId^,Acceleration"/>
+        <Fields Reference="Unit,^ParamId^,Deceleration"/>
+    </CDataCollectionPattern>
+    <CDataCollectionPattern id="CommanderWeapon_Instant">
+        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
+        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
+        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
+        <Fields Reference="Weapon,^ParamId^,Period"/>
+        <Fields Reference="Weapon,^ParamId^,Range"/>
+        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
+        <Fields Reference="Weapon,^ParamId^,Icon"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
+        <Fields Reference="Weapon,^ParamId^,Effect"/>
+    </CDataCollectionPattern>
+</Catalog>

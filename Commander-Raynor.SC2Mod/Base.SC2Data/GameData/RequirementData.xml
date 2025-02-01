@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="RaynorCommanderHaveBarracks">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_BarracksCompleteOnly789532539TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderHaveCommandCenter">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_CommandCenterCompleteOnly1610623376TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderHaveEngineeringBay">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitEngineeringBayCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderHaveFactory">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_FactoryCompleteOnly96167438TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderHaveStarport">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_StarportCompleteOnly4195804750TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderHaveSupplyDepot">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_SupplyDepotCompleteOnly3975993912TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderStimpack">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeStimpackCompleteOnly80611996TechTreeCheat"/>
+    </CRequirement>
+</Catalog>

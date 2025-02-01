@@ -1,0 +1,4 @@
+DataCollectionPattern/Name/CommanderAbilities_ABEffectInstant=Commander Abilities_AB (Effect Instant)
+DataCollectionPattern/Name/CommanderAbilities_Build=Commander Abilities_Build
+DataCollectionPattern/Name/CommanderUnits=Commander Units
+DataCollectionPattern/Name/CommanderWeapon_Instant=Commander Weapon_Instant

@@ -1,14 +1,81 @@
-﻿Abil/Name/RaynorCommanderStimpack=Stimpack
-Behavior/Name/RaynorCommanderStimpack@Stimpack=Stimpack
-Behavior/Tooltip/RaynorCommanderStimpack@Stimpack=This unit moves and attacks more quickly while under the effects of Stimpack.
+﻿Abil/Name/RaynorCommanderBuildSCV=Build (SCV)
+Abil/Name/RaynorCommanderStimpack=Stimpack
+Abil/Name/RaynorCommanderStimpackMara=Stimpack
+Behavior/Name/RaynorCommanderStimpack=Stimpack
+Behavior/Name/RaynorCommanderStimpackMara=Stimpack
+Behavior/Tooltip/RaynorCommanderStimpack=This unit moves and attacks more quickly while under the effects of Stimpack.
+Behavior/Tooltip/RaynorCommanderStimpackMara=This unit moves and attacks more quickly while under the effects of Stimpack.
+Button/Name/RaynorBuildAdvanced=Build Advanced Structure
+Button/Name/RaynorCommanderArmory=Build Armory
+Button/Name/RaynorCommanderBarracks=Build Barracks
+Button/Name/RaynorCommanderBunker=Build Bunker
+Button/Name/RaynorCommanderCommandCenter=Build Command Center
+Button/Name/RaynorCommanderEngineeringBay=Build Engineering Bay
+Button/Name/RaynorCommanderFactory=Build Factory
+Button/Name/RaynorCommanderFusionCore=Build Fusion Core
+Button/Name/RaynorCommanderGather=Gather
+Button/Name/RaynorCommanderGhostAcademy=Build Ghost Academy
+Button/Name/RaynorCommanderMissileTurret=Build Missile Turret
+Button/Name/RaynorCommanderRefinery=Build Refinery
+Button/Name/RaynorCommanderRepair=Repair
+Button/Name/RaynorCommanderReturnCargo=Return Cargo
+Button/Name/RaynorCommanderSensorTower=Build Sensor Tower
+Button/Name/RaynorCommanderStarport=Build Starport
 Button/Name/RaynorCommanderStimpack=Use Stimpack
+Button/Name/RaynorCommanderStimpackMara=Use Stimpack
+Button/Name/RaynorCommanderSupplyDepot=Build Supply Depot
+Button/Name/RaynorCommanderTerranBuild=Build Structure
+Button/Tooltip/RaynorBuildAdvanced=A list of advanced structures.
+Button/Tooltip/RaynorCommanderArmory=Contains weapon and armor upgrades for Factory and Starport units. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellbat at the Factory<n/>- Thor at the Factory
+Button/Tooltip/RaynorCommanderBarracks=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marines<n/>- Reapers<n/>- Bunkers from SCVs<n/>- Orbital Commands from Command Centers
+Button/Tooltip/RaynorCommanderBunker=Defensive structure. <n/>Infantry fights from inside. <n/><n/><c val="#ColorAttackInfo">Bonus: +1 range to units inside.</c>
+Button/Tooltip/RaynorCommanderCommandCenter=Primary structure. Used to receive gathered resources. Can use the Lift Off ability and can upgrade into an Orbital Command or a Planetary Fortress.<n/><n/><c val="ffff8a">Enables:</c><n/>- SCVs
+Button/Tooltip/RaynorCommanderEngineeringBay=Contains upgrades for Terran infantry and structures. <n/><n/><c val="ffff8a">Enables:</c><n/>- Missile Turrets from SCVs<n/>- Sensor Towers from SCVs<n/>- Planetary Fortresses from Command Centers
+Button/Tooltip/RaynorCommanderFactory=Vehicle-production facility. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellions<n/>- Widow Mines
+Button/Tooltip/RaynorCommanderFusionCore=Contains Battlecruiser upgrades. <n/><n/><c val="ffff8a">Enables:</c><n/>- Battlecruisers at the Starport
+Button/Tooltip/RaynorCommanderGather=Orders SCV to gather resources from a selected Mineral Field or Vespene Geyser.
+Button/Tooltip/RaynorCommanderGhostAcademy=Contains upgrades for Ghosts. Can build Nukes for Ghosts.<n/><n/><c val="ffff8a">Enables:</c><n/>- Ghosts at the Barracks
+Button/Tooltip/RaynorCommanderMarauder=Heavy assault infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderMarine=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/RaynorCommanderMissileTurret=Anti-air defensive structure.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/RaynorCommanderRefinery=Built over a Vespene Geyser to allow harvesting of vespene gas.
+Button/Tooltip/RaynorCommanderRepair=Restores life to mechanical units and structures at the cost of resources.
+Button/Tooltip/RaynorCommanderReturnCargo=Returns the carried resources to the nearest drop-off point.
+Button/Tooltip/RaynorCommanderSCV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/RaynorCommanderSensorTower=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy.
+Button/Tooltip/RaynorCommanderStarport=Air-unit production facility. <n/><n/><c val="ffff8a">Enables:</c><n/>- Vikings<n/>- Medivacs
 Button/Tooltip/RaynorCommanderStimpack=Injects the unit with powerful stimulants that greatly increase attack and movement speeds for a few seconds. Injures the unit for 10 of the unit's life.
-DataCollection/Name/RaynorCommanderAbility=Raynor Commander - Ability
+Button/Tooltip/RaynorCommanderStimpackMara=Injects the unit with powerful stimulants that greatly increase attack and movement speeds for a few seconds. Injures the unit for 10 of the unit's life.
+Button/Tooltip/RaynorCommanderSupplyDepot=Provides supply.<n/>Supply allows you to create more units.<n/>Supply Depots can be lowered to allow units to walk over them.
+Button/Tooltip/RaynorCommanderTerranBuild=A list of basic structures.
+DataCollection/Name/RaynorCommanderBuildSCV=Raynor Commander - Build SCV
+DataCollection/Name/RaynorCommanderMarauder=Raynor Commander - Marauder
 DataCollection/Name/RaynorCommanderMarine=Raynor Commander - Marine
+DataCollection/Name/RaynorCommanderSCV=Raynor Commander - SCV
 DataCollection/Name/RaynorCommanderStimpack=Raynor Commander - Stimpack
+DataCollection/Name/RaynorCommanderStimpackMara=Raynor Commander - Stimpack (Mara)
+DataCollection/Name/WeaponRaynorSCV=Raynor Commander - Fusion Cutter
+DataCollectionPattern/CommanderWeapon/DamageAmount=Damage Amount
+DataCollectionPattern/CommanderWeaponInstant/LaunchModel=Launch Model
+DataCollectionPattern/CommanderWeaponInstant/LaunchSound=Launch Sound
+DataCollectionPattern/CommandersAbilityAB/ButtonAlertIcon=Button Alert Icon
+DataCollectionPattern/CommandersAbilityAB/ButtonIcon=Button Icon
+DataCollectionPattern/CommandersAbilityAB/ButtonName=Button Name
+DataCollectionPattern/CommandersAbilityAB/ButtonTooltip=Button Tooltip
+DataCollectionPattern/CommandersAbilityAB/EndImpactModel=Model End Impact
+DataCollectionPattern/CommandersAbilityAB/NodeRequirement=Node Default Requirement
+DataCollectionPattern/CommandersAbilityAB/SoundCast=Sound Cast
+DataCollectionPattern/CommandersAbilityAB/SoundFinish=Sound Finish
+DataCollectionPattern/CommandersAbilityAB/StartImpactModel=Model Start Impact
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/FusionCutter2=Fusion Cutter (Damage)
 Effect/Name/GuassRifle2=Guass Rifle
-Effect/Name/RaynorCommanderStimpack@AB=Stim Pack (Apply Buff)
+Effect/Name/RaynorCommanderStimpack@AB=(Apply Buff)
+Effect/Name/RaynorCommanderStimpackMara@AB=(Apply Buff)
+Effect/Name/Repair2=Repair
+Effect/Name/WeaponRaynorSCV=(Damage)
+Unit/Name/RaynorCommanderMarauder=Marauder
 Unit/Name/RaynorCommanderMarine=Marine
+Unit/Name/RaynorCommanderSCV=SCV
+Weapon/Name/WeaponRaynorSCV=Fusion Cutter

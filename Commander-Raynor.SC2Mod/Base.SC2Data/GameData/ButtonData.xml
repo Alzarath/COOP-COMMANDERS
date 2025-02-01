@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderArmory">
+        <Icon value="Assets\Textures\btn-building-terran-armory.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-armory.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="AttackRaynorWorker">
+        <Name value="Button/Name/Attack"/>
+        <Tooltip value="Button/Tooltip/Attack"/>
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <AlertName value="Button/Name/Attack"/>
+        <AlertTooltip value="Button/Tooltip/Attack"/>
+        <AlertIcon value="Assets\Textures\btn-command-attack.dds"/>
+        <Hotkey value="Button/Hotkey/Attack"/>
+        <EditorCategories value="Race:Neutral"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="Attack"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderBarracks">
+        <Icon value="Assets\Textures\btn-building-terran-barracks.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-barracks.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderBunker">
+        <Icon value="Assets\Textures\btn-building-terran-bunker.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-bunker.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderCommandCenter">
+        <Icon value="Assets\Textures\btn-building-terran-commandcenter.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-commandcenter.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderEngineeringBay">
+        <Icon value="Assets\Textures\btn-building-terran-engineeringbay.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-engineeringbay.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderFactory">
+        <Icon value="Assets\Textures\btn-building-terran-factory.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-factory.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderFusionCore">
+        <Icon value="Assets\Textures\btn-building-terran-fusioncore.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-fusioncore.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderGather">
+        <Icon value="Assets\Textures\btn-ability-terran-gather.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-gather.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="GatherProt"/>
+        <Universal value="1"/>
+        <SimpleDisplayText value="SimpleDisplay/Gather"/>
+    </CButton>
+    <CButton id="RaynorCommanderGhostAcademy">
+        <Icon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderMissileTurret">
+        <Icon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="RaynorCommanderStimpack">
+        <Icon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderRefinery">
+        <Icon value="Assets\Textures\btn-building-terran-refinery.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-refinery.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderRepair">
+        <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderReturnCargo">
+        <Icon value="Assets\Textures\btn-command-returncargo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-returncargo.dds"/>
+        <EditorCategories value="Race:Neutral"/>
+        <TintRacially value="1"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderSensorTower">
+        <Icon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-sensordome.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderStarport">
+        <Icon value="Assets\Textures\btn-building-terran-starport.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-starport.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderSupplyDepot">
+        <Icon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderTerranBuild">
+        <Icon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="RaynorBuildAdvanced">
+        <Icon value="Assets\Textures\btn-command-terran-buildadvancedstructure.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-terran-buildadvancedstructure.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderStimpackMara">
         <Icon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
         <EditorCategories value="Race:Terran"/>

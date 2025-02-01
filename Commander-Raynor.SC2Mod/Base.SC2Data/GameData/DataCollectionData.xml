@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CDataCollectionAbil id="RaynorCommanderAbility">
+    <CDataCollectionAbil id="RaynorCommanderBuildSCV" parent="CommanderAbilityBuild">
+        <Name value="DataCollection/Name/RaynorCommanderBuildSCV"/>
         <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
-        <EditorIconSource value="Abil"/>
-        <Pattern value="CommanderAbilities_AB"/>
+        <DataRecord Entry="Abil,RaynorCommanderBuildSCV"/>
+        <DataRecord Entry="Actor,RaynorCommanderBuildSCV@Construction"/>
     </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderMarauder" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderMarauder"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,RaynorCommanderMarauder"/>
+        <DataRecord Entry="Model,RaynorCommanderMarauder"/>
+        <DataRecord Entry="Model,RaynorCommanderMarauder@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderMarauder@DeathEviscerate"/>
+        <DataRecord Entry="Model,RaynorCommanderMarauder@DeathRagdoll"/>
+        <DataRecord Entry="Model,RaynorCommanderMarauder@Portrait"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@Attack"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@Explode"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@Help"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@Pissed"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@Yes"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@What"/>
+        <DataRecord Entry="Unit,RaynorCommanderMarauder"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMarine">
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
         <DataRecord Entry="Unit,RaynorCommanderMarine"/>
@@ -33,12 +52,63 @@
         <EditorIconSource value="Unit"/>
         <Button value="Marine"/>
     </CDataCollectionUnit>
-    <CDataCollectionAbil id="RaynorCommanderStimpack" parent="RaynorCommanderAbility">
-        <DataRecord Entry="Behavior,RaynorCommanderStimpack@Stimpack"/>
-        <DataRecord Entry="Button,RaynorCommanderStimpack"/>
-        <DataRecord Entry="Abil,RaynorCommanderStimpack"/>
-        <DataRecord Entry="Effect,RaynorCommanderStimpack@AB"/>
+    <CDataCollectionUnit id="RaynorCommanderSCV" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderSCV"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,RaynorCommanderSCV"/>
+        <DataRecord Entry="Model,RaynorCommanderSCV"/>
+        <DataRecord Entry="Model,RaynorCommanderSCV@Portrait"/>
+        <DataRecord Entry="Model,RaynorCommanderSCV@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderSCV@DeathRagdoll"/>
+        <DataRecord Entry="Sound,RaynorCommanderSCV@Attack"/>
+        <DataRecord Entry="Sound,RaynorCommanderSCV@Explode"/>
+        <DataRecord Entry="Sound,RaynorCommanderSCV@Pissed"/>
+        <DataRecord Entry="Sound,RaynorCommanderSCV@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderSCV@What"/>
+        <DataRecord Entry="Sound,RaynorCommanderSCV@Yes"/>
+        <DataRecord Entry="Unit,RaynorCommanderSCV"/>
+    </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderStimpack" parent="CommanderAbilityAB">
         <Name value="DataCollection/Name/RaynorCommanderStimpack"/>
-        <Button value="RaynorCommanderStimpack"/>
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderStimpack"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpack@Cast"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpack@EndImpact"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpack@StartImpact"/>
+        <DataRecord Entry="Behavior,RaynorCommanderStimpack"/>
+        <DataRecord Entry="Button,RaynorCommanderStimpack"/>
+        <DataRecord Entry="Effect,RaynorCommanderStimpack@AB"/>
+        <DataRecord Entry="Model,RaynorCommanderStimpack@EndImpact"/>
+        <DataRecord Entry="Model,RaynorCommanderStimpack@StartImpact"/>
+        <DataRecord Entry="Requirement,RaynorCommanderStimpack"/>
+        <DataRecord Entry="Sound,RaynorCommanderStimpack@Cast"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpack@Finish"/>
+        <Button value="RaynorCommanderAbility"/>
+        <TechInfoAbil value="RaynorCommanderAbility"/>
     </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderStimpackMara" parent="CommanderAbilityAB">
+        <Name value="DataCollection/Name/RaynorCommanderStimpackMara"/>
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderStimpackMara"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpackMara@Impact"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpackMara@StartImpact"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpackMara@Cast"/>
+        <DataRecord Entry="Behavior,RaynorCommanderStimpackMara"/>
+        <DataRecord Entry="Button,RaynorCommanderStimpackMara"/>
+        <DataRecord Entry="Effect,RaynorCommanderStimpackMara@AB"/>
+        <DataRecord Entry="Model,RaynorCommanderStimpackMara@StartImpact"/>
+        <DataRecord Entry="Model,RaynorCommanderStimpackMara@EndImpact"/>
+        <DataRecord Entry="Sound,RaynorCommanderStimpackMara@Cast"/>
+        <DataRecord Entry="Requirement,RaynorCommanderStimpack"/>
+    </CDataCollectionAbil>
+    <CDataCollection id="WeaponRaynorSCV">
+        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Actor,WeaponRaynorSCV@Attack"/>
+        <DataRecord Entry="Actor,WeaponRaynorSCV@AttackLaunch"/>
+        <DataRecord Entry="Effect,WeaponRaynorSCV"/>
+        <DataRecord Entry="Model,WeaponRaynorSCV@AttackLaunch"/>
+        <DataRecord Entry="Sound,WeaponRaynorSCV@AttackLaunch"/>
+        <DataRecord Entry="Weapon,WeaponRaynorSCV"/>
+        <Pattern value="CommanderWeapon_Instant"/>
+    </CDataCollection>
 </Catalog>

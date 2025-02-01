@@ -1,5 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="RaynorCommanderStimpackMara@Cast" parent="SoundOneShot">
+        <On Terms="Abil.RaynorCommanderStimpackMara.SourceCastStart" Send="Create"/>
+    </CActorSound>
+    <CActorUnit id="RaynorCommanderMarauder" parent="GenericUnitBase" unitName="RaynorCommanderMarauder">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="ActorCreation" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
+        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>
+        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>
+        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimClear AttackLeft"/>
+        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackLeft"/>
+        <On Terms="UnitMovementUpdate.*.Walk" Send="AnimClear AttackRight"/>
+        <On Terms="ModelEvent; ModelEventName AnimClear" Send="AnimClear AttackLeft"/>
+        <On Terms="ModelEvent; ModelEventName AnimClear" Send="AnimClear AttackRight"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Marauder" Send="Create"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Marauder_Land"/>
+        <On Terms="UnitDeathCustomize; PassChance 1.000000; ValidateUnit IsNotNeuralParasited" Send="Create Marauder_Death"/>
+        <On Terms="UnitDeathCustomize; PassChance 10.000000; !ValidateUnit IsNotNeuralParasited" Send="Create Marauder_Death_NP"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderMarauder@Death" SoundLink="RaynorCommanderMarauder@Explode"/>
+        <DeathArray index="Eviscerate" ModelLink="RaynorCommanderMarauder@DeathEviscerate" SoundLink="Uni_DeathFXEviscerate"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathCustoms ActorModel="UnitDeathRagdollBloodPrevent" ModelLink="RaynorCommanderMarauder@DeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="RaynorCommanderMarauder@Portrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.800000"/>
+            <RangeDown value="0.800000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="60"/>
+        <BarWidth value="50"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Marauder.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-marauder.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderMarauder@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderMarauder@Help"/>
+        <SoundArray index="What" value="RaynorCommanderMarauder@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderMarauder@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderMarauder@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderMarauder@Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-marauder.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Marauder.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSound id="RaynorCommanderStimpack@Cast" parent="SoundOneShot">
+        <On Terms="Abil.RaynorCommanderStimpack.SourceCastStart" Send="Create"/>
+    </CActorSound>
     <CActorUnit id="RaynorCommanderMarine" parent="GenericUnitBase" unitName="RaynorCommanderMarine">
         <Aliases value="_UnitSmall"/>
         <Macros value="UnloadDropAnim"/>
@@ -92,4 +174,136 @@
             <Image value="Assets\Textures\Wireframe-Terran-Marine.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorSound id="RaynorCommanderStimpack@Finish" parent="SoundOneShot">
+        <On Terms="Abil.RaynorCommanderStimpack.SourceFinishStart" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="RaynorCommanderStimpack@EndImpact" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Behavior.RaynorCommanderStimpack.Off; ValidateUnit NotDead" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorModel id="RaynorCommanderStimpack@StartImpact" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Abil.RaynorCommanderStimpack.SourceCastStart" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorUnit id="RaynorCommanderSCV" parent="GenericUnitStandard" unitName="RaynorCommanderSCV">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="CarryAnim"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="MacroWorkerHat"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="Abil.SCVHarvest.Start" Send="TimerSet 0.000000,0.300000 Gather"/>
+        <On Terms="Abil.SCVHarvest.Stop" Send="AnimClear Gather"/>
+        <On Terms="Abil.SCVHarvest.Stop" Send="TimerKill Gather"/>
+        <On Terms="AnimDone.*.Complete; AnimName Gather" Send="TimerSet 0.000000,0.300000 Gather"/>
+        <On Terms="TimerExpired; TimerName Gather" Send="AnimPlay Gather Work NonLooping"/>
+        <On Terms="TimerExpired; TimerName Gather" Send="Create SCVGatherSound"/>
+        <On Terms="Abil.Repair.SourceChannelStart" Send="TimerSet 0.000000,0.300000 Repair"/>
+        <On Terms="Abil.Repair.SourceChannelStop" Send="TimerKill Repair"/>
+        <On Terms="Abil.Repair.SourceChannelStop" Send="AnimClear Repair"/>
+        <On Terms="AnimDone.*.Complete; AnimName Repair" Send="TimerSet 0.000000,0.300000 Repair"/>
+        <On Terms="TimerExpired; TimerName Repair" Send="AnimPlay Repair Work NonLooping"/>
+        <On Terms="TimerExpired; TimerName Repair" Send="Create SCVRepairSound"/>
+        <On Terms="Abil.*.WorkerStart" Send="TimerSet 0.000000,0.300000 Build"/>
+        <On Terms="Abil.*.WorkerStop" Send="TimerKill Build"/>
+        <On Terms="Abil.*.WorkerStop" Send="AnimClear Build"/>
+        <On Terms="Abil.*.WorkerCancel" Send="TimerKill Build"/>
+        <On Terms="Abil.*.WorkerCancel" Send="AnimClear Build"/>
+        <On Terms="AnimDone.*.Complete; AnimName Build" Send="TimerSet 0.000000,0.300000 Build"/>
+        <On Terms="TimerExpired; TimerName Build" Send="AnimPlay Build Work NonLooping"/>
+        <On Terms="TimerExpired; TimerName Build" Send="Create SCVBuildSound"/>
+        <On Terms="Abil.SCVHarvest.Start" Send="StatusSet CloakSound 1"/>
+        <On Terms="Behavior.CarryHarvestableVespeneGeyserGas.Create" Send="StatusSet CloakSound 1"/>
+        <On Terms="Confirmation.SCV.Start" Send="StatusSet CloakSound 0"/>
+        <On Terms="Behavior.CloakFieldEffect.Create; IsStatus CloakSound 0" Send="Create Worker_CloakFieldOn"/>
+        <On Terms="Behavior.CloakFieldEffect.Destroy; IsStatus CloakSound 0" Send="Create Worker_CloakFieldOff"/>
+        <On Terms="Behavior.OracleCloakFieldEffect.Create; IsStatus CloakSound 0" Send="Create Worker_CloakFieldOn"/>
+        <On Terms="Behavior.OracleCloakFieldEffect.Destroy; IsStatus CloakSound 0" Send="Create Worker_CloakFieldOff"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SCV_Land"/>
+        <AnimBlendTime value="0.500000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderSCV@Death" SoundLink="RaynorCommanderSCV@Explode"/>
+        <DeathCustoms ModelLink="RaynorCommanderSCV@DeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdoll" ModelLink="RaynorCommanderSCV@DeathRagdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <PortraitModel value="RaynorCommanderSCV@Portrait"/>
+        <BarOffset value="40"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SCV.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-scv.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderSCV@Ready"/>
+        <SoundArray index="Help" value="Alert_TerranEconomyUnderAttack"/>
+        <SoundArray index="What" value="RaynorCommanderSCV@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderSCV@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderSCV@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderSCV@Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-scv.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SCV.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorProgress id="RaynorCommanderBuildSCV@Construction">
+        <On Terms="Abil.RaynorCommanderBuildSCV.BuiltStart" Send="Create"/>
+        <On Terms="Abil.BarracksAddOns.BuiltStart" Send="Create"/>
+        <On Terms="Abil.FactoryAddOns.BuiltStart" Send="Create"/>
+        <On Terms="Abil.StarportAddOns.BuiltStart" Send="Create"/>
+        <On Terms="Abil.MachineShop.BuiltStart" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstruction.Start; Level 0" Send="SetTransferOverrideAnim Build,A,Stand"/>
+        <On Terms="ProgressLevel.TerranConstruction.Stop; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Build,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Build,A,Stand"/>
+        <StageArray AnimProps="Build,B,Start"/>
+        <StageArray AnimProps="Build,B,Stand"/>
+        <StageArray AnimProps="Build,C,Start"/>
+        <StageArray AnimProps="Build,C,Stand"/>
+        <StageArray AnimProps="Build,D"/>
+    </CActorProgress>
+    <CActorModel id="RaynorCommanderStimpackMara@Impact" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Behavior.Stimpack.Off; ValidateUnit NotDead" Send="Create"/>
+        <On Terms="Behavior.RaynorCommanderStimpackMara.Off; ValidateUnit NotDead" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Model value="RaynorCommanderStimpackMara@EndImpact"/>
+    </CActorModel>
+    <CActorModel id="RaynorCommanderStimpackMara@StartImpact" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Abil.Stimpack.SourceCastStart" Send="Create"/>
+        <On Terms="Abil.RaynorCommanderStimpackMara.SourceCastStart" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorAction id="WeaponRaynorSCV@Attack" parent="GenericAttack" effectAttack="WeaponRaynorSCV">
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorSound id="WeaponRaynorSCV@AttackLaunch" parent="SoundOneShot">
+        <On Terms="WeaponStart.WeaponRaynorSCV.AttackStart" Send="Create"/>
+    </CActorSound>
 </Catalog>

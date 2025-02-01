@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementCountUpgrade id="CountUpgradeStimpackCompleteOnly80611996TechTreeCheat2">
+        <Tooltip value="RequirementNode/Tooltip/CountUpgradeStimpackCompleteOnly80611996"/>
+        <Count Link="RaynorCommanderStimpack@AB" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStimpackQueuedOrBetter2">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RaynorCommanderStimpack@AB" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+</Catalog>

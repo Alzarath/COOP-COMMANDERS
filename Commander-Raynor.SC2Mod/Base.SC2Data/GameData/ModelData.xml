@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="RaynorCommanderMarauder" parent="MarauderBase">
+        <Model value="Assets\Units\Terran\Marauder\Marauder.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarauder@Death" parent="MarauderDeathBase">
+        <Model value="Assets\Units\Terran\MarauderDeathEx1\MarauderDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarauder@DeathEviscerate" parent="MarauderDeathEviscerateBase">
+        <Model value="Assets\Units\Terran\MarauderDeathEviscerateEx1\MarauderDeathEviscerateEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarauder@DeathRagdoll" parent="MarauderDeathRagdollBase">
+        <Model value="Assets\Units\Terran\MarauderDeathRagdoll\MarauderDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderMarauder@Portrait" parent="MarauderPortraitBase">
+        <Model value="Assets\Portraits\Terran\MarauderPortrait\MarauderPortrait.m3"/>
+        <Image value="Assets\Textures\MarauderPortrait_Static.dds"/>
+        <Lighting value="MarauderPortrait"/>
+    </CModel>
     <CModel id="RaynorCommanderMarine@Marine" parent="MarineBase">
         <Model value="Assets\Units\Terran\Marine\Marine.m3"/>
     </CModel>
@@ -44,8 +61,44 @@
         <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
         <Lighting value="MarinePortrait"/>
     </CModel>
+    <CModel id="RaynorCommanderSCV" parent="SCVBase">
+        <Model value="Assets\Units\Terran\SCV\SCV.m3"/>
+    </CModel>
+    <CModel id="SCVAttackLaunch2" parent="RaceImpactFX" Race="Terran">
+        <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderSCV@Death" parent="SCVDeathBase">
+        <Model value="Assets\Units\Terran\SCVDeathEx1\SCVDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderSCV@DeathRagdoll" parent="SCVDeathRagdollBase">
+        <Model value="Assets\Units\Terran\SCVDeathRagdoll\SCVDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderSCV@Portrait" parent="SCVPortraitBase">
+        <Model value="Assets\Portraits\Terran\SCVPortrait\SCVPortrait.m3"/>
+        <Image value="Assets\Textures\SCVPortrait_Static.dds"/>
+        <Lighting value="SCVPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderStimpackMara@EndImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderStimpackMara@StartImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\StimpackStartImpact\StimpackStartImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WeaponRaynorSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
+        <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
+    </CModel>
     <CModel id="StimpackEndImpact2" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderStimpack@EndImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderStimpack@StartImpact" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\StimpackStartImpact\StimpackStartImpact.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
 </Catalog>

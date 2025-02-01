@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorUnitCompareResourceContents id="HasVespene2">
+        <ResultFailed value="CantBuildOnThat"/>
+        <ResultNoUnit value="OKPlaceholder"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareResourceContents>
+    <CValidatorUnitOrderQueue id="SCVBuildingArmory2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="13"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingBarracks2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="3"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingBunker2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="6"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingCommandCenter2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingEngineeringBay2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="4"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingFactory2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="10"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingFusionCore2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="15"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingGhostAcademy2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="9"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingMissileTurret2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="5"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingRefinery2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="2"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingSensorTower2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="8"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingStarport2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="11"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="SCVBuildingSupplyDepot2">
+        <WhichUnit Value="Target"/>
+        <AbilLink value="RaynorCommanderBuildSCV"/>
+        <AbilCmdIndex value="1"/>
+    </CValidatorUnitOrderQueue>
+</Catalog>

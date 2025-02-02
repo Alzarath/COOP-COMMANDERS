@@ -3,14 +3,17 @@
     <CDataCollectionAbil id="CommanderAbilityBuild">
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_Build"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="CommanderUnit">
         <EditorIconSource value="Actor"/>
         <Pattern value="CommanderUnits"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="CommanderAbilityAB">
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_ABEffectInstant"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
     </CDataCollectionAbil>
     <CDataCollectionPattern id="CommanderAbilities_ABEffectInstant">
         <Fields Reference="Sound,^ParamId^@Cast,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundCast"/>

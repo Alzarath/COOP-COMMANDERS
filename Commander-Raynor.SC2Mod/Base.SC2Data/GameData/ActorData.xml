@@ -72,6 +72,39 @@
             <Image value="Assets\Textures\wireframe-terran-firebat.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorSimple id="RaynorCommanderHeal@Animation">
+        <EditorCategories value=""/>
+        <On Terms="Abil.RaynorCommanderHeal.ButtonHoverOn" Send="$Spell PlayForever"/>
+        <On Terms="Abil.RaynorCommanderHeal.ButtonHoverOff" Send="AnimClear Spell"/>
+    </CActorSimple>
+    <CActorBeamSimple id="RaynorCommanderHeal@Beam" parent="BeamSimpleAnimationStyleOneShot">
+        <Inherits index="Visibility" value="1"/>
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentForceLooping"/>
+        <On Terms="Effect.RaynorCommanderHeal.TargetStart" Send="Create"/>
+        <On Terms="Effect.RaynorCommanderHeal.TargetStop" Send="Destroy"/>
+        <On Terms="Effect.RaynorCommanderHeal.TargetStart" Target="_Caster" Send="$Spell PlayForever"/>
+        <On Terms="Effect.RaynorCommanderHeal.TargetStop" Target="_Caster" Send="AnimClear Spell"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorModel id="RaynorCommanderHeal@Model" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On Terms="Effect.RaynorCommanderHeal.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.RaynorCommanderHeal.TargetStop; At Target" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="AnimPlay Spell Birth PlayForever,ForceLooping"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorSound id="RaynorCommanderHeal@Sound" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Abil.RaynorCommanderHeal.TargetChannelStart" Send="Create"/>
+        <On Terms="Abil.RaynorCommanderHeal.TargetChannelStop" Send="Destroy"/>
+        <LoopCount value="-1"/>
+    </CActorSound>
     <CActorSound id="RaynorCommanderLiftBarrack@Land" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="AbilMorph.RaynorCommanderLiftBarrack@Land.Start" Send="Create"/>
@@ -80,6 +113,20 @@
         <EditorCategories value=""/>
         <On Terms="AbilMorph.RaynorCommanderLiftBarrack@LiftOff.Start" Send="Create"/>
     </CActorSound>
+    <CActorUnit id="RaynorCommanderMedic" parent="GenericUnitStandard" unitName="RaynorCommanderMedic">
+        <EditorCategories value=""/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-medic.dds"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderMedic@Death" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="RaynorCommanderMedic@Death"/>
+        <PortraitModel value="RaynorCommanderMedic@Portrait"/>
+        <SoundArray index="Ready" value="RaynorCommanderMedic@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderMedic@Help"/>
+        <SoundArray index="What" value="RaynorCommanderMedic@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderMedic@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderMedic@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderMedic@Pissed"/>
+    </CActorUnit>
     <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower">
         <EditorCategories value=""/>
         <LaunchAssets Model="RaynorCommanderPerditionThrower@AttackModel"/>
@@ -282,7 +329,7 @@
         <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
         <PlacementModel value="RaynorCommanderMarine@Marine"/>
-        <PortraitModel value="RaynorCommanderMarine@MarinePortrait"/>
+        <PortraitModel value="RaynorCommanderMarine@Portrait"/>
         <StandAnimTurnTime value="4"/>
         <TerrainSquibs>
             <MovementDistance value="0.150000,0.150000"/>

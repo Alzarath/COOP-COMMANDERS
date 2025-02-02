@@ -50,6 +50,31 @@
         <EditorCategories value="Race:Terran"/>
         <Image value="Assets\Textures\firebat_heavens_coop_portrait_static.dds"/>
     </CModel>
+    <CModel id="RaynorCommanderHeal@Beam">
+        <Model value="Assets\Effects\Terran\MedivacBeam\MedivacBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderHeal@Model">
+        <Model value="Assets\Effects\Terran\MedicHeal\MedicHeal.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderMedic" parent="Unit">
+        <Model value="Assets\Units\Terran\Medic\Medic.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderMedic@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\MedicDeath\MedicDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderMedic@DeathRagdol" parent="UnitDeathRagdoll">
+        <Model value="Assets\Units\Terran\MedicDeathRagdoll\MedicDeathRagdoll.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderMedic@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Terran\MedicPortrait\MedicPortrait.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Image value="Assets\Textures\medivacportrait_static.dds"/>
+    </CModel>
     <CModel id="RaynorCommanderPerditionThrower@AttackModel">
         <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -96,19 +121,6 @@
     <CModel id="RaynorCommanderMarine@Marine" parent="MarineBase">
         <Model value="Assets\Units\Terran\Marine\Marine.m3"/>
     </CModel>
-    <CModel id="MarineAttackImpact2" parent="LaunchFX">
-        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
-    <CModel id="MarineAttackLaunch2" parent="LaunchFX">
-        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
-    <CModel id="MarineBunkerAttackLaunch2" parent="LaunchFX">
-        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
-        <Lighting value="MarineAttackLaunch"/>
-    </CModel>
     <CModel id="RaynorCommanderMarine@MarineDeath" parent="MarineDeathBase">
         <Model value="Assets\Units\Terran\MarineDeathEx1\MarineDeathEx1.m3"/>
     </CModel>
@@ -132,16 +144,13 @@
     <CModel id="RaynorCommanderMarine@MarineDeathRagdoll" parent="MarineDeathRagdollBase">
         <Model value="Assets\Units\Terran\MarineDeathRagdoll\MarineDeathRagdoll.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarinePortrait" parent="MarinePortraitBase">
+    <CModel id="RaynorCommanderMarine@Portrait" parent="MarinePortraitBase">
         <Model value="Assets\Portraits\Terran\MarinePortrait\MarinePortrait.m3"/>
         <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
         <Lighting value="MarinePortrait"/>
     </CModel>
     <CModel id="RaynorCommanderSCV" parent="SCVBase">
         <Model value="Assets\Units\Terran\SCV\SCV.m3"/>
-    </CModel>
-    <CModel id="SCVAttackLaunch2" parent="RaceImpactFX" Race="Terran">
-        <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
     </CModel>
     <CModel id="RaynorCommanderSCV@Death" parent="SCVDeathBase">
         <Model value="Assets\Units\Terran\SCVDeathEx1\SCVDeathEx1.m3"/>
@@ -164,10 +173,6 @@
     </CModel>
     <CModel id="WeaponRaynorSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
         <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
-    </CModel>
-    <CModel id="StimpackEndImpact2" parent="OneShotSpellFX">
-        <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="RaynorCommanderStimpack@EndImpact" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>

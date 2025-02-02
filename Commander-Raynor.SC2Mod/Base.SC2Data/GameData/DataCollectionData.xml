@@ -37,6 +37,21 @@
         <TechInfoUpgradeUsed value="RaynorCommanderInfantryWeapon@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderInfantryWeapon@Level3"/>
     </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderHeal" parent="CommanderAbilityBeam">
+        <Name value="DataCollection/Name/RaynorCommanderHeal"/>
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorIconSource value="Button"/>
+        <DataRecord Entry="Abil,RaynorCommanderHeal"/>
+        <DataRecord Entry="Button,RaynorCommanderHeal"/>
+        <DataRecord Entry="Effect,RaynorCommanderHeal"/>
+        <DataRecord Entry="Actor,RaynorCommanderHeal@Beam"/>
+        <DataRecord Entry="Actor,RaynorCommanderHeal@Sound"/>
+        <DataRecord Entry="Model,RaynorCommanderHeal@Beam"/>
+        <DataRecord Entry="Sound,RaynorCommanderHeal@Sound"/>
+        <DataRecord Entry="Actor,RaynorCommanderHeal@Animation"/>
+        <DataRecord Entry="Actor,RaynorCommanderHeal@Model"/>
+        <DataRecord Entry="Model,RaynorCommanderHeal@Model"/>
+    </CDataCollectionAbil>
     <CDataCollectionUpgrade id="RaynorCommanderInciniratorGauntlets">
         <EditorCategories value="DataGroup:Research,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderInciniratorGauntlets"/>
@@ -72,6 +87,24 @@
         <DataRecord Entry="Sound,RaynorCommanderLiftBarrack@Lift"/>
         <DataRecord Entry="Sound,RaynorCommanderLiftBarrack@Land"/>
     </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderMedic" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderMedic"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,RaynorCommanderMedic"/>
+        <DataRecord Entry="Button,RaynorCommanderMedic"/>
+        <DataRecord Entry="Model,RaynorCommanderMedic"/>
+        <DataRecord Entry="Model,RaynorCommanderMedic@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderMedic@DeathRagdol"/>
+        <DataRecord Entry="Unit,RaynorCommanderMedic"/>
+        <DataRecord Entry="Model,RaynorCommanderMedic@Portrait"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@Attack"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@What"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@Death"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@Pissed"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@Yes"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@Help"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@Ready"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPerditionThrower">
         <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Weapon"/>
@@ -144,7 +177,7 @@
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathEviscerate"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathFire"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeathRagdoll"/>
-        <DataRecord Entry="Model,RaynorCommanderMarine@MarinePortrait"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@Portrait"/>
         <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXBloodSpray"/>
         <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXEat"/>
         <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXEviscerate"/>
@@ -159,35 +192,38 @@
         <DataRecord Entry="Unit,RaynorCommanderMarine"/>
         <DataRecord Entry="Button,RaynorCommanderMarine"/>
     </CDataCollectionUnit>
-    <CDataCollection id="RaynorCommanderPunisherGrenades">
+    <CDataCollectionUnit id="RaynorCommanderPunisherGrenades">
         <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Projectile"/>
+        <EditorIconSource value="Weapon"/>
         <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@Attack"/>
-        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@UpgradedAttack"/>
+        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@AttackAnimation"/>
         <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@Missile"/>
-        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades"/>
-        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@AB"/>
-        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@Set"/>
+        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@UpgradedAttack"/>
+        <DataRecord Entry="Behavior,RaynorCommanderPunisherGrenades"/>
         <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@LM"/>
+        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@Set"/>
+        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@AB"/>
+        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades"/>
+        <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@AttackImpact"/>
         <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@AttackLaunch"/>
         <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@Missile"/>
         <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@UpgradedAttackImpact"/>
-        <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@AttackImpact"/>
         <DataRecord Entry="Mover,RaynorCommanderPunisherGrenades@Weapon"/>
-        <DataRecord Entry="Sound,RaynorCommanderPunisherGrenades@AttackImpact"/>
-        <DataRecord Entry="Sound,RaynorCommanderPunisherGrenades@AttackLaunch"/>
-        <DataRecord Entry="Unit,RaynorCommanderPunisherGrenades@LMWeapon"/>
-        <DataRecord Entry="Weapon,RaynorCommanderPunisherGrenades"/>
-        <DataRecord Entry="Behavior,RaynorCommanderPunisherGrenades"/>
-        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NoPurificationNova"/>
-        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@TargetIsSlowed"/>
-        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@AttackAnimation"/>
         <DataRecord Entry="Requirement,RaynorCommanderPunisherGrenades@Use"/>
-        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NotStructure"/>
-        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NotMassive"/>
-        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@Researched"/>
+        <DataRecord Entry="Sound,RaynorCommanderPunisherGrenades@AttackLaunch"/>
+        <DataRecord Entry="Sound,RaynorCommanderPunisherGrenades@AttackImpact"/>
+        <DataRecord Entry="Unit,RaynorCommanderPunisherGrenades@LMWeapon"/>
         <DataRecord Entry="Upgrade,RaynorCommanderPunisherGrenades@PunisherGrenades"/>
-        <Pattern value="CommanderWeapon_Missile"/>
-    </CDataCollection>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NoPurificationNova"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NotMassive"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NotStructure"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@Researched"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@TargetIsSlowed"/>
+        <DataRecord Entry="Weapon,RaynorCommanderPunisherGrenades"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderInfantryWeapon@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderInfantryWeapon@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderInfantryWeapon@Level3"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderSCV" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderSCV"/>
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
@@ -240,6 +276,7 @@
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderTrainBarrack">
         <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorIconSource value="Abil"/>
         <DataRecord Entry="Abil,RaynorCommanderTrainBarrack"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="WeaponRaynorSCV">

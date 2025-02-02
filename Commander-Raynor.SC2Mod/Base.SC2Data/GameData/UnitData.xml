@@ -50,7 +50,7 @@
         <ScoreKill value="150"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="1.75"/>
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop"/>
         <LeaderAlias value="Barracks"/>
         <HotkeyAlias value="Barracks"/>
         <TechAliasArray value="Alias_Barracks"/>
@@ -123,7 +123,7 @@
         <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="1.75"/>
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop"/>
         <TacticalAI value="Barracks"/>
         <TechAliasArray value="Alias_Barracks"/>
         <GlossaryPriority value="252"/>
@@ -162,10 +162,42 @@
         <WeaponArray Link="RaynorCommanderPerditionThrower"/>
         <PlaneArray index="Ground" value="1"/>
     </CUnit>
+    <CUnit id="RaynorCommanderMedic">
+        <Description value="Unit/Description/RaynorCommanderMedic"/>
+        <Race value="Terr"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="45"/>
+        <LifeMax value="45"/>
+        <Speed value="2.25"/>
+        <Acceleration value="720"/>
+        <Sight value="8"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="RaynorCommanderHeal"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="RaynorCommanderHeal" Type="AbilCmd" AbilCmd="RaynorCommanderHeal,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <CargoSize value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <EnergyStart value="100"/>
+        <EnergyMax value="100"/>
+        <EnergyRegenRate value="2"/>
+    </CUnit>
     <CUnit id="RaynorCommanderPunisherGrenades@LMWeapon" parent="MISSILE">
         <Race value="Terr"/>
         <Mover value="RaynorCommanderPunisherGrenades@Weapon"/>
-        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop"/>
     </CUnit>
     <CUnit id="RaynorCommanderMarauder">
         <DeathRevealRadius value="3"/>

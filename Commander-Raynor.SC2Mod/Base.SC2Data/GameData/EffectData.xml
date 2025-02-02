@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CEffectDamage id="FusionCutter2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
-        <Amount value="5"/>
-    </CEffectDamage>
     <CEffectDamage id="RaynorCommanderGaussRiffleC14" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="6"/>
     </CEffectDamage>
+    <CEffectCreateHealer id="RaynorCommanderHeal">
+        <EditorCategories value="Race:Terran"/>
+        <DrainVital value="Energy"/>
+        <DrainVitalCostFactor value="0.33"/>
+        <RechargeVitalRate value="9"/>
+    </CEffectCreateHealer>
     <CEffectDamage id="RaynorCommanderPerditionThrower">
         <EditorCategories value="Race:Terran"/>
         <Amount value="15"/>
@@ -55,11 +57,6 @@
     <CEffectDamage id="WeaponRaynorSCV" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
-    </CEffectDamage>
-    <CEffectDamage id="GuassRifle2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
-        <Kind value="Ranged"/>
-        <Amount value="6"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="RaynorCommanderStimpack@AB">
         <EditorCategories value="Race:Terran"/>

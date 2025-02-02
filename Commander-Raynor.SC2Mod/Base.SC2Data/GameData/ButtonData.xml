@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderHeal">
+        <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="RaynorCommanderMedic">
         <Icon value="Assets\Textures\btn-unit-terran-medic.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-medic.dds"/>

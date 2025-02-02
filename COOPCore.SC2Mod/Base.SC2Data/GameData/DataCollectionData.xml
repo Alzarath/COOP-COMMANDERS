@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionAbil id="CommanderAbilityBeam">
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommandersAbilities_Beam"/>
+    </CDataCollectionAbil>
+</Catalog>

@@ -30,4 +30,5 @@
         <Fields Reference="Weapon,^ParamId^,Icon"/>
         <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
     </CDataCollectionPattern>
+    <CDataCollectionPattern id="CommandersAbilities_Beam"/>
 </Catalog>

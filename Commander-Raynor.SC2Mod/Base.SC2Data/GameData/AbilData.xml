@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="RaynorCommanderHeal">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <TargetSorts RequestCount="4294967295">
+            <SortArray value="TSDistance"/>
+            <SortArray value="TSLife"/>
+            <SortArray value="TSPriority"/>
+        </TargetSorts>
+        <Range value="2"/>
+        <SmartPriority value="1"/>
+        <SmartValidatorArray value="healSmartTargetFilters"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="healSmartTargetFilters"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderHeal"/>
+    </CAbilEffectTarget>
     <CAbilTrain id="RaynorCommanderTrainBarrack">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <InfoArray index="Train1" Time="25">
@@ -12,7 +30,7 @@
         </InfoArray>
         <InfoArray index="Train3" Time="40">
             <Button DefaultButtonFace="RaynorCommanderMedic" State="Restricted" Requirements="HaveAttachedBarrTechLabAndShadowOps"/>
-            <Unit value="Ghost"/>
+            <Unit value="RaynorCommanderMedic"/>
         </InfoArray>
         <InfoArray index="Train4" Time="30">
             <Button DefaultButtonFace="RaynorCommanderMarauder" State="Restricted" Requirements="HaveAttachedTechLab"/>

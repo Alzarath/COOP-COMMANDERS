@@ -4,3 +4,4 @@ DataCollectionPattern/Name/CommanderUnits=Commander Units
 DataCollectionPattern/Name/CommanderWeapon_Instant=Commander Weapon_Instant
 DataCollectionPattern/Name/CommanderWeapon_InstantAOE=Commander Weapon_Instant (AOE)
 DataCollectionPattern/Name/CommanderWeapon_Missile=Commander Weapon_Missile
+DataCollectionPattern/Name/CommandersAbilities_Beam=Commanders Abilities_Beam

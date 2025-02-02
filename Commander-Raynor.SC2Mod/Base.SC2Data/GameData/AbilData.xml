@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilTrain id="RaynorCommanderTrainBarrack">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="25">
+            <Button DefaultButtonFace="RaynorCommanderMarine" State="Restricted"/>
+            <Unit value="RaynorCommanderMarine"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="45">
+            <Button DefaultButtonFace="RaynorCommanderFirebat" State="Restricted"/>
+            <Unit value="RaynorCommanderFirebat"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="40">
+            <Button DefaultButtonFace="RaynorCommanderMedic" State="Restricted" Requirements="HaveAttachedBarrTechLabAndShadowOps"/>
+            <Unit value="Ghost"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="30">
+            <Button DefaultButtonFace="RaynorCommanderMarauder" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="RaynorCommanderMarauder"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="40">
+            <Button State="Restricted" Requirements="HaveAttachedTechLab"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilMorphPlacement id="RaynorCommanderLiftBarrack@Land" parent="TerranBuildingLand" unit="Barracks">
+        <Name value="Abil/Name/RaynorCommanderLiftBarrack@Land"/>
+        <InfoArray index="0" Unit="RaynorCommanderBarracks" CollideRange="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="RaynorCommanderLiftBarrack@LiftOff" parent="TerranBuildingLiftOff" unit="BarracksFlying">
+        <Name value="Abil/Name/RaynorCommanderLiftBarrack@LiftOff"/>
+        <InfoArray index="0" Unit="RaynorCommanderBarracks@Fly"/>
+    </CAbilMorph>
     <CAbilEffectInstant id="RaynorCommanderStimpack">
         <AbilSetId value="Stimpack"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -28,8 +62,8 @@
             <Button DefaultButtonFace="Refinery"/>
             <ValidatorArray value="HasVespene2"/>
         </InfoArray>
-        <InfoArray index="Build4" Unit="Barracks" Time="65">
-            <Button DefaultButtonFace="Barracks" State="Suppressed" Requirements="RaynorCommanderHaveSupplyDepot"/>
+        <InfoArray index="Build4" Unit="RaynorCommanderBarracks" Time="65">
+            <Button DefaultButtonFace="RaynorCommanderBarracks" State="Suppressed" Requirements="RaynorCommanderHaveSupplyDepot"/>
         </InfoArray>
         <InfoArray index="Build5" Unit="EngineeringBay" Time="35">
             <Button DefaultButtonFace="EngineeringBay" State="Suppressed" Requirements="RaynorCommanderHaveCommandCenter"/>

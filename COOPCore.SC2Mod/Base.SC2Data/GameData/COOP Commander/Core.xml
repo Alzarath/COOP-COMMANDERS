@@ -5,7 +5,7 @@
         <Pattern value="CommanderAbilities_Build"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="CommanderUnit">
-        <EditorIconSource value="Unit"/>
+        <EditorIconSource value="Actor"/>
         <Pattern value="CommanderUnits"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="CommanderAbilityAB">

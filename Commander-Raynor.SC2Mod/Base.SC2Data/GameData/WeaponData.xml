@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="RaynorCommanderGaussRiffleC14">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="0.8608"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0.75"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPerditionThrower">
         <EditorCategories value="Race:Terran"/>
         <Range value="2"/>
         <Period value="1.2"/>
         <DamagePoint value="1.2"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Self,Missile,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPunisherGrenades">
         <EditorCategories value="Race:Terran"/>

@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="RaynorCommanderBarracks@Build" parent="BarracksBuildBase"/>
+    <CModel id="RaynorCommanderBarracks" parent="BarracksBase">
+        <Model value="Assets\Buildings\Terran\Barracks\Barracks.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderBarracks@Death" parent="BarracksDeathBase">
+        <Model value="Assets\Buildings\Terran\BarracksDeathEx1\BarracksDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderBarracks@FlyDeath" parent="BarracksFlyDeathBase">
+        <Model value="Assets\Buildings\Terran\BarracksFlyDeathEx1\BarracksFlyDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderBarracks@Placement" parent="BarracksPlacementBase" low="RaynorCommanderBarracks">
+        <Model value="Assets\Buildings\Terran\BarracksPlacement\BarracksPlacement.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderBarracks@Portrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderBarracks@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Barracks\Splat_Barracks.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="RaynorCommanderGaussRiffleC14@AttackImpact" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderGaussRiffleC14@AttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderGaussRiffleC14@BunkerAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="MarineAttackLaunch"/>
+    </CModel>
     <CModel id="RaynorCommanderFirebat" parent="Unit">
         <Model value="Assets\Units\Terran\Firebat\Firebat.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -14,8 +51,14 @@
         <Image value="Assets\Textures\firebat_heavens_coop_portrait_static.dds"/>
     </CModel>
     <CModel id="RaynorCommanderPerditionThrower@AttackModel">
-        <Model value="Assets\Effects\Terran\FirebatLaunch\FirebatLaunch.m3"/>
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
         <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderPerditionThrower@UpgradeAttackModel">
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="2.250000,1.800000,1.000000"/>
+        <ScaleMin value="2.250000,1.800000,1.000000"/>
     </CModel>
     <CModel id="RaynorCommanderPunisherGrenades@AttackLaunch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\MarauderMissileLaunch\MarauderMissileLaunch.m3"/>

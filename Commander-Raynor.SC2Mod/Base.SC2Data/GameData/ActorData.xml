@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="RaynorCommanderBarracksBuild" parent="TerranBuildingBuild">
+        <On index="4" Terms="ActorCreation" Send="Create RaynorConstructionAttached"/>
+        <Model value="RaynorCommanderBarracks@Build"/>
+    </CActorModel>
+    <CActorUnit id="RaynorCommanderBarracks" parent="TerranBuildingFlyerEx" unitName="RaynorCommanderBarracks">
+        <On index="80" Terms="UnitBirth.RaynorCommanderBarracks@Fly" Send="Create"/>
+        <On index="81" Terms="UnitBirth.RaynorCommanderBarracks@Fly" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
+        <On index="82" Terms="UnitBirth.RaynorCommanderBarracks@Fly" Send="AliasRemove _CreepEngulfable"/>
+        <On index="83" Terms="UnitBirth.RaynorCommanderBarracks@Fly" Send="CreepEngulfmentStopTransition"/>
+        <On index="84" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks; MorphTo RaynorCommanderBarracks@Fly" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
+        <On index="85" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks; MorphTo RaynorCommanderBarracks@Fly" Send="AliasRemove _CreepEngulfable"/>
+        <On index="86" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks; MorphTo RaynorCommanderBarracks@Fly" Send="CreepEngulfmentStopTransition"/>
+        <On index="87" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks; MorphTo RaynorCommanderBarracks@Fly" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="88" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks; MorphTo RaynorCommanderBarracks@Fly; ScopeContains GroundLocalSelection" Send="StatusIncrement FlyerHelper"/>
+        <On index="89" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks@Fly; MorphTo RaynorCommanderBarracks" Send="AnimGroupRemove Fly"/>
+        <On index="90" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks@Fly; MorphTo RaynorCommanderBarracks" Send="AliasAdd _CreepEngulfable"/>
+        <On index="91" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks@Fly; MorphTo RaynorCommanderBarracks" Send="Create BuildingTerrainFlatten"/>
+        <On index="92" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderBarracks@Fly; MorphTo RaynorCommanderBarracks; ScopeContains FlyerHelperSplat; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="93" Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderBarracks@Fly; MorphTo RaynorCommanderBarracks" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="94" Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderBarracks@Fly; MorphTo RaynorCommanderBarracks" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationBarracks"/>
+        <On Terms="UnitDeathCustomize.RaynorCommanderBarracks@Fly" Send="DeathCustomize Flying"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderBarracks@Death"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="RaynorCommanderBarracks@Explode"/>
+        <DeathCustoms index="5" ModelLink="RaynorCommanderBarracks@FlyDeath" SoundLink="RaynorCommanderBarracks@Explode" Name="Flying"/>
+        <PlacementModel value="RaynorCommanderBarracks@Placement"/>
+        <PortraitModel value="RaynorCommanderBarracks@Portrait"/>
+        <BarOffset value="155"/>
+        <BarWidth value="160"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Barracks.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Barracks.dds"/>
+        <NameOffset value="110"/>
+        <SoundArray index="Ready" value="RaynorCommanderBarracks@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderBarracks@What"/>
+        <SoundArray index="Movement" value="RaynorCommanderBarracks@Movement"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Barracks.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Barracks.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderBarracks@Splat" parent="TerranBuildingMorphSplat" unitName="RaynorCommanderBarracks"/>
+    <CActorAction id="RaynorCommanderGaussRiffleC14@Attack" parent="GenericAttack" effectAttack="RaynorCommanderGaussRiffleC14">
+        <ContainerAssets Model="RaynorCommanderGaussRiffleC14@BunkerAttackLaunch" Sound="RaynorCommanderGaussRiffleC14@BunkerAttackLaunch"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <ImpactPhysics Name="BulletImpact" MatchKeys="Basic" Physics="MarineAttackDeathForce"/>
+        <DamageMap index="None" Sound=""/>
+        <AcquisitionYawHalfArc value="10.000000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="5.000000"/>
+    </CActorAction>
     <CActorUnit id="RaynorCommanderFirebat" parent="GenericUnitStandard" unitName="RaynorCommanderFirebat">
         <EditorCategories value=""/>
         <DeathArray index="Normal" ModelLink="RaynorCommanderFirebat@Death" SoundLink="RaynorCommanderFirebat@Death" VoiceLink="RaynorCommanderFirebat@DeathVoice"/>
@@ -20,12 +72,38 @@
             <Image value="Assets\Textures\wireframe-terran-firebat.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="RaynorCommanderPerditionThrower">
+    <CActorSound id="RaynorCommanderLiftBarrack@Land" parent="SoundOneShot">
         <EditorCategories value=""/>
-        <LaunchAssets Model="RaynorCommanderPerditionThrower@AttackModel" Sound="RaynorCommanderPerditionThrower@AttackSound"/>
+        <On Terms="AbilMorph.RaynorCommanderLiftBarrack@Land.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="RaynorCommanderLiftBarrack@Lift" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.RaynorCommanderLiftBarrack@LiftOff.Start" Send="Create"/>
+    </CActorSound>
+    <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower">
+        <EditorCategories value=""/>
+        <LaunchAssets Model="RaynorCommanderPerditionThrower@AttackModel"/>
+        <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="1" Terms="Effect.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="2" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
+        <On index="6" Terms="Effect.RaynorCommanderPerditionThrower.Start; At Caster; ValidatePlayer RaynorCommanderInciniratorGauntlets@Not" Send="Create"/>
+        <On Terms="Abil.attack.ReadyStop" Send="SetOpacity 0.000000 0.250000"/>
+    </CActorAction>
+    <CActorAction id="RaynorCommanderPerditionThrower@UpgradeAttack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower">
+        <EditorCategories value=""/>
+        <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="1" Terms="Effect.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
+        <On index="2" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
+        <On index="6" Terms="Effect.RaynorCommanderPerditionThrower.Start; At Caster; ValidatePlayer RaynorCommanderInciniratorGauntlets" Send="Create"/>
+        <On Terms="Abil.attack.ReadyStop" Send="SetOpacity 0.000000 0.250000"/>
+        <LaunchAssets Model="RaynorCommanderPerditionThrower@UpgradeAttackModel" Sound="RaynorCommanderPerditionThrower@AttackLaunch"/>
     </CActorAction>
     <CActorModel id="RaynorCommanderPerditionThrower@AttackModel" parent="ModelAddition">
         <EditorCategories value=""/>
+        <Flags index="SuppressCreationErrors" value="1"/>
+        <On Terms="ActorCreation; ValidatePlayer RaynorCommanderInciniratorGauntlets" Send="SetScale 2.250000,1.800000,1.000000"/>
     </CActorModel>
     <CActorAction id="RaynorCommanderPunisherGrenades@Attack" parent="MarauderAttackBase" effectImpact="RaynorCommanderPunisherGrenades" effectLaunch="PunisherGrenadesLM">
         <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; !ValidateEffect PunisherGrenadesResearched" Send="Create"/>
@@ -330,7 +408,7 @@
             <Image value="Assets\Textures\Wireframe-Terran-SCV.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorProgress id="RaynorCommanderBuildSCV@Construction">
+    <CActorProgress id="RaynorConstruction">
         <On Terms="Abil.RaynorCommanderBuildSCV.BuiltStart" Send="Create"/>
         <On Terms="Abil.BarracksAddOns.BuiltStart" Send="Create"/>
         <On Terms="Abil.FactoryAddOns.BuiltStart" Send="Create"/>
@@ -363,6 +441,37 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
+    <CActorProgress id="RaynorConstructionAttached">
+        <Supporter Subject="_TerranBuildModel"/>
+        <On Terms="ProgressLevel.RaynorConstructionAttached; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
+        <On Terms="ProgressLevel.RaynorConstructionAttached; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Birth,A,Stand"/>
+        <StageArray AnimProps="Birth,B,Start"/>
+        <StageArray AnimProps="Birth,B,Stand"/>
+        <StageArray AnimProps="Birth,C,Start"/>
+        <StageArray AnimProps="Birth,C,Stand"/>
+    </CActorProgress>
+    <CActorSound id="RaynorConstructionSoundLevel0" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 0" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 0" Send="Destroy"/>
+        <Sound value="Raynor_ConstructionStart"/>
+    </CActorSound>
+    <CActorSound id="RaynorConstructionSoundLevel2" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 2" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 2" Send="Destroy"/>
+        <Sound value="Raynor_ConstructionStage1"/>
+    </CActorSound>
+    <CActorSound id="RaynorConstructionSoundLevel4" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 4" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 4" Send="Destroy"/>
+        <Sound value="Raynor_ConstructionStage2"/>
+    </CActorSound>
+    <CActorSound id="RaynorConstructionSoundLevel6" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 6" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 6" Send="Destroy"/>
+        <Sound value="Raynor_ConstructionEnd"/>
+    </CActorSound>
     <CActorAction id="WeaponRaynorSCV@Attack" parent="GenericAttack" effectAttack="WeaponRaynorSCV">
         <ShieldFlashType value="Header"/>
     </CActorAction>

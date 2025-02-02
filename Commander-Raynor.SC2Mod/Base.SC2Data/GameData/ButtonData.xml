@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderMedic">
+        <Icon value="Assets\Textures\btn-unit-terran-medic.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-medic.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderMarauder">
+        <Icon value="Assets\Textures\btn-unit-terran-marauder.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marauder.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderMarine">
+        <Icon value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-marine.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderInciniratorGauntlets">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-incineratorgauntlets.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="RaynorCommanderArmory">
         <Icon value="Assets\Textures\btn-building-terran-armory.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-terran-armory.dds"/>
@@ -60,6 +79,10 @@
     <CButton id="RaynorCommanderGhostAcademy">
         <Icon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderJuggernautPlating">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-juggernautplating.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="RaynorCommanderMissileTurret">
@@ -124,5 +147,27 @@
         <AlertIcon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
         <EditorCategories value="Race:Terran"/>
         <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderInfantryWeapon@Level1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RaynorCommanderInfantryWeapon@Level2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="TerranInfantryWeaponsLevel1"/>
+    </CButton>
+    <CButton id="RaynorCommanderInfantryWeapon@Level3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="TerranInfantryWeaponsLevel1"/>
+    </CButton>
+    <CButton id="RaynorCommanderFirebat">
+        <Icon value="Assets\Textures\btn-unit-terran-firebat.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-firebat.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
 </Catalog>

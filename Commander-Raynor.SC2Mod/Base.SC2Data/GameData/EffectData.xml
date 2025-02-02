@@ -4,12 +4,23 @@
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectDamage id="RaynorCommanderGaussRiffleC14" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <Kind value="Ranged"/>
+        <Amount value="6"/>
+    </CEffectDamage>
     <CEffectDamage id="RaynorCommanderPerditionThrower">
         <EditorCategories value="Race:Terran"/>
         <Amount value="15"/>
         <Death value="Fire"/>
-        <AreaArray Radius="0.6" Fraction="0.8"/>
-        <SearchFilters value="Ground;Self,Missile,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="1" Fraction="0.8"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
+        <DebugTrace value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AreaRelativeOffset value="0,-1"/>
+        <SearchFlags index="CenterAtLaunch" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="RaynorCommanderPunisherGrenades@LM">
         <EditorCategories value="Race:Terran"/>

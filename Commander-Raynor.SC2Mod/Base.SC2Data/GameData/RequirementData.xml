@@ -30,12 +30,24 @@
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="CountUnitAlias_SupplyDepotCompleteOnly3975993912TechTreeCheat"/>
     </CRequirement>
+    <CRequirement id="RaynorCommanderInciniratorGauntlets">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderInciniratorGauntlets@Not">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderJuggernautPlating">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeRaynorCommanderJuggernautPlatingCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="RaynorCommanderStimpack">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Use" Link="CountUpgradeStimpackCompleteOnly80611996TechTreeCheat"/>
     </CRequirement>
     <CRequirement id="RaynorCommanderPunisherGrenades@Use">
-        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
         <NodeArray index="Use" Link="CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat"/>
     </CRequirement>
 </Catalog>

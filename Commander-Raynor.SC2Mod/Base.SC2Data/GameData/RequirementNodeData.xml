@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderInciniratorGauntlets" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderJuggernautPlatingCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderJuggernautPlating" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat">
         <Count Link="RaynorCommanderPunisherGrenades@PunisherGrenades" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
@@ -11,4 +21,8 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderStimpack@AB" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementNot id="NotCountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly"/>
+    </CRequirementNot>
 </Catalog>

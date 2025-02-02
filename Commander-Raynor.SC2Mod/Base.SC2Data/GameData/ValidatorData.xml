@@ -5,6 +5,14 @@
         <ResultNoUnit value="OKPlaceholder"/>
         <Compare value="GT"/>
     </CValidatorUnitCompareResourceContents>
+    <CValidatorPlayerRequirement id="RaynorCommanderInciniratorGauntlets">
+        <Find value="1"/>
+        <Value value="RaynorCommanderInciniratorGauntlets"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="RaynorCommanderInciniratorGauntlets@Not">
+        <Find value="1"/>
+        <Value value="RaynorCommanderInciniratorGauntlets@Not"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="RaynorCommanderPunisherGrenades@Researched">
         <ResultNoPlayer value="Error"/>
         <Find value="1"/>

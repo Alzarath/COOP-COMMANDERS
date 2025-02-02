@@ -3,6 +3,8 @@
     <CWeaponLegacy id="RaynorCommanderPerditionThrower">
         <EditorCategories value="Race:Terran"/>
         <Range value="2"/>
+        <Period value="1.2"/>
+        <DamagePoint value="1.2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPunisherGrenades">
         <EditorCategories value="Race:Terran"/>

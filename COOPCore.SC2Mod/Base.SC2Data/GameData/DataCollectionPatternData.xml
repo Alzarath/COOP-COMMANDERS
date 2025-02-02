@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionPattern id="CommanderWeapon_InstantAOE">
+        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
+        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
+        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
+        <Fields Reference="Effect,^ParamId^,AreaArray" NameOverride="DataCollectionPattern/CommanderWeapon/DamageArea"/>
+        <Fields Reference="Effect,^ParamId^,SearchFilters" NameOverride="DataCollectionPattern/CommanderWeapon/DamageSearchFilters"/>
+        <Fields Reference="Weapon,^ParamId^,Period"/>
+        <Fields Reference="Weapon,^ParamId^,Range"/>
+        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
+        <Fields Reference="Weapon,^ParamId^,Icon"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
+        <Fields Reference="Weapon,^ParamId^,Effect"/>
+    </CDataCollectionPattern>
+    <CDataCollectionPattern id="CommanderWeapon_Missile">
+        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
+        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
+        <Fields Reference="Model,^ParamId^@AttackImpact,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/ImpactModel"/>
+        <Fields Reference="Sound,^ParamId^@AttackImpact,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/ImpactSound"/>
+        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
+        <Fields Reference="Mover,^ParamId^@Weapon,MotionPhases.MaxSpeed" NameOverride="DataCollectionPattern/CommanderWeapon/SpeedMissile"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.AttackSpeedMultiplier" NameOverride="DataCollectionPattern/CommanderWeapon/DebuffAttackSpeed"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.MoveSpeedMultiplier" NameOverride="DataCollectionPattern/CommanderWeapon/DebuffSpeed"/>
+        <Fields Reference="Weapon,^ParamId^,Period"/>
+        <Fields Reference="Weapon,^ParamId^,Range"/>
+        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
+        <Fields Reference="Weapon,^ParamId^,Icon"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
+    </CDataCollectionPattern>
+</Catalog>

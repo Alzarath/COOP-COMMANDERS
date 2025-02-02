@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="RaynorCommanderFirebat" parent="GenericUnitStandard" unitName="RaynorCommanderFirebat">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderFirebat@Death" SoundLink="RaynorCommanderFirebat@Death" VoiceLink="RaynorCommanderFirebat@DeathVoice"/>
+        <PortraitModel value="RaynorCommanderFirebat@Portrait"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderFirebat@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderFirebat@Help"/>
+        <SoundArray index="What" value="RaynorCommanderFirebat@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderFirebat@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderFirebat@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderFirebat@Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-firebat.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-terran-firebat.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-firebat.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="RaynorCommanderPerditionThrower">
+        <EditorCategories value=""/>
+        <LaunchAssets Model="RaynorCommanderPerditionThrower@AttackModel" Sound="RaynorCommanderPerditionThrower@AttackSound"/>
+    </CActorAction>
+    <CActorModel id="RaynorCommanderPerditionThrower@AttackModel" parent="ModelAddition">
+        <EditorCategories value=""/>
+    </CActorModel>
+    <CActorAction id="RaynorCommanderPunisherGrenades@Attack" parent="MarauderAttackBase" effectImpact="RaynorCommanderPunisherGrenades" effectLaunch="PunisherGrenadesLM">
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; !ValidateEffect PunisherGrenadesResearched" Send="Create"/>
+        <LaunchAttachQuery Methods="AMPatternMarauder"/>
+        <LaunchAssets Sound="RaynorCommanderPunisherGrenades@AttackLaunch"/>
+        <ContainerAssets Sound="RaynorCommanderPunisherGrenades@AttackLaunch"/>
+        <Missile value="RaynorCommanderPunisherGrenades@Missile"/>
+        <ImpactMap index="None" Model="RaynorCommanderPunisherGrenades@AttackImpact" Sound="RaynorCommanderPunisherGrenades@AttackImpact"/>
+        <ImpactPhysics Name="PunisherGrenadesImpact" MatchKeys="Basic" Physics="MarauderAttackDeathForce"/>
+    </CActorAction>
+    <CActorSimple id="RaynorCommanderPunisherGrenades@AttackAnimation">
+        <EditorCategories value=""/>
+        <On Terms="Abil.attack.ReadyStart" Target="_Unit" Send="AnimGroupApply Ready"/>
+        <On Terms="ActorCreation" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; IsStatus WeaponNext 0" Target="_Unit" Send="AnimClear AttackRight"/>
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; IsStatus WeaponNext 0" Target="_Unit" Send="AnimPlay AttackLeft Attack,Left"/>
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; IsStatus WeaponNext 1" Target="_Unit" Send="AnimClear AttackLeft"/>
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; IsStatus WeaponNext 1" Target="_Unit" Send="AnimPlay AttackRight Attack,Right"/>
+        <On Terms="Abil.attack.ReadyStart; ValidateUnit {} 0 RaynorCommanderMarauder" Send="Create"/>
+        <On Terms="Abil.attack.ReadyStop" Send="Destroy"/>
+    </CActorSimple>
+    <CActorMissile id="RaynorCommanderPunisherGrenades@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderPunisherGrenades@LMWeapon">
+        <Model value="RaynorCommanderPunisherGrenades@Missile"/>
+    </CActorMissile>
+    <CActorAction id="RaynorCommanderPunisherGrenades@UpgradedAttack" parent="MarauderAttackBase" effectImpact="RaynorCommanderPunisherGrenades" effectLaunch="PunisherGrenadesLM">
+        <On Terms="Effect.RaynorCommanderPunisherGrenades@LM.Start; At Caster; ValidateEffect PunisherGrenadesResearched" Send="Create"/>
+        <LaunchAttachQuery Methods="AMPatternMarauder"/>
+        <LaunchAssets Model="RaynorCommanderPunisherGrenades@AttackLaunch" Sound="RaynorCommanderPunisherGrenades@AttackLaunch"/>
+        <ContainerAssets Sound="RaynorCommanderPunisherGrenades@AttackLaunch"/>
+        <Missile value="RaynorCommanderPunisherGrenades@Missile"/>
+        <ImpactMap index="None" Model="RaynorCommanderPunisherGrenades@UpgradedAttackImpact" Sound="RaynorCommanderPunisherGrenades@AttackImpact"/>
+        <ImpactPhysics Name="PunisherGrenadesImpact" MatchKeys="Basic" Physics="MarauderAttackDeathForce"/>
+    </CActorAction>
     <CActorSound id="RaynorCommanderStimpackMara@Cast" parent="SoundOneShot">
         <On Terms="Abil.RaynorCommanderStimpackMara.SourceCastStart" Send="Create"/>
     </CActorSound>
@@ -285,13 +346,15 @@
         <StageArray AnimProps="Build,C,Stand"/>
         <StageArray AnimProps="Build,D"/>
     </CActorProgress>
-    <CActorModel id="RaynorCommanderStimpackMara@Impact" parent="ModelAnimationStyleOneShot">
+    <CActorSound id="RaynorCommanderStimpackMara@Finish" parent="SoundOneShot">
+        <On Terms="Abil.RaynorCommanderStimpackMara.SourceFinishStart" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="RaynorCommanderStimpackMara@EndImpact" parent="ModelAnimationStyleOneShot">
         <Inherits index="CloakEffect" value="1"/>
         <On Terms="Behavior.Stimpack.Off; ValidateUnit NotDead" Send="Create"/>
         <On Terms="Behavior.RaynorCommanderStimpackMara.Off; ValidateUnit NotDead" Send="Create"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
-        <Model value="RaynorCommanderStimpackMara@EndImpact"/>
     </CActorModel>
     <CActorModel id="RaynorCommanderStimpackMara@StartImpact" parent="ModelAnimationStyleOneShot">
         <Inherits index="CloakEffect" value="1"/>

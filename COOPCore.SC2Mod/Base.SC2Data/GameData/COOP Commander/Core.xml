@@ -21,7 +21,6 @@
         <Fields Reference="Abil,^ParamId^,Cost"/>
         <Fields Reference="Abil,^ParamId^,CmdButtonArray.Requirements"/>
         <Fields Reference="Effect,^ParamId^@AB,Behavior"/>
-        <Fields Reference="Requirement,^ParamId^,NodeArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/NodeRequirement"/>
         <Fields Reference="Behavior,^ParamId^,Modification.AttackSpeedMultiplier"/>
         <Fields Reference="Behavior,^ParamId^,Modification.MoveSpeedMultiplier"/>
         <Fields Reference="Button,^ParamId^,Name" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonName"/>

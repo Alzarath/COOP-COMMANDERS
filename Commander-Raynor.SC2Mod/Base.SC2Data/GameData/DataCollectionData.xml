@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollection id="RaynorCommanderPerditionThrower">
+        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Effect,RaynorCommanderPerditionThrower"/>
+        <DataRecord Entry="Weapon,RaynorCommanderPerditionThrower"/>
+        <DataRecord Entry="Actor,RaynorCommanderPerditionThrower@Attack"/>
+        <DataRecord Entry="Actor,RaynorCommanderPerditionThrower@AttackModel"/>
+        <DataRecord Entry="Model,RaynorCommanderPerditionThrower@AttackModel"/>
+        <DataRecord Entry="Sound,RaynorCommanderPerditionThrower@AttackSound"/>
+        <EditorIconSource value="Weapon"/>
+        <Pattern value="CommanderWeapon_InstantAOE"/>
+    </CDataCollection>
     <CDataCollectionAbil id="RaynorCommanderBuildSCV" parent="CommanderAbilityBuild">
         <Name value="DataCollection/Name/RaynorCommanderBuildSCV"/>
         <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderBuildSCV"/>
         <DataRecord Entry="Actor,RaynorCommanderBuildSCV@Construction"/>
     </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderFirebat" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderFirebat"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,RaynorCommanderFirebat"/>
+        <DataRecord Entry="Model,RaynorCommanderFirebat"/>
+        <DataRecord Entry="Model,RaynorCommanderFirebat@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderFirebat@Portrait"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@Yes"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@What"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@Pissed"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@Attack"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@Help"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@Ready"/>
+        <DataRecord Entry="Unit,RaynorCommanderFirebat"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@DeathVoice"/>
+        <DataRecord Entry="Sound,RaynorCommanderFirebat@Death"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMarauder" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderMarauder"/>
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
@@ -52,6 +80,35 @@
         <EditorIconSource value="Unit"/>
         <Button value="Marine"/>
     </CDataCollectionUnit>
+    <CDataCollection id="RaynorCommanderPunisherGrenades">
+        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Projectile"/>
+        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@Attack"/>
+        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@UpgradedAttack"/>
+        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@Missile"/>
+        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades"/>
+        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@AB"/>
+        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@Set"/>
+        <DataRecord Entry="Effect,RaynorCommanderPunisherGrenades@LM"/>
+        <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@AttackLaunch"/>
+        <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@Missile"/>
+        <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@UpgradedAttackImpact"/>
+        <DataRecord Entry="Model,RaynorCommanderPunisherGrenades@AttackImpact"/>
+        <DataRecord Entry="Mover,RaynorCommanderPunisherGrenades@Weapon"/>
+        <DataRecord Entry="Sound,RaynorCommanderPunisherGrenades@AttackImpact"/>
+        <DataRecord Entry="Sound,RaynorCommanderPunisherGrenades@AttackLaunch"/>
+        <DataRecord Entry="Unit,RaynorCommanderPunisherGrenades@LMWeapon"/>
+        <DataRecord Entry="Weapon,RaynorCommanderPunisherGrenades"/>
+        <DataRecord Entry="Behavior,RaynorCommanderPunisherGrenades"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NoPurificationNova"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@TargetIsSlowed"/>
+        <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@AttackAnimation"/>
+        <DataRecord Entry="Requirement,RaynorCommanderPunisherGrenades@Use"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NotStructure"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@NotMassive"/>
+        <DataRecord Entry="Validator,RaynorCommanderPunisherGrenades@Researched"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderPunisherGrenades@PunisherGrenades"/>
+        <Pattern value="CommanderWeapon_Missile"/>
+    </CDataCollection>
     <CDataCollectionUnit id="RaynorCommanderSCV" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderSCV"/>
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
@@ -90,7 +147,7 @@
         <Name value="DataCollection/Name/RaynorCommanderStimpackMara"/>
         <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderStimpackMara"/>
-        <DataRecord Entry="Actor,RaynorCommanderStimpackMara@Impact"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpackMara@EndImpact"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpackMara@StartImpact"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpackMara@Cast"/>
         <DataRecord Entry="Behavior,RaynorCommanderStimpackMara"/>
@@ -100,6 +157,7 @@
         <DataRecord Entry="Model,RaynorCommanderStimpackMara@EndImpact"/>
         <DataRecord Entry="Sound,RaynorCommanderStimpackMara@Cast"/>
         <DataRecord Entry="Requirement,RaynorCommanderStimpack"/>
+        <DataRecord Entry="Actor,RaynorCommanderStimpackMara@Finish"/>
     </CDataCollectionAbil>
     <CDataCollection id="WeaponRaynorSCV">
         <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>

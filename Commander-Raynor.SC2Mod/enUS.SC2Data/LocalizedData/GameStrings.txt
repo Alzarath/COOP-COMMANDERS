@@ -1,8 +1,10 @@
 ﻿Abil/Name/RaynorCommanderBuildSCV=Build (SCV)
 Abil/Name/RaynorCommanderStimpack=Stimpack
 Abil/Name/RaynorCommanderStimpackMara=Stimpack
+Behavior/Name/RaynorCommanderPunisherGrenades=Slow
 Behavior/Name/RaynorCommanderStimpack=Stimpack
 Behavior/Name/RaynorCommanderStimpackMara=Stimpack
+Behavior/Tooltip/RaynorCommanderPunisherGrenades=Target's movement speed is reduced for a short period of time.
 Behavior/Tooltip/RaynorCommanderStimpack=This unit moves and attacks more quickly while under the effects of Stimpack.
 Behavior/Tooltip/RaynorCommanderStimpackMara=This unit moves and attacks more quickly while under the effects of Stimpack.
 Button/Name/RaynorBuildAdvanced=Build Advanced Structure
@@ -32,6 +34,7 @@ Button/Tooltip/RaynorCommanderBunker=Defensive structure. <n/>Infantry fights fr
 Button/Tooltip/RaynorCommanderCommandCenter=Primary structure. Used to receive gathered resources. Can use the Lift Off ability and can upgrade into an Orbital Command or a Planetary Fortress.<n/><n/><c val="ffff8a">Enables:</c><n/>- SCVs
 Button/Tooltip/RaynorCommanderEngineeringBay=Contains upgrades for Terran infantry and structures. <n/><n/><c val="ffff8a">Enables:</c><n/>- Missile Turrets from SCVs<n/>- Sensor Towers from SCVs<n/>- Planetary Fortresses from Command Centers
 Button/Tooltip/RaynorCommanderFactory=Vehicle-production facility. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellions<n/>- Widow Mines
+Button/Tooltip/RaynorCommanderFirebat=Тяжелая пехота против многочисленных легкобронированных единиц противника
 Button/Tooltip/RaynorCommanderFusionCore=Contains Battlecruiser upgrades. <n/><n/><c val="ffff8a">Enables:</c><n/>- Battlecruisers at the Starport
 Button/Tooltip/RaynorCommanderGather=Orders SCV to gather resources from a selected Mineral Field or Vespene Geyser.
 Button/Tooltip/RaynorCommanderGhostAcademy=Contains upgrades for Ghosts. Can build Nukes for Ghosts.<n/><n/><c val="ffff8a">Enables:</c><n/>- Ghosts at the Barracks
@@ -49,33 +52,35 @@ Button/Tooltip/RaynorCommanderStimpackMara=Injects the unit with powerful stimul
 Button/Tooltip/RaynorCommanderSupplyDepot=Provides supply.<n/>Supply allows you to create more units.<n/>Supply Depots can be lowered to allow units to walk over them.
 Button/Tooltip/RaynorCommanderTerranBuild=A list of basic structures.
 DataCollection/Name/RaynorCommanderBuildSCV=Raynor Commander - Build SCV
+DataCollection/Name/RaynorCommanderFirebat=Raynor Commander - Firebat
 DataCollection/Name/RaynorCommanderMarauder=Raynor Commander - Marauder
 DataCollection/Name/RaynorCommanderMarine=Raynor Commander - Marine
+DataCollection/Name/RaynorCommanderPerditionThrower=Raynor Commander - Perdition Thrower
+DataCollection/Name/RaynorCommanderPunisherGrenades=Raynor Commander - Punisher Grenades
 DataCollection/Name/RaynorCommanderSCV=Raynor Commander - SCV
 DataCollection/Name/RaynorCommanderStimpack=Raynor Commander - Stimpack
 DataCollection/Name/RaynorCommanderStimpackMara=Raynor Commander - Stimpack (Mara)
 DataCollection/Name/WeaponRaynorSCV=Raynor Commander - Fusion Cutter
-DataCollectionPattern/CommanderWeapon/DamageAmount=Damage Amount
-DataCollectionPattern/CommanderWeaponInstant/LaunchModel=Launch Model
-DataCollectionPattern/CommanderWeaponInstant/LaunchSound=Launch Sound
-DataCollectionPattern/CommandersAbilityAB/ButtonAlertIcon=Button Alert Icon
-DataCollectionPattern/CommandersAbilityAB/ButtonIcon=Button Icon
-DataCollectionPattern/CommandersAbilityAB/ButtonName=Button Name
-DataCollectionPattern/CommandersAbilityAB/ButtonTooltip=Button Tooltip
-DataCollectionPattern/CommandersAbilityAB/EndImpactModel=Model End Impact
-DataCollectionPattern/CommandersAbilityAB/NodeRequirement=Node Default Requirement
-DataCollectionPattern/CommandersAbilityAB/SoundCast=Sound Cast
-DataCollectionPattern/CommandersAbilityAB/SoundFinish=Sound Finish
-DataCollectionPattern/CommandersAbilityAB/StartImpactModel=Model Start Impact
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
 Effect/Name/FusionCutter2=Fusion Cutter (Damage)
 Effect/Name/GuassRifle2=Guass Rifle
+Effect/Name/RaynorCommanderPerditionThrower=(Damage)
+Effect/Name/RaynorCommanderPunisherGrenades=(Damage)
+Effect/Name/RaynorCommanderPunisherGrenades@AB=(Apply Slow Behavior)
+Effect/Name/RaynorCommanderPunisherGrenades@LM=(Launch Missile)
+Effect/Name/RaynorCommanderPunisherGrenades@Set=(Set)
 Effect/Name/RaynorCommanderStimpack@AB=(Apply Buff)
 Effect/Name/RaynorCommanderStimpackMara@AB=(Apply Buff)
 Effect/Name/Repair2=Repair
 Effect/Name/WeaponRaynorSCV=(Damage)
+RequirementNode/Tooltip/CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat=Research Concussive Shells at the Barracks Tech Lab
+Unit/Name/RaynorCommanderFirebat=Firebat
 Unit/Name/RaynorCommanderMarauder=Marauder
 Unit/Name/RaynorCommanderMarine=Marine
+Unit/Name/RaynorCommanderPunisherGrenades@LMWeapon=Missile
 Unit/Name/RaynorCommanderSCV=SCV
+Upgrade/Name/RaynorCommanderPunisherGrenades@PunisherGrenades=Concussive Shells
+Weapon/Name/RaynorCommanderPerditionThrower=Plasma Gun
+Weapon/Name/RaynorCommanderPunisherGrenades=Punisher Grenades
 Weapon/Name/WeaponRaynorSCV=Fusion Cutter

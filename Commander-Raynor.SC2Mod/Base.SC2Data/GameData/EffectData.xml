@@ -4,6 +4,37 @@
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
     </CEffectDamage>
+    <CEffectDamage id="RaynorCommanderPerditionThrower">
+        <EditorCategories value="Race:Terran"/>
+        <Amount value="15"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="0.6" Fraction="0.8"/>
+        <SearchFilters value="Ground;Self,Missile,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RaynorCommanderPunisherGrenades@LM">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactEffect value="RaynorCommanderPunisherGrenades@Set"/>
+        <Movers Link="PunisherGrenadesWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="RaynorCommanderPunisherGrenades@Set">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="RaynorCommanderPunisherGrenades@AB"/>
+        <EffectArray value="RaynorCommanderPunisherGrenades"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="RaynorCommanderPunisherGrenades@AB">
+        <ValidatorArray index="0" value="PunisherGrenadesResearched"/>
+        <ValidatorArray value="RaynorCommanderPunisherGrenades@NotMassive"/>
+        <ValidatorArray value="RaynorCommanderPunisherGrenades@NotStructure"/>
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="RaynorCommanderPunisherGrenades"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="RaynorCommanderPunisherGrenades" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="10"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="RaynorCommanderStimpackMara@AB">
         <ValidatorArray index="0" value="StimpackTargetFilters"/>
         <EditorCategories value="Race:Terran"/>

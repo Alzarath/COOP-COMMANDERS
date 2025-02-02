@@ -85,7 +85,7 @@
         </Cost>
         <Marker Link="Abil/Stimpack"/>
         <AINotifyEffect value="Stimpack"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderStimpackMara" Requirements="UseStimpack">
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderStimpackMara" Requirements="RaynorCommanderStimpack">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>

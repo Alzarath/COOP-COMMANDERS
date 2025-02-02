@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat">
+        <Count Link="RaynorCommanderPunisherGrenades@PunisherGrenades" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeStimpackCompleteOnly80611996TechTreeCheat2">
         <Tooltip value="RequirementNode/Tooltip/CountUpgradeStimpackCompleteOnly80611996"/>
         <Count Link="RaynorCommanderStimpack@AB" State="CompleteOnly"/>

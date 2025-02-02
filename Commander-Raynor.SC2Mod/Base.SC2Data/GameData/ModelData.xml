@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="RaynorCommanderFirebat" parent="Unit">
+        <Model value="Assets\Units\Terran\Firebat\Firebat.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderFirebat@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\FirebatDeath\FirebatDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderFirebat@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Terran\FirebatPortrait\FirebatPortrait.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Image value="Assets\Textures\firebat_heavens_coop_portrait_static.dds"/>
+    </CModel>
+    <CModel id="RaynorCommanderPerditionThrower@AttackModel">
+        <Model value="Assets\Effects\Terran\FirebatLaunch\FirebatLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderPunisherGrenades@AttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarauderMissileLaunch\MarauderMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderPunisherGrenades@AttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MarauderBaseMissileImpact\MarauderBaseMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderPunisherGrenades@UpgradedAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MarauderMissileImpact\MarauderMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderPunisherGrenades@Missile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
     <CModel id="RaynorCommanderMarauder" parent="MarauderBase">
         <Model value="Assets\Units\Terran\Marauder\Marauder.m3"/>
     </CModel>

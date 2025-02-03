@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollectionAbil id="RaynorCommanderBarrackResearch">
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderBarrackResearch"/>
+    </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderBarracks" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderBarracks"/>
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
@@ -20,6 +24,16 @@
         <DataRecord Entry="Model,RaynorCommanderBarracks@Build"/>
         <DataRecord Entry="Unit,RaynorCommanderBarracks@Fly"/>
     </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderBuildAddon">
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderBuildAddon@Barracks"/>
+        <DataRecord Entry="Abil,RaynorCommanderBuildAddon@Factory"/>
+        <DataRecord Entry="Abil,RaynorCommanderBuildAddon@Starport"/>
+        <DataRecord Entry="Button,RaynorCommanderBuildAddon"/>
+        <DataRecord Entry="Button,RaynorCommanderBuildAddon@Barracks"/>
+        <DataRecord Entry="Button,RaynorCommanderBuildAddon@Factory"/>
+        <DataRecord Entry="Button,RaynorCommanderBuildAddon@Starport"/>
+    </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderGaussRiffleC14">
         <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Weapon"/>
@@ -51,6 +65,10 @@
         <DataRecord Entry="Actor,RaynorCommanderHeal@Animation"/>
         <DataRecord Entry="Actor,RaynorCommanderHeal@Model"/>
         <DataRecord Entry="Model,RaynorCommanderHeal@Model"/>
+        <DataRecord Entry="Actor,RaynorCommanderHeal@Stop"/>
+        <DataRecord Entry="Actor,RaynorCommanderHeal@Start"/>
+        <DataRecord Entry="Sound,RaynorCommanderHeal@Stop"/>
+        <DataRecord Entry="Sound,RaynorCommanderHeal@Start"/>
     </CDataCollectionAbil>
     <CDataCollectionUpgrade id="RaynorCommanderInciniratorGauntlets">
         <EditorCategories value="DataGroup:Research,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
@@ -104,6 +122,7 @@
         <DataRecord Entry="Sound,RaynorCommanderMedic@Yes"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@Help"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@Ready"/>
+        <DataRecord Entry="Light,RaynorCommanderMedic"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPerditionThrower">
         <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
@@ -274,11 +293,91 @@
         <DataRecord Entry="Requirement,RaynorCommanderStimpack"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpackMara@Finish"/>
     </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderTechLab" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderTechLab"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLab"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLab@Splat"/>
+        <DataRecord Entry="Footprint,RaynorCommanderTechLab@3x3AddOn2x2"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLab"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLab@Splat"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLab@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLab@DeathDetached"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLab@Placement"/>
+        <DataRecord Entry="Sound,RaynorCommanderTechLab@Birth"/>
+        <DataRecord Entry="Sound,RaynorCommanderTechLab@Explode"/>
+        <DataRecord Entry="Sound,RaynorCommanderTechLab@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderTechLab@What"/>
+        <DataRecord Entry="Unit,RaynorCommanderTechLab"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderTechLabBarrack" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderTechLabBarrack"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabBarrack"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabBarrack@Splat"/>
+        <DataRecord Entry="Behavior,RaynorCommanderTechLabBarrack"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLabBarrack"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLabBarrack@Splat"/>
+        <DataRecord Entry="Unit,RaynorCommanderTechLabBarrack"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderTechLabFactory" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderTechLabFactory"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Behavior,RaynorCommanderTechLabFactory"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabFactory"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabFactory@Splat"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLabFactory"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLabFactory@Splat"/>
+        <DataRecord Entry="Unit,RaynorCommanderTechLabFactory"/>
+    </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderTechLabMorphBarrack" parent="Decal">
+        <EditorCategories value="DataFamily:Coop,Race:Terran,ObjectType:Other,DataGroup:Ability"/>
+        <DataRecord Entry="Abil,RaynorCommanderTechLabMorphBarrack"/>
+        <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphBarrack@Requirement"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderTechLabMorphDetached">
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderTechLabMorphDetached"/>
+        <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphDetached@Requirement"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderTechLabMorphFactory">
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderTechLabMorphFactory"/>
+        <DataRecord Entry="Button,RaynorCommanderTechLabMorphFactory"/>
+        <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphFactory@Requirement"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderTechLabMorphStarport">
+        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderTechLabMorphStarport"/>
+        <DataRecord Entry="Button,RaynorCommanderTechLabMorphStarport"/>
+        <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphStarport@Requirement"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderTechLabStarport" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderTechLabStarport"/>
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Behavior,RaynorCommanderTechLabStarport"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabStarport"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabStarport@Splat"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLabStarport"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLabStarport@Splat"/>
+        <DataRecord Entry="Unit,RaynorCommanderTechLabStarport"/>
+    </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTrainBarrack">
         <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Abil"/>
         <DataRecord Entry="Abil,RaynorCommanderTrainBarrack"/>
     </CDataCollectionAbil>
+    <CDataCollection id="TerranBuildingFlameBig">
+        <EditorCategories value="DataGroup:Doodad,Race:Terran,DataFamily:Coop,ObjectType:Environment"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig@Sound"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig@LightSmoke"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig@Fire"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig@HeavySmoke"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig@LightSmokeTransition"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig@FireTransition"/>
+        <DataRecord Entry="Actor,TerranBuildingFlameBig@HeavySmokeTransition"/>
+    </CDataCollection>
     <CDataCollectionUnit id="WeaponRaynorSCV">
         <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Weapon"/>

@@ -50,4 +50,20 @@
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>
         <NodeArray index="Use" Link="CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat"/>
     </CRequirement>
+    <CRequirement id="RaynorCommanderTechLabMorphBarrack@Requirement">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="CountUnitRaynorCommanderTechLabBarrackCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderTechLabMorphFactory@Requirement">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="CountUnitRaynorCommanderTechLabFactoryCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderTechLabMorphStarport@Requirement">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="CountUnitRaynorCommanderTechLabStarportCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderTechLabMorphDetached@Requirement">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="NotOrCountUnitRaynorCommanderTechLabBarrackCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabFactoryCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabStarportCompleteOnlyAtUnit"/>
+    </CRequirement>
 </Catalog>

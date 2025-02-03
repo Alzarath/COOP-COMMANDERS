@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilResearch id="RaynorCommanderBarrackResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoArray index="Research1" Time="15" Upgrade="RaynorCommanderInciniratorGauntlets">
+            <Button DefaultButtonFace="RaynorCommanderInciniratorGauntlets"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="20" Upgrade="RaynorCommanderJuggernautPlating">
+            <Button DefaultButtonFace="RaynorCommanderJuggernautPlating"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="12" Upgrade="RaynorCommanderPunisherGrenades@PunisherGrenades">
+            <Button DefaultButtonFace="ConcussiveGrenade"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilBuild id="RaynorCommanderBuildAddon@Factory" parent="TerranAddOns">
+        <Name value="Abil/Name/RaynorCommanderBuildAddon@Factory"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuildMorphAbil value="FactoryLiftOff"/>
+        <InfoArray index="Build1" Unit="RaynorCommanderTechLabFactory" Time="25">
+            <Button DefaultButtonFace="RaynorCommanderBuildAddon@Factory"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="FactoryReactor" Time="50"/>
+    </CAbilBuild>
+    <CAbilBuild id="RaynorCommanderBuildAddon@Barracks" parent="TerranAddOns">
+        <Name value="Abil/Name/RaynorCommanderBuildAddon@Barracks"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuildMorphAbil value="RaynorCommanderLiftBarrack@LiftOff"/>
+        <InfoArray index="Build1" Unit="RaynorCommanderTechLabBarrack" Time="25">
+            <Button DefaultButtonFace="RaynorCommanderBuildAddon@Barracks"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="BarracksReactor" Time="50">
+            <Button DefaultButtonFace="RaynorCommanderBuildAddon"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilMorph id="RaynorCommanderTechLabMorphFactory">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderTechLabMorphFactory" Requirements="RaynorCommanderTechLabMorphFactory@Requirement"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <InfoArray Unit="RaynorCommanderTechLabFactory"/>
+    </CAbilMorph>
+    <CAbilMorph id="RaynorCommanderTechLabMorphBarrack">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderTechLabMorphBarrack" Requirements="RaynorCommanderTechLabMorphBarrack@Requirement"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <InfoArray Unit="RaynorCommanderTechLabBarrack"/>
+    </CAbilMorph>
     <CAbilEffectTarget id="RaynorCommanderHeal">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Flags index="Smart" value="1"/>
-        <TargetSorts RequestCount="4294967295">
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
             <SortArray value="TSDistance"/>
-            <SortArray value="TSLife"/>
-            <SortArray value="TSPriority"/>
+            <SortArray value="TSLifeFraction"/>
         </TargetSorts>
         <Range value="2"/>
         <SmartPriority value="1"/>
         <SmartValidatorArray value="healSmartTargetFilters"/>
+        <SmartValidatorArray value="NotWarpingIn"/>
         <AutoCastRange value="6"/>
-        <AutoCastValidatorArray value="healSmartTargetFilters"/>
+        <AutoCastValidatorArray value="healCasterMinEnergy"/>
+        <AutoCastValidatorArray value="NotWarpingIn"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderHeal"/>
+        <AutoCastFilters value="Visible;Self,Neutral,Enemy"/>
     </CAbilEffectTarget>
     <CAbilTrain id="RaynorCommanderTrainBarrack">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
@@ -29,11 +78,11 @@
             <Unit value="RaynorCommanderFirebat"/>
         </InfoArray>
         <InfoArray index="Train3" Time="40">
-            <Button DefaultButtonFace="RaynorCommanderMedic" State="Restricted" Requirements="HaveAttachedBarrTechLabAndShadowOps"/>
+            <Button DefaultButtonFace="RaynorCommanderMedic" State="Restricted" Requirements="RaynorCommanderTechLabMorphBarrack@Requirement"/>
             <Unit value="RaynorCommanderMedic"/>
         </InfoArray>
         <InfoArray index="Train4" Time="30">
-            <Button DefaultButtonFace="RaynorCommanderMarauder" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Button DefaultButtonFace="RaynorCommanderMarauder" State="Restricted" Requirements="RaynorCommanderTechLabMorphBarrack@Requirement"/>
             <Unit value="RaynorCommanderMarauder"/>
         </InfoArray>
         <InfoArray index="Train5" Time="40">
@@ -141,4 +190,30 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
+    <CAbilMorph id="RaynorCommanderTechLabMorphStarport">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderTechLabMorphStarport" Requirements="RaynorCommanderTechLabMorphStarport@Requirement"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <InfoArray Unit="RaynorCommanderTechLabStarport"/>
+    </CAbilMorph>
+    <CAbilMorph id="RaynorCommanderTechLabMorphDetached">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="RaynorCommanderTechLabMorphDetached@Requirement"/>
+        <Flags index="Automatic" value="1"/>
+        <InfoArray Unit="RaynorCommanderTechLab">
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.125"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilBuild id="RaynorCommanderBuildAddon@Starport" parent="TerranAddOns">
+        <Name value="Abil/Name/RaynorCommanderBuildAddon@Starport"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <BuildMorphAbil value="StarportLiftOff"/>
+        <InfoArray index="Build1" Unit="RaynorCommanderTechLabStarport" Time="25">
+            <Button DefaultButtonFace="RaynorCommanderBuildAddon@Starport"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="StarportReactor" Time="50"/>
+    </CAbilBuild>
 </Catalog>

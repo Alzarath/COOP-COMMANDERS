@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="RaynorCommanderTechLabFactory" parent="TechLabBase">
+        <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+        <Lighting value="TechLab"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLabFactory@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLabBarrack" parent="TechLabBase">
+        <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+        <Lighting value="TechLab"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLabBarrack@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
     <CModel id="RaynorCommanderBarracks@Build" parent="BarracksBuildBase"/>
     <CModel id="RaynorCommanderBarracks" parent="BarracksBase">
         <Model value="Assets\Buildings\Terran\Barracks\Barracks.m3"/>
@@ -70,10 +90,11 @@
         <Model value="Assets\Units\Terran\MedicDeathRagdoll\MedicDeathRagdoll.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
-    <CModel id="RaynorCommanderMedic@Portrait" parent="Portrait">
+    <CModel id="RaynorCommanderMedic@Portrait" parent="FXAPortrait">
         <Model value="Assets\Portraits\Terran\MedicPortrait\MedicPortrait.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <FacialController value="LocalizedData\Facial\MedicPortrait.fxa"/>
         <Image value="Assets\Textures\medivacportrait_static.dds"/>
+        <Lighting value="RaynorCommanderMedic"/>
     </CModel>
     <CModel id="RaynorCommanderPerditionThrower@AttackModel">
         <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
@@ -171,6 +192,40 @@
         <Model value="Assets\Effects\Terran\StimpackStartImpact\StimpackStartImpact.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
+    <CModel id="RaynorCommanderTechLab" parent="TechLabBase">
+        <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLab@Death" parent="TechLabDeathBase">
+        <Model value="Assets\Buildings\Terran\TechLabDeathEx1\TechLabDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLab@DeathDetached" parent="TechLabDetachedDeathBase">
+        <Model value="Assets\Buildings\Terran\TechLabDetachedDeathEx1\TechLabDetachedDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLab@Placement" parent="TechLabPlacementBase" low="RaynorCommanderTechLab">
+        <Model value="Assets\Buildings\Terran\TechLabPlacement\TechLabPlacement.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLab@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLab@Portrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLabStarport" parent="TechLabBase">
+        <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+        <Lighting value="TechLab"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLabStarport@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="RaynorCommanderTechLab@Build" parent="TechLabBuildBase"/>
     <CModel id="WeaponRaynorSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
         <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
     </CModel>

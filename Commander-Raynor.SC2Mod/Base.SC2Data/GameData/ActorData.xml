@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="RaynorCommanderTechLabBarrack@Build" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+        <Model value="RaynorCommanderTechLab@Build"/>
+    </CActorModel>
+    <CActorUnit id="RaynorCommanderTechLabFactory" parent="TechLabBase" unitName="RaynorCommanderTechLabFactory">
+        <SoundArray index="Ready" value="RaynorCommanderTechLab@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderTechLab@What"/>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderTechLabFactory@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderTechLabFactory"/>
+    <CActorUnit id="RaynorCommanderTechLabBarrack" parent="TechLabBase" unitName="RaynorCommanderTechLabBarrack">
+        <SoundArray index="Ready" value="RaynorCommanderTechLab@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderTechLab@What"/>
+        <On index="69" Send="Create RaynorCommanderTechLabBarrack@Build"/>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderTechLabBarrack@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderTechLabBarrack"/>
     <CActorModel id="RaynorCommanderBarracksBuild" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create RaynorConstructionAttached"/>
         <Model value="RaynorCommanderBarracks@Build"/>
@@ -74,8 +89,11 @@
     </CActorUnit>
     <CActorSimple id="RaynorCommanderHeal@Animation">
         <EditorCategories value=""/>
-        <On Terms="Abil.RaynorCommanderHeal.ButtonHoverOn" Send="$Spell PlayForever"/>
-        <On Terms="Abil.RaynorCommanderHeal.ButtonHoverOff" Send="AnimClear Spell"/>
+        <On Terms="Abil.RaynorCommanderHeal.SourceChannelStart" Send="Create"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="$Spell PlayForever"/>
+        <On Terms="ActorDestruction" Target="_Unit" Send="AnimClear Spell"/>
+        <On Terms="Abil.RaynorCommanderHeal.SourceChannelStop" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
     </CActorSimple>
     <CActorBeamSimple id="RaynorCommanderHeal@Beam" parent="BeamSimpleAnimationStyleOneShot">
         <Inherits index="Visibility" value="1"/>
@@ -91,6 +109,9 @@
         <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
     </CActorBeamSimple>
+    <CActorSound id="RaynorCommanderHeal@Start" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
     <CActorModel id="RaynorCommanderHeal@Model" parent="ModelAddition">
         <EditorCategories value=""/>
         <On Terms="Effect.RaynorCommanderHeal.TargetStart; At Target" Send="Create"/>
@@ -103,7 +124,12 @@
         <EditorCategories value=""/>
         <On Terms="Abil.RaynorCommanderHeal.TargetChannelStart" Send="Create"/>
         <On Terms="Abil.RaynorCommanderHeal.TargetChannelStop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create RaynorCommanderHeal@Start"/>
+        <On Terms="ActorDestruction" Send="Create RaynorCommanderHeal@Stop"/>
         <LoopCount value="-1"/>
+    </CActorSound>
+    <CActorSound id="RaynorCommanderHeal@Stop" parent="SoundOneShot">
+        <EditorCategories value=""/>
     </CActorSound>
     <CActorSound id="RaynorCommanderLiftBarrack@Land" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -519,6 +545,56 @@
         <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 6" Send="Destroy"/>
         <Sound value="Raynor_ConstructionEnd"/>
     </CActorSound>
+    <CActorUnit id="RaynorCommanderTechLab" parent="TechLabBase" unitName="RaynorCommanderTechLab">
+        <Model value="RaynorCommanderTechLab"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderTechLab@Death" SoundLink="RaynorCommanderTechLab@Explode"/>
+        <DeathArray index="UnderConstruction" SoundLink="RaynorCommanderTechLab@Explode"/>
+        <DeathCustoms index="5" ModelLink="RaynorCommanderTechLab@DeathDetached" Name="Detached"/>
+        <PlacementModel value="RaynorCommanderTechLab@Placement"/>
+        <AddonIndicator value="Actor/AddonIndicator/RaynorCommanderTechLab"/>
+        <HighlightTooltip value="Unit/Name/RaynorCommanderTechLab"/>
+        <SoundArray index="Birth" value="RaynorCommanderTechLab@Birth"/>
+        <SoundArray index="Ready" value="RaynorCommanderTechLab@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderTechLab@What"/>
+        <On index="69" Send="Create RaynorCommanderTechLab@Build"/>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderTechLab@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderTechLab"/>
+    <CActorUnit id="RaynorCommanderTechLabStarport" parent="TechLabBase" unitName="RaynorCommanderTechLabStarport">
+        <PortraitModel value="RaynorCommanderTechLab@Portrait"/>
+        <SoundArray index="Ready" value="RaynorCommanderTechLab@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderTechLab@What"/>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderTechLabStarport@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderTechLabStarport"/>
+    <CActorModel id="RaynorCommanderTechLab@Build" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
+    <CActorSound id="TerranBuildingFlameBig@Sound" parent="TerranFlameSound">
+        <Sound value="Terran_FlameLoopLarge"/>
+    </CActorSound>
+    <CActorSetQueried id="TerranBuildingFlameBig@Fire" parent="TerranFlameSet" type="FireLarge"/>
+    <CActorSetQueried id="TerranBuildingFlameBig@FireTransition" parent="TerranFlameSetTransition" type="FireLarge"/>
+    <CActorSetQueried id="TerranBuildingFlameBig@HeavySmoke" parent="TerranFlameSet" type="SmokeLarge"/>
+    <CActorSetQueried id="TerranBuildingFlameBig@HeavySmokeTransition" parent="TerranFlameSetTransition" type="SmokeLarge"/>
+    <CActorSetQueried id="TerranBuildingFlameBig@LightSmoke" parent="TerranFlameSet" type="SmokeMedium"/>
+    <CActorSetQueried id="TerranBuildingFlameBig@LightSmokeTransition" parent="TerranFlameSetTransition" type="SmokeMedium"/>
+    <CActorStateMonitor id="TerranBuildingFlameBig" parent="TerranFlames">
+        <On index="1" Terms="StateChange; StateValid LightSmoke; StateChanged Normal" Send="Create TerranBuildingFlameBig@LightSmoke"/>
+        <On index="2" Terms="StateChange; StateValid HeavySmoke; StateChanged Normal" Send="Create TerranBuildingFlameBig@HeavySmoke"/>
+        <On index="3" Terms="StateChange; StateValid Fire; StateChanged Normal" Send="Create TerranBuildingFlameBig@Fire"/>
+        <On index="4" Terms="StateChange; StateValid LightSmoke; !StateChanged Normal" Send="Create TerranBuildingFlameBig@LightSmokeTransition"/>
+        <On index="5" Terms="StateChange; StateValid HeavySmoke; !StateChanged Normal" Send="Create TerranBuildingFlameBig@HeavySmokeTransition"/>
+        <On index="6" Terms="StateChange; StateValid Fire; !StateChanged Normal" Send="Create TerranBuildingFlameBig@FireTransition"/>
+        <On index="7" Terms="StateChange; !StateValid LightSmoke" Target="TerranBuildingFlameBig@LightSmoke" Send="Destroy"/>
+        <On index="8" Terms="StateChange; !StateValid HeavySmoke" Target="TerranBuildingFlameBig@HeavySmoke" Send="Destroy"/>
+        <On index="9" Terms="StateChange; !StateValid Fire" Target="TerranBuildingFlameBig@Fire" Send="Destroy"/>
+        <On index="10" Terms="StateChange; !StateValid LightSmoke" Target="TerranBuildingFlameBig@LightSmokeTransition" Send="Destroy"/>
+        <On index="11" Terms="StateChange; !StateValid HeavySmoke" Target="TerranBuildingFlameBig@HeavySmokeTransition" Send="Destroy"/>
+        <On index="12" Terms="StateChange; !StateValid Fire" Target="TerranBuildingFlameBig@FireTransition" Send="Destroy"/>
+        <On Terms="UnitCreation.RaynorCommanderBarracks" Send="Create"/>
+        <On Terms="UnitCreation.RaynorCommanderBarracks@Fly" Send="Create"/>
+        <On Terms="StateChange; StateValid Fire" Send="Create TerranBuildingFlameBig@Sound"/>
+        <On Terms="StateChange; !StateValid Fire" Target="TerranBuildingFlameBig@Sound" Send="Destroy"/>
+    </CActorStateMonitor>
     <CActorAction id="WeaponRaynorSCV@Attack" parent="GenericAttack" effectAttack="WeaponRaynorSCV">
         <ShieldFlashType value="Header"/>
     </CActorAction>

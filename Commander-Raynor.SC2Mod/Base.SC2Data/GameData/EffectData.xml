@@ -10,6 +10,11 @@
         <DrainVital value="Energy"/>
         <DrainVitalCostFactor value="0.33"/>
         <RechargeVitalRate value="9"/>
+        <ValidatorArray value="noMarkers"/>
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="NotVortexd"/>
     </CEffectCreateHealer>
     <CEffectDamage id="RaynorCommanderPerditionThrower">
         <EditorCategories value="Race:Terran"/>

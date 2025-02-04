@@ -70,6 +70,7 @@ Button/Tooltip/RaynorCommanderBunker=Defensive structure. <n/>Infantry fights fr
 Button/Tooltip/RaynorCommanderCommandCenter=Primary structure. Used to receive gathered resources. Can use the Lift Off ability and can upgrade into an Orbital Command or a Planetary Fortress.<n/><n/><c val="ffff8a">Enables:</c><n/>- SCVs
 Button/Tooltip/RaynorCommanderEngineeringBay=Contains upgrades for Terran infantry and structures. <n/><n/><c val="ffff8a">Enables:</c><n/>- Missile Turrets from SCVs<n/>- Sensor Towers from SCVs<n/>- Planetary Fortresses from Command Centers
 Button/Tooltip/RaynorCommanderFactory=Vehicle-production facility. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellions<n/>- Widow Mines
+Button/Tooltip/RaynorCommanderFactory@Fly=Factory must land to start unit production.
 Button/Tooltip/RaynorCommanderFirebat=Raider. Can jump up and down cliffs. Regenerates life quickly while out of combat. Can use KD8 Charge.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderFusionCore=Contains Battlecruiser upgrades. <n/><n/><c val="ffff8a">Enables:</c><n/>- Battlecruisers at the Starport
 Button/Tooltip/RaynorCommanderGather=Orders SCV to gather resources from a selected Mineral Field or Vespene Geyser.
@@ -101,6 +102,7 @@ DataCollection/Name/RaynorCommanderBarrackResearch=Raynor Commander - Barrack Re
 DataCollection/Name/RaynorCommanderBarracks=Raynor Commander - Barracks
 DataCollection/Name/RaynorCommanderBuildAddon=Raynor Commander - Build Addon
 DataCollection/Name/RaynorCommanderBuildSCV=Raynor Commander - Build SCV
+DataCollection/Name/RaynorCommanderFactory=Raynor Commander - Factory
 DataCollection/Name/RaynorCommanderFirebat=Raynor Commander - Firebat
 DataCollection/Name/RaynorCommanderGaussRiffleC14=Raynor Commander - Gauss Riffle C14
 DataCollection/Name/RaynorCommanderHeal=Raynor Commander - Heal
@@ -108,6 +110,7 @@ DataCollection/Name/RaynorCommanderInciniratorGauntlets=Raynor Commander - Incin
 DataCollection/Name/RaynorCommanderInfantryWeapon=Raynor Commander - Infantry Weapon
 DataCollection/Name/RaynorCommanderJuggernautPlating=Raynor Commander - Juggernaut Plating
 DataCollection/Name/RaynorCommanderLiftBarrack=Raynor Commander - Lift
+DataCollection/Name/RaynorCommanderLiftFactory=Raynor Commander Lift
 DataCollection/Name/RaynorCommanderMarauder=Raynor Commander - Marauder
 DataCollection/Name/RaynorCommanderMedic=Raynor Commander - Medic
 DataCollection/Name/RaynorCommanderPerditionThrower=Raynor Commander - Perdition Thrower
@@ -143,6 +146,7 @@ Reward/Name/RaynorCommanderTechLabMorphBarrack=Raynor Commander - Tech Lab Morph
 Unit/Description/RaynorCommanderMedic=Легкая единица поддержки. Может использовать способность <c val="FFE1AE"><d stringref="Abil/Name/RaynorCommanderHeal"/></c>
 Unit/Name/RaynorCommanderBarracks=Barracks
 Unit/Name/RaynorCommanderBarracks@Fly=Barracks
+Unit/Name/RaynorCommanderFactory=Factory
 Unit/Name/RaynorCommanderFirebat=Firebat
 Unit/Name/RaynorCommanderMarauder=Marauder
 Unit/Name/RaynorCommanderMarine=Marine

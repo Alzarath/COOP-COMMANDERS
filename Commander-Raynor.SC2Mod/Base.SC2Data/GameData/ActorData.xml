@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="RaynorCommanderFactory" parent="TerranBuildingFlyerEx" unitName="RaynorCommanderFactory">
+        <On index="80" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="Create"/>
+        <On index="81" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
+        <On index="82" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="AliasRemove _CreepEngulfable"/>
+        <On index="83" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="CreepEngulfmentStopTransition"/>
+        <On index="84" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory; MorphTo RaynorCommanderFactory@Fly" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
+        <On index="85" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory; MorphTo RaynorCommanderFactory@Fly" Send="AliasRemove _CreepEngulfable"/>
+        <On index="86" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory; MorphTo RaynorCommanderFactory@Fly" Send="CreepEngulfmentStopTransition"/>
+        <On index="87" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory; MorphTo RaynorCommanderFactory@Fly" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="88" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory; MorphTo RaynorCommanderFactory@Fly; ScopeContains GroundLocalSelection" Send="StatusIncrement FlyerHelper"/>
+        <On index="89" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory@Fly; MorphTo RaynorCommanderFactory" Send="AnimGroupRemove Fly"/>
+        <On index="90" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory@Fly; MorphTo RaynorCommanderFactory" Send="AliasAdd _CreepEngulfable"/>
+        <On index="91" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory@Fly; MorphTo RaynorCommanderFactory" Send="Create BuildingTerrainFlatten"/>
+        <On index="92" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderFactory@Fly; MorphTo RaynorCommanderFactory; ScopeContains FlyerHelperSplat; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="93" Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderFactory@Fly; MorphTo RaynorCommanderFactory" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="94" Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderFactory@Fly; MorphTo RaynorCommanderFactory" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On Terms="UnitDeathCustomize.FactoryFlying" Send="DeathCustomize Flying"/>
+        <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestedVisual"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderFactory@Death"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="RaynorCommanderFactory@Explode"/>
+        <DeathCustoms index="5" ModelLink="RaynorCommanderFactory@FlyDeath" SoundLink="RaynorCommanderFactory@Explode" Name="Flying"/>
+        <PlacementModel value="RaynorCommanderFactory@Placement"/>
+        <PlacementSound value="RaynorCommanderFactory@BuildingPlacement"/>
+        <PortraitModel value="RaynorCommanderFactory@Portrait"/>
+        <BarOffset value="150"/>
+        <BarWidth value="160"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Factory.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Factory.dds"/>
+        <NameOffset value="110"/>
+        <SoundArray index="Ready" value="RaynorCommanderFactory@Ready"/>
+        <SoundArray index="What" value="Factory_What2"/>
+        <SoundArray index="Movement" value="RaynorCommanderFactory@Movement"/>
+        <SoundArray index="Construction" value="RaynorCommanderFactory@ConstructionWhat"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Factory.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Factory.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderFactory@Splat" parent="TerranBuildingMorphSplat" unitName="RaynorCommanderFactory"/>
     <CActorModel id="RaynorCommanderTechLabBarrack@Build" parent="TerranBuildingBuildSmall">
         <On Terms="ActorCreation" Send="SetScale 1.350000"/>
         <Model value="RaynorCommanderTechLab@Build"/>

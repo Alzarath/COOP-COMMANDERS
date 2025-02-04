@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CDataCollectionAbil id="RaynorCommanderBarrackResearch">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderBarrackResearch"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderBarracks" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderBarracks"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
         <DataRecord Entry="Actor,RaynorCommanderBarracks"/>
         <DataRecord Entry="Actor,RaynorCommanderBarracks@Splat"/>
         <DataRecord Entry="Button,RaynorCommanderBarracks"/>
@@ -25,7 +25,7 @@
         <DataRecord Entry="Unit,RaynorCommanderBarracks@Fly"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderBuildAddon">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderBuildAddon@Barracks"/>
         <DataRecord Entry="Abil,RaynorCommanderBuildAddon@Factory"/>
         <DataRecord Entry="Abil,RaynorCommanderBuildAddon@Starport"/>
@@ -34,8 +34,28 @@
         <DataRecord Entry="Button,RaynorCommanderBuildAddon@Factory"/>
         <DataRecord Entry="Button,RaynorCommanderBuildAddon@Starport"/>
     </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderFactory" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderFactory"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Button,RaynorCommanderFactory"/>
+        <DataRecord Entry="Actor,RaynorCommanderFactory"/>
+        <DataRecord Entry="Actor,RaynorCommanderFactory@Splat"/>
+        <DataRecord Entry="Model,RaynorCommanderFactory"/>
+        <DataRecord Entry="Model,RaynorCommanderFactory@Splat"/>
+        <DataRecord Entry="Model,RaynorCommanderFactory@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderFactory@FlyDeath"/>
+        <DataRecord Entry="Model,RaynorCommanderFactory@Placement"/>
+        <DataRecord Entry="Model,RaynorCommanderFactory@Portrait"/>
+        <DataRecord Entry="Sound,RaynorCommanderFactory@Explode"/>
+        <DataRecord Entry="Sound,RaynorCommanderFactory@Movement"/>
+        <DataRecord Entry="Sound,RaynorCommanderFactory@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderFactory@BuildingPlacement"/>
+        <DataRecord Entry="Sound,RaynorCommanderFactory@ConstructionWhat"/>
+        <DataRecord Entry="Unit,RaynorCommanderFactory"/>
+        <DataRecord Entry="Unit,RaynorCommanderFactory@Fly"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderGaussRiffleC14">
-        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Weapon"/>
         <DataRecord Entry="Actor,RaynorCommanderGaussRiffleC14@Attack"/>
         <DataRecord Entry="Effect,RaynorCommanderGaussRiffleC14"/>
@@ -53,7 +73,7 @@
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderHeal" parent="CommanderAbilityBeam">
         <Name value="DataCollection/Name/RaynorCommanderHeal"/>
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Button"/>
         <DataRecord Entry="Abil,RaynorCommanderHeal"/>
         <DataRecord Entry="Button,RaynorCommanderHeal"/>
@@ -71,7 +91,7 @@
         <DataRecord Entry="Sound,RaynorCommanderHeal@Start"/>
     </CDataCollectionAbil>
     <CDataCollectionUpgrade id="RaynorCommanderInciniratorGauntlets">
-        <EditorCategories value="DataGroup:Research,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderInciniratorGauntlets"/>
         <DataRecord Entry="Upgrade,RaynorCommanderInciniratorGauntlets"/>
         <DataRecord Entry="Requirement,RaynorCommanderInciniratorGauntlets"/>
@@ -80,7 +100,7 @@
         <DataRecord Entry="Validator,RaynorCommanderInciniratorGauntlets@Not"/>
     </CDataCollectionUpgrade>
     <CDataCollectionUpgrade id="RaynorCommanderInfantryWeapon">
-        <EditorCategories value="DataGroup:Research,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Upgrade"/>
         <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon"/>
         <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level1"/>
@@ -91,13 +111,13 @@
         <DataRecord Entry="Button,RaynorCommanderInfantryWeapon@Level3"/>
     </CDataCollectionUpgrade>
     <CDataCollectionUpgrade id="RaynorCommanderJuggernautPlating">
-        <EditorCategories value="DataGroup:Research,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderJuggernautPlating"/>
         <DataRecord Entry="Upgrade,RaynorCommanderJuggernautPlating"/>
         <DataRecord Entry="Requirement,RaynorCommanderJuggernautPlating"/>
     </CDataCollectionUpgrade>
     <CDataCollectionAbil id="RaynorCommanderLiftBarrack">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderLiftBarrack@Land"/>
         <DataRecord Entry="Abil,RaynorCommanderLiftBarrack@LiftOff"/>
         <DataRecord Entry="Actor,RaynorCommanderLiftBarrack@Lift"/>
@@ -105,9 +125,12 @@
         <DataRecord Entry="Sound,RaynorCommanderLiftBarrack@Lift"/>
         <DataRecord Entry="Sound,RaynorCommanderLiftBarrack@Land"/>
     </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderLiftFactory">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
+    </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderMedic" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderMedic"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
         <DataRecord Entry="Actor,RaynorCommanderMedic"/>
         <DataRecord Entry="Button,RaynorCommanderMedic"/>
         <DataRecord Entry="Model,RaynorCommanderMedic"/>
@@ -125,7 +148,7 @@
         <DataRecord Entry="Light,RaynorCommanderMedic"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPerditionThrower">
-        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Weapon"/>
         <DataRecord Entry="Actor,RaynorCommanderPerditionThrower@Attack"/>
         <DataRecord Entry="Actor,RaynorCommanderPerditionThrower@AttackModel"/>
@@ -142,13 +165,13 @@
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderBuildSCV" parent="CommanderAbilityBuild">
         <Name value="DataCollection/Name/RaynorCommanderBuildSCV"/>
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderBuildSCV"/>
         <DataRecord Entry="Actor,RaynorConstruction"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderFirebat" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderFirebat"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
         <DataRecord Entry="Actor,RaynorCommanderFirebat"/>
         <DataRecord Entry="Model,RaynorCommanderFirebat"/>
         <DataRecord Entry="Model,RaynorCommanderFirebat@Death"/>
@@ -167,7 +190,7 @@
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMarauder" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderMarauder"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
         <DataRecord Entry="Actor,RaynorCommanderMarauder"/>
         <DataRecord Entry="Model,RaynorCommanderMarauder"/>
         <DataRecord Entry="Model,RaynorCommanderMarauder@Death"/>
@@ -186,7 +209,7 @@
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMarine" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderMarine"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
         <DataRecord Entry="Actor,RaynorCommanderMarine"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@Marine"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@MarineDeath"/>
@@ -212,7 +235,7 @@
         <DataRecord Entry="Button,RaynorCommanderMarine"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPunisherGrenades">
-        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Projectile"/>
+        <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Projectile"/>
         <EditorIconSource value="Weapon"/>
         <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@Attack"/>
         <DataRecord Entry="Actor,RaynorCommanderPunisherGrenades@AttackAnimation"/>
@@ -245,7 +268,7 @@
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderSCV" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderSCV"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Unit"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
         <DataRecord Entry="Actor,RaynorCommanderSCV"/>
         <DataRecord Entry="Model,RaynorCommanderSCV"/>
         <DataRecord Entry="Model,RaynorCommanderSCV@Portrait"/>
@@ -261,7 +284,7 @@
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderStimpack" parent="CommanderAbilityAB">
         <Name value="DataCollection/Name/RaynorCommanderStimpack"/>
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderStimpack"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpack@Cast"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpack@EndImpact"/>
@@ -279,7 +302,7 @@
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderStimpackMara" parent="CommanderAbilityAB">
         <Name value="DataCollection/Name/RaynorCommanderStimpackMara"/>
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderStimpackMara"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpackMara@EndImpact"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpackMara@StartImpact"/>
@@ -295,7 +318,7 @@
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderTechLab" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderTechLab"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLab"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLab@Splat"/>
         <DataRecord Entry="Footprint,RaynorCommanderTechLab@3x3AddOn2x2"/>
@@ -312,7 +335,7 @@
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderTechLabBarrack" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderTechLabBarrack"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLabBarrack"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLabBarrack@Splat"/>
         <DataRecord Entry="Behavior,RaynorCommanderTechLabBarrack"/>
@@ -322,7 +345,7 @@
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderTechLabFactory" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderTechLabFactory"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
         <DataRecord Entry="Behavior,RaynorCommanderTechLabFactory"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLabFactory"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLabFactory@Splat"/>
@@ -331,30 +354,30 @@
         <DataRecord Entry="Unit,RaynorCommanderTechLabFactory"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTechLabMorphBarrack" parent="Decal">
-        <EditorCategories value="DataFamily:Coop,Race:Terran,ObjectType:Other,DataGroup:Ability"/>
+        <EditorCategories value="DataFamily:Coop,Race:Raynor,ObjectType:Other,DataGroup:Ability"/>
         <DataRecord Entry="Abil,RaynorCommanderTechLabMorphBarrack"/>
         <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphBarrack@Requirement"/>
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderTechLabMorphDetached">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTechLabMorphDetached"/>
         <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphDetached@Requirement"/>
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderTechLabMorphFactory">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTechLabMorphFactory"/>
         <DataRecord Entry="Button,RaynorCommanderTechLabMorphFactory"/>
         <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphFactory@Requirement"/>
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderTechLabMorphStarport">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTechLabMorphStarport"/>
         <DataRecord Entry="Button,RaynorCommanderTechLabMorphStarport"/>
         <DataRecord Entry="Requirement,RaynorCommanderTechLabMorphStarport@Requirement"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderTechLabStarport" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderTechLabStarport"/>
-        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Coop,ObjectType:Structure"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
         <DataRecord Entry="Behavior,RaynorCommanderTechLabStarport"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLabStarport"/>
         <DataRecord Entry="Actor,RaynorCommanderTechLabStarport@Splat"/>
@@ -363,7 +386,7 @@
         <DataRecord Entry="Unit,RaynorCommanderTechLabStarport"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTrainBarrack">
-        <EditorCategories value="DataGroup:Ability,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Abil"/>
         <DataRecord Entry="Abil,RaynorCommanderTrainBarrack"/>
     </CDataCollectionAbil>
@@ -379,7 +402,7 @@
         <DataRecord Entry="Actor,TerranBuildingFlameBig@HeavySmokeTransition"/>
     </CDataCollection>
     <CDataCollectionUnit id="WeaponRaynorSCV">
-        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Coop,ObjectType:Other"/>
+        <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <EditorIconSource value="Weapon"/>
         <DataRecord Entry="Actor,WeaponRaynorSCV@Attack"/>
         <DataRecord Entry="Actor,WeaponRaynorSCV@AttackLaunch"/>

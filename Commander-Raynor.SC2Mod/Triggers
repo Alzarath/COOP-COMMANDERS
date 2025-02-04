@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TriggerData>
     <Library Id="DD453873">
+        <Root>
+            <Item Type="Trigger" Library="DD453873" Id="F3D6A2EB"/>
+        </Root>
+        <Element Type="Trigger" Id="F3D6A2EB">
+        </Element>
     </Library>
 </TriggerData>

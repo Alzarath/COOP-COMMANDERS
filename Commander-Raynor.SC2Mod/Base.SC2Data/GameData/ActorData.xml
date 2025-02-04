@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CActorUnit id="RaynorCommanderFactory" parent="TerranBuildingFlyerEx" unitName="RaynorCommanderFactory">
+        <On index="69" Send="Create RaynorCommanderBarracksBuild"/>
         <On index="80" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="Create"/>
         <On index="81" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
         <On index="82" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="AliasRemove _CreepEngulfable"/>

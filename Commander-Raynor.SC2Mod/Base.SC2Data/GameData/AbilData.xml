@@ -151,8 +151,8 @@
         <InfoArray index="Build10" Unit="GhostAcademy" Time="40">
             <Button DefaultButtonFace="GhostAcademy" State="Suppressed" Requirements="RaynorCommanderHaveBarracks"/>
         </InfoArray>
-        <InfoArray index="Build11" Unit="Factory" Time="60">
-            <Button DefaultButtonFace="Factory" State="Suppressed" Requirements="RaynorCommanderHaveBarracks"/>
+        <InfoArray index="Build11" Unit="RaynorCommanderFactory" Time="60">
+            <Button DefaultButtonFace="RaynorCommanderFactory" State="Suppressed" Requirements="RaynorCommanderHaveBarracks"/>
         </InfoArray>
         <InfoArray index="Build12" Unit="Starport" Time="50">
             <Button DefaultButtonFace="Starport" State="Suppressed" Requirements="RaynorCommanderHaveFactory"/>
@@ -165,9 +165,6 @@
         </InfoArray>
         <InfoArray index="Build16" Unit="FusionCore" Time="65">
             <Button DefaultButtonFace="FusionCore" State="Suppressed" Requirements="RaynorCommanderHaveStarport"/>
-        </InfoArray>
-        <InfoArray index="Build30" Unit="BomberLaunchPad" Time="30">
-            <Button DefaultButtonFace="BuildBomberLaunchPad" Requirements="RaynorCommanderHaveFactory"/>
         </InfoArray>
         <FidgetDelayMin value="5"/>
         <FidgetDelayMax value="10"/>

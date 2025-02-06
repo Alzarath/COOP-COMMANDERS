@@ -23,6 +23,7 @@
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
+    <CModel id="RaynorCommanderTechLabFactory@Build" parent="TechLabBuildBase"/>
     <CModel id="RaynorCommanderTechLabFactory" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
         <Lighting value="TechLab"/>

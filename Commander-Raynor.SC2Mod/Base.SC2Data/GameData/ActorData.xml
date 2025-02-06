@@ -42,13 +42,25 @@
         </Wireframe>
     </CActorUnit>
     <CActorSplat id="RaynorCommanderFactory@Splat" parent="TerranBuildingMorphSplat" unitName="RaynorCommanderFactory"/>
+    <CActorSound id="RaynorCommanderLiftFactory@Land" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.RaynorCommanderLiftFactory@Land.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="RaynorCommanderLiftFactory@Lift" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.RaynorCommanderLiftFactory@LiftOff.Start" Send="Create"/>
+    </CActorSound>
     <CActorModel id="RaynorCommanderTechLabBarrack@Build" parent="TerranBuildingBuildSmall">
         <On Terms="ActorCreation" Send="SetScale 1.350000"/>
         <Model value="RaynorCommanderTechLab@Build"/>
     </CActorModel>
+    <CActorModel id="RaynorCommanderTechLabFactory@Build" parent="TerranBuildingBuildSmall">
+        <On Terms="ActorCreation" Send="SetScale 1.350000"/>
+    </CActorModel>
     <CActorUnit id="RaynorCommanderTechLabFactory" parent="TechLabBase" unitName="RaynorCommanderTechLabFactory">
         <SoundArray index="Ready" value="RaynorCommanderTechLab@Ready"/>
         <SoundArray index="What" value="RaynorCommanderTechLab@What"/>
+        <On index="69" Send="Create RaynorCommanderTechLabFactory@Build"/>
     </CActorUnit>
     <CActorSplat id="RaynorCommanderTechLabFactory@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderTechLabFactory"/>
     <CActorUnit id="RaynorCommanderTechLabBarrack" parent="TechLabBase" unitName="RaynorCommanderTechLabBarrack">

@@ -32,6 +32,18 @@
             <Button DefaultButtonFace="RaynorCommanderBuildAddon"/>
         </InfoArray>
     </CAbilBuild>
+    <CAbilMorphPlacement id="RaynorCommanderLiftFactory@Land" parent="TerranBuildingLand" unit="Barracks">
+        <Name value="Abil/Name/RaynorCommanderLiftFactory@Land"/>
+        <InfoArray index="0" Unit="RaynorCommanderFactory" CollideRange="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="RaynorCommanderLiftFactory@LiftOff" parent="TerranBuildingLiftOff" unit="BarracksFlying">
+        <Name value="Abil/Name/RaynorCommanderLiftFactory@LiftOff"/>
+        <InfoArray index="0" Unit="RaynorCommanderFactory@Fly"/>
+    </CAbilMorph>
     <CAbilMorph id="RaynorCommanderTechLabMorphFactory">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderTechLabMorphFactory" Requirements="RaynorCommanderTechLabMorphFactory@Requirement"/>

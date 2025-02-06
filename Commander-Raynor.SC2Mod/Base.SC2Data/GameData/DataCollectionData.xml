@@ -127,6 +127,12 @@
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderLiftFactory">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderLiftFactory@Land"/>
+        <DataRecord Entry="Abil,RaynorCommanderLiftFactory@LiftOff"/>
+        <DataRecord Entry="Actor,RaynorCommanderLiftFactory@Lift"/>
+        <DataRecord Entry="Actor,RaynorCommanderLiftFactory@Land"/>
+        <DataRecord Entry="Sound,RaynorCommanderLiftFactory@Lift"/>
+        <DataRecord Entry="Sound,RaynorCommanderLiftFactory@Land"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderMedic" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderMedic"/>
@@ -342,6 +348,7 @@
         <DataRecord Entry="Model,RaynorCommanderTechLabBarrack"/>
         <DataRecord Entry="Model,RaynorCommanderTechLabBarrack@Splat"/>
         <DataRecord Entry="Unit,RaynorCommanderTechLabBarrack"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabBarrack@Build"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderTechLabFactory" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderTechLabFactory"/>
@@ -352,6 +359,8 @@
         <DataRecord Entry="Model,RaynorCommanderTechLabFactory"/>
         <DataRecord Entry="Model,RaynorCommanderTechLabFactory@Splat"/>
         <DataRecord Entry="Unit,RaynorCommanderTechLabFactory"/>
+        <DataRecord Entry="Actor,RaynorCommanderTechLabFactory@Build"/>
+        <DataRecord Entry="Model,RaynorCommanderTechLabFactory@Build"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTechLabMorphBarrack" parent="Decal">
         <EditorCategories value="DataFamily:Coop,Race:Raynor,ObjectType:Other,DataGroup:Ability"/>
@@ -384,6 +393,8 @@
         <DataRecord Entry="Model,RaynorCommanderTechLabStarport"/>
         <DataRecord Entry="Model,RaynorCommanderTechLabStarport@Splat"/>
         <DataRecord Entry="Unit,RaynorCommanderTechLabStarport"/>
+        <DataRecord Entry="Sound,RaynorCommanderTechLabStarport@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderTechLabStarport@What"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTrainBarrack">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>

@@ -34,12 +34,12 @@
         <RepairTime value="60"/>
         <AttackTargetPriority value="11"/>
         <AbilArray Link="RaynorCommanderBuildAddon@Factory"/>
-        <AbilArray Link="FactoryLand"/>
+        <AbilArray Link="RaynorCommanderLiftFactory@Land"/>
         <AbilArray Link="move"/>
         <AbilArray Link="stop"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <CardLayouts>
-            <LayoutButtons Face="Land" Type="AbilCmd" AbilCmd="FactoryLand,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Land" Type="AbilCmd" AbilCmd="RaynorCommanderLiftFactory@Land,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="RaynorCommanderBuildAddon" Type="AbilCmd" AbilCmd="RaynorCommanderBuildAddon@Factory,Build2" Row="2" Column="1"/>
             <LayoutButtons Face="RaynorCommanderBuildAddon@Factory" Type="AbilCmd" AbilCmd="RaynorCommanderBuildAddon@Factory,Build1" Row="2" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -99,7 +99,7 @@
         <AbilArray Link="FactoryTrain"/>
         <AbilArray Link="RaynorCommanderBuildAddon@Factory"/>
         <AbilArray Link="Rally"/>
-        <AbilArray Link="FactoryLiftOff"/>
+        <AbilArray Link="RaynorCommanderLiftFactory@LiftOff"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="ReactorQueue"/>
         <CardLayouts>
@@ -107,7 +107,7 @@
             <LayoutButtons Row="0" Column="0"/>
             <LayoutButtons Face="SiegeTank" Type="AbilCmd" AbilCmd="FactoryTrain,Train2" Row="0" Column="1"/>
             <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
-            <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="FactoryLiftOff,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="RaynorCommanderLiftFactory@LiftOff,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="RaynorCommanderBuildAddon" Type="AbilCmd" AbilCmd="RaynorCommanderBuildAddon@Factory,Build2" Row="2" Column="1"/>
             <LayoutButtons Face="RaynorCommanderBuildAddon@Factory" Type="AbilCmd" AbilCmd="RaynorCommanderBuildAddon@Factory,Build1" Row="2" Column="0"/>
@@ -193,8 +193,8 @@
         <Footprint value="Footprint2x2Contour"/>
         <PlacementFootprint value="Footprint3x3AddOn2x2"/>
         <AddedOnArray UnitLink="RaynorCommanderBarracks" BehaviorLink="RaynorCommanderTechLabBarrack"/>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="FactoryTechLab"/>
-        <AddedOnArray UnitLink="Starport" BehaviorLink="StarportTechLab"/>
+        <AddedOnArray UnitLink="RaynorCommanderFactory" BehaviorLink="RaynorCommanderTechLabFactory"/>
+        <AddedOnArray UnitLink="Starport" BehaviorLink="RaynorCommanderTechLabStarport"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="75"/>
@@ -861,8 +861,8 @@
         <Footprint value="Footprint2x2Contour"/>
         <PlacementFootprint value="Footprint3x3AddOn2x2"/>
         <AddedOnArray UnitLink="RaynorCommanderBarracks" BehaviorLink="RaynorCommanderTechLabBarrack"/>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="FactoryTechLab"/>
-        <AddedOnArray UnitLink="Starport" BehaviorLink="StarportTechLab"/>
+        <AddedOnArray UnitLink="RaynorCommanderFactory" BehaviorLink="RaynorCommanderTechLabFactory"/>
+        <AddedOnArray UnitLink="Starport" BehaviorLink="RaynorCommanderTechLabStarport"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="75"/>

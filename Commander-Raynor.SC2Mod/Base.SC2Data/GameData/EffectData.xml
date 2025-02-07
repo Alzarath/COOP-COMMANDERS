@@ -59,6 +59,16 @@
         <Marker Link="Effect/Stimpack"/>
         <Behavior value="RaynorCommanderStimpackMara"/>
     </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="RaynorCommanderTorpedoes">
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderTorpedoes@Damage"/>
+        <AmmoUnit value="RaynorCommanderTorpedoes@Missile"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="RaynorCommanderTorpedoes@Damage">
+        <EditorCategories value="Race:Raynor"/>
+        <AttributeBonus index="Biological" value="10"/>
+        <Amount value="15"/>
+    </CEffectDamage>
     <CEffectDamage id="WeaponRaynorSCV" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>

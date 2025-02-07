@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollectionUnit id="RaynorCommanderTorpedoes" parent="Decal">
+        <EditorCategories value="DataFamily:Coop,Race:Raynor,ObjectType:Projectile,DataGroup:Weapon"/>
+        <EditorIconSource value="Weapon"/>
+        <DataRecord Entry="Weapon,RaynorCommanderTorpedoes"/>
+        <DataRecord Entry="Actor,RaynorCommanderTorpedoes@Missile"/>
+        <DataRecord Entry="Actor,RaynorCommanderTorpedoes@Attack"/>
+        <DataRecord Entry="Effect,RaynorCommanderTorpedoes"/>
+        <DataRecord Entry="Effect,RaynorCommanderTorpedoes@Damage"/>
+        <DataRecord Entry="Model,RaynorCommanderTorpedoes@Missile"/>
+        <DataRecord Entry="Sound,RaynorCommanderTorpedoes@AttackLaunch"/>
+        <DataRecord Entry="Sound,RaynorCommanderTorpedoes@AttackImpact"/>
+        <DataRecord Entry="Unit,RaynorCommanderTorpedoes@Missile"/>
+        <DataRecord Entry="Model,RaynorCommanderTorpedoes@AttackImpact"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderVulture" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderVulture"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,RaynorCommanderVulture"/>
+        <DataRecord Entry="Model,RaynorCommanderVulture"/>
+        <DataRecord Entry="Model,RaynorCommanderVulture@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderVulture@Portrait"/>
+        <DataRecord Entry="Unit,RaynorCommanderVulture"/>
+        <DataRecord Entry="Sound,RaynorCommanderVulture@Pissed"/>
+        <DataRecord Entry="Sound,RaynorCommanderVulture@Attack"/>
+        <DataRecord Entry="Sound,RaynorCommanderVulture@Help"/>
+        <DataRecord Entry="Sound,RaynorCommanderVulture@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderVulture@What"/>
+        <DataRecord Entry="Sound,RaynorCommanderVulture@Yes"/>
+        <DataRecord Entry="Sound,RaynorCommanderVulture@Death"/>
+    </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderBarrackResearch">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderBarrackResearch"/>

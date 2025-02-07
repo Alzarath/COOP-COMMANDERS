@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="RaynorCommanderTorpedoes@AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderTorpedoes@AttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_AttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_AttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_AttackLaunch2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_AttackLaunch3.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@Movement" parent="Movement">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_Movement0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_Movement1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_Movement2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_Movement3.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_Movement4.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_Movement5.wav"/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@Attack" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Attack00.ogg" FacialAnim="Vulture_Attack00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Attack01.ogg" FacialAnim="Vulture_Attack01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Attack02.ogg" FacialAnim="Vulture_Attack02"/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@Death" parent="DeathVoice">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Death00.wav" FacialAnim="Vulture_Death00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Death01.wav" FacialAnim="Vulture_Death01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Death02.wav" FacialAnim="Vulture_Death02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Death03.wav" FacialAnim="Vulture_Death03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Death04.wav" FacialAnim="Vulture_Death04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Death05.wav" FacialAnim="Vulture_Death05"/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@Help" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Help00.ogg" FacialAnim="Vulture_Help00"/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@Pissed" parent="Pissed">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed00.ogg" FacialAnim="Vulture_Pissed00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed01.ogg" FacialAnim="Vulture_Pissed01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed02.ogg" FacialAnim="Vulture_Pissed02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed03.ogg" FacialAnim="Vulture_Pissed03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed04.ogg" FacialAnim="Vulture_Pissed04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed05.ogg" FacialAnim="Vulture_Pissed05"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed06.ogg" FacialAnim="Vulture_Pissed06"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Pissed07.ogg" FacialAnim="Vulture_Pissed07"/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@Ready" parent="Ready">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Ready00.ogg" FacialAnim="Vulture_Ready00"/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@What" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_What00.ogg" FacialAnim="Vulture_What00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_What01.ogg" FacialAnim="Vulture_What01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_What02.ogg" FacialAnim="Vulture_What02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_What03.ogg" FacialAnim="Vulture_What03"/>
+    </CSound>
+    <CSound id="RaynorCommanderVulture@Yes" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Yes01.ogg" FacialAnim="Vulture_Yes00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Yes02.ogg" FacialAnim="Vulture_Yes01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Yes03.ogg" FacialAnim="Vulture_Yes02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Yes04.ogg" FacialAnim="Vulture_Yes03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Yes05.ogg" FacialAnim="Vulture_Yes04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Vulture\Vulture_Yes06.ogg" FacialAnim="Vulture_Yes05"/>
+    </CSound>
     <CSound id="RaynorCommanderFactory@Explode" parent="Combat">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge0.wav" Pitch="-3.000000,3.000000"/>

@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="RaynorCommanderTorpedoes@Attack" parent="GenericAttack" effectImpact="RaynorCommanderTorpedoes@Damage" effectLaunch="RaynorCommanderTorpedoes">
+        <EditorCategories value=""/>
+        <Missile value="RaynorCommanderTorpedoes@Missile"/>
+    </CActorAction>
+    <CActorMissile id="RaynorCommanderTorpedoes@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderTorpedoes@Missile">
+        <EditorCategories value=""/>
+    </CActorMissile>
+    <CActorUnit id="RaynorCommanderVulture" parent="GenericUnitStandard" unitName="RaynorCommanderVulture">
+        <EditorCategories value=""/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-vulture.dds"/>
+        </Wireframe>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderVulture@Death" SoundLink="Hellion_Explosion" VoiceLink="RaynorCommanderVulture@Death"/>
+        <PortraitModel value="RaynorCommanderVulture@Portrait"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderVulture@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderVulture@Help"/>
+        <SoundArray index="What" value="RaynorCommanderVulture@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderVulture@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderVulture@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderVulture@Pissed"/>
+        <SoundArray index="Movement" value="RaynorCommanderVulture@Movement"/>
+    </CActorUnit>
     <CActorUnit id="RaynorCommanderFactory" parent="TerranBuildingFlyerEx" unitName="RaynorCommanderFactory">
         <On index="69" Send="Create RaynorCommanderBarracksBuild"/>
         <On index="80" Terms="UnitBirth.RaynorCommanderFactory@Fly" Send="Create"/>

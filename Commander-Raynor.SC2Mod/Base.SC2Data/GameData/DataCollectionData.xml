@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollectionAbil id="CommanderRaynorPlaceSpiderMine">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,CommanderRaynorPlaceSpiderMine"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderBurrowSpiderMine">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderBurrowSpiderMine@Burrow"/>
+        <DataRecord Entry="Abil,RaynorCommanderBurrowSpiderMine@Unburrow"/>
+        <DataRecord Entry="Behavior,RaynorCommanderBurrowSpiderMine"/>
+        <DataRecord Entry="Effect,RaynorCommanderBurrowSpiderMine"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderExplode">
+        <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Effect,RaynorCommanderExplode@Set"/>
+        <DataRecord Entry="Effect,RaynorCommanderExplode@Damage"/>
+        <DataRecord Entry="Weapon,RaynorCommanderExplode"/>
+        <EditorIconSource value="Weapon"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderSpiderMine" parent="CommanderUnit">
+        <Name value="DataCollection/Name/RaynorCommanderSpiderMine"/>
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,RaynorCommanderSpiderMine"/>
+        <DataRecord Entry="Model,RaynorCommanderSpiderMine"/>
+        <DataRecord Entry="Model,RaynorCommanderSpiderMine@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderSpiderMine@Placement"/>
+        <DataRecord Entry="Unit,RaynorCommanderSpiderMine"/>
+        <DataRecord Entry="Sound,RaynorCommanderSpiderMine@SoundPlacement"/>
+        <DataRecord Entry="Sound,RaynorCommanderSpiderMine@SoundBurrow"/>
+        <DataRecord Entry="Sound,RaynorCommanderSpiderMine@Death"/>
+        <DataRecord Entry="Unit,RaynorCommanderSpiderMine@Burrowed"/>
+        <DataRecord Entry="Actor,RaynorCommanderSpiderMine@Placement"/>
+        <DataRecord Entry="Actor,RaynorCommanderSpiderMine@SoundPlacement"/>
+        <DataRecord Entry="Actor,RaynorCommanderSpiderMine@SoundBurrow"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderTorpedoes" parent="Decal">
         <EditorCategories value="DataFamily:Coop,Race:Raynor,ObjectType:Projectile,DataGroup:Weapon"/>
         <EditorIconSource value="Weapon"/>
@@ -14,6 +48,12 @@
         <DataRecord Entry="Unit,RaynorCommanderTorpedoes@Missile"/>
         <DataRecord Entry="Model,RaynorCommanderTorpedoes@AttackImpact"/>
     </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderTrainFactory" parent="CommanderAbilityBuild">
+        <Name value="DataCollection/Name/RaynorCommanderTrainFactory"/>
+        <EditorCategories value="Race:Raynor,DataGroup:Ability,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderTrainFactory"/>
+        <DataRecord Entry="Button,RaynorCommanderTrainFactory"/>
+    </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderVulture" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderVulture"/>
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
@@ -129,16 +169,16 @@
         <DataRecord Entry="Requirement,RaynorCommanderInciniratorGauntlets@Not"/>
         <DataRecord Entry="Validator,RaynorCommanderInciniratorGauntlets@Not"/>
     </CDataCollectionUpgrade>
-    <CDataCollectionUpgrade id="RaynorCommanderInfantryWeapon">
+    <CDataCollectionUpgrade id="RaynorCommanderInfantryWeapon" parent="CommanderUpgradeLvLStats">
+        <Name value="DataCollection/Name/RaynorCommanderInfantryWeapon"/>
         <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
-        <EditorIconSource value="Upgrade"/>
-        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon"/>
-        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level1"/>
-        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level2"/>
-        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level3"/>
         <DataRecord Entry="Button,RaynorCommanderInfantryWeapon@Level1"/>
         <DataRecord Entry="Button,RaynorCommanderInfantryWeapon@Level2"/>
         <DataRecord Entry="Button,RaynorCommanderInfantryWeapon@Level3"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level2"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level3"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level1"/>
     </CDataCollectionUpgrade>
     <CDataCollectionUpgrade id="RaynorCommanderJuggernautPlating">
         <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>

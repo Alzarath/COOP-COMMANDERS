@@ -33,3 +33,4 @@ Button/Hotkey/RaynorCommanderTechLabMorphBarrack=X
 Button/Hotkey/RaynorCommanderTechLabMorphFactory=X
 Button/Hotkey/RaynorCommanderTechLabMorphStarport=X
 Button/Hotkey/RaynorCommanderTerranBuild=B
+Button/Hotkey/RaynorCommanderTrainFactory=Q

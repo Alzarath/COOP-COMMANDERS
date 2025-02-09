@@ -1,0 +1,63 @@
+include "TriggerLibs/NativeLib"
+
+include "LibB6F694BB_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: DEBUG Commander
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libB6F694BB_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Enabled Editor Cheat
+//--------------------------------------------------------------------------------------------------
+bool libB6F694BB_gt_EnabledEditorCheat_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((GameIsTestMap(false) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    ConsoleCommand("fastbuild", true, true);
+    ConsoleCommand("minerals", true, true);
+    ConsoleCommand("vespene", true, true);
+    ConsoleCommand("showmap", true, true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libB6F694BB_gt_EnabledEditorCheat_Init () {
+    libB6F694BB_gt_EnabledEditorCheat = TriggerCreate("libB6F694BB_gt_EnabledEditorCheat_Func");
+    TriggerAddEventTimeElapsed(libB6F694BB_gt_EnabledEditorCheat, 0.5, c_timeGame);
+}
+
+void libB6F694BB_InitTriggers () {
+    libB6F694BB_gt_EnabledEditorCheat_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libB6F694BB_InitLib_completed = false;
+
+void libB6F694BB_InitLib () {
+    if (libB6F694BB_InitLib_completed) {
+        return;
+    }
+
+    libB6F694BB_InitLib_completed = true;
+
+    libB6F694BB_InitLibraries();
+    libB6F694BB_InitTriggers();
+}
+

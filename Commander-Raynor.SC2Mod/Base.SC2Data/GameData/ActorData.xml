@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="RaynorCommanderSpiderMine" parent="GenericUnitStandard" unitName="RaynorCommanderSpiderMine">
+        <EditorCategories value=""/>
+        <On Terms="UnitBirth.RaynorCommanderSpiderMine@Burrowed" Send="Create"/>
+        <On Terms="UnitBirth.RaynorCommanderSpiderMine@Burrowed" Send="AnimPlay Burrow Burrow PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSpiderMine@Burrowed" Send="AnimPlay Burrow Burrow PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSpiderMine@Burrowed" Send="AnimClear Unburrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSpiderMine" Send="AnimPlay Burrow Unburrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSpiderMine" Send="AnimClear Burrow"/>
+        <On Terms="UnitBirth.RaynorCommanderSpiderMine" Send="Create RaynorCommanderSpiderMine@SoundPlacement"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSpiderMine@Burrowed" Send="Create RaynorCommanderSpiderMine@SoundBurrow"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderSpiderMine@Death" SoundLink="RaynorCommanderSpiderMine@Death"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-upgrade-terran-spidermineex3.dds"/>
+        <PlacementModel value="RaynorCommanderSpiderMine@Placement"/>
+        <PlacementActorModel value="RaynorCommanderSpiderMine@Placement"/>
+    </CActorUnit>
+    <CActorModel id="RaynorCommanderSpiderMine@Placement" parent="ModelAddition">
+        <EditorCategories value=""/>
+    </CActorModel>
+    <CActorSound id="RaynorCommanderSpiderMine@SoundBurrow" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
+    <CActorSound id="RaynorCommanderSpiderMine@SoundPlacement" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
     <CActorAction id="RaynorCommanderTorpedoes@Attack" parent="GenericAttack" effectImpact="RaynorCommanderTorpedoes@Damage" effectLaunch="RaynorCommanderTorpedoes">
         <EditorCategories value=""/>
         <Missile value="RaynorCommanderTorpedoes@Missile"/>

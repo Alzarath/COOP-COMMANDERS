@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="RaynorCommanderSpiderMine@SoundBurrow" parent="Spell">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMineBurrow0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMineBurrow1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMineBurrow2.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderSpiderMine@Death" parent="Death">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Reaper_KD8ChargeExplosion01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaper_KD8ChargeExplosion02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaper_KD8ChargeExplosion03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Reaper_KD8ChargeExplosion04.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderSpiderMine@SoundPlacement" parent="Spell">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMinePlace0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMinePlace1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMinePlace2.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="RaynorCommanderTorpedoes@AttackImpact" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" FacialGroup=""/>

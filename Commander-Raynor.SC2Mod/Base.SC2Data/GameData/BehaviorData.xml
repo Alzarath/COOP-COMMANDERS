@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="RaynorCommanderBurrowSpiderMine">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <InitialEffect value="RaynorCommanderBurrowSpiderMine"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderTechLabBarrack">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>

@@ -1,7 +1,9 @@
-﻿DataCollectionPattern/Name/CommanderAbilities_ABEffectInstant=Commander Abilities_AB (Effect Instant)
+﻿DataCollection/EditorSuffix/CommanderUpgradeLvLStats=(Level Stats)
+DataCollectionPattern/Name/CommanderAbilities_ABEffectInstant=Commander Abilities_AB (Effect Instant)
 DataCollectionPattern/Name/CommanderAbilities_Build=Commander Abilities_Build
 DataCollectionPattern/Name/CommanderUnits=Commander Units
 DataCollectionPattern/Name/CommanderWeapon_Instant=Commander Weapon_Instant
 DataCollectionPattern/Name/CommanderWeapon_InstantAOE=Commander Weapon_Instant (AOE)
 DataCollectionPattern/Name/CommanderWeapon_Missile=Commander Weapon_Missile
 DataCollectionPattern/Name/CommandersAbilities_Beam=Commanders Abilities_Beam
+DataCollectionPattern/Name/CommandersUpgrade_LevelStats=Commanders Upgrade_LevelStats

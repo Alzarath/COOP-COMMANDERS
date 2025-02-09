@@ -31,4 +31,16 @@
         <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
     </CDataCollectionPattern>
     <CDataCollectionPattern id="CommandersAbilities_Beam"/>
+    <CDataCollectionPattern id="CommandersUpgrade_LevelStats">
+        <Fields index="0" Reference="Upgrade,^ParamId^@Level1,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL1"/>
+        <Fields Reference="Upgrade,^ParamId^@Level2,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL2"/>
+        <Fields Reference="Upgrade,^ParamId^@Level3,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL3"/>
+        <Fields Reference="Upgrade,^ParamId^@Level4,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL4"/>
+        <Fields Reference="Upgrade,^ParamId^@Level5,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL5"/>
+        <Fields Reference="Upgrade,^ParamId^@Level6,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL6"/>
+        <Fields Reference="Upgrade,^ParamId^@Level7,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL7"/>
+        <Fields Reference="Upgrade,^ParamId^@Level8,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL8"/>
+        <Fields Reference="Upgrade,^ParamId^@Level9,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL9"/>
+        <Fields Reference="Upgrade,^ParamId^@Level10,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL10"/>
+    </CDataCollectionPattern>
 </Catalog>

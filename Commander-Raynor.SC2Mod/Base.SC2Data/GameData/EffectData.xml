@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectIssueOrder id="RaynorCommanderBurrowSpiderMine">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="RaynorCommanderBurrowSpiderMine@Burrow"/>
+    </CEffectIssueOrder>
+    <CEffectDamage id="RaynorCommanderExplode@Damage">
+        <EditorCategories value="Race:Raynor"/>
+        <AttributeBonus index="Armored" value="50"/>
+        <Amount value="70"/>
+        <AreaArray Radius="0.3" Fraction="0.5"/>
+        <AreaArray Radius="1.2" Fraction="0.45"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectSet id="RaynorCommanderExplode@Set">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderExplode@Damage"/>
+        <EffectArray value="Suicide"/>
+    </CEffectSet>
     <CEffectDamage id="RaynorCommanderGaussRiffleC14" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>

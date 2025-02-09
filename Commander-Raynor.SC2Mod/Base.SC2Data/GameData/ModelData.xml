@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="RaynorCommanderSpiderMine" parent="Unit">
+        <Model value="Assets\Units\Terran\SpiderMine\SpiderMine.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <SelectionRadius value="0.200000"/>
+    </CModel>
+    <CModel id="RaynorCommanderSpiderMine@Death" parent="UnitDeath">
+        <Model value="Assets\Effects\Terran\SpidermineExplosion\SpidermineExplosion_Low.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderSpiderMine@Placement" parent="Placement">
+        <Model value="Assets\Effects\Terran\SpiderMinePlacement\SpiderMinePlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderTorpedoes@AttackImpact">
         <Model value="Assets\Effects\Terran\GoliathAirMissileImpact\GoliathAirMissileImpact.m3"/>
         <EditorCategories value="Race:Raynor"/>

@@ -5,4 +5,8 @@
         <EditorIconSource value="Abil"/>
         <Pattern value="CommandersAbilities_Beam"/>
     </CDataCollectionAbil>
+    <CDataCollectionUpgrade id="CommanderUpgradeLvLStats">
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+        <Pattern value="CommandersUpgrade_LevelStats"/>
+    </CDataCollectionUpgrade>
 </Catalog>

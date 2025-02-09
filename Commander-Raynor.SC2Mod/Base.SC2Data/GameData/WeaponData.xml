@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="RaynorCommanderExplode">
+        <EditorCategories value="Race:Raynor"/>
+        <Icon value="Assets\Textures\btn-upgrade-raynor-cerberusmines.dds"/>
+        <DisplayEffect value="RaynorCommanderExplode@Damage"/>
+        <TargetFilters value="Ground,Visible;Structure,Missile,Dead,Hidden,Hallucination,Invulnerable"/>
+        <Range value="0.1"/>
+        <Effect value="RaynorCommanderExplode@Set"/>
+        <Options index="Melee" value="1"/>
+        <AcquireScanFilters value="Ground,Visible;Structure,Missile,Dead,Hidden,Hallucination,Invulnerable"/>
+        <AcquireTargetSorts RequestCount="1">
+            <SortArray value="TSDistance"/>
+            <SortArray value="TSEnergy"/>
+        </AcquireTargetSorts>
+    </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderGaussRiffleC14">
         <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
@@ -34,8 +48,6 @@
         <Range value="6"/>
         <Period value="1.694"/>
         <Backswing value="0"/>
-        <Effect value="RaynorCommanderTorpedoes"/>
-        <UninterruptibleDuration value="32767.9997"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="WeaponRaynorSCV">
         <EditorCategories value="Race:Terran"/>

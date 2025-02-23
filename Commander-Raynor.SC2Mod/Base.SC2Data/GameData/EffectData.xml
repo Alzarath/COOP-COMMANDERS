@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="RaynorCommanderWeaponSiegeTank@Blast" parent="DU_WEAP">
+        <ValidatorArray value=""/>
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="15"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="35"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="0.4687" Fraction="1"/>
+        <AreaArray Radius="0.7812" Fraction="0.5"/>
+        <AreaArray Radius="1.25" Fraction="0.25"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="OffsetByUnitRadius" value="0"/>
+    </CEffectDamage>
+    <CEffectDamage id="RaynorCommanderWeaponSiegeTank@Directed" parent="DU_WEAP">
+        <ValidatorArray value=""/>
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="15"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="35"/>
+        <Death value="Blast"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="RaynorCommanderWeaponSiegeTank@Dummy" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="15"/>
+        <Kind value="Splash"/>
+        <KindSplash value="Splash"/>
+        <Amount value="35"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
+    <CEffectSwitch id="RaynorCommanderWeaponSiegeTank@Switch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="TargetRadiusSmall" Effect="RaynorCommanderWeaponSiegeTank@Blast"/>
+        <CaseArray Validator="TargetRadiusLarge" Effect="RaynorCommanderWeaponSiegeTank@Directed"/>
+    </CEffectSwitch>
+    <CEffectDamage id="RaynorCommanderWeaponTank" parent="DU_WEAP">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeBonus index="Armored" value="10"/>
+        <Kind value="Ranged"/>
+        <Amount value="15"/>
+        <Death value="Blast"/>
+    </CEffectDamage>
     <CEffectIssueOrder id="RaynorCommanderBurrowSpiderMine">
         <EditorCategories value="Race:Raynor"/>
         <WhichUnit Value="Caster"/>

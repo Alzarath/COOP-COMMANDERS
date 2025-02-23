@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="RaynorCommanderBanshee@Death" parent="Death">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium9.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderBanshee@Help" parent="TerranHelp">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Help00.ogg" FacialAnim="Banshee_Help00"/>
+    </CSound>
+    <CSound id="RaynorCommanderBanshee@Movement" parent="Movement">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_Movement0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_Movement1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_Movement2.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderBanshee@Pissed" parent="Pissed">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed00.ogg" FacialAnim="Banshee_Pissed00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed01.ogg" FacialAnim="Banshee_Pissed01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed02.ogg" FacialAnim="Banshee_Pissed02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed03.ogg" FacialAnim="Banshee_Pissed03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed04.ogg" FacialAnim="Banshee_Pissed04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed05.ogg" FacialAnim="Banshee_Pissed05"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed06.ogg" FacialAnim="Banshee_Pissed06"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed07.ogg" FacialAnim="Banshee_Pissed07"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed08.ogg" FacialAnim="Banshee_Pissed08"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed09.ogg" FacialAnim="Banshee_Pissed09"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed10.ogg" FacialAnim="Banshee_Pissed10"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Pissed11.ogg" FacialAnim="Banshee_Pissed10"/>
+    </CSound>
+    <CSound id="RaynorCommanderBanshee@Ready" parent="Ready">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Ready00.ogg" FacialAnim="Banshee_Ready00"/>
+    </CSound>
+    <CSound id="RaynorCommanderBanshee@What" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_What00.ogg" FacialAnim="Banshee_What00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_What01.ogg" FacialAnim="Banshee_What01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_What02.ogg" FacialAnim="Banshee_What02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_What03.ogg" FacialAnim="Banshee_What03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_What04.ogg" FacialAnim="Banshee_What04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_What05.ogg" FacialAnim="Banshee_What05"/>
+    </CSound>
+    <CSound id="RaynorCommanderBanshee@Yes" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes00.ogg" FacialAnim="Banshee_Yes00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes01.ogg" FacialAnim="Banshee_Yes01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes02.ogg" FacialAnim="Banshee_Yes02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes03.ogg" FacialAnim="Banshee_Yes03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes04.ogg" FacialAnim="Banshee_Yes04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes05.ogg" FacialAnim="Banshee_Yes05"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes06.ogg" FacialAnim="Banshee_Yes06"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes07.ogg" FacialAnim="Banshee_Yes07"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes08.ogg" FacialAnim="Banshee_Yes08"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes09.ogg" FacialAnim="Banshee_Yes09"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes10.ogg" FacialAnim="Banshee_Yes10"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes11.ogg" FacialAnim="Banshee_Yes11"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes12.ogg" FacialAnim="Banshee_Yes12"/>
+    </CSound>
+    <CSound id="RaynorCommanderLiftStarport@Land" parent="Ambience_Object">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingLand0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingLand1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingLand2.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderLiftStarport@Lift" parent="Ambience_Object">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingLiftOff0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingLiftOff1.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="RaynorCommanderSpiderMine@SoundBurrow" parent="Spell">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMineBurrow0.wav" FacialGroup=""/>
@@ -828,6 +906,213 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionWhat1.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionWhat2.wav"/>
         <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderSiegeTank@Attack" parent="TerranAck">
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack00.ogg" FacialAnim="SiegeTank_Attack00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack01.ogg" FacialAnim="SiegeTank_Attack01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack02.ogg" FacialAnim="SiegeTank_Attack02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack03.ogg" FacialAnim="SiegeTank_Attack03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack04.ogg" FacialAnim="SiegeTank_Attack04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack05.ogg" FacialAnim="SiegeTank_Attack05"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack06.ogg" FacialAnim="SiegeTank_Attack06"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack07.ogg" FacialAnim="SiegeTank_Attack07"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack08.ogg" FacialAnim="SiegeTank_Attack08"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Attack09.ogg" FacialAnim="SiegeTank_Attack09"/>
+        <Flags index="Download" value="0"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="SiegeTank_AttackImpact2" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall9.wav" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-3.000000,3.000000"/>
+        <Volume value="-3.000000,0.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderWeaponTank@AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactSmall9.wav" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-3.000000,3.000000"/>
+        <Volume value="-3.000000,0.000000"/>
+    </CSound>
+    <CSound id="SiegeTank_AttackLaunch2" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch3.wav"/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-6.180000,-1.820000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderSiegeTank@Explode" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium0.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium1.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium2.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium3.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium4.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium5.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium6.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium7.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium8.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium9.wav" Pitch="-3.000000,3.000000"/>
+        <DupeDestroyCount value="5"/>
+    </CSound>
+    <CSound id="RaynorCommanderSiegeTank@Help" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Help00.ogg" FacialAnim="SiegeTank_Help00"/>
+        <Mode value="3DWorld"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderSiegeTank@Pissed2" parent="TerranAck">
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed00.ogg" FacialAnim="SiegeTank_Pissed00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed01.ogg" FacialAnim="SiegeTank_Pissed01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed02.ogg" FacialAnim="SiegeTank_Pissed02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed03.ogg" FacialAnim="SiegeTank_Pissed03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed04.ogg" FacialAnim="SiegeTank_Pissed04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed05.ogg" FacialAnim="SiegeTank_Pissed05"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed06.ogg" FacialAnim="SiegeTank_Pissed06"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed07.ogg" FacialAnim="SiegeTank_Pissed07"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed08.ogg" FacialAnim="SiegeTank_Pissed08"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Pissed09.ogg" FacialAnim="SiegeTank_Pissed09"/>
+        <Flags index="Download" value="0"/>
+        <Select value="Sequential"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderSiegeTank@Ready" parent="Ready">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Ready00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Ready01.ogg"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderSiegeTank@What" parent="TerranAck">
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What00.ogg" FacialAnim="SiegeTank_What00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What01.ogg" FacialAnim="SiegeTank_What01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What02.ogg" FacialAnim="SiegeTank_What02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What03.ogg" FacialAnim="SiegeTank_What03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What04.ogg" FacialAnim="SiegeTank_What04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What05.ogg" FacialAnim="SiegeTank_What05"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What06.ogg" FacialAnim="SiegeTank_What06"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_What07.ogg" FacialAnim="SiegeTank_What07"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderSiegeTank@Yes" parent="TerranAck">
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes00.ogg" FacialAnim="SiegeTank_Yes00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes01.ogg" FacialAnim="SiegeTank_Yes01"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes02.ogg" FacialAnim="SiegeTank_Yes02"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes03.ogg" FacialAnim="SiegeTank_Yes03"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes04.ogg" FacialAnim="SiegeTank_Yes04"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes05.ogg" FacialAnim="SiegeTank_Yes05"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes06.ogg" FacialAnim="SiegeTank_Yes06"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes07.ogg" FacialAnim="SiegeTank_Yes07"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes08.ogg" FacialAnim="SiegeTank_Yes08"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes09.ogg" FacialAnim="SiegeTank_Yes09"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes10.ogg" FacialAnim="SiegeTank_Yes10"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes11.ogg" FacialAnim="SiegeTank_Yes11"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes12.ogg" FacialAnim="SiegeTank_Yes12"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes13.ogg" FacialAnim="SiegeTank_Yes13"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes14.ogg" FacialAnim="SiegeTank_Yes14"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes15.ogg" FacialAnim="SiegeTank_Yes15"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SiegeTank\SiegeTank_Yes16.ogg" FacialAnim="SiegeTank_Yes16"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderStarport@Explode" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge0.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge1.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge2.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge3.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge4.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge5.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge6.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge7.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge8.wav" Pitch="-3.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionLarge9.wav" Pitch="-3.000000,3.000000"/>
+        <DupeDestroyCount value="5"/>
+    </CSound>
+    <CSound id="RaynorCommanderStarport@Movement" parent="Movement">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingMovement0.wav" LoopCount="-1"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingMovement1.wav" LoopCount="-1"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingMovement2.wav" LoopCount="-1"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="300"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderStarport@Ready" parent="Ready">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\Starport\Starport_What.ogg"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderStarport@What" parent="Voice">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\Starport\Starport_What.ogg"/>
+        <Volume value="-5.000000,-5.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderWeaponTank@Launch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_AttackLaunch3.wav"/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-6.180000,-1.820000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderWeaponSiegeTank@AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium0.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium1.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium2.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium3.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium4.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium5.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium6.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium7.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium8.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\SiegeTank_ImpactMedium9.wav" Pitch="-3.000000,3.000000" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <DupeMaximumMethod value="Replace"/>
+    </CSound>
+    <CSound id="RaynorCommanderWeaponSiegeTank@AttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch3.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch4.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch5.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch6.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch7.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch8.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SiegeTank\SiegeTank_SiegeAttackLaunch9.wav"/>
+        <DupeDestroyCount value="8"/>
+        <DupeMaximumMethod value="Replace"/>
+        <Pitch value="-6.180000,-1.820000"/>
+        <Volume value="-2.520000,-1.460000"/>
     </CSound>
     <CSound id="WeaponRaynorSCV@AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Terran"/>

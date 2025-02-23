@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="RaynorCommanderBanshee" parent="Unit">
+        <Model value="Assets\Units\Terran\BansheeMercenary\BansheeMercenary.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderBanshee@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\BansheeMercenaryDeath\BansheeMercenaryDeath.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderBanshee@Portrait" parent="FXAPortrait">
+        <Model value="Assets\Portraits\Terran\BansheeMercenaryPortrait\BansheeMercenaryPortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <FacialController value="LocalizedData\Facial\BansheePortrait.fxa"/>
+        <Image value="Assets\Textures\bansheeportrait_static.dds"/>
+    </CModel>
+    <CModel id="RaynorCommanderBanshee@Reentry">
+        <Model value="Assets\Effects\Terran\BansheeMercenaryReentry\BansheeMercenaryReentry.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderSpiderMine" parent="Unit">
         <Model value="Assets\Units\Terran\SpiderMine\SpiderMine.m3"/>
         <EditorCategories value="Race:Raynor"/>
@@ -198,30 +216,30 @@
         <Image value="Assets\Textures\MarauderPortrait_Static.dds"/>
         <Lighting value="MarauderPortrait"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@Marine" parent="MarineBase">
+    <CModel id="RaynorCommanderMarine" parent="MarineBase">
         <Model value="Assets\Units\Terran\Marine\Marine.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarineDeath" parent="MarineDeathBase">
+    <CModel id="RaynorCommanderMarine@Death" parent="MarineDeathBase">
         <Model value="Assets\Units\Terran\MarineDeathEx1\MarineDeathEx1.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarineDeathAcid" parent="MarineDeathAcidBase">
+    <CModel id="RaynorCommanderMarine@DeathAcid" parent="MarineDeathAcidBase">
         <Model value="Assets\Units\Terran\MarineDeathAcid\MarineDeathAcid.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarineDeathBlast" parent="MarineDeathBlastBase">
+    <CModel id="RaynorCommanderMarine@DeathBlast" parent="MarineDeathBlastBase">
         <Model value="Assets\Units\Terran\MarineDeathBlastEx1\MarineDeathBlastEx1.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarineDeathEat" parent="UnitDeath" Race="Terran">
+    <CModel id="RaynorCommanderMarine@DeathEat" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Units\Terran\MarineDeathEat\MarineDeathEat.m3"/>
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Occlusion value="Show"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarineDeathEviscerate" parent="MarineDeathEviscerateBase">
+    <CModel id="RaynorCommanderMarine@DeathEviscerate" parent="MarineDeathEviscerateBase">
         <Model value="Assets\Units\Terran\MarineDeathEviscerateEx1\MarineDeathEviscerateEx1.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarineDeathFire" parent="MarineDeathFireBase">
+    <CModel id="RaynorCommanderMarine@DeathFire" parent="MarineDeathFireBase">
         <Model value="Assets\Units\Terran\MarineDeathFire\MarineDeathFire.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@MarineDeathRagdoll" parent="MarineDeathRagdollBase">
+    <CModel id="RaynorCommanderMarine@DeathRagdoll" parent="MarineDeathRagdollBase">
         <Model value="Assets\Units\Terran\MarineDeathRagdoll\MarineDeathRagdoll.m3"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@Portrait" parent="MarinePortraitBase">
@@ -285,6 +303,95 @@
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="RaynorCommanderTechLab@Build" parent="TechLabBuildBase"/>
+    <CModel id="RaynorCommanderSiegeTank" parent="SiegeTankBase">
+        <Model value="Assets\Units\Terran\TankEx1\TankEx1.m3"/>
+    </CModel>
+    <CModel id="SiegeTankAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
+        <LowQualityModel value="SiegeTankAttackImpactLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponTank@AttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
+        <LowQualityModel value="SiegeTankAttackImpactLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SiegeTankAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\TankWeaponLaunch\TankWeaponLaunch.m3"/>
+        <LowQualityModel value="SiegeTankAttackLaunchLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderSiegeTank@Death" parent="SiegeTankDeathBase">
+        <Model value="Assets\Units\Terran\SiegeTankDeathEx1\SiegeTankDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderSiegeTank@DeathRagdoll" parent="SiegeTankDeathRagdollBase">
+        <Model value="Assets\Units\Terran\SiegeTankDeathRagdoll\SiegeTankDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderSiegeTank@Portrait" parent="SiegeTankPortraitBase">
+        <Model value="Assets\Portraits\Terran\SiegeTankPortrait\SiegeTankPortrait.m3"/>
+        <Image value="Assets\Textures\SiegeTankPortrait_Static.dds"/>
+        <Lighting value="SiegeTankPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport" parent="StarportBase">
+        <Model value="Assets\Buildings\Terran\StarportEx1\StarportEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport@Death" parent="StarportDeathBase">
+        <Model value="Assets\Buildings\Terran\StarportDeathEx1\StarportDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport@FlyDeath" parent="StarportFlyDeathBase">
+        <Model value="Assets\Buildings\Terran\StarportFlyDeathEx1\StarportFlyDeathEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport@Placement" parent="StarportPlacementBase" low="RaynorCommanderStarport">
+        <Model value="Assets\Buildings\Terran\StarportPlacement\StarportPlacement.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport@Portrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Starport\Splat_Starport.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponTank@AttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\TankWeaponLaunch\TankWeaponLaunch.m3"/>
+        <LowQualityModel value="SiegeTankAttackLaunchLow"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponSiegeTank@Damage" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponSiegeTank@DirectedDamage" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponSiegeTank@DirectedImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponImpactBuilding\SiegeTankWeaponImpactBuilding.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponSiegeTank@DirectedLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponLaunch\SiegeTankWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponSiegeTank@Impact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponImpact\SiegeTankWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderWeaponSiegeTank@Launch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\SiegeTankWeaponLaunch\SiegeTankWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SiegeTankMorphRaynor" parent="Unit">
+        <Model value="Assets\Units\Terran\SiegeTankMorph\SiegeTankMorph.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedRaynor" parent="Unit">
+        <Model value="Assets\Units\Terran\SiegeTank\SiegeTank.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="WeaponRaynorSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
         <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
     </CModel>

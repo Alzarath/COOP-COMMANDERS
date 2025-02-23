@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CAbilBuild id="CommanderRaynorPlaceSpiderMine">
+    <CAbilBuild id="RaynorCommanderPlaceSpiderMine">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <InfoArray index="Build1" Unit="RaynorCommanderSpiderMine">
             <Charge CountMax="3" CountStart="3" CountUse="1"/>
             <Button DefaultButtonFace="WidowMineBioSplash"/>
         </InfoArray>
+        <EffectArray index="Finish" value="RaynorCommanderBurrowSpiderMine"/>
     </CAbilBuild>
     <CAbilResearch id="RaynorCommanderBarrackResearch">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <InfoArray index="Research1" Time="15" Upgrade="RaynorCommanderInciniratorGauntlets">
             <Button DefaultButtonFace="RaynorCommanderInciniratorGauntlets"/>
         </InfoArray>
@@ -21,7 +22,7 @@
     </CAbilResearch>
     <CAbilBuild id="RaynorCommanderBuildAddon@Factory" parent="TerranAddOns">
         <Name value="Abil/Name/RaynorCommanderBuildAddon@Factory"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <BuildMorphAbil value="FactoryLiftOff"/>
         <InfoArray index="Build1" Unit="RaynorCommanderTechLabFactory" Time="25">
             <Button DefaultButtonFace="RaynorCommanderBuildAddon@Factory"/>
@@ -30,7 +31,7 @@
     </CAbilBuild>
     <CAbilBuild id="RaynorCommanderBuildAddon@Barracks" parent="TerranAddOns">
         <Name value="Abil/Name/RaynorCommanderBuildAddon@Barracks"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <BuildMorphAbil value="RaynorCommanderLiftBarrack@LiftOff"/>
         <InfoArray index="Build1" Unit="RaynorCommanderTechLabBarrack" Time="25">
             <Button DefaultButtonFace="RaynorCommanderBuildAddon@Barracks"/>
@@ -66,6 +67,20 @@
             <Cooldown Link="Abil/RaynorSpiderUnburrow"/>
         </Cost>
     </CAbilMorph>
+    <CAbilMorphPlacement id="RaynorCommanderLiftStarport@Land" parent="TerranBuildingLand" unit="Barracks">
+        <Name value="Abil/Name/RaynorCommanderLiftStarport@Land"/>
+        <InfoArray index="0" Unit="RaynorCommanderStarport" CollideRange="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:MorphsandBurrows"/>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="RaynorCommanderLiftStarport@LiftOff" parent="TerranBuildingLiftOff" unit="BarracksFlying">
+        <Name value="Abil/Name/RaynorCommanderLiftStarport@LiftOff"/>
+        <InfoArray index="0" Unit="RaynorCommanderStarport@Flying"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:MorphsandBurrows"/>
+    </CAbilMorph>
     <CAbilMorphPlacement id="RaynorCommanderLiftFactory@Land" parent="TerranBuildingLand" unit="Barracks">
         <Name value="Abil/Name/RaynorCommanderLiftFactory@Land"/>
         <InfoArray index="0" Unit="RaynorCommanderFactory" CollideRange="0">
@@ -73,19 +88,23 @@
                 <DurationArray index="Delay" value="2"/>
             </SectionArray>
         </InfoArray>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:MorphsandBurrows"/>
     </CAbilMorphPlacement>
     <CAbilMorph id="RaynorCommanderLiftFactory@LiftOff" parent="TerranBuildingLiftOff" unit="BarracksFlying">
         <Name value="Abil/Name/RaynorCommanderLiftFactory@LiftOff"/>
         <InfoArray index="0" Unit="RaynorCommanderFactory@Fly"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:MorphsandBurrows"/>
     </CAbilMorph>
     <CAbilMorph id="RaynorCommanderBurrowSpiderMine@Burrow">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastIdleOnly" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Flags index="IgnoreFacing" value="1"/>
         <Flags index="SuppressMovement" value="1"/>
         <InfoArray Unit="RaynorCommanderSpiderMine@Burrowed">
             <SectionArray index="Abils">
+                <DurationArray index="Delay" value="3.5332"/>
                 <DurationArray index="Duration" value="3.5332"/>
             </SectionArray>
             <SectionArray index="Actor">
@@ -100,29 +119,30 @@
                 <DurationArray index="Delay" value="4.5332"/>
             </SectionArray>
         </InfoArray>
-        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Worker,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastFilters value="-;Self,Enemy"/>
         <AutoCastRange value="2"/>
         <Cost>
             <Charge Link="Abil/RaynorSpiderBurrow"/>
             <Cooldown Link="Abil/RaynorSpiderBurrow"/>
         </Cost>
+        <AutoCastCountMax value="1"/>
     </CAbilMorph>
     <CAbilMorph id="RaynorCommanderTechLabMorphFactory">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderTechLabMorphFactory" Requirements="RaynorCommanderTechLabMorphFactory@Requirement"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="RaynorCommanderTechLabFactory"/>
     </CAbilMorph>
     <CAbilMorph id="RaynorCommanderTechLabMorphBarrack">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderTechLabMorphBarrack" Requirements="RaynorCommanderTechLabMorphBarrack@Requirement"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="RaynorCommanderTechLabBarrack"/>
     </CAbilMorph>
     <CAbilEffectTarget id="RaynorCommanderHeal">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -136,14 +156,14 @@
         <SmartPriority value="1"/>
         <SmartValidatorArray value="healSmartTargetFilters"/>
         <SmartValidatorArray value="NotWarpingIn"/>
+        <AutoCastFilters value="Visible;Self,Neutral,Enemy"/>
         <AutoCastRange value="6"/>
         <AutoCastValidatorArray value="healCasterMinEnergy"/>
         <AutoCastValidatorArray value="NotWarpingIn"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderHeal"/>
-        <AutoCastFilters value="Visible;Self,Neutral,Enemy"/>
     </CAbilEffectTarget>
     <CAbilTrain id="RaynorCommanderTrainBarrack">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <InfoArray index="Train1" Time="25">
             <Button DefaultButtonFace="RaynorCommanderMarine" State="Restricted"/>
             <Unit value="RaynorCommanderMarine"/>
@@ -171,14 +191,16 @@
                 <DurationArray index="Delay" value="2"/>
             </SectionArray>
         </InfoArray>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:MorphsandBurrows"/>
     </CAbilMorphPlacement>
     <CAbilMorph id="RaynorCommanderLiftBarrack@LiftOff" parent="TerranBuildingLiftOff" unit="BarracksFlying">
         <Name value="Abil/Name/RaynorCommanderLiftBarrack@LiftOff"/>
         <InfoArray index="0" Unit="RaynorCommanderBarracks@Fly"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:MorphsandBurrows"/>
     </CAbilMorph>
     <CAbilEffectInstant id="RaynorCommanderStimpack">
         <AbilSetId value="Stimpack"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <InfoTooltipPriority value="1"/>
         <Effect index="0" value="RaynorCommanderStimpack@AB"/>
         <Flags index="Transient" value="1"/>
@@ -191,7 +213,7 @@
         </CmdButtonArray>
     </CAbilEffectInstant>
     <CAbilBuild id="RaynorCommanderBuildSCV">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <FlagArray index="Interruptible" value="1"/>
         <FlagArray index="PeonDisableCollision" value="1"/>
         <InfoArray index="Build1" Unit="CommandCenter" Time="100">
@@ -247,7 +269,7 @@
     </CAbilBuild>
     <CAbilEffectInstant id="RaynorCommanderStimpackMara">
         <AbilSetId value="Stimpack"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <InfoTooltipPriority value="1"/>
         <Effect index="0" value="RaynorCommanderStimpackMara@AB"/>
         <Flags index="Transient" value="1"/>
@@ -263,14 +285,14 @@
         </CmdButtonArray>
     </CAbilEffectInstant>
     <CAbilMorph id="RaynorCommanderTechLabMorphStarport">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderTechLabMorphStarport" Requirements="RaynorCommanderTechLabMorphStarport@Requirement"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="RaynorCommanderTechLabStarport"/>
     </CAbilMorph>
     <CAbilMorph id="RaynorCommanderTechLabMorphDetached">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="RaynorCommanderTechLabMorphDetached@Requirement"/>
         <Flags index="Automatic" value="1"/>
         <InfoArray Unit="RaynorCommanderTechLab">
@@ -281,7 +303,7 @@
     </CAbilMorph>
     <CAbilBuild id="RaynorCommanderBuildAddon@Starport" parent="TerranAddOns">
         <Name value="Abil/Name/RaynorCommanderBuildAddon@Starport"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <BuildMorphAbil value="StarportLiftOff"/>
         <InfoArray index="Build1" Unit="RaynorCommanderTechLabStarport" Time="25">
             <Button DefaultButtonFace="RaynorCommanderBuildAddon@Starport"/>
@@ -295,4 +317,80 @@
             <Unit value="RaynorCommanderVulture"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilMorph id="SiegeMode2">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointAttack_Void\WayPointAttack_Void.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <AbilSetId value="SiegeMode"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SiegeMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreCollision" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="RaynorCommanderSiegeTank@Sieged" RandomDelayMax="0.5">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="3.5417"/>
+            </SectionArray>
+            <SectionArray index="Facing">
+                <DurationArray index="Duration" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="3.5417"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilTrain id="RaynorCommanderTrainStarport">
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Building"/>
+        <InfoArray index="Train1" Time="42">
+            <Button DefaultButtonFace="Medivac" State="Restricted"/>
+            <Unit value="Medivac"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="60">
+            <Button DefaultButtonFace="Banshee" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Banshee"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="60">
+            <Button DefaultButtonFace="Raven" State="Restricted" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Raven"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="90">
+            <Button DefaultButtonFace="Battlecruiser" State="Restricted" Requirements="HaveAttachedStarportTechLabAndFusionCore"/>
+            <Unit value="Battlecruiser"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="42">
+            <Button DefaultButtonFace="VikingFighter" State="Restricted"/>
+            <Unit value="VikingFighter"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="60">
+            <Button DefaultButtonFace="Liberator" State="Restricted"/>
+            <Unit value="Liberator"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilMorph id="Unsiege2">
+        <AbilSetId value="Unsieged"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Unsiege"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="RaynorCommanderSiegeTank" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="3.5417"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="3.5417"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
 </Catalog>

@@ -27,6 +27,7 @@
         <value>Cinematic</value>
         <value>Spray</value>
         <value>Decal</value>
+        <value>AbilityTopbars</value>
     </category>
     <category name="FieldType">
         <value>Ability</value>
@@ -516,6 +517,7 @@
     <objectUsage type="Unit">
         <objects>
             <usage source="External">ObjectFamily</usage>
+            <usage source="External">Race</usage>
             <usage source="Field">CUnit_Race</usage>
             <usage source="External">ObjectType</usage>
         </objects>
@@ -565,7 +567,7 @@
         <objects>
             <usage source="External">Race</usage>
             <usage source="External">DataGroup</usage>
-            <usage source="External">DataFamily</usage>
+            <!-- <usage source="External">DataFamily</usage> -->
             <usage source="External">ObjectType</usage>
         </objects>
         <fields>

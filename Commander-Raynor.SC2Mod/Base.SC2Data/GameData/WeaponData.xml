@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="RaynorCommanderWeaponSiegeTank">
+        <EditorCategories value="Race:Raynor"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="RaynorCommanderWeaponSiegeTank@Dummy"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="13"/>
+        <MinimumRange value="2"/>
+        <Period value="3"/>
+        <Effect value="RaynorCommanderWeaponSiegeTank@Switch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RaynorCommanderWeaponTank">
+        <EditorCategories value="Race:Raynor"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="1.04"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderExplode">
         <EditorCategories value="Race:Raynor"/>
         <Icon value="Assets\Textures\btn-upgrade-raynor-cerberusmines.dds"/>

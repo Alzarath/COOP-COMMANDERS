@@ -1,4 +1,5 @@
-﻿DataCollection/Name/CommanderAbilityAB=Commander - Ability (AB)
+﻿DataCollection/Name/COOPCommanders=Commanders
+DataCollection/Name/CommanderAbilityAB=Commander - Ability (AB)
 DataCollection/Name/CommanderAbilityBeam=Commander - Ability (Beam)
 DataCollection/Name/CommanderAbilityBuild=Commander - Ability (Build)
 DataCollection/Name/CommanderUnit=Commander - Unit

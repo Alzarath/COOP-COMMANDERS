@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollection id="COOPCommanders">
+        <EditorCategories value="DataGroup:Mechanic,Race:Neutral,ObjectType:Other"/>
+    </CDataCollection>
     <CDataCollectionAbil id="CommanderAbilityBeam">
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
         <EditorIconSource value="Abil"/>

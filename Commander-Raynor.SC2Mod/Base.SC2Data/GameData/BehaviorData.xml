@@ -4,7 +4,6 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <Duration value="5"/>
-        <InitialEffect value="RaynorCommanderBurrowSpiderMine"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderTechLabBarrack">
         <InfoFlags index="Hidden" value="1"/>

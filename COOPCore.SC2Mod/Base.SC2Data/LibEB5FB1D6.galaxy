@@ -1,0 +1,151 @@
+include "TriggerLibs/NativeLib"
+include "LibBEDD5153_h"
+
+include "LibEB5FB1D6_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Cheats COOP
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libEB5FB1D6_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Variable Initialization
+bool libEB5FB1D6_InitVariables_completed = false;
+
+void libEB5FB1D6_InitVariables () {
+    if (libEB5FB1D6_InitVariables_completed) {
+        return;
+    }
+
+    libEB5FB1D6_InitVariables_completed = true;
+
+}
+
+// Presets
+// Functions
+void libEB5FB1D6_gf_CheatError (int lp_errorType, int lp_player) {
+    // Variable Declarations
+    text lv_warningtext;
+
+    // Automatic Variable Declarations
+    int autoA9E66D69_val;
+
+    // Variable Initialization
+    lv_warningtext = StringExternal("Param/Value/lib_EB5FB1D6_3F4B7946");
+
+    // Implementation
+    autoA9E66D69_val = lp_errorType;
+    if (autoA9E66D69_val == libEB5FB1D6_ge_CheatErrorType_NoArgument) {
+        TextExpressionSetToken("Param/Expression/lib_EB5FB1D6_16270228", "warning", lv_warningtext);
+        TextExpressionSetToken("Param/Expression/lib_EB5FB1D6_16270228", "Text", StringExternal("Param/Value/lib_EB5FB1D6_F0AAC220"));
+        UIDisplayMessage(PlayerGroupSingle(lp_player), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_EB5FB1D6_16270228"));
+    }
+    else if (autoA9E66D69_val == libEB5FB1D6_ge_CheatErrorType_NoArgument) {
+        TextExpressionSetToken("Param/Expression/lib_EB5FB1D6_4EE42115", "warning", lv_warningtext);
+        TextExpressionSetToken("Param/Expression/lib_EB5FB1D6_4EE42115", "Text", StringExternal("Param/Value/lib_EB5FB1D6_770CBEC4"));
+        UIDisplayMessage(PlayerGroupSingle(lp_player), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_EB5FB1D6_4EE42115"));
+    }
+    else {
+    }
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Cheat init
+//--------------------------------------------------------------------------------------------------
+bool libEB5FB1D6_gt_Cheatinit_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((GameIsOnline() == false))) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libEB5FB1D6_gt_Cheatinit_Init () {
+    libEB5FB1D6_gt_Cheatinit = TriggerCreate("libEB5FB1D6_gt_Cheatinit_Func");
+    TriggerAddEventMapInit(libEB5FB1D6_gt_Cheatinit);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Cheat - On/Off Build On Creep
+//--------------------------------------------------------------------------------------------------
+bool libEB5FB1D6_gt_CheatOnOffBuildOnCreep_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_tplayer;
+
+    // Automatic Variable Declarations
+    string auto12127AEF_val;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((StringWord(EventChatMessage(false), 2) == "")) {
+        libEB5FB1D6_gf_CheatError(libEB5FB1D6_ge_CheatErrorType_NoArgument, EventPlayer());
+        return true;
+    }
+
+    lv_tplayer = StringToInt(StringWord(EventChatMessage(false), 2));
+    auto12127AEF_val = StringWord(EventChatMessage(false), 3);
+    if (auto12127AEF_val == StringCase("on", false)) {
+        libEB5FB1D6_gv_buildOnCreep[lv_tplayer] = true;
+    }
+    else if (auto12127AEF_val == StringCase("off", false)) {
+        libEB5FB1D6_gv_buildOnCreep[lv_tplayer] = false;
+    }
+    else if (auto12127AEF_val == "") {
+        libEB5FB1D6_gv_buildOnCreep[lv_tplayer] = !(libEB5FB1D6_gv_buildOnCreep[lv_tplayer]);
+    }
+    else {
+        libEB5FB1D6_gf_CheatError(libEB5FB1D6_ge_CheatErrorType_ErrorParseParameter, EventPlayer());
+        return true;
+    }
+    if ((libEB5FB1D6_gv_buildOnCreep[lv_tplayer] == true)) {
+        libBEDD5153_gf_AllowDisallowBuildOnCreepForPlayer(lv_tplayer, true, "Any");
+    }
+    else {
+        libBEDD5153_gf_AllowDisallowBuildOnCreepForPlayer(lv_tplayer, false, "Any");
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libEB5FB1D6_gt_CheatOnOffBuildOnCreep_Init () {
+    libEB5FB1D6_gt_CheatOnOffBuildOnCreep = TriggerCreate("libEB5FB1D6_gt_CheatOnOffBuildOnCreep_Func");
+    TriggerAddEventChatMessage(libEB5FB1D6_gt_CheatOnOffBuildOnCreep, c_playerAny, "-buildcreep", false);
+}
+
+void libEB5FB1D6_InitTriggers () {
+    libEB5FB1D6_gt_Cheatinit_Init();
+    libEB5FB1D6_gt_CheatOnOffBuildOnCreep_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libEB5FB1D6_InitLib_completed = false;
+
+void libEB5FB1D6_InitLib () {
+    if (libEB5FB1D6_InitLib_completed) {
+        return;
+    }
+
+    libEB5FB1D6_InitLib_completed = true;
+
+    libEB5FB1D6_InitLibraries();
+    libEB5FB1D6_InitVariables();
+    libEB5FB1D6_InitTriggers();
+}
+
+include "LibBEDD5153"
+

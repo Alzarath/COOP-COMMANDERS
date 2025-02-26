@@ -1,0 +1,22 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Cheats COOP
+//--------------------------------------------------------------------------------------------------
+// Preset Declarations
+const int libEB5FB1D6_ge_CheatErrorType_NoArgument = 0;
+const int libEB5FB1D6_ge_CheatErrorType_ErrorParseParameter = 1;
+
+// Variable Declarations
+bool[16] libEB5FB1D6_gv_buildOnCreep;
+
+// Function Declarations
+void libEB5FB1D6_gf_CheatError (int lp_errorType, int lp_player);
+
+// Trigger Declarations
+trigger libEB5FB1D6_gt_Cheatinit;
+trigger libEB5FB1D6_gt_CheatOnOffBuildOnCreep;
+
+// Library Initialization
+void libEB5FB1D6_InitVariables ();
+

@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSet id="RaynorCommanderATSLaserBattery">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderATSLaserBattery@AB"/>
+        <EffectArray value="RaynorCommanderATSLaserBattery@LM"/>
+    </CEffectSet>
+    <CEffectSet id="RaynorCommanderATALaserBatteryAir">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderATALaserBatteryAir@AB"/>
+        <EffectArray value="RaynorCommanderATALaserBatteryAir@LM"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="RaynorCommanderATALaserBatteryAir@AB">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="RaynorCommanderATALaserBatteryAir@Damage">
+        <EditorCategories value="Race:Raynor"/>
+        <Visibility value="Visible"/>
+        <Amount value="20"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RaynorCommanderATALaserBatteryAir@LM">
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderATALaserBatteryAir@Damage"/>
+        <AmmoUnit value="RaynorCommanderATALaserBatteryAir@Missile"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="RaynorCommanderATSLaserBattery@AB">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="RaynorCommanderATSLaserBattery@Damage">
+        <EditorCategories value="Race:Raynor"/>
+        <Visibility value="Visible"/>
+        <Amount value="20"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RaynorCommanderATSLaserBattery@LM">
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderATSLaserBattery@Damage"/>
+        <AmmoUnit value="RaynorCommanderATSLaserBattery@Missile"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="RaynorCommanderHyperJump@ABSet">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderHyperJump@Out"/>
+        <EffectArray value="RaynorCommanderHyperJump@TargetAB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="RaynorCommanderHyperJump@Out">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="RaynorCommanderHyperJump">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="Precursor" value="1"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="SetFacing" value="1"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="RaynorCommanderHyperJump@ABSet"/>
+        <SpawnUnit value="RaynorCommanderHyperion"/>
+        <SpawnRange value="0.1"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="RaynorCommanderHyperJump@Set">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderHyperJump@Teleport"/>
+        <EffectArray value="RaynorCommanderHyperJump@AB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="RaynorCommanderHyperJump@TargetAB">
+        <EditorCategories value="Race:Raynor"/>
+    </CEffectApplyBehavior>
+    <CEffectTeleport id="RaynorCommanderHyperJump@Teleport">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+        <ClearQueuedOrders value="0"/>
+        <TargetLocation Effect="RaynorCommanderHyperJump" Value="TargetPoint"/>
+        <TeleportFlags index="TestFog" value="0"/>
+    </CEffectTeleport>
+    <CEffectApplyBehavior id="RaynorCommanderHyperJump@AB">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="RaynorCommanderHyperJump@In">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
     <CEffectDamage id="RaynorCommanderWeaponSiegeTank@Blast" parent="DU_WEAP">
         <ValidatorArray value=""/>
         <EditorCategories value="Race:Terran"/>

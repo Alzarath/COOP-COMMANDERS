@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="RaynorCommanderATALaserBatteryAir@Attack" parent="GenericAttack" effectImpact="RaynorCommanderATALaserBatteryAir@Damage" effectLaunch="RaynorCommanderATALaserBatteryAir@LM">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMRandom"/>
+        <LaunchAssets Model="RaynorCommanderATALaserBatteryAir@Launch" Sound="RaynorCommanderATALaserBatteryAir@Launch"/>
+        <Missile value="RaynorCommanderATALaserBatteryAir@Missile"/>
+        <ImpactMap index="None" Model="RaynorCommanderATALaserBatteryAir@Impact" Sound="RaynorCommanderATALaserBatteryAir@Impact"/>
+        <ImpactModel value="RaynorCommanderATALaserBatteryAir@Attack"/>
+    </CActorAction>
+    <CActorModel id="RaynorCommanderATALaserBatteryAir@Impact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+    </CActorModel>
+    <CActorMissile id="RaynorCommanderATALaserBatteryAir@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderATALaserBatteryAir@Missile">
+        <EditorCategories value=""/>
+    </CActorMissile>
+    <CActorAction id="RaynorCommanderATSLaserBattery@Attack" parent="GenericAttack" effectImpact="RaynorCommanderATSLaserBattery@Damage" effectLaunch="RaynorCommanderATSLaserBattery@LM">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMRandom"/>
+        <LaunchAssets Model="RaynorCommanderATSLaserBattery@Launch" Sound="RaynorCommanderATSLaserBattery@Launch"/>
+        <Missile value="RaynorCommanderATSLaserBattery@Missile"/>
+        <ImpactMap index="None" Model="RaynorCommanderATSLaserBattery@Impact" Sound="RaynorCommanderATSLaserBattery@Impact"/>
+        <ImpactModel value="RaynorCommanderATSLaserBattery@Attack"/>
+    </CActorAction>
+    <CActorModel id="RaynorCommanderATSLaserBattery@Impact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+    </CActorModel>
+    <CActorMissile id="RaynorCommanderATSLaserBattery@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderATSLaserBattery@Missile">
+        <EditorCategories value=""/>
+    </CActorMissile>
     <CActorUnit id="RaynorCommanderBanshee" parent="GenericUnitStandard" unitName="RaynorCommanderBanshee">
         <EditorCategories value=""/>
         <On Terms="UnitPortrait.*.Configure; ValidateUnit Cloaked IncludeDerivedSnapshot" Target="::PortraitGameSelf" Send="AnimBracketStart Visor Morph,Start Morph,Stand Morph,End Instant"/>
@@ -23,6 +51,48 @@
     <CActorModel id="RaynorCommanderBanshee@Reentry" parent="ModelAddition">
         <EditorCategories value=""/>
     </CActorModel>
+    <CActorModel id="RaynorCommanderHyperJump@Impact" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.RaynorCommanderHyperJump@In.On" Send="Create"/>
+        <On Terms="ActorDestruction" Target="_Unit" Send="SetOpacity 1.000000"/>
+        <Host Subject="_Selectable"/>
+    </CActorModel>
+    <CActorSound id="RaynorCommanderHyperJump@ImpactSound" parent="SoundOneShot">
+        <On Terms="Behavior.RaynorCommanderHyperJump@In.On" Send="Create"/>
+        <EditorCategories value=""/>
+    </CActorSound>
+    <CActorModel id="RaynorCommanderHyperJump@Launch" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.RaynorCommanderHyperJump@Out.On" Send="Create"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="SetOpacity"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorSound id="RaynorCommanderHyperJump@LaunchSound" parent="SoundOneShot">
+        <On Terms="Behavior.RaynorCommanderHyperJump@Out.On" Send="Create"/>
+        <EditorCategories value=""/>
+    </CActorSound>
+    <CActorUnit id="RaynorCommanderHyperion" parent="GenericUnitStandard" unitName="RaynorCommanderHyperion">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderHyperion@Death" SoundLink="Terran_ExplosionLarge" VoiceLink="RaynorCommanderHyperion@DeathVoice"/>
+        <PortraitModel value="RaynorCommanderHyperion@Portrait"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-hyperion.dds"/>
+        <BarWidth value="100"/>
+        <MinimapIcon value="Assets\Textures\btn-unit-terran-hyperion.dds"/>
+        <MinimapIconScale value="0.500000"/>
+        <MinimapTooltip value="Unit/Name/RaynorCommanderHyperion"/>
+        <MinimapUseSelfColor value="0"/>
+        <MinimapUseSelectionColor value="0"/>
+        <SoundArray index="Ready" value="RaynorCommanderHyperion@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderHyperion@Help"/>
+        <SoundArray index="What" value="RaynorCommanderHyperion@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderHyperion@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderHyperion@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderHyperion@Pissed"/>
+        <SoundArray index="Movement" value="RaynorCommanderHyperion@Movement"/>
+    </CActorUnit>
     <CActorSound id="RaynorCommanderLiftStarport@Land" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="AbilMorph.RaynorCommanderLiftStarport@Land.Start" Send="Create"/>
@@ -289,6 +359,7 @@
         <SoundArray index="Yes" value="RaynorCommanderMedic@Yes"/>
         <SoundArray index="Attack" value="RaynorCommanderMedic@Attack"/>
         <SoundArray index="Pissed" value="RaynorCommanderMedic@Pissed"/>
+        <BarOffset value="20"/>
     </CActorUnit>
     <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower">
         <EditorCategories value=""/>
@@ -710,13 +781,9 @@
         <Macros value="PhysicsDeathsVoidGround"/>
         <Inherits index="ModelMaterials" value="1"/>
         <AcceptedTransfers index="ModelMaterials" value="1"/>
-        <On index="69" Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
-        <On index="70" Terms="UnitBirth.RaynorCommanderSiegeTank@Sieged" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank" Send="ModelSwap SiegeTankMorphRaynor"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank" Send="AnimPlay Morph Morph,Start PlayForever"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo RaynorCommanderSiegeTank@Sieged" Send="ModelSwap SiegeTankSiegedRaynor"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="ModelSwap SiegeTankMorphRaynor"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="AnimPlay Morph Morph,End PlayForever"/>
+        <On index="69" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
+        <On index="70" Terms="AbilMorph.*.Finish; MorphTo RaynorCommanderSiegeTank" Send="Create"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <CreepHeightClass value="Tiny"/>
         <DeathArray index="Normal" ModelLink="RaynorCommanderSiegeTank@Death" SoundLink="RaynorCommanderSiegeTank@Explode"/>
@@ -754,7 +821,7 @@
             <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSiegeTank"/>
         </TerrainSquibs>
         <WalkAnimMoveSpeed value="1"/>
-        <AbilSoundArray AbilCmd="SiegeMode2,0" Sound="SiegeTank_SiegeModeVO"/>
+        <AbilSoundArray AbilCmd="RaynorCommanderTankMode@Siege,255" Sound="SiegeTank_SiegeModeVO"/>
         <BarOffset value="80"/>
         <BarWidth value="102"/>
         <ErrorArray Error="CantSeeBuildLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
@@ -820,7 +887,7 @@
     </CActorAction>
     <CActorTurret id="RaynorCommanderWeaponTank">
         <On Terms="TurretEnable.RaynorCommanderWeaponTank" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom SiegeTankSieged" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
     </CActorTurret>
     <CActorModel id="RaynorCommanderWeaponSiegeTank@DamageModel" parent="ModelAnimationStyleOneShotNoOrphan">
         <Flags index="SuppressCreationErrors" value="1"/>
@@ -860,9 +927,120 @@
         <On Terms="TurretEnable.RaynorCommanderWeaponSiegeTank" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
     </CActorTurret>
+    <CActorUnit id="RaynorCommanderSiegeTank@Alternate" parent="GenericUnitMorph" unitName="RaynorCommanderSiegeTank@Alternate">
+        <Aliases value="_UnitLarge"/>
+        <Aliases value="_CreepEngulfable"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Inherits index="ModelMaterials" value="1"/>
+        <AcceptedTransfers index="ModelMaterials" value="1"/>
+        <On index="69" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
+        <On index="70" Terms="AbilMorph.*.Finish; MorphTo RaynorCommanderSiegeTank@Sieged" Send="Create"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <CreepHeightClass value="Small"/>
+        <CreepRateGrow value="Grow"/>
+        <CreepRateShrink value="Shrink"/>
+        <DeathArray index="Normal" ModelLink="SiegeTankSiegedDeath" SoundLink="SiegeTank_Explode"/>
+        <DeathCustoms ModelLink="TerranLargeUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathCustoms ActorModel="SiegeTankDeathRagdoll" ModelLink="SiegeTankSiegedDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <PortraitModel value="RaynorCommanderSiegeTank@Portrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSiegeTank"/>
+        </TerrainSquibs>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <ErrorArray Error="CantSeeBuildLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantSeeLandLocation" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CantLandLocationInvalid" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <ErrorArray Error="CouldntReachTarget" Sound="UI_GenericError" GroupSound="UI_GenericError"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-SiegeMode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-siegetanksiegemode.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="SiegeTank_Ready"/>
+        <SoundArray index="Help" value="SiegeTank_Help"/>
+        <SoundArray index="What" value="SiegeTank_What"/>
+        <SoundArray index="Yes" value="SiegeTank_Yes"/>
+        <SoundArray index="Attack" value="SiegeTank_Attack"/>
+        <SoundArray index="Pissed" value="SiegeTank_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-siegetanksiegemode.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-SiegeMode.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorSplat id="StarportSplat2" parent="TerranBuildingMorphSplat" unitName="RaynorCommanderStarport">
         <Model value="RaynorCommanderStarport@Splat"/>
     </CActorSplat>
+    <CActorUnit id="RaynorTankModeMorphModel" parent="GenericUnitBaseMorphTransition" unitName="TankModeMorphModel">
+        <Aliases value="_UnitLarge"/>
+        <Inherits index="ModelMaterials" value="1"/>
+        <AcceptedTransfers index="ModelMaterials" value="1"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank" Send="AnimPlay End Morph,End"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
+        <On Terms="ActorCreation; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank@Sieged" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank@Sieged" Send="AnimPlay Morph Morph,Start"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
+        <Model value="RaynorCommanderSiegeTank@Morphing"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <CreepHeightClass value="Tiny"/>
+        <CreepRateGrow value="Grow"/>
+        <CreepRateShrink value="Shrink"/>
+        <DeathArray index="Normal" ModelLink="TerranLargeUnitDeath" SoundLink="SiegeTank_Explode"/>
+        <DeathCustoms ModelLink="TerranLargeUnitDeathLow" Name="AntiGravTerran"/>
+        <PortraitModel value="RaynorCommanderSiegeTank@Portrait"/>
+        <AbilSoundArray AbilCmd="SiegeMode,Execute" Sound="SiegeTank_SiegeModeVO"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <HighlightTooltip value="Unit/Name/SiegeTank"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="SiegeTank_Ready"/>
+        <SoundArray index="Help" value="SiegeTank_Help"/>
+        <SoundArray index="What" value="SiegeTank_What"/>
+        <SoundArray index="Yes" value="SiegeTank_Yes"/>
+        <SoundArray index="Attack" value="SiegeTank_Attack"/>
+        <SoundArray index="Pissed" value="SiegeTank_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorSound id="TerranBuildingFlameBig@Sound" parent="TerranFlameSound">
         <Sound value="Terran_FlameLoopLarge"/>
     </CActorSound>

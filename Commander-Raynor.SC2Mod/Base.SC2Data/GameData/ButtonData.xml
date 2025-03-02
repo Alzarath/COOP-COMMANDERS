@@ -19,6 +19,10 @@
         <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
         <EditorCategories value="Race:Raynor"/>
     </CButton>
+    <CButton id="RaynorCommanderHyperJump">
+        <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
     <CButton id="RaynorCommanderMedic">
         <Icon value="Assets\Textures\btn-unit-terran-medic.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-medic.dds"/>

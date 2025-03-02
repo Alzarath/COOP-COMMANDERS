@@ -4,5 +4,5 @@ include "TriggerLibs/natives"
 // Library: COMMANDER - Raynor
 //--------------------------------------------------------------------------------------------------
 // Trigger Declarations
-trigger libDD453873_gt_UntitledTrigger001;
+trigger libDD453873_gt_SpawnAllUnitsCommander;
 

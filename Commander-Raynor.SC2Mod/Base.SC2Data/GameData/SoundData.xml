@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="RaynorCommanderATALaserBatteryAir@Impact" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderATALaserBatteryAir@Launch" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch2.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderATSLaserBattery@Impact" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderATSLaserBattery@Launch" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch2.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="RaynorCommanderBanshee@Death" parent="Death">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium0.wav" FacialGroup=""/>
@@ -66,6 +104,79 @@
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes10.ogg" FacialAnim="Banshee_Yes10"/>
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes11.ogg" FacialAnim="Banshee_Yes11"/>
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Banshee\Banshee_Yes12.ogg" FacialAnim="Banshee_Yes12"/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperJump@ImpactSound" parent="Spell">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Spell_HyperionJumpIn_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_HyperionJumpIn_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_HyperionJumpIn_02.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperJump@LaunchSound" parent="Spell">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Spell_HyperionJumpOut_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_HyperionJumpOut_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Spell_HyperionJumpOut_02.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperion@Attack" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack00.ogg" FacialAnim="Raynor_Attack00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack01.ogg" FacialAnim="Raynor_Attack01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack02.ogg" FacialAnim="Raynor_Attack02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack03.ogg" FacialAnim="Raynor_Attack03"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack04.ogg" FacialAnim="Raynor_Attack04"/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperion@DeathVoice" parent="DeathVoice">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Death00.wav" FacialAnim="Raynor_Death00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Death01.wav" FacialAnim="Raynor_Death01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Death02.wav" FacialAnim="Raynor_Death02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Death03.wav" FacialAnim="Raynor_Death03"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Death04.wav" FacialAnim="Raynor_Death04"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Death05.wav" FacialAnim="Raynor_Death05"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Death06.wav" FacialAnim="Raynor_Death06"/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperion@Help" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help00.ogg" FacialAnim="Raynor_Help00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help01.ogg" FacialAnim="Raynor_Help01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help02.ogg" FacialAnim="Raynor_Help02"/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperion@Pissed" parent="Pissed">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed00.ogg" FacialAnim="Raynor_Pissed00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed01.ogg" FacialAnim="Raynor_Pissed01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed02.ogg" FacialAnim="Raynor_Pissed02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed03.ogg" FacialAnim="Raynor_Pissed03"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed04.ogg" FacialAnim="Raynor_Pissed04"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed05.ogg" FacialAnim="Raynor_Pissed05"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed06.ogg" FacialAnim="Raynor_Pissed06"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed07.ogg" FacialAnim="Raynor_Pissed07"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed08.ogg" FacialAnim="Raynor_Pissed08"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed09.ogg" FacialAnim="Raynor_Pissed09"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed10.ogg" FacialAnim="Raynor_Pissed10"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed11.ogg" FacialAnim="Raynor_Pissed11"/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperion@Ready" parent="Ready">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Ready00.ogg" FacialAnim="Raynor_Ready00"/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperion@What" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What00.ogg" FacialAnim="Raynor_What00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What01.ogg" FacialAnim="Raynor_What01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What02.ogg" FacialAnim="Raynor_What02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What03.ogg" FacialAnim="Raynor_What03"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What04.ogg" FacialAnim="Raynor_What04"/>
+    </CSound>
+    <CSound id="RaynorCommanderHyperion@Yes" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes00.ogg" FacialAnim="Raynor_Yes00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes01.ogg" FacialAnim="Raynor_Yes01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes02.ogg" FacialAnim="Raynor_Yes02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes03.ogg" FacialAnim="Raynor_Yes03"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes04.ogg" FacialAnim="Raynor_Yes04"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes05.ogg" FacialAnim="Raynor_Yes05"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes06.ogg" FacialAnim="Raynor_Yes06"/>
     </CSound>
     <CSound id="RaynorCommanderLiftStarport@Land" parent="Ambience_Object">
         <EditorCategories value="Race:Terran"/>

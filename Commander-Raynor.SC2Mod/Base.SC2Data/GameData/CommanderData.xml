@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CCommander id="DATARaynor">
+        <UnitArray Unit="RaynorCommanderBanshee"/>
+        <UnitArray Unit="RaynorCommanderFirebat"/>
+        <UnitArray Unit="RaynorCommanderMarauder"/>
+        <UnitArray Unit="RaynorCommanderMarine"/>
+        <UnitArray Unit="RaynorCommanderMedic"/>
+        <UnitArray Unit="RaynorCommanderSCV"/>
+        <UnitArray Unit="RaynorCommanderSiegeTank"/>
+        <UnitArray Unit="RaynorCommanderSiegeTank@Alternate"/>
+        <UnitArray Unit="RaynorCommanderSpiderMine"/>
+        <UnitArray Unit="RaynorCommanderSpiderMine@Burrowed"/>
+        <UnitArray Unit="RaynorCommanderVulture"/>
+    </CCommander>
+</Catalog>

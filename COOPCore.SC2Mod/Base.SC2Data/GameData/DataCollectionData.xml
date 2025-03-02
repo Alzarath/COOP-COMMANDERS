@@ -8,6 +8,14 @@
         <EditorIconSource value="Abil"/>
         <Pattern value="CommandersAbilities_Beam"/>
     </CDataCollectionAbil>
+    <CDataCollectionAbil id="CommanderAbilityMorph">
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_Morph"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit id="CommanderUnitMorphing">
+        <EditorIconSource value="Actor"/>
+        <Pattern value="CommanderUnits_Morphing"/>
+    </CDataCollectionUnit>
     <CDataCollectionUpgrade id="CommanderUpgradeLvLStats">
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
         <Pattern value="CommandersUpgrade_LevelStats"/>

@@ -1,4 +1,4 @@
 ﻿Library/Name/B6F694BB=DEBUG Commander
 Library/Name/DD453873=COMMANDER - Raynor
 Trigger/Name/lib_B6F694BB_B7B97D5B=Enabled Editor Cheat
-Trigger/Name/lib_DD453873_F3D6A2EB=Untitled Trigger 001
+Trigger/Name/lib_DD453873_F3D6A2EB=Spawn All Units Commander

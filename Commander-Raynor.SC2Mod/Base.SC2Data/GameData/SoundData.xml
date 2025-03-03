@@ -786,14 +786,17 @@
     </CSound>
     <CSound id="RaynorCommanderMarine@DeathFXEat" parent="Death">
         <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXEat0.wav"/>
+        <EditorCategories value="Race:Raynor"/>
     </CSound>
     <CSound id="RaynorCommanderMarine@DeathFXEviscerate" parent="Death">
         <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXEviscerate0.wav"/>
         <Pitch value="0.000000,2.000000"/>
         <Volume value="-6.000000,-4.000000"/>
+        <EditorCategories value="Race:Raynor"/>
     </CSound>
     <CSound id="RaynorCommanderMarine@DeathFXFire" parent="Death">
         <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXFire0.wav"/>
+        <EditorCategories value="Race:Raynor"/>
     </CSound>
     <CSound id="RaynorCommanderMarine@Help" parent="Alert">
         <EditorCategories value="Race:Terran"/>
@@ -943,6 +946,27 @@
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCV\SCV_Yes17.ogg" FacialAnim="SCV_Yes17"/>
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCV\SCV_Yes18.ogg" FacialAnim="SCV_Yes18"/>
         <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderYamatoGun@Charge" parent="Spell">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_YamatoAttackCharge0.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderYamatoGun@Impact" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium9.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderYamatoGun@Launch" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_YamatoAttackLaunch0.wav" FacialGroup=""/>
     </CSound>
     <CSound id="Raynor_ConstructionEnd" parent="Build">
         <EditorCategories value="Race:Terran"/>

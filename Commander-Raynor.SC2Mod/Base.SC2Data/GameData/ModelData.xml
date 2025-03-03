@@ -370,6 +370,26 @@
         <Model value="Assets\Units\Terran\TankEx1\TankEx1.m3"/>
         <UnitGlossaryCamera value="Star2CameraMid10"/>
     </CModel>
+    <CModel id="RaynorCommanderYamatoGun@Cursor" parent="UI">
+        <Model value="Assets\UI\Cursors\TerranAOECursor\TerranAOECursor.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ScaleMax value="2.200000,2.200000,2.200000"/>
+        <ScaleMin value="2.200000,2.200000,2.200000"/>
+        <SelectionRadius value="2.500000"/>
+        <ShadowRadius value="2.500000"/>
+    </CModel>
+    <CModel id="RaynorCommanderYamatoGun@Impact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\YamatoMissileImpact\YamatoMissileImpact.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderYamatoGun@Missile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\YamatoMissile\YamatoMissile.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderYamatoGun@OneShot" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\YamatoMissileCharge\YamatoMissileCharge.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="SiegeTankAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
         <LowQualityModel value="SiegeTankAttackImpactLow"/>

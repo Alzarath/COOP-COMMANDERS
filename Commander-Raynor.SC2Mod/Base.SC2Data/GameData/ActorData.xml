@@ -686,6 +686,45 @@
             <Image value="Assets\Textures\Wireframe-Terran-SCV.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorAction id="RaynorCommanderYamatoGun@Attack" parent="GenericAttack" effectImpact="RaynorCommanderYamatoGun@Damage" effectLaunch="RaynorCommanderYamatoGun@LM">
+        <EditorCategories value=""/>
+        <LaunchAttachQuery Methods="Weapon 9"/>
+        <LaunchAssets Sound="RaynorCommanderYamatoGun@Launch"/>
+        <Missile value="RaynorCommanderYamatoGun@Missile"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpForwardLaunchGuide SOp2DRotation"/>
+        <ImpactMap index="None" Model="RaynorCommanderYamatoGun@Impact" Sound="RaynorCommanderYamatoGun@Impact"/>
+        <ImpactModel value="RaynorCommanderYamatoGun@GenericImpact"/>
+        <ImpactPhysics Name="YamatoImpact" MatchKeys="Basic" Physics="BattlecruiserYamatoAttackForce"/>
+        <ImpactPhysics Name="YamatoImpact" MatchKeys="BasicAir" Physics="BattlecruiserYamatoAttackForce"/>
+        <ShieldFlashType value="Full"/>
+    </CActorAction>
+    <CActorSound id="RaynorCommanderYamatoGun@Charge" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.RaynorCommanderYamatoGun.SourceCastStart" Send="Create"/>
+        <On Terms="Abil.RaynorCommanderYamatoGun.SourceCastStop" Send="Destroy"/>
+    </CActorSound>
+    <CActorSplat id="RaynorCommanderYamatoGun@Cursor" parent="TerranCursorSplat" abil="RaynorCommanderYamatoGun">
+        <EditorCategories value=""/>
+        <Model value="RaynorCommanderYamatoGun@Cursor"/>
+    </CActorSplat>
+    <CActorModel id="RaynorCommanderYamatoGun@GenericImpact" parent="GenericAttackImpactModel">
+        <EditorCategories value=""/>
+    </CActorModel>
+    <CActorMissile id="RaynorCommanderYamatoGun@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderYamatoGun@Missile">
+        <EditorCategories value=""/>
+    </CActorMissile>
+    <CActorModel id="RaynorCommanderYamatoGun@OneShot" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.RaynorCommanderYamatoGun.Start" Send="Create"/>
+        <On Terms="Effect.RaynorCommanderYamatoGun.Stop" Send="Destroy"/>
+    </CActorModel>
+    <CActorRange id="RaynorCommanderYamatoGun@Range" parent="RangeAbil" abil="RaynorCommanderYamatoGun">
+        <EditorCategories value=""/>
+        <On index="1" Terms="Abil.TargetOn" Send="Create"/>
+        <On index="2" Terms="Abil.TargetOff" Send="Destroy"/>
+        <On index="3" Terms="Abil.ButtonHoverOn" Send="Create"/>
+        <On index="4" Terms="Abil.ButtonHoverOff" Send="Destroy"/>
+    </CActorRange>
     <CActorProgress id="RaynorConstruction">
         <On Terms="Abil.RaynorCommanderBuildSCV.BuiltStart" Send="Create"/>
         <On Terms="Abil.BarracksAddOns.BuiltStart" Send="Create"/>

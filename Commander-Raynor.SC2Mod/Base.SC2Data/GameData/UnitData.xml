@@ -76,6 +76,7 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="move"/>
         <AbilArray Link="RaynorCommanderHyperJump"/>
+        <AbilArray Link="RaynorCommanderYamatoGun"/>
         <WeaponArray Link="RaynorCommanderATSLaserBattery"/>
         <WeaponArray Link="RaynorCommanderATALaserBatteryAir"/>
         <CardLayouts>
@@ -85,6 +86,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="RaynorCommanderHyperJump" Type="AbilCmd" AbilCmd="RaynorCommanderHyperJump,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="RaynorCommanderYamatoGun" Type="AbilCmd" AbilCmd="RaynorCommanderYamatoGun,Execute" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
@@ -1395,5 +1397,10 @@
         <SelectAlias value="RaynorCommanderSiegeTank"/>
         <SubgroupAlias value="RaynorCommanderSiegeTank"/>
         <TechAliasArray value="Alias_SiegeTankRaynor"/>
+    </CUnit>
+    <CUnit id="RaynorCommanderYamatoGun@Missile" parent="MISSILE">
+        <Race value="Terr"/>
+        <Mover value="RaynorCommanderYamatoGun@Mover"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
 </Catalog>

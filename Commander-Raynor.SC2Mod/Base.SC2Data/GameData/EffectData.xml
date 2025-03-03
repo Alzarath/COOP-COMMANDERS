@@ -217,6 +217,29 @@
         <AttributeBonus index="Biological" value="10"/>
         <Amount value="15"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="RaynorCommanderYamatoGun">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="Channeled" value="1"/>
+        <ExpireEffect value="RaynorCommanderYamatoGun@LM"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="RaynorCommanderYamatoGun@Damage">
+        <EditorCategories value="Race:Raynor"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="600"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="1.5" Fraction="1"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RaynorCommanderYamatoGun@LM">
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderYamatoGun@Damage"/>
+        <AmmoUnit value="RaynorCommanderYamatoGun@Missile"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="WeaponRaynorSCV" parent="DU_WEAP">
         <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>

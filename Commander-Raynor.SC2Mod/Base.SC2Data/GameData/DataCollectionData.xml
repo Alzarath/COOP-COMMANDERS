@@ -59,6 +59,7 @@
         <DataRecord Entry="Sound,RaynorCommanderHyperion@Ready"/>
         <DataRecord Entry="Sound,RaynorCommanderHyperion@DeathVoice"/>
         <DataRecord Entry="Sound,RaynorCommanderHyperion@Help"/>
+        <DataRecord Entry="Light,RaynorCommanderHyperion@Portrait"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderPlaceSpiderMine">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
@@ -151,6 +152,7 @@
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTankMode@Siege"/>
         <DataRecord Entry="Abil,RaynorCommanderTankMode@Unsiege"/>
+        <EditorIconSource value="Button"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderWeaponSiegeTank">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Other"/>
@@ -533,6 +535,7 @@
         <DataRecord Entry="Actor,RaynorCommanderStimpack@Finish"/>
         <Button value="RaynorCommanderAbility"/>
         <TechInfoAbil value="RaynorCommanderAbility"/>
+        <EditorIconSource value="Button"/>
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderStimpackMara" parent="CommanderAbilityAB">
         <Name value="DataCollection/Name/RaynorCommanderStimpackMara"/>
@@ -549,6 +552,7 @@
         <DataRecord Entry="Sound,RaynorCommanderStimpackMara@Cast"/>
         <DataRecord Entry="Requirement,RaynorCommanderStimpack"/>
         <DataRecord Entry="Actor,RaynorCommanderStimpackMara@Finish"/>
+        <EditorIconSource value="Button"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderTechLab" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderTechLab"/>
@@ -626,8 +630,32 @@
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTrainBarrack">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
-        <EditorIconSource value="Abil"/>
+        <EditorIconSource value="Actor"/>
         <DataRecord Entry="Abil,RaynorCommanderTrainBarrack"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderYamatoGun">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Projectile"/>
+        <DataRecord Entry="Abil,RaynorCommanderYamatoGun"/>
+        <DataRecord Entry="Actor,RaynorCommanderYamatoGun@Missile"/>
+        <DataRecord Entry="Button,RaynorCommanderYamatoGun"/>
+        <DataRecord Entry="Effect,RaynorCommanderYamatoGun"/>
+        <DataRecord Entry="Effect,RaynorCommanderYamatoGun@Damage"/>
+        <DataRecord Entry="Effect,RaynorCommanderYamatoGun@LM"/>
+        <DataRecord Entry="Model,RaynorCommanderYamatoGun@Missile"/>
+        <DataRecord Entry="Unit,RaynorCommanderYamatoGun@Missile"/>
+        <DataRecord Entry="Model,RaynorCommanderYamatoGun@Impact"/>
+        <DataRecord Entry="Model,RaynorCommanderYamatoGun@OneShot"/>
+        <DataRecord Entry="Model,RaynorCommanderYamatoGun@Cursor"/>
+        <DataRecord Entry="Sound,RaynorCommanderYamatoGun@Charge"/>
+        <DataRecord Entry="Sound,RaynorCommanderYamatoGun@Impact"/>
+        <DataRecord Entry="Sound,RaynorCommanderYamatoGun@Launch"/>
+        <DataRecord Entry="Actor,RaynorCommanderYamatoGun@GenericImpact"/>
+        <DataRecord Entry="Actor,RaynorCommanderYamatoGun@Cursor"/>
+        <DataRecord Entry="Actor,RaynorCommanderYamatoGun@Attack"/>
+        <DataRecord Entry="Actor,RaynorCommanderYamatoGun@OneShot"/>
+        <DataRecord Entry="Actor,RaynorCommanderYamatoGun@Charge"/>
+        <DataRecord Entry="Mover,RaynorCommanderYamatoGun@Mover"/>
+        <DataRecord Entry="Actor,RaynorCommanderYamatoGun@Range"/>
     </CDataCollectionAbil>
     <CDataCollection id="TerranBuildingFlameBig">
         <EditorCategories value="DataGroup:Doodad,Race:Terran,DataFamily:Coop,ObjectType:Environment"/>

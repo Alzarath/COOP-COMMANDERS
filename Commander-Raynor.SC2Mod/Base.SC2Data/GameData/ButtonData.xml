@@ -218,4 +218,8 @@
         <AlertIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
         <EditorCategories value="Race:Raynor"/>
     </CButton>
+    <CButton id="RaynorCommanderYamatoGun">
+        <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
 </Catalog>

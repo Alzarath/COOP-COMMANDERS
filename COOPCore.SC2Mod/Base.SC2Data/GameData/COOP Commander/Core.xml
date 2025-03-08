@@ -63,6 +63,7 @@
         <Fields Reference="Unit,^ParamId^,Speed"/>
         <Fields Reference="Unit,^ParamId^,Acceleration"/>
         <Fields Reference="Unit,^ParamId^,Deceleration"/>
+        <Fields Reference="Requirement,^ParamId^,NodeArray"/>
     </CDataCollectionPattern>
     <CDataCollectionPattern id="CommanderWeapon_Instant">
         <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>

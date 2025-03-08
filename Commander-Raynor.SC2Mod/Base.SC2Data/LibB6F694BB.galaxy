@@ -10,6 +10,79 @@ void libB6F694BB_InitLibraries () {
     libNtve_InitVariables();
 }
 
+// Variable Initialization
+bool libB6F694BB_InitVariables_completed = false;
+
+void libB6F694BB_InitVariables () {
+    if (libB6F694BB_InitVariables_completed) {
+        return;
+    }
+
+    libB6F694BB_InitVariables_completed = true;
+
+    libB6F694BB_gv_cheatError = "CheatError";
+    libB6F694BB_gv_cheatErrorText = "CheatError|Text";
+}
+
+// Functions
+void libB6F694BB_gf_CheatUnit (string lp_command) {
+    // Variable Declarations
+    int lv_player;
+    unit lv_unit;
+    unitgroup lv_unitGroup;
+
+    // Automatic Variable Declarations
+    unitgroup auto19C1D1CD_g;
+    int auto19C1D1CD_u;
+    unit auto19C1D1CD_var;
+
+    // Variable Initialization
+    lv_player = EventPlayer();
+    lv_unit = UnitGroupUnit(UnitGroupSelected(lv_player), 1);
+    lv_unitGroup = UnitGroupSelected(lv_player);
+
+    // Implementation
+    if ((StringWord(lp_command, 1) == "id")) {
+        if ((lv_unit == null)) {
+            DataTableSetBool(false, libB6F694BB_gv_cheatError, true);
+            DataTableSetText(false, libB6F694BB_gv_cheatErrorText, StringExternal("Param/Value/lib_B6F694BB_3164CB64"));
+            return ;
+        }
+
+        TextExpressionSetToken("Param/Expression/lib_B6F694BB_C3199FED", "Object", StringExternal("Param/Value/lib_B6F694BB_F3E6B9B7"));
+        TextExpressionSetToken("Param/Expression/lib_B6F694BB_C3199FED", "ID", StringToText((UnitGetType(lv_unit))));
+        UIDisplayMessage(PlayerGroupSingle(lv_player), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_B6F694BB_C3199FED"));
+    }
+    else if ((StringWord(lp_command, 1) == "life")) {
+        if ((lv_unit == null)) {
+            DataTableSetBool(false, libB6F694BB_gv_cheatError, true);
+            DataTableSetText(false, libB6F694BB_gv_cheatErrorText, StringExternal("Param/Value/lib_B6F694BB_D50C6F18"));
+        }
+        else if ((StringWord(lp_command, 2) == "")) {
+            DataTableSetBool(false, libB6F694BB_gv_cheatError, true);
+            DataTableSetText(false, libB6F694BB_gv_cheatErrorText, StringExternal("Param/Value/lib_B6F694BB_3C6DA2ED"));
+        }
+        else if (true) {
+            auto19C1D1CD_g = lv_unitGroup;
+            auto19C1D1CD_u = UnitGroupCount(auto19C1D1CD_g, c_unitCountAll);
+            for (;; auto19C1D1CD_u -= 1) {
+                auto19C1D1CD_var = UnitGroupUnitFromEnd(auto19C1D1CD_g, auto19C1D1CD_u);
+                if (auto19C1D1CD_var == null) { break; }
+                UnitSetPropertyFixed(auto19C1D1CD_var, c_unitPropLife, StringToFixed(StringWord(EventChatMessage(false), 2)));
+            }
+        }
+    }
+    else if (true) {
+        DataTableSetBool(false, libB6F694BB_gv_cheatError, true);
+    }
+}
+
+bool libB6F694BB_gf_CheatIsError () {
+    // Automatic Variable Declarations
+    // Implementation
+    return DataTableGetBool(false, libB6F694BB_gv_cheatError);
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
 // Trigger: Enabled Editor Cheat
@@ -41,8 +114,58 @@ void libB6F694BB_gt_EnabledEditorCheat_Init () {
     TriggerAddEventTimeElapsed(libB6F694BB_gt_EnabledEditorCheat, 0.5, c_timeGame);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Cheat - Register
+//--------------------------------------------------------------------------------------------------
+bool libB6F694BB_gt_CheatRegister_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_player;
+    string lv_command;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_player = EventPlayer();
+    lv_command = StringSub(EventChatMessage(false), 2, StringLength(EventChatMessage(false)));
+
+    // Conditions
+    if (testConds) {
+        if (!((StringSub(EventChatMessage(false), 1, 1) == libB6F694BB_gv_cheatprefix))) {
+            return false;
+        }
+
+        if (!(((PlayerGroupCount(PlayerGroupActive()) == 1) || (GameIsOnline() == false)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libB6F694BB_gf_CheatUnit(lv_command);
+    if (libB6F694BB_gf_CheatIsError()) {
+        if ((DataTableValueExists(false, libB6F694BB_gv_cheatErrorText) == true)) {
+            TextExpressionSetToken("Param/Expression/lib_B6F694BB_993BA39B", "A", DataTableGetText(false, libB6F694BB_gv_cheatErrorText));
+            UIDisplayMessage(PlayerGroupSingle(lv_player), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_B6F694BB_993BA39B"));
+        }
+        else {
+            UIDisplayMessage(PlayerGroupSingle(lv_player), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_B6F694BB_464A9C05"));
+        }
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libB6F694BB_gt_CheatRegister_Init () {
+    libB6F694BB_gt_CheatRegister = TriggerCreate("libB6F694BB_gt_CheatRegister_Func");
+    TriggerAddEventChatMessage(libB6F694BB_gt_CheatRegister, c_playerAny, "", false);
+}
+
 void libB6F694BB_InitTriggers () {
     libB6F694BB_gt_EnabledEditorCheat_Init();
+    libB6F694BB_gt_CheatRegister_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -58,6 +181,7 @@ void libB6F694BB_InitLib () {
     libB6F694BB_InitLib_completed = true;
 
     libB6F694BB_InitLibraries();
+    libB6F694BB_InitVariables();
     libB6F694BB_InitTriggers();
 }
 

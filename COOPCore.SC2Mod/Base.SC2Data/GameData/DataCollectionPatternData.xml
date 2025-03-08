@@ -75,8 +75,8 @@
         <Fields Reference="Weapon,^ParamId^,Icon"/>
         <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
     </CDataCollectionPattern>
-    <CDataCollectionPattern id="CommandersAbilities_Beam"/>
-    <CDataCollectionPattern id="CommandersUpgrade_LevelStats">
+    <CDataCollectionPattern id="CommanderAbilities_Beam"/>
+    <CDataCollectionPattern id="CommanderUpgrade_LevelStats">
         <Fields index="0" Reference="Upgrade,^ParamId^@Level1,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL1"/>
         <Fields Reference="Upgrade,^ParamId^@Level2,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL2"/>
         <Fields Reference="Upgrade,^ParamId^@Level3,EffectArrayTemplate" NameOverride="DataCollectionPattern/CommanderUpgradeLvlStats/LvL3"/>

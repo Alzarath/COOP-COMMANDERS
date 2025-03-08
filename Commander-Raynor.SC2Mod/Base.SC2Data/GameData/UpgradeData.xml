@@ -4,14 +4,14 @@
         <WebPriority value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-raynor-incineratorgauntlets.dds"/>
         <EffectArrayTemplate Operation="Multiply" Reference="Effect,^ParamId^,AreaArray[0].Radius" Value="1.4"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderInfantryWeapon">
         <InfoTooltipPriority value="61"/>
         <WebPriority value="0"/>
         <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
         <EffectArrayTemplate Reference="Effect,^ParamId^,Amount" Value="1"/>
-        <EditorCategories value="Race:Terran,UpgradeType:AttackBonus"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:AttackBonus"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderInfantryWeapon@Level2" parent="RaynorCommanderInfantryWeapon">
         <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level2"/>
@@ -28,7 +28,7 @@
         <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="2"/>
         <EffectArrayTemplate Reference="Unit,^ParamId^,LifeMax" Value="100"/>
         <EffectArrayTemplate Reference="Unit,^ParamId^,LifeStart" Value="100"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
         <DataCollection value="RaynorCommanderJuggernautPlating"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderPunisherGrenades@PunisherGrenades">
@@ -37,27 +37,12 @@
         <Race value="Terr"/>
         <ScoreAmount value="100"/>
         <ScoreResult value="BuildOrder"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
         <AffectedUnitArray value="RaynorCommanderMarauder"/>
-    </CUpgrade>
-    <CUpgrade id="TerranInfantryWeaponsLevel1">
-        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
-        <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
-        <EffectArrayTemplate Reference="Effect,^ParamId^,Amount" Value="1"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderInfantryWeapon@Level1" parent="RaynorCommanderInfantryWeapon">
         <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
         <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
-    </CUpgrade>
-    <CUpgrade id="TerranInfantryWeaponsLevel2">
-        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
-        <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
-        <EffectArrayTemplate Reference="Effect,^ParamId^,Amount" Value="1"/>
-    </CUpgrade>
-    <CUpgrade id="TerranInfantryWeaponsLevel3">
-        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
-        <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
-        <EffectArrayTemplate Reference="Effect,^ParamId^,Amount" Value="1"/>
     </CUpgrade>
 </Catalog>

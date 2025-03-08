@@ -6,7 +6,7 @@
     <CDataCollectionAbil id="CommanderAbilityBeam">
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
         <EditorIconSource value="Abil"/>
-        <Pattern value="CommandersAbilities_Beam"/>
+        <Pattern value="CommanderAbilities_Beam"/>
     </CDataCollectionAbil>
     <CDataCollectionAbil id="CommanderAbilityMorph">
         <EditorIconSource value="Abil"/>
@@ -18,6 +18,6 @@
     </CDataCollectionUnit>
     <CDataCollectionUpgrade id="CommanderUpgradeLvLStats">
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
-        <Pattern value="CommandersUpgrade_LevelStats"/>
+        <Pattern value="CommanderUpgrade_LevelStats"/>
     </CDataCollectionUpgrade>
 </Catalog>

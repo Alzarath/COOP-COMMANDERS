@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CRequirementCountUnit id="CountUnitRaynorCommanderTechLabBarrackCompleteOnlyAtUnit">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
-        <Count Link="RaynorCommanderTechLabBarrack" State="CompleteOnlyAtUnit"/>
+    <CRequirementAnd id="AndNot404259234CountUnitRaynorCommanderMarineQueuedOrBetterGTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5">
+        <OperandArray value="Not404259234CountUnitRaynorCommanderMarineQueuedOrBetter"/>
+        <OperandArray value="GTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitAlias_BarracksCompleteOnly96167438TechTreeCheat">
+        <Count Link="Alias_Barracks" State="CompleteOnly"/>
     </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitRaynorCommanderTechLabFactoryCompleteOnlyAtUnit">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
-        <Count Link="RaynorCommanderTechLabFactory" State="CompleteOnlyAtUnit"/>
+    <CRequirementCountUnit id="CountUnitAlias_FactoryCompleteOnly4195804750TechTreeCheat">
+        <Count Link="Alias_Factory" State="CompleteOnly"/>
     </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitRaynorCommanderTechLabStarportCompleteOnlyAtUnit">
+    <CRequirementCountUnit id="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
-        <Count Link="RaynorCommanderTechLabStarport" State="CompleteOnlyAtUnit"/>
+        <Count Link="Alias_RaynorTechLab" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_SupplyDepotCompleteOnly789532539TechTreeCheat">
+        <Count Link="Alias_SupplyDepot" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitRaynorCommanderMarauderCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RaynorCommanderMarauder" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitRaynorCommanderMarineQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RaynorCommanderMarine" State="QueuedOrBetter"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -34,17 +44,14 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderStimpack@AB" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementGTE id="GTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5">
+        <OperandArray index="0" value="CountUnitRaynorCommanderMarauderCompleteOnly"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementGTE>
+    <CRequirementNot id="Not404259234CountUnitRaynorCommanderMarineQueuedOrBetter">
+        <OperandArray index="0" value="CountUnitRaynorCommanderMarineQueuedOrBetter"/>
+    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
         <OperandArray index="0" value="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly"/>
     </CRequirementNot>
-    <CRequirementNot id="NotOrCountUnitRaynorCommanderTechLabBarrackCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabFactoryCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabStarportCompleteOnlyAtUnit">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
-        <OperandArray index="0" value="OrCountUnitRaynorCommanderTechLabBarrackCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabFactoryCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabStarportCompleteOnlyAtUnit"/>
-    </CRequirementNot>
-    <CRequirementOr id="OrCountUnitRaynorCommanderTechLabBarrackCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabFactoryCompleteOnlyAtUnitCountUnitRaynorCommanderTechLabStarportCompleteOnlyAtUnit">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
-        <OperandArray value="CountUnitRaynorCommanderTechLabBarrackCompleteOnlyAtUnit"/>
-        <OperandArray value="CountUnitRaynorCommanderTechLabFactoryCompleteOnlyAtUnit"/>
-        <OperandArray value="CountUnitRaynorCommanderTechLabStarportCompleteOnlyAtUnit"/>
-    </CRequirementOr>
 </Catalog>

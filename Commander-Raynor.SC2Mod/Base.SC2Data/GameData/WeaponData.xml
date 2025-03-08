@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="RaynorCommanderPDDLaser">
+        <EditorCategories value="Race:Raynor"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="RaynorCommanderPDDLaser@Set"/>
+        <TargetFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Marker>
+            <MatchFlags index="Link" value="1"/>
+        </Marker>
+        <Period value="0"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderATSLaserBattery">
         <EditorCategories value="Race:Raynor"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
@@ -55,7 +73,7 @@
         </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderGaussRiffleC14">
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="0.8608"/>
@@ -63,7 +81,7 @@
         <Backswing value="0.75"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPerditionThrower">
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <Range value="2"/>
         <Period value="1.2"/>
         <DamagePoint value="1.2"/>
@@ -71,7 +89,7 @@
         <TargetFilters value="Ground,Visible;Self,Missile,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPunisherGrenades">
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="6"/>
@@ -90,7 +108,7 @@
         <Backswing value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="WeaponRaynorSCV">
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>

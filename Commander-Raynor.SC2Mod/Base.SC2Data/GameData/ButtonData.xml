@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderAbilPDD">
+        <Icon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>
+        <AlertIcon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+        <DefaultButtonLayout Row="2" Column="2"/>
+    </CButton>
     <CButton id="RaynorCommanderBuildAddon@Barracks">
         <Icon value="Assets\Textures\btn-building-terran-techlab.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
@@ -113,6 +119,11 @@
         <AlertIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
         <EditorCategories value="Race:Raynor"/>
     </CButton>
+    <CButton id="RaynorCommanderPDD">
+        <Icon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>
+        <AlertIcon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
     <CButton id="RaynorCommanderStimpack">
         <Icon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-stimpack-color.dds"/>
@@ -213,7 +224,7 @@
         <AlertIcon value="Assets\Textures\btn-building-terran-reactor.dds"/>
         <EditorCategories value="Race:Raynor"/>
     </CButton>
-    <CButton id="RaynorCommanderTrainFactory">
+    <CButton id="RaynorCommanderVulture">
         <Icon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-vulture.dds"/>
         <EditorCategories value="Race:Raynor"/>
@@ -221,5 +232,16 @@
     <CButton id="RaynorCommanderYamatoGun">
         <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
         <EditorCategories value="Race:Raynor"/>
+    </CButton>
+    <CButton id="RaynorCommanderTrainCC@SCV">
+        <Icon value="Assets\Textures\btn-unit-terran-scv.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-scv.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderSiegeTank">
+        <Icon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
 </Catalog>

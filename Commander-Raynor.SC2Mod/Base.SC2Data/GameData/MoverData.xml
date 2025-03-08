@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CMoverMissile id="RaynorCommanderAbilPDD@Mover">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <Speed value="12"/>
+            <MaxSpeed value="12"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
+    </CMoverMissile>
     <CMoverMissile id="RaynorCommanderPunisherGrenades@Weapon">
         <MotionPhases>
             <Driver value="Guidance"/>

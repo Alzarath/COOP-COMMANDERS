@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CTurret id="RaynorCommanderWeaponSiegeTank">
-        <Idle value="ResetIfMoving"/>
+    <CTurret id="RaynorCommanderPDDLaser@Turret">
+        <Idle value="Hold"/>
         <YawArc value="360"/>
-        <YawRate value="720"/>
+        <YawRate value="2857.5"/>
+        <Fidget DelayMax="30" DelayMin="10"/>
+    </CTurret>
+    <CTurret id="RaynorCommanderWeaponSiegeTank@Turret">
+        <Idle value="Hold"/>
+        <YawArc value="360"/>
+        <YawRate value="360"/>
         <Fidget DelayMax="30" DelayMin="10"/>
     </CTurret>
     <CTurret id="RaynorCommanderWeaponTank">
-        <Idle value="Hold"/>
-        <YawStart value="-180"/>
+        <Idle value="ResetIfMoving"/>
         <YawArc value="360"/>
-        <YawRate value="360"/>
+        <YawRate value="720"/>
         <Fidget DelayMax="30" DelayMin="10"/>
     </CTurret>
 </Catalog>

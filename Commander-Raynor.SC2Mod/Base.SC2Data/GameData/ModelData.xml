@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="RaynorCommanderCommandCenter" parent="CommandCenterBase">
+        <Model value="Assets\Buildings\Terran\CommandCenterEx1\CommandCenterEx1.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderCommandCenter@Death" parent="CommandCenterDeathBase" low="RaynorCommanderCommandCenter@DeathLow">
+        <Model value="Assets\Buildings\Terran\CommandCenterDeathEx1\CommandCenterDeathEx1.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.070000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.230000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.510000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.630000"/>
+        </Events>
+    </CModel>
+    <CModel id="RaynorCommanderCommandCenter@DeathLow" parent="BuildingDeath" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranLargeBuildingDeath\TerranLargeBuildingDeath_Low.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Lighting value="TerranLargeBuildingDeathLow"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="RaynorCommanderCommandCenter@FlyDeath" parent="CommandCenterFlyDeathBase">
+        <Model value="Assets\Buildings\Terran\CommandCenterFlyDeathEx1\CommandCenterFlyDeathEx1.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.070000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.230000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.510000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.630000"/>
+        </Events>
+    </CModel>
+    <CModel id="RaynorCommanderCommandCenter@Placement" parent="CommandCenterPlacementBase" low="RaynorCommanderCommandCenter">
+        <Model value="Assets\Buildings\Terran\CommandCenterPlacement\CommandCenterPlacement.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderCommandCenter@Portrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderCommandCenter@Splat" parent="Splat">
+        <Model value="Assets\Splats\splat_commandcenter\splat_commandcenter.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="PointDefenseBeamImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\PointDefenseBeamImpact\PointDefenseBeamImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PointDefenseDroneAttackBeam2" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\TargetingDroneBeam\TargetingDroneBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderAbilPDD@Impact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\PointDefenseBeamImpact\PointDefenseBeamImpact.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderAbilPDD@Missile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\AutoTurretPodMissile\AutoTurretPodMissile.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderPDD@Portrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderPDD" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\PointDefenseDrone\PointDefenseDrone.m3"/>
+        <PlanetPanelCamera value="Star2CamerMid05"/>
+        <Radius value="0.600000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="0.857100"/>
+        <ShadowRadius value="0.857100"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModel id="RaynorCommanderPDD@Death" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\PointDefenseDroneDeathEx1\PointDefenseDroneDeathEx1.m3"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+    </CModel>
+    <CModel id="RaynorCommanderPDD@Placement" parent="Placement" Race="Terran">
+        <Model value="Assets\Units\Terran\PointDefenseDronePlacement\PointDefenseDronePlacement.m3"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
     <CModel id="RaynorCommanderATALaserBatteryAir@Impact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\BattleCruiserMissile\BattleCruiserMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
@@ -221,6 +359,8 @@
     <CModel id="RaynorCommanderMedic" parent="Unit">
         <Model value="Assets\Units\Terran\Medic\Medic.m3"/>
         <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="RaynorCommanderMedic@Death" parent="UnitDeath">
         <Model value="Assets\Units\Terran\MedicDeath\MedicDeath.m3"/>

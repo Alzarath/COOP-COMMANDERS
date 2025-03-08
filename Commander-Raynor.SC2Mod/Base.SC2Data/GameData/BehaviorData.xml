@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="CCTransportDummy2">
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderAbilPDD@TimedLife" parent="TimedLife">
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="180"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderPDDLaser">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderATALaserBatteryAir@AB">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <InfoFlags index="Hidden" value="1"/>
@@ -52,36 +65,36 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderTechLabBarrack">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderTechLabFactory">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderStimpack">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-stimpack.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <Duration value="15"/>
         <Modification MoveSpeedMultiplier="1.5" AttackSpeedMultiplier="1.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderStimpackMara">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-stimpack.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <Duration value="15"/>
         <Modification MoveSpeedMultiplier="1.5" AttackSpeedMultiplier="1.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderPunisherGrenades">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-slow.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="RaynorCommanderPunisherGrenades@NoPurificationNova"/>
         <Duration value="1.5"/>
         <Modification MoveSpeedMultiplier="0.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderTechLabStarport">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
     </CBehaviorBuff>
 </Catalog>

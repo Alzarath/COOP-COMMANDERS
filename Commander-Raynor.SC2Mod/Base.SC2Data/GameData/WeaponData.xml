@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="RaynorCommanderLanzerTorpedoes">
+        <EditorCategories value="Race:Raynor"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="RaynorCommanderLanzerTorpedoes@Damage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <Period value="2"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPDDLaser">
         <EditorCategories value="Race:Raynor"/>
         <Options index="Hidden" value="1"/>
@@ -71,6 +81,7 @@
             <SortArray value="TSDistance"/>
             <SortArray value="TSEnergy"/>
         </AcquireTargetSorts>
+        <AcquireFilters value="Ground,Visible;Structure,Missile,Dead,Hidden,Hallucination,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderGaussRiffleC14">
         <EditorCategories value="Race:Raynor"/>

@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilMorph id="RaynorCommanderVikingMode@2">
+        <AbilSetId value="RaynorCommanderVikingMode@2"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderVikingMode@2" Requirements="RaynorCommanderVikingMode@2@Requirement">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="RaynorCommanderViking" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2.333"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.6"/>
+                <DurationArray index="Duration" value="0.85"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="2.333"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="RaynorCommanderVikingMode@1">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointAttack_Void\WayPointAttack_Void.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <AbilSetId value="RaynorCommanderVikingMode@1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderVikingMode@1">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <InfoArray Unit="RaynorCommanderViking@Alternate" CollideRange="3.75" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2.34"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.533"/>
+                <DurationArray index="Duration" value="1.2"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="2.34"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilTrain id="RaynorCommanderTrainCC">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <InfoArray index="Train1" Time="17">
@@ -424,7 +474,7 @@
         </InfoArray>
         <InfoArray index="Train5" Time="42">
             <Button DefaultButtonFace="VikingFighter" State="Restricted"/>
-            <Unit value="VikingFighter"/>
+            <Unit value="RaynorCommanderViking"/>
         </InfoArray>
         <InfoArray index="Train7" Time="60">
             <Button DefaultButtonFace="Liberator" State="Restricted"/>

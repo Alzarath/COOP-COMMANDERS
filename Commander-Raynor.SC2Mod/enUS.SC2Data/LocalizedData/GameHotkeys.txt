@@ -39,5 +39,7 @@ Button/Hotkey/RaynorCommanderTechLabMorphFactory=X
 Button/Hotkey/RaynorCommanderTechLabMorphStarport=X
 Button/Hotkey/RaynorCommanderTerranBuild=B
 Button/Hotkey/RaynorCommanderTrainCC@SCV=S
+Button/Hotkey/RaynorCommanderVikingMode@1=D
+Button/Hotkey/RaynorCommanderVikingMode@2=E
 Button/Hotkey/RaynorCommanderVulture=Q
 Button/Hotkey/RaynorCommanderYamatoGun=Q

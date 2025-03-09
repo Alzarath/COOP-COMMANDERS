@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderVikingMode@2">
+        <Icon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+        <HotkeySet value="VikingModes"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderVikingMode@1">
+        <Icon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+        <HotkeySet value="VikingModes"/>
+        <Universal value="1"/>
+    </CButton>
     <CButton id="RaynorCommanderAbilPDD">
         <Icon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>
         <AlertIcon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>

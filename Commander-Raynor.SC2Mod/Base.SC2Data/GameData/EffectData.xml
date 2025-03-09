@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreatePersistent id="RaynorCommanderLanzerTorpedoes">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="RaynorCommanderLanzerTorpedoes@LM"/>
+        <PeriodicEffectArray value="RaynorCommanderLanzerTorpedoes@LM"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.21"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="RaynorCommanderLanzerTorpedoes@Damage" parent="DU_WEAP_SPLASH">
+        <EditorCategories value="Race:Raynor"/>
+        <AttributeBonus index="Armored" value="4"/>
+        <Visibility value="Visible"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RaynorCommanderLanzerTorpedoes@LM">
+        <ValidatorArray index="0" value="RangeCheckLE15"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderLanzerTorpedoes@Damage"/>
+        <AmmoUnit value="RaynorCommanderLanzerTorpedoes@Missile"/>
+    </CEffectLaunchMissile>
     <CEffectApplyBehavior id="RaynorCommanderAbilPDD@AB">
         <EditorCategories value="Race:Raynor"/>
         <Behavior value="RaynorCommanderAbilPDD@TimedLife"/>

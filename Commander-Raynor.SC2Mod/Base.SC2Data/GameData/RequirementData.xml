@@ -80,4 +80,7 @@
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
         <NodeArray index="Show" Link="NotOrCountUnitAlias_BarracksCompleteOnlyAtUnitCountUnitAlias_FactoryCompleteOnlyAtUnitCountUnitAlias_StarportCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="RaynorCommanderVikingMode@2@Requirement">
+        <EditorCategories value="Race:Raynor,TechType:Ability"/>
+    </CRequirement>
 </Catalog>

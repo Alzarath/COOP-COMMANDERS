@@ -1447,7 +1447,7 @@
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="ReactorQueue"/>
         <CardLayouts>
-            <LayoutButtons Face="VikingFighter" Type="AbilCmd" AbilCmd="RaynorCommanderTrainStarport,255" Row="0" Column="0"/>
+            <LayoutButtons Face="VikingFighter" Type="AbilCmd" AbilCmd="RaynorCommanderTrainStarport,Train5" Row="0" Column="0"/>
             <LayoutButtons Face="Medivac" Type="AbilCmd" AbilCmd="RaynorCommanderTrainStarport,255" Row="0" Column="1"/>
             <LayoutButtons Face="Raven" Type="AbilCmd" AbilCmd="RaynorCommanderTrainStarport,255" Row="0" Column="2"/>
             <LayoutButtons Face="Banshee" Type="AbilCmd" AbilCmd="RaynorCommanderTrainStarport,255" Row="0" Column="3"/>
@@ -1601,6 +1601,145 @@
     <CUnit id="RaynorCommanderYamatoGun@Missile" parent="MISSILE">
         <Race value="Terr"/>
         <Mover value="RaynorCommanderYamatoGun@Mover"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
+    </CUnit>
+    <CUnit id="RaynorCommanderViking">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="AIThreatGround" value="1"/>
+        <FlagArray index="AIThreatAir" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="125"/>
+        <LifeMax value="125"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
+        <Mover value="Fly"/>
+        <Speed value="2.75"/>
+        <Acceleration value="2.625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="75"/>
+        <RepairTime value="41.6667"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="RaynorCommanderVikingMode@1"/>
+        <WeaponArray Link="RaynorCommanderLanzerTorpedoes"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AssaultMode" Type="AbilCmd" AbilCmd="RaynorCommanderVikingMode@1,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <ScoreMake value="225"/>
+        <ScoreKill value="225"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="12"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
+        <TacticalAIThink value="AIThinkVikingFighter"/>
+        <SelectAlias value="VikingAssault"/>
+        <SubgroupAlias value="VikingAssault"/>
+        <TechAliasArray value="Alias_Viking"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="150"/>
+        <GlossaryStrongArray value="Battlecruiser"/>
+        <GlossaryStrongArray value="Corruptor"/>
+        <GlossaryStrongArray value="VoidRay"/>
+        <GlossaryWeakArray value="Marine"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+    </CUnit>
+    <CUnit id="RaynorCommanderViking@Alternate">
+        <Name value="Unit/Name/VikingFighter"/>
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="AIThreatGround" value="1"/>
+        <FlagArray index="AIThreatAir" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="125"/>
+        <LifeMax value="125"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <StationaryTurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="75"/>
+        <RepairTime value="41.6667"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="RaynorCommanderVikingMode@2"/>
+        <WeaponArray Link="TwinGatlingCannon"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="FighterMode" Type="AbilCmd" AbilCmd="RaynorCommanderVikingMode@2,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="2"/>
+        <ScoreKill value="225"/>
+        <SubgroupPriority value="12"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
+        <TacticalAIThink value="AIThinkVikingAssault"/>
+        <LeaderAlias value="VikingFighter"/>
+        <HotkeyAlias value="VikingFighter"/>
+        <TechAliasArray value="Alias_Viking"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="155"/>
+        <GlossaryAlias value="VikingFighter"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="15"/>
+            <ChanceArray index="Idle" value="55"/>
+            <ChanceArray index="Turn" value="30"/>
+        </Fidget>
+    </CUnit>
+    <CUnit id="RaynorCommanderLanzerTorpedoes@Missile" parent="MISSILE_HALFLIFE">
+        <Race value="Terr"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
 </Catalog>

@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorSound id="RaynorCommanderViking@1" parent="SoundOneShot">
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderViking" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="RaynorCommanderViking@2" parent="SoundOneShot">
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderViking@Alternate" Send="Create"/>
+    </CActorSound>
+    <CActorEventMacro id="RaynorCommanderViking@2@Anim">
+        <On Terms="Abil.RaynorCommanderVikingMode@1" Send="AnimPlay Morph Morph"/>
+    </CActorEventMacro>
+    <CActorUnit id="RaynorCommanderVikingMode@2@Morph" parent="GenericUnitBaseMorphTransition" unitName="AssaultMorphModel">
+        <Aliases value="_UnitLarge"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderViking@Alternate" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderViking@Alternate" Send="AnimPlay Start Morph,Start PlayForever"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderViking@Alternate" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderViking" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimPlay Visor Morph,End"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="PortraitAnimSetTimeFrom Visor MorphStart"/>
+        <Model value="RaynorCommanderVikingMode@Morph"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderViking@Death" SoundLink="RaynorCommanderViking@Explode"/>
+        <PortraitModel value="RaynorCommanderViking@Portrait"/>
+        <AbilSoundArray AbilCmd="RaynorCommanderVikingMode@2,Execute" Sound="RaynorCommanderViking@VO"/>
+        <BarOffset value="70"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Assault.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <HighlightTooltip value="Unit/Name/VikingAssault"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderViking@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderViking@Help"/>
+        <SoundArray index="What" value="RaynorCommanderViking@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderViking@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderViking@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderViking@Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Assault.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="RaynorCommanderVikingMode@1@Morph" parent="GenericUnitBaseMorphTransition" unitName="FighterMorphModel">
+        <Aliases value="_UnitLarge"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderViking" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderViking" Send="AnimPlay End Morph,End PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderViking" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderViking@Alternate" Send="Destroy"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimPlay Visor Morph,Start PlayForever,NonLooping"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="PortraitAnimSetTimeFrom Visor MorphStart"/>
+        <Model value="RaynorCommanderVikingMode@Morph"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderViking@Death" SoundLink="RaynorCommanderViking@Explode"/>
+        <PortraitModel value="RaynorCommanderViking@Portrait"/>
+        <AbilSoundArray AbilCmd="RaynorCommanderVikingMode@1,Execute" Sound="RaynorCommanderViking@VO"/>
+        <BarOffset value="50"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Fighter.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <HighlightTooltip value="Unit/Name/RaynorCommanderViking"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderViking@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderViking@Help"/>
+        <SoundArray index="What" value="RaynorCommanderViking@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderViking@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderViking@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderViking@Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Fighter.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="RaynorCommanderCommandCenter" parent="TerranBuildingFlyerEx" unitName="RaynorCommanderCommandCenter">
         <Macros value="MacroTownhallDeco_Terran"/>
         <Macros value="TerranCommandCenterPlayerDecalMacro"/>
@@ -1287,6 +1359,162 @@
         <On Terms="StateChange; StateValid Fire" Send="Create TerranFlameLoopLarge"/>
         <On Terms="StateChange; !StateValid Fire" Target="TerranFlameLoopLarge" Send="Destroy"/>
     </CActorStateMonitor>
+    <CActorUnit id="RaynorCommanderViking" parent="GenericUnitMorph" unitName="RaynorCommanderViking">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="RaynorCommanderViking@2@Anim"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <AcceptedTransfers index="Status" value="0"/>
+        <On Terms="ActorDestruction; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimPlay Visor Morph,Stand PlayForever 0.000000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create VikingFighter_Land"/>
+        <HostSiteOps Ops="SOpBankerViking"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <Baselines index="Walk" BlendIn="1.500000" BlendOut="2.000000"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderViking@Death" SoundLink="RaynorCommanderViking@Explode"/>
+        <DeathCustoms>
+            <ActorModel value="UnitDeathRagdollFlier"/>
+            <ModelLink value="RaynorCommanderViking@DeathRagdoll"/>
+            <Name value="RagdollBasic"/>
+            <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PortraitModel value="RaynorCommanderViking@Portrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+        <AbilSoundArray AbilCmd="RaynorCommanderVikingMode@1,Execute" Sound="RaynorCommanderViking@VO"/>
+        <BarOffset value="50"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Fighter.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="50"/>
+        <SoundArray index="Ready" value="RaynorCommanderViking@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderViking@Help"/>
+        <SoundArray index="What" value="RaynorCommanderViking@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderViking@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderViking@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderViking@Pissed"/>
+        <SoundArray index="Movement" value="RaynorCommanderViking@Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Fighter.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="RaynorCommanderViking@Alternate" parent="GenericUnitBase" unitName="RaynorCommanderViking@Alternate">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo RaynorCommanderViking@Alternate" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo RaynorCommanderViking@Alternate" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderViking@Alternate" Send="Destroy"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimClear Visor 0.000000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Viking_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderViking@DeathAlternate" SoundLink="Viking_Explode"/>
+        <DeathArray index="Blast" AnimProps="Death,Blast" ModelLink="RaynorCommanderViking@DeathAlternate"/>
+        <DeathCustoms ModelLink="RaynorCommanderViking@DeathRagdollAlternate" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <PortraitModel value="RaynorCommanderViking@Portrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.5468"/>
+        <AbilSoundArray AbilCmd="RaynorCommanderVikingMode@2,Execute" Sound="RaynorCommanderViking@VO"/>
+        <BarOffset value="70"/>
+        <BarWidth value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Assault.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderViking@Ready"/>
+        <SoundArray index="Help" value="RaynorCommanderViking@Help"/>
+        <SoundArray index="What" value="RaynorCommanderViking@What"/>
+        <SoundArray index="Yes" value="RaynorCommanderViking@Yes"/>
+        <SoundArray index="Attack" value="RaynorCommanderViking@Attack"/>
+        <SoundArray index="Pissed" value="RaynorCommanderViking@Pissed"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-vikingassault.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Viking-Assault.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="RaynorCommanderLanzerTorpedoes@Attack" parent="VikingFighterAttackBase" effectImpact="RaynorCommanderLanzerTorpedoes@Damage" effectLaunch="LanzerTorpedoesLM">
+        <On Terms="Effect.RaynorCommanderLanzerTorpedoes@LM.Start; At Caster" Send="Create"/>
+        <LaunchAssets Sound="RaynorCommanderLanzerTorpedoes@LaunchSound"/>
+        <Missile value="RaynorCommanderLanzerTorpedoes@AttackMissile"/>
+        <ImpactMap index="None" Sound="RaynorCommanderLanzerTorpedoes@ImpactSound"/>
+        <ImpactPhysics Name="LanzerTorpedoImpact" MatchKeys="Basic" Physics="LanzerTorpedoAttackDeathForce"/>
+    </CActorAction>
+    <CActorMissile id="RaynorCommanderLanzerTorpedoes@AttackMissile">
+        <Aliases value="_Unit"/>
+        <Aliases value="_Missile"/>
+        <On Terms="UnitBirth.RaynorCommanderLanzerTorpedoes@Missile" Send="Create"/>
+        <On Terms="UnitBirth" Send="$Birth PlayForever,NonLooping"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimClear Birth"/>
+        <On Terms="MotionPhaseStart; MotionPhase 2" Send="AnimPlay Turbo Turbo PlayForever"/>
+        <On Terms="MotionPhaseStart; MotionPhase 3" Send="AnimClear Turbo"/>
+        <On Terms="MotionPhaseStart; MotionPhase 3" Send="$Stand PlayForever"/>
+        <On Terms="UnitDeath" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <PreHost value="_ActorAction"/>
+    </CActorMissile>
     <CActorAction id="WeaponRaynorSCV@Attack" parent="GenericAttack" effectAttack="WeaponRaynorSCV">
         <ShieldFlashType value="Header"/>
     </CActorAction>

@@ -618,6 +618,64 @@
         <Model value="Assets\Units\Terran\SiegeTank\SiegeTank.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
+    <CModel id="RaynorCommanderViking" parent="VikingFighterBase">
+        <Model value="Assets\Units\Terran\VikingFighter\VikingFighter.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderViking@Alternate" parent="VikingAssaultBase">
+        <Model value="Assets\Units\Terran\VikingAssault\VikingAssault.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderViking@DeathAlternate" parent="VikingAssaultDeathBase">
+        <Model value="Assets\Units\Terran\VikingAssaultDeathEx1\VikingAssaultDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderViking@DeathRagdollAlternate" parent="VikingAssaultDeathRagdollBase">
+        <Model value="Assets\Units\Terran\VikingAssaultDeathRagdoll\VikingAssaultDeathRagdoll.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="VikingFighterAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderLanzerTorpedoes@AttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="VikingFighterAttackLaunch2" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderViking@Death" parent="VikingFighterDeathBase">
+        <Model value="Assets\Units\Terran\VikingFighterDeathEx1\VikingFighterDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderViking@DeathRagdoll" parent="VikingFighterDeathRagdollBase">
+        <Model value="Assets\Units\Terran\VikingFighterDeathRagdoll\VikingFighterDeathRagdoll.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderViking@Portrait" parent="VikingPortraitBase">
+        <Model value="Assets\Portraits\Terran\VikingPortrait\VikingPortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <Image value="Assets\Textures\VikingFighterPortrait_Static.dds"/>
+        <Lighting value="VikingFighterPortrait"/>
+    </CModel>
+    <CModel id="RaynorCommanderLanzerTorpedoes@AttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="VikingFighterWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissile\VikingFighterMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RaynorCommanderLanzerTorpedoes@AttackMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissile\VikingFighterMissile.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderVikingMode@Morph" parent="VikingMorphBase">
+        <Model value="Assets\Units\Terran\VikingMorph\VikingMorph.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="WeaponRaynorSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
         <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
     </CModel>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CCommander id="DATARaynor">
-        <UnitArray Unit="RaynorCommanderBanshee"/>
+        <UnitArray Unit="RaynorCommanderDuskWings"/>
         <UnitArray Unit="RaynorCommanderFirebat"/>
         <UnitArray Unit="RaynorCommanderMarauder"/>
         <UnitArray Unit="RaynorCommanderMarine"/>

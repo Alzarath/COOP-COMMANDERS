@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreatePersistent id="RaynorCommanderBackslashRockets">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetUnit"/>
+        <ExpireDelay value="0.8"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="RaynorCommanderBackslashRockets@LM"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
+    <CEffectLaunchMissile id="RaynorCommanderBackslashRockets@LM">
+        <ValidatorArray index="0" value="RangeCheckLE15"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderBackslashRockets@Damage"/>
+        <AmmoUnit value="RaynorCommanderBackslashRockets@Missile"/>
+        <Movers Link="BacklashRocketsLMWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="RaynorCommanderBackslashRockets@Damage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Raynor"/>
+        <Visibility value="Visible"/>
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectCreateUnit id="RaynorCommanderTacticalJump">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="Precursor" value="1"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="SetFacing" value="1"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="RaynorCommanderTacticalJump@ABSet"/>
+        <SpawnUnit value="RaynorCommanderBattlecruiser"/>
+        <SpawnRange value="0.1"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="RaynorCommanderTacticalJump@AB">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="RaynorCommanderTacticalJump@ABSet">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderTacticalJump@Out"/>
+        <EffectArray value="RaynorCommanderTacticalJump@TargetAB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="RaynorCommanderTacticalJump@In">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="RaynorCommanderTacticalJump@Out">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="RaynorCommanderTacticalJump@Set">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderTacticalJump@Teleport"/>
+        <EffectArray value="RaynorCommanderTacticalJump@AB"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="RaynorCommanderTacticalJump@TargetAB">
+        <EditorCategories value="Race:Raynor"/>
+    </CEffectApplyBehavior>
+    <CEffectTeleport id="RaynorCommanderTacticalJump@Teleport">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichUnit Value="Caster"/>
+        <ClearQueuedOrders value="0"/>
+        <TargetLocation Effect="RaynorCommanderTacticalJump" Value="TargetPoint"/>
+        <TeleportFlags index="TestFog" value="0"/>
+    </CEffectTeleport>
     <CEffectCreatePersistent id="RaynorCommanderLanzerTorpedoes">
         <EditorCategories value="Race:Raynor"/>
         <WhichLocation Value="TargetUnit"/>
@@ -313,13 +378,13 @@
         <AttributeBonus index="Biological" value="10"/>
         <Amount value="15"/>
     </CEffectDamage>
-    <CEffectCreatePersistent id="RaynorCommanderYamatoGun">
+    <CEffectCreatePersistent id="RaynorCommanderHyperionYamatoGun">
         <EditorCategories value="Race:Raynor"/>
         <WhichLocation Value="TargetUnit"/>
         <Flags index="Channeled" value="1"/>
-        <ExpireEffect value="RaynorCommanderYamatoGun@LM"/>
+        <ExpireEffect value="RaynorCommanderHyperionYamatoGun@LM"/>
     </CEffectCreatePersistent>
-    <CEffectDamage id="RaynorCommanderYamatoGun@Damage">
+    <CEffectDamage id="RaynorCommanderHyperionYamatoGun@Damage">
         <EditorCategories value="Race:Raynor"/>
         <ResponseFlags index="Flee" value="1"/>
         <ImpactLocation Value="TargetUnit"/>
@@ -331,10 +396,10 @@
         <ExcludeArray Value="Target"/>
         <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
-    <CEffectLaunchMissile id="RaynorCommanderYamatoGun@LM">
+    <CEffectLaunchMissile id="RaynorCommanderHyperionYamatoGun@LM">
         <EditorCategories value="Race:Raynor"/>
-        <ImpactEffect value="RaynorCommanderYamatoGun@Damage"/>
-        <AmmoUnit value="RaynorCommanderYamatoGun@Missile"/>
+        <ImpactEffect value="RaynorCommanderHyperionYamatoGun@Damage"/>
+        <AmmoUnit value="RaynorCommanderHyperionYamatoGun@Missile"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="WeaponRaynorSCV" parent="DU_WEAP">
         <EditorCategories value="Race:Raynor"/>
@@ -358,4 +423,22 @@
         <RechargeVitalRate value="1"/>
         <TimeFactor value="1"/>
     </CEffectCreateHealer>
+    <CEffectLaunchMissile id="RaynorCommanderYamatoGun">
+        <ValidatorArray index="0" value="YamatoTargetFilters"/>
+        <ValidatorArray value="IsNotWarpBubble"/>
+        <ValidatorArray value="YamatoTargetFilters"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderYamatoGun@Damage"/>
+        <AmmoUnit value="RaynorCommanderYamatoGun@Missile"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="RaynorCommanderYamatoGun@Damage">
+        <EditorCategories value="Race:Raynor"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="300"/>
+        <Death value="Blast"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
 </Catalog>

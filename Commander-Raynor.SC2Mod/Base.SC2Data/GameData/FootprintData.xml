@@ -34,6 +34,28 @@
             <Borders value="7,0,2;0,1,2;1,2,2;2,3,2;3,4,2;4,5,2;5,6,2;6,7,2"/>
         </Shape>
     </CFootprint>
+    <CFootprint id="RaynorCommanderReactor@3x3AddOn2x2">
+        <Layers index="Check" Area="-3,-1,4,2">
+            <Rows value="..xxx.."/>
+            <Rows value="..xxxxx"/>
+            <Rows value="..xxxxx"/>
+        </Layers>
+        <Layers index="Place" Area="-3,-1,4,2">
+            <Rows value="..xxx.."/>
+            <Rows value="..xxxxx"/>
+            <Rows value="..xxxxx"/>
+        </Layers>
+        <Layers index="Pathing" Area="-7,-3,7,3">
+            <Rows value="......."/>
+            <Rows value="......."/>
+            <Rows value="......."/>
+        </Layers>
+        <Shape>
+            <Radius value="3.808"/>
+            <Offsets value="-1.5,-1.5;3.5,-1.5;1.5,0.5;3.5,0.5;-1.5,1.5;1.5,1.5"/>
+            <Borders value="0,4,2;1,0,2;2,3,2;3,1,2;4,5,2;5,2,2"/>
+        </Shape>
+    </CFootprint>
     <CFootprint id="RaynorCommanderTechLab@3x3AddOn2x2">
         <Layers index="Check" Area="-3,-1,4,2">
             <Rows value="..xxx.."/>

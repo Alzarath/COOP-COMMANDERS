@@ -8,6 +8,41 @@
         <DisplayDuration index="Enemy" value="1"/>
         <Duration value="180"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderTacticalJump@AB">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <Duration value="0.05"/>
+        <ExpireEffect value="RaynorCommanderTacticalJump@In"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderTacticalJump@In">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <Duration value="0.6"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Stasis" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderTacticalJump@Out">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <Duration value="0.6"/>
+        <ExpireEffect value="RaynorCommanderTacticalJump@Set"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderTacticalJump@TargetAB">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <Duration value="0.0625"/>
+        <ExpireEffect value="SuicideRemove"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Stasis" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderPDDLaser">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
@@ -67,6 +102,10 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderReactorBarrack">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderTechLabFactory">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
@@ -93,7 +132,15 @@
         <Duration value="1.5"/>
         <Modification MoveSpeedMultiplier="0.5"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderReactorFactory">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="RaynorCommanderTechLabStarport">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RaynorCommanderReactorStarport">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
     </CBehaviorBuff>

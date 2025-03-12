@@ -1,0 +1,2 @@
+﻿Actor/Name/Infesteddiamondback=Infested diamondback
+Model/Name/Infesteddiamondback=Infested diamondback

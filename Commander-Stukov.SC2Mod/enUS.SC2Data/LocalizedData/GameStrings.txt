@@ -1,0 +1,4 @@
+﻿DataCollection/Name/Infesteddiamondback=Infested diamondback
+DocInfo/DescShort=Any
+DocInfo/Name=Just Another StarCraft II Mod
+Unit/Name/Infesteddiamondback=Infested diamondback

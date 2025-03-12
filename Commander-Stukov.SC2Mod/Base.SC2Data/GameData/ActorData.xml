@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="Infesteddiamondback" parent="GenericUnitStandard" unitName="Infesteddiamondback">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <On Terms="Abil.attack.ReadyStop" Target="DiamondbackAttackBeam" Send="SetOpacity 0.000000 0.250000"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Diamondback_Land"/>
+        <On Terms="UnitDeath.Infesteddiamondback" Send="AnimPlay Death"/>
+        <On Terms="DeathCustomize" Send="Create"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="Infesteddiamondback@death" SoundLink="Diamondback_Explode"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <PortraitModel value="Infesteddiamondback@Portrait"/>
+        <BarOffset value="80"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-zerg-stukov-infesteddiamondback.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="40"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-infesteddiamondback.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-stukov-infesteddiamondback.dds"/>
+        </Wireframe>
+    </CActorUnit>
+</Catalog>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollection id="Infesteddiamondback">
+        <EditorCategories value="Race:InfestedTerran,DataFamily:Coop,ObjectType:Unit"/>
+        <DataRecord Entry="Unit,Infesteddiamondback"/>
+        <DataRecord Entry="Model,Infesteddiamondback"/>
+        <DataRecord Entry="Model,Infesteddiamondback@Portrait"/>
+        <DataRecord Entry="Model,Infesteddiamondback@death"/>
+        <DataRecord Entry="Actor,Infesteddiamondback"/>
+    </CDataCollection>
+</Catalog>

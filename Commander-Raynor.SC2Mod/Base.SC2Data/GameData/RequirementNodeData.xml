@@ -10,6 +10,11 @@
     <CRequirementCountUnit id="CountUnitAlias_FactoryCompleteOnly4195804750TechTreeCheat">
         <Count Link="Alias_Factory" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Alias_RaynorTechLab" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Alias_RaynorTechLab" State="CompleteOnlyAtUnit"/>

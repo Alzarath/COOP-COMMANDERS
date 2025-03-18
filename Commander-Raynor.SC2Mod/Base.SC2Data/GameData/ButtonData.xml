@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderBattlecruiser">
+        <Icon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
+    <CButton id="RaynorCommanderBanshee">
+        <Icon value="Assets\Textures\btn-unit-terran-banshee.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-banshee.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
     <CButton id="RaynorCommanderTacticalJump">
         <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
         <EditorCategories value="Race:Raynor"/>
@@ -266,7 +276,7 @@
         <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
         <EditorCategories value="Race:Raynor"/>
     </CButton>
-    <CButton id="RaynorCommanderTrainCC@SCV">
+    <CButton id="RaynorCommanderSCV@SCV">
         <Icon value="Assets\Textures\btn-unit-terran-scv.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-scv.dds"/>
         <EditorCategories value="Race:Raynor"/>
@@ -275,12 +285,17 @@
     <CButton id="RaynorCommanderSiegeTank">
         <Icon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-siegetank.dds"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CButton>
     <CButton id="RaynorCommanderYamatoGun">
         <Icon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-yamatogun-color.dds"/>
         <EditorCategories value="Race:Raynor"/>
         <Universal value="1"/>
+    </CButton>
+    <CButton id="RaynorCommanderViking">
+        <Icon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-vikingfighter.dds"/>
+        <EditorCategories value="Race:Raynor"/>
     </CButton>
 </Catalog>

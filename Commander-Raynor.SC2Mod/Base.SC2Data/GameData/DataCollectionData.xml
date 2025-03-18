@@ -58,6 +58,8 @@
         <DataRecord Entry="Sound,RaynorCommanderBanshee@Explode"/>
         <DataRecord Entry="Sound,RaynorCommanderBanshee@VO@1"/>
         <DataRecord Entry="Unit,RaynorCommanderBanshee"/>
+        <DataRecord Entry="Button,RaynorCommanderBanshee"/>
+        <DataRecord Entry="Requirement,RaynorCommanderBanshee"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderBattlecruiser" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderBattlecruiser"/>
@@ -75,6 +77,8 @@
         <DataRecord Entry="Sound,RaynorCommanderBattlecruiser@What"/>
         <DataRecord Entry="Sound,RaynorCommanderBattlecruiser@Ready"/>
         <DataRecord Entry="Unit,RaynorCommanderBattlecruiser"/>
+        <DataRecord Entry="Button,RaynorCommanderBattlecruiser"/>
+        <DataRecord Entry="Requirement,RaynorCommanderBattlecruiser"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderBunker" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderBunker"/>
@@ -353,6 +357,10 @@
         <Name value="DataCollection/Name/RaynorCommanderSupplyDepot"/>
         <EditorCategories value="DataGroup:Unit,Race:Raynor,ObjectType:Structure"/>
     </CDataCollectionUnit>
+    <CDataCollectionUpgrade id="RaynorCommanderTalents">
+        <EditorCategories value="DataGroup:Research,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderTalents@lvl1"/>
+    </CDataCollectionUpgrade>
     <CDataCollectionAbil id="RaynorCommanderTankMode" parent="CommanderAbilityMorph">
         <Name value="DataCollection/Name/RaynorCommanderTankMode"/>
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
@@ -454,7 +462,6 @@
         <Name value="DataCollection/Name/RaynorCommanderTrainCC"/>
         <EditorCategories value="DataGroup:AbilityBuildTrain,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTrainCC"/>
-        <DataRecord Entry="Button,RaynorCommanderTrainCC@SCV"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderViking" parent="CommanderUnitMorphing">
         <Name value="DataCollection/Name/RaynorCommanderViking"/>
@@ -484,6 +491,8 @@
         <DataRecord Entry="Actor,RaynorCommanderViking@2"/>
         <DataRecord Entry="Sound,RaynorCommanderViking@1"/>
         <DataRecord Entry="Sound,RaynorCommanderViking@2"/>
+        <DataRecord Entry="Button,RaynorCommanderViking"/>
+        <DataRecord Entry="Requirement,RaynorCommanderViking"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderVikingMode" parent="CommanderAbilityMorph">
         <Name value="DataCollection/Name/RaynorCommanderVikingMode"/>
@@ -600,6 +609,7 @@
         <DataRecord Entry="Model,RaynorCommanderBarracks@Build"/>
         <DataRecord Entry="Unit,RaynorCommanderBarracks@Fly"/>
         <DataRecord Entry="Requirement,RaynorCommanderBarracks"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderBuildAddons">
         <EditorCategories value="DataGroup:AbilityBuildTrain,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
@@ -732,6 +742,7 @@
         <DataRecord Entry="Sound,RaynorCommanderMedic@Ready"/>
         <DataRecord Entry="Light,RaynorCommanderMedic"/>
         <DataRecord Entry="Requirement,RaynorCommanderMedic"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPerditionThrower">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
@@ -774,6 +785,7 @@
         <DataRecord Entry="Button,RaynorCommanderFirebat"/>
         <DataRecord Entry="Requirement,RaynorCommanderFirebat"/>
         <TechInfoUpgradeUsed value="RaynorCommanderJuggernautPlating"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMarauder" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderMarauder"/>
@@ -794,6 +806,7 @@
         <DataRecord Entry="Unit,RaynorCommanderMarauder"/>
         <DataRecord Entry="Button,RaynorCommanderMarauder"/>
         <DataRecord Entry="Requirement,RaynorCommanderMarauder"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMarine" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderMarine"/>
@@ -822,6 +835,7 @@
         <DataRecord Entry="Unit,RaynorCommanderMarine"/>
         <DataRecord Entry="Button,RaynorCommanderMarine"/>
         <DataRecord Entry="Requirement,RaynorCommanderMarine"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPunisherGrenades">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Projectile"/>
@@ -871,6 +885,8 @@
         <DataRecord Entry="Sound,RaynorCommanderSCV@What"/>
         <DataRecord Entry="Sound,RaynorCommanderSCV@Yes"/>
         <DataRecord Entry="Unit,RaynorCommanderSCV"/>
+        <DataRecord Entry="Button,RaynorCommanderSCV@SCV"/>
+        <DataRecord Entry="Requirement,RaynorCommanderSCV"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderStimpack" parent="CommanderAbilityAB">
         <Name value="DataCollection/Name/RaynorCommanderStimpack"/>

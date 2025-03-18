@@ -93,13 +93,14 @@
     </CAbilMorph>
     <CAbilTrain id="RaynorCommanderTrainCC">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
-        <InfoArray index="Train1" Time="17">
-            <Button DefaultButtonFace="RaynorCommanderTrainCC@SCV" State="Restricted">
+        <InfoArray index="Train1">
+            <Button DefaultButtonFace="RaynorCommanderSCV@SCV" State="Restricted">
                 <Flags index="ToSelection" value="1"/>
             </Button>
             <Unit value="RaynorCommanderSCV"/>
         </InfoArray>
         <Alert value="TrainWorkerComplete"/>
+        <Flags index="IgnoreUnitBuildTime" value="0"/>
     </CAbilTrain>
     <CAbilMorphPlacement id="RaynorCommanderLiftCommandCenter@Land" parent="TerranBuildingLand" unit="CommandCenter">
         <Name value="Abil/Name/RaynorCommanderLiftCommandCenter@Land"/>
@@ -308,25 +309,26 @@
     </CAbilEffectTarget>
     <CAbilTrain id="RaynorCommanderTrainBarrack">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
-        <InfoArray index="Train1" Time="25">
+        <InfoArray index="Train1">
             <Button DefaultButtonFace="RaynorCommanderMarine" State="Restricted" Requirements="RaynorCommanderMarine"/>
             <Unit value="RaynorCommanderMarine"/>
         </InfoArray>
-        <InfoArray index="Train2" Time="45">
+        <InfoArray index="Train2">
             <Button DefaultButtonFace="RaynorCommanderFirebat" State="Restricted" Requirements="RaynorCommanderFirebat"/>
             <Unit value="RaynorCommanderFirebat"/>
         </InfoArray>
-        <InfoArray index="Train3" Time="40">
+        <InfoArray index="Train3">
             <Button DefaultButtonFace="RaynorCommanderMedic" State="Restricted" Requirements="RaynorCommanderMedic"/>
             <Unit value="RaynorCommanderMedic"/>
         </InfoArray>
-        <InfoArray index="Train4" Time="30">
+        <InfoArray index="Train4">
             <Button DefaultButtonFace="RaynorCommanderMarauder" State="Restricted" Requirements="RaynorCommanderMarauder"/>
             <Unit value="RaynorCommanderMarauder"/>
         </InfoArray>
         <InfoArray index="Train5" Time="40">
             <Button State="Restricted" Requirements="HaveAttachedTechLab"/>
         </InfoArray>
+        <Flags index="IgnoreUnitBuildTime" value="0"/>
     </CAbilTrain>
     <CAbilMorphPlacement id="RaynorCommanderLiftBarrack@Land" parent="TerranBuildingLand" unit="Barracks">
         <Name value="Abil/Name/RaynorCommanderLiftBarrack@Land"/>
@@ -358,6 +360,7 @@
     </CAbilEffectInstant>
     <CAbilBuild id="RaynorCommanderBuildSCV">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <FlagArray index="IgnoreUnitBuildTime" value="0"/>
         <FlagArray index="Interruptible" value="1"/>
         <FlagArray index="PeonDisableCollision" value="1"/>
         <InfoArray index="Build1" Unit="RaynorCommanderCommandCenter" Time="100">
@@ -370,7 +373,7 @@
             <Button DefaultButtonFace="RaynorCommanderRefinery"/>
             <ValidatorArray value="HasVespene2"/>
         </InfoArray>
-        <InfoArray index="Build4" Unit="RaynorCommanderBarracks" Time="65">
+        <InfoArray index="Build4" Unit="RaynorCommanderBarracks">
             <Button DefaultButtonFace="RaynorCommanderBarracks" State="Suppressed" Requirements="RaynorCommanderBarracks"/>
         </InfoArray>
         <InfoArray index="Build5" Unit="EngineeringBay" Time="35">
@@ -447,14 +450,15 @@
     </CAbilBuild>
     <CAbilTrain id="RaynorCommanderTrainFactory">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
-        <InfoArray index="Train1" Time="25">
+        <InfoArray index="Train1">
             <Button DefaultButtonFace="RaynorCommanderVulture" Requirements="RaynorCommanderVulture"/>
             <Unit value="RaynorCommanderVulture"/>
         </InfoArray>
-        <InfoArray index="Train2" Time="32" Alert="TrainComplete">
+        <InfoArray index="Train2" Alert="TrainComplete">
             <Button DefaultButtonFace="RaynorCommanderSiegeTank" Requirements="RaynorCommanderSiegeTank"/>
             <Unit value="RaynorCommanderSiegeTank"/>
         </InfoArray>
+        <Flags index="IgnoreUnitBuildTime" value="0"/>
     </CAbilTrain>
     <CAbilMorph id="RaynorCommanderTankMode@Siege">
         <OrderArray index="0">
@@ -494,30 +498,19 @@
     <CAbilTrain id="RaynorCommanderTrainStarport">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
-        <InfoArray index="Train1" Time="42">
-            <Button DefaultButtonFace="Medivac" State="Restricted"/>
-            <Unit value="Medivac"/>
+        <InfoArray index="Train1">
+            <Button DefaultButtonFace="RaynorCommanderBanshee" State="Restricted" Requirements="RaynorCommanderBanshee"/>
+            <Unit value="RaynorCommanderBanshee"/>
         </InfoArray>
-        <InfoArray index="Train2" Time="60">
-            <Button DefaultButtonFace="Banshee" State="Restricted" Requirements="HaveAttachedTechLab"/>
-            <Unit value="Banshee"/>
+        <InfoArray index="Train2">
+            <Button DefaultButtonFace="RaynorCommanderBattlecruiser" State="Restricted" Requirements="RaynorCommanderBattlecruiser"/>
+            <Unit value="RaynorCommanderBattlecruiser"/>
         </InfoArray>
-        <InfoArray index="Train3" Time="60">
-            <Button DefaultButtonFace="Raven" State="Restricted" Requirements="HaveAttachedTechLab"/>
-            <Unit value="Raven"/>
-        </InfoArray>
-        <InfoArray index="Train4" Time="90">
-            <Button DefaultButtonFace="Battlecruiser" State="Restricted" Requirements="HaveAttachedStarportTechLabAndFusionCore"/>
-            <Unit value="Battlecruiser"/>
-        </InfoArray>
-        <InfoArray index="Train5" Time="42">
-            <Button DefaultButtonFace="VikingFighter" State="Restricted"/>
+        <InfoArray index="Train3">
+            <Button DefaultButtonFace="RaynorCommanderViking" State="Restricted"/>
             <Unit value="RaynorCommanderViking"/>
         </InfoArray>
-        <InfoArray index="Train7" Time="60">
-            <Button DefaultButtonFace="Liberator" State="Restricted"/>
-            <Unit value="Liberator"/>
-        </InfoArray>
+        <Flags index="IgnoreUnitBuildTime" value="0"/>
     </CAbilTrain>
     <CAbilMorph id="RaynorCommanderTankMode@Unsiege">
         <AbilSetId value="Unsieged"/>

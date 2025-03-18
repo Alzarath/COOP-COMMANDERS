@@ -45,4 +45,9 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
         <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
     </CUpgrade>
+    <CUpgrade id="RaynorCommanderTalents@lvl1">
+        <Icon value="Assets\Textures\talent-raynor-level01-infantryspecialist.dds"/>
+        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+    </CUpgrade>
 </Catalog>

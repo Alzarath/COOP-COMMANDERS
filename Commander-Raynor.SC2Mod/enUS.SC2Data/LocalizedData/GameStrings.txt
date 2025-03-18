@@ -50,7 +50,9 @@ Behavior/Tooltip/RaynorCommanderStimpackMara=This unit moves and attacks more qu
 Button/Name/RaynorBuildAdvanced=Build Advanced Structure
 Button/Name/RaynorCommanderAbilPDD=Point Defense Drone
 Button/Name/RaynorCommanderArmory=Build Armory
+Button/Name/RaynorCommanderBanshee=Build Banshee
 Button/Name/RaynorCommanderBarracks=Build Barracks
+Button/Name/RaynorCommanderBattlecruiser=Build Battlecruiser
 Button/Name/RaynorCommanderBuildAddons=Build Tech Lab
 Button/Name/RaynorCommanderBuildAddons@Barracks=Build Tech Lab
 Button/Name/RaynorCommanderBuildAddons@Factory=Build Tech Lab
@@ -82,6 +84,7 @@ Button/Name/RaynorCommanderReactorMorphStarport=Build Reactor
 Button/Name/RaynorCommanderRefinery=Build Refinery
 Button/Name/RaynorCommanderRepair=Repair
 Button/Name/RaynorCommanderReturnCargo=Return Cargo
+Button/Name/RaynorCommanderSCV@SCV=Train SCV
 Button/Name/RaynorCommanderSensorTower=Build Sensor Tower
 Button/Name/RaynorCommanderSiegeTank=Build Siege Tank
 Button/Name/RaynorCommanderStarport=Build Starport
@@ -93,7 +96,7 @@ Button/Name/RaynorCommanderTechLabMorphBarrack=Build Tech Lab
 Button/Name/RaynorCommanderTechLabMorphFactory=Build Tech Lab
 Button/Name/RaynorCommanderTechLabMorphStarport=Build Tech Lab
 Button/Name/RaynorCommanderTerranBuild=Build Structure
-Button/Name/RaynorCommanderTrainCC@SCV=Train SCV
+Button/Name/RaynorCommanderViking=Build Viking
 Button/Name/RaynorCommanderVikingMode@1=Assault Mode
 Button/Name/RaynorCommanderVikingMode@2=Fighter
 Button/Name/RaynorCommanderVulture=Build Vulture
@@ -136,6 +139,7 @@ Button/Tooltip/RaynorCommanderRefinery=Built over a Vespene Geyser to allow harv
 Button/Tooltip/RaynorCommanderRepair=Restores life to mechanical units and structures at the cost of resources.
 Button/Tooltip/RaynorCommanderReturnCargo=Returns the carried resources to the nearest drop-off point.
 Button/Tooltip/RaynorCommanderSCV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/RaynorCommanderSCV@SCV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderSensorTower=Reveals the locations of enemy units at long range. The Sensor Tower's detection area is visible to the enemy.
 Button/Tooltip/RaynorCommanderSiegeTank=Heavy tank. Can switch into Siege Mode to provide long-range artillery support.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderSiegeTank@Alternate=Heavy tank. Can switch into Tank Mode to provide mobile tank support.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
@@ -149,7 +153,6 @@ Button/Tooltip/RaynorCommanderTechLabMorphBarrack=Infantry-research structure. A
 Button/Tooltip/RaynorCommanderTechLabMorphFactory=Vehicle-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Siege Tanks<n/>- Thor with Armory<n/>- Cyclones
 Button/Tooltip/RaynorCommanderTechLabMorphStarport=Aircraft-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Banshees<n/>- Ravens<n/>- Battlecruisers with Fusion Core
 Button/Tooltip/RaynorCommanderTerranBuild=A list of basic structures.
-Button/Tooltip/RaynorCommanderTrainCC@SCV=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderViking=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/RaynorCommanderViking@Alternate=Durable support unit. Can switch into Fighter Mode to attack air units.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderVikingMode@1=Transforms the Viking to Assault Mode. In this mode Vikings move on the ground and can only attack ground targets.
@@ -212,6 +215,7 @@ DataCollection/Name/RaynorCommanderStimpack=Raynor Commander - Stimpack
 DataCollection/Name/RaynorCommanderStimpackMara=Raynor Commander - Stimpack (Mara)
 DataCollection/Name/RaynorCommanderSupplyDepot=Raynor Commander - Supply Depot
 DataCollection/Name/RaynorCommanderTacticalJump=Raynor Commander - Tactical Jump
+DataCollection/Name/RaynorCommanderTalents=Raynor Commander - Talents
 DataCollection/Name/RaynorCommanderTankMode=Raynor Commander - Tank Mode
 DataCollection/Name/RaynorCommanderTechLab=Raynor Commander - Tech Lab
 DataCollection/Name/RaynorCommanderTechLabBarrack=Raynor Commander - Tech Lab (Barrack)
@@ -368,6 +372,7 @@ Upgrade/Name/RaynorCommanderInfantryWeapon@Level2=Level 2
 Upgrade/Name/RaynorCommanderInfantryWeapon@Level3=Level 3
 Upgrade/Name/RaynorCommanderJuggernautPlating=Juggernaut Plating
 Upgrade/Name/RaynorCommanderPunisherGrenades@PunisherGrenades=Concussive Shells
+Upgrade/Name/RaynorCommanderTalents@lvl1=Quickly Train
 Weapon/Name/RaynorCommanderATALaserBatteryAir=ATA Laser Battery
 Weapon/Name/RaynorCommanderATSLaserBattery=ATS Laser Battery
 Weapon/Name/RaynorCommanderBackslashRockets=Backlash Rockets

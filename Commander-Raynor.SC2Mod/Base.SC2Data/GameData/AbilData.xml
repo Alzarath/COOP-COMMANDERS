@@ -366,7 +366,7 @@
         <InfoArray index="Build1" Unit="RaynorCommanderCommandCenter" Time="100">
             <Button DefaultButtonFace="RaynorCommanderCommandCenter" State="Suppressed" Requirements="RaynorCommanderCommandCenter"/>
         </InfoArray>
-        <InfoArray index="Build2" Unit="SupplyDepot" Time="30">
+        <InfoArray index="Build2" Unit="RaynorCommanderSupplyDepot">
             <Button DefaultButtonFace="RaynorCommanderSupplyDepot"/>
         </InfoArray>
         <InfoArray index="Build3" Unit="Refinery" Time="30">
@@ -382,7 +382,7 @@
         <InfoArray index="Build6" Unit="MissileTurret" Time="25">
             <Button DefaultButtonFace="RaynorCommanderMissileTurret" State="Restricted"/>
         </InfoArray>
-        <InfoArray index="Build7" Unit="Bunker" Time="40">
+        <InfoArray index="Build7" Unit="RaynorCommanderBunker">
             <Button DefaultButtonFace="RaynorCommanderBunker" State="Restricted"/>
         </InfoArray>
         <InfoArray index="Build8" Unit="RefineryRich" Time="30">
@@ -566,4 +566,45 @@
         <ProgressButtonArray index="Prep" value="YamatoGun"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderYamatoGun" Requirements="RaynorCommanderYamatoGun@Requirement"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="RaynorCommanderLoweredSupplies@1">
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderLoweredSupplies@1"/>
+        <InfoArray Unit="RaynorCommanderSupplyDepot@Alternate" CollideRange="0">
+            <SectionArray index="Abils">
+                <EffectArray index="Start" value="SupplyDepotMorphingApplyBehavior"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.3"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1.3"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.3"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.3"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="RaynorCommanderLoweredSupplies@2">
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderLoweredSupplies@2"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="MoveBlockers" value="1"/>
+        <InfoArray Unit="RaynorCommanderSupplyDepot" CollideRange="0">
+            <SectionArray index="Abils">
+                <EffectArray index="Start" value="SupplyDepotMorphingApplyBehavior"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.3"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.3"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.3"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
 </Catalog>

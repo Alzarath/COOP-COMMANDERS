@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorModel id="RaynorCommanderBunker@Build" parent="TerranBuildingBuild">
+        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderBunker@Attached"/>
+    </CActorModel>
+    <CActorUnit id="RaynorCommanderBunker" parent="TerranBuildingEx" unitName="RaynorCommanderBunker">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="BunkerTransportAnim"/>
+        <On index="69" Terms="UnitConstruction.RaynorCommanderBunker.Start" Send="Create RaynorCommanderBunker@Build"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit BunkerIsEmpty" Send="DeathCustomize Empty"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit NeosteelFramePurchasedNoConstruction" Send="DeathCustomize Upgrade"/>
+        <On Terms="Upgrade.NeosteelFrame.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="UnitBirth.RaynorCommanderBunker; ValidateUnit NeosteelFramePurchased" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="Upgrade.NeosteelFrame.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="UnitBirth.RaynorCommanderBunker" Send="StatusSet BunkerBuilt 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="StatusSet ShrikeTurret 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="Create ShrikeTurret"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Send="Create ShrikeTurretPlaceholder"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Target="ShrikeTurret" Send="Signal TurretHide"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurret" Send="Signal TurretDeath"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurretPlaceholder" Send="Signal TurretDeath"/>
+        <On Terms="UnitBirth.RaynorCommanderBunker" Target="ShrikeTurretPlaceholder" Send="Destroy"/>
+        <On Terms="UnitBirth.RaynorCommanderBunker" Target="ShrikeTurret" Send="Signal TurretShow"/>
+        <On Terms="Upgrade.TerranBuildingArmor.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="Upgrade.TerranBuildingArmor.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap BunkerUpgrade"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderBunker@Death"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="RaynorCommanderBunker@Explode"/>
+        <DeathCustoms ModelLink="RaynorCommanderBunker@Death@2" Name="Upgrade"/>
+        <DeathCustoms ModelLink="RaynorCommanderBunker@DeathEmpty" Name="Empty"/>
+        <PlacementModel value="RaynorCommanderBunker@Placement"/>
+        <PlacementActorModel value="BunkerPlacementModel"/>
+        <PlaceholderActorModel value="BunkerPlaceholderModel"/>
+        <PortraitModel value="RaynorCommanderBunker@Portrait"/>
+        <BarOffset value="80"/>
+        <BarWidth value="85"/>
+        <GlossaryAnim value="Stand,Work"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Bunker.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Bunker.dds"/>
+        <NameOffset value="70"/>
+        <SoundArray index="Ready" value="RaynorCommanderBunker@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderBunker@What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Bunker.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Bunker.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderBunker@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderBunker"/>
     <CActorModel id="RaynorCommanderTacticalJump@Impact" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.RaynorCommanderTacticalJump@In.On" Send="Create"/>
@@ -1588,6 +1637,92 @@
             <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-TankMode.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="RaynorCommanderSupplyDepot" parent="TerranBuildingEx" unitName="RaynorCommanderSupplyDepot">
+        <Aliases value="_UnitLarge"/>
+        <On index="69" Terms="UnitConstruction.RaynorCommanderSupplyDepot.Start" Send="Create RaynorCommanderSupplyDepot@Build"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSupplyDepot@Alternate" Send="AnimGroupRemove Unburrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSupplyDepot@Alternate" Send="AnimGroupApply Burrow Burrow Stand,Burrow ClosingFull"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot@Alternate" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot@Alternate" Send="AnimGroupRemove Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot@Alternate" Send="AnimGroupApply Unburrow Stand,Unburrow Stand,Unburrow Instant"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SupplyDepotDrop" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SupplyDepotDrop" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom SupplyDepotDrop" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationSupplyDepot"/>
+        <On Terms="Signal.*.Incoming" Send="RefSetFromMsg ::actor.SupplyDropModel ::Sender"/>
+        <On Terms="Signal.*.Incoming" Target="::actor.SupplyDropModel" Send="Signal Raised"/>
+        <On Terms="ActorCreation; PlayerHasReward SupplyDepotSkin" Send="StatusSet CE 1"/>
+        <On Terms="ActorCreation; PlayerHasReward SupplyDepotSkin" Send="AnimBracketStop ::GL_BSD Instant"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderSupplyDepot@Death" SoundLink="RaynorCommanderSupplyDepot@Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="RaynorCommanderSupplyDepot@Explode"/>
+        <PlacementModel value="RaynorCommanderSupplyDepot@Placement"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PortraitModel value="RaynorCommanderSupplyDepot@Portrait"/>
+        <BarOffset value="70"/>
+        <BarWidth value="80"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <NameOffset value="40"/>
+        <SoundArray index="Ready" value="RaynorCommanderSupplyDepot@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderSupplyDepot@What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Raised.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="RaynorCommanderSupplyDepot@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderSupplyDepot">
+        <Model value="SupplyDepotSplat"/>
+    </CActorSplat>
+    <CActorUnit id="RaynorCommanderSupplyDepot@Alternate" parent="TerranBuildingEx" unitName="RaynorCommanderSupplyDepot@Alternate">
+        <Aliases value="_UnitLarge"/>
+        <On index="69" Terms="UnitConstruction.RaynorCommanderSupplyDepot@Alternate.Start" Send="Create RaynorCommanderSupplyDepot@Build"/>
+        <On Terms="UnitBirth.RaynorCommanderSupplyDepot@Alternate" Send="AnimGroupApply Burrow Burrow Stand,Burrow ClosingFull"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSupplyDepot" Send="AnimGroupRemove Burrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSupplyDepot" Send="AnimGroupApply Unburrow Unburrow Stand ClosingFull"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot@Alternate" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot" Send="AnimGroupRemove Unburrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSupplyDepot" Send="AnimGroupApply Burrow Stand,Burrow Stand,Burrow Instant"/>
+        <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationSupplyDepot"/>
+        <On Terms="Abil.SupplyDrop.TargetApproachStart" Send="$Spell"/>
+        <On Terms="Signal.*.Incoming" Send="RefSetFromMsg ::actor.SupplyDropModel ::Sender"/>
+        <On Terms="Signal.*.Incoming" Target="::actor.SupplyDropModel" Send="Signal Lowered"/>
+        <On Terms="ActorCreation; PlayerHasReward SupplyDepotSkin" Send="StatusSet CE 1"/>
+        <On Terms="ActorCreation; PlayerHasReward SupplyDepotSkin" Send="AnimBracketStop ::GL_BSD Instant"/>
+        <CreepHeightClass value="Tiny"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderSupplyDepot@DeathAlternate" SoundLink="RaynorCommanderSupplyDepot@Explode"/>
+        <PlacementModel value="SupplyDepotPlacement"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PortraitModel value="SupplyDepotPortrait"/>
+        <BarOffset value="70"/>
+        <BarWidth value="80"/>
+        <ErrorArray Error="CantBuildLocationInvalid" Text="e_cmdCantRaise" Sound="UI_GenericError"/>
+        <ErrorArray Error="CantFindPlacementLocation" Text="e_cmdCantRaise" Sound="UI_GenericError"/>
+        <ErrorArray Error="CantBuildOnThat" Text="e_cmdCantRaise" Sound="UI_GenericError"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Lowered.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-supplydepotlowered.dds"/>
+        <SoundArray index="Ready" value="RaynorCommanderSupplyDepot@Ready"/>
+        <SoundArray index="Help" value="SupplyDepotHelp"/>
+        <SoundArray index="What" value="RaynorCommanderSupplyDepot@What"/>
+        <SoundArray index="Yes" value="SupplyDepotYes"/>
+        <SoundArray index="Attack" value="SupplyDepotYes"/>
+        <SoundArray index="Pissed" value="SupplyDepotPissed"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-supplydepotlowered.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SupplyDepot-Lowered.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="RaynorCommanderSupplyDepot@Build" parent="TerranBuildingBuild">
+        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderSupplyDepot@Attached"/>
+    </CActorModel>
     <CActorSound id="TerranBuildingFlameBig@Sound" parent="TerranFlameSound">
         <Sound value="Terran_FlameLoopLarge"/>
     </CActorSound>
@@ -1619,6 +1754,28 @@
         <On Terms="StateChange; StateValid Fire" Send="Create TerranBuildingFlameBig@Sound"/>
         <On Terms="StateChange; !StateValid Fire" Target="TerranBuildingFlameBig@Sound" Send="Destroy"/>
     </CActorStateMonitor>
+    <CActorProgress id="RaynorCommanderSupplyDepot@Attached">
+        <Supporter Subject="_TerranBuildModel"/>
+        <On Terms="ProgressLevel.RaynorCommanderSupplyDepot@Attached.Start; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
+        <On Terms="ProgressLevel.RaynorCommanderSupplyDepot@Attached.Stop; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Birth,A,Stand"/>
+        <StageArray AnimProps="Birth,B,Start"/>
+        <StageArray AnimProps="Birth,B,Stand"/>
+        <StageArray AnimProps="Birth,C,Start"/>
+        <StageArray AnimProps="Birth,C,Stand"/>
+    </CActorProgress>
+    <CActorProgress id="RaynorCommanderBunker@Attached">
+        <Supporter Subject="_TerranBuildModel"/>
+        <On Terms="ProgressLevel.RaynorCommanderBunker@Attached.Start; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
+        <On Terms="ProgressLevel.RaynorCommanderBunker@Attached.Stop; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Birth,A,Stand"/>
+        <StageArray AnimProps="Birth,B,Start"/>
+        <StageArray AnimProps="Birth,B,Stand"/>
+        <StageArray AnimProps="Birth,C,Start"/>
+        <StageArray AnimProps="Birth,C,Stand"/>
+    </CActorProgress>
     <CActorStateMonitor id="TerranFlamesLargeBuilding2" parent="TerranFlames">
         <On Terms="UnitCreation.RaynorCommanderCommandCenter" Send="Create"/>
         <On Terms="UnitCreation.RaynorCommanderCommandCenter@Fly" Send="Create"/>

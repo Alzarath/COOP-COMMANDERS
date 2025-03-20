@@ -83,6 +83,23 @@
     <CDataCollectionUnit id="RaynorCommanderBunker" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderBunker"/>
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderBunker"/>
+        <DataRecord Entry="Actor,RaynorCommanderBunker@Splat"/>
+        <DataRecord Entry="Actor,RaynorCommanderBunker@Attached"/>
+        <DataRecord Entry="Actor,RaynorCommanderBunker@Build"/>
+        <DataRecord Entry="Button,RaynorCommanderBunker"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker@Splat"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker@DeathEmpty"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker@Placement"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker@Portrait"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker@Death@2"/>
+        <DataRecord Entry="Model,RaynorCommanderBunker@Build"/>
+        <DataRecord Entry="Sound,RaynorCommanderBunker@Explode"/>
+        <DataRecord Entry="Sound,RaynorCommanderBunker@What"/>
+        <DataRecord Entry="Sound,RaynorCommanderBunker@Ready"/>
+        <DataRecord Entry="Unit,RaynorCommanderBunker"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderCommandCenter" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderCommandCenter"/>
@@ -137,6 +154,10 @@
         <DataRecord Entry="Actor,RaynorCommanderHyperJump@LaunchSound"/>
         <DataRecord Entry="Sound,RaynorCommanderHyperJump@ImpactSound"/>
         <DataRecord Entry="Sound,RaynorCommanderHyperJump@LaunchSound"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderLoweredSupplies">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
+        <Button value="RaynorCommanderLoweredSupplies@1"/>
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderTacticalJump">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
@@ -356,6 +377,26 @@
     <CDataCollectionUnit id="RaynorCommanderSupplyDepot" parent="CommanderUnitMorphing">
         <Name value="DataCollection/Name/RaynorCommanderSupplyDepot"/>
         <EditorCategories value="DataGroup:Unit,Race:Raynor,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderSupplyDepot"/>
+        <DataRecord Entry="Actor,RaynorCommanderSupplyDepot@Splat"/>
+        <DataRecord Entry="Actor,RaynorCommanderSupplyDepot@Alternate"/>
+        <DataRecord Entry="Actor,RaynorCommanderSupplyDepot@Attached"/>
+        <DataRecord Entry="Actor,RaynorCommanderSupplyDepot@Build"/>
+        <DataRecord Entry="Button,RaynorCommanderSupplyDepot"/>
+        <DataRecord Entry="Footprint,RaynorCommanderSupplyDepot@Footpring@2"/>
+        <DataRecord Entry="Model,RaynorCommanderSupplyDepot"/>
+        <DataRecord Entry="Model,RaynorCommanderSupplyDepot@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderSupplyDepot@Portrait"/>
+        <DataRecord Entry="Model,RaynorCommanderSupplyDepot@Alternate"/>
+        <DataRecord Entry="Model,RaynorCommanderSupplyDepot@DeathAlternate"/>
+        <DataRecord Entry="Model,RaynorCommanderSupplyDepot@Placement"/>
+        <DataRecord Entry="Model,RaynorCommanderSupplyDepot@Build"/>
+        <DataRecord Entry="Requirement,RaynorCommanderSupplyDepot"/>
+        <DataRecord Entry="Sound,RaynorCommanderSupplyDepot@Explode"/>
+        <DataRecord Entry="Sound,RaynorCommanderSupplyDepot@Ready"/>
+        <DataRecord Entry="Sound,RaynorCommanderSupplyDepot@What"/>
+        <DataRecord Entry="Unit,RaynorCommanderSupplyDepot"/>
+        <DataRecord Entry="Unit,RaynorCommanderSupplyDepot@Alternate"/>
     </CDataCollectionUnit>
     <CDataCollectionUpgrade id="RaynorCommanderTalents">
         <EditorCategories value="DataGroup:Research,Race:Raynor,ObjectType:Other"/>

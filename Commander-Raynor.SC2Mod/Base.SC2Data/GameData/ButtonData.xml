@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderLoweredSupplies@2">
+        <Icon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-supplydepot.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
+    <CButton id="RaynorCommanderLoweredSupplies@1">
+        <Icon value="Assets\Textures\btn-building-terran-supplydepotlowered.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-supplydepotlowered.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
     <CButton id="RaynorCommanderBattlecruiser">
         <Icon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>

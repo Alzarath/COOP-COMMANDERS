@@ -17,6 +17,8 @@ Abil/Name/RaynorCommanderLiftFactory@Land=Land
 Abil/Name/RaynorCommanderLiftFactory@LiftOff=Lift Off
 Abil/Name/RaynorCommanderLiftStarport@Land=Land
 Abil/Name/RaynorCommanderLiftStarport@LiftOff=Lift Off
+Abil/Name/RaynorCommanderLoweredSupplies@1=Lower
+Abil/Name/RaynorCommanderLoweredSupplies@2=Raise
 Abil/Name/RaynorCommanderPlaceSpiderMine=Place Spider Mine
 Abil/Name/RaynorCommanderReactorMorphBarrack=Reactor
 Abil/Name/RaynorCommanderReactorMorphDetached=Reactor
@@ -50,18 +52,18 @@ Behavior/Tooltip/RaynorCommanderStimpackMara=This unit moves and attacks more qu
 Button/Name/RaynorBuildAdvanced=Build Advanced Structure
 Button/Name/RaynorCommanderAbilPDD=Point Defense Drone
 Button/Name/RaynorCommanderArmory=Build Armory
-Button/Name/RaynorCommanderBanshee=Build Banshee
-Button/Name/RaynorCommanderBarracks=Build Barracks
-Button/Name/RaynorCommanderBattlecruiser=Build Battlecruiser
-Button/Name/RaynorCommanderBuildAddons=Build Tech Lab
-Button/Name/RaynorCommanderBuildAddons@Barracks=Build Tech Lab
-Button/Name/RaynorCommanderBuildAddons@Factory=Build Tech Lab
-Button/Name/RaynorCommanderBuildAddons@Starport=Build Tech Lab
-Button/Name/RaynorCommanderBunker=Build Bunker
-Button/Name/RaynorCommanderCommandCenter=Build Command Center
+Button/Name/RaynorCommanderBanshee=Build <d stringRef="Unit,RaynorCommanderBanshee,Name"/>
+Button/Name/RaynorCommanderBarracks=Build <d stringRef="Unit,RaynorCommanderBarracks,Name"/>
+Button/Name/RaynorCommanderBattlecruiser=Build <d stringRef="Unit,RaynorCommanderBattlecruiser,Name"/>
+Button/Name/RaynorCommanderBuildAddons=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
+Button/Name/RaynorCommanderBuildAddons@Barracks=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
+Button/Name/RaynorCommanderBuildAddons@Factory=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
+Button/Name/RaynorCommanderBuildAddons@Starport=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
+Button/Name/RaynorCommanderBunker=Build <d stringRef="Unit,RaynorCommanderBunker,Name"/>
+Button/Name/RaynorCommanderCommandCenter=Build <d stringRef="Unit,RaynorCommanderCommandCenter,Name"/>
 Button/Name/RaynorCommanderEngineeringBay=Build Engineering Bay
-Button/Name/RaynorCommanderFactory=Build Factory
-Button/Name/RaynorCommanderFirebat=Train Firebat
+Button/Name/RaynorCommanderFactory=Build <d stringRef="Unit,RaynorCommanderFactory,Name"/>
+Button/Name/RaynorCommanderFirebat=Train <d stringRef="Unit,RaynorCommanderFirebat,Name"/>
 Button/Name/RaynorCommanderFusionCore=Build Fusion Core
 Button/Name/RaynorCommanderGather=Gather
 Button/Name/RaynorCommanderGhostAcademy=Build Ghost Academy
@@ -73,50 +75,52 @@ Button/Name/RaynorCommanderInfantryWeapon@Level1=Upgrade Infantry Weapons Level 
 Button/Name/RaynorCommanderInfantryWeapon@Level2=Upgrade Infantry Weapons Level 2
 Button/Name/RaynorCommanderInfantryWeapon@Level3=Upgrade Infantry Weapons Level 3
 Button/Name/RaynorCommanderJuggernautPlating=Juggernaut Plating
-Button/Name/RaynorCommanderMarauder=Train Marauder
-Button/Name/RaynorCommanderMarine=Train Marine
-Button/Name/RaynorCommanderMedic=Train Medic
+Button/Name/RaynorCommanderLoweredSupplies@1=Lower
+Button/Name/RaynorCommanderLoweredSupplies@2=Raise
+Button/Name/RaynorCommanderMarauder=Train <d stringRef="Unit,RaynorCommanderMarauder,Name"/>
+Button/Name/RaynorCommanderMarine=Train <d stringRef="Unit,RaynorCommanderMarine,Name"/>
+Button/Name/RaynorCommanderMedic=Train <d stringRef="Unit,RaynorCommanderMedic,Name"/>
 Button/Name/RaynorCommanderMissileTurret=Build Missile Turret
 Button/Name/RaynorCommanderPDD=Button
-Button/Name/RaynorCommanderReactorMorphBarrack=Build Reactor
-Button/Name/RaynorCommanderReactorMorphFactory=Build Reactor
-Button/Name/RaynorCommanderReactorMorphStarport=Build Reactor
+Button/Name/RaynorCommanderReactorMorphBarrack=Build <d stringRef="Unit,RaynorCommanderReactor,Name"/>
+Button/Name/RaynorCommanderReactorMorphFactory=Build <d stringRef="Unit,RaynorCommanderReactor,Name"/>
+Button/Name/RaynorCommanderReactorMorphStarport=Build <d stringRef="Unit,RaynorCommanderReactor,Name"/>
 Button/Name/RaynorCommanderRefinery=Build Refinery
 Button/Name/RaynorCommanderRepair=Repair
 Button/Name/RaynorCommanderReturnCargo=Return Cargo
-Button/Name/RaynorCommanderSCV@SCV=Train SCV
+Button/Name/RaynorCommanderSCV@SCV=Train <d stringRef="Unit,RaynorCommanderSCV,Name"/>
 Button/Name/RaynorCommanderSensorTower=Build Sensor Tower
-Button/Name/RaynorCommanderSiegeTank=Build Siege Tank
-Button/Name/RaynorCommanderStarport=Build Starport
-Button/Name/RaynorCommanderStimpack=Use Stimpack
-Button/Name/RaynorCommanderStimpackMara=Use Stimpack
-Button/Name/RaynorCommanderSupplyDepot=Build Supply Depot
+Button/Name/RaynorCommanderSiegeTank=Build <d stringRef="Unit,RaynorCommanderSiegeTank,Name"/>
+Button/Name/RaynorCommanderStarport=Build <d stringRef="Unit,RaynorCommanderStarport,Name"/>
+Button/Name/RaynorCommanderStimpack=Use <d stringRef="Abil,RaynorCommanderStimpack,Name"/>
+Button/Name/RaynorCommanderStimpackMara=Use <d stringRef="Abil,RaynorCommanderStimpackMara,Name"/>
+Button/Name/RaynorCommanderSupplyDepot=Build <d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>
 Button/Name/RaynorCommanderTacticalJump=Hyper Jump
-Button/Name/RaynorCommanderTechLabMorphBarrack=Build Tech Lab
-Button/Name/RaynorCommanderTechLabMorphFactory=Build Tech Lab
-Button/Name/RaynorCommanderTechLabMorphStarport=Build Tech Lab
+Button/Name/RaynorCommanderTechLabMorphBarrack=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
+Button/Name/RaynorCommanderTechLabMorphFactory=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
+Button/Name/RaynorCommanderTechLabMorphStarport=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
 Button/Name/RaynorCommanderTerranBuild=Build Structure
-Button/Name/RaynorCommanderViking=Build Viking
+Button/Name/RaynorCommanderViking=Build <d stringRef="Unit,RaynorCommanderViking,Name"/>
 Button/Name/RaynorCommanderVikingMode@1=Assault Mode
 Button/Name/RaynorCommanderVikingMode@2=Fighter
-Button/Name/RaynorCommanderVulture=Build Vulture
+Button/Name/RaynorCommanderVulture=Build <d stringRef="Unit,RaynorCommanderVulture,Name"/>
 Button/Name/RaynorCommanderYamatoGun=Yamato Cannon
 Button/Tooltip/RaynorBuildAdvanced=A list of advanced structures.
-Button/Tooltip/RaynorCommanderArmory=Contains weapon and armor upgrades for Factory and Starport units. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellbat at the Factory<n/>- Thor at the Factory
+Button/Tooltip/RaynorCommanderArmory=Contains weapon and armor upgrades for <c val="FFFF80"><d stringRef="Unit,RaynorCommanderFactory,Name"/> and <d stringRef="Unit,RaynorCommanderStarport,Name"/></c> units. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellbat at the Factory<n/>- Thor at the Factory
 Button/Tooltip/RaynorCommanderBanshee=Tactical-strike aircraft. Can be upgraded to use cloak.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderBarracks=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marines<n/>- Reapers<n/>- Bunkers from SCVs<n/>- Orbital Commands from Command Centers
-Button/Tooltip/RaynorCommanderBarracks@Fly=Barracks must land to start unit production.
+Button/Tooltip/RaynorCommanderBarracks@Fly=<c val="FFFF80"><d stringRef="Unit,RaynorCommanderBarracks,Name"/></c> must land to start unit production.
 Button/Tooltip/RaynorCommanderBattlecruiser=Powerful warship. Can use Yamato Cannon and Tactical Jump.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/RaynorCommanderBuildAddons=Allows 2 units to be created simultaneously.
-Button/Tooltip/RaynorCommanderBuildAddons@Barracks=Infantry-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marauders<n/>- Ghosts with Ghost Academy
+Button/Tooltip/RaynorCommanderBuildAddons@Barracks=Infantry-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- <d stringRef="Unit,RaynorCommanderMarauder,Name"/><n/>- <d stringRef="Unit,RaynorCommanderMedic,Name"/>
 Button/Tooltip/RaynorCommanderBuildAddons@Factory=Vehicle-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Siege Tanks<n/>- Thor with Armory<n/>- Cyclones
 Button/Tooltip/RaynorCommanderBuildAddons@Starport=Aircraft-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Banshees<n/>- Ravens<n/>- Battlecruisers with Fusion Core
 Button/Tooltip/RaynorCommanderBunker=Defensive structure. <n/>Infantry fights from inside. <n/><n/><c val="#ColorAttackInfo">Bonus: +1 range to units inside.</c>
 Button/Tooltip/RaynorCommanderCommandCenter=Primary structure. Used to receive gathered resources. Can use the Lift Off ability and can upgrade into an Orbital Command or a Planetary Fortress.<n/><n/><c val="ffff8a">Enables:</c><n/>- SCVs
 Button/Tooltip/RaynorCommanderCommandCenter@Fly=Primary structure. Must land to receive resources, produce units, or use abilities.
 Button/Tooltip/RaynorCommanderEngineeringBay=Contains upgrades for Terran infantry and structures. <n/><n/><c val="ffff8a">Enables:</c><n/>- Missile Turrets from SCVs<n/>- Sensor Towers from SCVs<n/>- Planetary Fortresses from Command Centers
-Button/Tooltip/RaynorCommanderFactory=Vehicle-production facility. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellions<n/>- Widow Mines
-Button/Tooltip/RaynorCommanderFactory@Fly=Factory must land to start unit production.
+Button/Tooltip/RaynorCommanderFactory=Vehicle-production facility. <n/><n/><c val="ffff8a">Enables:</c><n/>- <d stringRef="Unit,RaynorCommanderVulture,Name"/><n/>- <d stringRef="Unit,RaynorCommanderSiegeTank,Name"/>
+Button/Tooltip/RaynorCommanderFactory@Fly=<d stringRef="Unit,RaynorCommanderFactory,Name"/> must land to start unit production.
 Button/Tooltip/RaynorCommanderFirebat=Raider. Can jump up and down cliffs. Regenerates life quickly while out of combat. Can use KD8 Charge.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderFusionCore=Contains Battlecruiser upgrades. <n/><n/><c val="ffff8a">Enables:</c><n/>- Battlecruisers at the Starport
 Button/Tooltip/RaynorCommanderGather=Orders SCV to gather resources from a selected Mineral Field or Vespene Geyser.
@@ -126,13 +130,15 @@ Button/Tooltip/RaynorCommanderInfantryWeapon@Level1=Upgrades the damage dealt by
 Button/Tooltip/RaynorCommanderInfantryWeapon@Level2=Further upgrades the damage dealt by infantry units.
 Button/Tooltip/RaynorCommanderInfantryWeapon@Level3=Maximizes the damage dealt by infantry units.
 Button/Tooltip/RaynorCommanderJuggernautPlating=Броня огнемётчиков укрепляется на <c val="FFE1AE"><d ref="Upgrade,RaynorCommanderJuggernautPlating,EffectArrayTemplate[0].Value"/></c>
+Button/Tooltip/RaynorCommanderLoweredSupplies@1=Lowers the structure, allowing ground units to move across it.
+Button/Tooltip/RaynorCommanderLoweredSupplies@2=Raises the structure, preventing ground units from moving across it.
 Button/Tooltip/RaynorCommanderMarauder=Heavy assault infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderMarine=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/RaynorCommanderMedic=Sniper. Can use Snipe, EMP Round, and be upgraded to use Cloak. Can call down Tactical Nukes built at the Ghost Academy.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/RaynorCommanderMissileTurret=Anti-air defensive structure.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c><n/><c val="FFE303">Detector</c>
 Button/Tooltip/RaynorCommanderPDD=Uses a laser to shoot down enemy missiles.  <n/>Cannot target special attacks. <n/>Times out after <d ref="Behavior,PointDefenseDroneTimedLife,Duration"/> seconds.<n/><n/><c val="f078ff">Each shot consumes 10 energy.</c>
 Button/Tooltip/RaynorCommanderReactor=Enables additional units and research options. A Tech Lab can fit onto any production structure.
-Button/Tooltip/RaynorCommanderReactorMorphBarrack=Infantry-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marauders<n/>- Ghosts with Ghost Academy
+Button/Tooltip/RaynorCommanderReactorMorphBarrack=Infantry-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- <d stringRef="Unit,RaynorCommanderMarauder,Name"/><n/>- <d stringRef="Unit,RaynorCommanderMedic,Name"/>
 Button/Tooltip/RaynorCommanderReactorMorphFactory=Vehicle-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Siege Tanks<n/>- Thor with Armory<n/>- Cyclones
 Button/Tooltip/RaynorCommanderReactorMorphStarport=Aircraft-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Banshees<n/>- Ravens<n/>- Battlecruisers with Fusion Core
 Button/Tooltip/RaynorCommanderRefinery=Built over a Vespene Geyser to allow harvesting of vespene gas.
@@ -148,8 +154,9 @@ Button/Tooltip/RaynorCommanderStarport@Flying=Starport must land to start unit p
 Button/Tooltip/RaynorCommanderStimpack=Injects the unit with powerful stimulants that greatly increase attack and movement speeds for a few seconds. Injures the unit for 10 of the unit's life.
 Button/Tooltip/RaynorCommanderStimpackMara=Injects the unit with powerful stimulants that greatly increase attack and movement speeds for a few seconds. Injures the unit for 10 of the unit's life.
 Button/Tooltip/RaynorCommanderSupplyDepot=Provides supply.<n/>Supply allows you to create more units.<n/>Supply Depots can be lowered to allow units to walk over them.
+Button/Tooltip/RaynorCommanderSupplyDepot@Alternate=Provides supply.<n/>Supply allows you to create more units.<n/>Supply Depots can be lowered to allow units to walk over them.
 Button/Tooltip/RaynorCommanderTechLab=Enables additional units and research options. A Tech Lab can fit onto any production structure.
-Button/Tooltip/RaynorCommanderTechLabMorphBarrack=Infantry-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marauders<n/>- Ghosts with Ghost Academy
+Button/Tooltip/RaynorCommanderTechLabMorphBarrack=Infantry-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- <d stringRef="Unit,RaynorCommanderMarauder,Name"/><n/>- <d stringRef="Unit,RaynorCommanderMedic,Name"/>
 Button/Tooltip/RaynorCommanderTechLabMorphFactory=Vehicle-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Siege Tanks<n/>- Thor with Armory<n/>- Cyclones
 Button/Tooltip/RaynorCommanderTechLabMorphStarport=Aircraft-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Banshees<n/>- Ravens<n/>- Battlecruisers with Fusion Core
 Button/Tooltip/RaynorCommanderTerranBuild=A list of basic structures.
@@ -160,6 +167,8 @@ Button/Tooltip/RaynorCommanderVikingMode@2=Transforms the Viking to Fighter Mode
 Button/Tooltip/RaynorCommanderVulture=Построить "Стервятника".
 Button/Tooltip/RaynorCommanderYamatoGun=Blasts a target with a devastating plasma cannon, causing 300 damage.
 Commander/Name/DATARaynor=Raynor
+DOCSTR_0000=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
+DOCSTR_0001=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 DataCollection/Name/RaynorCommanderATALaserBatteryAir=Raynor Commander - Battlecruiser
 DataCollection/Name/RaynorCommanderATSLaserBattery=Raynor Commander - Battlecruiser
 DataCollection/Name/RaynorCommanderAbilPDD=Raynor Commander - Abil PDD
@@ -191,6 +200,7 @@ DataCollection/Name/RaynorCommanderLiftBarrack=Raynor Commander - Lift
 DataCollection/Name/RaynorCommanderLiftCommandCenter=Raynor Commander - Lift (Command Center)
 DataCollection/Name/RaynorCommanderLiftFactory=Raynor Commander - Lift
 DataCollection/Name/RaynorCommanderLiftStarport=Raynor Commander - Lift
+DataCollection/Name/RaynorCommanderLoweredSupplies=Raynor Commander - Lowered Supplies
 DataCollection/Name/RaynorCommanderMarauder=Raynor Commander - Marauder
 DataCollection/Name/RaynorCommanderMedic=Raynor Commander - Medic
 DataCollection/Name/RaynorCommanderMissileTurret=Raynor Commander - Missile Turret
@@ -313,10 +323,10 @@ Param/Value/lib_B6F694BB_3164CB64=Не выбрана ни одна единиц
 Param/Value/lib_B6F694BB_3C6DA2ED=Не указано количество добавляемого здоровья!
 Param/Value/lib_B6F694BB_D50C6F18=Не выбрана ни одна единица!
 Param/Value/lib_B6F694BB_F3E6B9B7=Unit ID
-RequirementNode/Tooltip/CountUnitAlias_BarracksCompleteOnly96167438TechTreeCheat=Factory
-RequirementNode/Tooltip/CountUnitAlias_FactoryCompleteOnly4195804750TechTreeCheat=Starport
+RequirementNode/Tooltip/CountUnitAlias_BarracksCompleteOnly1633119839TechTreeCheat=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
+RequirementNode/Tooltip/CountUnitAlias_FactoryCompleteOnly3407815928TechTreeCheat=<d stringRef="Unit,RaynorCommanderFactory,Name"/>
 RequirementNode/Tooltip/CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810=Пристроенная лаборатория
-RequirementNode/Tooltip/CountUnitAlias_SupplyDepotCompleteOnly789532539TechTreeCheat=Barracks
+RequirementNode/Tooltip/CountUnitAlias_SupplyDepotCompleteOnly169109972TechTreeCheat=<d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>
 RequirementNode/Tooltip/CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat=Research Concussive Shells at the Barracks Tech Lab
 RequirementNode/Tooltip/GTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5=5 обученных мародёров
 RequirementNode/Tooltip/Not404259234CountUnitRaynorCommanderMarineQueuedOrBetter=На карте может быть только один морпех
@@ -336,9 +346,9 @@ Unit/Name/RaynorCommanderATSLaserBattery@Missile=Missile
 Unit/Name/RaynorCommanderAbilPDD@Missile=Missile
 Unit/Name/RaynorCommanderBackslashRockets@Missile=Missile
 Unit/Name/RaynorCommanderBanshee=Banshee
-Unit/Name/RaynorCommanderBarracks=Barracks
-Unit/Name/RaynorCommanderBarracks@Fly=Barracks
+Unit/Name/RaynorCommanderBarracks=Хуерма
 Unit/Name/RaynorCommanderBattlecruiser=Battlecruiser 
+Unit/Name/RaynorCommanderBunker=Bunker
 Unit/Name/RaynorCommanderCommandCenter=Command Center
 Unit/Name/RaynorCommanderDuskWings=Dusk Wings
 Unit/Name/RaynorCommanderFactory=Factory
@@ -358,6 +368,8 @@ Unit/Name/RaynorCommanderSiegeTank@Alternate=Siege Tank
 Unit/Name/RaynorCommanderSpiderMine=Spider mine
 Unit/Name/RaynorCommanderSpiderMine@Burrowed=Spider mine
 Unit/Name/RaynorCommanderStarport=Starport
+Unit/Name/RaynorCommanderSupplyDepot=Хранилище
+Unit/Name/RaynorCommanderSupplyDepot@Alternate=<d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>
 Unit/Name/RaynorCommanderTechLab=Tech Lab
 Unit/Name/RaynorCommanderTorpedoes@Missile=Missile
 Unit/Name/RaynorCommanderViking=Viking

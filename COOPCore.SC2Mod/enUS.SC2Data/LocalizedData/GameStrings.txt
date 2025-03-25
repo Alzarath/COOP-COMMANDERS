@@ -76,3 +76,5 @@ Param/Value/lib_EB5FB1D6_3F4B7946=Ошибка чита!
 Param/Value/lib_EB5FB1D6_770CBEC4=Аргумент для чита не распознан.
 Param/Value/lib_EB5FB1D6_E1975494=Ошибка чита
 Param/Value/lib_EB5FB1D6_F0AAC220=Не достаточно аргументов для чита.
+Unit/COOP/LifeArmorName/TerranBuildingPlating=Terran building plating
+Unit/COOP/LifeArmorName/ZergBuildingArmor=Zerg building armor

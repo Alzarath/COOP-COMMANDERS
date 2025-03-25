@@ -1,5 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+
+    <!-- Units Template -->
+    <CUnit default="1" id="CommanderUnitBase">
+        <Name value="Unit/Name/COOP/##id##"/>
+        <Mob value="Campaign"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <EditorCategories value="ObjectType:Other,ObjectFamily:Coop"/>
+        <ScoreResult value="BuildOrder"/>
+        <GlossaryAlias value="##id##"/>
+        <DeathRevealRadius value="3"/>
+        <Sight value="9"/>
+        <AttackTargetPriority value="11"/>
+        <ScoreMakeCostFactor index="Minerals" value="1"/>
+        <ScoreMakeCostFactor index="Vespene" value="1"/>
+        <ScoreKillCostFactor index="Minerals" value="1"/>
+        <ScoreKillCostFactor index="Vespene" value="1"/>
+    </CUnit>
+    <CUnit default="1" id="CommanderGround" parent="CommanderUnitBase">
+        <FlagArray index="ArmySelect" value="1"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <CostCategory value="Army"/>
+        <AttackTargetPriority value="20"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <CardLayouts>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+        </CardLayouts>
+        <CargoSize value="2"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <StationaryTurningRate value="990"/>
+        <TurningRate value="990"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+    </CUnit>
+    <CUnit default="1" id="CommanderAir" parent="CommanderUnitBase">
+        <FlagArray index="ArmySelect" value="1"/>
+        <Speed value="2.25"/>
+        <CostCategory value="Army"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <CardLayouts>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <StationaryTurningRate value="990"/>
+        <TurningRate value="990"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Mover value="Fly"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+    </CUnit>
+    <CUnit default="1" id="CommanderStructure" parent="CommanderUnitBase">
+        <TechAliasArray value="Alias_##id##"/>
+        <Facing value="45"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeArmor value="1"/>
+        <CostCategory value="Technology"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5PassiveCancelToSelection"/>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5PassiveCancelToSelection,CancelLast" Row="2" Column="4"/>
+        </CardLayouts>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop"/>
+        <!--        <AbilArray Link="Deployable"/>-->
+    </CUnit>
+    <CUnit default="1" id="CommanderStructure_Terr" parent="CommanderStructure">
+        <LifeArmorName value="Unit/COOP/LifeArmorName/TerranBuildingPlating"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit default="1" id="CommanderStructure_Zerg" parent="CommanderStructure">
+        <LifeArmorName value="Unit/COOP/LifeArmorName/ZergBuildingArmor"/>
+        <BehaviorArray Link="OnCreep"/>
+        <BehaviorArray Link="ZergBuildingNotOnCreep"/>
+        <BehaviorArray Link="ZergBuildingDies6"/>
+    </CUnit>
+    <CUnit default="1" id="CommanderStructure_Prot" parent="CommanderStructure">
+    </CUnit>
+
+
+    <!-- DataCollection Pattern -->
+
     <CDataCollectionAbil id="CommanderAbilityBuild">
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_Build"/>

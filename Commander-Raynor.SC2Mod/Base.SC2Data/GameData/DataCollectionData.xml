@@ -159,6 +159,21 @@
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
         <Button value="RaynorCommanderLoweredSupplies@1"/>
     </CDataCollectionAbil>
+    <CDataCollection id="RaynorCommanderProgressSounds">
+        <EditorCategories value="Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Actor,RaynorCommanderProgressSounds"/>
+    </CDataCollection>
+    <CDataCollection id="RaynorCommanderProgressSoundsAttached">
+        <EditorCategories value="Race:Raynor,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderProgressSoundsAttached@Start"/>
+        <DataRecord Entry="Actor,RaynorCommanderProgressSoundsAttached@2"/>
+        <DataRecord Entry="Actor,RaynorCommanderProgressSoundsAttached@4"/>
+        <DataRecord Entry="Actor,RaynorCommanderProgressSoundsAttached@End"/>
+        <DataRecord Entry="Sound,RaynorCommanderProgressSoundsAttached@Start"/>
+        <DataRecord Entry="Sound,RaynorCommanderProgressSoundsAttached@2"/>
+        <DataRecord Entry="Sound,RaynorCommanderProgressSoundsAttached@1"/>
+        <DataRecord Entry="Sound,RaynorCommanderProgressSoundsAttached@End"/>
+    </CDataCollection>
     <CDataCollectionAbil id="RaynorCommanderTacticalJump">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTacticalJump"/>
@@ -805,7 +820,7 @@
         <Name value="DataCollection/Name/RaynorCommanderBuildSCV"/>
         <EditorCategories value="DataGroup:AbilityBuildTrain,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderBuildSCV"/>
-        <DataRecord Entry="Actor,RaynorConstruction"/>
+        <DataRecord Entry="Actor,RaynorCommanderProgressSounds"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderFirebat" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderFirebat"/>

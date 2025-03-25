@@ -1380,22 +1380,22 @@
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_YamatoAttackLaunch0.wav" FacialGroup=""/>
     </CSound>
-    <CSound id="Raynor_ConstructionEnd" parent="Build">
+    <CSound id="RaynorCommanderProgressSoundsAttached@End" parent="Build">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionEnd.wav"/>
         <Volume value="-6.000000,-6.000000"/>
     </CSound>
-    <CSound id="Raynor_ConstructionStage1" parent="Build">
+    <CSound id="RaynorCommanderProgressSoundsAttached@1" parent="Build">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionStage1.wav"/>
         <Volume value="-6.000000,-6.000000"/>
     </CSound>
-    <CSound id="Raynor_ConstructionStage2" parent="Build">
+    <CSound id="RaynorCommanderProgressSoundsAttached@2" parent="Build">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionStage2.wav"/>
         <Volume value="-6.000000,-6.000000"/>
     </CSound>
-    <CSound id="Raynor_ConstructionStart" parent="Build">
+    <CSound id="RaynorCommanderProgressSoundsAttached@Start" parent="Build">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionStart.wav"/>
         <Volume value="-6.000000,-6.000000"/>

@@ -92,19 +92,7 @@
         <value>Zeratul</value>
         <value>Stetmann</value>
         <value>ArcturusMengsk</value>
-        <value>Neutral</value><!--
-        <value>Human</value>
-        <value>Undead</value>
-        <value>Orc</value>
-        <value>NightElf</value>
-        <value>Naga</value>
-        <value>Commoner</value>
-        <value>Critter</value>
-        <value>Creeps</value>
-        <value>Demon</value>
-        <value>Other</value>
-        <value>InfestedTerran</value>
-        <value>PrimalZerg</value>-->
+        <value>Neutral</value>
     </category>
     <category name="UpgradeType">
         <value>AttackBonus</value>

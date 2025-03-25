@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CActorModel id="RaynorCommanderBunker@Build" parent="TerranBuildingBuild">
-        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderBunker@Attached"/>
+        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderProgressSounds"/>
     </CActorModel>
     <CActorUnit id="RaynorCommanderBunker" parent="TerranBuildingEx" unitName="RaynorCommanderBunker">
         <Aliases value="_UnitHuge"/>
@@ -394,6 +394,7 @@
         <Macros value="TerranCommandCenterPlayerDecalMacro"/>
         <Macros value="SprayHelperMacro"/>
         <AcceptedHostedPropTransfers index="Decal" value="0"/>
+        <On index="69" Send="Create RaynorCommanderCommandCenter@Build"/>
         <On index="80" Terms="UnitBirth.RaynorCommanderCommandCenter@Fly" Send="Create"/>
         <On index="81" Terms="UnitBirth.RaynorCommanderCommandCenter@Fly" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
         <On index="82" Terms="UnitBirth.RaynorCommanderCommandCenter@Fly" Send="AliasRemove _CreepEngulfable"/>
@@ -779,11 +780,11 @@
         <On index="69" Send="Create RaynorCommanderTechLabBarrack@Build"/>
     </CActorUnit>
     <CActorSplat id="RaynorCommanderTechLabBarrack@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderTechLabBarrack"/>
-    <CActorModel id="RaynorCommanderBarracksBuild" parent="TerranBuildingBuild">
-        <On index="4" Terms="ActorCreation" Send="Create RaynorConstructionAttached"/>
-        <Model value="RaynorCommanderBarracks@Build"/>
+    <CActorModel id="RaynorCommanderBarracks@Build" parent="TerranBuildingBuild">
+        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderProgressSounds"/>
     </CActorModel>
     <CActorUnit id="RaynorCommanderBarracks" parent="TerranBuildingFlyerEx" unitName="RaynorCommanderBarracks">
+        <On index="69" Send="Create RaynorCommanderBarracks@Build"/>
         <On index="80" Terms="UnitBirth.RaynorCommanderBarracks@Fly" Send="Create"/>
         <On index="81" Terms="UnitBirth.RaynorCommanderBarracks@Fly" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
         <On index="82" Terms="UnitBirth.RaynorCommanderBarracks@Fly" Send="AliasRemove _CreepEngulfable"/>
@@ -1281,21 +1282,17 @@
         <On index="3" Terms="Abil.ButtonHoverOn" Send="Create"/>
         <On index="4" Terms="Abil.ButtonHoverOff" Send="Destroy"/>
     </CActorRange>
-    <CActorProgress id="RaynorConstruction">
+    <CActorProgress id="RaynorCommanderProgressSounds">
+        <Supporter Subject="_TerranBuildModel"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSounds.Start; Level 0" Send="SetTransferOverrideAnim Build,A,Stand"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSounds.Stop; Level 0" Send="SetTransferOverrideAnim"/>
         <On Terms="Abil.RaynorCommanderBuildSCV.BuiltStart" Send="Create"/>
-        <On Terms="Abil.BarracksAddOns.BuiltStart" Send="Create"/>
-        <On Terms="Abil.FactoryAddOns.BuiltStart" Send="Create"/>
-        <On Terms="Abil.StarportAddOns.BuiltStart" Send="Create"/>
-        <On Terms="Abil.MachineShop.BuiltStart" Send="Create"/>
-        <On Terms="ProgressLevel.TerranConstruction.Start; Level 0" Send="SetTransferOverrideAnim Build,A,Stand"/>
-        <On Terms="ProgressLevel.TerranConstruction.Stop; Level 0" Send="SetTransferOverrideAnim"/>
         <StageArray AnimProps="Build,A,Start" BlendTime="0.000000"/>
         <StageArray AnimProps="Build,A,Stand"/>
         <StageArray AnimProps="Build,B,Start"/>
         <StageArray AnimProps="Build,B,Stand"/>
         <StageArray AnimProps="Build,C,Start"/>
         <StageArray AnimProps="Build,C,Stand"/>
-        <StageArray AnimProps="Build,D"/>
     </CActorProgress>
     <CActorSound id="RaynorCommanderStimpackMara@Finish" parent="SoundOneShot">
         <On Terms="Abil.RaynorCommanderStimpackMara.SourceFinishStart" Send="Create"/>
@@ -1314,10 +1311,10 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
-    <CActorProgress id="RaynorConstructionAttached">
+    <CActorProgress id="RaynorCommanderProgressSoundsAttached">
         <Supporter Subject="_TerranBuildModel"/>
-        <On Terms="ProgressLevel.RaynorConstructionAttached; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
-        <On Terms="ProgressLevel.RaynorConstructionAttached; Level 0" Send="SetTransferOverrideAnim"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached; Level 0" Send="SetTransferOverrideAnim"/>
         <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
         <StageArray AnimProps="Birth,A,Stand"/>
         <StageArray AnimProps="Birth,B,Start"/>
@@ -1325,25 +1322,23 @@
         <StageArray AnimProps="Birth,C,Start"/>
         <StageArray AnimProps="Birth,C,Stand"/>
     </CActorProgress>
-    <CActorSound id="RaynorConstructionSoundLevel0" parent="ProgressSound">
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 0" Send="Create"/>
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 0" Send="Destroy"/>
-        <Sound value="Raynor_ConstructionStart"/>
+    <CActorSound id="RaynorCommanderProgressSoundsAttached@Start" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Start; Level 0" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Stop; Level 0" Send="Destroy"/>
     </CActorSound>
-    <CActorSound id="RaynorConstructionSoundLevel2" parent="ProgressSound">
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 2" Send="Create"/>
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 2" Send="Destroy"/>
-        <Sound value="Raynor_ConstructionStage1"/>
+    <CActorSound id="RaynorCommanderProgressSoundsAttached@2" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Start; Level 2" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Stop; Level 2" Send="Destroy"/>
+        <Sound value="RaynorCommanderProgressSoundsAttached@1"/>
     </CActorSound>
-    <CActorSound id="RaynorConstructionSoundLevel4" parent="ProgressSound">
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 4" Send="Create"/>
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 4" Send="Destroy"/>
-        <Sound value="Raynor_ConstructionStage2"/>
+    <CActorSound id="RaynorCommanderProgressSoundsAttached@4" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Start; Level 4" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Stop; Level 4" Send="Destroy"/>
+        <Sound value="RaynorCommanderProgressSoundsAttached@2"/>
     </CActorSound>
-    <CActorSound id="RaynorConstructionSoundLevel6" parent="ProgressSound">
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Start; Level 6" Send="Create"/>
-        <On Terms="ProgressLevel.RaynorConstructionAttached.Stop; Level 6" Send="Destroy"/>
-        <Sound value="Raynor_ConstructionEnd"/>
+    <CActorSound id="RaynorCommanderProgressSoundsAttached@End" parent="ProgressSound">
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Start; Level 6" Send="Create"/>
+        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached.Stop; Level 6" Send="Destroy"/>
     </CActorSound>
     <CActorUnit id="RaynorCommanderTechLab" parent="TechLabBase" unitName="RaynorCommanderTechLab">
         <Model value="RaynorCommanderTechLab"/>
@@ -1721,7 +1716,7 @@
         </Wireframe>
     </CActorUnit>
     <CActorModel id="RaynorCommanderSupplyDepot@Build" parent="TerranBuildingBuild">
-        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderSupplyDepot@Attached"/>
+        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderProgressSounds"/>
     </CActorModel>
     <CActorSound id="TerranBuildingFlameBig@Sound" parent="TerranFlameSound">
         <Sound value="Terran_FlameLoopLarge"/>
@@ -1754,28 +1749,6 @@
         <On Terms="StateChange; StateValid Fire" Send="Create TerranBuildingFlameBig@Sound"/>
         <On Terms="StateChange; !StateValid Fire" Target="TerranBuildingFlameBig@Sound" Send="Destroy"/>
     </CActorStateMonitor>
-    <CActorProgress id="RaynorCommanderSupplyDepot@Attached">
-        <Supporter Subject="_TerranBuildModel"/>
-        <On Terms="ProgressLevel.RaynorCommanderSupplyDepot@Attached.Start; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
-        <On Terms="ProgressLevel.RaynorCommanderSupplyDepot@Attached.Stop; Level 0" Send="SetTransferOverrideAnim"/>
-        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
-        <StageArray AnimProps="Birth,A,Stand"/>
-        <StageArray AnimProps="Birth,B,Start"/>
-        <StageArray AnimProps="Birth,B,Stand"/>
-        <StageArray AnimProps="Birth,C,Start"/>
-        <StageArray AnimProps="Birth,C,Stand"/>
-    </CActorProgress>
-    <CActorProgress id="RaynorCommanderBunker@Attached">
-        <Supporter Subject="_TerranBuildModel"/>
-        <On Terms="ProgressLevel.RaynorCommanderBunker@Attached.Start; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
-        <On Terms="ProgressLevel.RaynorCommanderBunker@Attached.Stop; Level 0" Send="SetTransferOverrideAnim"/>
-        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
-        <StageArray AnimProps="Birth,A,Stand"/>
-        <StageArray AnimProps="Birth,B,Start"/>
-        <StageArray AnimProps="Birth,B,Stand"/>
-        <StageArray AnimProps="Birth,C,Start"/>
-        <StageArray AnimProps="Birth,C,Stand"/>
-    </CActorProgress>
     <CActorStateMonitor id="TerranFlamesLargeBuilding2" parent="TerranFlames">
         <On Terms="UnitCreation.RaynorCommanderCommandCenter" Send="Create"/>
         <On Terms="UnitCreation.RaynorCommanderCommandCenter@Fly" Send="Create"/>

@@ -343,7 +343,10 @@ UI/HelpMenuDialogTechGlossary_Control_Unit/Category/RaynorCommanderUnits=Ком�
 Unit/Category/RaynorCommanderUnits=Командир Рейнор
 Unit/Description/RaynorCommanderMedic=Легкая единица поддержки. Может использовать способность <c val="FFE1AE"><d stringref="Abil/Name/RaynorCommanderHeal"/></c>
 Unit/LifeArmorName/TerranBuildingPlating=Terran Building Plating
-Unit/Name/COOP/RaynorCommanderMarine=Marine
+Unit/Name/COOP/RaynorCommanderFirebat=Firebat
+Unit/Name/COOP/RaynorCommanderMarauder=Marauder
+Unit/Name/COOP/RaynorCommanderMarine=Морпех
+Unit/Name/COOP/RaynorCommanderMedic=Medic
 Unit/Name/RaynorCommanderATALaserBatteryAir@Missile=Missile
 Unit/Name/RaynorCommanderATSLaserBattery@Missile=Missile
 Unit/Name/RaynorCommanderAbilPDD@Missile=Missile

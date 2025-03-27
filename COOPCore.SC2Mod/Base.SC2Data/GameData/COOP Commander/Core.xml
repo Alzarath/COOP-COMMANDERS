@@ -124,6 +124,172 @@
     <CUnit default="1" id="CommanderStructure_Prot" parent="CommanderStructure">
     </CUnit>
 
+    <!-- Actors Template -->
+    <CActorUnit default="1" id="CommanderUnitBase" parent="GenericUnitStandard">
+        <Name value="Actor/Name/COOP/##id##"/>
+        <Model value="##unitName##"/>
+        <PortraitModel value="##unitName##@Portrait"/>
+        <PlacementModel value="##unitName##@Placement"/>
+        <BuildModel value="##unitName##@Build"/>
+        <GlossaryAnim value="Spell"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+
+        <Macros value="TerrainSquibAnimations"/>
+
+        <SoundArray index="Birth" value="##unitName##@Birth"/>
+        <SoundArray index="Ready" value="##unitName##@Ready"/>
+        <SoundArray index="Help" value="##unitName##@Help"/>
+        <SoundArray index="What" value="##unitName##@What"/>
+        <SoundArray index="Yes" value="##unitName##@Yes"/>
+        <SoundArray index="Attack" value="##unitName##@Attack"/>
+        <SoundArray index="Pissed" value="##unitName##@Pissed"/>
+        <SoundArray index="Movement" value="##unitName##@Movement"/>
+        <SoundArray index="Turning" value="##unitName##@Turning"/>
+        <SoundArray index="Board" value="##unitName##@Board"/>
+        <SoundArray index="Construction" value="##unitName##@Constuction"/>
+        <SoundArray index="Click" value="##unitName##@Click"/>
+        <SoundArray index="ClickError" value="##unitName##@ClickError"/>
+        <SoundArray index="Highlight" value="##unitName##@Highlight"/>
+
+        <!-- Death Array-->
+        <DeathArray index="Normal" ModelLink="##unitName##@Death"/>
+        <DeathArray index="Normal" SoundLink="##unitName##@Death"/>
+        <DeathArray index="Normal" VoiceLink="##unitName##@DeathVoice"/>
+        
+        <DeathArray index="Blast" ModelLink="##unitName##@DeathBlast"/>
+        <DeathArray index="Blast" SoundLink="##unitName##@DeathBlast"/>
+        <DeathArray index="Blast" VoiceLink="##unitName##@DeathVoiceBlast"/>
+
+        <DeathArray index="Disintegrate" ModelLink="##unitName##@DeathDisintegrate"/>
+        <DeathArray index="Disintegrate" SoundLink="##unitName##@DeathDisintegrate"/>
+        <DeathArray index="Disintegrate" VoiceLink="##unitName##@DeathVoiceDisintegrate"/>
+
+        <DeathArray index="Eat" ModelLink="##unitName##@DeathEat"/>
+        <DeathArray index="Eat" SoundLink="##unitName##@DeathEat"/>
+        <DeathArray index="Eat" VoiceLink="##unitName##@DeathVoiceEat"/>
+
+        <DeathArray index="Electrocute" ModelLink="##unitName##@DeathElectrocute"/>
+        <DeathArray index="Electrocute" SoundLink="##unitName##@DeathElectrocute"/>
+        <DeathArray index="Electrocute" VoiceLink="##unitName##@DeathVoiceElectrocute"/>
+
+        <DeathArray index="Eviscerate" ModelLink="##unitName##@DeathEviscerate"/>
+        <DeathArray index="Eviscerate" SoundLink="##unitName##@DeathEviscerate"/>
+        <DeathArray index="Eviscerate" VoiceLink="##unitName##@DeathVoiceEviscerate"/>
+
+        <DeathArray index="Fire" ModelLink="##unitName##@DeathFire"/>
+        <DeathArray index="Fire" SoundLink="##unitName##@DeathFire"/>
+        <DeathArray index="Fire" VoiceLink="##unitName##@DeathVoiceFire"/>
+
+        <DeathArray index="Freeze" ModelLink="##unitName##@DeathFreeze"/>
+        <DeathArray index="Freeze" SoundLink="##unitName##@DeathFreeze"/>
+        <DeathArray index="Freeze" VoiceLink="##unitName##@DeathVoiceFreeze"/>
+
+        <DeathArray index="Impact" ModelLink="##unitName##@DeathImpact"/>
+        <DeathArray index="Impact" SoundLink="##unitName##@DeathImpact"/>
+        <DeathArray index="Impact" VoiceLink="##unitName##@DeathVoiceImpact"/>
+
+        <DeathArray index="Morph" ModelLink="##unitName##@DeathMorph"/>
+        <DeathArray index="Morph" SoundLink="##unitName##@DeathMorph"/>
+        <DeathArray index="Morph" VoiceLink="##unitName##@DeathVoiceMorph"/>
+
+        <DeathArray index="Reincarnation" ModelLink="##unitName##@DeathReincarnation"/>
+        <DeathArray index="Reincarnation" SoundLink="##unitName##@DeathReincarnation"/>
+        <DeathArray index="Reincarnation" VoiceLink="##unitName##@DeathVoiceReincarnation"/>
+
+        <DeathArray index="Silentkill" ModelLink="##unitName##@DeathSilentKill"/>
+        <DeathArray index="Silentkill" SoundLink="##unitName##@DeathSilentKill"/>
+        <DeathArray index="Silentkill" VoiceLink="##unitName##@DeathVoiceSilentKill"/>
+
+        <DeathArray index="Squish" ModelLink="##unitName##@DeathSquish"/>
+        <DeathArray index="Squish" SoundLink="##unitName##@DeathSquish"/>
+        <DeathArray index="Squish" VoiceLink="##unitName##@DeathVoiceSquish"/>
+
+        <DeathArray index="Timeout" ModelLink="##unitName##@DeathTimeout"/>
+        <DeathArray index="Timeout" SoundLink="##unitName##@DeathTimeout"/>
+        <DeathArray index="Timeout" VoiceLink="##unitName##@DeathVoiceTimeout"/>
+
+        <DeathArray index="Unlink" ModelLink="##unitName##@DeathUnlink"/>
+        <DeathArray index="Unlink" SoundLink="##unitName##@DeathUnlink"/>
+        <DeathArray index="Unlink" VoiceLink="##unitName##@DeathVoiceUnlink"/>
+
+        <DeathArray index="Freeze" ModelLink="##unitName##@Death"/>
+        <DeathArray index="Freeze" SoundLink="##unitName##@Death"/>
+        <DeathArray index="Freeze" VoiceLink="##unitName##@DeathVoice"/>
+
+        <DeathArray index="UnderConstruction" ModelLink="##unitName##@DeathUnderConstuction"/>
+        <DeathArray index="UnderConstruction" SoundLink="##unitName##@DeathUnderConstuction"/>
+        <DeathArray index="UnderConstruction" VoiceLink="##unitName##@DeathVoiceUnderConstuction"/>
+
+        <DeathArray index="Salvage" ModelLink="##unitName##@DeathSalvage"/>
+        <DeathArray index="Salvage" SoundLink="##unitName##@DeathSalvage"/>
+        <DeathArray index="Salvage" VoiceLink="##unitName##@DeathVoiceSalvage"/>
+
+        <DeathArray index="Cancel" ModelLink="##unitName##@DeathCancel"/>
+        <DeathArray index="Cancel" SoundLink="##unitName##@DeathCancel"/>
+        <DeathArray index="Cancel" VoiceLink="##unitName##@DeathVoiceCancel"/>
+
+        <DeathArray index="TrainingComplete" ModelLink="##unitName##@DeathTrainingComplete"/>
+        <DeathArray index="TrainingComplete" SoundLink="##unitName##@DeathTrainingComplete"/>
+        <DeathArray index="TrainingComplete" VoiceLink="##unitName##@DeathVoiceTrainingComplete"/>
+
+        <DeathArray index="TrainingCancel" ModelLink="##unitName##@DeathTrainingCancel"/>
+        <DeathArray index="TrainingCancel" SoundLink="##unitName##@DeathTrainingCancel"/>
+        <DeathArray index="TrainingCancel" VoiceLink="##unitName##@DeathVoiceTrainingCancel"/>
+
+        <!-- Death Customs -->
+
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="##unitName##@DeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+            <SoundLink Name="##unitName##@DeathRagdoll"/>
+            <VoiceLink Name="##unitName##@DeathVoiceRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="##unitName##@DeathRagdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive2"/>
+        </TerrainSquibs>
+    </CActorUnit>
+    <CActorUnit default="1" id="CommanderAirUnit" parent="CommanderUnitBase">
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+    </CActorUnit>
+    <CActorUnit default="1" id="CommanderGroundUnit" parent="CommanderUnitBase">
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+    </CActorUnit>
+
 
     <!-- DataCollection Pattern -->
 

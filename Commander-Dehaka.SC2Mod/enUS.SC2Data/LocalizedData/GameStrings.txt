@@ -1,0 +1,3 @@
+﻿DataCollection/Name/DehakaCommanderDehaka=Dehaka Commander - Dehaka
+Race/Name/COOPDehaka=Dehaka
+Unit/Name/COOP/DehakaCommanderDehaka=Dehaka

@@ -16,3 +16,7 @@ Unit/Name/COOP/CommanderStructure=Commander Structure
 Unit/Name/COOP/CommanderStructure_Terr=Commander Structure - Terran
 Unit/Name/COOP/CommanderStructure_Zerg=Commander Structure - Zerg
 Unit/Name/COOP/CommanderStructure_Prot=Commander Structure - Protoss
+Actor/Name/CommanderUnitBase=Commander Unit
+Actor/Name/CommanderAirUnit=Commander Air Unit
+Actor/Name/CommanderGroundUnit=Commander Ground Unit
+

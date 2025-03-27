@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUnit id="DehakaCommanderDehaka" parent="CommanderGround">
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeRegenRate value="5"/>
+        <EnergyStart value="300"/>
+        <EnergyMax value="300"/>
+        <EnergyRegenRate value="10"/>
+        <BuildTime value="180"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Coop,Race:Dehaka"/>
+    </CUnit>
+</Catalog>

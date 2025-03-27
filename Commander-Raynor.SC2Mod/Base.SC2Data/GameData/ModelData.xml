@@ -559,21 +559,26 @@
         <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
-    <CModel id="RaynorCommanderMarauder" parent="MarauderBase">
+    <CModel id="RaynorCommanderMarauder" parent="Unit">
         <Model value="Assets\Units\Terran\Marauder\Marauder.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderMarauder@Death" parent="MarauderDeathBase">
-        <Model value="Assets\Units\Terran\MarauderDeathEx1\MarauderDeathEx1.m3"/>
+    <CModel id="RaynorCommanderMarauder@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\MarauderDeath\MarauderDeath.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderMarauder@DeathEviscerate" parent="MarauderDeathEviscerateBase">
+    <CModel id="RaynorCommanderMarauder@DeathEviscerate" parent="UnitDeath">
         <Model value="Assets\Units\Terran\MarauderDeathEviscerateEx1\MarauderDeathEviscerateEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderMarauder@DeathRagdoll" parent="MarauderDeathRagdollBase">
+    <CModel id="RaynorCommanderMarauder@DeathRagdoll" parent="UnitDeathRagdoll">
         <Model value="Assets\Units\Terran\MarauderDeathRagdoll\MarauderDeathRagdoll.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderMarauder@Portrait" parent="MarauderPortraitBase">
+    <CModel id="RaynorCommanderMarauder@Portrait" parent="Portrait">
         <Model value="Assets\Portraits\Terran\MarauderPortrait\MarauderPortrait.m3"/>
-        <Image value="Assets\Textures\MarauderPortrait_Static.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+        <Image value="Assets\Textures\marauderportrait_static.dds"/>
         <Lighting value="MarauderPortrait"/>
     </CModel>
     <CModel id="RaynorCommanderMarine" parent="MarineBase">
@@ -582,7 +587,7 @@
     <CModel id="RaynorCommanderMarine@Death" parent="MarineDeathBase">
         <Model value="Assets\Units\Terran\MarineDeathEx1\MarineDeathEx1.m3"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@DeathAcid" parent="MarineDeathAcidBase">
+    <CModel id="RaynorCommanderMarine@DeathDisintegrate" parent="MarineDeathAcidBase">
         <Model value="Assets\Units\Terran\MarineDeathAcid\MarineDeathAcid.m3"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@DeathBlast" parent="MarineDeathBlastBase">

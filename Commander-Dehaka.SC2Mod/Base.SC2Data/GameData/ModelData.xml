@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="DehakaCommanderDehaka" parent="Unit">
+        <Model value="Assets\Units\Zerg\Dehaka_Coop_Young\Dehaka_Coop_Young.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+    </CModel>
+    <CModel id="DehakaCommanderDehaka@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Zerg\Dehaka_Coop_Young\Dehaka_Coop_Young.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+    </CModel>
+    <CModel id="DehakaCommanderDehaka@Portrait" parent="Portrait">
+        <Model value="Assets\Units\Zerg\Dehaka_Coop_Young\Dehaka_Coop_Young.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+    </CModel>
+</Catalog>

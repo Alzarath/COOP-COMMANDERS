@@ -147,11 +147,8 @@
             </Visuals>
         </TerrainSquibs>
     </CActorMissile>
-    <CActorUnit id="RaynorCommanderBattlecruiser" parent="GenericUnitStandard" unitName="RaynorCommanderBattlecruiser">
+    <CActorUnit id="RaynorCommanderBattlecruiser" parent="CommanderAirUnit" unitName="RaynorCommanderBattlecruiser">
         <Aliases value="_UnitHuge"/>
-        <Macros value="TerrainSquibAnimations"/>
-        <Macros value="PhysicsDeathsSwarmAir"/>
-        <Macros value="PhysicsDeathsVoidAir"/>
         <On Terms="ActorCreation; ValidateUnit BattlecruiserUpgraded" Send="AnimBlendTimeApply 0.000000"/>
         <On Terms="ActorCreation; ValidateUnit BattlecruiserUpgraded" Send="AnimGroupApply A"/>
         <On Terms="ActorCreation; ValidateUnit BattlecruiserUpgraded" Send="AnimBlendTimeApply"/>
@@ -183,38 +180,7 @@
         <On Terms="Abil.attack.ReadyStop" Target="_BattlecruiserTurretATA" Send="LookAtDisengage"/>
         <HostSiteOps Ops="SOpBankerBattlecruiser"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
-        <DeathArray index="Normal" ModelLink="RaynorCommanderBattlecruiser@Death" SoundLink=""/>
-        <DeathCustoms ModelLink="RaynorCommanderBattlecruiser@DeathA" Name="Upgrade"/>
-        <DeathCustoms>
-            <ActorModel value="BattlecruiserDeathRagdoll"/>
-            <ModelLink value="RaynorCommanderBattlecruiser@DeathRagdoll"/>
-            <Name value="RagdollBasic"/>
-            <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
-            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="FireHeavy"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="FireHeavy"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
-        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
-        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
-        <PortraitModel value="RaynorCommanderBattlecruiser@Portrait"/>
-        <TerrainSquibs>
-            <MovementDistance value="0.150000,0.150000"/>
-            <IdlePeriod value="0.250000,0.500000"/>
-            <RangeDown value="5.000000"/>
-            <RangeDownFade value="1.000000"/>
-            <AttachQuery Methods="AMFilterCenter"/>
-            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive2"/>
-        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3.75"/>
         <BarOffset value="75"/>
         <BarWidth value="130"/>
         <GroupIcon>
@@ -223,13 +189,6 @@
         <HeroIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
         <NameOffset value="110"/>
-        <SoundArray index="Ready" value="RaynorCommanderBattlecruiser@Ready"/>
-        <SoundArray index="Help" value="RaynorCommanderBattlecruiser@Help"/>
-        <SoundArray index="What" value="RaynorCommanderBattlecruiser@What"/>
-        <SoundArray index="Yes" value="Battlecruiser_Yes"/>
-        <SoundArray index="Attack" value="RaynorCommanderBattlecruiser@Attack"/>
-        <SoundArray index="Pissed" value="RaynorCommanderBattlecruiser@Pissed"/>
-        <SoundArray index="Movement" value="RaynorCommanderBattlecruiser@Movement"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Battlecruiser.dds"/>
@@ -832,22 +791,14 @@
         <AcquisitionPitchHalfArc value="15.000000"/>
         <AccuracyHalfArc value="5.000000"/>
     </CActorAction>
-    <CActorUnit id="RaynorCommanderFirebat" parent="GenericUnitStandard" unitName="RaynorCommanderFirebat">
+    <CActorUnit id="RaynorCommanderFirebat" parent="CommanderGroundUnit" unitName="RaynorCommanderFirebat">
         <EditorCategories value=""/>
-        <DeathArray index="Normal" ModelLink="RaynorCommanderFirebat@Death" SoundLink="RaynorCommanderFirebat@Death" VoiceLink="RaynorCommanderFirebat@DeathVoice"/>
-        <PortraitModel value="RaynorCommanderFirebat@Portrait"/>
-        <HighlightTooltip value="Unit/Name/Bogus"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
-        <SoundArray index="Ready" value="RaynorCommanderFirebat@Ready"/>
-        <SoundArray index="Help" value="RaynorCommanderFirebat@Help"/>
-        <SoundArray index="What" value="RaynorCommanderFirebat@What"/>
-        <SoundArray index="Yes" value="RaynorCommanderFirebat@Yes"/>
-        <SoundArray index="Attack" value="RaynorCommanderFirebat@Attack"/>
-        <SoundArray index="Pissed" value="RaynorCommanderFirebat@Pissed"/>
-        <UnitIcon value="Assets\Textures\btn-unit-terran-firebat.dds"/>
         <GroupIcon>
             <Image value="Assets\Textures\btn-unit-terran-firebat.dds"/>
         </GroupIcon>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-firebat.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\wireframe-terran-firebat.dds"/>
         </Wireframe>
@@ -904,20 +855,12 @@
         <EditorCategories value=""/>
         <On Terms="AbilMorph.RaynorCommanderLiftBarrack@LiftOff.Start" Send="Create"/>
     </CActorSound>
-    <CActorUnit id="RaynorCommanderMedic" parent="GenericUnitStandard" unitName="RaynorCommanderMedic">
+    <CActorUnit id="RaynorCommanderMedic" parent="CommanderGroundUnit" unitName="RaynorCommanderMedic">
         <EditorCategories value=""/>
+        <BarOffset value="20"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-medic.dds"/>
-        <DeathArray index="Normal" ModelLink="RaynorCommanderMedic@Death" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="RaynorCommanderMedic@Death"/>
-        <PortraitModel value="RaynorCommanderMedic@Portrait"/>
-        <SoundArray index="Ready" value="RaynorCommanderMedic@Ready"/>
-        <SoundArray index="Help" value="RaynorCommanderMedic@Help"/>
-        <SoundArray index="What" value="RaynorCommanderMedic@What"/>
-        <SoundArray index="Yes" value="RaynorCommanderMedic@Yes"/>
-        <SoundArray index="Attack" value="RaynorCommanderMedic@Attack"/>
-        <SoundArray index="Pissed" value="RaynorCommanderMedic@Pissed"/>
-        <BarOffset value="20"/>
     </CActorUnit>
     <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower">
         <EditorCategories value=""/>
@@ -980,17 +923,12 @@
     <CActorSound id="RaynorCommanderStimpackMara@Cast" parent="SoundOneShot">
         <On Terms="Abil.RaynorCommanderStimpackMara.SourceCastStart" Send="Create"/>
     </CActorSound>
-    <CActorUnit id="RaynorCommanderMarauder" parent="GenericUnitBase" unitName="RaynorCommanderMarauder">
+    <CActorUnit id="RaynorCommanderMarauder" parent="CommanderGroundUnit" unitName="RaynorCommanderMarauder">
         <Aliases value="_UnitMedium"/>
-        <Macros value="UnloadDropAnim"/>
-        <Macros value="TerrainSquibAnimations"/>
-        <Macros value="PhysicsDeathsSwarmGround"/>
-        <Macros value="PhysicsDeathsVoidGround"/>
-        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
-        <On Terms="ActorCreation" Send="StatusSet WeaponNext 0"/>
-        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
-        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
-        <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>
+        <On index="65" Terms="ActorCreation" Send="StatusSet WeaponNext 0"/>
+        <On index="66" Terms="Effect.PunisherGrenadesLM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
+        <On index="67" Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
+        <On index="68" Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>
         <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>
         <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimClear AttackLeft"/>
         <On Terms="Effect.PunisherGrenadesLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>
@@ -1004,40 +942,14 @@
         <On Terms="UnitDeathCustomize; PassChance 1.000000; ValidateUnit IsNotNeuralParasited" Send="Create Marauder_Death"/>
         <On Terms="UnitDeathCustomize; PassChance 10.000000; !ValidateUnit IsNotNeuralParasited" Send="Create Marauder_Death_NP"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
-        <DeathArray index="Normal" ModelLink="RaynorCommanderMarauder@Death" SoundLink="RaynorCommanderMarauder@Explode"/>
-        <DeathArray index="Eviscerate" ModelLink="RaynorCommanderMarauder@DeathEviscerate" SoundLink="Uni_DeathFXEviscerate"/>
-        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
-        <DeathCustoms ActorModel="UnitDeathRagdollBloodPrevent" ModelLink="RaynorCommanderMarauder@DeathRagdoll" Name="RagdollBasic">
-            <BodySquibs Name="None"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
-        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
-        <PortraitModel value="RaynorCommanderMarauder@Portrait"/>
-        <TerrainSquibs>
+        <TerrainSquibs index="0">
             <MovementDistance value="0.150000,0.150000"/>
             <IdlePeriod value="0.100000,0.250000"/>
             <RangeUp value="0.800000"/>
             <RangeDown value="0.800000"/>
-            <AttachQuery Methods="AMFilterCenter"/>
-            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
+            <RangeDownFade value="0.000000"/>
+            <Visuals index="0" TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
         </TerrainSquibs>
-        <WalkAnimMoveSpeed value="2.25"/>
         <BarOffset value="60"/>
         <BarWidth value="50"/>
         <GroupIcon>
@@ -1045,12 +957,6 @@
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-terran-marauder.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
-        <SoundArray index="Ready" value="RaynorCommanderMarauder@Ready"/>
-        <SoundArray index="Help" value="RaynorCommanderMarauder@Help"/>
-        <SoundArray index="What" value="RaynorCommanderMarauder@What"/>
-        <SoundArray index="Yes" value="RaynorCommanderMarauder@Yes"/>
-        <SoundArray index="Attack" value="RaynorCommanderMarauder@Attack"/>
-        <SoundArray index="Pissed" value="RaynorCommanderMarauder@Pissed"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-marauder.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Marauder.dds"/>
@@ -1059,17 +965,13 @@
     <CActorSound id="RaynorCommanderStimpack@Cast" parent="SoundOneShot">
         <On Terms="Abil.RaynorCommanderStimpack.SourceCastStart" Send="Create"/>
     </CActorSound>
-    <CActorUnit id="RaynorCommanderMarine" parent="GenericUnitBase" unitName="RaynorCommanderMarine">
+    <CActorUnit id="RaynorCommanderMarine" parent="CommanderGroundUnit" unitName="RaynorCommanderMarine">
         <Aliases value="_UnitSmall"/>
-        <Macros value="UnloadDropAnim"/>
-        <Macros value="PhysicsDeathsSwarmGround"/>
-        <Macros value="TerrainSquibAnimations"/>
-        <Macros value="PhysicsDeathsVoidGround"/>
-        <On Terms="ActorCreation; ValidatePlayer NoMarineShield" Send="AnimPlay Cover Cover PlayForever 0.000000"/>
-        <On Terms="Upgrade.ShieldWall.Add" Send="AnimClear Cover"/>
-        <On Terms="Upgrade.ShieldWall.Remove" Send="AnimPlay Cover Cover PlayForever 0.000000"/>
-        <On Terms="UnitDeath.RaynorCommanderMarine; AnimPlaying Cover" Target="_DeathModel" Send="AnimPlay Cover Cover PlayForever 0.000000"/>
-        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On index="64" Terms="ActorCreation; ValidatePlayer NoMarineShield" Send="AnimPlay Cover Cover PlayForever 0.000000"/>
+        <On index="65" Terms="Upgrade.ShieldWall.Add" Send="AnimClear Cover"/>
+        <On index="66" Terms="Upgrade.ShieldWall.Remove" Send="AnimPlay Cover Cover PlayForever 0.000000"/>
+        <On index="67" Terms="UnitDeath.RaynorCommanderMarine; AnimPlaying Cover" Target="_DeathModel" Send="AnimPlay Cover Cover PlayForever 0.000000"/>
+        <On index="68" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
         <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
         <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
         <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
@@ -1084,65 +986,15 @@
         <On Terms="UnitDeathCustomize; PassChance 100.000000; ValidateUnit IsNotNeuralParasited" Send="Create Marine_Death"/>
         <On Terms="UnitDeathCustomize; PassChance 100.000000; !ValidateUnit IsNotNeuralParasited" Send="Create Marine_Death_NP"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
-        <DeathArray index="Normal" ModelLink="RaynorCommanderMarine@Death" SoundLink="RaynorCommanderMarine@DeathFXBloodSpray"/>
-        <DeathArray index="Blast" ModelLink="RaynorCommanderMarine@DeathBlast"/>
-        <DeathArray index="Disintegrate" ModelLink="RaynorCommanderMarine@DeathAcid" SoundLink="Uni_DeathFXAcid"/>
-        <DeathArray index="Eat" AnimProps="Stand" ModelLink="RaynorCommanderMarine@DeathEat" SoundLink="RaynorCommanderMarine@DeathFXEat"/>
-        <DeathArray index="Eviscerate" ModelLink="RaynorCommanderMarine@DeathEviscerate" SoundLink="RaynorCommanderMarine@DeathFXEviscerate"/>
-        <DeathArray index="Fire" ModelLink="RaynorCommanderMarine@DeathFire" SoundLink="RaynorCommanderMarine@DeathFXFire"/>
-        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
-        <DeathArray index="Squish" SoundLink="RaynorCommanderMarine@DeathFXBloodSpray"/>
-        <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
-        <DeathCustoms ModelLink="RaynorCommanderMarine@DeathRagdoll" Name="RagdollBasic">
-            <BodySquibs Name="None"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="RaynorCommanderMarine@DeathRagdoll" Name="RagdollSpineCrawlerHurl">
-            <BodySquibs Name="None"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
-        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
-        <PortraitModel value="RaynorCommanderMarine@Portrait"/>
         <StandAnimTurnTime value="4"/>
-        <TerrainSquibs>
-            <MovementDistance value="0.150000,0.150000"/>
-            <IdlePeriod value="0.100000,0.250000"/>
-            <RangeUp value="0.600000"/>
-            <RangeDown value="0.600000"/>
-            <AttachQuery Methods="AMFilterCenter"/>
-            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
-        </TerrainSquibs>
-        <WalkAnimMoveSpeed value="2.25"/>
         <AbilSoundArray AbilCmd="RaynorCommanderStimpack,Execute" Sound="RaynorCommanderMarine@StimPackVO"/>
         <BarOffset value="40"/>
         <BarWidth value="36"/>
-        <GlossaryAnim value="Spell"/>
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Terran-Marine.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-terran-marine.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
-        <SoundArray index="Ready" value="RaynorCommanderMarine@Ready"/>
-        <SoundArray index="Help" value="RaynorCommanderMarine@Help"/>
-        <SoundArray index="What" value="RaynorCommanderMarine@What"/>
-        <SoundArray index="Yes" value="RaynorCommanderMarine@Yes"/>
-        <SoundArray index="Attack" value="RaynorCommanderMarine@Attack"/>
-        <SoundArray index="Pissed" value="RaynorCommanderMarine@Pissed"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-marine.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Marine.dds"/>

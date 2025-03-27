@@ -79,6 +79,7 @@
         <DataRecord Entry="Unit,RaynorCommanderBattlecruiser"/>
         <DataRecord Entry="Button,RaynorCommanderBattlecruiser"/>
         <DataRecord Entry="Requirement,RaynorCommanderBattlecruiser"/>
+        <DataRecord Entry="Sound,RaynorCommanderBattlecruiser@Yes"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderBunker" parent="CommanderUnit">
         <Name value="DataCollection/Name/RaynorCommanderBunker"/>
@@ -791,13 +792,14 @@
         <DataRecord Entry="Model,RaynorCommanderMedic@Portrait"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@Attack"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@What"/>
-        <DataRecord Entry="Sound,RaynorCommanderMedic@Death"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@DeathVoice"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@Pissed"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@Yes"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@Help"/>
         <DataRecord Entry="Sound,RaynorCommanderMedic@Ready"/>
         <DataRecord Entry="Light,RaynorCommanderMedic"/>
         <DataRecord Entry="Requirement,RaynorCommanderMedic"/>
+        <DataRecord Entry="Sound,RaynorCommanderMedic@Death"/>
         <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPerditionThrower">
@@ -853,7 +855,7 @@
         <DataRecord Entry="Model,RaynorCommanderMarauder@DeathRagdoll"/>
         <DataRecord Entry="Model,RaynorCommanderMarauder@Portrait"/>
         <DataRecord Entry="Sound,RaynorCommanderMarauder@Attack"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarauder@Explode"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@Death"/>
         <DataRecord Entry="Sound,RaynorCommanderMarauder@Help"/>
         <DataRecord Entry="Sound,RaynorCommanderMarauder@Pissed"/>
         <DataRecord Entry="Sound,RaynorCommanderMarauder@Ready"/>
@@ -862,6 +864,7 @@
         <DataRecord Entry="Unit,RaynorCommanderMarauder"/>
         <DataRecord Entry="Button,RaynorCommanderMarauder"/>
         <DataRecord Entry="Requirement,RaynorCommanderMarauder"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarauder@DeathVoice"/>
         <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMarine" parent="CommanderUnit">
@@ -871,16 +874,16 @@
         <DataRecord Entry="Model,RaynorCommanderMarine"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@Death"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@DeathBlast"/>
-        <DataRecord Entry="Model,RaynorCommanderMarine@DeathAcid"/>
+        <DataRecord Entry="Model,RaynorCommanderMarine@DeathDisintegrate"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@DeathEat"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@DeathEviscerate"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@DeathFire"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@DeathRagdoll"/>
         <DataRecord Entry="Model,RaynorCommanderMarine@Portrait"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXBloodSpray"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXEat"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXEviscerate"/>
-        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFXFire"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathBloodSpray"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathEat"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathEviscerate"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathFire"/>
         <DataRecord Entry="Sound,RaynorCommanderMarine@StimPackVO"/>
         <DataRecord Entry="Sound,RaynorCommanderMarine@Ready"/>
         <DataRecord Entry="Sound,RaynorCommanderMarine@Help"/>
@@ -891,6 +894,9 @@
         <DataRecord Entry="Unit,RaynorCommanderMarine"/>
         <DataRecord Entry="Button,RaynorCommanderMarine"/>
         <DataRecord Entry="Requirement,RaynorCommanderMarine"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathVoice"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@Death"/>
+        <DataRecord Entry="Sound,RaynorCommanderMarine@DeathDisintegrate"/>
         <TechInfoUpgradeUsed value="RaynorCommanderTalents@lvl1"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPunisherGrenades">

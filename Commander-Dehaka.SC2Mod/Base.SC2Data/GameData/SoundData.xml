@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSound id="DehakaCommanderDehaka@Death" parent="Death">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderDehaka@DeathVoice" parent="DeathVoice">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderDehaka@Help" parent="ZergHelp">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderDehaka@Pissed" parent="ZergPissed">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderDehaka@Ready" parent="ZergReady">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderDehaka@What" parent="ZergAck">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderDehaka@Yes" parent="ZergAck">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+</Catalog>

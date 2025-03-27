@@ -1387,6 +1387,7 @@
     <CUnit id="RaynorCommanderMarauder" parent="CommanderGround">
         <Race value="Terr"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
+        <WeaponArray Link="RaynorCommanderPunisherGrenades"/>
     </CUnit>
     <CUnit id="RaynorCommanderMarine" parent="CommanderGround">
         <Race value="Terr"/>

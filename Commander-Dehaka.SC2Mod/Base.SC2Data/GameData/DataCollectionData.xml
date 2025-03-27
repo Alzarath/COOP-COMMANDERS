@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionUnit id="DehakaCommanderDehaka" parent="CommanderUnit">
+        <Name value="DataCollection/Name/DehakaCommanderDehaka"/>
+        <EditorCategories value="DataGroup:Unit,Race:Dehaka,DataFamily:Coop,ObjectType:Hero"/>
+        <DataRecord Entry="Unit,DehakaCommanderDehaka"/>
+        <DataRecord Entry="Actor,DehakaCommanderDehaka"/>
+        <DataRecord Entry="Model,DehakaCommanderDehaka"/>
+        <DataRecord Entry="Model,DehakaCommanderDehaka@Death"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@Death"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@DeathVoice"/>
+        <DataRecord Entry="Model,DehakaCommanderDehaka@Portrait"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@Yes"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@What"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@Ready"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@Pissed"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@Help"/>
+    </CDataCollectionUnit>
+</Catalog>

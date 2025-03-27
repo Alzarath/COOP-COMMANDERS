@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="DehakaCommanderDehaka" parent="GenericUnitStandard" unitName="DehakaCommanderDehaka">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" ModelLink="DehakaCommanderDehaka@Death" SoundLink="DehakaCommanderDehaka@Death" VoiceLink="DehakaCommanderDehaka@DeathVoice"/>
+        <PortraitModel value="DehakaCommanderDehaka@Portrait"/>
+        <HeroIcon value="Assets\Textures\btn-unit-dehaka-youngdehaka.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level0.dds"/>
+        <MinimapIcon value="Assets\Textures\btn-ac-zerg-dehakamapicon.dds"/>
+        <SoundArray index="Birth" value="DehakaCommanderDehaka@Birth"/>
+        <SoundArray index="Ready" value="DehakaCommanderDehaka@Ready"/>
+        <SoundArray index="Help" value="DehakaCommanderDehaka@Help"/>
+        <SoundArray index="What" value="DehakaCommanderDehaka@What"/>
+        <SoundArray index="Yes" value="DehakaCommanderDehaka@Yes"/>
+        <SoundArray index="Attack" value="DehakaCommanderDehaka@Attack"/>
+        <SoundArray index="Pissed" value="DehakaCommanderDehaka@Pissed"/>
+        <SoundArray index="Movement" value="DehakaCommanderDehaka@Movement"/>
+        <SoundArray index="Turning" value="DehakaCommanderDehaka@Turning"/>
+        <SoundArray index="Board" value="DehakaCommanderDehaka@Board"/>
+        <UnitIcon value="Assets\Textures\btn-unit-dehaka-youngdehaka.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-dehaka-youngdehaka-primal.dds"/>
+        </Wireframe>
+    </CActorUnit>
+</Catalog>

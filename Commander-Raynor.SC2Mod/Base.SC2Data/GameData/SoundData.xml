@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="RaynorCommanderBattlecruiser@Yes" parent="TerranAck">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes02.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes03.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes04.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes05.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes06.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes07.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes08.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes09.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes10.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes11.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_Yes12.ogg" FacialGroup=""/>
+    </CSound>
     <CSound id="RaynorCommanderBunker@Explode" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium0.wav" Pitch="-3.000000,3.000000"/>
@@ -23,6 +39,46 @@
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Bunker\Bunker_What.ogg"/>
         <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="RaynorCommanderMarauder@DeathVoice" parent="DeathVoice">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death00.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death01.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death02.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death03.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death04.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death05.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death06.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderMarine@Death" parent="Death">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall6.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderMarine@DeathDisintegrate" parent="Death">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXAcid6.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="RaynorCommanderMedic@Death" parent="Death">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall6.wav" FacialGroup=""/>
     </CSound>
     <CSound id="RaynorCommanderTacticalJump@ImpactSound" parent="Spell">
         <EditorCategories value="Race:Raynor"/>
@@ -326,7 +382,7 @@
         <Volume value="-3.000000,0.000000"/>
     </CSound>
     <CSound id="RaynorCommanderCommandCenter@Movement" parent="Movement">
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingMovement0.wav" LoopCount="-1"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingMovement1.wav" LoopCount="-1"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Propulsion\Terran_BuildingMovement2.wav" LoopCount="-1"/>
@@ -804,13 +860,16 @@
     </CSound>
     <CSound id="RaynorCommanderFirebat@Death" parent="Death">
         <EditorCategories value="Race:Raynor"/>
-        <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode4.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode5.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" FacialGroup=""/>
     </CSound>
     <CSound id="RaynorCommanderFirebat@DeathVoice" parent="DeathVoice">
         <EditorCategories value="Race:Raynor"/>
@@ -909,7 +968,7 @@
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Medic\Medic_Attack06.ogg" FacialAnim="Medic_Attack06"/>
         <EditorCategories value="Race:Raynor"/>
     </CSound>
-    <CSound id="RaynorCommanderMedic@Death" parent="DeathVoice">
+    <CSound id="RaynorCommanderMedic@DeathVoice" parent="DeathVoice">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Medic\Medic_Death00.wav" FacialAnim="Medic_Death00"/>
         <AssetArray File="LocalizedData\Sounds\TerranVO\CampaignUnits\Medic\Medic_Death01.wav" FacialAnim="Medic_Death01"/>
@@ -1029,7 +1088,7 @@
         <Volume value="-1.000000,-1.000000"/>
         <EditorCategories value="Race:Raynor"/>
     </CSound>
-    <CSound id="RaynorCommanderMarauder@Explode" parent="Combat">
+    <CSound id="RaynorCommanderMarauder@Death" parent="Death">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode1.wav"/>
@@ -1038,6 +1097,9 @@
         <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode4.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode5.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marauder\Marauder_Explode6.wav"/>
+        <Flags index="Ignorable" value="0"/>
+        <Flags index="Purgable" value="1"/>
+        <Category value="Combat"/>
         <Pitch value="-2.000000,2.000000"/>
     </CSound>
     <CSound id="RaynorCommanderMarauder@Help" parent="Alert">
@@ -1166,19 +1228,18 @@
         <VariationMinimum value="8"/>
         <Volume value="-9.000000,-6.000000"/>
     </CSound>
-    <CSound id="Marine_Death2" parent="Death">
+    <CSound id="RaynorCommanderMarine@DeathVoice" parent="DeathVoice">
         <EditorCategories value="Race:Raynor"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death00.wav" Weight="15"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death01.wav"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death02.wav"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death03.wav"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death04.wav"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death05.wav"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death06.wav"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death07.wav"/>
-        <Volume value="-1.000000,-1.000000"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death00.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death01.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death02.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death03.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death04.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death05.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death06.wav" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marine\Marine_Death07.wav" FacialGroup=""/>
     </CSound>
-    <CSound id="RaynorCommanderMarine@DeathFXBloodSpray" parent="Combat">
+    <CSound id="RaynorCommanderMarine@DeathBloodSpray" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall0.wav" Pitch="-3.000000,6.000000" Volume="-6.000000,-4.000000"/>
         <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall1.wav" Pitch="-3.000000,6.000000" Volume="-6.000000,-4.000000"/>
@@ -1188,19 +1249,19 @@
         <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall5.wav" Pitch="-3.000000,6.000000" Volume="-6.000000,-4.000000"/>
         <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall6.wav" Pitch="-3.000000,6.000000" Volume="-6.000000,-4.000000"/>
     </CSound>
-    <CSound id="RaynorCommanderMarine@DeathFXEat" parent="Death">
-        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXEat0.wav"/>
+    <CSound id="RaynorCommanderMarine@DeathEat" parent="Death">
         <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXEat0.wav"/>
     </CSound>
-    <CSound id="RaynorCommanderMarine@DeathFXEviscerate" parent="Death">
+    <CSound id="RaynorCommanderMarine@DeathEviscerate" parent="Death">
+        <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXEviscerate0.wav"/>
         <Pitch value="0.000000,2.000000"/>
         <Volume value="-6.000000,-4.000000"/>
-        <EditorCategories value="Race:Raynor"/>
     </CSound>
-    <CSound id="RaynorCommanderMarine@DeathFXFire" parent="Death">
-        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXFire0.wav"/>
+    <CSound id="RaynorCommanderMarine@DeathFire" parent="Death">
         <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Uni\Deaths\Uni_DeathFXFire0.wav"/>
     </CSound>
     <CSound id="RaynorCommanderMarine@Help" parent="Alert">
         <EditorCategories value="Race:Raynor"/>
@@ -1772,7 +1833,7 @@
         <Volume value="-2.000000,1.000000"/>
     </CSound>
     <CSound id="RaynorCommanderViking@Movement" parent="Movement">
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Viking\Viking_Movement0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Viking\Viking_Movement1.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Viking\Viking_Movement2.wav"/>

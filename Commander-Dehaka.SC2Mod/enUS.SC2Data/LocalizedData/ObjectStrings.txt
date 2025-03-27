@@ -1,0 +1,11 @@
+﻿Actor/Name/DehakaCommanderDehaka=Dehaka
+Model/Name/DehakaCommanderDehaka=Dehaka
+Model/Name/DehakaCommanderDehaka@Death=Death
+Model/Name/DehakaCommanderDehaka@Portrait=Portrait
+Sound/Name/DehakaCommanderDehaka@Death=Death
+Sound/Name/DehakaCommanderDehaka@DeathVoice=Death Voice
+Sound/Name/DehakaCommanderDehaka@Help=Help
+Sound/Name/DehakaCommanderDehaka@Pissed=Pissed
+Sound/Name/DehakaCommanderDehaka@Ready=Ready
+Sound/Name/DehakaCommanderDehaka@What=What
+Sound/Name/DehakaCommanderDehaka@Yes=Yes

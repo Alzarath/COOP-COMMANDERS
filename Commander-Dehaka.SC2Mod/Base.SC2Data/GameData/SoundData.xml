@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="DehakaCommanderDehaka@Attack" parent="Combat">
+        <EditorCategories value="Race:Dehaka"/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Attack\00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Attack\01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Attack\02.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Attack\03.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Attack\04.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Attack\05.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Attack\06.ogg" FacialGroup=""/>
+    </CSound>
     <CSound id="DehakaCommanderDehaka@Death" parent="Death">
         <EditorCategories value="Race:Dehaka"/>
     </CSound>
     <CSound id="DehakaCommanderDehaka@DeathVoice" parent="DeathVoice">
         <EditorCategories value="Race:Dehaka"/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Death\00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Death\01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Death\02.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Death\03.ogg" FacialGroup=""/>
     </CSound>
     <CSound id="DehakaCommanderDehaka@Help" parent="ZergHelp">
         <EditorCategories value="Race:Dehaka"/>
     </CSound>
     <CSound id="DehakaCommanderDehaka@Pissed" parent="ZergPissed">
         <EditorCategories value="Race:Dehaka"/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Pissed\00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Pissed\01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Pissed\02.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Pissed\03.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Pissed\04.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Pissed\05.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Pissed\06.ogg" FacialGroup=""/>
     </CSound>
     <CSound id="DehakaCommanderDehaka@Ready" parent="ZergReady">
         <EditorCategories value="Race:Dehaka"/>
     </CSound>
     <CSound id="DehakaCommanderDehaka@What" parent="ZergAck">
         <EditorCategories value="Race:Dehaka"/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\02.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\03.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\04.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\05.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\06.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\What\07.ogg" FacialGroup=""/>
     </CSound>
     <CSound id="DehakaCommanderDehaka@Yes" parent="ZergAck">
+        <EditorCategories value="Race:Dehaka"/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Yes\00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Yes\01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Yes\02.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Yes\03.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Yes\04.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\COOP_COMMANDERS\VO\DehakaCommanderDehaka\Yes\05.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DehakaCommanderDehakaClaws@SoundImpact" parent="Combat">
+        <EditorCategories value="Race:Dehaka"/>
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Medium00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Medium01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Medium02.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="DehakaCommanderHydralisk@Attack" parent="CommanderVOAttack">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderHydralisk@Pissed" parent="CommanderVOPissed">
+        <EditorCategories value="Race:Dehaka"/>
+    </CSound>
+    <CSound id="DehakaCommanderHydralisk@What" parent="CommanderVOWhat" unitName="DehakaCommanderHydralisk">
+        <EditorCategories value="Race:Dehaka"/>
+        <AssetArray index="0" File="Assets\Sounds\Zerg\Hydralisk\Hydralisk_What0.ogg" FacialGroup=""/>
+        <AssetArray index="1" File="Assets\Sounds\Zerg\Hydralisk\Hydralisk_What1.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="DehakaCommanderHydralisk@Yes" parent="CommanderVOYes">
         <EditorCategories value="Race:Dehaka"/>
     </CSound>
 </Catalog>

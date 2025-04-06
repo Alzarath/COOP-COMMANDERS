@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="DehakaCommanderDehakaClaws">
+        <EditorCategories value="Race:Dehaka"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level0.dds"/>
+        <DisplayEffect value="DehakaCommanderDehakaClaws@Damage"/>
+        <TargetFilters value="Visible;Self,Missile,Dead,Hidden,Invulnerable"/>
+        <Range value="0"/>
+        <Period value="2"/>
+        <DamagePoint value="0.2"/>
+        <Effect value="DehakaCommanderDehakaClaws@Damage"/>
+        <UninterruptibleDuration value="32767.9997"/>
+    </CWeaponLegacy>
+</Catalog>

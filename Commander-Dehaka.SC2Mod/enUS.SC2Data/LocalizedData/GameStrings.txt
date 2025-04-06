@@ -1,3 +1,37 @@
-﻿DataCollection/Name/DehakaCommanderDehaka=Dehaka Commander - Dehaka
+﻿Abil/Name/DehakaCommanderIntimidatingRoar=Intimidating Roar
+Abil/Name/DehakaCommanderPickupEssence=Pickup Essence
+Behavior/Name/DehakaCommanderIntimidatingRoar@AB=Intimidating Roar
+Behavior/Name/DehakaCommanderIntimidatingRoar@AB@2=Intimidating Roar
+Behavior/Name/DehakaCommanderIntimidatingRoar@AB@3=Intimidating Roar
+Behavior/Name/DehakaCommanderVeterancyHero=Experience
+Behavior/Name/DehakaCommanderVeterancyHero@Attribute@1=<img path="Assets\Textures\btn-tips-sellzergbiosamples.dds" height="30" width="30" alignment="AbsoluteMiddle"/>Essence
+Button/Name/DehakaCommanderIntimidatingRoar=Intimidating Roar
+Button/Name/DehakaCommanderPickupEssence=Pickup Essence
+Commander/Name/COOPDehaka=Dehaka
+DataCollection/Name/DehakaCommanderDehaka=Dehaka Commander - Dehaka
+DataCollection/Name/DehakaCommanderDehakaClaws=Dehaka Commander - Dehaka Claws
+DataCollection/Name/DehakaCommanderEssence=Dehaka Commander - Essence
+DataCollection/Name/DehakaCommanderHydralisk=DehakaCommander - Hydralisk
+DataCollection/Name/DehakaCommanderIntimidatingRoar=Dehaka Commander - Intimidating Roar
+DataCollection/Name/DehakaCommanderPickupEssence=Dehaka Commander - Pickup Essence
+DataCollection/Name/DehakaCommanderVeterancyHero=Dehaka Commander - Veterancy Hero
+Effect/Name/DehakaCommanderDehakaClaws@Damage=Damage
+Effect/Name/DehakaCommanderIntimidatingRoar@AB=AB 1
+Effect/Name/DehakaCommanderIntimidatingRoar@AB@2=AB 2
+Effect/Name/DehakaCommanderIntimidatingRoar@AB@3=AB 3
+Effect/Name/DehakaCommanderIntimidatingRoar@Search=Search
+Effect/Name/DehakaCommanderPickupEssence@Impact=Register
+Effect/Name/DehakaCommanderPickupEssence@LM=LM
+Effect/Name/DehakaCommanderPickupEssence@Set=Set
+Effect/Name/DehakaCommanderSuicideRemoveCaster=Suicide Remove (Caster)
+Param/Expression/lib_303E9822_191BE9A2=new Scale: ~A~
+Param/Expression/lib_303E9822_20082D80=~A~ эссенции
+Param/Expression/lib_303E9822_45E3862D=Командир игрока ~A~: ~B~
+Param/Expression/lib_303E9822_6B55EC94=Игрок ~A~ перестал быть <c val="FFEE8C">Дехакой</c>
+Param/Expression/lib_303E9822_A1F4B958=Игрок ~A~ стал <c val="FFEE8C">Дехакой</c>
+Param/Expression/lib_303E9822_F30A0D84=essence value: ~A~
 Race/Name/COOPDehaka=Dehaka
 Unit/Name/COOP/DehakaCommanderDehaka=Dehaka
+Unit/Name/COOP/DehakaCommanderHydralisk=Hydralisk
+Unit/Name/DehakaCommanderEssence=Essence
+Weapon/Name/DehakaCommanderDehakaClaws=Dehaka Claws

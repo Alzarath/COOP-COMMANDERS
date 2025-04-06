@@ -22,5 +22,46 @@
         <Wireframe>
             <Image value="Assets\Textures\wireframe-dehaka-youngdehaka-primal.dds"/>
         </Wireframe>
+        <On Terms="WeaponStart.*.AttackStart" Send="StatusIncrement {Variant Attack}"/>
+        <On Terms="WeaponStart.*.AttackStart; IsStatus {Variant Attack} 1" Send="AnimPlay Attack Attack,A 0 0.500000 0.500000"/>
+        <On Terms="WeaponStart.*.AttackStart; IsStatus {Variant Attack} 2" Send="AnimPlay Attack Attack,B 0 0.500000 0.500000"/>
+        <On Terms="WeaponStart.*.AttackStart; IsStatus {Variant Attack} 3" Send="AnimPlay Attack Attack,C 0 0.500000 0.500000"/>
+        <On Terms="WeaponStart.*.AttackStart; IsStatus {Variant Attack} 4" Send="AnimPlay Attack Attack,D 0 0.500000 0.500000"/>
+        <On Terms="WeaponStart.*.AttackStart; IsStatus {Variant Attack} 5" Send="StatusSet {Variant Attack} 1"/>
+        <PortraitActor value="DehakaCommanderDehaka@Portrait"/>
+    </CActorUnit>
+    <CActorPortrait id="DehakaCommanderDehaka@PortraitAddition" parent="CompositePortraitAddition">
+        <EditorCategories value=""/>
+    </CActorPortrait>
+    <CActorPortrait id="DehakaCommanderDehaka@Portrait" parent="CompositePortrait">
+        <EditorCategories value=""/>
+    </CActorPortrait>
+    <CActorAction id="DehakaCommanderDehakaClaws" parent="GenericAttack" effectImpact="DehakaCommanderDehakaClaws@Damage">
+        <EditorCategories value=""/>
+        <On index="6" Terms="Effect.DehakaCommanderDehakaClaws@Damage.Start; At Caster" Send="Create"/>
+        <ImpactMap index="None" Sound="DehakaCommanderDehakaClaws@SoundImpact"/>
+    </CActorAction>
+    <CActorUnit id="DehakaCommanderEssence" parent="GenericUnitStandard" unitName="DehakaCommanderEssence">
+        <EditorCategories value=""/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-ability-zerg-dehaka-essencecollector.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-pickup-dna.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="DehakaCommanderEssence@Pickup" parent="GenericAttack" effectImpact="DehakaCommanderPickupEssence@Impact" effectLaunch="DehakaCommanderPickupEssence@LM">
+        <EditorCategories value=""/>
+        <Missile value="DehakaCommanderEssence"/>
+        <ImpactSiteOps Ops="SOpAttachWeapon04"/>
+    </CActorAction>
+    <CActorUnit id="DehakaCommanderHydralisk" parent="CommanderGroundUnit" unitName="DehakaCommanderHydralisk">
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-zerg-primalhydralisk.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-primalhydralisk.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-primalhydralisk.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-primalhydralisk.dds"/>
+        </Wireframe>
     </CActorUnit>
 </Catalog>

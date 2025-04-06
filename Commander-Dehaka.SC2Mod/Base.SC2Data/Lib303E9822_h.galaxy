@@ -1,0 +1,45 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: COMMANDER - Dehaka
+//--------------------------------------------------------------------------------------------------
+// Preset Declarations
+const int lib303E9822_ge_Operatoressence__2B = 0;
+const int lib303E9822_ge_Operatoressence__2D = 1;
+const int lib303E9822_ge_Operatoressence__2A = 2;
+const int lib303E9822_ge_Operatoressence__2F = 3;
+const int lib303E9822_ge_Operatoressence__3D = 4;
+
+// Constants
+const int lib303E9822_gv_oWNER_ESSENCE = 0;
+
+// Variable Declarations
+playergroup lib303E9822_gv_allPlayersDehaka;
+fixed lib303E9822_gv_dEFAULT_AMOUNT_EXP;
+int lib303E9822_gv_iNDEX_EXP;
+fixed lib303E9822_gv_rADIUS_MERGING_ESSENCE;
+fixed lib303E9822_gv_mAX_STACK_ESSENCE;
+fixed lib303E9822_gv_mIN_STACK_ESSENCE;
+string lib303E9822_gv_gAMELINK_ESSENCE;
+string lib303E9822_gv_gAMELINK_DEHAKA;
+
+// Function Declarations
+void lib303E9822_gf_ModifyEssenceValue (unit lp_essence, int lp_operator, fixed lp_value);
+void lib303E9822_gf_MergingEssence (unit lp_essence);
+void lib303E9822_gf_EssenceScale (unit lp_essenceUnit, bool lp_instantScale);
+unit lib303E9822_gf_GetEssenceGreatherExp (unitgroup lp_essences);
+fixed lib303E9822_gf_GetEssenceAmount (unit lp_essence);
+
+// Trigger Declarations
+trigger lib303E9822_gt_SetCommanderDehaka;
+trigger lib303E9822_gt_Cheaton;
+trigger lib303E9822_gt_ShowEssence;
+trigger lib303E9822_gt_HideEssence;
+trigger lib303E9822_gt_InitCommanderDehaka;
+trigger lib303E9822_gt_SpawnEssence;
+trigger lib303E9822_gt_CollectEssence;
+trigger lib303E9822_gt_IncreaseVeterancyForDehaka;
+
+// Library Initialization
+void lib303E9822_InitVariables ();
+

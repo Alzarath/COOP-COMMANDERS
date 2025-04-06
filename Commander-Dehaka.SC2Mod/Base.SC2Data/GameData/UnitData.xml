@@ -11,6 +11,22 @@
         <EnergyMax value="300"/>
         <EnergyRegenRate value="10"/>
         <BuildTime value="180"/>
+        <BehaviorArray Link="DehakaCommanderVeterancyHero"/>
+        <BehaviorArray Link="DehakaCommanderVeterancyHero@Attribute@1"/>
+        <WeaponArray Link="DehakaCommanderDehakaClaws"/>
         <EditorCategories value="ObjectType:Hero,ObjectFamily:Coop,Race:Dehaka"/>
+    </CUnit>
+    <CUnit id="DehakaCommanderEssence" parent="ITEM">
+        <Race value="COOPDehaka"/>
+        <FlagArray index="Uncommandable" value="0"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <AbilArray Link="DehakaCommanderPickupEssence"/>
+        <CardLayouts>
+            <LayoutButtons Face="DehakaCommanderPickupEssence" Type="AbilCmd" AbilCmd="DehakaCommanderPickupEssence,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Resource,ObjectFamily:Coop,Race:Dehaka"/>
+    </CUnit>
+    <CUnit id="DehakaCommanderHydralisk" parent="CommanderGround_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Dehaka"/>
     </CUnit>
 </Catalog>

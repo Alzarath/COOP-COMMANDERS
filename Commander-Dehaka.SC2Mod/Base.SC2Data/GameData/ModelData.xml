@@ -9,7 +9,36 @@
         <EditorCategories value="Race:Dehaka"/>
     </CModel>
     <CModel id="DehakaCommanderDehaka@Portrait" parent="Portrait">
-        <Model value="Assets\Units\Zerg\Dehaka_Coop_Young\Dehaka_Coop_Young.m3"/>
+        <Model value="Assets\Portraits\Protoss\AlarakEx2Portrait\AlarakEx2Portrait.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+        <Flags index="Download" value="1"/>
+        <Image value="Assets\Textures\dehakaportrait_static.dds"/>
+    </CModel>
+    <CModel id="DehakaCommanderDehaka@PortraitAddition" parent="Portrait">
+        <Model value="Assets\StoryModeCharacters\Zerg\SMX1_PrimalZergCommanderT1\SMX1_PrimalZergCommanderT1.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+        <FacialController value="LocalizedData\Facial\PrimalZerg.fxa"/>
+        <Flags index="Download" value="1"/>
+    </CModel>
+    <CModel id="DehakaCommanderEssence" parent="Unit">
+        <Model value="Assets\Doodads\DNAPickup\DNAPickup.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+        <Radius value="0.400000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.400000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="DehakaCommanderHydralisk">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection\Hydralisk_Primal_Collection.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+    </CModel>
+    <CModel id="DehakaCommanderHydralisk@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_Death\Hydralisk_Primal_Collection_Death.m3"/>
+        <EditorCategories value="Race:Dehaka"/>
+    </CModel>
+    <CModel id="DehakaCommanderHydralisk@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Zerg\Hydralisk_Primal_Collection_Portrait\Hydralisk_Primal_Collection_Portrait.m3"/>
         <EditorCategories value="Race:Dehaka"/>
     </CModel>
 </Catalog>

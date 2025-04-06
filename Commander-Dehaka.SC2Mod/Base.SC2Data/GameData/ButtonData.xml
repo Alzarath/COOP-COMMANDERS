@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="DehakaCommanderIntimidatingRoar">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-intimidatingroar.dds"/>
+        <EditorCategories value="Race:Dehaka"/>
+    </CButton>
+    <CButton id="DehakaCommanderPickupEssence">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-essencecollector.dds"/>
+        <EditorCategories value="Race:Dehaka"/>
+    </CButton>
+</Catalog>

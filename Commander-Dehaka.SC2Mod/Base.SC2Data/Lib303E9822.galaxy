@@ -1,0 +1,463 @@
+include "TriggerLibs/NativeLib"
+include "LibBEDD5153"
+
+include "Lib303E9822_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: COMMANDER - Dehaka
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib303E9822_InitLibraries () {
+    libNtve_InitVariables();
+    libBEDD5153_InitVariables();
+}
+
+// Variable Initialization
+bool lib303E9822_InitVariables_completed = false;
+
+void lib303E9822_InitVariables () {
+    if (lib303E9822_InitVariables_completed) {
+        return;
+    }
+
+    lib303E9822_InitVariables_completed = true;
+
+    lib303E9822_gv_allPlayersDehaka = PlayerGroupEmpty();
+    lib303E9822_gv_dEFAULT_AMOUNT_EXP = 5.0;
+    lib303E9822_gv_iNDEX_EXP = 63;
+    lib303E9822_gv_rADIUS_MERGING_ESSENCE = 1.0;
+    lib303E9822_gv_mAX_STACK_ESSENCE = 100.0;
+    lib303E9822_gv_gAMELINK_ESSENCE = "DehakaCommanderEssence";
+    lib303E9822_gv_gAMELINK_DEHAKA = "DehakaCommanderDehaka";
+}
+
+// Presets
+// Functions
+void lib303E9822_gf_ModifyEssenceValue (unit lp_essence, int lp_operator, fixed lp_value) {
+    // Variable Declarations
+    fixed lv_initEssence;
+    text lv_text;
+
+    // Automatic Variable Declarations
+    int auto39DAEBA7_val;
+
+    // Variable Initialization
+    lv_initEssence = UnitGetCustomValue(lp_essence, lib303E9822_gv_iNDEX_EXP);
+
+    // Implementation
+    if ((UnitGetType(lp_essence) != "DehakaCommanderEssence")) {
+        return ;
+    }
+
+    auto39DAEBA7_val = lp_operator;
+    if (auto39DAEBA7_val == lib303E9822_ge_Operatoressence__3D) {
+        UnitSetCustomValue(lp_essence, lib303E9822_gv_iNDEX_EXP, libNtve_gf_ArithmeticRealClamp(lp_value, lib303E9822_gv_mIN_STACK_ESSENCE, lib303E9822_gv_mAX_STACK_ESSENCE));
+    }
+    else if (auto39DAEBA7_val == lib303E9822_ge_Operatoressence__2B) {
+        UnitSetCustomValue(lp_essence, lib303E9822_gv_iNDEX_EXP, libNtve_gf_ArithmeticRealClamp((lv_initEssence + lp_value), lib303E9822_gv_mIN_STACK_ESSENCE, lib303E9822_gv_mAX_STACK_ESSENCE));
+    }
+    else if (auto39DAEBA7_val == lib303E9822_ge_Operatoressence__2F) {
+        UnitSetCustomValue(lp_essence, lib303E9822_gv_iNDEX_EXP, libNtve_gf_ArithmeticRealClamp((lv_initEssence / lp_value), lib303E9822_gv_mIN_STACK_ESSENCE, lib303E9822_gv_mAX_STACK_ESSENCE));
+    }
+    else if (auto39DAEBA7_val == lib303E9822_ge_Operatoressence__2A) {
+        UnitSetCustomValue(lp_essence, lib303E9822_gv_iNDEX_EXP, libNtve_gf_ArithmeticRealClamp((lv_initEssence * lp_value), lib303E9822_gv_mIN_STACK_ESSENCE, lib303E9822_gv_mAX_STACK_ESSENCE));
+    }
+    else if (auto39DAEBA7_val == lib303E9822_ge_Operatoressence__2D) {
+        UnitSetCustomValue(lp_essence, lib303E9822_gv_iNDEX_EXP, libNtve_gf_ArithmeticRealClamp((lv_initEssence - lp_value), lib303E9822_gv_mIN_STACK_ESSENCE, lib303E9822_gv_mAX_STACK_ESSENCE));
+    }
+    else {
+    }
+    TextExpressionSetToken("Param/Expression/lib_303E9822_20082D80", "A", FixedToText(lib303E9822_gf_GetEssenceAmount(lp_essence), 0));
+    lv_text = TextExpressionAssemble("Param/Expression/lib_303E9822_20082D80");
+    UnitSetInfoTip(lp_essence, lv_text);
+    UnitSetInfoText2(lp_essence, lv_text);
+}
+
+void lib303E9822_gf_MergingEssence (unit lp_essence) {
+    // Variable Declarations
+    unitgroup lv_allessences;
+    unit lv_mainessence;
+
+    // Automatic Variable Declarations
+    unitgroup auto0451885D_g;
+    int auto0451885D_u;
+    unit auto0451885D_var;
+
+    // Variable Initialization
+    lv_allessences = UnitGroup(lib303E9822_gv_gAMELINK_ESSENCE, lib303E9822_gv_oWNER_ESSENCE, RegionCircle(UnitGetPosition(lp_essence), lib303E9822_gv_rADIUS_MERGING_ESSENCE), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    lv_mainessence = lib303E9822_gf_GetEssenceGreatherExp(lv_allessences);
+
+    // Implementation
+    UnitGroupRemove(lv_allessences, lv_mainessence);
+    auto0451885D_g = lv_allessences;
+    auto0451885D_u = UnitGroupCount(auto0451885D_g, c_unitCountAll);
+    for (;; auto0451885D_u -= 1) {
+        auto0451885D_var = UnitGroupUnitFromEnd(auto0451885D_g, auto0451885D_u);
+        if (auto0451885D_var == null) { break; }
+        lib303E9822_gf_ModifyEssenceValue(lv_mainessence, lib303E9822_ge_Operatoressence__2B, lib303E9822_gf_GetEssenceAmount(auto0451885D_var));
+        UnitKill(auto0451885D_var);
+    }
+    lib303E9822_gf_EssenceScale(lv_mainessence, false);
+}
+
+void lib303E9822_gf_EssenceScale (unit lp_essenceUnit, bool lp_instantScale) {
+    // Variable Declarations
+    fixed lv_customScale;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Implementation
+    lv_customScale = (UnitGetCustomValue(lp_essenceUnit, lib303E9822_gv_iNDEX_EXP) / 100.0);
+    lv_customScale += 0.8;
+    if ((lv_customScale > 1.8)) {
+        lv_customScale = 1.8;
+    }
+
+    TextExpressionSetToken("Param/Expression/lib_303E9822_191BE9A2", "A", FixedToText(lv_customScale, c_fixedPrecisionAny));
+    TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_303E9822_191BE9A2"), true);
+    if ((lp_instantScale == true)) {
+        libNtve_gf_SendActorMessageToUnit(lp_essenceUnit, (("SetScale " + FixedToString(lv_customScale, c_fixedPrecisionAny))));
+    }
+    else {
+        libNtve_gf_SendActorMessageToUnit(lp_essenceUnit, (("SetScale " + FixedToString(lv_customScale, c_fixedPrecisionAny) + " 0.1")));
+    }
+}
+
+unit lib303E9822_gf_GetEssenceGreatherExp (unitgroup lp_essences) {
+    // Variable Declarations
+    fixed lv_exp;
+    unit lv_result;
+
+    // Automatic Variable Declarations
+    unitgroup auto24B84C4B_g;
+    int auto24B84C4B_u;
+    unit auto24B84C4B_var;
+
+    // Variable Initialization
+    lv_exp = -1.0;
+
+    // Implementation
+    auto24B84C4B_g = lp_essences;
+    auto24B84C4B_u = UnitGroupCount(auto24B84C4B_g, c_unitCountAll);
+    for (;; auto24B84C4B_u -= 1) {
+        auto24B84C4B_var = UnitGroupUnitFromEnd(auto24B84C4B_g, auto24B84C4B_u);
+        if (auto24B84C4B_var == null) { break; }
+        if ((UnitGetCustomValue(auto24B84C4B_var, lib303E9822_gv_iNDEX_EXP) > lv_exp)) {
+            lv_exp = UnitGetCustomValue(auto24B84C4B_var, lib303E9822_gv_iNDEX_EXP);
+            lv_result = auto24B84C4B_var;
+        }
+
+    }
+    return lv_result;
+}
+
+fixed lib303E9822_gf_GetEssenceAmount (unit lp_essence) {
+    // Automatic Variable Declarations
+    // Implementation
+    return UnitGetCustomValue(lp_essence, lib303E9822_gv_iNDEX_EXP);
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Set Commander - Dehaka
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_SetCommanderDehaka_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((StringWord(EventChatMessage(false), 2) == "deh")) {
+        libBEDD5153_gf_SetPlayersCommander(PlayerGroupSingle(1), "COOPDehaka");
+        PlayerGroupAdd(lib303E9822_gv_allPlayersDehaka, 1);
+    }
+    else {
+        libBEDD5153_gf_SetPlayersCommander(PlayerGroupSingle(1), "COOPRaynor");
+        PlayerGroupRemove(lib303E9822_gv_allPlayersDehaka, 1);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_SetCommanderDehaka_Init () {
+    lib303E9822_gt_SetCommanderDehaka = TriggerCreate("lib303E9822_gt_SetCommanderDehaka_Func");
+    TriggerAddEventChatMessage(lib303E9822_gt_SetCommanderDehaka, c_playerAny, "-comm", false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Cheat on
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_Cheaton_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(1.0, c_timeGame);
+    ConsoleCommand("minerals 1000000", true, true);
+    ConsoleCommand("vespene 1000000", true, true);
+    ConsoleCommand("fastbuild", true, true);
+    ConsoleCommand("god 1", true, true);
+    ConsoleCommand("makeunit dehaka 1 1", true, true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_Cheaton_Init () {
+    lib303E9822_gt_Cheaton = TriggerCreate("lib303E9822_gt_Cheaton_Func");
+    TriggerAddEventMapInit(lib303E9822_gt_Cheaton);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Show Essence
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_ShowEssence_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto988E56D6_g;
+    int auto988E56D6_u;
+    unit auto988E56D6_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TextExpressionSetToken("Param/Expression/lib_303E9822_6B55EC94", "A", TextWithColor(PlayerName(EventPlayer()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(EventPlayer(), false))));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_303E9822_6B55EC94"));
+    auto988E56D6_g = UnitGroup(lib303E9822_gv_gAMELINK_ESSENCE, 0, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    auto988E56D6_u = UnitGroupCount(auto988E56D6_g, c_unitCountAll);
+    for (;; auto988E56D6_u -= 1) {
+        auto988E56D6_var = UnitGroupUnitFromEnd(auto988E56D6_g, auto988E56D6_u);
+        if (auto988E56D6_var == null) { break; }
+        libNtve_gf_SendActorMessageToUnit(auto988E56D6_var, (("SetFilterPlayers " + IntToString(1))));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_ShowEssence_Init () {
+    lib303E9822_gt_ShowEssence = TriggerCreate("lib303E9822_gt_ShowEssence_Func");
+    libBEDD5153_gf_PlayerCommanderChanges(lib303E9822_gt_ShowEssence, 1, "COOPDehaka", "From");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Hide Essence
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_HideEssence_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto783A9095_g;
+    int auto783A9095_u;
+    unit auto783A9095_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TextExpressionSetToken("Param/Expression/lib_303E9822_A1F4B958", "A", TextWithColor(PlayerName(EventPlayer()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(EventPlayer(), false))));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_303E9822_A1F4B958"));
+    auto783A9095_g = UnitGroup(lib303E9822_gv_gAMELINK_ESSENCE, 0, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    auto783A9095_u = UnitGroupCount(auto783A9095_g, c_unitCountAll);
+    for (;; auto783A9095_u -= 1) {
+        auto783A9095_var = UnitGroupUnitFromEnd(auto783A9095_g, auto783A9095_u);
+        if (auto783A9095_var == null) { break; }
+        libNtve_gf_SendActorMessageToUnit(auto783A9095_var, (("SetFilterPlayers " + IntToString(1) + " Clear")));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_HideEssence_Init () {
+    lib303E9822_gt_HideEssence = TriggerCreate("lib303E9822_gt_HideEssence_Func");
+    libBEDD5153_gf_PlayerCommanderChanges(lib303E9822_gt_HideEssence, 1, "COOPDehaka", "On");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init Commander - Dehaka
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_InitCommanderDehaka_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto5CC0FBA4_g;
+    int auto5CC0FBA4_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto5CC0FBA4_g = PlayerGroupAll();
+    auto5CC0FBA4_var = -1;
+    while (true) {
+        auto5CC0FBA4_var = PlayerGroupNextPlayer(auto5CC0FBA4_g, auto5CC0FBA4_var);
+        if (auto5CC0FBA4_var < 0) { break; }
+        PlayerSetCommander(auto5CC0FBA4_var, "COOPDehaka");
+        PlayerGroupAdd(lib303E9822_gv_allPlayersDehaka, auto5CC0FBA4_var);
+        TextExpressionSetToken("Param/Expression/lib_303E9822_45E3862D", "A", TextWithColor(PlayerName(auto5CC0FBA4_var), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(auto5CC0FBA4_var, false))));
+        TextExpressionSetToken("Param/Expression/lib_303E9822_45E3862D", "B", StringExternal(CatalogFieldValueGet(c_gameCatalogCommander, PlayerCommander(auto5CC0FBA4_var), "Name", auto5CC0FBA4_var)));
+        UIDisplayMessage(PlayerGroupSingle(auto5CC0FBA4_var), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_303E9822_45E3862D"));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_InitCommanderDehaka_Init () {
+    lib303E9822_gt_InitCommanderDehaka = TriggerCreate("lib303E9822_gt_InitCommanderDehaka_Func");
+    TriggerAddEventMapInit(lib303E9822_gt_InitCommanderDehaka);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Spawn Essence
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_SpawnEssence_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_essence;
+
+    // Automatic Variable Declarations
+    playergroup autoE1A97F1C_g;
+    int autoE1A97F1C_var;
+    playergroup autoE0B74F8B_g;
+    int autoE0B74F8B_var;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitTypeTestAttribute(UnitGetType(EventUnit()), c_unitAttributeStructure) == false))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != libNtve_gf_KillingPlayer()))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != lib303E9822_gv_oWNER_ESSENCE))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != 15))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != 16))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, lib303E9822_gv_gAMELINK_ESSENCE, 0, lib303E9822_gv_oWNER_ESSENCE, UnitGetPosition(EventUnit()));
+    UnitSetCustomValue(lv_essence, lib303E9822_gv_iNDEX_EXP, lib303E9822_gv_dEFAULT_AMOUNT_EXP);
+    lv_essence = UnitLastCreated();
+    lib303E9822_gf_ModifyEssenceValue(lv_essence, lib303E9822_ge_Operatoressence__2B, lib303E9822_gv_dEFAULT_AMOUNT_EXP);
+    lib303E9822_gf_EssenceScale(lv_essence, false);
+    lib303E9822_gf_MergingEssence(lv_essence);
+    autoE1A97F1C_g = PlayerGroupAll();
+    autoE1A97F1C_var = -1;
+    while (true) {
+        autoE1A97F1C_var = PlayerGroupNextPlayer(autoE1A97F1C_g, autoE1A97F1C_var);
+        if (autoE1A97F1C_var < 0) { break; }
+        libNtve_gf_SendActorMessageToUnit(lv_essence, (("SetFilterPlayers " + IntToString(autoE1A97F1C_var) + " Toggle")));
+    }
+    autoE0B74F8B_g = lib303E9822_gv_allPlayersDehaka;
+    autoE0B74F8B_var = -1;
+    while (true) {
+        autoE0B74F8B_var = PlayerGroupNextPlayer(autoE0B74F8B_g, autoE0B74F8B_var);
+        if (autoE0B74F8B_var < 0) { break; }
+        libNtve_gf_SendActorMessageToUnit(lv_essence, (("SetFilterPlayers " + IntToString(autoE0B74F8B_var) + " Toggle")));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_SpawnEssence_Init () {
+    lib303E9822_gt_SpawnEssence = TriggerCreate("lib303E9822_gt_SpawnEssence_Func");
+    TriggerAddEventUnitDied(lib303E9822_gt_SpawnEssence, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Collect Essence
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_CollectEssence_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_target;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_target = EventPlayerEffectUsedUnitImpact();
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventPlayerEffectUsedUnitImpact()) == lib303E9822_gv_gAMELINK_DEHAKA))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TextExpressionSetToken("Param/Expression/lib_303E9822_F30A0D84", "A", FixedToText(lib303E9822_gf_GetEssenceAmount(EventPlayerEffectUsedUnit(c_effectUnitCaster)), c_fixedPrecisionAny));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_303E9822_F30A0D84"));
+    UnitSetAttributePoint(EventPlayerEffectUsedUnitImpact(), "DehakaCommanderVeterancyHero@Attribute@1", true, (UnitGetAttributePoint(lv_target, "DehakaCommanderVeterancyHero@Attribute@1", true) + FixedToInt(lib303E9822_gf_GetEssenceAmount(EventPlayerEffectUsedUnit(c_effectUnitCaster)))));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_CollectEssence_Init () {
+    lib303E9822_gt_CollectEssence = TriggerCreate("lib303E9822_gt_CollectEssence_Func");
+    TriggerAddEventPlayerEffectUsed(lib303E9822_gt_CollectEssence, 0, "DehakaCommanderPickupEssence@LM");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Increase Veterancy For Dehaka
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_gt_IncreaseVeterancyForDehaka_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib303E9822_gt_IncreaseVeterancyForDehaka_Init () {
+    lib303E9822_gt_IncreaseVeterancyForDehaka = TriggerCreate("lib303E9822_gt_IncreaseVeterancyForDehaka_Func");
+    TriggerAddEventPlayerEffectUsed(lib303E9822_gt_IncreaseVeterancyForDehaka, 1, null);
+}
+
+void lib303E9822_InitTriggers () {
+    lib303E9822_gt_SetCommanderDehaka_Init();
+    lib303E9822_gt_Cheaton_Init();
+    lib303E9822_gt_ShowEssence_Init();
+    lib303E9822_gt_HideEssence_Init();
+    lib303E9822_gt_InitCommanderDehaka_Init();
+    lib303E9822_gt_SpawnEssence_Init();
+    lib303E9822_gt_CollectEssence_Init();
+    lib303E9822_gt_IncreaseVeterancyForDehaka_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib303E9822_InitLib_completed = false;
+
+void lib303E9822_InitLib () {
+    if (lib303E9822_InitLib_completed) {
+        return;
+    }
+
+    lib303E9822_InitLib_completed = true;
+
+    lib303E9822_InitLibraries();
+    lib303E9822_InitVariables();
+    lib303E9822_InitTriggers();
+}
+

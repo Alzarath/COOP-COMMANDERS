@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard>
+    <name>Add Unit</name>
+    <category>ShadowDragon/COOP Commanders</category>
+    <objecttypes create="Unit"/>
+
+    <!-- condtitions -->
+    <condition id="selectGround" input="parent" value="CommanderGround"/>
+    <condition id="selectAir" input="parent" value="CommanderAir"/>
+    <condition id="selectStructure" input="parent" value="CommanderStructure"/>
+
+    <condition id="NotStructure" logic="or">
+        <condition id="selectGround"/>
+        <condition id="selectAir"/>
+    </condition>
+
+
+    <!-- Inputs -->
+
+        <!-- Page 1 -->
+            <input id="SectionMakeUnit" type="WizardText">
+                <default value="СОЗДАНИЕ ЕДИНИЦЫ"/>
+                <color value="255,0,0"/>
+            </input>
+
+            <input id="UnitName" type="CString">
+                <name>Unit Name</name>
+            </input>
+            <input id="UnitID" type="CString">
+                <name>Unit ID</name>
+            </input>
+
+            <input id="Life" type="real32">
+                <name>Life</name>
+                <minimum value="1"/>
+                <default value="1"/>
+                <layout column="2"/>
+            </input>
+            <input id="LifeRegen" type="real32">
+                <name>Life Regen</name>
+                <layout column="2"/>
+            </input>
+            <input id="Shield" type="real32">
+                <name>Shield</name>
+                <layout column="2"/>
+            </input>
+            <input id="ShieldRegen" type="real32">
+                <name>Shield Regen</name>
+                <layout column="2"/>
+            </input>
+            <input id="Energy" type="real32">
+                <name>Energy Start</name>
+                <layout column="3"/>
+            </input>
+            <input id="EnergyRegen" type="real32">
+                <name>Energy Regen</name>
+                <layout column="3"/>
+            </input>
+
+            <input id="race" type="CRaceLink">
+                <name>Раса единицы</name>
+            </input>
+            <input id="parent" type="WizardMenu">
+                <name>Родитель</name>
+                <item text="Ground" value="CommanderGround"/>
+                <item text="Air" value="CommanderAir"/>
+                <item text="Structure" value="CommanderStructure"/>
+            </input>
+            <input id="commander" type="WizardMenu">
+                <name>Командир</name>
+                <item text="Рейнор" value="RaynorCommander"/>
+                <item text="Керриган" value="KerriganCommander"/>
+                <item text="Артанис" value="ArtanisCommander"/>
+                <item text="Свонн" value="SwannCommander"/>
+                <item text="Загара" value="ZagaraCommander"/>
+                <item text="Воразун" value="VorazunCommander"/>
+                <item text="Каракс" value="KaraxCommander"/>
+                <item text="Абатур" value="AbathurCommander"/>
+                <item text="Аларак" value="AlarakCommander"/>
+                <item text="Нова" value="NovaCommander"/>
+                <item text="Стуков" value="StukovCommander"/>
+                <item text="Феникс" value="FenixCommander"/>
+                <item text="Дехака" value="DehakaCommander"/>
+                <item text="Хар и Хорнер" value="HanHornerCommander"/>
+                <item text="Тайкус" value="TychusCommander"/>
+                <item text="Зератул" value="ZeratulCommander"/>
+                <item text="Стетманн" value="StetmannCommander"/>
+                <item text="Менгск" value="AMengskCommander"/>
+            </input>
+
+        <!-- Page 2 -->
+            <!-- Icons -->
+            <input id="UnitIcon" type="CImagePath">
+                <name>Иконка юнита</name>
+                <layout page="2" column="2"/>
+            </input>
+            <input id="LifeArmorIcon" type="CImagePath">
+                <name>Иконка Брони</name>
+                <layout page="2" column="2"/>
+            </input>
+            <input id="WireframeIcon" type="CImagePath">
+                <name>Иконка каркаса</name>
+                <layout page="2" column="2"/>
+            </input>
+
+            <!-- Model -->
+            <input id="unitModel" type="CModelPath">
+                <name>Модель единицы</name>
+                <layout page="2" column="3"/>
+            </input>
+            <input id="deathModel" type="CModelPath">
+                <name>Модель Смерти единицы</name>
+                <layout page="2" column="3"/>
+            </input>
+            <input id="portraitModel" type="CModelPath">
+                <name>Портрет единицы</name>
+                <layout page="2" column="3"/>
+            </input>
+            <input id="useFXA" type="WizardRadio">
+                <item text="с FXA" value="isFacial"/>
+                <item text="Без FXA" value="notFacial"/>
+                <default value="notFacial"/>
+                <layout page="2" column="3"/>
+            </input>
+
+    <!-- Macros -->
+    <macro id="RemoveCommander" replaceSrc="Commander" replaceDst="">^commander^</macro>
+
+    <!-- Entries -->
+    <entry catalog="Unit" type="CUnit">
+        <id>^commander^^UnitID^</id>
+        <parentid>^parent^_^race^</parentid>
+
+        <field id="Name">
+            <value>^UnitName^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>ObjectType:Unit,ObjectFamily:Coop,Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+
+    <!-- Main Actor -->
+    <entry catalog="Actor" type="CActorUnit">
+        <id>^commander^^UnitID^</id>
+        <condition id="NotStructure"/>
+        <parentid>^parent^Unit</parentid>
+        <token id="unitName">
+            <value>^commander^^UnitID^</value>
+        </token>
+
+        <field id="UnitIcon">
+            <value>^UnitIcon^</value>
+        </field>
+        <field id="GroupIcon">
+            <value>^UnitIcon^</value>
+        </field>
+        <field id="HeroIcon">
+            <value>^UnitIcon^</value>
+        </field>
+
+        <field id="Wireframe_Image">
+            <index>0</index>
+            <value>^WireframeIcon^</value>
+        </field>
+    </entry>
+    <entry catalog="Actor" type="CActorUnit">
+        <id>^commander^^UnitID^</id>
+        <condition id="selectStructure"/>
+        <parentid>CommanderBaseUnit</parentid>
+        <token id="unitName">
+            <value>^commander^^UnitID^</value>
+        </token>
+    </entry>
+
+    <entry catalog="Actor" type="CActorUnit">
+        <id>^commander^^UnitID^</id>
+        <allowmodify/>
+        <condition id="selectStructure"/>
+        <parentid>CommanderBaseUnit</parentid>
+        <token id="unitName">
+            <value>^commander^^UnitID^</value>
+        </token>
+
+        <field id="UnitIcon">                               <value>^UnitIcon^</value>       </field>
+        <field id="GroupIcon">                              <value>^UnitIcon^</value>       </field>
+        <field id="HeroIcon">                               <value>^UnitIcon^</value>       </field>
+        <field id="LifeArmorIcon">                          <value>^LifeArmorIcon^</value>  </field>
+
+        <field id="Wireframe_Image">    <index>0</index>    <value>^WireframeIcon^</value>  </field>
+    </entry>
+
+    <entry catalog="Model" type="CModel">
+        <id>^commander^^UnitID^</id>
+        <field id="Name">
+            <value>^UnitName^</value>
+        </field>
+        <field id="Model">
+            <value>^unitModel^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+    <entry catalog="Model" type="CModel">
+        <id>^commander^^UnitID^@Death</id>
+        <parentid>UnitDeath</parentid>
+        <field id="Name">
+            <value>Death</value>
+        </field>
+        <field id="Model">
+            <value>^deathModel^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+    <entry catalog="Model" type="CModel">
+        <id>^commander^^UnitID^@Portrait</id>
+        <parentid>Portrait</parentid>
+        <field id="Name">
+            <value>Portrait</value>
+        </field>
+        <field id="Model">
+            <value>^portraitModel^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+
+    <entry catalog="Sound" type="CSound">
+        <id>^commander^^UnitID^@Attack</id>
+        <parentid>CommanderVOAttack</parentid>
+        <token id="unitName">
+            <value>^commander^^UnitID^</value>
+        </token>
+
+        <field id="Name">
+            <value>Attack</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^commander^^UnitID^@Pissed</id>
+        <parentid>CommanderVOPissed</parentid>
+        <token id="unitName">
+            <value>^commander^^UnitID^</value>
+        </token>
+
+        <field id="Name">
+            <value>Pissed</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^commander^^UnitID^@What</id>
+        <parentid>CommanderVOWhat</parentid>
+        <token id="unitName">
+            <value>^commander^^UnitID^</value>
+        </token>
+
+        <field id="Name">
+            <value>What</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^commander^^UnitID^@Yes</id>
+        <parentid>CommanderVOYes</parentid>
+        <token id="unitName">
+            <value>^commander^^UnitID^</value>
+        </token>
+
+        <field id="Name">
+            <value>Yes</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^RemoveCommander^</value>
+        </field>
+    </entry>
+
+    <entry catalog="DataCollection" type="CDataCollectionUnit">
+        <id>^commander^^UnitID^</id>
+        <field id="Name">
+            <value>^commander^ - ^UnitName^</value>
+        </field>
+
+        <field id="DataRecord">
+            <index>0</index>
+            <value>Unit,^commander^^UnitID^</value>
+        </field>
+        <field id="DataRecord">
+            <index>1</index>
+            <value>Actor,^commander^^UnitID^</value>
+        </field>
+        <field id="DataRecord">
+            <index>2</index>
+            <value>Model,^commander^^UnitID^</value>
+        </field>
+        <field id="DataRecord">
+            <index>3</index>
+            <value>Model,^commander^^UnitID^@Portrait</value>
+        </field>
+        <field id="DataRecord">
+            <index>4</index>
+            <value>Model,^commander^^UnitID^@Death</value>
+        </field>
+        <field id="DataRecord">
+            <index>5</index>
+            <value>Sound,^commander^^UnitID^@Attack</value>
+        </field>
+        <field id="DataRecord">
+            <index>6</index>
+            <value>Sound,^commander^^UnitID^@Pissed</value>
+        </field>
+        <field id="DataRecord">
+            <index>7</index>
+            <value>Sound,^commander^^UnitID^@What</value>
+        </field>
+        <field id="DataRecord">
+            <index>8</index>
+            <value>Sound,^commander^^UnitID^@Yes</value>
+        </field>
+    </entry>
+</wizard>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectDamage id="DehakaCommanderDehakaClaws@Damage">
+        <EditorCategories value="Race:Dehaka"/>
+        <AINotifyFlags index="HelpFriend" value="1"/>
+        <AINotifyFlags index="HurtFriend" value="1"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Flags index="Impact" value="1"/>
+        <Kind value="Melee"/>
+        <KindSplash value="Melee"/>
+        <Amount value="25"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="DehakaCommanderIntimidatingRoar@AB">
+        <EditorCategories value="Race:Dehaka"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="DehakaCommanderIntimidatingRoar@AB@2">
+        <EditorCategories value="Race:Dehaka"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="DehakaCommanderIntimidatingRoar@AB@3">
+        <EditorCategories value="Race:Dehaka"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="DehakaCommanderIntimidatingRoar@Search">
+        <EditorCategories value="Race:Dehaka"/>
+        <AreaArray Radius="10" Effect="DehakaCommanderIntimidatingRoar@AB@3"/>
+        <AreaArray Radius="10" Effect="DehakaCommanderIntimidatingRoar@AB"/>
+        <AreaArray Radius="10" Effect="DehakaCommanderIntimidatingRoar@AB@2"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectEnumArea>
+    <CEffectModifyUnit id="DehakaCommanderPickupEssence@Impact">
+        <EditorCategories value="Race:Dehaka"/>
+    </CEffectModifyUnit>
+    <CEffectLaunchMissile id="DehakaCommanderPickupEssence@LM">
+        <ValidatorArray index="0" value="UnitIsDehakaCOOP"/>
+        <EditorCategories value="Race:Dehaka"/>
+        <LaunchEffect value="DehakaCommanderSuicideRemoveCaster"/>
+        <ImpactEffect value="DehakaCommanderPickupEssence@Set"/>
+        <AmmoUnit value="DehakaCommanderEssence"/>
+        <Movers Link="DehakaCommanderEssence@Mover"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="DehakaCommanderPickupEssence@Set">
+        <EditorCategories value="Race:Dehaka"/>
+        <EffectArray value="DehakaCommanderPickupEssence@Impact"/>
+    </CEffectSet>
+    <CEffectDamage id="DehakaCommanderSuicideRemoveCaster">
+        <EditorCategories value="Race:Dehaka"/>
+        <ImpactLocation Value="CasterUnit"/>
+        <Flags index="Kill" value="1"/>
+        <Death value="Remove"/>
+    </CEffectDamage>
+</Catalog>

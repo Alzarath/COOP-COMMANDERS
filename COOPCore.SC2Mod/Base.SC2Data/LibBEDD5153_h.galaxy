@@ -5,6 +5,13 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Preset Declarations
 
+// Constants
+const string libBEDD5153_gv_eVENT_PlayerCommanderChanges = "COOP_PlayerCommanderChanges";
+
 // Function Declarations
-void libBEDD5153_gf_AllowDisallowBuildOnCreepForPlayer (int lp_player, bool lp_allowDisallowOption, string lp_commander);
+void libBEDD5153_gf_SetPlayersCommander (playergroup lp_playerGroup, string lp_commander);
+void libBEDD5153_gf_PlayerCommanderChanges (trigger t, int lp_player, string lp_commander, string lp_direction);
+
+// Library Initialization
+void libBEDD5153_InitVariables ();
 

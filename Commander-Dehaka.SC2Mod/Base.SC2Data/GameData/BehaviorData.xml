@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="DehakaCommanderIntimidatingRoar@AB">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-intimidatingroar.dds"/>
+        <EditorCategories value="Race:Dehaka,AbilityorEffectType:Units"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.75"/>
+            <AdditiveAttackSpeedFactor value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaCommanderIntimidatingRoar@AB@2">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-intimidatingroar.dds"/>
+        <EditorCategories value="Race:Dehaka,AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="SuppressEnergy" value="1"/>
+            <AdditiveMoveSpeedFactor value="0.75"/>
+            <AdditiveAttackSpeedFactor value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaCommanderIntimidatingRoar@AB@3">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-intimidatingroar.dds"/>
+        <EditorCategories value="Race:Dehaka,AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="SuppressEnergy" value="1"/>
+            <AdditiveMoveSpeedFactor value="0.75"/>
+            <AdditiveAttackSpeedFactor value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorVeterancy id="DehakaCommanderVeterancyHero">
+        <EditorCategories value="Race:Dehaka,AbilityorEffectType:Units"/>
+        <ShareFilters index="Kills" value="-;Neutral,Enemy"/>
+        <VeterancyLevelArray MinVeterancyXP="100">
+            <Modification>
+                <DamageDealtUnscaled index="Spell" value="25"/>
+                <DamageDealtUnscaled index="Melee" value="2"/>
+                <VitalMaxArray index="Life" value="25"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="100">
+            <Modification>
+                <DamageDealtUnscaled index="Spell" value="25"/>
+                <DamageDealtUnscaled index="Melee" value="2"/>
+                <VitalMaxArray index="Life" value="25"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="100">
+            <Modification>
+                <DamageDealtUnscaled index="Spell" value="25"/>
+                <DamageDealtUnscaled index="Melee" value="2"/>
+                <VitalMaxArray index="Life" value="25"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="100">
+            <Modification>
+                <DamageDealtUnscaled index="Spell" value="25"/>
+                <DamageDealtUnscaled index="Melee" value="2"/>
+                <VitalMaxArray index="Life" value="25"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="100"/>
+    </CBehaviorVeterancy>
+    <CBehaviorAttribute id="DehakaCommanderVeterancyHero@Attribute@1">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-essencecollector.dds"/>
+        <EditorCategories value="Race:Dehaka,AbilityorEffectType:Units"/>
+        <MaxPoints value="100000"/>
+        <Modification>
+            <VitalMaxArray index="Life" value="0.75"/>
+        </Modification>
+    </CBehaviorAttribute>
+</Catalog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectInstant id="DehakaCommanderIntimidatingRoar">
+        <EditorCategories value="Race:Dehaka,AbilityorEffectType:Units"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="DehakaCommanderPickupEssence">
+        <EditorCategories value="Race:Dehaka,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaCommanderPickupEssence@LM"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <TargetFilters value="Ground,Visible;Self,Enemy,Dead,Hidden"/>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <AutoCastFilters value="-;Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="4"/>
+        <AutoCastValidatorArray value="UnitIsDehakaCOOP"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaCommanderPickupEssence"/>
+    </CAbilEffectTarget>
+</Catalog>

@@ -15,5 +15,64 @@
         <DataRecord Entry="Sound,DehakaCommanderDehaka@Ready"/>
         <DataRecord Entry="Sound,DehakaCommanderDehaka@Pissed"/>
         <DataRecord Entry="Sound,DehakaCommanderDehaka@Help"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehaka@Attack"/>
+        <DataRecord Entry="Actor,DehakaCommanderDehaka@Portrait"/>
+        <DataRecord Entry="Actor,DehakaCommanderDehaka@PortraitAddition"/>
+        <DataRecord Entry="Model,DehakaCommanderDehaka@PortraitAddition"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit id="DehakaCommanderDehakaClaws">
+        <EditorCategories value="DataGroup:Weapon,Race:Dehaka,ObjectType:Other"/>
+        <DataRecord Entry="Effect,DehakaCommanderDehakaClaws@Damage"/>
+        <DataRecord Entry="Weapon,DehakaCommanderDehakaClaws"/>
+        <DataRecord Entry="Actor,DehakaCommanderDehakaClaws"/>
+        <DataRecord Entry="Sound,DehakaCommanderDehakaClaws@SoundImpact"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="DehakaCommanderEssence">
+        <EditorCategories value="DataGroup:Unit,Race:Dehaka,ObjectType:Resource"/>
+        <DataRecord Entry="Actor,DehakaCommanderEssence"/>
+        <DataRecord Entry="Model,DehakaCommanderEssence"/>
+        <DataRecord Entry="Unit,DehakaCommanderEssence"/>
+        <DataRecord Entry="Actor,DehakaCommanderEssence@Pickup"/>
+        <DataRecord Entry="Mover,DehakaCommanderEssence@Mover"/>
+        <EditorIconSource value="Actor"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="DehakaCommanderHydralisk">
+        <DataRecord Entry="Unit,DehakaCommanderHydralisk"/>
+        <DataRecord Entry="Actor,DehakaCommanderHydralisk"/>
+        <DataRecord Entry="Model,DehakaCommanderHydralisk"/>
+        <DataRecord Entry="Model,DehakaCommanderHydralisk@Portrait"/>
+        <DataRecord Entry="Model,DehakaCommanderHydralisk@Death"/>
+        <DataRecord Entry="Sound,DehakaCommanderHydralisk@Attack"/>
+        <DataRecord Entry="Sound,DehakaCommanderHydralisk@Pissed"/>
+        <DataRecord Entry="Sound,DehakaCommanderHydralisk@What"/>
+        <DataRecord Entry="Sound,DehakaCommanderHydralisk@Yes"/>
+    </CDataCollectionUnit>
+    <CDataCollectionAbil id="DehakaCommanderIntimidatingRoar" parent="CommanderAbilityAB">
+        <Name value="DataCollection/Name/DehakaCommanderIntimidatingRoar"/>
+        <EditorCategories value="DataGroup:Ability,Race:Dehaka,DataFamily:Coop,ObjectType:Spell"/>
+        <EditorIconSource value="Button"/>
+        <DataRecord Entry="Abil,DehakaCommanderIntimidatingRoar"/>
+        <DataRecord Entry="Behavior,DehakaCommanderIntimidatingRoar@AB"/>
+        <DataRecord Entry="Behavior,DehakaCommanderIntimidatingRoar@AB@2"/>
+        <DataRecord Entry="Behavior,DehakaCommanderIntimidatingRoar@AB@3"/>
+        <DataRecord Entry="Effect,DehakaCommanderIntimidatingRoar@Search"/>
+        <DataRecord Entry="Effect,DehakaCommanderIntimidatingRoar@AB"/>
+        <DataRecord Entry="Effect,DehakaCommanderIntimidatingRoar@AB@2"/>
+        <DataRecord Entry="Effect,DehakaCommanderIntimidatingRoar@AB@3"/>
+        <DataRecord Entry="Button,DehakaCommanderIntimidatingRoar"/>
+        <Button value="DehakaCommanderIntimidatingRoar"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil id="DehakaCommanderPickupEssence">
+        <EditorCategories value="DataGroup:Ability,Race:Dehaka,ObjectType:Item"/>
+        <DataRecord Entry="Abil,DehakaCommanderPickupEssence"/>
+        <DataRecord Entry="Button,DehakaCommanderPickupEssence"/>
+        <DataRecord Entry="Effect,DehakaCommanderPickupEssence@LM"/>
+        <DataRecord Entry="Effect,DehakaCommanderPickupEssence@Impact"/>
+        <DataRecord Entry="Effect,DehakaCommanderPickupEssence@Set"/>
+    </CDataCollectionAbil>
+    <CDataCollection id="DehakaCommanderVeterancyHero">
+        <EditorCategories value="DataGroup:Buff,Race:Dehaka,ObjectType:Other"/>
+        <DataRecord Entry="Behavior,DehakaCommanderVeterancyHero"/>
+        <DataRecord Entry="Behavior,DehakaCommanderVeterancyHero@Attribute@1"/>
+    </CDataCollection>
 </Catalog>

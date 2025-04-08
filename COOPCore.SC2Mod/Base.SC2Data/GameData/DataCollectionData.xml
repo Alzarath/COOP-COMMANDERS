@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CDataCollection id="COOPCommanders">
+    <CDataCollection default="1" id="COOPCommanders">
         <EditorCategories value="DataGroup:Mechanic,Race:Neutral,ObjectType:Other"/>
     </CDataCollection>
-    <CDataCollectionAbil id="CommanderAbilityBeam">
+    <CDataCollectionAbil default="1" id="CommanderAbilityBeam">
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_Beam"/>
     </CDataCollectionAbil>
-    <CDataCollectionAbil id="CommanderAbilityMorph">
+    <CDataCollectionAbil default="1" id="CommanderAbilityMorph">
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_Morph"/>
     </CDataCollectionAbil>
-    <CDataCollectionUnit id="CommanderUnitMorphing">
+    <CDataCollectionUnit default="1" id="CommanderUnitMorphing">
         <EditorIconSource value="Actor"/>
         <Pattern value="CommanderUnits_Morphing"/>
     </CDataCollectionUnit>
-    <CDataCollectionUpgrade id="CommanderUpgradeLvLStats">
+    <CDataCollectionUpgrade default="1" id="CommanderUpgradeLvLStats">
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
         <Pattern value="CommanderUpgrade_LevelStats"/>
     </CDataCollectionUpgrade>

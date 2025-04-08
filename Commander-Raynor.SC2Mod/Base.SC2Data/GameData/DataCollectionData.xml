@@ -519,6 +519,7 @@
         <Name value="DataCollection/Name/RaynorCommanderTrainCC"/>
         <EditorCategories value="DataGroup:AbilityBuildTrain,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTrainCC"/>
+        <Button value="RaynorCommanderSCV@SCV"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderViking" parent="CommanderUnitMorphing">
         <Name value="DataCollection/Name/RaynorCommanderViking"/>

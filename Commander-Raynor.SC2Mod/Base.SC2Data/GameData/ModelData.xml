@@ -779,6 +779,8 @@
     <CModel id="RaynorCommanderSiegeTank@Alternate" parent="Unit">
         <Model value="Assets\Units\Terran\SiegeTank\SiegeTank.m3"/>
         <EditorCategories value="Race:Raynor"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="RaynorCommanderViking" parent="VikingFighterBase">
         <Model value="Assets\Units\Terran\VikingFighter\VikingFighter.m3"/>

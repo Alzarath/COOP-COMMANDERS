@@ -32,7 +32,6 @@
     </CRequirement>
     <CRequirement id="RaynorCommanderMarine">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
-        <NodeArray index="Use" Link="AndNot404259234CountUnitRaynorCommanderMarineQueuedOrBetterGTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5"/>
     </CRequirement>
     <CRequirement id="RaynorCommanderMedic">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>

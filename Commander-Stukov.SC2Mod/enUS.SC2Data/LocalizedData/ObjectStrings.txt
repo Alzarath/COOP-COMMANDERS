@@ -1,2 +1,10 @@
 ﻿Actor/Name/Infesteddiamondback=Infested diamondback
+Actor/Name/StukovCommanderInfested Liberator=StukovCommanderInfested Liberator
 Model/Name/Infesteddiamondback=Infested diamondback
+Model/Name/StukovCommanderInfested Liberator=Infested Liberator
+Model/Name/StukovCommanderInfested Liberator@Death=Death
+Model/Name/StukovCommanderInfested Liberator@Portrait=Portrait
+Sound/Name/StukovCommanderInfested Liberator@Attack=Attack
+Sound/Name/StukovCommanderInfested Liberator@Pissed=Pissed
+Sound/Name/StukovCommanderInfested Liberator@What=What
+Sound/Name/StukovCommanderInfested Liberator@Yes=Yes

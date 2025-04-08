@@ -1,4 +1,6 @@
 ﻿DataCollection/Name/Infesteddiamondback=Infested diamondback
+DataCollection/Name/StukovCommanderInfested Liberator=StukovCommander - Infested Liberator
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Unit/Name/COOP/StukovCommanderInfested Liberator=Infested Liberator
 Unit/Name/Infesteddiamondback=Infested diamondback

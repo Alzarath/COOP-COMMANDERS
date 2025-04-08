@@ -33,4 +33,16 @@
         <Lighting value="InfestedDiamondBackPortrait"/>
         <PausedParticleSystemBehavior value="Automatic"/>
     </CModel>
+    <CModel id="StukovCommanderInfested Liberator">
+        <Model value="Assets\Units\Zerg\Liberator_Stukov_Coop\Liberator_Stukov_Coop.m3"/>
+        <EditorCategories value="Race:Stukov"/>
+    </CModel>
+    <CModel id="StukovCommanderInfested Liberator@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Zerg\Liberator_Stukov_Coop_Death\Liberator_Stukov_Coop_Death.m3"/>
+        <EditorCategories value="Race:Stukov"/>
+    </CModel>
+    <CModel id="StukovCommanderInfested Liberator@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Zerg\InfestedBanshee_Portrait\InfestedBanshee_Portrait.m3"/>
+        <EditorCategories value="Race:Stukov"/>
+    </CModel>
 </Catalog>

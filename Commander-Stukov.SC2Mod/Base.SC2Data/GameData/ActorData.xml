@@ -28,4 +28,21 @@
             <Image value="Assets\Textures\wireframe-zerg-stukov-infesteddiamondback.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="StukovCommanderInfested Liberator" parent="CommanderAirUnit" unitName="StukovCommanderInfested Liberator">
+        <On index="0" Terms="UnitBirth.Bogus" Send="Create SoundEmitter Bogus_Ambience"/>
+        <On index="1" Terms="UnitBirth.Bogus" Send="Create {} ::Actor"/>
+        <On index="2" Terms="UnitRevive.Bogus"/>
+        <On index="3" Terms="UnitRevive.Bogus"/>
+        <On index="4" Terms="UnitConstruction.Bogus.Start"/>
+        <On index="5" Terms="UnitConstruction.Bogus.Finish"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-zerg-infestedliberator.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-infestedliberator.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-infestedliberator.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-stukov-infestedliberator.dds"/>
+        </Wireframe>
+    </CActorUnit>
 </Catalog>

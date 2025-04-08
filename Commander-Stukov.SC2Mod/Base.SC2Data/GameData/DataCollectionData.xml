@@ -8,4 +8,15 @@
         <DataRecord Entry="Model,Infesteddiamondback@death"/>
         <DataRecord Entry="Actor,Infesteddiamondback"/>
     </CDataCollection>
+    <CDataCollectionUnit id="StukovCommanderInfested Liberator">
+        <DataRecord Entry="Unit,StukovCommanderInfested Liberator"/>
+        <DataRecord Entry="Actor,StukovCommanderInfested Liberator"/>
+        <DataRecord Entry="Model,StukovCommanderInfested Liberator"/>
+        <DataRecord Entry="Model,StukovCommanderInfested Liberator@Portrait"/>
+        <DataRecord Entry="Model,StukovCommanderInfested Liberator@Death"/>
+        <DataRecord Entry="Sound,StukovCommanderInfested Liberator@Attack"/>
+        <DataRecord Entry="Sound,StukovCommanderInfested Liberator@Pissed"/>
+        <DataRecord Entry="Sound,StukovCommanderInfested Liberator@What"/>
+        <DataRecord Entry="Sound,StukovCommanderInfested Liberator@Yes"/>
+    </CDataCollectionUnit>
 </Catalog>

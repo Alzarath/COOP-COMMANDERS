@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSound id="StukovCommanderInfested Liberator@Attack" parent="CommanderVOAttack" unitName="StukovCommanderInfested Liberator">
+        <EditorCategories value="Race:Stukov"/>
+    </CSound>
+    <CSound id="StukovCommanderInfested Liberator@Pissed" parent="CommanderVOPissed" unitName="StukovCommanderInfested Liberator">
+        <EditorCategories value="Race:Stukov"/>
+    </CSound>
+    <CSound id="StukovCommanderInfested Liberator@What" parent="CommanderVOWhat" unitName="StukovCommanderInfested Liberator">
+        <EditorCategories value="Race:Stukov"/>
+    </CSound>
+    <CSound id="StukovCommanderInfested Liberator@Yes" parent="CommanderVOYes" unitName="StukovCommanderInfested Liberator">
+        <EditorCategories value="Race:Stukov"/>
+    </CSound>
+</Catalog>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard>
+    <name>Add Weapon - Instant Damage</name>
+    <category>COOP Commanders/Not implemented/Weapon</category>
+    <objecttypes create="Weapon"/>
+
+    <input id="SectionMakeWeapon" type="WizardText">
+        <default value="СОЗДАНИЕ ОРУЖИЯ С МГНОВЕННЫМ УРОНОМ"/>
+        <color value="255,0,0"/>
+    </input>
+
+    <!-- PAGE 1 -->
+    <!-- COLUMN 1 -->
+
+    <input id="WeaponName" type="CString">
+        <name>Weapon Name</name>
+    </input>
+    <input id="WeaponID" type="CString">
+        <name>Weapon ID</name>
+    </input>
+
+    <input id="TargetDC" type="CDataCollection
+    Link">
+        <name>Добавить к</name>
+    </input>
+</wizard>

@@ -1,6 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-
+    <!-- Actors Template -->
+    <CActorUnit default="1" id="CommanderUnitBase" parent="GenericUnitStandard">
+        <PortraitModel value="##unitName##@Portrait"/>
+        <PlacementModel value="##unitName##@Placement"/>
+        <BuildModel value="##unitName##@Build"/>
+        <GlossaryAnim value="Spell"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <SoundArray index="Birth" value="##unitName##@Birth"/>
+        <SoundArray index="Ready" value="##unitName##@Ready"/>
+        <SoundArray index="Help" value="##unitName##@Help"/>
+        <SoundArray index="What" value="##unitName##@What"/>
+        <SoundArray index="Yes" value="##unitName##@Yes"/>
+        <SoundArray index="Attack" value="##unitName##@Attack"/>
+        <SoundArray index="Pissed" value="##unitName##@Pissed"/>
+        <SoundArray index="Movement" value="##unitName##@Movement"/>
+        <SoundArray index="Turning" value="##unitName##@Turning"/>
+        <SoundArray index="Board" value="##unitName##@Board"/>
+        <SoundArray index="Construction" value="##unitName##@Constuction"/>
+        <SoundArray index="Click" value="##unitName##@Click"/>
+        <SoundArray index="ClickError" value="##unitName##@ClickError"/>
+        <SoundArray index="Highlight" value="##unitName##@Highlight"/>
+        <!-- Death Array-->
+        <DeathArray index="Normal" ModelLink="##unitName##@Death" SoundLink="##unitName##@Death" VoiceLink="##unitName##@DeathVoice"/>
+        <DeathArray index="Blast" ModelLink="##unitName##@DeathBlast" SoundLink="##unitName##@DeathBlast" VoiceLink="##unitName##@DeathVoiceBlast"/>
+        <DeathArray index="Disintegrate" ModelLink="##unitName##@DeathDisintegrate" SoundLink="##unitName##@DeathDisintegrate" VoiceLink="##unitName##@DeathVoiceDisintegrate"/>
+        <DeathArray index="Eat" ModelLink="##unitName##@DeathEat" SoundLink="##unitName##@DeathEat" VoiceLink="##unitName##@DeathVoiceEat"/>
+        <DeathArray index="Electrocute" ModelLink="##unitName##@DeathElectrocute" SoundLink="##unitName##@DeathElectrocute" VoiceLink="##unitName##@DeathVoiceElectrocute"/>
+        <DeathArray index="Eviscerate" ModelLink="##unitName##@DeathEviscerate" SoundLink="##unitName##@DeathEviscerate" VoiceLink="##unitName##@DeathVoiceEviscerate"/>
+        <DeathArray index="Fire" ModelLink="##unitName##@DeathFire" SoundLink="##unitName##@DeathFire" VoiceLink="##unitName##@DeathVoiceFire"/>
+        <DeathArray index="Freeze" ModelLink="##unitName##@Death" SoundLink="##unitName##@Death" VoiceLink="##unitName##@DeathVoice"/>
+        <DeathArray index="Impact" ModelLink="##unitName##@DeathImpact" SoundLink="##unitName##@DeathImpact" VoiceLink="##unitName##@DeathVoiceImpact"/>
+        <DeathArray index="Morph" ModelLink="##unitName##@DeathMorph" SoundLink="##unitName##@DeathMorph" VoiceLink="##unitName##@DeathVoiceMorph"/>
+        <DeathArray index="Reincarnation" ModelLink="##unitName##@DeathReincarnation" SoundLink="##unitName##@DeathReincarnation" VoiceLink="##unitName##@DeathVoiceReincarnation"/>
+        <DeathArray index="Silentkill" ModelLink="##unitName##@DeathSilentKill" SoundLink="##unitName##@DeathSilentKill" VoiceLink="##unitName##@DeathVoiceSilentKill"/>
+        <DeathArray index="Squish" ModelLink="##unitName##@DeathSquish" SoundLink="##unitName##@DeathSquish" VoiceLink="##unitName##@DeathVoiceSquish"/>
+        <DeathArray index="Timeout" ModelLink="##unitName##@DeathTimeout" SoundLink="##unitName##@DeathTimeout" VoiceLink="##unitName##@DeathVoiceTimeout"/>
+        <DeathArray index="Unlink" ModelLink="##unitName##@DeathUnlink" SoundLink="##unitName##@DeathUnlink" VoiceLink="##unitName##@DeathVoiceUnlink"/>
+        <DeathArray index="UnderConstruction" ModelLink="##unitName##@DeathUnderConstuction" SoundLink="##unitName##@DeathUnderConstuction" VoiceLink="##unitName##@DeathVoiceUnderConstuction"/>
+        <DeathArray index="Salvage" ModelLink="##unitName##@DeathSalvage" SoundLink="##unitName##@DeathSalvage" VoiceLink="##unitName##@DeathVoiceSalvage"/>
+        <DeathArray index="Cancel" ModelLink="##unitName##@DeathCancel" SoundLink="##unitName##@DeathCancel" VoiceLink="##unitName##@DeathVoiceCancel"/>
+        <DeathArray index="TrainingComplete" ModelLink="##unitName##@DeathTrainingComplete" SoundLink="##unitName##@DeathTrainingComplete" VoiceLink="##unitName##@DeathVoiceTrainingComplete"/>
+        <DeathArray index="TrainingCancel" ModelLink="##unitName##@DeathTrainingCancel" SoundLink="##unitName##@DeathTrainingCancel" VoiceLink="##unitName##@DeathVoiceTrainingCancel"/>
+        <!-- Death Customs -->
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="##unitName##@DeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="FireHeavy"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="##unitName##@DeathRagdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive2"/>
+        </TerrainSquibs>
+    </CActorUnit>
+    <CActorUnit default="1" id="CommanderAirUnit" parent="CommanderUnitBase">
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+    </CActorUnit>
+    <CActorUnit default="1" id="CommanderGroundUnit" parent="CommanderUnitBase">
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+    </CActorUnit>
+    <!-- Sounds Template -->
+    <CSound default="1" id="CommanderVOBase" parent="Voice">
+        <?token id="unitName" type="CUnitLink" value="Bogus"?>
+    </CSound>
+    <CSound default="1" id="CommanderVOPissed" parent="CommanderVOBase">
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/00" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/01" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/02" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/03" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/04" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/05" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/06" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/07" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/08" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/09" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/10" FacialGroup=""/>
+        <Flags index="VariationFallback" value="0"/>
+    </CSound>
+    <CSound default="1" id="CommanderVOAttack" parent="CommanderVOBase">
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/00" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/01" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/02" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/03" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/04" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/05" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/06" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/07" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/08" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/09" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/10" FacialGroup=""/>
+        <Flags index="VariationFallback" value="0"/>
+    </CSound>
+    <CSound default="1" id="CommanderVOYes" parent="CommanderVOBase">
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/00" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/01" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/02" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/03" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/04" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/05" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/06" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/07" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/08" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/09" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/10" FacialGroup=""/>
+        <Flags index="VariationFallback" value="0"/>
+    </CSound>
+    <CSound default="1" id="CommanderVOWhat" parent="CommanderVOBase">
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/00" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/01" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/02" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/03" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/04" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/05" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/06" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/07" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/08" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/09" FacialGroup=""/>
+        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/10" FacialGroup=""/>
+        <Flags index="VariationFallback" value="0"/>
+    </CSound>
+    <!-- DataCollection Pattern -->
+    <CDataCollectionAbil default="1" id="CommanderAbilityBuild">
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_Build"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit default="1" id="CommanderUnit">
+        <EditorIconSource value="Actor"/>
+        <Pattern value="CommanderUnits"/>
+    </CDataCollectionUnit>
+    <CDataCollectionAbil default="1" id="CommanderAbilityAB">
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_ABEffectInstant"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+    </CDataCollectionAbil>
+    <CDataCollectionPattern default="1" id="CommanderAbilities_ABEffectInstant">
+        <Fields Reference="Sound,^ParamId^@Cast,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundCast"/>
+        <Fields Reference="Sound,^ParamId^@Finish,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundFinish"/>
+        <Fields Reference="Actor,^ParamId^@StartImpact,Model" NameOverride="DataCollectionPattern/CommandersAbilityAB/StartImpactModel"/>
+        <Fields Reference="Actor,^ParamId^@EndImpact,Model" NameOverride="DataCollectionPattern/CommandersAbilityAB/EndImpactModel"/>
+        <Fields Reference="Abil,^ParamId^,Name"/>
+        <Fields Reference="Abil,^ParamId^,Cost"/>
+        <Fields Reference="Abil,^ParamId^,CmdButtonArray.Requirements"/>
+        <Fields Reference="Effect,^ParamId^@AB,Behavior"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.AttackSpeedMultiplier"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.MoveSpeedMultiplier"/>
+        <Fields Reference="Button,^ParamId^,Name" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonName"/>
+        <Fields Reference="Button,^ParamId^,Tooltip" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonTooltip"/>
+        <Fields Reference="Button,^ParamId^,Icon" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonIcon"/>
+        <Fields Reference="Button,^ParamId^,AlertIcon" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonAlertIcon"/>
+    </CDataCollectionPattern>
+    <CDataCollectionPattern default="1" id="CommanderAbilities_Build">
+        <Fields Reference="Abil,^ParamId^,InfoArray"/>
+    </CDataCollectionPattern>
+    <CDataCollectionPattern default="1" id="CommanderUnits">
+        <Fields Reference="Actor,^ParamId^,UnitIcon"/>
+        <Fields Reference="Actor,^ParamId^,LifeArmorIcon"/>
+        <Fields Reference="Actor,^ParamId^,SoundArray"/>
+        <Fields Reference="Actor,^ParamId^,AbilSoundArray"/>
+        <Fields Reference="Actor,^ParamId^,DeathArray"/>
+        <Fields Reference="Unit,^ParamId^,LifeStart"/>
+        <Fields Reference="Unit,^ParamId^,LifeMax"/>
+        <Fields Reference="Unit,^ParamId^,LifeRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,ShieldsStart"/>
+        <Fields Reference="Unit,^ParamId^,ShieldsMax"/>
+        <Fields Reference="Unit,^ParamId^,ShieldRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,EnergyStart"/>
+        <Fields Reference="Unit,^ParamId^,EnergyMax"/>
+        <Fields Reference="Unit,^ParamId^,EnergyRegenRate"/>
+        <Fields Reference="Unit,^ParamId^,WeaponArray"/>
+        <Fields Reference="Unit,^ParamId^,Mover"/>
+        <Fields Reference="Unit,^ParamId^,Collide"/>
+        <Fields Reference="Unit,^ParamId^,Attributes"/>
+        <Fields Reference="Unit,^ParamId^,Name"/>
+        <Fields Reference="Unit,^ParamId^,Description"/>
+        <Fields Reference="Unit,^ParamId^,BehaviorArray"/>
+        <Fields Reference="Unit,^ParamId^,AbilArray"/>
+        <Fields Reference="Unit,^ParamId^,CardLayouts"/>
+        <Fields Reference="Unit,^ParamId^,Sight"/>
+        <Fields Reference="Unit,^ParamId^,CargoSize"/>
+        <Fields Reference="Unit,^ParamId^,Speed"/>
+        <Fields Reference="Unit,^ParamId^,Acceleration"/>
+        <Fields Reference="Unit,^ParamId^,Deceleration"/>
+        <Fields Reference="Unit,^ParamId^,BuildTime"/>
+        <Fields Reference="Requirement,^ParamId^,NodeArray"/>
+    </CDataCollectionPattern>
+    <CDataCollectionPattern default="1" id="CommanderWeapon_Instant">
+        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
+        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
+        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
+        <Fields Reference="Weapon,^ParamId^,Period"/>
+        <Fields Reference="Weapon,^ParamId^,Range"/>
+        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
+        <Fields Reference="Weapon,^ParamId^,Icon"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
+        <Fields Reference="Weapon,^ParamId^,Effect"/>
+    </CDataCollectionPattern>
     <!-- Units Template -->
     <CUnit default="1" id="CommanderUnitBase">
         <Name value="Unit/Name/COOP/##id##"/>
@@ -20,7 +245,6 @@
         <ScoreKillCostFactor index="Minerals" value="1"/>
         <ScoreKillCostFactor index="Vespene" value="1"/>
     </CUnit>
-    
     <CUnit default="1" id="CommanderGround" parent="CommanderUnitBase">
         <FlagArray index="ArmySelect" value="1"/>
         <Speed value="2.25"/>
@@ -51,8 +275,7 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
     </CUnit>
-    <CUnit default="1" id="CommanderGround_Terr" parent="CommanderGround">
-    </CUnit>
+    <CUnit default="1" id="CommanderGround_Terr" parent="CommanderGround"/>
     <CUnit default="1" id="CommanderGround_Zerg" parent="CommanderGround">
         <LifeRegenRate value="0.2734"/>
     </CUnit>
@@ -60,7 +283,6 @@
         <ShieldRegenRate value="2"/>
         <ShieldRegenDelay value="10"/>
     </CUnit>
-
     <CUnit default="1" id="CommanderAir" parent="CommanderUnitBase">
         <FlagArray index="ArmySelect" value="1"/>
         <Speed value="2.25"/>
@@ -85,8 +307,7 @@
         <Height value="3.75"/>
         <VisionHeight value="4"/>
     </CUnit>
-    <CUnit default="1" id="CommanderAir_Terr" parent="CommanderAir">
-    </CUnit>
+    <CUnit default="1" id="CommanderAir_Terr" parent="CommanderAir"/>
     <CUnit default="1" id="CommanderAir_Zerg" parent="CommanderAir">
         <LifeRegenRate value="0.2734"/>
     </CUnit>
@@ -94,7 +315,6 @@
         <ShieldRegenRate value="2"/>
         <ShieldRegenDelay value="10"/>
     </CUnit>
-
     <CUnit default="1" id="CommanderStructure" parent="CommanderUnitBase">
         <TechAliasArray value="Alias_##id##"/>
         <Facing value="45"/>
@@ -142,319 +362,5 @@
         <BehaviorArray Link="ZergBuildingNotOnCreep"/>
         <BehaviorArray Link="ZergBuildingDies6"/>
     </CUnit>
-    <CUnit default="1" id="CommanderStructure_Prot" parent="CommanderStructure">
-    </CUnit>
-
-    <!-- Actors Template -->
-    <CActorUnit default="1" id="CommanderUnitBase" parent="GenericUnitStandard">
-        <Name value="Actor/Name/COOP/##id##"/>
-        <Model value="##unitName##"/>
-        <PortraitModel value="##unitName##@Portrait"/>
-        <PlacementModel value="##unitName##@Placement"/>
-        <BuildModel value="##unitName##@Build"/>
-        <GlossaryAnim value="Spell"/>
-        <WalkAnimMoveSpeed value="2.25"/>
-
-        <Macros value="TerrainSquibAnimations"/>
-
-        <SoundArray index="Birth" value="##unitName##@Birth"/>
-        <SoundArray index="Ready" value="##unitName##@Ready"/>
-        <SoundArray index="Help" value="##unitName##@Help"/>
-        <SoundArray index="What" value="##unitName##@What"/>
-        <SoundArray index="Yes" value="##unitName##@Yes"/>
-        <SoundArray index="Attack" value="##unitName##@Attack"/>
-        <SoundArray index="Pissed" value="##unitName##@Pissed"/>
-        <SoundArray index="Movement" value="##unitName##@Movement"/>
-        <SoundArray index="Turning" value="##unitName##@Turning"/>
-        <SoundArray index="Board" value="##unitName##@Board"/>
-        <SoundArray index="Construction" value="##unitName##@Constuction"/>
-        <SoundArray index="Click" value="##unitName##@Click"/>
-        <SoundArray index="ClickError" value="##unitName##@ClickError"/>
-        <SoundArray index="Highlight" value="##unitName##@Highlight"/>
-
-        <!-- Death Array-->
-        <DeathArray index="Normal" ModelLink="##unitName##@Death"/>
-        <DeathArray index="Normal" SoundLink="##unitName##@Death"/>
-        <DeathArray index="Normal" VoiceLink="##unitName##@DeathVoice"/>
-        
-        <DeathArray index="Blast" ModelLink="##unitName##@DeathBlast"/>
-        <DeathArray index="Blast" SoundLink="##unitName##@DeathBlast"/>
-        <DeathArray index="Blast" VoiceLink="##unitName##@DeathVoiceBlast"/>
-
-        <DeathArray index="Disintegrate" ModelLink="##unitName##@DeathDisintegrate"/>
-        <DeathArray index="Disintegrate" SoundLink="##unitName##@DeathDisintegrate"/>
-        <DeathArray index="Disintegrate" VoiceLink="##unitName##@DeathVoiceDisintegrate"/>
-
-        <DeathArray index="Eat" ModelLink="##unitName##@DeathEat"/>
-        <DeathArray index="Eat" SoundLink="##unitName##@DeathEat"/>
-        <DeathArray index="Eat" VoiceLink="##unitName##@DeathVoiceEat"/>
-
-        <DeathArray index="Electrocute" ModelLink="##unitName##@DeathElectrocute"/>
-        <DeathArray index="Electrocute" SoundLink="##unitName##@DeathElectrocute"/>
-        <DeathArray index="Electrocute" VoiceLink="##unitName##@DeathVoiceElectrocute"/>
-
-        <DeathArray index="Eviscerate" ModelLink="##unitName##@DeathEviscerate"/>
-        <DeathArray index="Eviscerate" SoundLink="##unitName##@DeathEviscerate"/>
-        <DeathArray index="Eviscerate" VoiceLink="##unitName##@DeathVoiceEviscerate"/>
-
-        <DeathArray index="Fire" ModelLink="##unitName##@DeathFire"/>
-        <DeathArray index="Fire" SoundLink="##unitName##@DeathFire"/>
-        <DeathArray index="Fire" VoiceLink="##unitName##@DeathVoiceFire"/>
-
-        <DeathArray index="Freeze" ModelLink="##unitName##@DeathFreeze"/>
-        <DeathArray index="Freeze" SoundLink="##unitName##@DeathFreeze"/>
-        <DeathArray index="Freeze" VoiceLink="##unitName##@DeathVoiceFreeze"/>
-
-        <DeathArray index="Impact" ModelLink="##unitName##@DeathImpact"/>
-        <DeathArray index="Impact" SoundLink="##unitName##@DeathImpact"/>
-        <DeathArray index="Impact" VoiceLink="##unitName##@DeathVoiceImpact"/>
-
-        <DeathArray index="Morph" ModelLink="##unitName##@DeathMorph"/>
-        <DeathArray index="Morph" SoundLink="##unitName##@DeathMorph"/>
-        <DeathArray index="Morph" VoiceLink="##unitName##@DeathVoiceMorph"/>
-
-        <DeathArray index="Reincarnation" ModelLink="##unitName##@DeathReincarnation"/>
-        <DeathArray index="Reincarnation" SoundLink="##unitName##@DeathReincarnation"/>
-        <DeathArray index="Reincarnation" VoiceLink="##unitName##@DeathVoiceReincarnation"/>
-
-        <DeathArray index="Silentkill" ModelLink="##unitName##@DeathSilentKill"/>
-        <DeathArray index="Silentkill" SoundLink="##unitName##@DeathSilentKill"/>
-        <DeathArray index="Silentkill" VoiceLink="##unitName##@DeathVoiceSilentKill"/>
-
-        <DeathArray index="Squish" ModelLink="##unitName##@DeathSquish"/>
-        <DeathArray index="Squish" SoundLink="##unitName##@DeathSquish"/>
-        <DeathArray index="Squish" VoiceLink="##unitName##@DeathVoiceSquish"/>
-
-        <DeathArray index="Timeout" ModelLink="##unitName##@DeathTimeout"/>
-        <DeathArray index="Timeout" SoundLink="##unitName##@DeathTimeout"/>
-        <DeathArray index="Timeout" VoiceLink="##unitName##@DeathVoiceTimeout"/>
-
-        <DeathArray index="Unlink" ModelLink="##unitName##@DeathUnlink"/>
-        <DeathArray index="Unlink" SoundLink="##unitName##@DeathUnlink"/>
-        <DeathArray index="Unlink" VoiceLink="##unitName##@DeathVoiceUnlink"/>
-
-        <DeathArray index="Freeze" ModelLink="##unitName##@Death"/>
-        <DeathArray index="Freeze" SoundLink="##unitName##@Death"/>
-        <DeathArray index="Freeze" VoiceLink="##unitName##@DeathVoice"/>
-
-        <DeathArray index="UnderConstruction" ModelLink="##unitName##@DeathUnderConstuction"/>
-        <DeathArray index="UnderConstruction" SoundLink="##unitName##@DeathUnderConstuction"/>
-        <DeathArray index="UnderConstruction" VoiceLink="##unitName##@DeathVoiceUnderConstuction"/>
-
-        <DeathArray index="Salvage" ModelLink="##unitName##@DeathSalvage"/>
-        <DeathArray index="Salvage" SoundLink="##unitName##@DeathSalvage"/>
-        <DeathArray index="Salvage" VoiceLink="##unitName##@DeathVoiceSalvage"/>
-
-        <DeathArray index="Cancel" ModelLink="##unitName##@DeathCancel"/>
-        <DeathArray index="Cancel" SoundLink="##unitName##@DeathCancel"/>
-        <DeathArray index="Cancel" VoiceLink="##unitName##@DeathVoiceCancel"/>
-
-        <DeathArray index="TrainingComplete" ModelLink="##unitName##@DeathTrainingComplete"/>
-        <DeathArray index="TrainingComplete" SoundLink="##unitName##@DeathTrainingComplete"/>
-        <DeathArray index="TrainingComplete" VoiceLink="##unitName##@DeathVoiceTrainingComplete"/>
-
-        <DeathArray index="TrainingCancel" ModelLink="##unitName##@DeathTrainingCancel"/>
-        <DeathArray index="TrainingCancel" SoundLink="##unitName##@DeathTrainingCancel"/>
-        <DeathArray index="TrainingCancel" VoiceLink="##unitName##@DeathVoiceTrainingCancel"/>
-
-        <!-- Death Customs -->
-
-        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ModelLink="##unitName##@DeathRagdoll" Name="RagdollBasic">
-            <BodySquibs Name="None"/>
-            <SoundLink Name="##unitName##@DeathRagdoll"/>
-            <VoiceLink Name="##unitName##@DeathVoiceRagdoll"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="FireHeavy"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="FireHeavy"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="##unitName##@DeathRagdoll" Name="RagdollSpineCrawlerHurl">
-            <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
-        </DeathCustoms>
-        
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
-
-        <TerrainSquibs>
-            <MovementDistance value="0.150000,0.150000"/>
-            <IdlePeriod value="0.250000,0.500000"/>
-            <RangeDown value="5.000000"/>
-            <RangeDownFade value="1.000000"/>
-            <AttachQuery Methods="AMFilterCenter"/>
-            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive2"/>
-        </TerrainSquibs>
-    </CActorUnit>
-    <CActorUnit default="1" id="CommanderAirUnit" parent="CommanderUnitBase">
-        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
-
-        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
-
-        <Macros value="PhysicsDeathsSwarmAir"/>
-        <Macros value="PhysicsDeathsVoidAir"/>
-    </CActorUnit>
-    <CActorUnit default="1" id="CommanderGroundUnit" parent="CommanderUnitBase">
-        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
-        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-
-        <Macros value="UnloadDropAnim"/>
-        <Macros value="PhysicsDeathsSwarmGround"/>
-        <Macros value="PhysicsDeathsVoidGround"/>
-    </CActorUnit>
-
-    <!-- Sounds Template -->
-    <CSound default="1" id="CommanderVOBase" parent="Voice">
-        <?token id="unitName" value="Bogus" type="CUnitLink"?>
-    </CSound>
-    <CSound default="1" id="CommanderVOPissed" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/10" FacialGroup=""/>
-        <Flags index="Download" value="1"/>
-        <Flags index="VariationFallback" value="0"/>
-    </CSound>
-    <CSound default="1" id="CommanderVOAttack" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/10" FacialGroup=""/>
-        <Flags index="Download" value="1"/>
-        <Flags index="VariationFallback" value="0"/>
-    </CSound>
-    <CSound default="1" id="CommanderVOYes" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/10" FacialGroup=""/>
-        <Flags index="Download" value="1"/>
-        <Flags index="VariationFallback" value="0"/>
-    </CSound>
-    <CSound default="1" id="CommanderVOWhat" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/10" FacialGroup=""/>
-        <Flags index="Download" value="1"/>
-        <Flags index="VariationFallback" value="0"/>
-    </CSound>
-
-
-    <!-- DataCollection Pattern -->
-
-    <CDataCollectionAbil id="CommanderAbilityBuild">
-        <EditorIconSource value="Abil"/>
-        <Pattern value="CommanderAbilities_Build"/>
-        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
-    </CDataCollectionAbil>
-    <CDataCollectionUnit id="CommanderUnit">
-        <EditorIconSource value="Actor"/>
-        <Pattern value="CommanderUnits"/>
-        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
-    </CDataCollectionUnit>
-    <CDataCollectionAbil id="CommanderAbilityAB">
-        <EditorIconSource value="Abil"/>
-        <Pattern value="CommanderAbilities_ABEffectInstant"/>
-        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
-    </CDataCollectionAbil>
-    <CDataCollectionPattern id="CommanderAbilities_ABEffectInstant">
-        <Fields Reference="Sound,^ParamId^@Cast,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundCast"/>
-        <Fields Reference="Sound,^ParamId^@Finish,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundFinish"/>
-        <Fields Reference="Actor,^ParamId^@StartImpact,Model" NameOverride="DataCollectionPattern/CommandersAbilityAB/StartImpactModel"/>
-        <Fields Reference="Actor,^ParamId^@EndImpact,Model" NameOverride="DataCollectionPattern/CommandersAbilityAB/EndImpactModel"/>
-        <Fields Reference="Abil,^ParamId^,Name"/>
-        <Fields Reference="Abil,^ParamId^,Cost"/>
-        <Fields Reference="Abil,^ParamId^,CmdButtonArray.Requirements"/>
-        <Fields Reference="Effect,^ParamId^@AB,Behavior"/>
-        <Fields Reference="Behavior,^ParamId^,Modification.AttackSpeedMultiplier"/>
-        <Fields Reference="Behavior,^ParamId^,Modification.MoveSpeedMultiplier"/>
-        <Fields Reference="Button,^ParamId^,Name" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonName"/>
-        <Fields Reference="Button,^ParamId^,Tooltip" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonTooltip"/>
-        <Fields Reference="Button,^ParamId^,Icon" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonIcon"/>
-        <Fields Reference="Button,^ParamId^,AlertIcon" NameOverride="DataCollectionPattern/CommandersAbilityAB/ButtonAlertIcon"/>
-    </CDataCollectionPattern>
-    <CDataCollectionPattern id="CommanderAbilities_Build">
-        <Fields Reference="Abil,^ParamId^,InfoArray"/>
-    </CDataCollectionPattern>
-    <CDataCollectionPattern id="CommanderUnits">
-        <Fields Reference="Actor,^ParamId^,UnitIcon"/>
-        <Fields Reference="Actor,^ParamId^,LifeArmorIcon"/>
-        <Fields Reference="Actor,^ParamId^,SoundArray"/>
-        <Fields Reference="Actor,^ParamId^,AbilSoundArray"/>
-        <Fields Reference="Actor,^ParamId^,DeathArray"/>
-        <Fields Reference="Unit,^ParamId^,LifeStart"/>
-        <Fields Reference="Unit,^ParamId^,LifeMax"/>
-        <Fields Reference="Unit,^ParamId^,LifeRegenRate"/>
-        <Fields Reference="Unit,^ParamId^,ShieldsStart"/>
-        <Fields Reference="Unit,^ParamId^,ShieldsMax"/>
-        <Fields Reference="Unit,^ParamId^,ShieldRegenRate"/>
-        <Fields Reference="Unit,^ParamId^,EnergyStart"/>
-        <Fields Reference="Unit,^ParamId^,EnergyMax"/>
-        <Fields Reference="Unit,^ParamId^,EnergyRegenRate"/>
-        <Fields Reference="Unit,^ParamId^,WeaponArray"/>
-        <Fields Reference="Unit,^ParamId^,Mover"/>
-        <Fields Reference="Unit,^ParamId^,Collide"/>
-        <Fields Reference="Unit,^ParamId^,Attributes"/>
-        <Fields Reference="Unit,^ParamId^,Name"/>
-        <Fields Reference="Unit,^ParamId^,Description"/>
-        <Fields Reference="Unit,^ParamId^,BehaviorArray"/>
-        <Fields Reference="Unit,^ParamId^,AbilArray"/>
-        <Fields Reference="Unit,^ParamId^,CardLayouts"/>
-        <Fields Reference="Unit,^ParamId^,Sight"/>
-        <Fields Reference="Unit,^ParamId^,CargoSize"/>
-        <Fields Reference="Unit,^ParamId^,Speed"/>
-        <Fields Reference="Unit,^ParamId^,Acceleration"/>
-        <Fields Reference="Unit,^ParamId^,Deceleration"/>
-        <Fields Reference="Unit,^ParamId^,BuildTime"/>
-        <Fields Reference="Requirement,^ParamId^,NodeArray"/>
-    </CDataCollectionPattern>
-    <CDataCollectionPattern id="CommanderWeapon_Instant">
-        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
-        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
-        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
-        <Fields Reference="Weapon,^ParamId^,Period"/>
-        <Fields Reference="Weapon,^ParamId^,Range"/>
-        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
-        <Fields Reference="Weapon,^ParamId^,Icon"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
-        <Fields Reference="Weapon,^ParamId^,Effect"/>
-    </CDataCollectionPattern>
+    <CUnit default="1" id="CommanderStructure_Prot" parent="CommanderStructure"/>
 </Catalog>

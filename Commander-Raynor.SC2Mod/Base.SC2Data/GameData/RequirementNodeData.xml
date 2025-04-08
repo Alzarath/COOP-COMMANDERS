@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CRequirementAnd id="AndNot404259234CountUnitRaynorCommanderMarineQueuedOrBetterGTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5">
-        <OperandArray value="Not404259234CountUnitRaynorCommanderMarineQueuedOrBetter"/>
-        <OperandArray value="GTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5"/>
-    </CRequirementAnd>
     <CRequirementCountUnit id="CountUnitAlias_BarracksCompleteOnly1633119839TechTreeCheat">
         <Count Link="Alias_Barracks" State="CompleteOnly"/>
     </CRequirementCountUnit>
@@ -20,14 +16,6 @@
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAlias_SupplyDepotCompleteOnly169109972TechTreeCheat">
         <Count Link="Alias_SupplyDepot" State="CompleteOnly"/>
-    </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitRaynorCommanderMarauderCompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="RaynorCommanderMarauder" State="CompleteOnly"/>
-    </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitRaynorCommanderMarineQueuedOrBetter">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="RaynorCommanderMarine" State="QueuedOrBetter"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -48,13 +36,6 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderStimpack@AB" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementGTE id="GTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5">
-        <OperandArray index="0" value="CountUnitRaynorCommanderMarauderCompleteOnly"/>
-        <OperandArray index="1" value="5"/>
-    </CRequirementGTE>
-    <CRequirementNot id="Not404259234CountUnitRaynorCommanderMarineQueuedOrBetter">
-        <OperandArray index="0" value="CountUnitRaynorCommanderMarineQueuedOrBetter"/>
-    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
         <OperandArray index="0" value="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly"/>
     </CRequirementNot>

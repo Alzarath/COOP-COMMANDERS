@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wizard>
     <name>Add Unit</name>
-    <category>ShadowDragon/COOP Commanders</category>
+    <category>COOP Commanders/Unit</category>
     <objecttypes create="Unit"/>
 
     <!-- condtitions -->

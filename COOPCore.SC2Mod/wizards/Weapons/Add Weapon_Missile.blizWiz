@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard>
+    <name>Add Weapon - Missile</name>
+    <category>COOP Commanders/Not implemented/Weapon</category>
+    <objecttypes create="Weapon"/>
+</wizard>

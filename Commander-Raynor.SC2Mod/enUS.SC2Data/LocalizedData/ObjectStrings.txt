@@ -207,7 +207,7 @@ Button/EditorSuffix/RaynorCommanderSensorTower=(Raynor Commander)
 Button/EditorSuffix/RaynorCommanderStarport=(Raynor Commander)
 Button/EditorSuffix/RaynorCommanderSupplyDepot=(Raynor Commander)
 Button/EditorSuffix/RaynorCommanderTerranBuild=(Raynor Commander)
-Commander/EditorPrefix/DATARaynor=(Data)
+Commander/EditorPrefix/COOPRaynor=(COOP)
 DataCollection/EditorSuffix/RaynorCommanderATALaserBatteryAir=(Air)
 DataCollection/EditorSuffix/RaynorCommanderATSLaserBattery=(Ground)
 DataCollection/EditorSuffix/RaynorCommanderDuskWings=(Air-Strike)
@@ -462,6 +462,7 @@ Mover/Name/RaynorCommanderHyperionYamatoGun@Mover=Mover
 Mover/Name/RaynorCommanderLanzerTorpedoes@Missile=Missile
 Mover/Name/RaynorCommanderPunisherGrenades@Weapon=Weapon
 Mover/Name/RaynorCommanderYamatoGun@Mover=Mover
+Race/EditorPrefix/COOPRaynor=(COOP)
 Requirement/EditorSuffix/RaynorCommanderVikingMode@2=(Fighter)
 Requirement/Name/RaynorCommanderBanshee=Requirement
 Requirement/Name/RaynorCommanderBarracks=Requirement
@@ -495,21 +496,16 @@ Requirement/Name/RaynorCommanderVikingMode@2=Requirement
 Requirement/Name/RaynorCommanderVulture=Requirement
 Requirement/Name/RaynorCommanderYamatoGun@Requirement=Requirement
 RequirementNode/Name/3=3
-RequirementNode/Name/AndNot404259234CountUnitRaynorCommanderMarineQueuedOrBetterGTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5=!{На карте может быть только один морпех}CountUnit(RaynorCommanderMarine,QueuedOrBetter) && CountUnit(RaynorCommanderMarauder,CompleteOnly) >= {5 обученных мародёров}5
 RequirementNode/Name/CountUnitAlias_BarracksCompleteOnly1633119839TechTreeCheat=CountUnit(Alias_Barracks,CompleteOnly){<d stringref="Unit/Name/RaynorCommanderBarracks">}[TechTreeCheat]
 RequirementNode/Name/CountUnitAlias_FactoryCompleteOnly3407815928TechTreeCheat=CountUnit(Alias_Factory,CompleteOnly){<d stringRef="Unit,RaynorCommanderFactory,Name"/>}[TechTreeCheat]
 RequirementNode/Name/CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit=CountUnit(Alias_RaynorTechLab,CompleteOnlyAtUnit)
 RequirementNode/Name/CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810=CountUnit(Alias_RaynorTechLab,CompleteOnlyAtUnit){Пристроенная лаборатория}
 RequirementNode/Name/CountUnitAlias_SupplyDepotCompleteOnly169109972TechTreeCheat=CountUnit(Alias_SupplyDepot,CompleteOnly){<d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>}[TechTreeCheat]
-RequirementNode/Name/CountUnitRaynorCommanderMarauderCompleteOnly=CountUnit(RaynorCommanderMarauder,CompleteOnly)
-RequirementNode/Name/CountUnitRaynorCommanderMarineQueuedOrBetter=CountUnit(RaynorCommanderMarine,QueuedOrBetter)
 RequirementNode/Name/CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly=CountUpgrade(RaynorCommanderInciniratorGauntlets,CompleteOnly)
 RequirementNode/Name/CountUpgradeRaynorCommanderJuggernautPlatingCompleteOnly=CountUpgrade(RaynorCommanderJuggernautPlating,CompleteOnly)
 RequirementNode/Name/CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat=CountUpgrade(RaynorCommanderPunisherGrenades@PunisherGrenades,CompleteOnly){Research Concussive Shells at the Barracks Tech Lab}[TechTreeCheat]
 RequirementNode/Name/CountUpgradeStimpackCompleteOnly80611996TechTreeCheat2=CountUpgrade(Stimpack,CompleteOnly){Research Stimpack at the Barracks Tech Lab}[TechTreeCheat]
 RequirementNode/Name/CountUpgradeStimpackQueuedOrBetter2=CountUpgrade(Stimpack,QueuedOrBetter)
-RequirementNode/Name/GTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5=CountUnit(RaynorCommanderMarauder,CompleteOnly) >= {5 обученных мародёров}5
-RequirementNode/Name/Not404259234CountUnitRaynorCommanderMarineQueuedOrBetter=!{На карте может быть только один морпех}CountUnit(RaynorCommanderMarine,QueuedOrBetter)
 RequirementNode/Name/NotCountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly=!CountUpgrade(RaynorCommanderInciniratorGauntlets,CompleteOnly)
 Sound/Name/Banshee_AttackImpact22=Banshee_AttackImpact
 Sound/Name/Banshee_AttackLaunch22=Banshee_AttackLaunch

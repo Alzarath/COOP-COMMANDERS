@@ -1378,8 +1378,8 @@
         <Macros value="PhysicsDeathsVoidGround"/>
         <Inherits index="ModelMaterials" value="1"/>
         <AcceptedTransfers index="ModelMaterials" value="1"/>
-        <On index="69" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
-        <On index="70" Terms="AbilMorph.*.Finish; MorphTo RaynorCommanderSiegeTank@Sieged" Send="Create"/>
+        <On index="69" Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Alternate" Send="Destroy"/>
+        <On index="70" Terms="AbilMorph.*.Finish; MorphTo RaynorCommanderSiegeTank@Alternate" Send="Create"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <CreepHeightClass value="Small"/>
@@ -1449,12 +1449,12 @@
         <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank" Send="AnimPlay End Morph,End"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank@Alternate" Send="Destroy"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create SiegeTank_Land"/>
         <On Terms="ActorCreation; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
-        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank@Sieged" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank@Sieged" Send="AnimPlay Morph Morph,Start"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank@Alternate" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo RaynorCommanderSiegeTank@Alternate" Send="AnimPlay Morph Morph,Start"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank@Alternate" Send="Destroy"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
         <Model value="RaynorCommanderSiegeTank@Morphing"/>
         <ModelFlags index="OutlineEmitter" value="1"/>

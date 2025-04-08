@@ -166,7 +166,7 @@ Button/Tooltip/RaynorCommanderVikingMode@1=Transforms the Viking to Assault Mode
 Button/Tooltip/RaynorCommanderVikingMode@2=Transforms the Viking to Fighter Mode. In this mode Vikings fly, but they can only attack air targets.
 Button/Tooltip/RaynorCommanderVulture=Построить "Стервятника".
 Button/Tooltip/RaynorCommanderYamatoGun=Blasts a target with a devastating plasma cannon, causing 300 damage.
-Commander/Name/DATARaynor=Raynor
+Commander/Name/COOPRaynor=Raynor
 DOCSTR_0000=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 DOCSTR_0001=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 DataCollection/Name/RaynorCommanderATALaserBatteryAir=Raynor Commander - Battlecruiser
@@ -325,13 +325,12 @@ Param/Value/lib_B6F694BB_3164CB64=Не выбрана ни одна единиц
 Param/Value/lib_B6F694BB_3C6DA2ED=Не указано количество добавляемого здоровья!
 Param/Value/lib_B6F694BB_D50C6F18=Не выбрана ни одна единица!
 Param/Value/lib_B6F694BB_F3E6B9B7=Unit ID
+Race/Name/COOPRaynor=Raynor
 RequirementNode/Tooltip/CountUnitAlias_BarracksCompleteOnly1633119839TechTreeCheat=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 RequirementNode/Tooltip/CountUnitAlias_FactoryCompleteOnly3407815928TechTreeCheat=<d stringRef="Unit,RaynorCommanderFactory,Name"/>
 RequirementNode/Tooltip/CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810=Пристроенная лаборатория
 RequirementNode/Tooltip/CountUnitAlias_SupplyDepotCompleteOnly169109972TechTreeCheat=<d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>
 RequirementNode/Tooltip/CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat=Research Concussive Shells at the Barracks Tech Lab
-RequirementNode/Tooltip/GTE3643557852CountUnitRaynorCommanderMarauderCompleteOnly5=5 обученных мародёров
-RequirementNode/Tooltip/Not404259234CountUnitRaynorCommanderMarineQueuedOrBetter=На карте может быть только один морпех
 Reward/Name/RaynorCommanderHyperJump=Raynor Commander - Hyper Jump
 Reward/Name/RaynorCommanderLanzerTorpedoes=Raynor Commander - Viking Fighter
 Reward/Name/RaynorCommanderPDDLaser=Raynor Commander - PDD

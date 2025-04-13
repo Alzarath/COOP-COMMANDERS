@@ -376,7 +376,7 @@
         <InfoArray index="Build4" Unit="RaynorCommanderBarracks">
             <Button DefaultButtonFace="RaynorCommanderBarracks" State="Suppressed" Requirements="RaynorCommanderBarracks"/>
         </InfoArray>
-        <InfoArray index="Build5" Unit="EngineeringBay" Time="35">
+        <InfoArray index="Build5" Unit="RaynorCommanderEngineeringBay" Time="35">
             <Button DefaultButtonFace="RaynorCommanderEngineeringBay" State="Suppressed"/>
         </InfoArray>
         <InfoArray index="Build6" Unit="MissileTurret" Time="25">

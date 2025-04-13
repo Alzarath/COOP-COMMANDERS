@@ -33,6 +33,34 @@
         <Model value="Assets\Buildings\Terran\BunkerUpgradeDeathEx1\BunkerUpgradeDeathEx1.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
+    <CModel id="RaynorCommanderEngineeringBay" parent="Unit">
+        <Model value="Assets\Buildings\Terran\EngineeringBayEx1\EngineeringBayEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <Radius value="1.250000"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionRadius value="2.533000"/>
+        <ShadowRadius value="2.533000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="RaynorCommanderEngineeringBay@Build" parent="BuildingEx">
+        <EditorCategories value="Race:Raynor"/>
+        <Model value="Assets\Buildings\Terran\TerranBuild\TerranBuild.m3"/>
+    </CModel>
+    <CModel id="RaynorCommanderEngineeringBay@Death" parent="UnitDeath">
+        <Model value="Assets\Buildings\Terran\EngineeringBayDeathEx1\EngineeringBayDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderEngineeringBay@Placement" parent="PlacementEx">
+        <Model value="Assets\Buildings\Terran\EngineeringBayPlacement\EngineeringBayPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="RaynorCommanderEngineeringBay@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderTacticalJump@Impact">
         <Model value="Assets\Effects\Terran\Battlecruiser_Hyperjump_In\Battlecruiser_Hyperjump_In.m3"/>
         <EditorCategories value="Race:Raynor"/>

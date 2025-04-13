@@ -4,9 +4,15 @@
     <category>COOP Commanders/Not implemented/Weapon</category>
     <objecttypes create="Weapon"/>
 
+    <!-- conditions -->
+
+    <condition id="targetDCnotEmpty" input="TargetDC" empty="0"/>
+
+    <!-- inputs -->
+
     <input id="SectionMakeWeapon" type="WizardText">
         <default value="СОЗДАНИЕ ОРУЖИЯ С МГНОВЕННЫМ УРОНОМ"/>
-        <color value="255,0,0"/>
+        <color value="255,255,0,0"/>
     </input>
 
     <!-- PAGE 1 -->
@@ -19,8 +25,80 @@
         <name>Weapon ID</name>
     </input>
 
-    <input id="TargetDC" type="CDataCollection
-    Link">
+    <input id="TargetDC" type="CUnitLink">
         <name>Добавить к</name>
+        <tooltip>Единица должна иметь собственную дата коллекцию с одинаковым ID</tooltip>
     </input>
+
+    <!-- ROW 2 -->
+    <!-- COLUMN 1 -->
+
+    <input id="TitleRow2" type="WizardText">
+        <name>Настройте характеристики оружия</name>
+        <color value="255,100,0,0"/>
+    </input>
+
+    <input id="WeaponDamage" type="real32">
+        <name>Урон оружия</name>
+    </input>
+    <input id="WeaponSpeed" type="real32">
+        <name>Скорость атаки оружия</name>
+    </input>
+    <input id="WeaponRange" type="real32">
+        <name>Дальность оружия</name>
+    </input>
+    <input id="TargetPlane" type="WizardRadio">
+        <name>Против кого?</name>
+        <item text="По воздуху" value="Air"/>
+        <item text="По земле" value="Ground"/>
+        <item text="По воздуху и земле" value="AirGround"/>
+        <default value="AirGround"/>
+    </input>
+
+    <!-- COLUMN 2 -->
+
+    <input id="TitleRow2" type="WizardText">
+        <name>Настройте визуальную часть оружия</name>
+        <color value="255,0,100,0"/>
+        <layout column="2"/>
+    </input>
+
+    <input id="LaunchModel" type="CModelPath">
+        <name>Модель запуска</name>
+        <layout column="2"/>
+        <nopreview/>
+    </input>
+    <input id="ImpactModel" type="CModelPath">
+        <name>Модель при попадании</name>
+        <layout column="2"/>
+        <nopreview/>
+    </input>
+    <input id="LaunchSound" type="CSoundPath">
+        <name>Звук запуска</name>
+        <layout column="2"/>
+        <nopreview/>
+    </input>
+    <input id="ImpactSound" type="CSoundPath">
+        <name>Звук при попадании</name>
+        <layout column="2"/>
+        <nopreview/>
+    </input>
+
+
+    <!-- ENTRIES -->
+
+    <entry catalog="Unit">
+        <condition id="targetDCnotEmpty"/>
+        <id>^TargetDC^</id>
+        <allowmodify/>
+    </entry>
+
+    <entry catalog="Weapon">
+        <id>^WeaponID^</id>
+    </entry>
+
+    <entry catalog="Effect" type="CEffectDamage">
+        <id>^WeaponID^</id>
+    </entry>
+
 </wizard>

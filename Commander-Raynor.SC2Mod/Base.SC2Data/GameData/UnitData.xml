@@ -376,6 +376,11 @@
         <Mover value="RaynorCommanderAbilPDD@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
+    <CUnit id="RaynorCommanderEngineeringBay" parent="CommanderStructure_Terr">
+        <Race value="COOPRaynor"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
+        <Facing value="315"/>
+    </CUnit>
     <CUnit id="RaynorCommanderPDD">
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>

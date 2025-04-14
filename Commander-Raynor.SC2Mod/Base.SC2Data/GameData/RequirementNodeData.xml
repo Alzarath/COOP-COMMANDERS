@@ -25,6 +25,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderJuggernautPlating" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderOrbitaldroppodsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderOrbitaldroppods" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat">
         <Count Link="RaynorCommanderPunisherGrenades@PunisherGrenades" State="CompleteOnly"/>
     </CRequirementCountUpgrade>

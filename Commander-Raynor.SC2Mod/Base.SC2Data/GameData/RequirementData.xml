@@ -29,6 +29,7 @@
     </CRequirement>
     <CRequirement id="RaynorCommanderFirebat">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810"/>
     </CRequirement>
     <CRequirement id="RaynorCommanderMarine">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
@@ -40,6 +41,10 @@
     <CRequirement id="RaynorCommanderMarauder">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
         <NodeArray index="Use" Link="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderOrbitaldroppods@Requirement">
+        <EditorCategories value="Race:Raynor,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeRaynorCommanderOrbitaldroppodsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="RaynorCommanderSCV">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>

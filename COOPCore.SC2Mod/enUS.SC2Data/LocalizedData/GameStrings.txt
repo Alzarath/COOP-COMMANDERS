@@ -16,6 +16,7 @@ DataCollection/Name/RaynorCommanderStimpack=Raynor Commander - Stimpack
 DataCollection/Name/WeaponRaynorSCV=Raynor Commander - Fusion Cutter
 DataCollectionPattern/CommanderAbilitiesMorph/SiegeUnit=Siege mode
 DataCollectionPattern/CommanderAbilitiesMorph/UnsiegeUnit=Normal Mode
+DataCollectionPattern/CommanderUnits/ButtonIcon=Button Icon
 DataCollectionPattern/CommanderUnitsMorphing/Abilties=Alternate Abilities
 DataCollectionPattern/CommanderUnitsMorphing/Behaviors=Alternate Behaviors
 DataCollectionPattern/CommanderUnitsMorphing/CargoSize=Alternate Cargo Size

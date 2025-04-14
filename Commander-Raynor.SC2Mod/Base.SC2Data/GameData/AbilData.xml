@@ -309,19 +309,19 @@
     </CAbilEffectTarget>
     <CAbilTrain id="RaynorCommanderTrainBarrack">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Structures"/>
-        <InfoArray index="Train1">
+        <InfoArray index="Train1" Effect="RaynorCommanderOrbitaldroppods@Set">
             <Button DefaultButtonFace="RaynorCommanderMarine" State="Restricted" Requirements="RaynorCommanderMarine"/>
             <Unit value="RaynorCommanderMarine"/>
         </InfoArray>
-        <InfoArray index="Train2">
+        <InfoArray index="Train2" Effect="RaynorCommanderOrbitaldroppods@Set">
             <Button DefaultButtonFace="RaynorCommanderFirebat" State="Restricted" Requirements="RaynorCommanderFirebat"/>
             <Unit value="RaynorCommanderFirebat"/>
         </InfoArray>
-        <InfoArray index="Train3">
+        <InfoArray index="Train3" Effect="RaynorCommanderOrbitaldroppods@Set">
             <Button DefaultButtonFace="RaynorCommanderMedic" State="Restricted" Requirements="RaynorCommanderMedic"/>
             <Unit value="RaynorCommanderMedic"/>
         </InfoArray>
-        <InfoArray index="Train4">
+        <InfoArray index="Train4" Effect="RaynorCommanderOrbitaldroppods@Set">
             <Button DefaultButtonFace="RaynorCommanderMarauder" State="Restricted" Requirements="RaynorCommanderMarauder"/>
             <Unit value="RaynorCommanderMarauder"/>
         </InfoArray>

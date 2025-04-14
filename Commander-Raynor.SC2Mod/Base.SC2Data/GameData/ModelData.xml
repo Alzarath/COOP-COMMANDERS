@@ -33,6 +33,9 @@
         <Model value="Assets\Buildings\Terran\BunkerUpgradeDeathEx1\BunkerUpgradeDeathEx1.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
+    <CModel id="RaynorCommanderCommandCenter@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderEngineeringBay" parent="Unit">
         <Model value="Assets\Buildings\Terran\EngineeringBayEx1\EngineeringBayEx1.m3"/>
         <EditorCategories value="Race:Raynor"/>
@@ -59,6 +62,16 @@
     </CModel>
     <CModel id="RaynorCommanderEngineeringBay@Portrait" parent="Portrait">
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderFactory@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderOrbitaldroppods">
+        <Model value="Assets\Effects\Terran\DropPodFalling\DropPodFalling.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport@Build" parent="TerranBuildingBuild">
         <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTacticalJump@Impact">

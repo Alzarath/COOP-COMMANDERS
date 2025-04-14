@@ -7,6 +7,7 @@
         <Element Type="Trigger" Id="F3D6A2EB">
             <Event Type="FunctionCall" Library="DD453873" Id="651C7E85"/>
             <Action Type="FunctionCall" Library="DD453873" Id="7C224198"/>
+            <Action Type="FunctionCall" Library="DD453873" Id="FDF804BF"/>
         </Element>
         <Element Type="FunctionCall" Id="651C7E85">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
@@ -43,7 +44,7 @@
         </Element>
         <Element Type="Param" Id="78384BB2">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="99B05266"/>
-            <Value>DATARaynor</Value>
+            <Value>COOPRaynor</Value>
             <ValueType Type="catalogentry"/>
         </Element>
         <Element Type="Param" Id="06D8E78B">
@@ -135,6 +136,20 @@
         </Element>
         <Element Type="FunctionCall" Id="80EEA6FE">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000356"/>
+        </Element>
+        <Element Type="FunctionCall" Id="FDF804BF">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9BE5E091"/>
+            <Parameter Type="Param" Library="DD453873" Id="A616EA72"/>
+            <Parameter Type="Param" Library="DD453873" Id="F61C2A9A"/>
+        </Element>
+        <Element Type="Param" Id="A616EA72">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="33AC0441"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="F61C2A9A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="49A03995"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="C9DCA6C0"/>
         </Element>
     </Library>
     <Library Id="B6F694BB">

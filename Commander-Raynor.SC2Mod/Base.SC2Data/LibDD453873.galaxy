@@ -24,11 +24,12 @@ bool libDD453873_gt_SpawnAllUnitsCommander_Func (bool testConds, bool runActions
         return true;
     }
 
-    auto7C224198_ae = CatalogFieldValueCount(c_gameCatalogCommander, "DATARaynor", "UnitArray", c_playerAny);
+    auto7C224198_ae = CatalogFieldValueCount(c_gameCatalogCommander, "COOPRaynor", "UnitArray", c_playerAny);
     auto7C224198_var = 0;
     for ( ; auto7C224198_var <= auto7C224198_ae; auto7C224198_var += 1 ) {
         libNtve_gf_CreateUnitsWithDefaultFacing(1, (CatalogFieldValueGet(c_gameCatalogCommander, "DATARaynor", "UnitArray[" + IntToString(auto7C224198_var) + "].Unit", c_playerAny)), 0, 1, RegionGetCenter(RegionEntireMap()));
     }
+    PlayerAddTalent(1, null);
     return true;
 }
 

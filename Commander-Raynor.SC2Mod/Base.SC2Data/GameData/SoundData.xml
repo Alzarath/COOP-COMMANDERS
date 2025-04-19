@@ -80,6 +80,18 @@
         <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall5.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Explosions\Zerg_ExplosionSmall6.wav" FacialGroup=""/>
     </CSound>
+    <CSound id="RaynorCommanderOrbitaldroppods@Sound" parent="Ambience_Object">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_DropPodImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_DropPodImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_DropPodImpact2.wav" FacialGroup=""/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="1465"/>
+        <OffsetFadeIn Time="10925"/>
+    </CSound>
+    <CSound id="RaynorCommanderSupplyDepot@Sound" parent="Combat">
+        <EditorCategories value="Race:Raynor"/>
+    </CSound>
     <CSound id="RaynorCommanderTacticalJump@ImpactSound" parent="Spell">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Spell_HyperionJumpIn_00.wav" FacialGroup=""/>

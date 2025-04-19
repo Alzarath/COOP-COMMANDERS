@@ -72,11 +72,18 @@
         <EditorCategories value=""/>
         <On Terms="Effect.RaynorCommanderOrbitaldroppods@CP.Start" Send="Create"/>
         <On Terms="AnimBracketState.*.AfterOpening" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="Create RaynorCommanderOrbitaldroppods@Sound"/>
         <HostSiteOps Ops="SOpTargetPoint" HoldPosition="1" HoldRotation="1"/>
     </CActorModel>
+    <CActorSound id="RaynorCommanderOrbitaldroppods@Sound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
     <CActorModel id="RaynorCommanderStarport@Build" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>
+    <CActorSound id="RaynorCommanderSupplyDepot@Sound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
     <CActorModel id="RaynorCommanderTacticalJump@Impact" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
         <On Terms="Behavior.RaynorCommanderTacticalJump@In.On" Send="Create"/>
@@ -1344,7 +1351,7 @@
     </CActorAction>
     <CActorTurret id="RaynorCommanderWeaponTank">
         <On Terms="TurretEnable.RaynorCommanderWeaponTank" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Sieged" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
     </CActorTurret>
     <CActorModel id="RaynorCommanderWeaponSiegeTank@DamageModel" parent="ModelAnimationStyleOneShotNoOrphan">
         <Flags index="SuppressCreationErrors" value="1"/>
@@ -1382,7 +1389,7 @@
     </CActorModel>
     <CActorTurret id="RaynorCommanderWeaponSiegeTank">
         <On Terms="TurretEnable.RaynorCommanderWeaponSiegeTank@Turret" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom RaynorCommanderSiegeTank@Alternate" Send="Destroy"/>
     </CActorTurret>
     <CActorUnit id="RaynorCommanderSiegeTank@Alternate" parent="GenericUnitMorph" unitName="RaynorCommanderSiegeTank@Alternate">
         <Aliases value="_UnitLarge"/>

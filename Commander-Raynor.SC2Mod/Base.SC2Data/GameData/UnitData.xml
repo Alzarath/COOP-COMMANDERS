@@ -3,7 +3,7 @@
     <CUnit id="RaynorCommanderBunker">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -83,7 +83,7 @@
     </CUnit>
     <CUnit id="RaynorCommanderBattlecruiser">
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -157,13 +157,13 @@
         <BuildTime value="90"/>
     </CUnit>
     <CUnit id="RaynorCommanderBackslashRockets@Missile" parent="MISSILE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="RaynorCommanderBackslashRockets@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderBanshee">
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -233,7 +233,7 @@
         <Name value="Unit/Name/CommandCenter"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventReveal" value="1"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -290,7 +290,7 @@
     <CUnit id="RaynorCommanderCommandCenter">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventReveal" value="1"/>
@@ -372,7 +372,7 @@
         <TechTreeProducedUnitArray value="OrbitalCommand"/>
     </CUnit>
     <CUnit id="RaynorCommanderAbilPDD@Missile" parent="MISSILE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="RaynorCommanderAbilPDD@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
@@ -382,7 +382,7 @@
         <Facing value="315"/>
     </CUnit>
     <CUnit id="RaynorCommanderPDD">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="NoScore" value="1"/>
         <FlagArray index="NoPortraitTalk" value="1"/>
@@ -426,17 +426,17 @@
         <RankDisplay value="Never"/>
     </CUnit>
     <CUnit id="RaynorCommanderATALaserBatteryAir@Missile" parent="MISSILE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderATSLaserBattery@Missile" parent="MISSILE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderDuskWings">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="ArmySelect" value="1"/>
@@ -474,7 +474,7 @@
         <Subtitle value="Unit/Subtitle/RaynorCommanderHyperion"/>
         <Description value=""/>
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Campaign"/>
         <PlaneArray index="Air" value="1"/>
         <Collide index="Flying" value="1"/>
@@ -528,7 +528,7 @@
         <RankDisplay value="Always"/>
     </CUnit>
     <CUnit id="RaynorCommanderSpiderMine@Burrowed">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="Cloaked" value="1"/>
         <FlagArray index="Buried" value="1"/>
         <PlaneArray index="Ground" value="1"/>
@@ -544,7 +544,7 @@
         <EquipmentArray Weapon="RaynorCommanderExplode"/>
     </CUnit>
     <CUnit id="RaynorCommanderSpiderMine">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <PlaneArray index="Ground" value="1"/>
         <Collide index="Ground" value="1"/>
         <Collide index="ForceField" value="1"/>
@@ -595,7 +595,7 @@
     <CUnit id="RaynorCommanderReactor">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -661,7 +661,7 @@
         <DeathRevealRadius value="3"/>
         <ReviveType value="RaynorCommanderTechLab"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -735,7 +735,7 @@
         <DeathRevealRadius value="3"/>
         <ReviveType value="RaynorCommanderTechLab"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -809,7 +809,7 @@
         <DeathRevealRadius value="3"/>
         <ReviveType value="RaynorCommanderTechLab"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -879,7 +879,7 @@
     </CUnit>
     <CUnit id="RaynorCommanderVulture">
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Classic"/>
         <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="ArmySelect" value="1"/>
@@ -954,7 +954,7 @@
         <Name value="Unit/Name/Factory"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1010,7 +1010,7 @@
     <CUnit id="RaynorCommanderFactory">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -1088,7 +1088,7 @@
         <DeathRevealRadius value="3"/>
         <ReviveType value="RaynorCommanderTechLab"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1166,7 +1166,7 @@
         <DeathRevealRadius value="3"/>
         <ReviveType value="RaynorCommanderTechLab"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1242,7 +1242,7 @@
     <CUnit id="RaynorCommanderBarracks@Fly">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1298,7 +1298,7 @@
     <CUnit id="RaynorCommanderBarracks">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -1373,7 +1373,7 @@
         <BuildTime value="65"/>
     </CUnit>
     <CUnit id="RaynorCommanderFirebat" parent="CommanderGround">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
         <Attributes index="Armored" value="1"/>
@@ -1388,7 +1388,7 @@
         <WeaponArray Link="RaynorCommanderPerditionThrower"/>
     </CUnit>
     <CUnit id="RaynorCommanderMedic" parent="CommanderGround">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <AbilArray Link="RaynorCommanderHeal"/>
         <CardLayouts index="0">
             <LayoutButtons Face="RaynorCommanderHeal" Type="AbilCmd" AbilCmd="RaynorCommanderHeal,Execute" Row="2" Column="0"/>
@@ -1411,12 +1411,12 @@
         <CargoSize value="1"/>
     </CUnit>
     <CUnit id="RaynorCommanderPunisherGrenades@LMWeapon" parent="MISSILE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="RaynorCommanderPunisherGrenades@Weapon"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderMarauder" parent="CommanderGround">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
         <WeaponArray Link="RaynorCommanderPunisherGrenades"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
@@ -1437,7 +1437,7 @@
         <ScoreKill value="150"/>
     </CUnit>
     <CUnit id="RaynorCommanderMarine" parent="CommanderGround">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Biological" value="1"/>
         <LifeStart value="45"/>
@@ -1457,7 +1457,7 @@
     </CUnit>
     <CUnit id="RaynorCommanderSCV">
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Worker" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1549,7 +1549,7 @@
     <CUnit id="RaynorCommanderTechLab">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -1616,7 +1616,7 @@
         <DeathRevealRadius value="3"/>
         <ReviveType value="RaynorCommanderTechLab"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1692,13 +1692,13 @@
         </ReviveInfoBase>
     </CUnit>
     <CUnit id="RaynorCommanderTorpedoes@Missile" parent="MISSILE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderSiegeTank">
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -1773,7 +1773,7 @@
     <CUnit id="RaynorCommanderStarport">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -1852,7 +1852,7 @@
         <Name value="Unit/Name/Starport"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDefeat" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1909,7 +1909,7 @@
         <Name value="Unit/Name/SiegeTank"/>
         <DeathRevealRadius value="3"/>
         <Facing value="45"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDestroy" value="1"/>
@@ -1966,13 +1966,13 @@
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
     </CUnit>
     <CUnit id="RaynorCommanderHyperionYamatoGun@Missile" parent="MISSILE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="RaynorCommanderHyperionYamatoGun@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderViking">
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -2041,7 +2041,7 @@
     <CUnit id="RaynorCommanderViking@Alternate">
         <Name value="Unit/Name/VikingFighter"/>
         <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -2106,18 +2106,18 @@
         </Fidget>
     </CUnit>
     <CUnit id="RaynorCommanderLanzerTorpedoes@Missile" parent="MISSILE_HALFLIFE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderYamatoGun@Missile" parent="MISSILE_INVULNERABLE">
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mover value="RaynorCommanderYamatoGun@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
     <CUnit id="RaynorCommanderSupplyDepot">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>
@@ -2179,7 +2179,7 @@
         <Name value="Unit/Name/RaynorCommanderSupplyDepot"/>
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
-        <Race value="Terr"/>
+        <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventDefeat" value="1"/>

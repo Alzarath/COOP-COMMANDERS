@@ -166,6 +166,8 @@ Button/Tooltip/RaynorCommanderVikingMode@1=Transforms the Viking to Assault Mode
 Button/Tooltip/RaynorCommanderVikingMode@2=Transforms the Viking to Fighter Mode. In this mode Vikings fly, but they can only attack air targets.
 Button/Tooltip/RaynorCommanderVulture=Построить "Стервятника".
 Button/Tooltip/RaynorCommanderYamatoGun=Blasts a target with a devastating plasma cannon, causing 300 damage.
+Card/Name/RaynorCommanderSCV/TBl1=Basic Structures
+Card/Name/RaynorCommanderSCV/TBl2=Advanced Structures
 Commander/Name/COOPRaynor=Raynor
 DOCSTR_0000=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 DOCSTR_0001=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
@@ -343,6 +345,7 @@ Param/Expression/lib_B6F694BB_C3199FED=~Object~: ~ID~
 Param/Value/lib_B6F694BB_3164CB64=Не выбрана ни одна единица!
 Param/Value/lib_B6F694BB_3C6DA2ED=Не указано количество добавляемого здоровья!
 Param/Value/lib_B6F694BB_D50C6F18=Не выбрана ни одна единица!
+Param/Value/lib_B6F694BB_ED41D3E0=Талант выдан
 Param/Value/lib_B6F694BB_F3E6B9B7=Unit ID
 Race/Name/COOPRaynor=Raynor
 RequirementNode/Tooltip/CountUnitAlias_BarracksCompleteOnly1633119839TechTreeCheat=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
@@ -358,13 +361,13 @@ Reward/Name/RaynorCommanderTechLabMorphBarrack=Raynor Commander - Tech Lab Morph
 Reward/Name/RaynorCommanderTorpedoes=Raynor Commander - Torpedoes
 Reward/Name/RaynorCommanderYamatoGun=Raynor Commander - Yamato Gun
 UI/HelpMenuDialogTechGlossary_Control_Unit/Category/RaynorCommanderUnits=Командир Рейнор
-Unit/Category/RaynorCommanderUnits=Командир Рейнор
+Unit/Category/RaynorCommanderUnits=Commander Raynor
 Unit/Description/RaynorCommanderMedic=Легкая единица поддержки. Может использовать способность <c val="FFE1AE"><d stringref="Abil/Name/RaynorCommanderHeal"/></c>
 Unit/LifeArmorName/TerranBuildingPlating=Terran Building Plating
 Unit/Name/COOP/RaynorCommanderEngineeringBay=Engineering Bay
 Unit/Name/COOP/RaynorCommanderFirebat=Firebat
 Unit/Name/COOP/RaynorCommanderMarauder=Marauder
-Unit/Name/COOP/RaynorCommanderMarine=Морпех
+Unit/Name/COOP/RaynorCommanderMarine=Marine
 Unit/Name/COOP/RaynorCommanderMedic=Medic
 Unit/Name/RaynorCommanderATALaserBatteryAir@Missile=Missile
 Unit/Name/RaynorCommanderATSLaserBattery@Missile=Missile

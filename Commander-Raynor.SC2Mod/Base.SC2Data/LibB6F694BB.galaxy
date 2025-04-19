@@ -72,8 +72,10 @@ void libB6F694BB_gf_CheatUnit (string lp_command) {
             }
         }
     }
-    else if (true) {
-        DataTableSetBool(false, libB6F694BB_gv_cheatError, true);
+    else if ((StringWord(lp_command, 1) == "talent")) {
+        PlayerAddTalent(1, "CommanderRaynorUnlockBattlecruiser");
+        PlayerSetCommanderMasteryLevel(1, 0);
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_B6F694BB_ED41D3E0"));
     }
 }
 

@@ -242,6 +242,8 @@
         <DataRecord Entry="Validator,RaynorCommanderOrbitaldroppods"/>
         <DataRecord Entry="Effect,RaynorCommanderOrbitaldroppods@finalset"/>
         <DataRecord Entry="Effect,RaynorCommanderOrbitaldroppods@MU"/>
+        <DataRecord Entry="Actor,RaynorCommanderOrbitaldroppods@Sound"/>
+        <DataRecord Entry="Sound,RaynorCommanderOrbitaldroppods@Sound"/>
     </CDataCollection>
     <CDataCollectionUpgrade id="RaynorCommanderAirStrike">
         <EditorCategories value="DataGroup:Research,Race:Raynor,ObjectType:Other"/>

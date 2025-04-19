@@ -11,6 +11,7 @@
         <YawArc value="360"/>
         <YawRate value="360"/>
         <Fidget DelayMax="30" DelayMin="10"/>
+        <YawStart value="-180"/>
     </CTurret>
     <CTurret id="RaynorCommanderWeaponTank">
         <Idle value="ResetIfMoving"/>

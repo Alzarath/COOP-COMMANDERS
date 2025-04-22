@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade id="RaynorCommanderVehicleAndShipWeapons">
+        <InfoTooltipPriority value="61"/>
+        <WebPriority value="0"/>
+        <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="1"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:AttackBonus"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderVehicleAndShipWeapons@Level1" parent="RaynorCommanderVehicleAndShipWeapons">
+        <Name value="Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArrayTemplate Operation="Set" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderVehicleAndShipWeapons@Level2" parent="RaynorCommanderVehicleAndShipWeapons">
+        <Name value="Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArrayTemplate Operation="Set" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderVehicleAndShipWeapons@Level3" parent="RaynorCommanderVehicleAndShipWeapons">
+        <Name value="Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArrayTemplate Operation="Set" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+    </CUpgrade>
     <CUpgrade id="RaynorCommanderMercenaryMunitions2">
         <Icon value="Assets\Textures\talent-raynor-level14-infantryattackspeed.dds"/>
         <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>

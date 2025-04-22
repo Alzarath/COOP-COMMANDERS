@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilResearch id="RaynorCommanderArmoryResearch">
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <InfoArray index="Research1" Time="10" Upgrade="RaynorCommanderVehicleAndShipWeapons@Level1">
+            <Button DefaultButtonFace="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="10" Upgrade="RaynorCommanderVehicleAndShipWeapons@Level2">
+            <Button DefaultButtonFace="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="10" Upgrade="RaynorCommanderVehicleAndShipWeapons@Level3">
+            <Button DefaultButtonFace="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilEffectTarget id="RaynorCommanderTacticalJump">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <Range value="500"/>
@@ -395,8 +407,8 @@
         <InfoArray index="Build12" Unit="RaynorCommanderStarport" Time="50">
             <Button DefaultButtonFace="RaynorCommanderStarport" State="Suppressed" Requirements="RaynorCommanderStarport"/>
         </InfoArray>
-        <InfoArray index="Build14" Unit="Armory" Time="65">
-            <Button DefaultButtonFace="RaynorCommanderArmory" State="Suppressed"/>
+        <InfoArray index="Build14" Unit="RaynorCommanderArmory" Time="65">
+            <Button DefaultButtonFace="RaynorCommanderArmory" State="Suppressed" Requirements="RaynorCommanderArmory@Requirement"/>
         </InfoArray>
         <InfoArray index="Build16" Unit="FusionCore" Time="65">
             <Button DefaultButtonFace="RaynorCommanderFusionCore" State="Suppressed"/>

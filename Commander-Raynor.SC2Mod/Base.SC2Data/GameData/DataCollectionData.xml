@@ -18,9 +18,55 @@
         <DataRecord Entry="Model,RaynorCommanderATALaserBatteryAir@Launch"/>
         <DataRecord Entry="Sound,RaynorCommanderATALaserBatteryAir@Launch"/>
         <DataRecord Entry="Sound,RaynorCommanderATALaserBatteryAir@Impact"/>
+        <DataRecord Entry="Actor,RaynorCommanderATALaserBatteryAir@Damage@Missile"/>
+        <DataRecord Entry="Actor,RaynorCommanderATALaserBatteryAir@Damage@Impact"/>
+        <DataRecord Entry="Actor,RaynorCommanderATALaserBatteryAir@Damage@Attack"/>
+        <DataRecord Entry="Behavior,RaynorCommanderATALaserBatteryAir@Damage@AB"/>
+        <DataRecord Entry="Effect,RaynorCommanderATALaserBatteryAir@Damage@LM"/>
+        <DataRecord Entry="Effect,RaynorCommanderATALaserBatteryAir@Damage@AB"/>
+        <DataRecord Entry="Effect,RaynorCommanderATALaserBatteryAir@Damage@Damage"/>
+        <DataRecord Entry="Model,RaynorCommanderATALaserBatteryAir@Damage@Missile"/>
+        <DataRecord Entry="Model,RaynorCommanderATALaserBatteryAir@Damage@Impact"/>
+        <DataRecord Entry="Model,RaynorCommanderATALaserBatteryAir@Damage@Launch"/>
+        <DataRecord Entry="Sound,RaynorCommanderATALaserBatteryAir@Damage@Launch"/>
+        <DataRecord Entry="Sound,RaynorCommanderATALaserBatteryAir@Damage@Impact"/>
+        <DataRecord Entry="Unit,RaynorCommanderATALaserBatteryAir@Damage@Missile"/>
+        <DataRecord Entry="Weapon,RaynorCommanderATALaserBatteryAir"/>
         <Pattern value="CommanderWeapon_Missile"/>
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderArmory" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderArmory"/>
+        <DataRecord Entry="Button,RaynorCommanderArmory"/>
+        <DataRecord Entry="Model,RaynorCommanderArmory"/>
+        <DataRecord Entry="Model,RaynorCommanderArmory@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderArmory@Portrait"/>
+        <DataRecord Entry="Unit,RaynorCommanderArmory"/>
+        <DataRecord Entry="Model,RaynorCommanderArmory@Placement"/>
+        <DataRecord Entry="Actor,RaynorCommanderArmory@Build"/>
+        <DataRecord Entry="Model,RaynorCommanderArmory@Build"/>
+        <DataRecord Entry="Requirement,RaynorCommanderArmory@Requirement"/>
+        <DataRecord Entry="Actor,RaynorCommanderArmory@Splat"/>
+        <DataRecord Entry="Sound,RaynorCommanderArmory@Death"/>
+    </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderArmoryResearch">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Abil,RaynorCommanderArmoryResearch"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUpgrade id="RaynorCommanderVehicleAndShipWeapons" parent="CommanderUpgradeLvLStats">
+        <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Button,RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <DataRecord Entry="Button,RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <DataRecord Entry="Button,RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderVehicleAndShipWeapons"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderVehicleAndShipWeapons@Level1"/>
+    </CDataCollectionUpgrade>
     <CDataCollectionUpgrade id="RaynorCommanderMercenaryMunitions2">
         <EditorCategories value="DataGroup:Research,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Upgrade,RaynorCommanderMercenaryMunitions2"/>
@@ -61,9 +107,6 @@
         <EditorCategories value="DataGroup:Research,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Upgrade,RaynorCommanderNanoProjectors"/>
     </CDataCollectionUpgrade>
-    <CDataCollectionUnit id="RaynorCommanderArmory" parent="CommanderUnit">
-        <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
-    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderBackslashRockets">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Projectile"/>
         <EditorIconSource value="Weapon"/>
@@ -80,6 +123,9 @@
         <DataRecord Entry="Unit,RaynorCommanderBackslashRockets@Missile"/>
         <DataRecord Entry="Weapon,RaynorCommanderBackslashRockets"/>
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderBanshee" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
@@ -311,6 +357,9 @@
         <DataRecord Entry="Unit,RaynorCommanderLanzerTorpedoes@Missile"/>
         <DataRecord Entry="Weapon,RaynorCommanderLanzerTorpedoes"/>
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMissileTurret" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
@@ -653,6 +702,9 @@
         <DataRecord Entry="Weapon,RaynorCommanderWeaponSiegeTank"/>
         <DataRecord Entry="Actor,RaynorCommanderWeaponSiegeTank"/>
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderWeaponTank">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Other"/>
@@ -667,6 +719,8 @@
         <DataRecord Entry="Sound,RaynorCommanderWeaponTank@Launch"/>
         <DataRecord Entry="Turret,RaynorCommanderWeaponTank"/>
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderTorpedoes">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Projectile"/>
@@ -683,6 +737,9 @@
         <DataRecord Entry="Weapon,RaynorCommanderTorpedoes"/>
         <Pattern value="CommanderWeapon_Missile"/>
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTrainFactory" parent="CommanderAbilityBuild">
         <EditorCategories value="Race:Raynor,DataGroup:AbilityBuildTrain,DataFamily:Coop,ObjectType:Other"/>
@@ -1221,6 +1278,9 @@
         <DataRecord Entry="Sound,RaynorCommanderATSLaserBattery@Impact"/>
         <Pattern value="CommanderWeapon_Missile"/>
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="WeaponRaynorSCV">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>

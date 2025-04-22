@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirement id="RaynorCommanderArmory@Requirement">
+        <EditorCategories value="Race:Raynor,TechType:Unit"/>
+    </CRequirement>
     <CRequirement id="RaynorCommanderBanshee">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
         <NodeArray index="Use" Link="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit"/>
@@ -7,7 +10,7 @@
     <CRequirement id="RaynorCommanderBarracks">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
-        <NodeArray index="Use" Link="CountUnitAlias_SupplyDepotCompleteOnly169109972TechTreeCheat"/>
+        <NodeArray index="Use" Link="CountUnitAlias_RaynorCommanderSupplyDepotCompleteOnly169109972TechTreeCheat"/>
     </CRequirement>
     <CRequirement id="RaynorCommanderBattlecruiser">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
@@ -114,6 +117,18 @@
     <CRequirement id="RaynorCommanderTechLabMorphDetached@Requirement">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
         <NodeArray index="Show" Link="NotOrCountUnitAlias_BarracksCompleteOnlyAtUnitCountUnitAlias_FactoryCompleteOnlyAtUnitCountUnitAlias_StarportCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderVehicleAndShipWeapons@UseLevel1">
+        <EditorCategories value="Race:Raynor,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderVehicleAndShipWeapons@UseLevel2">
+        <EditorCategories value="Race:Raynor,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="RaynorCommanderVehicleAndShipWeapons@UseLevel3">
+        <EditorCategories value="Race:Raynor,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level3QueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="RaynorCommanderViking">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>

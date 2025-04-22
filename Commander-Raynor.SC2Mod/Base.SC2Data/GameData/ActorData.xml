@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="RaynorCommanderArmory" parent="GenericUnitStandard" unitName="RaynorCommanderArmory">
+        <EditorCategories value=""/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-armory.dds"/>
+        <On Terms="UnitConstruction.RaynorCommanderArmory" Send="Create RaynorCommanderArmory@Build"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderArmory@Death" SoundLink="RaynorCommanderArmory@Death"/>
+        <PlacementModel value="RaynorCommanderArmory@Placement"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-armory.dds"/>
+        </Wireframe>
+        <Aliases value="_CreepEngulfable"/>
+        <Aliases value="_UnitHuge"/>
+    </CActorUnit>
+    <CActorModel id="RaynorCommanderArmory@Build" parent="TerranBuildingBuild">
+        <EditorCategories value=""/>
+        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
+    </CActorModel>
+    <CActorSplat id="RaynorCommanderArmory@Splat" parent="GenericUnitSplat">
+        <EditorCategories value=""/>
+    </CActorSplat>
     <CActorModel id="RaynorCommanderBunker@Build" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>
@@ -552,18 +574,18 @@
             <Image value="Assets\Textures\Wireframe-Terran-PointDefenseDrone.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorAction id="RaynorCommanderATALaserBatteryAir@Attack" parent="GenericAttack" effectImpact="RaynorCommanderATALaserBatteryAir@Damage" effectLaunch="RaynorCommanderATALaserBatteryAir@LM">
+    <CActorAction id="RaynorCommanderATALaserBatteryAir@Damage@Attack" parent="GenericAttack" effectImpact="RaynorCommanderATALaserBatteryAir@Damage@Damage" effectLaunch="RaynorCommanderATALaserBatteryAir@Damage@LM">
         <EditorCategories value=""/>
         <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMRandom"/>
-        <LaunchAssets Model="RaynorCommanderATALaserBatteryAir@Launch" Sound="RaynorCommanderATALaserBatteryAir@Launch"/>
-        <Missile value="RaynorCommanderATALaserBatteryAir@Missile"/>
-        <ImpactMap index="None" Model="RaynorCommanderATALaserBatteryAir@Impact" Sound="RaynorCommanderATALaserBatteryAir@Impact"/>
-        <ImpactModel value="RaynorCommanderATALaserBatteryAir@Attack"/>
+        <LaunchAssets Model="RaynorCommanderATALaserBatteryAir@Damage@Launch" Sound="RaynorCommanderATALaserBatteryAir@Damage@Launch"/>
+        <Missile value="RaynorCommanderATALaserBatteryAir@Damage@Missile"/>
+        <ImpactMap index="None" Model="RaynorCommanderATALaserBatteryAir@Damage@Impact" Sound="RaynorCommanderATALaserBatteryAir@Damage@Impact"/>
+        <ImpactModel value="RaynorCommanderATALaserBatteryAir@Damage@Attack"/>
     </CActorAction>
-    <CActorModel id="RaynorCommanderATALaserBatteryAir@Impact" parent="ModelAnimationStyleOneShot">
+    <CActorModel id="RaynorCommanderATALaserBatteryAir@Damage@Impact" parent="ModelAnimationStyleOneShot">
         <EditorCategories value=""/>
     </CActorModel>
-    <CActorMissile id="RaynorCommanderATALaserBatteryAir@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderATALaserBatteryAir@Missile">
+    <CActorMissile id="RaynorCommanderATALaserBatteryAir@Damage@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderATALaserBatteryAir@Damage@Missile">
         <EditorCategories value=""/>
     </CActorMissile>
     <CActorAction id="RaynorCommanderATSLaserBattery@Attack" parent="GenericAttack" effectImpact="RaynorCommanderATSLaserBattery@Damage" effectLaunch="RaynorCommanderATSLaserBattery@LM">
@@ -1184,17 +1206,6 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
-    <CActorProgress id="RaynorCommanderProgressSoundsAttached">
-        <Supporter Subject="_TerranBuildModel"/>
-        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
-        <On Terms="ProgressLevel.RaynorCommanderProgressSoundsAttached; Level 0" Send="SetTransferOverrideAnim"/>
-        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
-        <StageArray AnimProps="Birth,A,Stand"/>
-        <StageArray AnimProps="Birth,B,Start"/>
-        <StageArray AnimProps="Birth,B,Stand"/>
-        <StageArray AnimProps="Birth,C,Start"/>
-        <StageArray AnimProps="Birth,C,Stand"/>
-    </CActorProgress>
     <CActorSound id="RaynorCommanderConstructionSounds@Start" parent="ProgressSound">
         <On Terms="ProgressLevel.RaynorCommanderConstruction@Attached.Start; Level 0" Send="Create"/>
         <On Terms="ProgressLevel.RaynorCommanderConstruction@Attached.Stop; Level 0" Send="Destroy"/>
@@ -1460,9 +1471,7 @@
             <Image value="Assets\Textures\Wireframe-Terran-SiegeTank-SiegeMode.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorSplat id="StarportSplat2" parent="TerranBuildingMorphSplat" unitName="RaynorCommanderStarport">
-        <Model value="RaynorCommanderStarport@Splat"/>
-    </CActorSplat>
+    <CActorSplat id="RaynorCommanderStarport@Splat" parent="TerranBuildingMorphSplat" unitName="RaynorCommanderStarport"/>
     <CActorUnit id="RaynorTankModeMorphModel" parent="GenericUnitBaseMorphTransition" unitName="TankModeMorphModel">
         <Aliases value="_UnitLarge"/>
         <Inherits index="ModelMaterials" value="1"/>
@@ -1619,6 +1628,10 @@
         <On Terms="UnitCreation.RaynorCommanderFactory@Fly" Send="Create"/>
         <On Terms="UnitCreation.RaynorCommanderStarport" Send="Create"/>
         <On Terms="UnitCreation.RaynorCommanderStarport@Fly" Send="Create"/>
+        <On Terms="UnitCreation.RaynorCommanderCommandCenter" Send="Create"/>
+        <On Terms="UnitCreation.RaynorCommanderCommandCenter@Fly" Send="Create"/>
+        <On Terms="UnitCreation.RaynorCommanderOrbitalCommand" Send="Create"/>
+        <On Terms="UnitCreation.RaynorCommanderOrbitalCommand@Fly" Send="Create"/>
         <On Terms="StateChange; StateValid Fire" Send="Create TerranBuildingFlameBig@Sound"/>
         <On Terms="StateChange; !StateValid Fire" Target="TerranBuildingFlameBig@Sound" Send="Destroy"/>
     </CActorStateMonitor>
@@ -1645,14 +1658,6 @@
         <StageArray AnimProps="Build,C,Stand"/>
         <StageArray AnimProps="Build,D"/>
     </CActorProgress>
-    <CActorStateMonitor id="TerranFlamesLargeBuilding2" parent="TerranFlames">
-        <On Terms="UnitCreation.RaynorCommanderCommandCenter" Send="Create"/>
-        <On Terms="UnitCreation.RaynorCommanderCommandCenter@Fly" Send="Create"/>
-        <On Terms="UnitCreation.RaynorCommanderOrbitalCommand" Send="Create"/>
-        <On Terms="UnitCreation.RaynorCommanderOrbitalCommand@Fly" Send="Create"/>
-        <On Terms="StateChange; StateValid Fire" Send="Create TerranFlameLoopLarge"/>
-        <On Terms="StateChange; !StateValid Fire" Target="TerranFlameLoopLarge" Send="Destroy"/>
-    </CActorStateMonitor>
     <CActorUnit id="RaynorCommanderViking" parent="GenericUnitMorph" unitName="RaynorCommanderViking">
         <Aliases value="_UnitMedium"/>
         <Macros value="RaynorCommanderViking@2@Anim"/>

@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUnit id="RaynorCommanderArmory" parent="CommanderStructure_Terr">
+        <Facing value="0"/>
+        <Race value="COOPRaynor"/>
+        <LifeStart value="750"/>
+        <LifeMax value="750"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <BuildTime value="30"/>
+        <RepairTime value="65"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
+        <Attributes index="Mechanical" value="1"/>
+        <AbilArray Link="RaynorCommanderArmoryResearch"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="RaynorCommanderVehicleAndShipWeapons@Level1" Type="AbilCmd" AbilCmd="RaynorCommanderArmoryResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="RaynorCommanderVehicleAndShipWeapons@Level2" Type="AbilCmd" AbilCmd="RaynorCommanderArmoryResearch,Research2" Row="1" Column="0"/>
+            <LayoutButtons Face="RaynorCommanderVehicleAndShipWeapons@Level3" Type="AbilCmd" AbilCmd="RaynorCommanderArmoryResearch,Research3" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="1.25"/>
+        <SeparationRadius value="1.25"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="1.75"/>
+        <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
+    </CUnit>
     <CUnit id="RaynorCommanderBunker">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
@@ -81,15 +106,9 @@
         <GlossaryWeakArray value="Colossus"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
     </CUnit>
-    <CUnit id="RaynorCommanderBattlecruiser">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderBattlecruiser" parent="CommanderAir_Terr">
+        <Name value="Unit/Name/RaynorCommanderBattlecruiser"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="ArmySelect" value="1"/>
-        <PlaneArray index="Air" value="1"/>
-        <Collide index="Flying" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Massive" value="1"/>
@@ -100,36 +119,22 @@
         <EnergyStart value="50"/>
         <EnergyMax value="200"/>
         <EnergyRegenRate value="0.5625"/>
-        <Mover value="Fly"/>
         <Speed value="1.875"/>
         <Acceleration value="1"/>
+        <StationaryTurningRate value="720"/>
         <Sight value="12"/>
-        <Height value="3.75"/>
-        <VisionHeight value="4"/>
         <Food value="-6"/>
-        <CostCategory value="Army"/>
         <CostResource index="Minerals" value="400"/>
         <CostResource index="Vespene" value="300"/>
+        <BuildTime value="90"/>
         <RepairTime value="90"/>
-        <AttackTargetPriority value="20"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
         <KillXP value="140"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
         <AbilArray Link="RaynorCommanderYamatoGun"/>
-        <AbilArray Link="que1"/>
         <AbilArray Link="RaynorCommanderTacticalJump"/>
         <BehaviorArray Link="MassiveVoidRayVulnerability"/>
         <WeaponArray Link="ATSLaserBattery" Turret="Battlecruiser"/>
         <WeaponArray Link="ATALaserBattery" Turret="Battlecruiser"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        <CardLayouts index="0">
             <LayoutButtons Face="YamatoGun" Type="AbilCmd" AbilCmd="RaynorCommanderYamatoGun,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="RaynorCommanderTacticalJump" Type="AbilCmd" AbilCmd="RaynorCommanderTacticalJump,Execute" Row="2" Column="1"/>
         </CardLayouts>
@@ -137,14 +142,11 @@
         <SeparationRadius value="1.25"/>
         <ScoreMake value="700"/>
         <ScoreKill value="700"/>
-        <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="16"/>
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
-        <TacticalAIThink value="AIThinkBattleCruiser"/>
         <AIEvalFactor value="0.9"/>
         <Mass value="0.6"/>
-        <TechAliasArray value="Alias_BattlecruiserClass"/>
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="110"/>
         <GlossaryStrongArray value="Thor"/>
@@ -154,22 +156,15 @@
         <GlossaryWeakArray value="Corruptor"/>
         <GlossaryWeakArray value="VoidRay"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
-        <BuildTime value="90"/>
     </CUnit>
     <CUnit id="RaynorCommanderBackslashRockets@Missile" parent="MISSILE">
         <Race value="COOPRaynor"/>
         <Mover value="RaynorCommanderBackslashRockets@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
-    <CUnit id="RaynorCommanderBanshee">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderBanshee" parent="CommanderAir_Terr">
+        <Name value="Unit/Name/RaynorCommanderBanshee"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="ArmySelect" value="1"/>
-        <PlaneArray index="Air" value="1"/>
-        <Collide index="Flying" value="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <LifeStart value="140"/>
@@ -178,46 +173,34 @@
         <EnergyStart value="50"/>
         <EnergyMax value="200"/>
         <EnergyRegenRate value="0.5625"/>
-        <Mover value="Fly"/>
         <Speed value="2.75"/>
         <Acceleration value="3.25"/>
         <StationaryTurningRate value="1499.9414"/>
         <TurningRate value="1499.9414"/>
         <Sight value="10"/>
-        <Height value="3.75"/>
-        <VisionHeight value="4"/>
         <Food value="-3"/>
-        <CostCategory value="Army"/>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="100"/>
+        <BuildTime value="60"/>
         <RepairTime value="60"/>
-        <AttackTargetPriority value="20"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
         <KillXP value="50"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
         <AbilArray Link="BansheeCloak"/>
         <WeaponArray Link="RaynorCommanderBackslashRockets"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        <CardLayouts index="0">
             <LayoutButtons Face="CloakOnBanshee" Type="AbilCmd" AbilCmd="BansheeCloak,On" Row="2" Column="0"/>
             <LayoutButtons Face="CloakOff" Type="AbilCmd" AbilCmd="BansheeCloak,Off" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
         <ScoreMake value="250"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="250"/>
-        <ScoreResult value="BuildOrder"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="11"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
-        <TacticalAI value="Banshee"/>
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="100"/>
         <GlossaryStrongArray value="SiegeTankSieged"/>
@@ -227,7 +210,6 @@
         <GlossaryWeakArray value="Hydralisk"/>
         <GlossaryWeakArray value="Phoenix"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
-        <BuildTime value="60"/>
     </CUnit>
     <CUnit id="RaynorCommanderCommandCenter@Fly">
         <Name value="Unit/Name/CommandCenter"/>
@@ -287,38 +269,20 @@
         <TechAliasArray value="Alias_CommandCenter"/>
         <GlossaryAlias value="CommandCenter"/>
     </CUnit>
-    <CUnit id="RaynorCommanderCommandCenter">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderCommandCenter" parent="CommanderStructure_Terr">
+        <Name value="Unit/Name/RaynorCommanderCommandCenter"/>
         <Facing value="315"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
         <FlagArray index="PreventReveal" value="1"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="0"/>
         <FlagArray index="TownCamera" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
         <ResourceDropOff index="Minerals" value="1"/>
         <ResourceDropOff index="Vespene" value="1"/>
         <ResourceDropOff index="Terrazine" value="1"/>
         <ResourceDropOff index="Custom" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Small" value="1"/>
-        <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Structure" value="1"/>
         <LifeStart value="1500"/>
         <LifeMax value="1500"/>
-        <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <StationaryTurningRate value="719.4726"/>
         <TurningRate value="719.4726"/>
@@ -327,9 +291,9 @@
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="400"/>
         <RepairTime value="100"/>
-        <AttackTargetPriority value="11"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="que5CancelToSelection"/>
+        <DamageDealtXP value="0"/>
+        <DamageTakenXP value="0"/>
+        <AbilArray index="1" Link="que5CancelToSelection"/>
         <AbilArray Link="RaynorCommanderTrainCC"/>
         <AbilArray Link="RallyCommand"/>
         <AbilArray Link="CommandCenterTransport"/>
@@ -338,11 +302,11 @@
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <EffectArray index="Create" value="CCCreateSet"/>
         <EffectArray index="Birth" value="CCBirthSet"/>
-        <CardLayouts>
-            <LayoutButtons Face="SCV" Type="AbilCmd" AbilCmd="RaynorCommanderTrainCC,Train1" Row="0" Column="0"/>
-            <LayoutButtons Face="OrbitalCommand" Type="AbilCmd" AbilCmd="UpgradeToOrbital,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="RallyCommand,Rally1" Row="1" Column="4"/>
-            <LayoutButtons Face="CommandCenterLoad" Type="AbilCmd" AbilCmd="CommandCenterTransport,LoadAll" Row="2" Column="0"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="SCV" Type="AbilCmd" AbilCmd="RaynorCommanderTrainCC,Train1" Row="0" Column="0"/>
+            <LayoutButtons index="1" Face="OrbitalCommand" Type="AbilCmd" AbilCmd="UpgradeToOrbital,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="2" Face="Rally" Type="AbilCmd" AbilCmd="RallyCommand,Rally1" Row="1" Column="4"/>
+            <LayoutButtons index="3" Face="CommandCenterLoad" Type="AbilCmd" AbilCmd="CommandCenterTransport,LoadAll" Row="2" Column="0"/>
             <LayoutButtons Face="CommandCenterUnloadAll" Type="AbilCmd" AbilCmd="CommandCenterTransport,UnloadAll" Row="2" Column="1"/>
             <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="RaynorCommanderLiftCommandCenter,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
@@ -357,14 +321,17 @@
         <Footprint value="Footprint5x5Contour"/>
         <PlacementFootprint value="Footprint5x5DropOff"/>
         <ScoreMake value="400"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="400"/>
-        <ScoreResult value="BuildOrder"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="2.5"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
         <TacticalAI value="CommandCenter"/>
         <TacticalAIThink value="AIThinkCommandCenter"/>
-        <TechAliasArray value="Alias_CommandCenter"/>
+        <TechAliasArray index="0" value="Alias_CommandCenter"/>
         <GlossaryPriority value="30"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
         <TechTreeProducedUnitArray value="SCV"/>
@@ -425,7 +392,7 @@
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
     </CUnit>
-    <CUnit id="RaynorCommanderATALaserBatteryAir@Missile" parent="MISSILE">
+    <CUnit id="RaynorCommanderATALaserBatteryAir@Damage@Missile" parent="MISSILE">
         <Race value="COOPRaynor"/>
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
@@ -435,36 +402,20 @@
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
-    <CUnit id="RaynorCommanderDuskWings">
+    <CUnit id="RaynorCommanderDuskWings" parent="CommanderAir_Terr">
+        <Name value="Unit/Name/RaynorCommanderDuskWings"/>
         <Race value="COOPRaynor"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="ArmySelect" value="1"/>
-        <Collide index="Flying" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <LifeStart value="250"/>
         <LifeMax value="250"/>
         <EnergyMax value="200"/>
         <EnergyRegenRate value="0.8632"/>
-        <Mover value="Fly"/>
         <Speed value="3.1484"/>
         <Acceleration value="3.5"/>
-        <StationaryTurningRate value="1499.9414"/>
-        <TurningRate value="1499.9414"/>
-        <Sight value="9"/>
-        <Height value="3.75"/>
-        <VisionHeight value="4"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="move"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-        </CardLayouts>
+        <CostCategory value="None"/>
+        <DamageDealtXP value="100"/>
+        <DamageTakenXP value="100"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="250"/>
@@ -877,15 +828,9 @@
             <Cooldown Link="TechLab/Revive"/>
         </ReviveInfoBase>
     </CUnit>
-    <CUnit id="RaynorCommanderVulture">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderVulture" parent="CommanderGround_Terr">
+        <Name value="Unit/Name/RaynorCommanderVulture"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Classic"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="ArmySelect" value="1"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Small" value="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <LifeStart value="75"/>
@@ -893,31 +838,18 @@
         <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
         <Speed value="4.25"/>
-        <Acceleration value="1000"/>
         <LateralAcceleration value="69.125"/>
-        <Sight value="9"/>
         <Food value="-2"/>
-        <CostCategory value="Army"/>
         <CostResource index="Minerals" value="75"/>
+        <BuildTime value="45"/>
         <RepairTime value="25"/>
-        <AttackTargetPriority value="20"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
         <KillXP value="15"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
         <AbilArray Link="RaynorCommanderPlaceSpiderMine"/>
         <AbilArray Link="MakeVultureSpiderMines"/>
-        <AbilArray Link="que5"/>
+        <AbilArray Link="que1"/>
         <BehaviorArray Link="ScavengingSystemsMechDeath"/>
         <WeaponArray Link="RaynorCommanderTorpedoes"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        <CardLayouts index="0">
             <LayoutButtons Face="WidowMine" Type="AbilCmd" AbilCmd="RaynorCommanderPlaceSpiderMine,Build1" Row="2" Column="0"/>
             <LayoutButtons>
                 <Face value="CerberusMines"/>
@@ -932,13 +864,11 @@
         </CardLayouts>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
-        <CargoSize value="2"/>
         <ScoreMake value="75"/>
         <ScoreKill value="150"/>
         <SubgroupPriority value="12"/>
         <MinimapRadius value="0.625"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
-        <TacticalAIThink value="AIThinkVulture"/>
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="80"/>
         <GlossaryStrongArray value="Zergling"/>
@@ -948,7 +878,11 @@
         <GlossaryWeakArray value="Colossus"/>
         <GlossaryWeakArray value="SiegeTank"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
-        <BuildTime value="45"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="0"/>
+            <ChanceArray index="Idle" value="100"/>
+            <ChanceArray index="Turn" value="0"/>
+        </Fidget>
     </CUnit>
     <CUnit id="RaynorCommanderFactory@Fly">
         <Name value="Unit/Name/Factory"/>
@@ -1007,55 +941,35 @@
         <HotkeyAlias value="Factory"/>
         <TechAliasArray value="Alias_Factory"/>
     </CUnit>
-    <CUnit id="RaynorCommanderFactory">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderFactory" parent="CommanderStructure_Terr">
+        <Name value="Unit/Name/RaynorCommanderFactory"/>
         <Facing value="315"/>
         <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Small" value="1"/>
-        <Attributes index="Armored" value="1"/>
+        <Collide index="Locust" value="0"/>
         <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Structure" value="1"/>
         <LifeStart value="1250"/>
         <LifeMax value="1250"/>
-        <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <StationaryTurningRate value="719.4726"/>
         <TurningRate value="719.4726"/>
-        <Sight value="9"/>
-        <CostCategory value="Technology"/>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="100"/>
         <RepairTime value="60"/>
-        <AttackTargetPriority value="11"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="que5"/>
+        <DamageDealtXP value="0"/>
+        <DamageTakenXP value="0"/>
+        <AbilArray index="1" Link="que5"/>
         <AbilArray Link="RaynorCommanderTrainFactory"/>
         <AbilArray Link="RaynorCommanderBuildAddons@Factory"/>
         <AbilArray Link="Rally"/>
         <AbilArray Link="RaynorCommanderLiftFactory@LiftOff"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="ReactorQueue"/>
-        <CardLayouts>
-            <LayoutButtons Face="RaynorCommanderVulture" Type="AbilCmd" AbilCmd="RaynorCommanderTrainFactory,Train1" Row="0" Column="0"/>
-            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
-            <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="RaynorCommanderLiftFactory@LiftOff,Execute" Row="2" Column="3"/>
-            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="RaynorCommanderVulture" Type="AbilCmd" AbilCmd="RaynorCommanderTrainFactory,Train1" Row="0" Column="0"/>
+            <LayoutButtons index="1" Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons index="2" Face="Lift" Type="AbilCmd" AbilCmd="RaynorCommanderLiftFactory@LiftOff,Execute" Row="2" Column="3"/>
+            <LayoutButtons index="3" Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="Reactor" Type="AbilCmd" AbilCmd="RaynorCommanderBuildAddons@Factory,Build2" Row="2" Column="1"/>
             <LayoutButtons Face="RaynorCommanderBuildAddons@Factory" Type="AbilCmd" AbilCmd="RaynorCommanderBuildAddons@Factory,Build1" Row="2" Column="0"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
@@ -1066,16 +980,18 @@
         </CardLayouts>
         <Radius value="1.625"/>
         <SeparationRadius value="1.625"/>
-        <Footprint value="Footprint3x3Contour"/>
-        <PlacementFootprint value="Footprint3x3"/>
         <ScoreMake value="250"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="250"/>
-        <ScoreResult value="BuildOrder"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="1.625"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
         <TacticalAI value="Factory"/>
-        <TechAliasArray value="Alias_Factory"/>
+        <TechAliasArray index="0" value="Alias_Factory"/>
+        <GlossaryAlias value=""/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
         <TechTreeProducedUnitArray value="Hellion"/>
         <TechTreeProducedUnitArray value="SiegeTank"/>
@@ -1295,54 +1211,30 @@
         <TechAliasArray value="Alias_Barracks"/>
         <Name value="Unit/Name/RaynorCommanderBarracks"/>
     </CUnit>
-    <CUnit id="RaynorCommanderBarracks">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderBarracks" parent="CommanderStructure_Terr">
+        <Name value="Unit/Name/RaynorCommanderBarracks"/>
         <Facing value="315"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Small" value="1"/>
-        <Attributes index="Armored" value="1"/>
-        <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Structure" value="1"/>
         <LifeStart value="1000"/>
         <LifeMax value="1000"/>
-        <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <StationaryTurningRate value="719.4726"/>
         <TurningRate value="719.4726"/>
-        <Sight value="9"/>
-        <CostCategory value="Technology"/>
         <CostResource index="Minerals" value="150"/>
+        <BuildTime value="65"/>
         <RepairTime value="65"/>
-        <AttackTargetPriority value="11"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="que5"/>
+        <AbilArray index="1" Link="que5"/>
         <AbilArray Link="RaynorCommanderTrainBarrack"/>
         <AbilArray Link="Rally"/>
         <AbilArray Link="RaynorCommanderBuildAddons@Barracks"/>
         <AbilArray Link="RaynorCommanderLiftBarrack@LiftOff"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="ReactorQueue"/>
-        <CardLayouts>
-            <LayoutButtons Face="RaynorCommanderMarine" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train1" Row="0" Column="0"/>
-            <LayoutButtons Face="RaynorCommanderMarauder" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train4" Row="0" Column="1"/>
-            <LayoutButtons Face="RaynorCommanderFirebat" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train2" Row="0" Column="2"/>
-            <LayoutButtons Face="RaynorCommanderMedic" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train3" Row="0" Column="3"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="RaynorCommanderMarine" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train1" Row="0" Column="0"/>
+            <LayoutButtons index="1" Face="RaynorCommanderMarauder" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train4" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="RaynorCommanderFirebat" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train2" Row="0" Column="2"/>
+            <LayoutButtons index="3" Face="RaynorCommanderMedic" Type="AbilCmd" AbilCmd="RaynorCommanderTrainBarrack,Train3" Row="0" Column="3"/>
             <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
             <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="RaynorCommanderLiftBarrack@LiftOff,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
@@ -1353,24 +1245,22 @@
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
         </CardLayouts>
-        <Radius value="1.75"/>
         <SeparationRadius value="1.75"/>
-        <Footprint value="Footprint3x3Contour"/>
-        <PlacementFootprint value="Footprint3x3"/>
         <ScoreMake value="150"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="150"/>
-        <ScoreResult value="BuildOrder"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="1.75"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
-        <TacticalAI value="Barracks"/>
-        <TechAliasArray value="Alias_Barracks"/>
+        <TechAliasArray index="0" value="Alias_Barracks"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
         <TechTreeProducedUnitArray value="Marine"/>
         <TechTreeProducedUnitArray value="Marauder"/>
         <TechTreeProducedUnitArray value="Reaper"/>
         <TechTreeProducedUnitArray value="Ghost"/>
-        <BuildTime value="65"/>
     </CUnit>
     <CUnit id="RaynorCommanderFirebat" parent="CommanderGround">
         <Race value="COOPRaynor"/>
@@ -1455,17 +1345,11 @@
         <GlossaryPriority value="20"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
     </CUnit>
-    <CUnit id="RaynorCommanderSCV">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderSCV" parent="CommanderGround_Terr">
+        <Name value="Unit/Name/RaynorCommanderSCV"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Multiplayer"/>
         <FlagArray index="Worker" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Small" value="1"/>
+        <FlagArray index="ArmySelect" value="0"/>
         <DefaultAcquireLevel value="Defensive"/>
         <Response value="Flee"/>
         <Attributes index="Light" value="1"/>
@@ -1477,31 +1361,19 @@
         <Speed value="2.8125"/>
         <Acceleration value="2.5"/>
         <LateralAcceleration value="46"/>
-        <StationaryTurningRate value="999.8437"/>
-        <TurningRate value="999.8437"/>
         <Sight value="8"/>
         <Food value="-1"/>
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="50"/>
+        <BuildTime value="20"/>
         <RepairTime value="16.667"/>
-        <AttackTargetPriority value="20"/>
         <AIOverideTargetPriority value="10"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
         <KillXP value="10"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
         <AbilArray Link="Repair"/>
         <AbilArray Link="SCVHarvest"/>
         <AbilArray Link="RaynorCommanderBuildSCV"/>
         <WeaponArray Link="WeaponRaynorSCV"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="AttackRaynorWorker" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        <CardLayouts index="0">
             <LayoutButtons Face="RaynorCommanderRepair" Type="AbilCmd" AbilCmd="Repair,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="RaynorCommanderGather" Type="AbilCmd" AbilCmd="SCVHarvest,Gather" Row="1" Column="0"/>
             <LayoutButtons Face="RaynorCommanderReturnCargo" Type="AbilCmd" AbilCmd="SCVHarvest,Return" Row="1" Column="1"/>
@@ -1531,20 +1403,17 @@
         <InnerRadius value="0.375"/>
         <CargoSize value="1"/>
         <ScoreMake value="50"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="50"/>
-        <ScoreResult value="BuildOrder"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="6"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="10"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
-        <Fidget>
-            <ChanceArray index="Anim" value="33"/>
-            <ChanceArray index="Idle" value="33"/>
-            <ChanceArray index="Turn" value="33"/>
-        </Fidget>
-        <BuildTime value="20"/>
     </CUnit>
     <CUnit id="RaynorCommanderTechLab">
         <DeathRevealRadius value="3"/>
@@ -1970,61 +1839,45 @@
         <Mover value="RaynorCommanderHyperionYamatoGun@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
-    <CUnit id="RaynorCommanderViking">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderViking" parent="CommanderAir_Terr">
+        <Name value="Unit/Name/RaynorCommanderViking"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="AIThreatGround" value="1"/>
-        <FlagArray index="AIThreatAir" value="1"/>
-        <FlagArray index="ArmySelect" value="1"/>
-        <PlaneArray index="Air" value="1"/>
-        <Collide index="Flying" value="1"/>
-        <Attributes index="Armored" value="1"/>
-        <Attributes index="Mechanical" value="1"/>
         <LifeStart value="125"/>
         <LifeMax value="125"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
-        <Mover value="Fly"/>
         <Speed value="2.75"/>
         <Acceleration value="2.625"/>
         <StationaryTurningRate value="999.8437"/>
         <TurningRate value="999.8437"/>
         <Sight value="10"/>
-        <Height value="3.75"/>
-        <VisionHeight value="4"/>
         <Food value="-2"/>
-        <CostCategory value="Army"/>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="75"/>
         <RepairTime value="41.6667"/>
-        <AttackTargetPriority value="20"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
         <KillXP value="30"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
+        <AbilArray index="0" Link="stop"/>
+        <AbilArray index="1" Link="attack"/>
+        <AbilArray index="2" Link="move"/>
         <AbilArray Link="RaynorCommanderVikingMode@1"/>
         <WeaponArray Link="RaynorCommanderLanzerTorpedoes"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons index="1" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons index="2" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons index="4" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="AssaultMode" Type="AbilCmd" AbilCmd="RaynorCommanderVikingMode@1,Execute" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
         <ScoreMake value="225"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="225"/>
-        <ScoreResult value="BuildOrder"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="12"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
-        <TacticalAIThink value="AIThinkVikingFighter"/>
         <SelectAlias value="VikingAssault"/>
         <SubgroupAlias value="VikingAssault"/>
         <TechAliasArray value="Alias_Viking"/>
@@ -2038,56 +1891,48 @@
         <GlossaryWeakArray value="Stalker"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
     </CUnit>
-    <CUnit id="RaynorCommanderViking@Alternate">
+    <CUnit id="RaynorCommanderViking@Alternate" parent="CommanderGround_Terr">
         <Name value="Unit/Name/VikingFighter"/>
-        <DeathRevealRadius value="3"/>
         <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="AIThreatGround" value="1"/>
         <FlagArray index="AIThreatAir" value="1"/>
-        <FlagArray index="ArmySelect" value="1"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="0"/>
         <Collide index="Small" value="1"/>
         <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <LifeStart value="125"/>
         <LifeMax value="125"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
-        <Speed value="2.25"/>
-        <Acceleration value="1000"/>
         <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="720"/>
         <Sight value="10"/>
         <Food value="-2"/>
-        <CostCategory value="Army"/>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="75"/>
         <RepairTime value="41.6667"/>
-        <AttackTargetPriority value="20"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
         <KillXP value="30"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="attack"/>
-        <AbilArray Link="move"/>
+        <AbilArray index="0" Link="stop"/>
+        <AbilArray index="1" Link="attack"/>
+        <AbilArray index="2" Link="move"/>
         <AbilArray Link="RaynorCommanderVikingMode@2"/>
         <WeaponArray Link="TwinGatlingCannon"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons index="1" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons index="2" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons index="4" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="FighterMode" Type="AbilCmd" AbilCmd="RaynorCommanderVikingMode@2,Execute" Row="2" Column="0"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
         <InnerRadius value="0.375"/>
-        <CargoSize value="2"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="225"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
+        <ScoreResult value=""/>
         <SubgroupPriority value="12"/>
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
@@ -2114,120 +1959,88 @@
         <Mover value="RaynorCommanderYamatoGun@Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
-    <CUnit id="RaynorCommanderSupplyDepot">
-        <DeathRevealRadius value="3"/>
+    <CUnit id="RaynorCommanderSupplyDepot" parent="CommanderStructure_Terr">
+        <Name value="Unit/Name/RaynorCommanderSupplyDepot"/>
         <Facing value="315"/>
         <Race value="COOPRaynor"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Small" value="1"/>
-        <Attributes index="Armored" value="1"/>
         <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Structure" value="1"/>
         <LifeStart value="400"/>
         <LifeMax value="400"/>
-        <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <StationaryTurningRate value="719.4726"/>
         <TurningRate value="719.4726"/>
-        <Sight value="9"/>
         <Food value="8"/>
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="100"/>
         <BuildTime value="30"/>
         <RepairTime value="30"/>
-        <AttackTargetPriority value="11"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="RaynorCommanderLoweredSupplies@1"/>
+        <DamageDealtXP value="0"/>
+        <DamageTakenXP value="0"/>
+        <AbilArray index="1" Link="RaynorCommanderLoweredSupplies@1"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
-        <CardLayouts>
-            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
-            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons Face="RaynorCommanderLoweredSupplies@1" Type="AbilCmd" AbilCmd="RaynorCommanderLoweredSupplies@1,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2" Face="RaynorCommanderLoweredSupplies@1" Type="AbilCmd" AbilCmd="RaynorCommanderLoweredSupplies@1,Execute" Row="2" Column="0"/>
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
         <Footprint value="Footprint2x2Contour"/>
         <PlacementFootprint value="Footprint2x2"/>
         <ScoreMake value="100"/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="100"/>
-        <ScoreResult value="BuildOrder"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
         <TacticalAI value="SupplyDepot"/>
-        <TechAliasArray value="Alias_SupplyDepot"/>
         <GlossaryPriority value="248"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
     </CUnit>
-    <CUnit id="RaynorCommanderSupplyDepot@Alternate">
+    <CUnit id="RaynorCommanderSupplyDepot@Alternate" parent="CommanderStructure_Terr">
         <Name value="Unit/Name/RaynorCommanderSupplyDepot"/>
-        <DeathRevealRadius value="3"/>
         <Facing value="315"/>
         <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Small" value="1"/>
-        <Attributes index="Armored" value="1"/>
+        <Collide index="Locust" value="0"/>
         <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Structure" value="1"/>
         <LifeStart value="400"/>
         <LifeMax value="400"/>
-        <LifeArmor value="1"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
         <StationaryTurningRate value="719.4726"/>
         <TurningRate value="719.4726"/>
-        <Sight value="9"/>
         <Food value="8"/>
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="100"/>
         <RepairTime value="30"/>
-        <AttackTargetPriority value="11"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="RaynorCommanderLoweredSupplies@2"/>
+        <DamageDealtXP value="0"/>
+        <DamageTakenXP value="0"/>
+        <AbilArray index="1" Link="RaynorCommanderLoweredSupplies@2"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
-        <CardLayouts>
-            <LayoutButtons Face="RaynorCommanderLoweredSupplies@2" Type="AbilCmd" AbilCmd="RaynorCommanderLoweredSupplies@2,Execute" Row="2" Column="0"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="0" Face="RaynorCommanderLoweredSupplies@2" Type="AbilCmd" AbilCmd="RaynorCommanderLoweredSupplies@2,Execute" Row="2" Column="0"/>
+            <LayoutButtons index="1" removed="1"/>
+            <LayoutButtons index="2" removed="1"/>
+            <LayoutButtons index="3" removed="1"/>
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
         <Footprint value="RaynorCommanderSupplyDepot@Footpring@2"/>
+        <PlacementFootprint value=""/>
+        <ScoreMakeCostFactor index="Minerals" value="0"/>
+        <ScoreMakeCostFactor index="Vespene" value="0"/>
         <ScoreKill value="100"/>
+        <ScoreKillCostFactor index="Minerals" value="0"/>
+        <ScoreKillCostFactor index="Vespene" value="0"/>
+        <ScoreResult value=""/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="1.25"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
-        <LeaderAlias value="SupplyDepot"/>
+        <LeaderAlias value="RaynorCommanderSupplyDepot"/>
         <HotkeyAlias value="SupplyDepot"/>
-        <SelectAlias value="SupplyDepot"/>
-        <TechAliasArray value="Alias_SupplyDepot"/>
+        <SelectAlias value="RaynorCommanderSupplyDepot"/>
+        <TechAliasArray index="0" value="Alias_RaynorCommanderSupplyDepot"/>
+        <GlossaryAlias value="RaynorCommanderSupplyDepot"/>
     </CUnit>
 </Catalog>

@@ -188,25 +188,25 @@
         <EffectArray value="RaynorCommanderATSLaserBattery@AB"/>
         <EffectArray value="RaynorCommanderATSLaserBattery@LM"/>
     </CEffectSet>
-    <CEffectSet id="RaynorCommanderATALaserBatteryAir">
+    <CEffectSet id="RaynorCommanderATALaserBatteryAir@Damage" parent="CEffectSet">
         <EditorCategories value="Race:Raynor"/>
-        <EffectArray value="RaynorCommanderATALaserBatteryAir@AB"/>
-        <EffectArray value="RaynorCommanderATALaserBatteryAir@LM"/>
+        <EffectArray value="RaynorCommanderATALaserBatteryAir@Damage@AB"/>
+        <EffectArray value="RaynorCommanderATALaserBatteryAir@Damage@LM"/>
     </CEffectSet>
-    <CEffectApplyBehavior id="RaynorCommanderATALaserBatteryAir@AB">
+    <CEffectApplyBehavior id="RaynorCommanderATALaserBatteryAir@Damage@AB">
         <EditorCategories value="Race:Raynor"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
-    <CEffectDamage id="RaynorCommanderATALaserBatteryAir@Damage">
+    <CEffectDamage id="RaynorCommanderATALaserBatteryAir@Damage@Damage">
         <EditorCategories value="Race:Raynor"/>
         <Visibility value="Visible"/>
         <Amount value="20"/>
         <Death value="Fire"/>
     </CEffectDamage>
-    <CEffectLaunchMissile id="RaynorCommanderATALaserBatteryAir@LM">
+    <CEffectLaunchMissile id="RaynorCommanderATALaserBatteryAir@Damage@LM">
         <EditorCategories value="Race:Raynor"/>
-        <ImpactEffect value="RaynorCommanderATALaserBatteryAir@Damage"/>
-        <AmmoUnit value="RaynorCommanderATALaserBatteryAir@Missile"/>
+        <ImpactEffect value="RaynorCommanderATALaserBatteryAir@Damage@Damage"/>
+        <AmmoUnit value="RaynorCommanderATALaserBatteryAir@Damage@Missile"/>
     </CEffectLaunchMissile>
     <CEffectApplyBehavior id="RaynorCommanderATSLaserBattery@AB">
         <EditorCategories value="Race:Raynor"/>

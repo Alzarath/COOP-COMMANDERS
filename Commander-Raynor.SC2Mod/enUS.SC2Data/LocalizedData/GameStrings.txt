@@ -1,4 +1,5 @@
 ﻿Abil/Name/RaynorCommanderAbilPDD=Point Defense Drone
+Abil/Name/RaynorCommanderArmoryResearch=Research
 Abil/Name/RaynorCommanderBarrackResearch=Research
 Abil/Name/RaynorCommanderBuildAddons@Barracks=AddOns
 Abil/Name/RaynorCommanderBuildAddons@Factory=AddOns
@@ -100,6 +101,9 @@ Button/Name/RaynorCommanderTechLabMorphBarrack=Build <d stringRef="Unit,RaynorCo
 Button/Name/RaynorCommanderTechLabMorphFactory=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
 Button/Name/RaynorCommanderTechLabMorphStarport=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
 Button/Name/RaynorCommanderTerranBuild=Build Structure
+Button/Name/RaynorCommanderVehicleAndShipWeapons@Level1=Upgrade Infantry Weapons Level 1
+Button/Name/RaynorCommanderVehicleAndShipWeapons@Level2=Upgrade Infantry Weapons Level 2
+Button/Name/RaynorCommanderVehicleAndShipWeapons@Level3=Upgrade Infantry Weapons Level 3
 Button/Name/RaynorCommanderViking=Build <d stringRef="Unit,RaynorCommanderViking,Name"/>
 Button/Name/RaynorCommanderVikingMode@1=Assault Mode
 Button/Name/RaynorCommanderVikingMode@2=Fighter
@@ -160,6 +164,9 @@ Button/Tooltip/RaynorCommanderTechLabMorphBarrack=Infantry-research structure. A
 Button/Tooltip/RaynorCommanderTechLabMorphFactory=Vehicle-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Siege Tanks<n/>- Thor with Armory<n/>- Cyclones
 Button/Tooltip/RaynorCommanderTechLabMorphStarport=Aircraft-research structure. A Tech Lab can fit onto any production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Banshees<n/>- Ravens<n/>- Battlecruisers with Fusion Core
 Button/Tooltip/RaynorCommanderTerranBuild=A list of basic structures.
+Button/Tooltip/RaynorCommanderVehicleAndShipWeapons@Level1=Upgrades the damage dealt by infantry units.
+Button/Tooltip/RaynorCommanderVehicleAndShipWeapons@Level2=Further upgrades the damage dealt by infantry units.
+Button/Tooltip/RaynorCommanderVehicleAndShipWeapons@Level3=Maximizes the damage dealt by infantry units.
 Button/Tooltip/RaynorCommanderViking=Durable support flyer. Loaded with strong anti-capital air missiles. Can switch into Assault Mode to attack ground units.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
 Button/Tooltip/RaynorCommanderViking@Alternate=Durable support unit. Can switch into Fighter Mode to attack air units.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
 Button/Tooltip/RaynorCommanderVikingMode@1=Transforms the Viking to Assault Mode. In this mode Vikings move on the ground and can only attack ground targets.
@@ -176,6 +183,7 @@ DataCollection/Name/RaynorCommanderATSLaserBattery=Raynor Commander - Battlecrui
 DataCollection/Name/RaynorCommanderAbilPDD=Raynor Commander - Abil PDD
 DataCollection/Name/RaynorCommanderAirStrike=Raynor Commander - Air Strike
 DataCollection/Name/RaynorCommanderArmory=Raynor Commander - Armory
+DataCollection/Name/RaynorCommanderArmoryResearch=Raynor Commander - Armory
 DataCollection/Name/RaynorCommanderArmoryUpgradeCache=Raynor Commander - Armory Upgrade Cache
 DataCollection/Name/RaynorCommanderBackslashRockets=Raynor Commander - Banshee
 DataCollection/Name/RaynorCommanderBanshee=Raynor Commander - Banshee
@@ -259,6 +267,7 @@ DataCollection/Name/RaynorCommanderTrainCC=Raynor Commander - Train (CC)
 DataCollection/Name/RaynorCommanderTrainFactory=Raynor Commander - Train
 DataCollection/Name/RaynorCommanderTrainStarport=Raynor Commander - Train
 DataCollection/Name/RaynorCommanderVanadiumPlating=Raynor Commander - Vanadium Plating
+DataCollection/Name/RaynorCommanderVehicleAndShipWeapons=Raynor Commander - Vehicle And Ship Weapons
 DataCollection/Name/RaynorCommanderViking=Raynor Commander - Viking
 DataCollection/Name/RaynorCommanderVikingMode=Raynor Commander - Viking Mode
 DataCollection/Name/RaynorCommanderVulture=Raynor Commander - Vulture
@@ -268,10 +277,10 @@ DataCollection/Name/TerranBuildingFlameBig=Terran Building Flame Big
 DataCollection/Name/WeaponRaynorSCV=Raynor Commander - SCV
 DocInfo/DescLong=Full made Commander Raynor
 DocInfo/Name=COOP Commander - Raynor
-Effect/Name/RaynorCommanderATALaserBatteryAir=Set
-Effect/Name/RaynorCommanderATALaserBatteryAir@AB=AB
-Effect/Name/RaynorCommanderATALaserBatteryAir@Damage=Damage
-Effect/Name/RaynorCommanderATALaserBatteryAir@LM=LM
+Effect/Name/RaynorCommanderATALaserBatteryAir@Damage=Set
+Effect/Name/RaynorCommanderATALaserBatteryAir@Damage@AB=AB
+Effect/Name/RaynorCommanderATALaserBatteryAir@Damage@Damage=Damage
+Effect/Name/RaynorCommanderATALaserBatteryAir@Damage@LM=LM
 Effect/Name/RaynorCommanderATSLaserBattery=Set
 Effect/Name/RaynorCommanderATSLaserBattery@AB=AB
 Effect/Name/RaynorCommanderATSLaserBattery@Damage=Damage
@@ -350,8 +359,8 @@ Param/Value/lib_B6F694BB_F3E6B9B7=Unit ID
 Race/Name/COOPRaynor=Raynor
 RequirementNode/Tooltip/CountUnitAlias_BarracksCompleteOnly1633119839TechTreeCheat=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 RequirementNode/Tooltip/CountUnitAlias_FactoryCompleteOnly3407815928TechTreeCheat=<d stringRef="Unit,RaynorCommanderFactory,Name"/>
+RequirementNode/Tooltip/CountUnitAlias_RaynorCommanderSupplyDepotCompleteOnly169109972TechTreeCheat=<d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>
 RequirementNode/Tooltip/CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810=Пристроенная лаборатория
-RequirementNode/Tooltip/CountUnitAlias_SupplyDepotCompleteOnly169109972TechTreeCheat=<d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>
 RequirementNode/Tooltip/CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat=Research Concussive Shells at the Barracks Tech Lab
 Reward/Name/RaynorCommanderHyperJump=Raynor Commander - Hyper Jump
 Reward/Name/RaynorCommanderLanzerTorpedoes=Raynor Commander - Viking Fighter
@@ -364,12 +373,13 @@ UI/HelpMenuDialogTechGlossary_Control_Unit/Category/RaynorCommanderUnits=Ком�
 Unit/Category/RaynorCommanderUnits=Commander Raynor
 Unit/Description/RaynorCommanderMedic=Легкая единица поддержки. Может использовать способность <c val="FFE1AE"><d stringref="Abil/Name/RaynorCommanderHeal"/></c>
 Unit/LifeArmorName/TerranBuildingPlating=Terran Building Plating
+Unit/Name/COOP/RaynorCommanderArmory=Armory
 Unit/Name/COOP/RaynorCommanderEngineeringBay=Engineering Bay
 Unit/Name/COOP/RaynorCommanderFirebat=Firebat
 Unit/Name/COOP/RaynorCommanderMarauder=Marauder
 Unit/Name/COOP/RaynorCommanderMarine=Marine
 Unit/Name/COOP/RaynorCommanderMedic=Medic
-Unit/Name/RaynorCommanderATALaserBatteryAir@Missile=Missile
+Unit/Name/RaynorCommanderATALaserBatteryAir@Damage@Missile=Missile
 Unit/Name/RaynorCommanderATSLaserBattery@Missile=Missile
 Unit/Name/RaynorCommanderAbilPDD@Missile=Missile
 Unit/Name/RaynorCommanderBackslashRockets@Missile=Missile
@@ -428,6 +438,10 @@ Upgrade/Name/RaynorCommanderPunisherGrenades@PunisherGrenades=Concussive Shells
 Upgrade/Name/RaynorCommanderRapidRecruitment=Rapid Recruitment
 Upgrade/Name/RaynorCommanderStarportUpgradeCache=Starport Upgrade Cache
 Upgrade/Name/RaynorCommanderVanadiumPlating=Vanadium Plating
+Upgrade/Name/RaynorCommanderVehicleAndShipWeapons=Template
+Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level1=Level 1
+Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level2=Level 2
+Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level3=Level 3
 Weapon/Name/RaynorCommanderATALaserBatteryAir=ATA Laser Battery
 Weapon/Name/RaynorCommanderATSLaserBattery=ATS Laser Battery
 Weapon/Name/RaynorCommanderBackslashRockets=Backlash Rockets

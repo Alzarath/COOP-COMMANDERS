@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel default="1" id="RaynorCommanderArmory@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Armory\Splat_Armory.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory" parent="Unit">
+        <Model value="Assets\Buildings\Terran\ArmoryEx1\ArmoryEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <Radius value="1.250000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.800000"/>
+        <ShadowRadius value="1.800000"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Death" parent="UnitDeath">
+        <Model value="Assets\Buildings\Terran\ArmoryDeathEx1\ArmoryDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Placement" parent="Placement">
+        <Model value="Assets\Buildings\Terran\ArmoryPlacement\ArmoryPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Portrait" parent="FXAPortrait">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <FacialController value="LocalizedData\Facial\AdjutantPortrait.fxa"/>
+        <Image value="Assets\Textures\adjutantportrait_static.dds"/>
+    </CModel>
     <CModel id="RaynorCommanderBunker@Build" parent="BunkerBuildBase">
         <EditorCategories value="Race:Raynor"/>
     </CModel>
@@ -359,15 +388,15 @@
         <ScaleMin value="0.800000,0.800000,0.800000"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderATALaserBatteryAir@Impact" parent="ImpactFX">
+    <CModel id="RaynorCommanderATALaserBatteryAir@Damage@Impact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\BattleCruiserMissile\BattleCruiserMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderATALaserBatteryAir@Launch" parent="LaunchFX">
+    <CModel id="RaynorCommanderATALaserBatteryAir@Damage@Launch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\BattleCruiserPlasmaLaunch\BattleCruiserPlasmaLaunch.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderATALaserBatteryAir@Missile" parent="MissileFX">
+    <CModel id="RaynorCommanderATALaserBatteryAir@Damage@Missile" parent="MissileFX">
         <Model value="Assets\Effects\Terran\BattleCruiserMissile\BattleCruiserMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -696,11 +725,12 @@
         <Model value="Assets\Units\Terran\MarineDeathRagdoll\MarineDeathRagdoll.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@Portrait" parent="MarinePortraitBase">
+    <CModel id="RaynorCommanderMarine@Portrait" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Portraits\Terran\MarinePortrait\MarinePortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <FacialController value="LocalizedData\Facial\MarinePortrait.fxa"/>
         <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
         <Lighting value="MarinePortrait"/>
-        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSCV" parent="SCVBase">
         <Model value="Assets\Units\Terran\SCV\SCV.m3"/>

@@ -6,6 +6,9 @@
     <CRequirementCountUnit id="CountUnitAlias_FactoryCompleteOnly3407815928TechTreeCheat">
         <Count Link="Alias_Factory" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_RaynorCommanderSupplyDepotCompleteOnly169109972TechTreeCheat">
+        <Count Link="Alias_RaynorCommanderSupplyDepot" State="CompleteOnly"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Alias_RaynorTechLab" State="CompleteOnlyAtUnit"/>
@@ -13,9 +16,6 @@
     <CRequirementCountUnit id="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit206445810">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Alias_RaynorTechLab" State="CompleteOnlyAtUnit"/>
-    </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitAlias_SupplyDepotCompleteOnly169109972TechTreeCheat">
-        <Count Link="Alias_SupplyDepot" State="CompleteOnly"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -25,8 +25,27 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderJuggernautPlating" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderOrbitaldroppodsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RaynorCommanderOrbitaldroppods" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat">
         <Count Link="RaynorCommanderPunisherGrenades@PunisherGrenades" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderVehicleAndShipWeapons@Level1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderVehicleAndShipWeapons@Level2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderVehicleAndShipWeapons@Level3" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeStimpackCompleteOnly80611996TechTreeCheat2">
         <Tooltip value="RequirementNode/Tooltip/CountUpgradeStimpackCompleteOnly80611996"/>
@@ -38,5 +57,17 @@
     </CRequirementCountUpgrade>
     <CRequirementNot id="NotCountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
         <OperandArray index="0" value="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level2QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level3QueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level3QueuedOrBetter"/>
     </CRequirementNot>
 </Catalog>

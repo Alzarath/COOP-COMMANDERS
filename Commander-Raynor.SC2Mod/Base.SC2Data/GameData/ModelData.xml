@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel default="1" id="RaynorCommanderArmory@Splat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Armory\Splat_Armory.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory" parent="Unit">
+        <Model value="Assets\Buildings\Terran\ArmoryEx1\ArmoryEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <Radius value="1.250000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="1.800000"/>
+        <ShadowRadius value="1.800000"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Death" parent="UnitDeath">
+        <Model value="Assets\Buildings\Terran\ArmoryDeathEx1\ArmoryDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Placement" parent="Placement">
+        <Model value="Assets\Buildings\Terran\ArmoryPlacement\ArmoryPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderArmory@Portrait" parent="FXAPortrait">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <FacialController value="LocalizedData\Facial\AdjutantPortrait.fxa"/>
+        <Image value="Assets\Textures\adjutantportrait_static.dds"/>
+    </CModel>
     <CModel id="RaynorCommanderBunker@Build" parent="BunkerBuildBase">
         <EditorCategories value="Race:Raynor"/>
     </CModel>
@@ -33,6 +62,9 @@
         <Model value="Assets\Buildings\Terran\BunkerUpgradeDeathEx1\BunkerUpgradeDeathEx1.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
+    <CModel id="RaynorCommanderCommandCenter@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderEngineeringBay" parent="Unit">
         <Model value="Assets\Buildings\Terran\EngineeringBayEx1\EngineeringBayEx1.m3"/>
         <EditorCategories value="Race:Raynor"/>
@@ -61,6 +93,16 @@
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
+    <CModel id="RaynorCommanderFactory@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderOrbitaldroppods">
+        <Model value="Assets\Effects\Terran\DropPodFalling\DropPodFalling.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderStarport@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderTacticalJump@Impact">
         <Model value="Assets\Effects\Terran\Battlecruiser_Hyperjump_In\Battlecruiser_Hyperjump_In.m3"/>
         <EditorCategories value="Race:Raynor"/>
@@ -75,56 +117,68 @@
     </CModel>
     <CModel id="RaynorCommanderReactor" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderReactor@Build" parent="TechLabBuildBase"/>
+    <CModel id="RaynorCommanderReactor@Build" parent="TechLabBuildBase">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderReactor@Death" parent="TechLabDeathBase">
         <Model value="Assets\Buildings\Terran\TechLabDeathEx1\TechLabDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderReactor@DeathDetached" parent="TechLabDetachedDeathBase">
         <Model value="Assets\Buildings\Terran\TechLabDetachedDeathEx1\TechLabDetachedDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderReactor@Placement" parent="TechLabPlacementBase" low="RaynorCommanderReactor">
         <Model value="Assets\Buildings\Terran\TechLabPlacement\TechLabPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderReactor@Portrait" parent="TerranBuildingPortraitBase">
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderReactor@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="RaynorCommanderReactorBarrack" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\ReactorEx1\ReactorEx1.m3"/>
         <Lighting value="TechLab"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderReactorBarrack@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_Reactor\Splat_Reactor.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="RaynorCommanderReactorFactory" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\ReactorEx1\ReactorEx1.m3"/>
         <Lighting value="TechLab"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderReactorFactory@Build" parent="TechLabBuildBase"/>
+    <CModel id="RaynorCommanderReactorFactory@Build" parent="TechLabBuildBase">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderReactorFactory@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_Reactor\Splat_Reactor.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="RaynorCommanderReactorStarport" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\ReactorEx1\ReactorEx1.m3"/>
         <Lighting value="TechLab"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderReactorStarport@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_Reactor\Splat_Reactor.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
@@ -184,9 +238,11 @@
         <Model value="Assets\Portraits\Terran\BansheePortrait\BansheePortrait.m3"/>
         <Image value="Assets\Textures\BansheePortrait_Static.dds"/>
         <Lighting value="BansheePortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderCommandCenter" parent="CommandCenterBase">
         <Model value="Assets\Buildings\Terran\CommandCenterEx1\CommandCenterEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderCommandCenter@Death" parent="CommandCenterDeathBase" low="RaynorCommanderCommandCenter@DeathLow">
         <Model value="Assets\Buildings\Terran\CommandCenterDeathEx1\CommandCenterDeathEx1.m3"/>
@@ -220,6 +276,7 @@
             <Type value="Sound"/>
             <Time value="1.630000"/>
         </Events>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderCommandCenter@DeathLow" parent="BuildingDeath" Race="Terran">
         <Model value="Assets\Effects\Terran\TerranLargeBuildingDeath\TerranLargeBuildingDeath_Low.m3"/>
@@ -232,6 +289,7 @@
         <Lighting value="TerranLargeBuildingDeathLow"/>
         <SelectionRadius value="0.250000"/>
         <ShadowRadius value="0.250000"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderCommandCenter@FlyDeath" parent="CommandCenterFlyDeathBase">
         <Model value="Assets\Buildings\Terran\CommandCenterFlyDeathEx1\CommandCenterFlyDeathEx1.m3"/>
@@ -265,28 +323,31 @@
             <Type value="Sound"/>
             <Time value="1.630000"/>
         </Events>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderCommandCenter@Placement" parent="CommandCenterPlacementBase" low="RaynorCommanderCommandCenter">
         <Model value="Assets\Buildings\Terran\CommandCenterPlacement\CommandCenterPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderCommandCenter@Portrait" parent="TerranBuildingPortraitBase">
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderCommandCenter@Splat" parent="Splat">
         <Model value="Assets\Splats\splat_commandcenter\splat_commandcenter.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="PointDefenseBeamImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\PointDefenseBeamImpact\PointDefenseBeamImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="PointDefenseDroneAttackBeam2" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\TargetingDroneBeam\TargetingDroneBeam.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderAbilPDD@Impact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\PointDefenseBeamImpact\PointDefenseBeamImpact.m3"/>
@@ -300,6 +361,7 @@
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPDD" parent="Unit" Race="Terran">
         <Model value="Assets\Units\Terran\PointDefenseDrone\PointDefenseDrone.m3"/>
@@ -313,25 +375,28 @@
         <SquibTypeDefault value="Metal"/>
         <TechPurchaseCamera value="Star2CameraMid05"/>
         <UnitGlossaryCamera value="Star2CameraMid05"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPDD@Death" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Units\Terran\PointDefenseDroneDeathEx1\PointDefenseDroneDeathEx1.m3"/>
         <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPDD@Placement" parent="Placement" Race="Terran">
         <Model value="Assets\Units\Terran\PointDefenseDronePlacement\PointDefenseDronePlacement.m3"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderATALaserBatteryAir@Impact" parent="ImpactFX">
+    <CModel id="RaynorCommanderATALaserBatteryAir@Damage@Impact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\BattleCruiserMissile\BattleCruiserMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderATALaserBatteryAir@Launch" parent="LaunchFX">
+    <CModel id="RaynorCommanderATALaserBatteryAir@Damage@Launch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\BattleCruiserPlasmaLaunch\BattleCruiserPlasmaLaunch.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderATALaserBatteryAir@Missile" parent="MissileFX">
+    <CModel id="RaynorCommanderATALaserBatteryAir@Damage@Missile" parent="MissileFX">
         <Model value="Assets\Effects\Terran\BattleCruiserMissile\BattleCruiserMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
@@ -441,151 +506,168 @@
     </CModel>
     <CModel id="RaynorCommanderFactory" parent="FactoryBase">
         <Model value="Assets\Buildings\Terran\FactoryEx1\FactoryEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderFactory@Death" parent="FactoryDeathBase">
         <Model value="Assets\Buildings\Terran\FactoryDeathEx1\FactoryDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderFactory@FlyDeath" parent="FactoryFlyDeathBase">
         <Model value="Assets\Buildings\Terran\FactoryFlyDeathEx1\FactoryFlyDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderFactory@Placement" parent="FactoryPlacementBase" low="RaynorCommanderFactory">
         <Model value="Assets\Buildings\Terran\FactoryPlacement\FactoryPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderFactory@Portrait" parent="TerranBuildingPortraitBase">
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderFactory@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_Factory\Splat_Factory.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
-    <CModel id="RaynorCommanderTechLabFactory@Build" parent="TechLabBuildBase"/>
+    <CModel id="RaynorCommanderTechLabFactory@Build" parent="TechLabBuildBase">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderTechLabFactory" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
         <Lighting value="TechLab"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLabFactory@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="RaynorCommanderTechLabBarrack" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
         <Lighting value="TechLab"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLabBarrack@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
-    <CModel id="RaynorCommanderBarracks@Build" parent="BarracksBuildBase"/>
+    <CModel id="RaynorCommanderBarracks@Build" parent="BarracksBuildBase">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderBarracks" parent="BarracksBase">
         <Model value="Assets\Buildings\Terran\Barracks\Barracks.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderBarracks@Death" parent="BarracksDeathBase">
         <Model value="Assets\Buildings\Terran\BarracksDeathEx1\BarracksDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderBarracks@FlyDeath" parent="BarracksFlyDeathBase">
         <Model value="Assets\Buildings\Terran\BarracksFlyDeathEx1\BarracksFlyDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderBarracks@Placement" parent="BarracksPlacementBase" low="RaynorCommanderBarracks">
         <Model value="Assets\Buildings\Terran\BarracksPlacement\BarracksPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderBarracks@Portrait" parent="TerranBuildingPortraitBase">
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderBarracks@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_Barracks\Splat_Barracks.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
     <CModel id="RaynorCommanderGaussRiffleC14@AttackImpact" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderGaussRiffleC14@AttackLaunch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderGaussRiffleC14@BunkerAttackLaunch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <Lighting value="MarineAttackLaunch"/>
     </CModel>
     <CModel id="RaynorCommanderFirebat" parent="Unit">
         <Model value="Assets\Units\Terran\Firebat\Firebat.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderFirebat@Death" parent="UnitDeath">
         <Model value="Assets\Units\Terran\FirebatDeath\FirebatDeath.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderFirebat@Portrait" parent="Portrait">
         <Model value="Assets\Portraits\Terran\FirebatPortrait\FirebatPortrait.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <Image value="Assets\Textures\firebat_heavens_coop_portrait_static.dds"/>
     </CModel>
     <CModel id="RaynorCommanderHeal@Beam">
         <Model value="Assets\Effects\Terran\MedivacBeam\MedivacBeam.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderHeal@Model">
         <Model value="Assets\Effects\Terran\MedicHeal\MedicHeal.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMedic" parent="Unit">
         <Model value="Assets\Units\Terran\Medic\Medic.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="RaynorCommanderMedic@Death" parent="UnitDeath">
         <Model value="Assets\Units\Terran\MedicDeath\MedicDeath.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMedic@DeathRagdol" parent="UnitDeathRagdoll">
         <Model value="Assets\Units\Terran\MedicDeathRagdoll\MedicDeathRagdoll.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMedic@Portrait" parent="FXAPortrait">
         <Model value="Assets\Portraits\Terran\MedicPortrait\MedicPortrait.m3"/>
         <FacialController value="LocalizedData\Facial\MedicPortrait.fxa"/>
         <Image value="Assets\Textures\medivacportrait_static.dds"/>
         <Lighting value="RaynorCommanderMedic"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPerditionThrower@AttackModel">
         <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPerditionThrower@UpgradeAttackModel">
         <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="2.250000,1.800000,1.000000"/>
         <ScaleMin value="2.250000,1.800000,1.000000"/>
     </CModel>
     <CModel id="RaynorCommanderPunisherGrenades@AttackLaunch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\MarauderMissileLaunch\MarauderMissileLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPunisherGrenades@AttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\MarauderBaseMissileImpact\MarauderBaseMissileImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPunisherGrenades@UpgradedAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\MarauderMissileImpact\MarauderMissileImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderPunisherGrenades@Missile" parent="MissileFX">
         <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarauder" parent="Unit">
         <Model value="Assets\Units\Terran\Marauder\Marauder.m3"/>
@@ -611,72 +693,90 @@
     </CModel>
     <CModel id="RaynorCommanderMarine" parent="MarineBase">
         <Model value="Assets\Units\Terran\Marine\Marine.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@Death" parent="MarineDeathBase">
         <Model value="Assets\Units\Terran\MarineDeathEx1\MarineDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@DeathDisintegrate" parent="MarineDeathAcidBase">
         <Model value="Assets\Units\Terran\MarineDeathAcid\MarineDeathAcid.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@DeathBlast" parent="MarineDeathBlastBase">
         <Model value="Assets\Units\Terran\MarineDeathBlastEx1\MarineDeathBlastEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@DeathEat" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Units\Terran\MarineDeathEat\MarineDeathEat.m3"/>
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Occlusion value="Show"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@DeathEviscerate" parent="MarineDeathEviscerateBase">
         <Model value="Assets\Units\Terran\MarineDeathEviscerateEx1\MarineDeathEviscerateEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@DeathFire" parent="MarineDeathFireBase">
         <Model value="Assets\Units\Terran\MarineDeathFire\MarineDeathFire.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderMarine@DeathRagdoll" parent="MarineDeathRagdollBase">
         <Model value="Assets\Units\Terran\MarineDeathRagdoll\MarineDeathRagdoll.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderMarine@Portrait" parent="MarinePortraitBase">
+    <CModel id="RaynorCommanderMarine@Portrait" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Portraits\Terran\MarinePortrait\MarinePortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <FacialController value="LocalizedData\Facial\MarinePortrait.fxa"/>
         <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
         <Lighting value="MarinePortrait"/>
     </CModel>
     <CModel id="RaynorCommanderSCV" parent="SCVBase">
         <Model value="Assets\Units\Terran\SCV\SCV.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSCV@Death" parent="SCVDeathBase">
         <Model value="Assets\Units\Terran\SCVDeathEx1\SCVDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSCV@DeathRagdoll" parent="SCVDeathRagdollBase">
         <Model value="Assets\Units\Terran\SCVDeathRagdoll\SCVDeathRagdoll.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSCV@Portrait" parent="SCVPortraitBase">
         <Model value="Assets\Portraits\Terran\SCVPortrait\SCVPortrait.m3"/>
         <Image value="Assets\Textures\SCVPortrait_Static.dds"/>
         <Lighting value="SCVPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStimpackMara@EndImpact" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStimpackMara@StartImpact" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\StimpackStartImpact\StimpackStartImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLab" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLab@Death" parent="TechLabDeathBase">
         <Model value="Assets\Buildings\Terran\TechLabDeathEx1\TechLabDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLab@DeathDetached" parent="TechLabDetachedDeathBase">
         <Model value="Assets\Buildings\Terran\TechLabDetachedDeathEx1\TechLabDetachedDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLab@Placement" parent="TechLabPlacementBase" low="RaynorCommanderTechLab">
         <Model value="Assets\Buildings\Terran\TechLabPlacement\TechLabPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLab@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
@@ -684,21 +784,26 @@
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLabStarport" parent="TechLabBase">
         <Model value="Assets\Buildings\Terran\TechLabEx1\TechLabEx1.m3"/>
         <Lighting value="TechLab"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderTechLabStarport@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_TechLab\Splat_TechLab.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
     </CModel>
-    <CModel id="RaynorCommanderTechLab@Build" parent="TechLabBuildBase"/>
+    <CModel id="RaynorCommanderTechLab@Build" parent="TechLabBuildBase">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderSiegeTank" parent="SiegeTankBase">
         <Model value="Assets\Units\Terran\TankEx1\TankEx1.m3"/>
         <UnitGlossaryCamera value="Star2CameraMid10"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderHyperionYamatoGun@Cursor" parent="UI">
         <Model value="Assets\UI\Cursors\TerranAOECursor\TerranAOECursor.m3"/>
@@ -723,80 +828,88 @@
     <CModel id="SiegeTankAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
         <LowQualityModel value="SiegeTankAttackImpactLow"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponTank@AttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
         <LowQualityModel value="SiegeTankAttackImpactLow"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="SiegeTankAttackLaunch2" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\TankWeaponLaunch\TankWeaponLaunch.m3"/>
         <LowQualityModel value="SiegeTankAttackLaunchLow"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSiegeTank@Death" parent="SiegeTankDeathBase">
         <Model value="Assets\Units\Terran\SiegeTankDeathEx1\SiegeTankDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSiegeTank@DeathRagdoll" parent="SiegeTankDeathRagdollBase">
         <Model value="Assets\Units\Terran\SiegeTankDeathRagdoll\SiegeTankDeathRagdoll.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSiegeTank@Portrait" parent="SiegeTankPortraitBase">
         <Model value="Assets\Portraits\Terran\SiegeTankPortrait\SiegeTankPortrait.m3"/>
         <Image value="Assets\Textures\SiegeTankPortrait_Static.dds"/>
         <Lighting value="SiegeTankPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStarport" parent="StarportBase">
         <Model value="Assets\Buildings\Terran\StarportEx1\StarportEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStarport@Death" parent="StarportDeathBase">
         <Model value="Assets\Buildings\Terran\StarportDeathEx1\StarportDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStarport@FlyDeath" parent="StarportFlyDeathBase">
         <Model value="Assets\Buildings\Terran\StarportFlyDeathEx1\StarportFlyDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStarport@Placement" parent="StarportPlacementBase" low="RaynorCommanderStarport">
         <Model value="Assets\Buildings\Terran\StarportPlacement\StarportPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStarport@Portrait" parent="TerranBuildingPortraitBase">
         <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStarport@Splat" parent="Splat">
         <Model value="Assets\Splats\Splat_Starport\Splat_Starport.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponTank@AttackLaunch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\TankWeaponLaunch\TankWeaponLaunch.m3"/>
         <LowQualityModel value="SiegeTankAttackLaunchLow"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponSiegeTank@Damage" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponSiegeTank@DirectedDamage" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponSiegeTank@DirectedImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\SiegeTankWeaponImpactBuilding\SiegeTankWeaponImpactBuilding.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponSiegeTank@DirectedLaunch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\SiegeTankWeaponLaunch\SiegeTankWeaponLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponSiegeTank@Impact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\SiegeTankWeaponImpact\SiegeTankWeaponImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderWeaponSiegeTank@Launch" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\SiegeTankWeaponLaunch\SiegeTankWeaponLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderSiegeTank@Morphing" parent="Unit">
         <Model value="Assets\Units\Terran\SiegeTankMorph\SiegeTankMorph.m3"/>
@@ -858,7 +971,7 @@
     </CModel>
     <CModel id="VikingFighterAttackImpact2" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderLanzerTorpedoes@AttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
@@ -866,7 +979,7 @@
     </CModel>
     <CModel id="VikingFighterAttackLaunch2" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderViking@Death" parent="VikingFighterDeathBase">
         <Model value="Assets\Units\Terran\VikingFighterDeathEx1\VikingFighterDeathEx1.m3"/>
@@ -888,7 +1001,7 @@
     </CModel>
     <CModel id="VikingFighterWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Terran\VikingFighterMissile\VikingFighterMissile.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderLanzerTorpedoes@AttackMissile" parent="MissileFX">
         <Model value="Assets\Effects\Terran\VikingFighterMissile\VikingFighterMissile.m3"/>
@@ -900,17 +1013,18 @@
     </CModel>
     <CModel id="WeaponRaynorSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
         <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStimpack@EndImpact" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\StimpackEndImpact\StimpackEndImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderStimpack@StartImpact" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\StimpackStartImpact\StimpackStartImpact.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="YamatoWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Terran\YamatoMissile\YamatoMissile.m3"/>
-        <EditorCategories value="Race:Terran"/>
+        <EditorCategories value="Race:Raynor"/>
     </CModel>
 </Catalog>

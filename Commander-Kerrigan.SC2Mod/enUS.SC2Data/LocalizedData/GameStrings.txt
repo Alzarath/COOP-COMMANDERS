@@ -1,0 +1,8 @@
+﻿DataCollection/Name/KerriganCommanderKer_Broodlord=KerriganCommander - Broodlord
+DataCollection/Name/KerriganCommanderKer_Hydralisk=KerriganCommander - Hydralisk
+DataCollection/Name/KerriganCommanderKer_Mutalisk=KerriganCommander - Mutalisk
+DataCollection/Name/KerriganCommanderKerr_Zergling=KerriganCommander - Zergling
+Unit/Name/COOP/KerriganCommanderKer_Broodlord=Broodlord
+Unit/Name/COOP/KerriganCommanderKer_Hydralisk=Hydralisk
+Unit/Name/COOP/KerriganCommanderKer_Mutalisk=Mutalisk
+Unit/Name/COOP/KerriganCommanderKerr_Zergling=Zergling

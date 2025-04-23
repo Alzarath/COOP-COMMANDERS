@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUnit id="KerriganCommanderKer_Broodlord" parent="CommanderGround_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    </CUnit>
+    <CUnit id="KerriganCommanderKer_Hydralisk" parent="CommanderGround_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    </CUnit>
+    <CUnit id="KerriganCommanderKer_Mutalisk" parent="CommanderAir_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    </CUnit>
+    <CUnit id="KerriganCommanderKerr_Zergling" parent="CommanderGround_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    </CUnit>
+</Catalog>

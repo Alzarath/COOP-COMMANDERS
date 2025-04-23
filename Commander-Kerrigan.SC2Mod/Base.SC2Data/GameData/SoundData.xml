@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSound id="KerriganCommanderKer_Broodlord@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderKer_Broodlord">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Broodlord@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderKer_Broodlord">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Broodlord@What" parent="CommanderVOWhat" unitName="KerriganCommanderKer_Broodlord">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Broodlord@Yes" parent="CommanderVOYes" unitName="KerriganCommanderKer_Broodlord">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Hydralisk@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderKer_Hydralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Hydralisk@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderKer_Hydralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Hydralisk@What" parent="CommanderVOWhat" unitName="KerriganCommanderKer_Hydralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Hydralisk@Yes" parent="CommanderVOYes" unitName="KerriganCommanderKer_Hydralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Mutalisk@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderKer_Mutalisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Mutalisk@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderKer_Mutalisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Mutalisk@What" parent="CommanderVOWhat" unitName="KerriganCommanderKer_Mutalisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKer_Mutalisk@Yes" parent="CommanderVOYes" unitName="KerriganCommanderKer_Mutalisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerr_Zergling@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderKerr_Zergling">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerr_Zergling@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderKerr_Zergling">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerr_Zergling@What" parent="CommanderVOWhat" unitName="KerriganCommanderKerr_Zergling">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerr_Zergling@Yes" parent="CommanderVOYes" unitName="KerriganCommanderKerr_Zergling">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+</Catalog>

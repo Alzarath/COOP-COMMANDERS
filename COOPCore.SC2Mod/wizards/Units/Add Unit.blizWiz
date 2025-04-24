@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wizard>
+<wizard id="AddUnit">
     <name>Add Unit</name>
     <category>COOP Commanders/Unit</category>
     <objecttypes create="Unit"/>

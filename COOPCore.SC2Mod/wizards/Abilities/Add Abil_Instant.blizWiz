@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard id="AddAbil_Instant">
+    <name>Add Ability - Instant</name>
+    <category>COOP Commanders/Not implemented/Abilities</category>
+    <objecttypes create="Abil"/>
+    <instructions>
+        Инструкция к применению данного мастера.
+    </instructions>
+
+    <!-- Conditions -->
+    <condition id="checkArea" input="UseSearchArea" value="1"/>
+    <condition id="checkPersistent" input="UsePersistent" value="1"/>
+
+    <!-- Inputs -->
+
+    <input id="AbilityName" type="CString">
+        <name>Name</name>
+    </input>
+    <input id="AbilityID" type="CString">
+        <name>ID</name>
+    </input>
+    
+    <input id="AbilityTooltip" type="CStringLink">
+        <name>Tooltip</name>
+    </input>
+
+    <!-- Column 2 -->
+
+    <input id="AbilClass" type="WizardMenu">
+        <item text="Damage" value="1"/>
+        <item text="Heal" value="2"/>
+        <item text="Apply Behavior" value="3"/>
+        <layout column="2"/>
+    </input>
+    <input id="AmountDamage" type="real32">
+        <name>Damage</name>
+        <layout column="2"/>
+        <minimum value="0"/>
+    </input>
+    <input id="TargetFiltersArea" type="CTargetFilters">
+        <layout column="2"/>
+    </input>
+
+    <!-- Column 3 -->
+
+    <input id="UseSearchArea" type="WizardCheckbox">
+        <name>В области?</name>
+        <layout column="3"/>
+    </input>
+    <input id="UsePersistent" type="WizardCheckbox">
+        <name>Периодически?</name>
+        <layout column="3"/>
+    </input>
+
+    <input id="AreaSection" type="WizardText">
+        <default value="Области"/>
+        <condition id="checkArea"/>
+        <layout column="3"/>
+    </input>
+
+    <input id="radiusArea" type="real32">
+        <name>Radius Area</name>
+        <condition id="checkArea"/>
+        <layout column="3"/>
+        <minimum value="0"/>
+        <default value="3"/>
+    </input>
+
+
+    <input id="PersistentSection" type="WizardText">
+        <default value="Счётчик"/>
+        <condition id="checkPersistent"/>
+        <layout column="3"/>
+    </input>
+
+    <input id="CountPersistent" type="real32">
+        <name>Count effects</name>
+        <condition id="checkPersistent"/>
+        <layout column="3"/>
+        <minimum value="0"/>
+        <default value="5"/>
+    </input>
+    <input id="PeriodPersistent" type="real32">
+        <name>Period effects</name>
+        <condition id="checkPersistent"/>
+        <layout column="3"/>
+        <minimum value="0"/>
+        <default value="0.35"/>
+    </input>
+
+    
+    
+</wizard>

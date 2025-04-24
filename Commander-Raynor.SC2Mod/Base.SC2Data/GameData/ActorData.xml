@@ -90,6 +90,25 @@
     <CActorModel id="RaynorCommanderFactory@Build" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>
+    <CActorUnit id="RaynorCommanderFusionCore" parent="CommanderUnitBase" unitName="RaynorCommanderFusionCore">
+        <EditorCategories value=""/>
+        <On Terms="UnitConstruction.RaynorCommanderFusionCore.Start" Send="Create RaynorCommanderFusionCore@Build"/>
+        <PlacementSound value="RaynorCommanderFusionCore@Placement"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-building-terran-fusioncore.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-upgrade-protoss-shieldslevel0.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-fusioncore.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-fusioncore.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="RaynorCommanderFusionCore@Build" parent="TerranBuildingBuild">
+        <EditorCategories value=""/>
+        <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
+    </CActorModel>
     <CActorModel id="RaynorCommanderOrbitaldroppods" parent="ModelAddition">
         <EditorCategories value=""/>
         <On Terms="Effect.RaynorCommanderOrbitaldroppods@CP.Start" Send="Create"/>
@@ -750,7 +769,7 @@
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="RaynorCommanderFactory@Explode"/>
         <DeathCustoms index="5" ModelLink="RaynorCommanderFactory@FlyDeath" SoundLink="RaynorCommanderFactory@Explode" Name="Flying"/>
         <PlacementModel value="RaynorCommanderFactory@Placement"/>
-        <PlacementSound value="RaynorCommanderFactory@BuildingPlacement"/>
+        <PlacementSound value="RaynorCommanderFactory@Placement"/>
         <PortraitModel value="RaynorCommanderFactory@Portrait"/>
         <BarOffset value="150"/>
         <BarWidth value="160"/>

@@ -348,6 +348,11 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
         <Facing value="315"/>
     </CUnit>
+    <CUnit id="RaynorCommanderFusionCore" parent="CommanderStructure_Terr">
+        <Race value="COOPRaynor"/>
+        <BuildTime value="65"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
+    </CUnit>
     <CUnit id="RaynorCommanderPDD">
         <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>

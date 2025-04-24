@@ -96,6 +96,29 @@
     <CModel id="RaynorCommanderFactory@Build" parent="TerranBuildingBuild">
         <EditorCategories value="Race:Raynor"/>
     </CModel>
+    <CModel id="RaynorCommanderFusionCore" parent="Unit">
+        <Model value="Assets\Buildings\Terran\FusionCore\FusionCore.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.333000"/>
+        <ShadowRadius value="2.333000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="RaynorCommanderFusionCore@Build" parent="TerranBuildingBuild">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderFusionCore@Death" parent="UnitDeath">
+        <Model value="Assets\Buildings\Terran\FusionCoreDeathEx1\FusionCoreDeathEx1.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderFusionCore@Placement" parent="Placement">
+        <Model value="Assets\Buildings\Terran\FusionCorePlacement\FusionCorePlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
     <CModel id="RaynorCommanderOrbitaldroppods">
         <Model value="Assets\Effects\Terran\DropPodFalling\DropPodFalling.m3"/>
         <EditorCategories value="Race:Raynor"/>

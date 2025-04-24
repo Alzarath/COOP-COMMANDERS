@@ -410,7 +410,7 @@
         <InfoArray index="Build14" Unit="RaynorCommanderArmory" Time="65">
             <Button DefaultButtonFace="RaynorCommanderArmory" State="Suppressed" Requirements="RaynorCommanderArmory@Requirement"/>
         </InfoArray>
-        <InfoArray index="Build16" Unit="FusionCore" Time="65">
+        <InfoArray index="Build16" Unit="RaynorCommanderFusionCore">
             <Button DefaultButtonFace="RaynorCommanderFusionCore" State="Suppressed"/>
         </InfoArray>
         <FidgetDelayMin value="5"/>

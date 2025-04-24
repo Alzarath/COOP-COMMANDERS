@@ -228,6 +228,15 @@
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderFusionCore" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderFusionCore"/>
+        <DataRecord Entry="Button,RaynorCommanderFusionCore"/>
+        <DataRecord Entry="Model,RaynorCommanderFusionCore"/>
+        <DataRecord Entry="Model,RaynorCommanderFusionCore@Death"/>
+        <DataRecord Entry="Unit,RaynorCommanderFusionCore"/>
+        <DataRecord Entry="Sound,RaynorCommanderFusionCore@Placement"/>
+        <DataRecord Entry="Actor,RaynorCommanderFusionCore@Build"/>
+        <DataRecord Entry="Model,RaynorCommanderFusionCore@Placement"/>
+        <DataRecord Entry="Model,RaynorCommanderFusionCore@Build"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderHyperJump" parent="Decal">
         <EditorCategories value="DataFamily:Melee,Race:Raynor,ObjectType:Other,DataGroup:Ability"/>
@@ -817,7 +826,7 @@
         <DataRecord Entry="Sound,RaynorCommanderFactory@Explode"/>
         <DataRecord Entry="Sound,RaynorCommanderFactory@Movement"/>
         <DataRecord Entry="Sound,RaynorCommanderFactory@Ready"/>
-        <DataRecord Entry="Sound,RaynorCommanderFactory@BuildingPlacement"/>
+        <DataRecord Entry="Sound,RaynorCommanderFactory@Placement"/>
         <DataRecord Entry="Sound,RaynorCommanderFactory@ConstructionWhat"/>
         <DataRecord Entry="Unit,RaynorCommanderFactory"/>
         <DataRecord Entry="Unit,RaynorCommanderFactory@Fly"/>

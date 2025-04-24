@@ -376,6 +376,7 @@ Unit/LifeArmorName/TerranBuildingPlating=Terran Building Plating
 Unit/Name/COOP/RaynorCommanderArmory=Armory
 Unit/Name/COOP/RaynorCommanderEngineeringBay=Engineering Bay
 Unit/Name/COOP/RaynorCommanderFirebat=Firebat
+Unit/Name/COOP/RaynorCommanderFusionCore=Fusion Core
 Unit/Name/COOP/RaynorCommanderMarauder=Marauder
 Unit/Name/COOP/RaynorCommanderMarine=Marine
 Unit/Name/COOP/RaynorCommanderMedic=Medic

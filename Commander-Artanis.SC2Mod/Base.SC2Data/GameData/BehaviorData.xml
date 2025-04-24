@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorSound id="ChargingSound" parent="SoundContinuous">
+        <Sound value="Zealot_Charge"/>
+        <On Terms="Behavior.ArtanisCommanderCharging.Create" Send="Create"/>
+        <On Terms="Behavior.ArtanisCommanderCharging.Destroy" Send="Destroy"/>
+    </CActorSound>
+    <CBehaviorBuff id="ArtanisCommanderCharging">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-charge.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="ChargeTargetAttacked"/>
+        <BuffFlags index="Channeling" value="1"/>
+        <Duration value="3.5"/>
+        <Modification MoveSpeedMultiplier="2.2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArtanisCommanderZealotWhirlwind">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterNotStunned"/>
+        <Duration value="3"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="ArtanisCommanderZealotWhirlwindBehaviorSet"/>
+        <FinalEffect value="ArtanisCommanderZealotWhirlwindCancelMove"/>
+        <Modification>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <WeaponArray Link="VoidZealotWhirlwindFakeWeapon"/>
+            <WeaponDisableArray value="PsiBlades"/>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

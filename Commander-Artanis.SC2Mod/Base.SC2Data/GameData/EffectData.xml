@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectApplyBehavior id="ArtanisCommanderCharge">
+        <ValidatorArray index="0" value="ChargeMinTriggerDistance"/>
+        <ValidatorArray value="ChargeMaxDistance"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ArtanisCommanderCharging"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="ArtanisCommanderZealotDisableCharging">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="Charging2"/>
+    </CEffectRemoveBehavior>
+    <CEffectDamage id="ArtanisCommanderPsiBladesDamage" parent="DU_WEAP">
+        <Amount value="12"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectSet id="ArtanisCommanderZealotWhirlwindBehaviorSet">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="ArtanisCommanderZealotWhirlwindMoveSearch"/>
+        <EffectArray value="ArtanisCommanderZealotWhirlwindSearch"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ArtanisCommanderZealotWhirlwindAB">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ArtanisCommanderZealotWhirlwind"/>
+    </CEffectApplyBehavior>
+    <CEffectCancelOrder id="ArtanisCommanderZealotWhirlwindCancelMove">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Source"/>
+    </CEffectCancelOrder>
+    <CEffectDamage id="ArtanisCommanderZealotWhirlwindDamage" parent="DU_WEAP">
+        <ArmorReduction value="0"/>
+        <Amount value="5"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="ArtanisCommanderZealotWhirlwindMoveCP">
+        <EditorCategories value="Race:Protoss"/>
+        <InitialEffect value="ArtanisCommanderZealotWhirlwindMoveOrder"/>
+        <InitialOffset value="0,-1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectIssueOrder id="ArtanisCommanderZealotWhirlwindMoveOrder">
+        <ValidatorArray value="CasterIsStationary"/>
+        <ValidatorArray value="CasterNotHoldingPosition"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Source"/>
+        <Abil value="move"/>
+        <CmdFlags index="Preempt" value="1"/>
+        <Player Value="Source"/>
+        <Target Value="TargetPoint"/>
+    </CEffectIssueOrder>
+    <CEffectEnumArea id="ArtanisCommanderZealotWhirlwindMoveSearch">
+        <EditorCategories value="Race:Protoss"/>
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetSorts>
+            <SortArray value="TSRandom"/>
+        </TargetSorts>
+        <AreaArray MaxCount="1" Radius="3" Effect="ArtanisCommanderZealotWhirlwindMoveCP"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="ArtanisCommanderZealotWhirlwindSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Structure,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="1.5" Effect="ArtanisCommanderZealotWhirlwindDamage"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ArtanisCommanderZealotWhirlwindSet">
+        <EffectArray value="ArtanisCommanderZealotWhirlwindSearch"/>
+        <EffectArray value="ArtanisCommanderZealotWhirlwindAB"/>
+    </CEffectSet>
+</Catalog>

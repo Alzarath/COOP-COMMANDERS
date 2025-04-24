@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSound id="ArtanisCommanderZealot@Attack" parent="CommanderVOAttack" unitName="ArtanisCommanderZealot">
+        <EditorCategories value="Race:Artanis"/>
+    </CSound>
+    <CSound id="ArtanisCommanderZealot@Pissed" parent="CommanderVOPissed" unitName="ArtanisCommanderZealot">
+        <EditorCategories value="Race:Artanis"/>
+    </CSound>
+    <CSound id="ArtanisCommanderZealot@What" parent="CommanderVOWhat" unitName="ArtanisCommanderZealot">
+        <EditorCategories value="Race:Artanis"/>
+    </CSound>
+    <CSound id="ArtanisCommanderZealot@Yes" parent="CommanderVOYes" unitName="ArtanisCommanderZealot">
+        <EditorCategories value="Race:Artanis"/>
+    </CSound>
+    <CSound id="ArtanisCommanderPsiBladesImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Attacks\Protoss_AttackImpactMediumSlice0.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Attacks\Protoss_AttackImpactMediumSlice1.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Attacks\Protoss_AttackImpactMediumSlice2.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Attacks\Protoss_AttackImpactMediumSlice3.wav"/>
+        <DupeMaximumMethod value="Replace"/>
+    </CSound>
+    <CSound id="ArtanisCommanderPsiBladesLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch2.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch3.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch4.wav"/>
+        <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch5.wav"/>
+        <DupeMaximumMethod value="Replace"/>
+    </CSound>
+</Catalog>

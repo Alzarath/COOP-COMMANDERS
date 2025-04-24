@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="ArtanisCommanderZealot">
+        <Model value="Assets\Units\Protoss\Zealot\Zealot.m3"/>
+        <EditorCategories value="Race:Artanis"/>
+    </CModel>
+    <CModel id="ArtanisCommanderZealot@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Protoss\ZealotDeath\ZealotDeath.m3"/>
+        <EditorCategories value="Race:Artanis"/>
+    </CModel>
+    <CModel id="ArtanisCommanderZealot@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Protoss\ZealotPortrait\ZealotPortrait.m3"/>
+        <EditorCategories value="Race:Artanis"/>
+    </CModel>
+    <CModel id="ArtanisCommanderZealotWhirl">
+        <Model value="Assets\Units\Protoss\Zealot_Aiur\Zealot_Aiur.m3"/>
+    </CModel>
+    <CModel id="ArtanisCommanderZealotWhirlwindSearchModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Zealot_Aiur_Whirlwind\Zealot_Aiur_Whirlwind.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="ArtanisCommanderZealotWhirlwindImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Zealot_Aiur_Whirlwind_Impact\Zealot_Aiur_Whirlwind_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+</Catalog>

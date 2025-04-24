@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="ArtanisCommander_level4">
+        <EffectArray Operation="Set" Reference="Actor,ArtanisCommanderZealot,PlacementModel" Value="ArtanisCommanderZealotWhirl"/>
+        <EffectArray Operation="Set" Reference="Actor,ArtanisCommanderZealot,BuildModel" Value="ArtanisCommanderZealotWhirl"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CUpgrade>
+</Catalog>

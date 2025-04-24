@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="ArtanisCommanderZealot" parent="CommanderGroundUnit" unitName="ArtanisCommanderZealot">
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-protoss-zealot.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-zealot.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zealot.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-protoss-zealot.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="ArtanisCommanderPsiBladesAction" parent="GenericAttack" effectAttack="ArtanisCommanderPsiBladesDamage">
+        <LaunchAssets Model="ArtanisCommanderPsiBladesLaunchModel" Sound="ArtanisCommanderPsiBladesLaunchSound"/>
+        <Missile value="ArtanisCommanderPsiBladesWeaponMissile"/>
+        <ImpactMap index="None" Model="ArtanisCommanderPsiBladesImpactModel" Sound="ArtanisCommanderPsiBladesImpactSound"/>
+    </CActorAction>
+    <CActorAction id="ArtanisCommanderZealotWhirlwindAttack" parent="GenericAttack" effectAttack="ArtanisCommanderZealotWhirlwindDamage">
+        <ContainerAssets Sound=""/>
+        <ImpactMap index="None" Model="ArtanisCommanderZealotWhirlwindImpact" Sound="Zealot_AttackImpact"/>
+    </CActorAction>
+    <CActorModel id="ArtanisCommanderZealotWhirlwindSearchModel" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.ArtanisCommanderZealotWhirlwindSearch.Start" Send="Create"/>
+        <On Terms="AnimDone; AnimName Birth" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create VoidZealotWhirlwindLaunchSound"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth"/>
+    </CActorModel>
+</Catalog>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="ArtanisCommanderLevel4Req">
+        <EditorCategories value="Race:Artanis,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeArtanisCommander_level4CompleteOnly"/>
+    </CRequirement>
+</Catalog>

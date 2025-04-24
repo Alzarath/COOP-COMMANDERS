@@ -1,0 +1,2 @@
+﻿Button/Hotkey/ArtanisCommanderCharge=C
+Button/Hotkey/ArtanisCommanderZealotWhirlwind=E

@@ -3,9 +3,10 @@
     <CButton id="ArtanisCommanderCharge">
         <Icon value="Assets\Textures\btn-ability-protoss-charge-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-charge-color.dds"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:Artanis"/>
     </CButton>
     <CButton id="ArtanisCommanderWhirlwind">
         <Icon value="Assets\Textures\BTN-Ability-Protoss-Whirlwind.dds"/>
+        <EditorCategories value="Race:Artanis"/>
     </CButton>
 </Catalog>

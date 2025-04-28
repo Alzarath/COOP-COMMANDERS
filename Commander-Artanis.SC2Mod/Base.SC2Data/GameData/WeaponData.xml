@@ -7,5 +7,6 @@
         <Range value="0.1"/>
         <Period value="1.2"/>
         <Effect value="ArtanisCommanderPsiBladesDamage"/>
+        <EditorCategories value="Race:Artanis"/>
     </CWeaponLegacy>
 </Catalog>

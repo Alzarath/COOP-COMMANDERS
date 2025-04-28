@@ -26,6 +26,7 @@
     </CModel>
     <CModel id="ArtanisCommanderZealotWhirl">
         <Model value="Assets\Units\Protoss\Zealot_Aiur\Zealot_Aiur.m3"/>
+        <EditorCategories value="Race:Artanis"/>
     </CModel>
     <CModel id="ArtanisCommanderWhirlwind@Model" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\Zealot_Aiur_Whirlwind\Zealot_Aiur_Whirlwind.m3"/>
@@ -39,8 +40,10 @@
     </CModel>
     <CModel id="PhasedisruptorImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\DragoonEX2_Missile_Impact\DragoonEX2_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Artanis"/>
     </CModel>
     <CModel id="PhasedisruptorMissileModel" parent="MissileFX">
         <Model value="Assets\Effects\Protoss\DragoonEX2_Missile\DragoonEX2_Missile.m3"/>
+        <EditorCategories value="Race:Artanis"/>
     </CModel>
 </Catalog>

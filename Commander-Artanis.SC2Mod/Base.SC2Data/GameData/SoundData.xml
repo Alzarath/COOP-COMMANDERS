@@ -30,6 +30,7 @@
         <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Attacks\Protoss_AttackImpactMediumSlice2.wav"/>
         <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Attacks\Protoss_AttackImpactMediumSlice3.wav"/>
         <DupeMaximumMethod value="Replace"/>
+        <EditorCategories value="Race:Artanis"/>
     </CSound>
     <CSound id="ArtanisCommanderPsiBladesLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch0.wav"/>
@@ -39,6 +40,7 @@
         <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch4.wav"/>
         <AssetArray File="Assets\Sounds\Protoss\Zealot\Zealot_AttackLaunch5.wav"/>
         <DupeMaximumMethod value="Replace"/>
+        <EditorCategories value="Race:Artanis"/>
     </CSound>
     <CSound id="PhasedisruptorImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Dragoon_AttackImpact01.wav"/>
@@ -47,5 +49,6 @@
         <AssetArray File="Assets\Sounds\Dragoon_AttackImpact04.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Dragoon_AttackImpact05.wav" FacialGroup=""/>
         <DupeMaximumMethod value="Replace"/>
+        <EditorCategories value="Race:Artanis"/>
     </CSound>
 </Catalog>

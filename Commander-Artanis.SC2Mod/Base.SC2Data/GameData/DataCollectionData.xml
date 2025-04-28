@@ -8,6 +8,7 @@
         <DataRecord Entry="Behavior,ArtanisCommanderCharge"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="ArtanisCommanderDragoon" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Artanis,ObjectType:Unit"/>
         <DataRecord Entry="Unit,ArtanisCommanderDragoon"/>
         <DataRecord Entry="Actor,ArtanisCommanderDragoon"/>
         <DataRecord Entry="Model,ArtanisCommanderDragoon"/>
@@ -19,6 +20,7 @@
         <DataRecord Entry="Sound,ArtanisCommanderDragoon@Yes"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="ArtanisCommanderZealot" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Artanis,ObjectType:Unit"/>
         <DataRecord Entry="Unit,ArtanisCommanderZealot"/>
         <DataRecord Entry="Actor,ArtanisCommanderZealot"/>
         <DataRecord Entry="Model,ArtanisCommanderZealot"/>

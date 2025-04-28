@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CEffectEnumArea id="VoidZealotWhirlwindMoveSearch">
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:Artanis"/>
         <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <TargetSorts>
             <SortArray value="TSRandom"/>
@@ -10,7 +10,7 @@
     </CEffectEnumArea>
     <CAbilAugment id="ArtanisCommanderCharge">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Artanis,AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ArtanisCommanderCharge"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -21,7 +21,7 @@
         <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
     </CAbilAugment>
     <CAbilEffectInstant id="ArtanisCommanderWhirlwind">
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Artanis,AbilityorEffectType:Units"/>
         <Effect index="0" value="ArtanisCommanderWhirlwind@Set@1"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>

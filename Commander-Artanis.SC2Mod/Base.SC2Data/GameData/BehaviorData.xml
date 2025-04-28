@@ -8,7 +8,7 @@
     <CBehaviorBuff id="ArtanisCommanderCharge">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-charge.dds"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="Race:Artanis,AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="ChargeTargetAttacked"/>
         <BuffFlags index="Channeling" value="1"/>
         <Duration value="3.5"/>
@@ -16,7 +16,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="ArtanisCommanderWhirlwind">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Artanis"/>
         <RemoveValidatorArray value="CasterNotStunned"/>
         <Duration value="3"/>
         <Period value="0.5"/>

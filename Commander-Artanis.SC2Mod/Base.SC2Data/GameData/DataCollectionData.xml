@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CDataCollectionUnit id="ArtanisCommanderDragoon">
+    <CDataCollectionAbil id="ArtanisCommanderCharge">
+        <EditorCategories value="DataGroup:Ability,Race:Artanis,ObjectType:Unit"/>
+        <DataRecord Entry="Abil,ArtanisCommanderCharge"/>
+        <DataRecord Entry="Button,ArtanisCommanderCharge"/>
+        <DataRecord Entry="Effect,ArtanisCommanderCharge"/>
+        <DataRecord Entry="Behavior,ArtanisCommanderCharge"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit id="ArtanisCommanderDragoon" parent="CommanderUnit">
         <DataRecord Entry="Unit,ArtanisCommanderDragoon"/>
         <DataRecord Entry="Actor,ArtanisCommanderDragoon"/>
         <DataRecord Entry="Model,ArtanisCommanderDragoon"/>
@@ -11,7 +18,7 @@
         <DataRecord Entry="Sound,ArtanisCommanderDragoon@What"/>
         <DataRecord Entry="Sound,ArtanisCommanderDragoon@Yes"/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="ArtanisCommanderZealot">
+    <CDataCollectionUnit id="ArtanisCommanderZealot" parent="CommanderUnit">
         <DataRecord Entry="Unit,ArtanisCommanderZealot"/>
         <DataRecord Entry="Actor,ArtanisCommanderZealot"/>
         <DataRecord Entry="Model,ArtanisCommanderZealot"/>
@@ -22,4 +29,24 @@
         <DataRecord Entry="Sound,ArtanisCommanderZealot@What"/>
         <DataRecord Entry="Sound,ArtanisCommanderZealot@Yes"/>
     </CDataCollectionUnit>
+    <CDataCollectionAbil id="ArtanisCommanderWhirlwind">
+        <EditorCategories value="DataGroup:Ability,Race:Artanis,ObjectType:Unit"/>
+        <DataRecord Entry="Abil,ArtanisCommanderWhirlwind"/>
+        <DataRecord Entry="Behavior,ArtanisCommanderWhirlwind"/>
+        <DataRecord Entry="Button,ArtanisCommanderWhirlwind"/>
+        <DataRecord Entry="Actor,ArtanisCommanderWhirlwind@Attack"/>
+        <DataRecord Entry="Actor,ArtanisCommanderWhirlwind@Model"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@AB"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@Cancel"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@CP"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@Damage"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@IssueOrder"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@Search@2"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@Search"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@Set@1"/>
+        <DataRecord Entry="Effect,ArtanisCommanderWhirlwind@Set@2"/>
+        <DataRecord Entry="Model,ArtanisCommanderWhirlwind@Model"/>
+        <DataRecord Entry="Model,ArtanisCommanderWhirlwind@Impact"/>
+        <DataRecord Entry="Requirement,ArtanisCommanderWhirlwind@Requirement"/>
+    </CDataCollectionAbil>
 </Catalog>

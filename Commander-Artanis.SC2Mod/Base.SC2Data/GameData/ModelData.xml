@@ -27,15 +27,15 @@
     <CModel id="ArtanisCommanderZealotWhirl">
         <Model value="Assets\Units\Protoss\Zealot_Aiur\Zealot_Aiur.m3"/>
     </CModel>
-    <CModel id="ArtanisCommanderZealotWhirlwindSearchModel" parent="ImpactFX">
+    <CModel id="ArtanisCommanderWhirlwind@Model" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\Zealot_Aiur_Whirlwind\Zealot_Aiur_Whirlwind.m3"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:Artanis"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
-    <CModel id="ArtanisCommanderZealotWhirlwindImpact" parent="ImpactFX">
+    <CModel id="ArtanisCommanderWhirlwind@Impact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\Zealot_Aiur_Whirlwind_Impact\Zealot_Aiur_Whirlwind_Impact.m3"/>
-        <EditorCategories value="Race:Protoss"/>
+        <EditorCategories value="Race:Artanis"/>
     </CModel>
     <CModel id="PhasedisruptorImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\DragoonEX2_Missile_Impact\DragoonEX2_Missile_Impact.m3"/>

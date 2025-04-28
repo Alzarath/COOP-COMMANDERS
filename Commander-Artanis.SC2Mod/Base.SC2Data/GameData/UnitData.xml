@@ -36,10 +36,10 @@
     </CUnit>
     <CUnit id="ArtanisCommanderZealot" parent="CommanderGround_Prot">
         <AbilArray Link="ArtanisCommanderCharge"/>
-        <AbilArray Link="ArtanisCommanderZealotWhirlwind"/>
+        <AbilArray Link="ArtanisCommanderWhirlwind"/>
         <CardLayouts index="0">
             <LayoutButtons Face="ArtanisCommanderCharge" Type="AbilCmd" AbilCmd="ArtanisCommanderCharge,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="ArtanisCommanderZealotWhirlwind" Type="AbilCmd" AbilCmd="ArtanisCommanderZealotWhirlwind,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ArtanisCommanderWhirlwind" Type="AbilCmd" AbilCmd="ArtanisCommanderWhirlwind,255" Row="2" Column="1"/>
         </CardLayouts>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Artanis"/>
         <LifeStart value="100"/>

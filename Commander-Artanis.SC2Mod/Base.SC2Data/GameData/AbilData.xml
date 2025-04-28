@@ -6,7 +6,7 @@
         <TargetSorts>
             <SortArray value="TSRandom"/>
         </TargetSorts>
-        <AreaArray MaxCount="1" Radius="3" Effect="ArtanisCommanderZealotWhirlwindMoveCP"/>
+        <AreaArray MaxCount="1" Radius="3" Effect="ArtanisCommanderWhirlwind@CP"/>
     </CEffectEnumArea>
     <CAbilAugment id="ArtanisCommanderCharge">
         <Alignment value="Negative"/>
@@ -20,9 +20,9 @@
         </Cost>
         <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
     </CAbilAugment>
-    <CAbilEffectInstant id="ArtanisCommanderZealotWhirlwind">
+    <CAbilEffectInstant id="ArtanisCommanderWhirlwind">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
-        <Effect index="0" value="ArtanisCommanderZealotWhirlwindSet"/>
+        <Effect index="0" value="ArtanisCommanderWhirlwind@Set@1"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Flags index="TransientPreferred" value="1"/>
@@ -33,7 +33,7 @@
         <AutoCastValidatorArray value="VoidZealotWhirlwindCheck"/>
         <CastOutroTime value="1.2"/>
         <UninterruptibleArray index="Cast" value="1"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="ArtanisCommanderZealotWhirlwind" Requirements="ArtanisCommanderLevel4Req"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ArtanisCommanderWhirlwind"/>
     </CAbilEffectInstant>
     <CValidatorLocationEnumArea id="ArtanisCommannderZealotWhirlwindCheck">
         <WhichLocation Value="CasterUnit"/>

@@ -5,7 +5,7 @@
         <AlertIcon value="Assets\Textures\btn-ability-protoss-charge-color.dds"/>
         <EditorCategories value="Race:Protoss"/>
     </CButton>
-    <CButton id="ArtanisCommanderZealotWhirlwind">
+    <CButton id="ArtanisCommanderWhirlwind">
         <Icon value="Assets\Textures\BTN-Ability-Protoss-Whirlwind.dds"/>
     </CButton>
 </Catalog>

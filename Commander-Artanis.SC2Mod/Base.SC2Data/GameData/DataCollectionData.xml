@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollectionUnit id="ArtanisCommanderDragoon">
+        <DataRecord Entry="Unit,ArtanisCommanderDragoon"/>
+        <DataRecord Entry="Actor,ArtanisCommanderDragoon"/>
+        <DataRecord Entry="Model,ArtanisCommanderDragoon"/>
+        <DataRecord Entry="Model,ArtanisCommanderDragoon@Portrait"/>
+        <DataRecord Entry="Model,ArtanisCommanderDragoon@Death"/>
+        <DataRecord Entry="Sound,ArtanisCommanderDragoon@Attack"/>
+        <DataRecord Entry="Sound,ArtanisCommanderDragoon@Pissed"/>
+        <DataRecord Entry="Sound,ArtanisCommanderDragoon@What"/>
+        <DataRecord Entry="Sound,ArtanisCommanderDragoon@Yes"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="ArtanisCommanderZealot">
         <DataRecord Entry="Unit,ArtanisCommanderZealot"/>
         <DataRecord Entry="Actor,ArtanisCommanderZealot"/>

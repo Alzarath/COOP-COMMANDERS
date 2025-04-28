@@ -68,4 +68,13 @@
         <EffectArray value="ArtanisCommanderZealotWhirlwindSearch"/>
         <EffectArray value="ArtanisCommanderZealotWhirlwindAB"/>
     </CEffectSet>
+    <CEffectDamage id="PhasedisruptorDamage" parent="DU_WEAP">
+        <AttributeBonus index="Armored" value="15"/>
+        <Amount value="15"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="PhasedisruptorLaunchMissile">
+        <ImpactEffect value="PhasedisruptorDamage"/>
+        <AmmoUnit value="PhasedisruptorWeapon"/>
+    </CEffectLaunchMissile>
 </Catalog>

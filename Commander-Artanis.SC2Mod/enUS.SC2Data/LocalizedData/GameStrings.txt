@@ -7,6 +7,7 @@ Behavior/Tooltip/Charging2=This Zealot is charging, allowing it to quickly close
 Button/Name/ArtanisCommanderCharge=Charge
 Button/Name/ArtanisCommanderZealotWhirlwind=ZealotWhirlwind
 Button/Tooltip/ArtanisCommanderCharge=Allows Zealots to intercept nearby enemies. Also increases the movement speed of Zealots. Ability can only be used once every <d ref="Abil,Charge,Cost.Cooldown.TimeUse"/> seconds.
+DataCollection/Name/ArtanisCommanderDragoon=ArtanisCommander - Dragoon
 DataCollection/Name/ArtanisCommanderZealot=ArtanisCommander - Zealot
 Effect/Name/ArtanisCommanderCharge=Charge (Apply Buff)
 Effect/Name/ArtanisCommanderPsiBladesDamage=ArtanisCommanderPsiBladesDamage
@@ -20,6 +21,7 @@ Effect/Name/ArtanisCommanderZealotWhirlwindMoveOrder=ZealotWhirlwindMoveOrder
 Effect/Name/ArtanisCommanderZealotWhirlwindMoveSearch=ZealotWhirlwindMoveSearch
 Effect/Name/ArtanisCommanderZealotWhirlwindSearch=ZealotWhirlwindSearch
 Effect/Name/ArtanisCommanderZealotWhirlwindSet=ZealotWhirlwindSet
+Unit/Name/COOP/ArtanisCommanderDragoon=Dragoon
 Unit/Name/COOP/ArtanisCommanderZealot=Zealot
 Upgrade/Name/ArtanisCommander_level4=lvl4
 Weapon/Name/ArtanisCommanderPsiBlades=PsiBlades

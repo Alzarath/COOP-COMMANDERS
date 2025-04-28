@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="Phasedisruptor">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="PhasedisruptorDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.7"/>
+        <Effect value="PhasedisruptorLaunchMissile"/>
+    </CWeaponLegacy>
+    <CMoverMissile id="PhasedisruptorMissile">
+        <PathMode value="Flying"/>
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="10"/>
+            <Speed value="5"/>
+            <MaxSpeed value="15"/>
+            <BlendType value="Linear"/>
+            <Outro value="0.1,0.5"/>
+            <ThrowVector value="0,0,1"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="50"/>
+            <MaxSpeed value="20"/>
+            <BlendType value="Linear"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CUnit id="ArtanisCommanderDragoon" parent="CommanderGround_Prot">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Artanis"/>
+        <WeaponArray Link="Phasedisruptor"/>
+        <LifeMax value="120"/>
+        <ShieldsStart value="80"/>
+        <ShieldsMax value="80"/>
+    </CUnit>
     <CUnit id="ArtanisCommanderZealot" parent="CommanderGround_Prot">
         <AbilArray Link="ArtanisCommanderCharge"/>
         <AbilArray Link="ArtanisCommanderZealotWhirlwind"/>
@@ -12,5 +46,8 @@
         <LifeMax value="100"/>
         <ShieldsStart value="50"/>
         <WeaponArray Link="ArtanisCommanderPsiBlades"/>
+    </CUnit>
+    <CUnit id="PhasedisruptorWeapon" parent="MISSILE">
+        <Mover value="PhasedisruptorMissile"/>
     </CUnit>
 </Catalog>

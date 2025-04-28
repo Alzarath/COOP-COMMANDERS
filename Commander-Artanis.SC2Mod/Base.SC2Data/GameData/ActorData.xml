@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="ArtanisCommanderDragoon" parent="CommanderGroundUnit" unitName="ArtanisCommanderDragoon">
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-protoss-dragoon.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="ArtanisCommanderZealot" parent="CommanderGroundUnit" unitName="ArtanisCommanderZealot">
         <GroupIcon>
             <Image value="Assets\Textures\btn-unit-protoss-zealot.dds"/>
@@ -27,4 +38,12 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth"/>
     </CActorModel>
+    <CActorAction id="PhasedisruptorAction" parent="GenericAttack" effectImpact="PhasedisruptorDamage" effectLaunch="PhasedisruptorLaunchMissile">
+        <LaunchAssets Model="PhasedisruptorLaunchModel" Sound="PhasedisruptorLaunchSound"/>
+        <Missile value="PhasedisruptorWeaponMissile"/>
+        <ImpactMap index="None" Model="PhasedisruptorImpactModel" Sound="PhasedisruptorImpactSound"/>
+    </CActorAction>
+    <CActorMissile id="PhasedisruptorWeaponMissile" parent="GenericAttackMissile" unitName="PhasedisruptorWeapon">
+        <Model value="PhasedisruptorMissileModel"/>
+    </CActorMissile>
 </Catalog>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="ArtanisCommanderDragoon">
+        <Model value="Assets\Units\Protoss\Dragoon_Void\Dragoon_Void.m3"/>
+        <EditorCategories value="Race:Artanis"/>
+    </CModel>
+    <CModel id="ArtanisCommanderDragoon@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Protoss\Dragoon_Void_Death\Dragoon_Void_Death.m3"/>
+        <EditorCategories value="Race:Artanis"/>
+    </CModel>
+    <CModel id="ArtanisCommanderDragoon@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Protoss\Aiur_DragoonEx2_Portrait\Aiur_DragoonEx2_Portrait.m3"/>
+        <EditorCategories value="Race:Artanis"/>
+    </CModel>
     <CModel id="ArtanisCommanderZealot">
         <Model value="Assets\Units\Protoss\Zealot\Zealot.m3"/>
         <EditorCategories value="Race:Artanis"/>
@@ -24,5 +36,11 @@
     <CModel id="ArtanisCommanderZealotWhirlwindImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\Zealot_Aiur_Whirlwind_Impact\Zealot_Aiur_Whirlwind_Impact.m3"/>
         <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="PhasedisruptorImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile_Impact\DragoonEX2_Missile_Impact.m3"/>
+    </CModel>
+    <CModel id="PhasedisruptorMissileModel" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile\DragoonEX2_Missile.m3"/>
     </CModel>
 </Catalog>

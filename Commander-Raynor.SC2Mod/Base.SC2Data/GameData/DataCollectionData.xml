@@ -372,6 +372,15 @@
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMissileTurret" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderMissileTurret"/>
+        <DataRecord Entry="Button,RaynorCommanderMissileTurret"/>
+        <DataRecord Entry="Model,RaynorCommanderMissileTurret"/>
+        <DataRecord Entry="Model,RaynorCommanderMissileTurret@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderMissileTurret@Portrait"/>
+        <DataRecord Entry="Model,RaynorCommanderMissileTurret@Placement"/>
+        <DataRecord Entry="Model,RaynorCommanderMissileTurret@Build"/>
+        <DataRecord Entry="Unit,RaynorCommanderMissileTurret"/>
+        <DataRecord Entry="Sound,RaynorCommanderMissileTurret@Placement"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderPDD" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>

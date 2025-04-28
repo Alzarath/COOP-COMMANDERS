@@ -109,6 +109,17 @@
         <EditorCategories value=""/>
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>
+    <CActorUnit id="RaynorCommanderMissileTurret" parent="CommanderUnitBase" unitName="RaynorCommanderMissileTurret">
+        <EditorCategories value=""/>
+        <PlacementSound value="RaynorCommanderMissileTurret@Placement"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-missileturret.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorModel id="RaynorCommanderOrbitaldroppods" parent="ModelAddition">
         <EditorCategories value=""/>
         <On Terms="Effect.RaynorCommanderOrbitaldroppods@CP.Start" Send="Create"/>

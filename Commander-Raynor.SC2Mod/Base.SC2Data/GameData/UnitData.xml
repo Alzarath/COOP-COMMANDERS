@@ -353,6 +353,12 @@
         <BuildTime value="65"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
+    <CUnit id="RaynorCommanderMissileTurret" parent="CommanderStructure_Terr">
+        <Race value="COOPRaynor"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Raynor"/>
+    </CUnit>
     <CUnit id="RaynorCommanderPDD">
         <Race value="COOPRaynor"/>
         <Mob value="Multiplayer"/>

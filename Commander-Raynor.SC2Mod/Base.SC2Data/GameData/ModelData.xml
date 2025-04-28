@@ -119,6 +119,26 @@
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModel>
+    <CModel id="RaynorCommanderMissileTurret" parent="Unit">
+        <Model value="Assets\Buildings\Terran\MissileTurret\MissileTurret.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderMissileTurret@Build" parent="TerranBuildingBuildTiny">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderMissileTurret@Death" parent="UnitDeath">
+        <Model value="Assets\Buildings\Terran\MissileTurretDeath\MissileTurretDeath.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderMissileTurret@Placement" parent="Placement">
+        <Model value="Assets\Buildings\Terran\MissileTurretPlacement\MissileTurretPlacement.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderMissileTurret@Portrait" parent="FXAPortrait">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
     <CModel id="RaynorCommanderOrbitaldroppods">
         <Model value="Assets\Effects\Terran\DropPodFalling\DropPodFalling.m3"/>
         <EditorCategories value="Race:Raynor"/>

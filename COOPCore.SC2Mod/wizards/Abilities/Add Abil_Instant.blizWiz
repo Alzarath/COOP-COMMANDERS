@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wizard id="AddAbil_Instant">
-    <name>Add Ability - Instant</name>
-    <category>COOP Commanders/Not implemented/Abilities</category>
+    <name>Add Ability - Target</name>
+    <!-- <category>COOP Commanders/Not implemented/Abilities</category> -->
     <objecttypes create="Abil"/>
     <instructions>
         Инструкция к применению данного мастера.
     </instructions>
+    <instructions page="2">
+        Инструкция к настройке данного мастера.
+    </instructions>
 
     <!-- Conditions -->
     <condition id="checkArea" input="UseSearchArea" value="1"/>
+    <condition id="checkNotArea" input="UseSearchArea" value="0"/>
+
     <condition id="checkPersistent" input="UsePersistent" value="1"/>
+    <condition id="checkNotPersistent" input="UsePersistent" value="0"/>
+
+    <condition id="checkPersistentAndStackable" logic="And">
+        <condition input="UsePersistent" value="1"/>
+        <condition input="UseStackable" value="1"/>
+    </condition>
+
+    <condition id="checkNonStackable" input="UseStackable" value="0"/>
+    <condition id="checkStackable" input="UseStackable" value="1"/>
 
     <!-- Inputs -->
 
@@ -24,70 +38,133 @@
         <name>Tooltip</name>
     </input>
 
-    <!-- Column 2 -->
+    <!-- Page 2 Column 1 -->
+
+    <input id="TargetFiltersArea" type="CTargetFilters">
+        <layout column="1" page="2"/>
+    </input>
+
+    <!-- Page 2 Column 2 -->
 
     <input id="AbilClass" type="WizardMenu">
-        <item text="Damage" value="1"/>
-        <item text="Heal" value="2"/>
-        <item text="Apply Behavior" value="3"/>
-        <layout column="2"/>
+        <item text="Damage" value="Damage"/>
+        <item text="Heal" value="CreateHealer"/>
+        <item text="Apply Behavior" value="ApplyBehavior"/>
+        <layout column="2" page="2"/>
     </input>
     <input id="AmountDamage" type="real32">
-        <name>Damage</name>
-        <layout column="2"/>
+        <name>Amount</name>
+        <layout column="2" page="2"/>
         <minimum value="0"/>
     </input>
-    <input id="TargetFiltersArea" type="CTargetFilters">
-        <layout column="2"/>
-    </input>
 
-    <!-- Column 3 -->
+    <!-- Page 2 Column 3 -->
 
     <input id="UseSearchArea" type="WizardCheckbox">
         <name>В области?</name>
-        <layout column="3"/>
+        <tooltip>Если флаг установлен, будет создан эффект поиска в области, который будет вызывать последующие эффекты</tooltip>
+        <layout column="3" page="2"/>
     </input>
     <input id="UsePersistent" type="WizardCheckbox">
         <name>Периодически?</name>
-        <layout column="3"/>
+        <tooltip>Эффект урона будет наносится периодически.</tooltip>
+        <layout column="3" page="2"/>
+    </input>
+    <input id="UseStackable" type="WizardCheckbox">
+        <condition id="checkPersistent"/>
+        <name>Стакаемый?</name>
+        <tooltip>Если флаг снят, будет создан специальный бафф, который периодически создаёт эффект урона.</tooltip>
+        <layout column="3" page="2"/>
     </input>
 
     <input id="AreaSection" type="WizardText">
         <default value="Области"/>
         <condition id="checkArea"/>
-        <layout column="3"/>
+        <layout column="3" page="2"/>
     </input>
 
     <input id="radiusArea" type="real32">
         <name>Radius Area</name>
         <condition id="checkArea"/>
-        <layout column="3"/>
+        <layout column="3" page="2"/>
         <minimum value="0"/>
         <default value="3"/>
     </input>
 
-
     <input id="PersistentSection" type="WizardText">
         <default value="Счётчик"/>
         <condition id="checkPersistent"/>
-        <layout column="3"/>
+        <layout column="3" page="2"/>
     </input>
 
     <input id="CountPersistent" type="real32">
         <name>Count effects</name>
-        <condition id="checkPersistent"/>
-        <layout column="3"/>
+        <condition id="checkPersistentAndStackable"/>
+        <layout column="3" page="2"/>
         <minimum value="0"/>
         <default value="5"/>
     </input>
     <input id="PeriodPersistent" type="real32">
         <name>Period effects</name>
         <condition id="checkPersistent"/>
-        <layout column="3"/>
+        <layout column="3" page="2"/>
         <minimum value="0"/>
         <default value="0.35"/>
     </input>
 
+    <!-- Entries -->
+
+    <entry catalog="Abil" type="CAbilEffectTarget">
+        <id>^AbilityID^</id>
+
+        <field id="Effect">
+            <condition id="checkPersistent"/>
+            <value>^AbilityID^@CP</value>
+        </field>
+        <field id="Effect">
+            <condition id="checkArea"/>
+            <condition id="checkNotPersistent"/>
+            <value>^AbilityID^@Search</value>
+        </field>
+        <field id="Effect">
+            <condition id="checkNotArea"/>
+            <condition id="checkNotPersistent"/>
+            <value>^AbilityID^@^AbilClass^</value>
+        </field>
+    </entry>
+
     
-    
+    <!-- Damage Persistent -->
+    <entry catalog="Effect" type="CEffectCreatePersistent">
+        <id>^AbilityID^@CP</id>
+        <condition id="checkPersistent"/>
+
+        <field id="PeriodicEffectArray">
+            <index>0</index>
+            <condition id="checkNotArea"/>
+            <value>^AbilityID^@^AbilClass^</value>
+        </field>
+        <field id="PeriodicEffectArray">
+            <index>0</index>
+            <condition id="checkArea"/>
+            <value>^AbilityID^@Search</value>
+        </field>
+    </entry>
+
+    <!-- Damage In Area -->
+    <entry catalog="Effect" type="CEffectEnumArea">
+        <id>^AbilityID^@Search</id>
+        <condition id="checkArea"/>
+
+        <field id="AreaArray_Effect">
+            <index>0</index>
+            <value>^AbilityID^@^AbilClass^</value>
+        </field>
+    </entry>
+
+    <!-- Only Damage -->
+    <entry catalog="Effect" type="CEffect^AbilClass^">
+        <id>^AbilityID^@^AbilClass^</id>
+    </entry>
+
 </wizard>

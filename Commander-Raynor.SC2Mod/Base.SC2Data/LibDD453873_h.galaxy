@@ -3,6 +3,28 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: COMMANDER - Raynor
 //--------------------------------------------------------------------------------------------------
+// Constants
+const string libDD453873_gv_cONST_TopBar_event_birth = "birth";
+const string libDD453873_gv_cONST_TopBar_event_death = "death";
+
+// Structures
+struct libDD453873_gs_UI_TopBar {
+    int lv_topBar;
+    int lv_cutsceneFrame;
+};
+
+// Variable Declarations
+libDD453873_gs_UI_TopBar libDD453873_gv_uI_TopBar;
+
+// Function Declarations
+void libDD453873_gf_ShowHideTopBarRaynor (bool lp_showHideOptions, playergroup lp_players);
+
 // Trigger Declarations
-trigger libDD453873_gt_SpawnAllUnitsCommander;
+trigger libDD453873_gt_InitializeRaynorCommander;
+trigger libDD453873_gt_InitTopBar;
+trigger libDD453873_gt_InitRaynorTopBar;
+trigger libDD453873_gt_Test;
+
+// Library Initialization
+void libDD453873_InitVariables ();
 

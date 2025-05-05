@@ -7,6 +7,7 @@
 
     <Frame type="Frame" name="RaynorTopBarTemplate">
         <Anchor relative="$parent"/>
+        <!-- <Visible val="False"/> -->
 
         <Frame type="CutsceneFrame" name="CutsceneTopbar">
             <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
@@ -16,6 +17,7 @@
             <Height val="1000"/>
             <File val="Cutscenes\Commander_Raynor_Topbar.SC2Cutscene"/>
             <HasRenderTarget val="True"/>
+            <AutoPlay val="True"/>
         </Frame>
 
         <Frame type="CommandPanel" name="CommandCardTopbar" template="CommandPanel/CommandPanelTemplate">
@@ -126,6 +128,31 @@
                 <Visible val="False"/>
             </Frame>
         </Frame>
+
+        <Animation name="birthAnim">
+            <Event event="birth" action="Reset,Play" frame="$this"/>
+
+            <Controller type="Cutscene" end="Stop" frame="$this/CutsceneTopbar">
+                <Key type="Cutscene" time="0.0" action="Bookmark" bookmark="Birth"/>
+            </Controller>
+
+            <!-- <Controller type="Visibility" end="Stop" frame="$this">
+                <Key type="Bool" time="0.0" value="True"/>
+            </Controller> -->
+        </Animation>
+
+        <Animation name="deathAnim">
+            <Event event="death" action="Reset,Play" frame="$this"/>
+
+            <Controller type="Cutscene" end="Stop" frame="$this/CutsceneTopbar">
+                <Key type="Cutscene" time="0.0" action="Bookmark" bookmark="Death"/>
+            </Controller>
+
+            <!-- <Controller type="Visibility" end="Stop" frame="$this">
+                <Key type="Bool" time="0.0" value="True"/>
+                <Key type="Bool" time="1.0" value="False"/>
+            </Controller> -->
+        </Animation>
     </Frame>
 
     <!-- =============== -->
@@ -134,61 +161,6 @@
 
     <Frame type="Frame" name="GameUI" file="GameUI">
         <Frame type="Frame" name="Raynor_TopBar" template="Commander_Raynor_Topbar/RaynorTopBarTemplate"/>
-
-        <Frame type="Button" name="StandBtn" template="StandardBattlenetTemplates/BattlenetMediumButtonTemplate">
-            <Anchor side="Top" relative="$parent" pos="Mid" offset="150"/>
-            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
-            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
-            <Visible val="False"/>
-            <Width val="250"/>
-            <Height val="60"/>
-            <Text val="Stand"/>
-        </Frame>
-
-        <Frame type="Button" name="BirthBtn" template="StandardBattlenetTemplates/BattlenetMediumButtonTemplate">
-            <Anchor side="Top" relative="$parent/StandBtn" pos="Min" offset="0"/>
-            <Anchor side="Right" relative="$parent/StandBtn" pos="Min" offset="0"/>
-            <Width val="250"/>
-            <Height val="60"/>
-            <Text val="Birth"/>
-
-            <Animation name="BirthTopbar">
-                <Event event="OnClick" action="Reset,Play" frame="$this"/>
-
-                <Controller type="Cutscene" end="Pause" frame="$parent/Raynor_TopBar/CutsceneTopbar">
-                    <Key type="Cutscene" time="0.0" action="SetCutscene" file="Cutscenes\Commander_Raynor_Topbar.SC2Cutscene"/>
-                    <Key type="Cutscene" time="0.0" action="Play"/>
-                </Controller>
-
-                <Controller type="Fade" end="Pause" frame="$parent/Raynor_TopBar/CommandCardTopbar">
-                    <Key type="Curve" time="0.0" value="0"/>
-                    <Key type="Curve" time="0.7" value="0"/>
-                    <Key type="Curve" time="1" value="255"/>
-                </Controller>
-            </Animation>
-        </Frame>
-
-        <Frame type="Button" name="DeathBtn" template="StandardBattlenetTemplates/BattlenetMediumButtonTemplate">
-            <Anchor side="Top" relative="$parent/StandBtn" pos="Min" offset="0"/>
-            <Anchor side="Left" relative="$parent/StandBtn" pos="Max" offset="0"/>
-            <Width val="250"/>
-            <Height val="60"/>
-            <Text val="Death"/>
-
-            <Animation name="StandTopbar">
-                <Event event="OnClick" action="Reset,Play" frame="$this"/>
-
-                <Controller type="Cutscene" end="Pause" frame="$parent/Raynor_TopBar/CutsceneTopbar">
-                    <Key type="Cutscene" time="0.0" action="Bookmark" bookmark="Death"/>
-                    <Key type="Cutscene" time="0.0" action="Play"/>
-                </Controller>
-
-                <Controller type="Fade" end="Pause" frame="$parent/Raynor_TopBar/CommandCardTopbar">
-                    <Key type="Curve" time="0.0" value="255"/>
-                    <Key type="Curve" time="0.3" value="0"/>
-                </Controller>
-            </Animation>
-        </Frame>
     </Frame>
 
 </Desc>

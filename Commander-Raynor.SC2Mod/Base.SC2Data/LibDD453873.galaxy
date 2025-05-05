@@ -10,36 +10,119 @@ void libDD453873_InitLibraries () {
     libNtve_InitVariables();
 }
 
+// Variable Initialization
+bool libDD453873_InitVariables_completed = false;
+
+void libDD453873_InitVariables () {
+    if (libDD453873_InitVariables_completed) {
+        return;
+    }
+
+    libDD453873_InitVariables_completed = true;
+
+    libDD453873_gv_uI_TopBar.lv_topBar = c_invalidDialogControlId;
+    libDD453873_gv_uI_TopBar.lv_cutsceneFrame = c_invalidDialogControlId;
+}
+
+// Functions
+void libDD453873_gf_ShowHideTopBarRaynor (bool lp_showHideOptions, playergroup lp_players) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((lp_showHideOptions == true)) {
+        DialogControlSendAnimationEvent(libDD453873_gv_uI_TopBar.lv_topBar, lp_players, libDD453873_gv_cONST_TopBar_event_birth);
+    }
+    else {
+        DialogControlSendAnimationEvent(libDD453873_gv_uI_TopBar.lv_topBar, lp_players, libDD453873_gv_cONST_TopBar_event_death);
+    }
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
-// Trigger: Spawn All Units Commander
+// Trigger: Initialize - Raynor Commander
 //--------------------------------------------------------------------------------------------------
-bool libDD453873_gt_SpawnAllUnitsCommander_Func (bool testConds, bool runActions) {
+bool libDD453873_gt_InitializeRaynorCommander_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
-    int auto7C224198_ae;
-    int auto7C224198_var;
-
     // Actions
     if (!runActions) {
         return true;
     }
 
-    auto7C224198_ae = CatalogFieldValueCount(c_gameCatalogCommander, "COOPRaynor", "UnitArray", c_playerAny);
-    auto7C224198_var = 0;
-    for ( ; auto7C224198_var <= auto7C224198_ae; auto7C224198_var += 1 ) {
-        libNtve_gf_CreateUnitsWithDefaultFacing(1, (CatalogFieldValueGet(c_gameCatalogCommander, "DATARaynor", "UnitArray[" + IntToString(auto7C224198_var) + "].Unit", c_playerAny)), 0, 1, RegionGetCenter(RegionEntireMap()));
+    TriggerExecute(libDD453873_gt_InitTopBar, true, false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libDD453873_gt_InitializeRaynorCommander_Init () {
+    libDD453873_gt_InitializeRaynorCommander = TriggerCreate("libDD453873_gt_InitializeRaynorCommander_Func");
+    TriggerAddEventMapInit(libDD453873_gt_InitializeRaynorCommander);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init - Top Bar
+//--------------------------------------------------------------------------------------------------
+bool libDD453873_gt_InitTopBar_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogControlHookupStandard(c_triggerControlTypePanel, "Raynor_TopBar");
+    libDD453873_gv_uI_TopBar.lv_topBar = DialogControlLastCreated();
+    DialogControlHookupStandard(c_triggerControlTypeCutscene, "Raynor_TopBar/CutsceneTopbar");
+    libDD453873_gv_uI_TopBar.lv_cutsceneFrame = DialogControlLastCreated();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libDD453873_gt_InitTopBar_Init () {
+    libDD453873_gt_InitTopBar = TriggerCreate("libDD453873_gt_InitTopBar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init Raynor TopBar
+//--------------------------------------------------------------------------------------------------
+bool libDD453873_gt_InitRaynorTopBar_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libDD453873_gt_InitRaynorTopBar_Init () {
+    libDD453873_gt_InitRaynorTopBar = TriggerCreate("libDD453873_gt_InitRaynorTopBar_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Test
+//--------------------------------------------------------------------------------------------------
+bool libDD453873_gt_Test_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((EventKeyPressed() == c_keyA)) {
+        libDD453873_gf_ShowHideTopBarRaynor(true, PlayerGroupSingle(EventPlayer()));
+    }
+    else {
+        libDD453873_gf_ShowHideTopBarRaynor(false, PlayerGroupSingle(EventPlayer()));
     }
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void libDD453873_gt_SpawnAllUnitsCommander_Init () {
-    libDD453873_gt_SpawnAllUnitsCommander = TriggerCreate("libDD453873_gt_SpawnAllUnitsCommander_Func");
-    TriggerAddEventMapInit(libDD453873_gt_SpawnAllUnitsCommander);
+void libDD453873_gt_Test_Init () {
+    libDD453873_gt_Test = TriggerCreate("libDD453873_gt_Test_Func");
+    TriggerAddEventKeyPressed(libDD453873_gt_Test, c_playerAny, c_keyA, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateRequire);
+    TriggerAddEventKeyPressed(libDD453873_gt_Test, c_playerAny, c_keyS, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateRequire);
 }
 
 void libDD453873_InitTriggers () {
-    libDD453873_gt_SpawnAllUnitsCommander_Init();
+    libDD453873_gt_InitializeRaynorCommander_Init();
+    libDD453873_gt_InitTopBar_Init();
+    libDD453873_gt_InitRaynorTopBar_Init();
+    libDD453873_gt_Test_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -55,6 +138,7 @@ void libDD453873_InitLib () {
     libDD453873_InitLib_completed = true;
 
     libDD453873_InitLibraries();
+    libDD453873_InitVariables();
     libDD453873_InitTriggers();
 }
 

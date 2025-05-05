@@ -2,21 +2,25 @@
 <CutsceneState cutsceneVersion="1.300000">
     <CCutsceneNodeDirector guid="10802227406324407387" name="Director">
         <CCutsceneNodeBookmark guid="9426688676938016815" name="Bookmarks">
-            <CCutsceneElementBookmark guid="5057064288356657523" start="1335" bookmarkName="Active"/>
-            <CCutsceneElementBookmark guid="5735669597799827743" start="2099" bookmarkName="Active Loop" jumpToBookmarkWhenHit="Active"/>
-            <CCutsceneElementBookmark guid="6574250339880822831" start="2266" bookmarkName="Death"/>
-            <CCutsceneElementBookmark guid="4815656577976429177" start="3431" bookmarkName="Death End Pause" pauseWhenHit="1"/>
+            <CCutsceneElementBookmark guid="7059313972896691022" start="34" bookmarkName="Birth Loop Start"/>
+            <CCutsceneElementBookmark guid="6307668215834389011" start="72" bookmarkName="Birth Loop" jumpToBookmarkWhenHit="Birth Loop Start"/>
+            <CCutsceneElementBookmark guid="4811541162142867071" start="111" bookmarkName="Birth"/>
+            <CCutsceneElementBookmark guid="5057064288356657523" start="1446" bookmarkName="Active"/>
+            <CCutsceneElementBookmark guid="5735669597799827743" start="2210" bookmarkName="Active Loop" jumpToBookmarkWhenHit="Active"/>
+            <CCutsceneElementBookmark guid="6574250339880822831" start="2377" bookmarkName="Death"/>
+            <CCutsceneElementBookmark guid="4815656577976429177" start="4154" bookmarkName="Death Loop Start"/>
+            <CCutsceneElementBookmark guid="8585255164402461363" start="4255" bookmarkName="Death Loop" jumpToBookmarkWhenHit="Death Loop Start"/>
         </CCutsceneNodeBookmark>
         <CCutsceneNodeActiveCamera guid="13123261292165159476" name="Active Camera">
-            <CCutsceneElementActiveCamera guid="7606927803627205597" cameraIndex="0" objectGuid="11664754513484812410"/>
+            <CCutsceneElementActiveCamera guid="7606927803627205597" start="111" cameraIndex="0" objectGuid="11664754513484812410"/>
         </CCutsceneNodeActiveCamera>
     </CCutsceneNodeDirector>
     <CCutsceneNodeActor guid="11664754513484812410" name="UI_Screens_Mission_TerranCalldownTwo" position="-0.018684,0.001091,0.000000" modelPath="Assets\UI\Topbars\UI_Screens_Mission_TerranCalldownTwo.m3" shadowBox="0" teamColorDiffuse="0.705800,0.078300,0.117600,1.000000" teamColorEmissive="0.545100,0.062700,0.086100,1.000000">
-        <CCutsceneElementObject guid="5143401691657638010" duration="3433" lockedToEnd="1"/>
+        <CCutsceneElementObject guid="5143401691657638010" start="111" duration="4390" lockedToEnd="1"/>
         <CCutsceneNodeAnimLayer guid="10090124231806652538" name="Animation Layer">
-            <CCutsceneElementAnim guid="7007565730327924858" duration="1333" anim="Birth" priority="7" originalDuration="1333" looping="1" blendOutTime="0"/>
-            <CCutsceneElementAnim guid="8009278126054776810" start="1333" duration="933" anim="Stand" priority="3" originalDuration="933" looping="1" blendTime="0" blendOutTime="0"/>
-            <CCutsceneElementAnim guid="8570922456209467711" start="2266" duration="1167" lockedToEnd="1" anim="Death" priority="11" originalDuration="1166" looping="1" blendTime="0"/>
+            <CCutsceneElementAnim guid="7007565730327924858" start="111" duration="1333" anim="Birth" priority="7" originalDuration="1333" looping="1" blendOutTime="0"/>
+            <CCutsceneElementAnim guid="8009278126054776810" start="1444" duration="933" anim="Stand" priority="3" originalDuration="933" looping="1" blendTime="0" blendOutTime="0"/>
+            <CCutsceneElementAnim guid="8570922456209467711" start="2377" duration="2124" lockedToEnd="1" anim="Death" priority="11" originalDuration="1166" looping="1" playOnce="1" blendTime="0"/>
         </CCutsceneNodeAnimLayer>
     </CCutsceneNodeActor>
 </CutsceneState>

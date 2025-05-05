@@ -17,13 +17,13 @@
     <condition id="checkPersistent" input="UsePersistent" value="1"/>
     <condition id="checkNotPersistent" input="UsePersistent" value="0"/>
 
+    <condition id="checkStackable" input="UseStackable" value="0"/>
+    <condition id="checkNotStackable" input="UseStackable" value="1"/>
+
     <condition id="checkPersistentAndStackable" logic="And">
         <condition input="UsePersistent" value="1"/>
-        <condition input="UseStackable" value="1"/>
+        <condition input="UseStackable" value="0"/>
     </condition>
-
-    <condition id="checkNonStackable" input="UseStackable" value="0"/>
-    <condition id="checkStackable" input="UseStackable" value="1"/>
 
     <!-- Inputs -->
 
@@ -58,7 +58,7 @@
         <minimum value="0"/>
     </input>
 
-    <!-- Page 2 Column 3 -->
+    <!-- Page 2 -->
 
     <input id="UseSearchArea" type="WizardCheckbox">
         <name>В области?</name>
@@ -72,8 +72,8 @@
     </input>
     <input id="UseStackable" type="WizardCheckbox">
         <condition id="checkPersistent"/>
-        <name>Стакаемый?</name>
-        <tooltip>Если флаг снят, будет создан специальный бафф, который периодически создаёт эффект урона.</tooltip>
+        <name>Не стакаемый?</name>
+        <tooltip>При установке флага, будет создан специальный бафф, который периодически создаёт эффект урона.</tooltip>
         <layout column="3" page="2"/>
     </input>
 
@@ -110,6 +110,52 @@
         <layout column="3" page="2"/>
         <minimum value="0"/>
         <default value="0.35"/>
+    </input>
+    <input id="DurationBehavior" type="real32">
+        <name>Duration Behavior</name>
+        <condition id="checkNotStackable"/>
+        <layout column="3" page="2"/>
+        <minimum value="0"/>
+        <default value="2"/>
+    </input>
+
+    <!-- Page 3 - Actors -->
+    <input id="LaunchPersistentModel" type="CModelPath">
+        <name>Launch Model (At Unit)</name>
+        <tooltip>Здесь задаётся модель на заклинателе способности</tooltip>
+        <layout page="3"/>
+        <nopreview/>
+    </input>
+    <input id="ImpactPersistentModel" type="CModelPath">
+        <name>Impact Model (Point)</name>
+        <tooltip>Здесь задаётся модель в позиции воздействия способности (Например как электрические разряды у Пси-шторма)</tooltip>
+        <layout page="3"/>
+        <nopreview/>
+    </input>
+    <input id="ImpactTargetModel" type="CModelPath">
+        <name>Impact Model (At target)</name>
+        <tooltip>Здесь задаётся модель при воздействии на целевую единицу</tooltip>
+        <layout page="3"/>
+        <nopreview/>
+    </input>
+
+    <input id="LaunchPersistentSound" type="CSoundPath">
+        <name>Launch Sound (At Unit)</name>
+        <tooltip>Здесь задаётся звук на заклинателе способности</tooltip>
+        <layout page="3" column="2"/>
+        <nopreview/>
+    </input>
+    <input id="ImpactPersistentSound" type="CSoundPath">
+        <name>Impact Sound (Point)</name>
+        <tooltip>Здесь задаётся звук в позиции воздействия способности (Например как электрические разряды у Пси-шторма)</tooltip>
+        <layout page="3" column="2"/>
+        <nopreview/>
+    </input>
+    <input id="ImpactTargetSound" type="CSoundPath">
+        <name>Impact Sound (At target)</name>
+        <tooltip>Здесь задаётся звук при воздействии на целевую единицу</tooltip>
+        <layout page="3" column="2"/>
+        <nopreview/>
     </input>
 
     <!-- Entries -->
@@ -149,6 +195,11 @@
             <condition id="checkArea"/>
             <value>^AbilityID^@Search</value>
         </field>
+        <field id="PeriodicEffectArray">
+            <index>0</index>
+            <condition id="checkStackable"/>
+            <value>^AbilityID^@AB</value>
+        </field>
     </entry>
 
     <!-- Damage In Area -->
@@ -158,6 +209,7 @@
 
         <field id="AreaArray_Effect">
             <index>0</index>
+            <condition id="checkPersistentAndStackable"/>
             <value>^AbilityID^@^AbilClass^</value>
         </field>
     </entry>
@@ -166,5 +218,42 @@
     <entry catalog="Effect" type="CEffect^AbilClass^">
         <id>^AbilityID^@^AbilClass^</id>
     </entry>
+
+    <!-- Stackable -->
+     <entry catalog="Behavior" type="CBehaviorBuff">
+        <condition id="checkPersistentAndStackable"/>
+        <id>^AbilityID^</id>
+
+        <field id="Period">
+            <value>^PeriodPersistent^</value>
+        </field>
+
+        <field id="Duration">
+            <value>^DurationBehavior^</value>
+        </field>
+
+        <field id="PeriodicEffect">
+            <value>^AbilityID^@^AbilClass^</value>
+        </field>
+     </entry>
+
+     <entry catalog="Effect" type="CEffectApplyBehavior">
+        <condition id="checkStackable"/> 
+        <id>^AbilityID^@AB</id>
+
+        <field id="Behavior">
+            <value>^AbilityID^</value>
+        </field>
+     </entry>
+
+     <entry catalog="Actor" type="CModel">
+
+     </entry>
+
+     <!-- Data Collection -->
+
+     <entry catalog="DataCollection" type="CDataCollectionUnit">
+
+     </entry>
 
 </wizard>

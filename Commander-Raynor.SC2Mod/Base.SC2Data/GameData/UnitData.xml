@@ -839,6 +839,14 @@
             <Cooldown Link="TechLab/Revive"/>
         </ReviveInfoBase>
     </CUnit>
+    <CUnit id="RaynorCommanderTopBarCaster" parent="CoopGlobalCaster">
+        <Race value="COOPRaynor"/>
+        <AbilArray Link="RaynorCommanderHyperionTopbar"/>
+        <CardLayouts>
+            <LayoutButtons Face="RaynorCommanderHyperionTopbar" Type="AbilCmd" AbilCmd="RaynorCommanderHyperionTopbar,Execute" Row="0" Column="0"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:AbilityTopbars,ObjectFamily:Coop,Race:Raynor"/>
+    </CUnit>
     <CUnit id="RaynorCommanderVulture" parent="CommanderGround_Terr">
         <Name value="Unit/Name/RaynorCommanderVulture"/>
         <Race value="COOPRaynor"/>

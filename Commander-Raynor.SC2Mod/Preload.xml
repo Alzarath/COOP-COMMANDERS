@@ -2,4 +2,5 @@
 <Preload>
 <Actor id="SYSTEM_ActorConfig"/>
 <Talent id="CommanderRaynorUnlockBattlecruiser"/>
+<Unit id="RaynorCommanderTopBarCaster"/>
 </Preload>

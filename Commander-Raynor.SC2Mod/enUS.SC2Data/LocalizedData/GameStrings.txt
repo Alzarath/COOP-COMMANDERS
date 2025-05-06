@@ -9,6 +9,7 @@ Abil/Name/RaynorCommanderBurrowSpiderMine@Burrow=Burrow
 Abil/Name/RaynorCommanderBurrowSpiderMine@Unburrow=Unburrow
 Abil/Name/RaynorCommanderHeal=Heal
 Abil/Name/RaynorCommanderHyperJump=Hyper Jump
+Abil/Name/RaynorCommanderHyperionTopbar=Hyperion
 Abil/Name/RaynorCommanderHyperionYamatoGun=Yamato Cannon
 Abil/Name/RaynorCommanderLiftBarrack@Land=Land
 Abil/Name/RaynorCommanderLiftBarrack@LiftOff=Lift Off
@@ -70,6 +71,7 @@ Button/Name/RaynorCommanderGather=Gather
 Button/Name/RaynorCommanderGhostAcademy=Build Ghost Academy
 Button/Name/RaynorCommanderHeal=Heal
 Button/Name/RaynorCommanderHyperJump=Hyper Jump
+Button/Name/RaynorCommanderHyperionTopbar=<d stringref="Abil,RaynorCommanderHyperionTopbar,Name"/>
 Button/Name/RaynorCommanderHyperionYamatoGun=Yamato Cannon
 Button/Name/RaynorCommanderInciniratorGauntlets=Incinerator gauntlets
 Button/Name/RaynorCommanderInfantryWeapon@Level1=Upgrade Infantry Weapons Level 1
@@ -129,6 +131,7 @@ Button/Tooltip/RaynorCommanderFirebat=Raider. Can jump up and down cliffs. Regen
 Button/Tooltip/RaynorCommanderFusionCore=Contains Battlecruiser upgrades. <n/><n/><c val="ffff8a">Enables:</c><n/>- Battlecruisers at the Starport
 Button/Tooltip/RaynorCommanderGather=Orders SCV to gather resources from a selected Mineral Field or Vespene Geyser.
 Button/Tooltip/RaynorCommanderGhostAcademy=Contains upgrades for Ghosts. Can build Nukes for Ghosts.<n/><n/><c val="ffff8a">Enables:</c><n/>- Ghosts at the Barracks
+Button/Tooltip/RaynorCommanderHyperionTopbar=Summons the <d stringref="Unit,RaynorCommanderHyperion,Name"/> to fight for 60 seconds. Does not require vision. 
 Button/Tooltip/RaynorCommanderInciniratorGauntlets=Увеличивает радиус поражения оружия на <c val="FFE1AE"><d ref="Upgrade,RaynorCommanderInciniratorGauntlets,EffectArrayTemplate[0].Value-1*100" precision="1"/>%</c>
 Button/Tooltip/RaynorCommanderInfantryWeapon@Level1=Upgrades the damage dealt by infantry units.
 Button/Tooltip/RaynorCommanderInfantryWeapon@Level2=Further upgrades the damage dealt by infantry units.
@@ -209,6 +212,7 @@ DataCollection/Name/RaynorCommanderGaussRiffleC14=Raynor Commander - Marine
 DataCollection/Name/RaynorCommanderHeal=Raynor Commander - Heal
 DataCollection/Name/RaynorCommanderHyperion=Raynor Commander - Hyperion
 DataCollection/Name/RaynorCommanderHyperionAdvancedTargetingSystems=Raynor Commander - Hyperion: Advanced Targeting Systems
+DataCollection/Name/RaynorCommanderHyperionTopbar=Raynor Commander - Hyperion
 DataCollection/Name/RaynorCommanderHyperionYamatoGun=Raynor Commander - Yamato Gun
 DataCollection/Name/RaynorCommanderInciniratorGauntlets=Raynor Commander - Incinirator Gauntlets
 DataCollection/Name/RaynorCommanderInfantryUpgradeCache=Raynor Commander - Infantry Upgrade Cache
@@ -305,6 +309,8 @@ Effect/Name/RaynorCommanderHyperJump@Out=Out
 Effect/Name/RaynorCommanderHyperJump@Set=Set
 Effect/Name/RaynorCommanderHyperJump@TargetAB=Target AB
 Effect/Name/RaynorCommanderHyperJump@Teleport=Teleport
+Effect/Name/RaynorCommanderHyperionTopbar=Create Hyperion
+Effect/Name/RaynorCommanderHyperionTopbar@AB=Visual AB
 Effect/Name/RaynorCommanderHyperionYamatoGun=CP
 Effect/Name/RaynorCommanderHyperionYamatoGun@Damage=Damage
 Effect/Name/RaynorCommanderHyperionYamatoGun@LM=LM
@@ -411,6 +417,7 @@ Unit/Name/RaynorCommanderStarport=Starport
 Unit/Name/RaynorCommanderSupplyDepot=Хранилище
 Unit/Name/RaynorCommanderSupplyDepot@Alternate=<d stringRef="Unit,RaynorCommanderSupplyDepot,Name"/>
 Unit/Name/RaynorCommanderTechLab=Tech Lab
+Unit/Name/RaynorCommanderTopBarCaster=Raynor Commander - TopBar Caster
 Unit/Name/RaynorCommanderTorpedoes@Missile=Missile
 Unit/Name/RaynorCommanderViking=Viking
 Unit/Name/RaynorCommanderViking@Alternate=Viking

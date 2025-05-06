@@ -27,7 +27,7 @@
             <Width val="200"/>
             <Height val="100"/>
             <VisibilityOnFade val="True"/>
-            <Alpha val="0"/>
+            <Alpha val="255"/>
 
             <Frame type="CommandTooltip" name="CommandTooltip">
                 <Anchor side="Bottom" relative="$parent" pos="Max" offset="-270"/>

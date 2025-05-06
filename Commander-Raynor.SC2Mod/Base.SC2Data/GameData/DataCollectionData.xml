@@ -57,6 +57,15 @@
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderArmoryResearch"/>
     </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderHyperionTopbar">
+        <EditorCategories value="Race:Raynor,DataGroup:Ability,ObjectType:AbilityTopbars"/>
+        <DataRecord Entry="Abil,RaynorCommanderHyperionTopbar"/>
+        <DataRecord Entry="Button,RaynorCommanderHyperionTopbar"/>
+        <DataRecord Entry="Behavior,RaynorCommanderHyperionTopbar@AB"/>
+        <DataRecord Entry="Effect,RaynorCommanderHyperionTopbar"/>
+        <DataRecord Entry="Effect,RaynorCommanderHyperionTopbar@AB"/>
+        <DataRecord Entry="Actor,RaynorCommanderHyperionTopbar"/>
+    </CDataCollectionAbil>
     <CDataCollectionUpgrade id="RaynorCommanderVehicleAndShipWeapons" parent="CommanderUpgradeLvLStats">
         <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderVehicleAndShipWeapons@Level1"/>

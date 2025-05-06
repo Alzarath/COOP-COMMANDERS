@@ -22,6 +22,7 @@ void libDD453873_InitVariables () {
 
     libDD453873_gv_uI_TopBar.lv_topBar = c_invalidDialogControlId;
     libDD453873_gv_uI_TopBar.lv_cutsceneFrame = c_invalidDialogControlId;
+    libDD453873_gv_uI_TopBar.lv_commandPanel = c_invalidDialogControlId;
 }
 
 // Functions
@@ -71,25 +72,17 @@ bool libDD453873_gt_InitTopBar_Func (bool testConds, bool runActions) {
     libDD453873_gv_uI_TopBar.lv_topBar = DialogControlLastCreated();
     DialogControlHookupStandard(c_triggerControlTypeCutscene, "Raynor_TopBar/CutsceneTopbar");
     libDD453873_gv_uI_TopBar.lv_cutsceneFrame = DialogControlLastCreated();
+    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "Raynor_TopBar/CommandCardTopbar");
+    libDD453873_gv_uI_TopBar.lv_commandPanel = DialogControlLastCreated();
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "RaynorCommanderTopBarCaster", c_unitCreateIgnorePlacement, 1, Point(0.0, 0.0));
+    libDD453873_gv_raynor_TopBar_Caster = UnitLastCreated();
+    libNtve_gf_SetDialogItemUnitGroup(libDD453873_gv_uI_TopBar.lv_commandPanel, libNtve_gf_ConvertUnitToUnitGroup(libDD453873_gv_raynor_TopBar_Caster), PlayerGroupAll());
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
 void libDD453873_gt_InitTopBar_Init () {
     libDD453873_gt_InitTopBar = TriggerCreate("libDD453873_gt_InitTopBar_Func");
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Init Raynor TopBar
-//--------------------------------------------------------------------------------------------------
-bool libDD453873_gt_InitRaynorTopBar_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libDD453873_gt_InitRaynorTopBar_Init () {
-    libDD453873_gt_InitRaynorTopBar = TriggerCreate("libDD453873_gt_InitRaynorTopBar_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -121,7 +114,6 @@ void libDD453873_gt_Test_Init () {
 void libDD453873_InitTriggers () {
     libDD453873_gt_InitializeRaynorCommander_Init();
     libDD453873_gt_InitTopBar_Init();
-    libDD453873_gt_InitRaynorTopBar_Init();
     libDD453873_gt_Test_Init();
 }
 

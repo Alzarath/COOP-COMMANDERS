@@ -11,9 +11,11 @@ const string libDD453873_gv_cONST_TopBar_event_death = "death";
 struct libDD453873_gs_UI_TopBar {
     int lv_topBar;
     int lv_cutsceneFrame;
+    int lv_commandPanel;
 };
 
 // Variable Declarations
+unit libDD453873_gv_raynor_TopBar_Caster;
 libDD453873_gs_UI_TopBar libDD453873_gv_uI_TopBar;
 
 // Function Declarations
@@ -22,7 +24,6 @@ void libDD453873_gf_ShowHideTopBarRaynor (bool lp_showHideOptions, playergroup l
 // Trigger Declarations
 trigger libDD453873_gt_InitializeRaynorCommander;
 trigger libDD453873_gt_InitTopBar;
-trigger libDD453873_gt_InitRaynorTopBar;
 trigger libDD453873_gt_Test;
 
 // Library Initialization

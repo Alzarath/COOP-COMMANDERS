@@ -109,6 +109,16 @@
         <EditorCategories value=""/>
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>
+    <CActorSimple id="RaynorCommanderHyperionTopbar">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.RaynorCommanderHyperionTopbar@AB.On" Send="Create"/>
+        <On Terms="Behavior.RaynorCommanderHyperionTopbar@AB.On" Send="TimerSet 0.660000 SpawnEnd"/>
+        <On Terms="TimerExpired; TimerName SpawnEnd" Send="Destroy"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="SetOpacity 0.000000 0.000000 SpawnVisual"/>
+        <On Terms="ActorDestruction" Target="_Unit" Send="ClearOpacity 0.000000 SpawnVisual"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="Create RaynorCommanderHyperJump@Impact"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="Create RaynorCommanderHyperJump@ImpactSound"/>
+    </CActorSimple>
     <CActorUnit id="RaynorCommanderMissileTurret" parent="CommanderUnitBase" unitName="RaynorCommanderMissileTurret">
         <EditorCategories value=""/>
         <PlacementSound value="RaynorCommanderMissileTurret@Placement"/>

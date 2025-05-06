@@ -20,6 +20,15 @@
         <Visibility value="Visible"/>
         <Amount value="12"/>
     </CEffectDamage>
+    <CEffectCreateUnit id="RaynorCommanderHyperionTopbar">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="RaynorCommanderHyperionTopbar@AB"/>
+        <SpawnUnit value="RaynorCommanderHyperion"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="RaynorCommanderHyperionTopbar@AB">
+        <EditorCategories value="Race:Raynor"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="RaynorCommanderOrbitaldroppods@CP">
         <EditorCategories value="Race:Raynor"/>
         <WhichLocation Value="TargetUnit"/>
@@ -188,7 +197,7 @@
         <EffectArray value="RaynorCommanderATSLaserBattery@AB"/>
         <EffectArray value="RaynorCommanderATSLaserBattery@LM"/>
     </CEffectSet>
-    <CEffectSet id="RaynorCommanderATALaserBatteryAir@Damage" parent="CEffectSet">
+    <CEffectSet id="RaynorCommanderATALaserBatteryAir@Damage">
         <EditorCategories value="Race:Raynor"/>
         <EffectArray value="RaynorCommanderATALaserBatteryAir@Damage@AB"/>
         <EffectArray value="RaynorCommanderATALaserBatteryAir@Damage@LM"/>

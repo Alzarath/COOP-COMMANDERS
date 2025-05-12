@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="RaynorCommanderAfterburners">
+        <Icon value="Assets\Textures\btn-ability-mengsk-medivac-igniteafterburners.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
+    <CButton id="RaynorCommanderBansheeAirstrike">
+        <Icon value="Assets\Textures\talent-raynor-level02-bansheeairstrike.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
     <CButton id="RaynorCommanderHyperionTopbar">
         <Icon value="Assets\Textures\talent-raynor-level15-hyperiondamageaura.dds"/>
         <EditorCategories value="Race:Raynor"/>

@@ -22,6 +22,17 @@
     <CActorSplat id="RaynorCommanderArmory@Splat" parent="GenericUnitSplat">
         <EditorCategories value=""/>
     </CActorSplat>
+    <CActorAction id="RaynorCommanderDuskWingsRockets@Attack" parent="GenericAttack" effectImpact="RaynorCommanderDuskWingsRockets@Damage" effectLaunch="RaynorCommanderDuskWingsRockets@LM">
+        <LaunchAttachQuery Methods="AMPatternBanshee"/>
+        <LaunchAssets Sound="RaynorCommanderDuskWingsRockets@SoundLaunch"/>
+        <Missile value="RaynorCommanderDuskWingsRockets@Missile"/>
+        <ImpactMap index="None" Sound="RaynorCommanderDuskWingsRockets@SoundImpact"/>
+        <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
+        <AcquisitionYawHalfArc value="15.000000"/>
+        <AcquisitionPitchHalfArc value="30.000000"/>
+        <ShieldRippleScaleFactor value="1.100000"/>
+    </CActorAction>
+    <CActorMissile id="RaynorCommanderDuskWingsRockets@Missile" parent="GenericAttackMissile" unitName="RaynorCommanderDuskWingsRockets@Missile"/>
     <CActorModel id="RaynorCommanderBunker@Build" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>
@@ -706,6 +717,13 @@
         <SoundArray index="Attack" value="RaynorCommanderHyperion@Attack"/>
         <SoundArray index="Pissed" value="RaynorCommanderHyperion@Pissed"/>
         <SoundArray index="Movement" value="RaynorCommanderHyperion@Movement"/>
+        <On Terms="UnitDeathCustomize; Death Timeout" Send="DeathCustomize HyperionDeathTimed"/>
+        <DeathCustoms>
+            <AnimProps value="Birth"/>
+            <ModelLink value="RaynorCommanderHyperJump@Launch"/>
+            <SoundLink value="RaynorCommanderHyperJump@LaunchSound"/>
+            <Name value="HyperionDeathTimed"/>
+        </DeathCustoms>
     </CActorUnit>
     <CActorSound id="RaynorCommanderLiftStarport@Land" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -1640,6 +1658,14 @@
     <CActorModel id="RaynorCommanderSupplyDepot@Build" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <!-- Global Config ========================================================================= -->
+    <!--                                                                                         -->
+    <!--                                                                                         -->
+    <CActorGlobalConfig id="SYSTEM_ActorConfig">
+        <DeathCustomPriorityList value="HyperionDeathTimed"/>
+    </CActorGlobalConfig>
     <CActorSound id="TerranBuildingFlameBig@Sound" parent="TerranFlameSound">
         <Sound value="Terran_FlameLoopLarge"/>
     </CActorSound>

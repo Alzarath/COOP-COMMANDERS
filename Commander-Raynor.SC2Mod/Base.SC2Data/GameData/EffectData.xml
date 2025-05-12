@@ -8,6 +8,50 @@
         <PeriodicEffectArray value="RaynorCommanderBackslashRockets@LM"/>
         <PeriodicPeriodArray value="0.15"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="RaynorCommanderDuskWingsRockets">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetUnit"/>
+        <ExpireDelay value="0.8"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="RaynorCommanderDuskWingsRockets@LM"/>
+        <PeriodicPeriodArray value="0.15"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="RaynorCommanderDuskWingsRockets@CP@2">
+        <EditorCategories value="Race:Raynor"/>
+        <OffsetVectorStartLocation Value="TargetPoint"/>
+        <OffsetVectorEndLocation Value="CasterPoint"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="RaynorCommanderDuskWingsRockets@Damage@2"/>
+        <PeriodicOffsetArray value="0,0.5,0"/>
+        <PeriodicOffsetArray value="0,1,0"/>
+        <PeriodicOffsetArray value="0,1.5,0"/>
+        <PeriodicOffsetArray value="0,2,0"/>
+        <PeriodicPeriodArray value="0.4"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="RaynorCommanderDuskWingsRockets@Damage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <Visibility value="Visible"/>
+        <Kind value="Splash"/>
+        <KindSplash value="Splash"/>
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectDamage id="RaynorCommanderDuskWingsRockets@Damage@2">
+        <EditorCategories value="Race:Raynor"/>
+        <DebugTrace value="1"/>
+        <LaunchLocation Value="OriginPoint"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <Amount value="8"/>
+        <AreaArray Radius="0.45" Fraction="1"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RaynorCommanderDuskWingsRockets@LM">
+        <ValidatorArray index="0" value="RangeCheckLE15"/>
+        <EditorCategories value="Race:Raynor"/>
+        <ImpactEffect value="RaynorCommanderDuskWingsRockets@Set"/>
+        <AmmoUnit value="RaynorCommanderDuskWingsRockets@Missile"/>
+        <Movers Link="BacklashRocketsLMWeapon"/>
+    </CEffectLaunchMissile>
     <CEffectLaunchMissile id="RaynorCommanderBackslashRockets@LM">
         <ValidatorArray index="0" value="RangeCheckLE15"/>
         <EditorCategories value="Race:Raynor"/>
@@ -20,6 +64,11 @@
         <Visibility value="Visible"/>
         <Amount value="12"/>
     </CEffectDamage>
+    <CEffectSet id="RaynorCommanderDuskWingsRockets@Set">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderBackslashRockets@Damage"/>
+        <EffectArray value="RaynorCommanderDuskWingsRockets@CP@2"/>
+    </CEffectSet>
     <CEffectCreateUnit id="RaynorCommanderHyperionTopbar">
         <EditorCategories value="Race:Raynor"/>
         <WhichLocation Value="TargetPoint"/>

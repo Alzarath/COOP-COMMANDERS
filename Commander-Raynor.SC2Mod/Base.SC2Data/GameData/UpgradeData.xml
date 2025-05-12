@@ -22,11 +22,6 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
         <EffectArrayTemplate Operation="Set" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
     </CUpgrade>
-    <CUpgrade id="RaynorCommanderMercenaryMunitions2">
-        <Icon value="Assets\Textures\talent-raynor-level14-infantryattackspeed.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
-        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
-    </CUpgrade>
     <CUpgrade id="RaynorCommanderOrbitalDepots">
         <Icon value="Assets\Textures\talent-raynor-level12-orbitaldepots.dds"/>
         <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
@@ -34,12 +29,10 @@
     </CUpgrade>
     <CUpgrade id="RaynorCommanderBattleBunkers">
         <Icon value="Assets\Textures\talent-raynor-level07-engineeringbayresearchbundle.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderFactoryUpgradeCache">
         <Icon value="Assets\Textures\talent-raynor-level09-factoryresearchbundle.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderArmoryUpgradeCache">
@@ -59,18 +52,17 @@
     </CUpgrade>
     <CUpgrade id="RaynorCommanderVanadiumPlating">
         <Icon value="Assets\Textures\talent-raynor-level11-armorresearchbundle.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderPointDefenseDrone">
         <Icon value="Assets\Textures\talent-raynor-level05-pointdefensedrones.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderNanoProjectors">
         <Icon value="Assets\Textures\talent-raynor-level03-firebatmedicrange.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+        <EffectArray Reference="Abil,RaynorCommanderHeal,Range[0]" Value="2"/>
+        <EffectArray Reference="Weapon,RaynorCommanderPerditionThrower,Range" Value="2"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderInciniratorGauntlets" parent="Research">
         <WebPriority value="0"/>
@@ -110,7 +102,6 @@
     </CUpgrade>
     <CUpgrade id="RaynorCommanderInfantryUpgradeCache">
         <Icon value="Assets\Textures\talent-raynor-level04-barracksresearchbundle.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderOrbitaldroppods">
@@ -123,7 +114,6 @@
     </CUpgrade>
     <CUpgrade id="RaynorCommanderNewUnitBattlecruiser">
         <Icon value="Assets\Textures\talent-raynor-level06-unlockbattlecruiser.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderPunisherGrenades@PunisherGrenades">
@@ -147,7 +137,6 @@
     </CUpgrade>
     <CUpgrade id="RaynorCommanderAirStrike">
         <Icon value="Assets\Textures\talent-raynor-level02-bansheeairstrike.dds"/>
-        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,BuildTime" Value="0.5"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
     </CUpgrade>
 </Catalog>

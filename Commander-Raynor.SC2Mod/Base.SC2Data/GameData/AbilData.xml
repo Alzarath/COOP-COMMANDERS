@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilBehavior id="RaynorCommanderAfterburners">
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="RaynorCommanderAfterburners"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="25"/>
+        </Cost>
+        <BehaviorArray value="RaynorCommanderAfterburners"/>
+    </CAbilBehavior>
     <CAbilResearch id="RaynorCommanderArmoryResearch">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <InfoArray index="Research1" Time="10" Upgrade="RaynorCommanderVehicleAndShipWeapons@Level1">
@@ -12,11 +21,22 @@
             <Button DefaultButtonFace="RaynorCommanderVehicleAndShipWeapons@Level3"/>
         </InfoArray>
     </CAbilResearch>
+    <CAbilEffectTarget id="RaynorCommanderBansheeAirstrike">
+        <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="240"/>
+        </Cost>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderBansheeAirstrike"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="RaynorCommanderHyperionTopbar">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
         <Range value="500"/>
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderHyperionTopbar"/>
+        <Cost>
+            <Cooldown TimeUse="360"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RaynorCommanderTacticalJump">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
@@ -164,6 +184,7 @@
         <UninterruptibleArray index="Channel" value="1"/>
         <ProgressButtonArray index="Channel" value="RaynorCommanderHyperJump"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderHyperJump"/>
+        <Flags index="RequireTargetVision" value="0"/>
     </CAbilEffectTarget>
     <CAbilBuild id="RaynorCommanderPlaceSpiderMine">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>

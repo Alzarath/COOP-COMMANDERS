@@ -1,5 +1,7 @@
 ﻿Abil/Name/RaynorCommanderAbilPDD=Point Defense Drone
+Abil/Name/RaynorCommanderAfterburners=Afterburners
 Abil/Name/RaynorCommanderArmoryResearch=Research
+Abil/Name/RaynorCommanderBansheeAirstrike=Banshee Airstrike
 Abil/Name/RaynorCommanderBarrackResearch=Research
 Abil/Name/RaynorCommanderBuildAddons@Barracks=AddOns
 Abil/Name/RaynorCommanderBuildAddons@Factory=AddOns
@@ -45,6 +47,7 @@ Abil/Name/RaynorCommanderYamatoGun=Yamato Gun
 Abil/Name/Stimpack=Stimpack
 Actor/AddonIndicator/RaynorCommanderReactor=T
 Actor/AddonIndicator/RaynorCommanderTechLab=T
+Behavior/Name/RaynorCommanderAfterburners=Afterburner
 Behavior/Name/RaynorCommanderPunisherGrenades=Slow
 Behavior/Name/RaynorCommanderStimpack=Stimpack
 Behavior/Name/RaynorCommanderStimpackMara=Stimpack
@@ -53,8 +56,10 @@ Behavior/Tooltip/RaynorCommanderStimpack=This unit moves and attacks more quickl
 Behavior/Tooltip/RaynorCommanderStimpackMara=This unit moves and attacks more quickly while under the effects of Stimpack.
 Button/Name/RaynorBuildAdvanced=Build Advanced Structure
 Button/Name/RaynorCommanderAbilPDD=Point Defense Drone
+Button/Name/RaynorCommanderAfterburners=Afterburners
 Button/Name/RaynorCommanderArmory=Build Armory
 Button/Name/RaynorCommanderBanshee=Build <d stringRef="Unit,RaynorCommanderBanshee,Name"/>
+Button/Name/RaynorCommanderBansheeAirstrike=Banshee Airstrike
 Button/Name/RaynorCommanderBarracks=Build <d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 Button/Name/RaynorCommanderBattlecruiser=Build <d stringRef="Unit,RaynorCommanderBattlecruiser,Name"/>
 Button/Name/RaynorCommanderBuildAddons=Build <d stringRef="Unit,RaynorCommanderTechLab,Name"/>
@@ -114,6 +119,7 @@ Button/Name/RaynorCommanderYamatoGun=Yamato Cannon
 Button/Tooltip/RaynorBuildAdvanced=A list of advanced structures.
 Button/Tooltip/RaynorCommanderArmory=Contains weapon and armor upgrades for <c val="FFFF80"><d stringRef="Unit,RaynorCommanderFactory,Name"/> and <d stringRef="Unit,RaynorCommanderStarport,Name"/></c> units. <n/><n/><c val="ffff8a">Enables:</c><n/>- Hellbat at the Factory<n/>- Thor at the Factory
 Button/Tooltip/RaynorCommanderBanshee=Tactical-strike aircraft. Can be upgraded to use cloak.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/RaynorCommanderBansheeAirstrike=Calls down 5 <c val="FFE1AE"><d stringref="Unit,RaynorCommanderDuskWings,Name"/></c>, dealing 50 damage to the target area. Controllable for <d ref="Abil,RaynorCommanderBansheeAirstrike,Cost[0].Cooldown.TimeUse"/> seconds.
 Button/Tooltip/RaynorCommanderBarracks=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marines<n/>- Reapers<n/>- Bunkers from SCVs<n/>- Orbital Commands from Command Centers
 Button/Tooltip/RaynorCommanderBarracks@Fly=<c val="FFFF80"><d stringRef="Unit,RaynorCommanderBarracks,Name"/></c> must land to start unit production.
 Button/Tooltip/RaynorCommanderBattlecruiser=Powerful warship. Can use Yamato Cannon and Tactical Jump.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
@@ -184,12 +190,14 @@ DOCSTR_0001=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 DataCollection/Name/RaynorCommanderATALaserBatteryAir=Raynor Commander - Battlecruiser
 DataCollection/Name/RaynorCommanderATSLaserBattery=Raynor Commander - Battlecruiser
 DataCollection/Name/RaynorCommanderAbilPDD=Raynor Commander - Abil PDD
+DataCollection/Name/RaynorCommanderAfterburners=Raynor Commander - Afterburners
 DataCollection/Name/RaynorCommanderAirStrike=Raynor Commander - Air Strike
 DataCollection/Name/RaynorCommanderArmory=Raynor Commander - Armory
 DataCollection/Name/RaynorCommanderArmoryResearch=Raynor Commander - Armory
 DataCollection/Name/RaynorCommanderArmoryUpgradeCache=Raynor Commander - Armory Upgrade Cache
 DataCollection/Name/RaynorCommanderBackslashRockets=Raynor Commander - Banshee
 DataCollection/Name/RaynorCommanderBanshee=Raynor Commander - Banshee
+DataCollection/Name/RaynorCommanderBansheeAirstrike=Raynor Commander - Banshee Airstrike
 DataCollection/Name/RaynorCommanderBarrackResearch=Raynor Commander - Barrack Research
 DataCollection/Name/RaynorCommanderBarracks=Raynor Commander - Barracks
 DataCollection/Name/RaynorCommanderBattleBunkers=Raynor Commander - Battle Bunkers
@@ -202,6 +210,7 @@ DataCollection/Name/RaynorCommanderCommandCenter=Raynor Commander - Command Cent
 DataCollection/Name/RaynorCommanderConstruction=Raynor Commander - Construction
 DataCollection/Name/RaynorCommanderConstructionSounds=Raynor Commander - Construction Sounds
 DataCollection/Name/RaynorCommanderDuskWings=Raynor Commander - Dusk Wings
+DataCollection/Name/RaynorCommanderDuskWingsRockets=Raynor Commander - Dusk Wings
 DataCollection/Name/RaynorCommanderEngineeringBay=Raynor Commander - Engineering Bay
 DataCollection/Name/RaynorCommanderExplode=Raynor Commander - Spider Mine
 DataCollection/Name/RaynorCommanderFactory=Raynor Commander - Factory
@@ -226,7 +235,6 @@ DataCollection/Name/RaynorCommanderLoweredSupplies=Raynor Commander - Lowered Su
 DataCollection/Name/RaynorCommanderMarauder=Raynor Commander - Marauder
 DataCollection/Name/RaynorCommanderMedic=Raynor Commander - Medic
 DataCollection/Name/RaynorCommanderMercenaryMunitions=Raynor Commander - Mercenary Munitions
-DataCollection/Name/RaynorCommanderMercenaryMunitions2=Raynor Commander - Mercenary Munitions
 DataCollection/Name/RaynorCommanderMissileTurret=Raynor Commander - Missile Turret
 DataCollection/Name/RaynorCommanderNanoProjectors=Raynor Commander - Nano Projectors
 DataCollection/Name/RaynorCommanderNewUnitBattlecruiser=Raynor Commander - New Unit: Battlecruiser
@@ -297,6 +305,12 @@ Effect/Name/RaynorCommanderBackslashRockets=(Create Persistent)
 Effect/Name/RaynorCommanderBackslashRockets@Damage=(Damage)
 Effect/Name/RaynorCommanderBackslashRockets@LM=(Launch Missile)
 Effect/Name/RaynorCommanderBurrowSpiderMine=Spider Mine First Burrow
+Effect/Name/RaynorCommanderDuskWingsRockets=(Create Persistent)
+Effect/Name/RaynorCommanderDuskWingsRockets@CP@2=Backslash CP
+Effect/Name/RaynorCommanderDuskWingsRockets@Damage=(Damage)
+Effect/Name/RaynorCommanderDuskWingsRockets@Damage@2=Backslash Damage
+Effect/Name/RaynorCommanderDuskWingsRockets@LM=(Launch Missile)
+Effect/Name/RaynorCommanderDuskWingsRockets@Set=Backslash Set
 Effect/Name/RaynorCommanderExplode@Damage=(Damage)
 Effect/Name/RaynorCommanderExplode@Set=(Set)
 Effect/Name/RaynorCommanderGaussRiffleC14=(Damage)
@@ -354,14 +368,6 @@ Effect/Name/RaynorCommanderYamatoGun=(Missile)
 Effect/Name/RaynorCommanderYamatoGun@Damage=(Damage)
 Effect/Name/Repair2=Repair
 Effect/Name/WeaponRaynorSCV=(Damage)
-Param/Expression/lib_B6F694BB_464A9C05=Cheat - Not found
-Param/Expression/lib_B6F694BB_993BA39B=Cheat - ~A~
-Param/Expression/lib_B6F694BB_C3199FED=~Object~: ~ID~
-Param/Value/lib_B6F694BB_3164CB64=Не выбрана ни одна единица!
-Param/Value/lib_B6F694BB_3C6DA2ED=Не указано количество добавляемого здоровья!
-Param/Value/lib_B6F694BB_D50C6F18=Не выбрана ни одна единица!
-Param/Value/lib_B6F694BB_ED41D3E0=Талант выдан
-Param/Value/lib_B6F694BB_F3E6B9B7=Unit ID
 Race/Name/COOPRaynor=Raynor
 RequirementNode/Tooltip/CountUnitAlias_BarracksCompleteOnly1633119839TechTreeCheat=<d stringRef="Unit,RaynorCommanderBarracks,Name"/>
 RequirementNode/Tooltip/CountUnitAlias_FactoryCompleteOnly3407815928TechTreeCheat=<d stringRef="Unit,RaynorCommanderFactory,Name"/>
@@ -397,6 +403,7 @@ Unit/Name/RaynorCommanderBattlecruiser=Battlecruiser
 Unit/Name/RaynorCommanderBunker=Bunker
 Unit/Name/RaynorCommanderCommandCenter=Command Center
 Unit/Name/RaynorCommanderDuskWings=Dusk Wings
+Unit/Name/RaynorCommanderDuskWingsRockets@Missile=Missile
 Unit/Name/RaynorCommanderFactory=Factory
 Unit/Name/RaynorCommanderFirebat=Firebat
 Unit/Name/RaynorCommanderHyperion=Hyperion
@@ -437,7 +444,6 @@ Upgrade/Name/RaynorCommanderInfantryWeapon@Level2=Level 2
 Upgrade/Name/RaynorCommanderInfantryWeapon@Level3=Level 3
 Upgrade/Name/RaynorCommanderJuggernautPlating=Juggernaut Plating
 Upgrade/Name/RaynorCommanderMercenaryMunitions=Mercenary Munitions
-Upgrade/Name/RaynorCommanderMercenaryMunitions2=Mercenary Munitions
 Upgrade/Name/RaynorCommanderNanoProjectors=Nano Projectors
 Upgrade/Name/RaynorCommanderNewUnitBattlecruiser=New Unit: Battlecruiser
 Upgrade/Name/RaynorCommanderOrbitalDepots=Orbital Depots
@@ -454,6 +460,7 @@ Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level3=Level 3
 Weapon/Name/RaynorCommanderATALaserBatteryAir=ATA Laser Battery
 Weapon/Name/RaynorCommanderATSLaserBattery=ATS Laser Battery
 Weapon/Name/RaynorCommanderBackslashRockets=Backlash Rockets
+Weapon/Name/RaynorCommanderDuskWingsRockets=Backlash Rockets
 Weapon/Name/RaynorCommanderExplode=Explode
 Weapon/Name/RaynorCommanderGaussRiffleC14=C-14 Gauss Rifle
 Weapon/Name/RaynorCommanderLanzerTorpedoes=Lanzer Torpedoes

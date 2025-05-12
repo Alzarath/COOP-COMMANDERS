@@ -27,7 +27,7 @@
             <Width val="200"/>
             <Height val="100"/>
             <VisibilityOnFade val="True"/>
-            <Alpha val="255"/>
+            <Alpha val="0"/>
 
             <Frame type="CommandTooltip" name="CommandTooltip">
                 <Anchor side="Bottom" relative="$parent" pos="Max" offset="-270"/>
@@ -136,22 +136,24 @@
                 <Key type="Cutscene" time="0.0" action="Bookmark" bookmark="Birth"/>
             </Controller>
 
-            <!-- <Controller type="Visibility" end="Stop" frame="$this">
-                <Key type="Bool" time="0.0" value="True"/>
-            </Controller> -->
+            <Controller type="Fade" end="Pause" frame="$this/CommandCardTopbar">
+                <Key type="Curve" time="0.0" value="0"/>
+                <Key type="Curve" time="1.0" value="0"/>
+                <Key type="Curve" time="1.5" value="255"/>
+            </Controller>
         </Animation>
 
         <Animation name="deathAnim">
             <Event event="death" action="Reset,Play" frame="$this"/>
 
             <Controller type="Cutscene" end="Stop" frame="$this/CutsceneTopbar">
-                <Key type="Cutscene" time="0.0" action="Bookmark" bookmark="Death"/>
+                <Key type="Cutscene" time="0.5" action="Bookmark" bookmark="Death"/>
             </Controller>
 
-            <!-- <Controller type="Visibility" end="Stop" frame="$this">
-                <Key type="Bool" time="0.0" value="True"/>
-                <Key type="Bool" time="1.0" value="False"/>
-            </Controller> -->
+            <Controller type="Fade" end="Pause" frame="$this/CommandCardTopbar">
+                <Key type="Curve" time="0.0" value="255"/>
+                <Key type="Curve" time="0.5" value="0"/>
+            </Controller>
         </Animation>
     </Frame>
 

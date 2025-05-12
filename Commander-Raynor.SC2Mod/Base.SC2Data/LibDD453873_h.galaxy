@@ -22,6 +22,7 @@ libDD453873_gs_UI_TopBar libDD453873_gv_uI_TopBar;
 void libDD453873_gf_ShowHideTopBarRaynor (bool lp_showHideOptions, playergroup lp_players);
 
 // Trigger Declarations
+trigger libDD453873_gt_Tests;
 trigger libDD453873_gt_InitializeRaynorCommander;
 trigger libDD453873_gt_InitTopBar;
 trigger libDD453873_gt_Test;

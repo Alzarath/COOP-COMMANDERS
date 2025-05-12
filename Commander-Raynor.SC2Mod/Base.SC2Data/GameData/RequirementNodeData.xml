@@ -17,34 +17,101 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Alias_RaynorTechLab" State="CompleteOnlyAtUnit"/>
     </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderAirStrikeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderAirStrike" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderArmoryUpgradeCacheCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderArmoryUpgradeCache" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderBattleBunkersCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderBattleBunkers" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderFactoryUpgradeCacheCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderFactoryUpgradeCache" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderHyperionAdvancedTargetingSystemsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderHyperionAdvancedTargetingSystems" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderInciniratorGauntlets" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderInfantryUpgradeCacheCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderInfantryUpgradeCache" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderJuggernautPlatingCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderJuggernautPlating" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderMercenaryMunitionsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderMercenaryMunitions" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderNanoProjectorsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderNanoProjectors" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderNewUnitBattlecruiserCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderNewUnitBattlecruiser" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderOrbitalDepotsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderOrbitalDepots" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderOrbitaldroppodsCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderOrbitaldroppods" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderPointDefenseDroneCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderPointDefenseDrone" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderPunisherGrenades@PunisherGrenadesCompleteOnly679349TechTreeCheat">
         <Count Link="RaynorCommanderPunisherGrenades@PunisherGrenades" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter">
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderRapidRecruitmentCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderRapidRecruitment" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderStarportUpgradeCacheCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderStarportUpgradeCache" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVanadiumPlatingCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RaynorCommanderVanadiumPlating" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
         <Count Link="RaynorCommanderVehicleAndShipWeapons@Level1" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level2QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="RaynorCommanderVehicleAndShipWeapons@Level2" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level3QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="RaynorCommanderVehicleAndShipWeapons@Level3" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeStimpackCompleteOnly80611996TechTreeCheat2">
@@ -59,15 +126,12 @@
         <OperandArray index="0" value="CountUpgradeRaynorCommanderInciniratorGauntletsCompleteOnly"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level1QueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level2QueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level2QueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeRaynorCommanderVehicleAndShipWeapons@Level3QueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeRaynorCommanderVehicleAndShipWeapons@Level3QueuedOrBetter"/>
     </CRequirementNot>
 </Catalog>

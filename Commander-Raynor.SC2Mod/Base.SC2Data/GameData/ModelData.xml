@@ -29,6 +29,14 @@
         <FacialController value="LocalizedData\Facial\AdjutantPortrait.fxa"/>
         <Image value="Assets\Textures\adjutantportrait_static.dds"/>
     </CModel>
+    <CModel id="RaynorCommanderDuskWingsRockets@AttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\BansheeMissileImpact\BansheeMissileImpact.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderDuskWingsRockets@Missile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\BansheeMissile\BansheeMissile.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderBunker@Build" parent="BunkerBuildBase">
         <EditorCategories value="Race:Raynor"/>
     </CModel>
@@ -532,6 +540,9 @@
     <CModel id="RaynorCommanderVulture" parent="Unit">
         <Model value="Assets\Units\Terran\Vulture\Vulture.m3"/>
         <EditorCategories value="Race:Raynor"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.600000"/>
+        <TipabilityWidth value="0.400000"/>
     </CModel>
     <CModel id="RaynorCommanderVulture@Death" parent="UnitDeath">
         <Model value="Assets\Units\Terran\VultureDeath\VultureDeath.m3"/>

@@ -1,5 +1,6 @@
 ﻿Button/Hotkey/RaynorBuildAdvanced=V
 Button/Hotkey/RaynorCommanderAbilPDD=E
+Button/Hotkey/RaynorCommanderAfterburners=E
 Button/Hotkey/RaynorCommanderArmory=A
 Button/Hotkey/RaynorCommanderBanshee=E
 Button/Hotkey/RaynorCommanderBarracks=B

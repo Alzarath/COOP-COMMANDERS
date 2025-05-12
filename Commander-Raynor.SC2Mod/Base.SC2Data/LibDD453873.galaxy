@@ -39,6 +39,20 @@ void libDD453873_gf_ShowHideTopBarRaynor (bool lp_showHideOptions, playergroup l
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Tests
+//--------------------------------------------------------------------------------------------------
+bool libDD453873_gt_Tests_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libDD453873_gt_Tests_Init () {
+    libDD453873_gt_Tests = TriggerCreate("libDD453873_gt_Tests_Func");
+    TriggerAddEventMapInit(libDD453873_gt_Tests);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Initialize - Raynor Commander
 //--------------------------------------------------------------------------------------------------
 bool libDD453873_gt_InitializeRaynorCommander_Func (bool testConds, bool runActions) {
@@ -112,6 +126,7 @@ void libDD453873_gt_Test_Init () {
 }
 
 void libDD453873_InitTriggers () {
+    libDD453873_gt_Tests_Init();
     libDD453873_gt_InitializeRaynorCommander_Init();
     libDD453873_gt_InitTopBar_Init();
     libDD453873_gt_Test_Init();

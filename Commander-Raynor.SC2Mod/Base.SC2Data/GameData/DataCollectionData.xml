@@ -38,6 +38,12 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
     </CDataCollectionUnit>
+    <CDataCollectionAbil id="RaynorCommanderAfterburners">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Unit"/>
+        <DataRecord Entry="Abil,RaynorCommanderAfterburners"/>
+        <DataRecord Entry="Behavior,RaynorCommanderAfterburners"/>
+        <DataRecord Entry="Button,RaynorCommanderAfterburners"/>
+    </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderArmory" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
         <DataRecord Entry="Actor,RaynorCommanderArmory"/>
@@ -57,6 +63,34 @@
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderArmoryResearch"/>
     </CDataCollectionAbil>
+    <CDataCollectionAbil id="RaynorCommanderBansheeAirstrike">
+        <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:AbilityTopbars"/>
+        <DataRecord Entry="Abil,RaynorCommanderBansheeAirstrike"/>
+        <DataRecord Entry="Button,RaynorCommanderBansheeAirstrike"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit id="RaynorCommanderDuskWingsRockets">
+        <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Projectile"/>
+        <EditorIconSource value="Weapon"/>
+        <DataRecord Entry="Actor,RaynorCommanderDuskWingsRockets@Attack"/>
+        <DataRecord Entry="Actor,RaynorCommanderDuskWingsRockets@Missile"/>
+        <DataRecord Entry="Effect,RaynorCommanderDuskWingsRockets"/>
+        <DataRecord Entry="Effect,RaynorCommanderDuskWingsRockets@LM"/>
+        <DataRecord Entry="Effect,RaynorCommanderDuskWingsRockets@Damage"/>
+        <DataRecord Entry="Model,RaynorCommanderDuskWingsRockets@AttackImpact"/>
+        <DataRecord Entry="Model,RaynorCommanderDuskWingsRockets@Missile"/>
+        <DataRecord Entry="Mover,RaynorCommanderDuskWingsRockets@Mover"/>
+        <DataRecord Entry="Sound,RaynorCommanderDuskWingsRockets@SoundImpact"/>
+        <DataRecord Entry="Sound,RaynorCommanderDuskWingsRockets@SoundLaunch"/>
+        <DataRecord Entry="Unit,RaynorCommanderDuskWingsRockets@Missile"/>
+        <DataRecord Entry="Weapon,RaynorCommanderDuskWingsRockets"/>
+        <DataRecord Entry="Effect,RaynorCommanderDuskWingsRockets@CP@2"/>
+        <DataRecord Entry="Effect,RaynorCommanderDuskWingsRockets@Damage@2"/>
+        <DataRecord Entry="Effect,RaynorCommanderDuskWingsRockets@Set"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+    </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderHyperionTopbar">
         <EditorCategories value="Race:Raynor,DataGroup:Ability,ObjectType:AbilityTopbars"/>
         <DataRecord Entry="Abil,RaynorCommanderHyperionTopbar"/>
@@ -75,10 +109,6 @@
         <DataRecord Entry="Upgrade,RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <DataRecord Entry="Upgrade,RaynorCommanderVehicleAndShipWeapons@Level3"/>
         <DataRecord Entry="Upgrade,RaynorCommanderVehicleAndShipWeapons@Level1"/>
-    </CDataCollectionUpgrade>
-    <CDataCollectionUpgrade id="RaynorCommanderMercenaryMunitions2">
-        <EditorCategories value="DataGroup:Research,Race:Raynor,ObjectType:Other"/>
-        <DataRecord Entry="Upgrade,RaynorCommanderMercenaryMunitions2"/>
     </CDataCollectionUpgrade>
     <CDataCollectionUpgrade id="RaynorCommanderOrbitalDepots">
         <EditorCategories value="DataGroup:Research,Race:Raynor,ObjectType:Other"/>
@@ -301,7 +331,7 @@
         <DataRecord Entry="Effect,RaynorCommanderOrbitaldroppods@CP"/>
         <DataRecord Entry="Model,RaynorCommanderOrbitaldroppods"/>
         <DataRecord Entry="Effect,RaynorCommanderOrbitaldroppods@Set"/>
-        <DataRecord Entry="Requirement,RaynorCommanderOrbitaldroppods@Requirement"/>
+        <DataRecord Entry="Requirement,RaynorCommanderOrbitaldroppods"/>
         <DataRecord Entry="Upgrade,RaynorCommanderOrbitaldroppods"/>
         <DataRecord Entry="Validator,RaynorCommanderOrbitaldroppods"/>
         <DataRecord Entry="Effect,RaynorCommanderOrbitaldroppods@finalset"/>

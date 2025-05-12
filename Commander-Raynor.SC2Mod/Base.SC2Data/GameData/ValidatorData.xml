@@ -15,7 +15,7 @@
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="RaynorCommanderOrbitaldroppods">
         <Find value="1"/>
-        <Value value="RaynorCommanderOrbitaldroppods@Requirement"/>
+        <Value value="RaynorCommanderOrbitaldroppods"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="RaynorCommanderPunisherGrenades@Researched">
         <ResultNoPlayer value="Error"/>

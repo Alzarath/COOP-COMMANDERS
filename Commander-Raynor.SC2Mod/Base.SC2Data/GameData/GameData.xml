@@ -2,7 +2,6 @@
 <Catalog>
     <CGame id="Dflt">
         <TriggerLibs Id="DD453873"/>
-        <TriggerLibs Id="B6F694BB"/>
         <!-- Test Builds -->
         <!-- <AIBuilds index="213" Enabled="0"/>
              <AIBuilds index="214" Enabled="0"/>

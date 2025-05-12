@@ -25,6 +25,11 @@
         <MinimapRadius value="1.75"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
     </CUnit>
+    <CUnit id="RaynorCommanderDuskWingsRockets@Missile" parent="MISSILE">
+        <Race value="COOPRaynor"/>
+        <Mover value="RaynorCommanderDuskWingsRockets@Mover"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop,Race:Raynor"/>
+    </CUnit>
     <CUnit id="RaynorCommanderBunker">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
@@ -131,12 +136,14 @@
         <KillXP value="140"/>
         <AbilArray Link="RaynorCommanderYamatoGun"/>
         <AbilArray Link="RaynorCommanderTacticalJump"/>
+        <AbilArray Link="RaynorCommanderAfterburners"/>
         <BehaviorArray Link="MassiveVoidRayVulnerability"/>
         <WeaponArray Link="ATSLaserBattery" Turret="Battlecruiser"/>
         <WeaponArray Link="ATALaserBattery" Turret="Battlecruiser"/>
         <CardLayouts index="0">
             <LayoutButtons Face="YamatoGun" Type="AbilCmd" AbilCmd="RaynorCommanderYamatoGun,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="RaynorCommanderTacticalJump" Type="AbilCmd" AbilCmd="RaynorCommanderTacticalJump,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="RaynorCommanderAfterburners" Type="AbilCmd" AbilCmd="RaynorCommanderAfterburners,On" Row="2" Column="2"/>
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
@@ -185,10 +192,12 @@
         <RepairTime value="60"/>
         <KillXP value="50"/>
         <AbilArray Link="BansheeCloak"/>
+        <AbilArray Link="RaynorCommanderAfterburners"/>
         <WeaponArray Link="RaynorCommanderBackslashRockets"/>
         <CardLayouts index="0">
             <LayoutButtons Face="CloakOnBanshee" Type="AbilCmd" AbilCmd="BansheeCloak,On" Row="2" Column="0"/>
             <LayoutButtons Face="CloakOff" Type="AbilCmd" AbilCmd="BansheeCloak,Off" Row="2" Column="1"/>
+            <LayoutButtons Face="RaynorCommanderAfterburners" Type="AbilCmd" AbilCmd="RaynorCommanderAfterburners,On" Row="2" Column="2"/>
         </CardLayouts>
         <Radius value="0.75"/>
         <SeparationRadius value="0.75"/>
@@ -431,6 +440,7 @@
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="250"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
+        <WeaponArray Link="RaynorCommanderDuskWingsRockets"/>
     </CUnit>
     <CUnit id="RaynorCommanderHyperion">
         <Subtitle value="Unit/Subtitle/RaynorCommanderHyperion"/>
@@ -508,7 +518,7 @@
     <CUnit id="RaynorCommanderSpiderMine">
         <Race value="COOPRaynor"/>
         <PlaneArray index="Ground" value="1"/>
-        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
         <Collide index="ForceField" value="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Mechanical" value="1"/>
@@ -842,8 +852,10 @@
     <CUnit id="RaynorCommanderTopBarCaster" parent="CoopGlobalCaster">
         <Race value="COOPRaynor"/>
         <AbilArray Link="RaynorCommanderHyperionTopbar"/>
+        <AbilArray Link="RaynorCommanderBansheeAirstrike"/>
         <CardLayouts>
             <LayoutButtons Face="RaynorCommanderHyperionTopbar" Type="AbilCmd" AbilCmd="RaynorCommanderHyperionTopbar,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="RaynorCommanderBansheeAirstrike" Type="AbilCmd" AbilCmd="RaynorCommanderBansheeAirstrike,Execute" Row="0" Column="1"/>
         </CardLayouts>
         <EditorCategories value="ObjectType:AbilityTopbars,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>
@@ -866,19 +878,12 @@
         <AbilArray Link="RaynorCommanderPlaceSpiderMine"/>
         <AbilArray Link="MakeVultureSpiderMines"/>
         <AbilArray Link="que1"/>
+        <AbilArray Link="RaynorCommanderAfterburners"/>
         <BehaviorArray Link="ScavengingSystemsMechDeath"/>
         <WeaponArray Link="RaynorCommanderTorpedoes"/>
         <CardLayouts index="0">
             <LayoutButtons Face="WidowMine" Type="AbilCmd" AbilCmd="RaynorCommanderPlaceSpiderMine,Build1" Row="2" Column="0"/>
-            <LayoutButtons>
-                <Face value="CerberusMines"/>
-                <Type value="Passive"/>
-                <AbilCmd value="255,255"/>
-                <Requirements value="UseCerberusMines"/>
-                <Row value="2"/>
-                <Column value="2"/>
-            </LayoutButtons>
-            <LayoutButtons Face="SpiderMineReplenish" Type="AbilCmd" AbilCmd="MakeVultureSpiderMines,255" Row="2" Column="1"/>
+            <LayoutButtons Face="RaynorCommanderAfterburners" Type="AbilCmd" AbilCmd="RaynorCommanderAfterburners,On" Row="2" Column="2"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="VultureQueue3,255" Row="2" Column="4"/>
         </CardLayouts>
         <Radius value="0.625"/>
@@ -1621,6 +1626,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="RaynorCommanderTankMode@Siege"/>
+        <AbilArray Link="RaynorCommanderAfterburners"/>
         <WeaponArray Link="RaynorCommanderWeaponTank" Turret="RaynorCommanderWeaponTank"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -1629,6 +1635,7 @@
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="SiegeMode" Type="AbilCmd" AbilCmd="RaynorCommanderTankMode@Siege,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="RaynorCommanderAfterburners" Type="AbilCmd" AbilCmd="RaynorCommanderAfterburners,On" Row="2" Column="2"/>
         </CardLayouts>
         <Radius value="0.875"/>
         <SeparationRadius value="1"/>

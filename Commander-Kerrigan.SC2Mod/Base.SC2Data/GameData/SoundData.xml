@@ -48,4 +48,28 @@
     <CSound id="KerriganCommanderKerr_Zergling@Yes" parent="CommanderVOYes" unitName="KerriganCommanderKerr_Zergling">
         <EditorCategories value="Race:Kerrigan"/>
     </CSound>
+    <CSound id="KerriganCommanderLurker@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderLurker">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderLurker@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderLurker">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderLurker@What" parent="CommanderVOWhat" unitName="KerriganCommanderLurker">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderLurker@Yes" parent="CommanderVOYes" unitName="KerriganCommanderLurker">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderUltralisk@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderUltralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderUltralisk@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderUltralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderUltralisk@What" parent="CommanderVOWhat" unitName="KerriganCommanderUltralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderUltralisk@Yes" parent="CommanderVOYes" unitName="KerriganCommanderUltralisk">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
 </Catalog>

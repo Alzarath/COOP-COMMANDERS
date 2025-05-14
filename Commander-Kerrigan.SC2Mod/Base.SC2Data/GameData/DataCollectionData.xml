@@ -44,4 +44,26 @@
         <DataRecord Entry="Sound,KerriganCommanderKerr_Zergling@What"/>
         <DataRecord Entry="Sound,KerriganCommanderKerr_Zergling@Yes"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit id="KerriganCommanderLurker">
+        <DataRecord Entry="Unit,KerriganCommanderLurker"/>
+        <DataRecord Entry="Actor,KerriganCommanderLurker"/>
+        <DataRecord Entry="Model,KerriganCommanderLurker"/>
+        <DataRecord Entry="Model,KerriganCommanderLurker@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderLurker@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderLurker@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderLurker@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderLurker@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderLurker@Yes"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="KerriganCommanderUltralisk">
+        <DataRecord Entry="Unit,KerriganCommanderUltralisk"/>
+        <DataRecord Entry="Actor,KerriganCommanderUltralisk"/>
+        <DataRecord Entry="Model,KerriganCommanderUltralisk"/>
+        <DataRecord Entry="Model,KerriganCommanderUltralisk@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderUltralisk@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderUltralisk@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderUltralisk@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderUltralisk@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderUltralisk@Yes"/>
+    </CDataCollectionUnit>
 </Catalog>

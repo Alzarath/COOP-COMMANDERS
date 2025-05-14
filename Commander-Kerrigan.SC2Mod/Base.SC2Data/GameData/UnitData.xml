@@ -23,9 +23,38 @@
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
     </CUnit>
     <CUnit id="KerriganCommanderKer_Mutalisk" parent="CommanderAir_Zerg">
+        <Race value="Zerg"/>
+        <Speed value="4"/>
+        <Acceleration value="3.5"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="100"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+        <Subtitle value="Подвид хозяин стаи"/>
+        <LifeStart value="120"/>
+        <LifeMax value="120"/>
+        <LifeRegenRate value="1"/>
+        <StationaryTurningRate value="1499.9414"/>
+        <TurningRate value="1499.9414"/>
+        <Sight value="11"/>
+        <Food value="-2"/>
+        <DamageDealtXP value="0"/>
+        <DamageTakenXP value="0"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
     </CUnit>
     <CUnit id="KerriganCommanderKerr_Zergling" parent="CommanderGround_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+        <LifeStart value="35"/>
+        <LifeMax value="35"/>
+        <Speed value="2.9531"/>
+        <TurningRate value="999.8437"/>
+        <Food value="-0.5"/>
+        <Radius value="0.375"/>
+    </CUnit>
+    <CUnit id="KerriganCommanderLurker" parent="CommanderGround_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    </CUnit>
+    <CUnit id="KerriganCommanderUltralisk" parent="CommanderGround_Zerg">
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
     </CUnit>
 </Catalog>

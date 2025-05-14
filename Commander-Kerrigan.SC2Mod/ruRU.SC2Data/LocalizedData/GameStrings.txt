@@ -1,0 +1,5 @@
+﻿DataCollection/Name/KerriganCommanderLurker=KerriganCommander - Lurker
+DataCollection/Name/KerriganCommanderUltralisk=KerriganCommander - KerriganCommander - Ultralisk
+Unit/Name/COOP/KerriganCommanderLurker=Lurker
+Unit/Name/COOP/KerriganCommanderUltralisk=Ultralisk
+Подвид хозяин стаи=

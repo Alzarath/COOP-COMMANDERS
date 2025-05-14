@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CActorUnit id="KerriganCommanderKer_Broodlord" parent="CommanderGroundUnit" unitName="KerriganCommanderKer_Broodlord">
+    <CActorUnit id="KerriganCommanderBroodlord" parent="CommanderGroundUnit" unitName="KerriganCommanderBroodlord">
         <GroupIcon>
             <Image value="Assets\Textures\btn-unit-zerg-broodlord.dds"/>
         </GroupIcon>
@@ -11,7 +11,7 @@
             <Image value="Assets\Textures\wireframe-zerg-broodlord.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorUnit id="KerriganCommanderKer_Hydralisk" parent="CommanderGroundUnit" unitName="KerriganCommanderKer_Hydralisk">
+    <CActorUnit id="KerriganCommanderHydralisk" parent="CommanderGroundUnit" unitName="KerriganCommanderHydralisk">
         <GroupIcon>
             <Image value="Assets\Textures\btn-unit-zerg-hydralisk.dds"/>
         </GroupIcon>
@@ -22,7 +22,7 @@
             <Image value="Assets\Textures\wireframe-zerg-hydralisk.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorUnit id="KerriganCommanderKer_Mutalisk" parent="CommanderAirUnit" unitName="KerriganCommanderKer_Mutalisk">
+    <CActorUnit id="KerriganCommanderMutalisk" parent="CommanderAirUnit" unitName="KerriganCommanderMutalisk">
         <GroupIcon>
             <Image value="Assets\Textures\btn-unit-zerg-mutalisk-broodlord.dds"/>
         </GroupIcon>
@@ -32,10 +32,13 @@
         <Wireframe>
             <Image value="Assets\Textures\wireframe-zerg-mutaliskex1a.dds"/>
         </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
+        </WireframeShield>
     </CActorUnit>
-    <CActorUnit id="KerriganCommanderKerr_Zergling" parent="CommanderGroundUnit" unitName="KerriganCommanderKerr_Zergling">
+    <CActorUnit id="KerriganCommanderZergling" parent="CommanderGroundUnit" unitName="KerriganCommanderZergling">
         <GroupIcon>
-            <Image value="Assets\Textures\btn-unit-zerg-zergling-raptor.dds"/>
+            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-zerg-zergling-raptor.dds"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
@@ -43,6 +46,7 @@
         <Wireframe>
             <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
         </Wireframe>
+        <UnitIconMultiple value="Assets\Textures\btn-unit-zerg-zergling-raptor.dds"/>
     </CActorUnit>
     <CActorUnit id="KerriganCommanderLurker" parent="CommanderGroundUnit" unitName="KerriganCommanderLurker">
         <GroupIcon>

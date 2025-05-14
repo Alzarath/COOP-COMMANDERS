@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CUnit id="KerriganCommanderKer_Broodlord" parent="CommanderAir_Zerg">
+    <CUnit id="KerriganCommanderBroodlord" parent="CommanderAir_Zerg">
+        <Race value="Zerg"/>
         <PlaneArray index="Ground" value="1"/>
         <PlaneArray index="Air" value="0"/>
         <Collide index="Ground" value="1"/>
         <Collide index="ForceField" value="1"/>
         <Collide index="Locust" value="1"/>
         <Collide index="Flying" value="0"/>
-        <Mover value="Ground"/>
         <Acceleration value="1000"/>
-        <Height value="0"/>
+        <Height value="9"/>
         <VisionHeight value="0"/>
         <CargoSize value="2"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
@@ -19,42 +19,50 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
     </CUnit>
-    <CUnit id="KerriganCommanderKer_Hydralisk" parent="CommanderGround_Zerg">
+    <CUnit id="KerriganCommanderHydralisk" parent="CommanderGround_Zerg">
+        <Race value="Zerg"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
     </CUnit>
-    <CUnit id="KerriganCommanderKer_Mutalisk" parent="CommanderAir_Zerg">
-        <Race value="Zerg"/>
-        <Speed value="4"/>
-        <Acceleration value="3.5"/>
-        <CostResource index="Minerals" value="100"/>
-        <CostResource index="Vespene" value="100"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    <CUnit id="KerriganCommanderMutalisk" parent="CommanderAir_Zerg">
         <Subtitle value="Подвид хозяин стаи"/>
+        <Race value="Zerg"/>
         <LifeStart value="120"/>
         <LifeMax value="120"/>
         <LifeRegenRate value="1"/>
+        <Speed value="4"/>
+        <Acceleration value="3.5"/>
         <StationaryTurningRate value="1499.9414"/>
         <TurningRate value="1499.9414"/>
         <Sight value="11"/>
         <Food value="-2"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="100"/>
         <DamageDealtXP value="0"/>
         <DamageTakenXP value="0"/>
         <ScoreMake value="200"/>
         <ScoreKill value="200"/>
-    </CUnit>
-    <CUnit id="KerriganCommanderKerr_Zergling" parent="CommanderGround_Zerg">
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+        <WeaponArray Link="KerriganCommanderWeaponMutalisk"/>
+    </CUnit>
+    <CUnit id="KerriganCommanderZergling" parent="CommanderGround_Zerg">
+        <Race value="Zerg"/>
         <LifeStart value="35"/>
         <LifeMax value="35"/>
         <Speed value="2.9531"/>
         <TurningRate value="999.8437"/>
         <Food value="-0.5"/>
         <Radius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
     </CUnit>
     <CUnit id="KerriganCommanderLurker" parent="CommanderGround_Zerg">
+        <Race value="Zerg"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="KerriganCommanderLurker" Row="2" Column="0"/>
+        </CardLayouts>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
     </CUnit>
     <CUnit id="KerriganCommanderUltralisk" parent="CommanderGround_Zerg">
+        <Race value="Zerg"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
     </CUnit>
 </Catalog>

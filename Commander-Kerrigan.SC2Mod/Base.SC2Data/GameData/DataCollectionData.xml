@@ -1,48 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CDataCollectionUnit id="KerriganCommanderKer_Broodlord">
-        <DataRecord Entry="Unit,KerriganCommanderKer_Broodlord"/>
-        <DataRecord Entry="Actor,KerriganCommanderKer_Broodlord"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Broodlord"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Broodlord@Portrait"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Broodlord@Death"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Broodlord@Attack"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Broodlord@Pissed"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Broodlord@What"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Broodlord@Yes"/>
+    <CDataCollectionUnit id="KerriganCommanderBroodlord">
+        <DataRecord Entry="Unit,KerriganCommanderBroodlord"/>
+        <DataRecord Entry="Actor,KerriganCommanderBroodlord"/>
+        <DataRecord Entry="Model,KerriganCommanderBroodlord"/>
+        <DataRecord Entry="Model,KerriganCommanderBroodlord@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderBroodlord@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderBroodlord@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderBroodlord@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderBroodlord@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderBroodlord@Yes"/>
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="KerriganCommanderKer_Hydralisk">
-        <DataRecord Entry="Unit,KerriganCommanderKer_Hydralisk"/>
-        <DataRecord Entry="Actor,KerriganCommanderKer_Hydralisk"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Hydralisk"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Hydralisk@Portrait"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Hydralisk@Death"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Hydralisk@Attack"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Hydralisk@Pissed"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Hydralisk@What"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Hydralisk@Yes"/>
+    <CDataCollectionUnit id="KerriganCommanderHydralisk">
+        <DataRecord Entry="Unit,KerriganCommanderHydralisk"/>
+        <DataRecord Entry="Actor,KerriganCommanderHydralisk"/>
+        <DataRecord Entry="Model,KerriganCommanderHydralisk"/>
+        <DataRecord Entry="Model,KerriganCommanderHydralisk@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderHydralisk@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderHydralisk@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderHydralisk@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderHydralisk@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderHydralisk@Yes"/>
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="KerriganCommanderKer_Mutalisk">
-        <DataRecord Entry="Unit,KerriganCommanderKer_Mutalisk"/>
-        <DataRecord Entry="Actor,KerriganCommanderKer_Mutalisk"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Mutalisk"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Mutalisk@Portrait"/>
-        <DataRecord Entry="Model,KerriganCommanderKer_Mutalisk@Death"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Mutalisk@Attack"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Mutalisk@Pissed"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Mutalisk@What"/>
-        <DataRecord Entry="Sound,KerriganCommanderKer_Mutalisk@Yes"/>
+    <CDataCollectionUnit id="KerriganCommanderMutalisk">
+        <DataRecord Entry="Unit,KerriganCommanderMutalisk"/>
+        <DataRecord Entry="Actor,KerriganCommanderMutalisk"/>
+        <DataRecord Entry="Model,KerriganCommanderMutalisk"/>
+        <DataRecord Entry="Model,KerriganCommanderMutalisk@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderMutalisk@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderMutalisk@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderMutalisk@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderMutalisk@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderMutalisk@Yes"/>
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="KerriganCommanderKerr_Zergling">
-        <DataRecord Entry="Unit,KerriganCommanderKerr_Zergling"/>
-        <DataRecord Entry="Actor,KerriganCommanderKerr_Zergling"/>
-        <DataRecord Entry="Model,KerriganCommanderKerr_Zergling"/>
-        <DataRecord Entry="Model,KerriganCommanderKerr_Zergling@Portrait"/>
-        <DataRecord Entry="Model,KerriganCommanderKerr_Zergling@Death"/>
-        <DataRecord Entry="Sound,KerriganCommanderKerr_Zergling@Attack"/>
-        <DataRecord Entry="Sound,KerriganCommanderKerr_Zergling@Pissed"/>
-        <DataRecord Entry="Sound,KerriganCommanderKerr_Zergling@What"/>
-        <DataRecord Entry="Sound,KerriganCommanderKerr_Zergling@Yes"/>
+    <CDataCollectionUnit id="KerriganCommanderWeaponMutalisk">
+        <EditorCategories value="DataGroup:Weapon,Race:Kerrigan,ObjectType:Projectile"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="KerriganCommanderZergling" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <DataRecord Entry="Unit,KerriganCommanderZergling"/>
+        <DataRecord Entry="Actor,KerriganCommanderZergling"/>
+        <DataRecord Entry="Model,KerriganCommanderZergling"/>
+        <DataRecord Entry="Model,KerriganCommanderZergling@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderZergling@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderZergling@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderZergling@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderZergling@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderZergling@Yes"/>
+        <DataRecord Entry="Light,KerriganCommanderZergling"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="KerriganCommanderLurker">
         <DataRecord Entry="Unit,KerriganCommanderLurker"/>
@@ -54,6 +62,8 @@
         <DataRecord Entry="Sound,KerriganCommanderLurker@Pissed"/>
         <DataRecord Entry="Sound,KerriganCommanderLurker@What"/>
         <DataRecord Entry="Sound,KerriganCommanderLurker@Yes"/>
+        <DataRecord Entry="Button,KerriganCommanderLurker"/>
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="KerriganCommanderUltralisk">
         <DataRecord Entry="Unit,KerriganCommanderUltralisk"/>
@@ -65,5 +75,6 @@
         <DataRecord Entry="Sound,KerriganCommanderUltralisk@Pissed"/>
         <DataRecord Entry="Sound,KerriganCommanderUltralisk@What"/>
         <DataRecord Entry="Sound,KerriganCommanderUltralisk@Yes"/>
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
     </CDataCollectionUnit>
 </Catalog>

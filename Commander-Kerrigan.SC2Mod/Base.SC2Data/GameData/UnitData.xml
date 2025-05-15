@@ -23,6 +23,13 @@
         <Race value="Zerg"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
     </CUnit>
+    <CUnit id="KerriganCommanderKerriganCommanderKerrigan" parent="CommanderGround_Zerg">
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    </CUnit>
+    <CUnit id="KerriganCommanderKerriganCommanderQueen" parent="CommanderGround_Zerg">
+        <Race value="Zerg"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Kerrigan"/>
+    </CUnit>
     <CUnit id="KerriganCommanderMutalisk" parent="CommanderAir_Zerg">
         <Subtitle value="Подвид хозяин стаи"/>
         <Race value="Zerg"/>

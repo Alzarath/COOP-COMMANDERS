@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CDataCollectionUnit id="KerriganCommanderBroodlord">
+    <CDataCollectionUnit id="KerriganCommanderBroodlord" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <EditorIconSource value="Button"/>
         <DataRecord Entry="Unit,KerriganCommanderBroodlord"/>
         <DataRecord Entry="Actor,KerriganCommanderBroodlord"/>
         <DataRecord Entry="Model,KerriganCommanderBroodlord"/>
@@ -10,9 +12,11 @@
         <DataRecord Entry="Sound,KerriganCommanderBroodlord@Pissed"/>
         <DataRecord Entry="Sound,KerriganCommanderBroodlord@What"/>
         <DataRecord Entry="Sound,KerriganCommanderBroodlord@Yes"/>
-        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <Pattern value=""/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="KerriganCommanderHydralisk">
+    <CDataCollectionUnit id="KerriganCommanderHydralisk" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <EditorIconSource value="Button"/>
         <DataRecord Entry="Unit,KerriganCommanderHydralisk"/>
         <DataRecord Entry="Actor,KerriganCommanderHydralisk"/>
         <DataRecord Entry="Model,KerriganCommanderHydralisk"/>
@@ -22,9 +26,39 @@
         <DataRecord Entry="Sound,KerriganCommanderHydralisk@Pissed"/>
         <DataRecord Entry="Sound,KerriganCommanderHydralisk@What"/>
         <DataRecord Entry="Sound,KerriganCommanderHydralisk@Yes"/>
-        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <Pattern value=""/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="KerriganCommanderMutalisk">
+    <CDataCollectionUnit id="KerriganCommanderKerriganCommanderKerrigan" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Hero"/>
+        <EditorIconSource value="Button"/>
+        <DataRecord Entry="Unit,KerriganCommanderKerriganCommanderKerrigan"/>
+        <DataRecord Entry="Actor,KerriganCommanderKerriganCommanderKerrigan"/>
+        <DataRecord Entry="Model,KerriganCommanderKerriganCommanderKerrigan"/>
+        <DataRecord Entry="Model,KerriganCommanderKerriganCommanderKerrigan@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderKerriganCommanderKerrigan@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderKerrigan@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderKerrigan@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderKerrigan@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderKerrigan@Yes"/>
+        <Pattern value=""/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="KerriganCommanderKerriganCommanderQueen" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <EditorIconSource value="Button"/>
+        <DataRecord Entry="Unit,KerriganCommanderKerriganCommanderQueen"/>
+        <DataRecord Entry="Actor,KerriganCommanderKerriganCommanderQueen"/>
+        <DataRecord Entry="Model,KerriganCommanderKerriganCommanderQueen"/>
+        <DataRecord Entry="Model,KerriganCommanderKerriganCommanderQueen@Portrait"/>
+        <DataRecord Entry="Model,KerriganCommanderKerriganCommanderQueen@Death"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderQueen@Attack"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderQueen@Pissed"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderQueen@What"/>
+        <DataRecord Entry="Sound,KerriganCommanderKerriganCommanderQueen@Yes"/>
+        <Pattern value=""/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="KerriganCommanderMutalisk" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <EditorIconSource value="Button"/>
         <DataRecord Entry="Unit,KerriganCommanderMutalisk"/>
         <DataRecord Entry="Actor,KerriganCommanderMutalisk"/>
         <DataRecord Entry="Model,KerriganCommanderMutalisk"/>
@@ -34,7 +68,7 @@
         <DataRecord Entry="Sound,KerriganCommanderMutalisk@Pissed"/>
         <DataRecord Entry="Sound,KerriganCommanderMutalisk@What"/>
         <DataRecord Entry="Sound,KerriganCommanderMutalisk@Yes"/>
-        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <Pattern value=""/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="KerriganCommanderWeaponMutalisk">
         <EditorCategories value="DataGroup:Weapon,Race:Kerrigan,ObjectType:Projectile"/>
@@ -52,7 +86,9 @@
         <DataRecord Entry="Sound,KerriganCommanderZergling@Yes"/>
         <DataRecord Entry="Light,KerriganCommanderZergling"/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="KerriganCommanderLurker">
+    <CDataCollectionUnit id="KerriganCommanderLurker" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <EditorIconSource value="Button"/>
         <DataRecord Entry="Unit,KerriganCommanderLurker"/>
         <DataRecord Entry="Actor,KerriganCommanderLurker"/>
         <DataRecord Entry="Model,KerriganCommanderLurker"/>
@@ -63,9 +99,11 @@
         <DataRecord Entry="Sound,KerriganCommanderLurker@What"/>
         <DataRecord Entry="Sound,KerriganCommanderLurker@Yes"/>
         <DataRecord Entry="Button,KerriganCommanderLurker"/>
-        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <Pattern value=""/>
     </CDataCollectionUnit>
-    <CDataCollectionUnit id="KerriganCommanderUltralisk">
+    <CDataCollectionUnit id="KerriganCommanderUltralisk" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <EditorIconSource value="Button"/>
         <DataRecord Entry="Unit,KerriganCommanderUltralisk"/>
         <DataRecord Entry="Actor,KerriganCommanderUltralisk"/>
         <DataRecord Entry="Model,KerriganCommanderUltralisk"/>
@@ -75,6 +113,6 @@
         <DataRecord Entry="Sound,KerriganCommanderUltralisk@Pissed"/>
         <DataRecord Entry="Sound,KerriganCommanderUltralisk@What"/>
         <DataRecord Entry="Sound,KerriganCommanderUltralisk@Yes"/>
-        <EditorCategories value="DataGroup:Unit,Race:Kerrigan,ObjectType:Unit"/>
+        <Pattern value=""/>
     </CDataCollectionUnit>
 </Catalog>

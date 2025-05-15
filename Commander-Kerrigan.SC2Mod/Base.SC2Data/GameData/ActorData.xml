@@ -2,7 +2,7 @@
 <Catalog>
     <CActorUnit id="KerriganCommanderBroodlord" parent="CommanderGroundUnit" unitName="KerriganCommanderBroodlord">
         <GroupIcon>
-            <Image value="Assets\Textures\btn-unit-zerg-broodlord.dds"/>
+            <Image value="Assets\Textures\wireframe-zerg-broodlord.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-zerg-broodlord.dds"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
@@ -13,18 +13,40 @@
     </CActorUnit>
     <CActorUnit id="KerriganCommanderHydralisk" parent="CommanderGroundUnit" unitName="KerriganCommanderHydralisk">
         <GroupIcon>
-            <Image value="Assets\Textures\btn-unit-zerg-hydralisk.dds"/>
+            <Image value="Assets\Textures\wireframe-zerg-hydraliskex1b.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-zerg-hydralisk.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-hydralisk-lurker.dds"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
-        <UnitIcon value="Assets\Textures\btn-unit-zerg-hydralisk.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-hydralisk-lurker.dds"/>
         <Wireframe>
-            <Image value="Assets\Textures\wireframe-zerg-hydralisk.dds"/>
+            <Image value="Assets\Textures\wireframe-zerg-hydraliskex1b.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="KerriganCommanderKerriganCommanderKerrigan" parent="CommanderGroundUnit" unitName="KerriganCommanderKerriganCommanderKerrigan">
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-zerg-kerriganinfested.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-kerriganinfested.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-kerriganinfested.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-kerrigan.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="KerriganCommanderKerriganCommanderQueen" parent="CommanderGroundUnit" unitName="KerriganCommanderKerriganCommanderQueen">
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-zerg-queen.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-queen.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-queen.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-queen.dds"/>
         </Wireframe>
     </CActorUnit>
     <CActorUnit id="KerriganCommanderMutalisk" parent="CommanderAirUnit" unitName="KerriganCommanderMutalisk">
         <GroupIcon>
-            <Image value="Assets\Textures\btn-unit-zerg-mutalisk-broodlord.dds"/>
+            <Image value="Assets\Textures\wireframe-zerg-mutaliskex1a.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-zerg-mutalisk-broodlord.dds"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
@@ -32,9 +54,6 @@
         <Wireframe>
             <Image value="Assets\Textures\wireframe-zerg-mutaliskex1a.dds"/>
         </Wireframe>
-        <WireframeShield>
-            <Image value="Assets\Textures\wireframe-zerg-zerglingex1a.dds"/>
-        </WireframeShield>
     </CActorUnit>
     <CActorUnit id="KerriganCommanderZergling" parent="CommanderGroundUnit" unitName="KerriganCommanderZergling">
         <GroupIcon>
@@ -50,7 +69,7 @@
     </CActorUnit>
     <CActorUnit id="KerriganCommanderLurker" parent="CommanderGroundUnit" unitName="KerriganCommanderLurker">
         <GroupIcon>
-            <Image value="Assets\Textures\btn-unit-zerg-lurker.dds"/>
+            <Image value="Assets\Textures\wireframe-zerg-lurkerex1b.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-zerg-lurker.dds"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
@@ -61,7 +80,7 @@
     </CActorUnit>
     <CActorUnit id="KerriganCommanderUltralisk" parent="CommanderGroundUnit" unitName="KerriganCommanderUltralisk">
         <GroupIcon>
-            <Image value="Assets\Textures\btn-unit-zerg-ultralisk-torrasque.dds"/>
+            <Image value="Assets\Textures\wireframe-zerg-ultraliskex1b.dds"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-zerg-ultralisk-torrasque.dds"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>

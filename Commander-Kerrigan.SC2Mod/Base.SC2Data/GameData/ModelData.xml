@@ -31,6 +31,30 @@
         <Model value="Assets\Portraits\Zerg\HydraliskPortrait\HydraliskPortrait.m3"/>
         <EditorCategories value="Race:Kerrigan"/>
     </CModel>
+    <CModel id="KerriganCommanderKerriganCommanderKerrigan">
+        <Model value="Assets\Units\Zerg\KerriganInfested\KerriganInfested.m3"/>
+        <EditorCategories value="Race:Kerrigan"/>
+    </CModel>
+    <CModel id="KerriganCommanderKerriganCommanderKerrigan@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Zerg\KerriganEggDeath\KerriganEggDeath.m3"/>
+        <EditorCategories value="Race:Kerrigan"/>
+    </CModel>
+    <CModel id="KerriganCommanderKerriganCommanderKerrigan@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Zerg\KerriganPortrait\KerriganPortrait.m3"/>
+        <EditorCategories value="Race:Kerrigan"/>
+    </CModel>
+    <CModel id="KerriganCommanderKerriganCommanderQueen">
+        <Model value="Assets\Units\Zerg\Queen\Queen.m3"/>
+        <EditorCategories value="Race:Kerrigan"/>
+    </CModel>
+    <CModel id="KerriganCommanderKerriganCommanderQueen@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Zerg\QueenDead\QueenDead.m3"/>
+        <EditorCategories value="Race:Kerrigan"/>
+    </CModel>
+    <CModel id="KerriganCommanderKerriganCommanderQueen@Portrait" parent="Portrait">
+        <Model value="Assets\Portraits\Zerg\QueenPortrait\QueenPortrait.m3"/>
+        <EditorCategories value="Race:Kerrigan"/>
+    </CModel>
     <CModel id="KerriganCommanderMutalisk">
         <Model value="Assets\Units\Zerg\MutaliskEx1A\MutaliskEx1A.m3"/>
         <EditorCategories value="Race:Kerrigan"/>

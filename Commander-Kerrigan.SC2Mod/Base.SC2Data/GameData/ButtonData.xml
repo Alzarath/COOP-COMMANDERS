@@ -2,5 +2,6 @@
 <Catalog>
     <CButton id="KerriganCommanderLurker">
         <EditorCategories value="Race:Kerrigan"/>
+        <Icon value="Assets\Textures\btn-unit-zerg-lurker.dds"/>
     </CButton>
 </Catalog>

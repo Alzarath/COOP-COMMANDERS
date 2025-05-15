@@ -24,6 +24,30 @@
     <CSound id="KerriganCommanderHydralisk@Yes" parent="CommanderVOYes" unitName="KerriganCommanderHydralisk">
         <EditorCategories value="Race:Kerrigan"/>
     </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderKerrigan@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderKerriganCommanderKerrigan">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderKerrigan@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderKerriganCommanderKerrigan">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderKerrigan@What" parent="CommanderVOWhat" unitName="KerriganCommanderKerriganCommanderKerrigan">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderKerrigan@Yes" parent="CommanderVOYes" unitName="KerriganCommanderKerriganCommanderKerrigan">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderQueen@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderKerriganCommanderQueen">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderQueen@Pissed" parent="CommanderVOPissed" unitName="KerriganCommanderKerriganCommanderQueen">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderQueen@What" parent="CommanderVOWhat" unitName="KerriganCommanderKerriganCommanderQueen">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
+    <CSound id="KerriganCommanderKerriganCommanderQueen@Yes" parent="CommanderVOYes" unitName="KerriganCommanderKerriganCommanderQueen">
+        <EditorCategories value="Race:Kerrigan"/>
+    </CSound>
     <CSound id="KerriganCommanderMutalisk@Attack" parent="CommanderVOAttack" unitName="KerriganCommanderMutalisk">
         <EditorCategories value="Race:Kerrigan"/>
     </CSound>

@@ -36,7 +36,7 @@
         <LifeStart value="120"/>
         <LifeMax value="120"/>
         <LifeRegenRate value="1"/>
-        <Speed value="4"/>
+        <Speed value="5.6015"/>
         <Acceleration value="3.5"/>
         <StationaryTurningRate value="1499.9414"/>
         <TurningRate value="1499.9414"/>

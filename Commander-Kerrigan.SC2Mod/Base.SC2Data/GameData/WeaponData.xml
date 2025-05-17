@@ -2,5 +2,7 @@
 <Catalog>
     <CWeaponLegacy id="KerriganCommanderWeaponMutalisk">
         <EditorCategories value="Race:Kerrigan"/>
+        <RangeSlop value="2"/>
+        <ArcSlop value="45"/>
     </CWeaponLegacy>
 </Catalog>

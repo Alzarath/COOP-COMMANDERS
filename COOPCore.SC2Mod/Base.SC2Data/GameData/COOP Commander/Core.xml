@@ -148,21 +148,59 @@
         <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/10" FacialGroup=""/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
-    <!-- DataCollection Pattern -->
+
+    <!-- DataCollection -->
     <CDataCollectionAbil default="1" id="CommanderAbilityBuild">
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_Build"/>
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
     </CDataCollectionAbil>
-    <CDataCollectionUnit default="1" id="CommanderUnit">
-        <EditorIconSource value="Actor"/>
-        <Pattern value="CommanderUnits"/>
-    </CDataCollectionUnit>
     <CDataCollectionAbil default="1" id="CommanderAbilityAB">
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_ABEffectInstant"/>
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
     </CDataCollectionAbil>
+    <CDataCollectionUnit default="1" id="CommanderWeaponInstant">
+        <EditorIconSource value="Weapon"/>
+        <Pattern value="CommanderWeapon_Instant"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit default="1" id="CommanderWeaponInstantAOE">
+        <EditorIconSource value="Weapon"/>
+        <Pattern value="CommanderWeapon_InstantAOE"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit default="1" id="CommanderWeaponMissile">
+        <EditorIconSource value="Weapon"/>
+        <Pattern value="CommanderWeapon_Missile"/>
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit default="1" id="CommanderUnit">
+        <EditorIconSource value="Actor"/>
+        <Pattern value="CommanderUnits"/>
+    </CDataCollectionUnit>
+
+    <!-- DataCollection Pattern -->
+    <CDataCollectionPattern default="1" id="CommanderWeapon">
+        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeapon/LaunchModel"/>
+        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeapon/LaunchSound"/>
+        <Fields Reference="Model,^ParamId^@AttackImpact,Model" NameOverride="DataCollectionPattern/CommanderWeapon/ImpactModel"/>
+        <Fields Reference="Sound,^ParamId^@AttackImpact,AssetArray" NameOverride="DataCollectionPattern/CommanderWeapon/ImpactSound"/>
+        <Fields Reference="Effect,^ParamId^@Damage,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
+        <Fields Reference="Effect,^ParamId^@Damage,AreaArray" NameOverride="DataCollectionPattern/CommanderWeapon/DamageArea"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.AttackSpeedMultiplier" NameOverride="DataCollectionPattern/CommanderWeapon/DebuffAttackSpeed"/>
+        <Fields Reference="Behavior,^ParamId^,Modification.MoveSpeedMultiplier" NameOverride="DataCollectionPattern/CommanderWeapon/DebuffSpeed"/>
+        <Fields Reference="DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice" NameOverride="DataCollectionPattern/CommanderWeapon/DamagePerDice_00"/>
+        <Fields Reference="DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice" NameOverride="DataCollectionPattern/CommanderWeapon/DamagePerDice_01"/>
+        <Fields Reference="DataCollection,^ParamId^,UpgradeInfoWeapon[2].DamagePerDice" NameOverride="DataCollectionPattern/CommanderWeapon/DamagePerDice_02"/>
+        <Fields Reference="DataCollection,^ParamId^,UpgradeInfoWeapon[3].DamagePerDice" NameOverride="DataCollectionPattern/CommanderWeapon/DamagePerDice_03"/>
+        <Fields Reference="Weapon,^ParamId^,Period"/>
+        <Fields Reference="Weapon,^ParamId^,Range"/>
+        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
+        <Fields Reference="Weapon,^ParamId^,Icon"/>
+        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
+    </CDataCollectionPattern>
     <CDataCollectionPattern id="CommanderAbilities_ABEffectInstant">
         <Fields Reference="Sound,^ParamId^@Cast,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundCast"/>
         <Fields Reference="Sound,^ParamId^@Finish,AssetArray" NameOverride="DataCollectionPattern/CommandersAbilityAB/SoundFinish"/>
@@ -219,17 +257,7 @@
         <Fields Reference="Button,^ParamId^,Hotkey"/>
         <Fields Reference="Requirement,^ParamId^,NodeArray"/>
     </CDataCollectionPattern>
-    <CDataCollectionPattern id="CommanderWeapon_Instant">
-        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
-        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
-        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
-        <Fields Reference="Weapon,^ParamId^,Period"/>
-        <Fields Reference="Weapon,^ParamId^,Range"/>
-        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
-        <Fields Reference="Weapon,^ParamId^,Icon"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
-        <Fields Reference="Weapon,^ParamId^,Effect"/>
+    <CDataCollectionPattern id="CommanderWeapon_Instant" parent="CommanderWeapon">
     </CDataCollectionPattern>
     <CDataCollectionPattern id="CommanderAbilities_Morph">
         <Fields Reference="Abil,^ParamId^@Siege,InfoArray[0].Unit" NameOverride="DataCollectionPattern/CommanderAbilitiesMorph/SiegeUnit"/>
@@ -276,35 +304,13 @@
         <Fields Reference="Sound,^ParamId^@What,AssetArray" NameOverride="DataCollectionPattern/CommanderUnitsMorphing/Sounds/What"/>
         <Fields Reference="Sound,^ParamId^@Yes,AssetArray" NameOverride="DataCollectionPattern/CommanderUnitsMorphing/Sounds/Yes"/>
     </CDataCollectionPattern>
-    <CDataCollectionPattern id="CommanderWeapon_InstantAOE">
-        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
-        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
-        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
+    <CDataCollectionPattern id="CommanderWeapon_InstantAOE" parent="CommanderWeapon">
         <Fields Reference="Effect,^ParamId^,AreaArray" NameOverride="DataCollectionPattern/CommanderWeapon/DamageArea"/>
         <Fields Reference="Effect,^ParamId^,SearchFilters" NameOverride="DataCollectionPattern/CommanderWeapon/DamageSearchFilters"/>
-        <Fields Reference="Weapon,^ParamId^,Period"/>
-        <Fields Reference="Weapon,^ParamId^,Range"/>
-        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
-        <Fields Reference="Weapon,^ParamId^,Icon"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
-        <Fields Reference="Weapon,^ParamId^,Effect"/>
     </CDataCollectionPattern>
-    <CDataCollectionPattern id="CommanderWeapon_Missile">
-        <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchModel"/>
-        <Fields Reference="Sound,^ParamId^@AttackLaunch,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/LaunchSound"/>
-        <Fields Reference="Model,^ParamId^@AttackImpact,Model" NameOverride="DataCollectionPattern/CommanderWeaponInstant/ImpactModel"/>
-        <Fields Reference="Sound,^ParamId^@AttackImpact,AssetArray" NameOverride="DataCollectionPattern/CommanderWeaponInstant/ImpactSound"/>
-        <Fields Reference="Effect,^ParamId^,Amount" NameOverride="DataCollectionPattern/CommanderWeapon/DamageAmount"/>
+    <CDataCollectionPattern id="CommanderWeapon_Missile" parent="CommanderWeapon">
         <Fields Reference="Mover,^ParamId^@Weapon,MotionPhases.MaxSpeed" NameOverride="DataCollectionPattern/CommanderWeapon/SpeedMissile"/>
-        <Fields Reference="Behavior,^ParamId^,Modification.AttackSpeedMultiplier" NameOverride="DataCollectionPattern/CommanderWeapon/DebuffAttackSpeed"/>
-        <Fields Reference="Behavior,^ParamId^,Modification.MoveSpeedMultiplier" NameOverride="DataCollectionPattern/CommanderWeapon/DebuffSpeed"/>
-        <Fields Reference="Weapon,^ParamId^,Period"/>
-        <Fields Reference="Weapon,^ParamId^,Range"/>
-        <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayName"/>
-        <Fields Reference="Weapon,^ParamId^,Icon"/>
-        <Fields Reference="Weapon,^ParamId^,DisplayEffect"/>
+        <Fields Reference="Model,^ParamId^@Missile,Model"/>
     </CDataCollectionPattern>
     <CDataCollectionPattern id="CommanderAbilities_Beam"/>
     <CDataCollectionPattern id="CommanderUpgrade_LevelStats">

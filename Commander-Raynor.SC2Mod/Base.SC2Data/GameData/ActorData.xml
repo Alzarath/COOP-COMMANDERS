@@ -24,9 +24,7 @@
     </CActorSplat>
     <CActorAction id="RaynorCommanderDuskWingsRockets@Attack" parent="GenericAttack" effectImpact="RaynorCommanderDuskWingsRockets@Damage" effectLaunch="RaynorCommanderDuskWingsRockets@LM">
         <LaunchAttachQuery Methods="AMPatternBanshee"/>
-        <LaunchAssets Sound="RaynorCommanderDuskWingsRockets@SoundLaunch"/>
         <Missile value="RaynorCommanderDuskWingsRockets@Missile"/>
-        <ImpactMap index="None" Sound="RaynorCommanderDuskWingsRockets@SoundImpact"/>
         <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
         <AcquisitionYawHalfArc value="15.000000"/>
         <AcquisitionPitchHalfArc value="30.000000"/>
@@ -304,9 +302,7 @@
     </CActorUnit>
     <CActorAction id="RaynorCommanderBackslashRockets@Attack" parent="GenericAttack" effectImpact="RaynorCommanderBackslashRockets@Damage" effectLaunch="RaynorCommanderBackslashRockets@LM">
         <LaunchAttachQuery Methods="AMPatternBanshee"/>
-        <LaunchAssets Sound="RaynorCommanderBackslashRockets@SoundLaunch"/>
         <Missile value="RaynorCommanderBackslashRockets@Missile"/>
-        <ImpactMap index="None" Sound="RaynorCommanderBackslashRockets@SoundImpact"/>
         <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
         <AcquisitionYawHalfArc value="15.000000"/>
         <AcquisitionPitchHalfArc value="30.000000"/>
@@ -628,9 +624,9 @@
     <CActorAction id="RaynorCommanderATALaserBatteryAir@Damage@Attack" parent="GenericAttack" effectImpact="RaynorCommanderATALaserBatteryAir@Damage@Damage" effectLaunch="RaynorCommanderATALaserBatteryAir@Damage@LM">
         <EditorCategories value=""/>
         <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMRandom"/>
-        <LaunchAssets Model="RaynorCommanderATALaserBatteryAir@Damage@Launch" Sound="RaynorCommanderATALaserBatteryAir@Damage@Launch"/>
+        <LaunchAssets Model="RaynorCommanderATALaserBatteryAir@Damage@Launch"/>
         <Missile value="RaynorCommanderATALaserBatteryAir@Damage@Missile"/>
-        <ImpactMap index="None" Model="RaynorCommanderATALaserBatteryAir@Damage@Impact" Sound="RaynorCommanderATALaserBatteryAir@Damage@Impact"/>
+        <ImpactMap index="None" Model="RaynorCommanderATALaserBatteryAir@Damage@Impact"/>
         <ImpactModel value="RaynorCommanderATALaserBatteryAir@Damage@Attack"/>
     </CActorAction>
     <CActorModel id="RaynorCommanderATALaserBatteryAir@Damage@Impact" parent="ModelAnimationStyleOneShot">
@@ -642,9 +638,9 @@
     <CActorAction id="RaynorCommanderATSLaserBattery@Attack" parent="GenericAttack" effectImpact="RaynorCommanderATSLaserBattery@Damage" effectLaunch="RaynorCommanderATSLaserBattery@LM">
         <EditorCategories value=""/>
         <LaunchAttachQuery Methods="AMFilterWeaponSetA1 AMRandom"/>
-        <LaunchAssets Model="RaynorCommanderATSLaserBattery@Launch" Sound="RaynorCommanderATSLaserBattery@Launch"/>
+        <LaunchAssets Model="RaynorCommanderATSLaserBattery@Launch"/>
         <Missile value="RaynorCommanderATSLaserBattery@Missile"/>
-        <ImpactMap index="None" Model="RaynorCommanderATSLaserBattery@Impact" Sound="RaynorCommanderATSLaserBattery@Impact"/>
+        <ImpactMap index="None" Model="RaynorCommanderATSLaserBattery@Impact"/>
         <ImpactModel value="RaynorCommanderATSLaserBattery@Attack"/>
     </CActorAction>
     <CActorModel id="RaynorCommanderATSLaserBattery@Impact" parent="ModelAnimationStyleOneShot">

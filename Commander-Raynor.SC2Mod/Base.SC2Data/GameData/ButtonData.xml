@@ -12,6 +12,10 @@
         <Icon value="Assets\Textures\talent-raynor-level15-hyperiondamageaura.dds"/>
         <EditorCategories value="Race:Raynor"/>
     </CButton>
+    <CButton id="RaynorCommanderLock">
+        <Icon value="Assets\Textures\ui_battlenet_glues_pageassets_standardelements_artbackground_lock.dds"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CButton>
     <CButton id="RaynorCommanderVehicleAndShipWeapons@Level1">
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>

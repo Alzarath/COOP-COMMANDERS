@@ -83,6 +83,7 @@ Button/Name/RaynorCommanderInfantryWeapon@Level1=Upgrade Infantry Weapons Level 
 Button/Name/RaynorCommanderInfantryWeapon@Level2=Upgrade Infantry Weapons Level 2
 Button/Name/RaynorCommanderInfantryWeapon@Level3=Upgrade Infantry Weapons Level 3
 Button/Name/RaynorCommanderJuggernautPlating=Juggernaut Plating
+Button/Name/RaynorCommanderLock=Lock
 Button/Name/RaynorCommanderLoweredSupplies@1=Lower
 Button/Name/RaynorCommanderLoweredSupplies@2=Raise
 Button/Name/RaynorCommanderMarauder=Train <d stringRef="Unit,RaynorCommanderMarauder,Name"/>
@@ -143,6 +144,7 @@ Button/Tooltip/RaynorCommanderInfantryWeapon@Level1=Upgrades the damage dealt by
 Button/Tooltip/RaynorCommanderInfantryWeapon@Level2=Further upgrades the damage dealt by infantry units.
 Button/Tooltip/RaynorCommanderInfantryWeapon@Level3=Maximizes the damage dealt by infantry units.
 Button/Tooltip/RaynorCommanderJuggernautPlating=Броня огнемётчиков укрепляется на <c val="FFE1AE"><d ref="Upgrade,RaynorCommanderJuggernautPlating,EffectArrayTemplate[0].Value"/></c>
+Button/Tooltip/RaynorCommanderLock=Возможность заблокирована
 Button/Tooltip/RaynorCommanderLoweredSupplies@1=Lowers the structure, allowing ground units to move across it.
 Button/Tooltip/RaynorCommanderLoweredSupplies@2=Raises the structure, preventing ground units from moving across it.
 Button/Tooltip/RaynorCommanderMarauder=Heavy assault infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>

@@ -486,6 +486,7 @@
             <LayoutButtons Face="RaynorCommanderHyperJump" Type="AbilCmd" AbilCmd="RaynorCommanderHyperJump,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="RaynorCommanderHyperionYamatoGun" Type="AbilCmd" AbilCmd="RaynorCommanderHyperionYamatoGun,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="RaynorCommanderAbilPDD" Type="AbilCmd" AbilCmd="RaynorCommanderAbilPDD,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="RaynorCommanderLock" Type="Passive" Row="2" Column="2"/>
         </CardLayouts>
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
@@ -856,6 +857,7 @@
         <CardLayouts>
             <LayoutButtons Face="RaynorCommanderHyperionTopbar" Type="AbilCmd" AbilCmd="RaynorCommanderHyperionTopbar,Execute" Row="0" Column="0"/>
             <LayoutButtons Face="RaynorCommanderBansheeAirstrike" Type="AbilCmd" AbilCmd="RaynorCommanderBansheeAirstrike,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="RaynorCommanderLock" Type="Passive" Row="0" Column="1"/>
         </CardLayouts>
         <EditorCategories value="ObjectType:AbilityTopbars,ObjectFamily:Coop,Race:Raynor"/>
     </CUnit>

@@ -13,7 +13,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium8.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium9.wav" FacialGroup=""/>
     </CSound>
-    <CSound id="RaynorCommanderDuskWingsRockets@SoundImpact" parent="Combat">
+    <CSound id="RaynorCommanderDuskWingsRockets@AttackImpact" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackImpact0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackImpact1.wav"/>
@@ -22,7 +22,7 @@
         <Pitch value="-3.860000,3.160000"/>
         <Volume value="-4.560000,-3.100000"/>
     </CSound>
-    <CSound id="RaynorCommanderDuskWingsRockets@SoundLaunch" parent="Combat">
+    <CSound id="RaynorCommanderDuskWingsRockets@AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackLaunch0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackLaunch1.wav"/>
@@ -280,7 +280,7 @@
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_What04.ogg" FacialAnim="Battlecruiser_What04"/>
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Battlecruiser\Battlecruiser_What05.ogg" FacialAnim="Battlecruiser_What05"/>
     </CSound>
-    <CSound id="RaynorCommanderBackslashRockets@SoundImpact" parent="Combat">
+    <CSound id="RaynorCommanderBackslashRockets@AttackImpact" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackImpact0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackImpact1.wav"/>
@@ -289,7 +289,7 @@
         <Pitch value="-3.860000,3.160000"/>
         <Volume value="-4.560000,-3.100000"/>
     </CSound>
-    <CSound id="RaynorCommanderBackslashRockets@SoundLaunch" parent="Combat">
+    <CSound id="RaynorCommanderBackslashRockets@AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackLaunch0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackLaunch1.wav"/>
@@ -497,7 +497,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" Pitch="-3.000000,3.000000"/>
         <DupeDestroyCount value="5"/>
     </CSound>
-    <CSound id="RaynorCommanderATALaserBatteryAir@Damage@Impact" parent="Combat">
+    <CSound id="RaynorCommanderATALaserBatteryAir@Damage@AttackImpact" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" FacialGroup=""/>
@@ -510,13 +510,13 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall8.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" FacialGroup=""/>
     </CSound>
-    <CSound id="RaynorCommanderATALaserBatteryAir@Damage@Launch" parent="Combat">
+    <CSound id="RaynorCommanderATALaserBatteryAir@Damage@AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch1.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch2.wav" FacialGroup=""/>
     </CSound>
-    <CSound id="RaynorCommanderATSLaserBattery@Impact" parent="Combat">
+    <CSound id="RaynorCommanderATSLaserBattery@AttackImpact" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" FacialGroup=""/>
@@ -529,7 +529,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall8.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall9.wav" FacialGroup=""/>
     </CSound>
-    <CSound id="RaynorCommanderATSLaserBattery@Launch" parent="Combat">
+    <CSound id="RaynorCommanderATSLaserBattery@AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Battlecruiser\Battlecruiser_AttackLaunch1.wav" FacialGroup=""/>

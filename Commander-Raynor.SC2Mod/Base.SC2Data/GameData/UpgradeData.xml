@@ -4,7 +4,7 @@
         <InfoTooltipPriority value="61"/>
         <WebPriority value="0"/>
         <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
-        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="1"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice"/>
         <EditorCategories value="Race:Raynor,UpgradeType:AttackBonus"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderVehicleAndShipWeapons@Level1" parent="RaynorCommanderVehicleAndShipWeapons">
@@ -74,8 +74,13 @@
         <InfoTooltipPriority value="61"/>
         <WebPriority value="0"/>
         <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
-        <EffectArrayTemplate Reference="Effect,^ParamId^,Amount" Value="1"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice"/>
         <EditorCategories value="Race:Raynor,UpgradeType:AttackBonus"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderInfantryWeapon@Level1" parent="RaynorCommanderInfantryWeapon">
+        <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderInfantryWeapon@Level2" parent="RaynorCommanderInfantryWeapon">
         <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level2"/>
@@ -124,11 +129,6 @@
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
         <AffectedUnitArray value="RaynorCommanderMarauder"/>
-    </CUpgrade>
-    <CUpgrade id="RaynorCommanderInfantryWeapon@Level1" parent="RaynorCommanderInfantryWeapon">
-        <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level1"/>
-        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
-        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderRapidRecruitment">
         <Icon value="Assets\Textures\talent-raynor-level01-infantryspecialist.dds"/>

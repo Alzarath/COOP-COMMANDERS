@@ -27,7 +27,7 @@
             <Cooldown TimeUse="240"/>
         </Cost>
         <Arc value="360"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderBansheeAirstrike"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderBansheeAirstrike" Requirements="RaynorCommanderAirStrike"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RaynorCommanderHyperionTopbar">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
@@ -169,7 +169,7 @@
         <Range value="13"/>
         <Arc value="360"/>
         <ProducedUnitArray value="RaynorCommanderPDD"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderAbilPDD">
+        <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderAbilPDD" Requirements="RaynorCommanderPointDefenseDrone">
             <Flags index="UseDefaultButton" value="1"/>
             <Flags index="CreateDefaultButton" value="1"/>
         </CmdButtonArray>

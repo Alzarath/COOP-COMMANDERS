@@ -326,7 +326,7 @@
         <EditorCategories value="Race:Raynor"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
-    <CEffectDamage id="RaynorCommanderWeaponSiegeTank@Blast" parent="DU_WEAP">
+    <CEffectDamage id="RaynorCommanderWeaponSiegeTank@Damage" parent="DU_WEAP">
         <ValidatorArray value=""/>
         <EditorCategories value="Race:Raynor"/>
         <AttributeBonus index="Armored" value="15"/>
@@ -361,10 +361,10 @@
     </CEffectDamage>
     <CEffectSwitch id="RaynorCommanderWeaponSiegeTank@Switch">
         <EditorCategories value="Race:Raynor"/>
-        <CaseArray Validator="TargetRadiusSmall" Effect="RaynorCommanderWeaponSiegeTank@Blast"/>
+        <CaseArray Validator="TargetRadiusSmall" Effect="RaynorCommanderWeaponSiegeTank@Damage"/>
         <CaseArray Validator="TargetRadiusLarge" Effect="RaynorCommanderWeaponSiegeTank@Directed"/>
     </CEffectSwitch>
-    <CEffectDamage id="RaynorCommanderWeaponTank" parent="DU_WEAP">
+    <CEffectDamage id="RaynorCommanderWeaponTank@Damage" parent="DU_WEAP">
         <EditorCategories value="Race:Raynor"/>
         <AttributeBonus index="Armored" value="10"/>
         <Kind value="Ranged"/>
@@ -389,7 +389,7 @@
         <EffectArray value="RaynorCommanderExplode@Damage"/>
         <EffectArray value="Suicide"/>
     </CEffectSet>
-    <CEffectDamage id="RaynorCommanderGaussRiffleC14" parent="DU_WEAP">
+    <CEffectDamage id="RaynorCommanderGaussRiffleC14@Damage" parent="DU_WEAP">
         <EditorCategories value="Race:Raynor"/>
         <Kind value="Ranged"/>
         <Amount value="6"/>
@@ -405,16 +405,16 @@
         <ValidatorArray value="HiddenCompareBA"/>
         <ValidatorArray value="NotVortexd"/>
     </CEffectCreateHealer>
-    <CEffectDamage id="RaynorCommanderPerditionThrower">
+    <CEffectDamage id="RaynorCommanderPerditionThrower@Damage">
         <EditorCategories value="Race:Raynor"/>
-        <Amount value="15"/>
-        <Death value="Fire"/>
-        <AreaArray Radius="1" Fraction="0.8"/>
-        <SearchFilters value="Ground;Self,Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
         <DebugTrace value="1"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
+        <Amount value="15"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="1" Fraction="0.8"/>
         <AreaRelativeOffset value="0,-1"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CenterAtLaunch" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
@@ -481,7 +481,7 @@
         <ImpactEffect value="RaynorCommanderHyperionYamatoGun@Damage"/>
         <AmmoUnit value="RaynorCommanderHyperionYamatoGun@Missile"/>
     </CEffectLaunchMissile>
-    <CEffectDamage id="WeaponRaynorSCV" parent="DU_WEAP">
+    <CEffectDamage id="RaynorCommanderWeaponSCV@Damage" parent="DU_WEAP">
         <EditorCategories value="Race:Raynor"/>
         <Amount value="5"/>
     </CEffectDamage>

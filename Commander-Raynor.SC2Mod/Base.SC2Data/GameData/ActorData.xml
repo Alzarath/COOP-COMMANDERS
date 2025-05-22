@@ -128,6 +128,12 @@
         <On Terms="ActorCreation" Target="_Unit" Send="Create RaynorCommanderHyperJump@Impact"/>
         <On Terms="ActorCreation" Target="_Unit" Send="Create RaynorCommanderHyperJump@ImpactSound"/>
     </CActorSimple>
+    <CActorSound id="RaynorCommanderLoweredSupplies@Lowered" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
+    <CActorSound id="RaynorCommanderLoweredSupplies@Raised" parent="SoundOneShot">
+        <EditorCategories value=""/>
+    </CActorSound>
     <CActorUnit id="RaynorCommanderMissileTurret" parent="CommanderUnitBase" unitName="RaynorCommanderMissileTurret">
         <EditorCategories value=""/>
         <PlacementSound value="RaynorCommanderMissileTurret@Placement"/>
@@ -891,7 +897,7 @@
         </Wireframe>
     </CActorUnit>
     <CActorSplat id="RaynorCommanderBarracks@Splat" parent="TerranBuildingMorphSplat" unitName="RaynorCommanderBarracks"/>
-    <CActorAction id="RaynorCommanderGaussRiffleC14@Attack" parent="GenericAttack" effectAttack="RaynorCommanderGaussRiffleC14">
+    <CActorAction id="RaynorCommanderGaussRiffleC14@Attack" parent="GenericAttack" effectAttack="RaynorCommanderGaussRiffleC14@Damage">
         <ContainerAssets Model="RaynorCommanderGaussRiffleC14@BunkerAttackLaunch" Sound="RaynorCommanderGaussRiffleC14@BunkerAttackLaunch"/>
         <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
         <ImpactPhysics Name="BulletImpact" MatchKeys="Basic" Physics="MarineAttackDeathForce"/>
@@ -971,23 +977,23 @@
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-medic.dds"/>
     </CActorUnit>
-    <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower">
+    <CActorAction id="RaynorCommanderPerditionThrower@Attack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower@Damage">
         <EditorCategories value=""/>
         <LaunchAssets Model="RaynorCommanderPerditionThrower@AttackModel"/>
         <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On index="1" Terms="Effect.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
         <On index="2" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
-        <On index="6" Terms="Effect.RaynorCommanderPerditionThrower.Start; At Caster; ValidatePlayer RaynorCommanderInciniratorGauntlets@Not" Send="Create"/>
+        <On index="6" Terms="Effect.RaynorCommanderPerditionThrower@Damage.Start; At Caster; ValidatePlayer RaynorCommanderInciniratorGauntlets@Not" Send="Create"/>
         <On Terms="Abil.attack.ReadyStop" Send="SetOpacity 0.000000 0.250000"/>
     </CActorAction>
-    <CActorAction id="RaynorCommanderPerditionThrower@UpgradeAttack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower">
+    <CActorAction id="RaynorCommanderPerditionThrower@UpgradeAttack" parent="GenericAttack" effectAttack="" effectImpact="" effectLaunch="RaynorCommanderPerditionThrower@Damage">
         <EditorCategories value=""/>
         <On index="0" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On index="1" Terms="Effect.Start; FromEffectTreeDescendant" Send="ActionImpact"/>
         <On index="2" Terms="Effect.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
         <On index="5" Terms="Effect.Start; At Caster" Send="Create"/>
-        <On index="6" Terms="Effect.RaynorCommanderPerditionThrower.Start; At Caster; ValidatePlayer RaynorCommanderInciniratorGauntlets" Send="Create"/>
+        <On index="6" Terms="Effect.RaynorCommanderPerditionThrower@Damage.Start; At Caster; ValidatePlayer RaynorCommanderInciniratorGauntlets" Send="Create"/>
         <On Terms="Abil.attack.ReadyStop" Send="SetOpacity 0.000000 0.250000"/>
         <LaunchAssets Model="RaynorCommanderPerditionThrower@UpgradeAttackModel" Sound="RaynorCommanderPerditionThrower@AttackLaunch"/>
     </CActorAction>
@@ -1409,7 +1415,7 @@
             <Image value="Assets\Textures\Wireframe-Terran-Starport.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorAction id="RaynorCommanderWeaponTank@Attack" parent="GenericAttack" effectAttack="RaynorCommanderWeaponTank">
+    <CActorAction id="RaynorCommanderWeaponTank@Attack" parent="GenericAttack" effectAttack="RaynorCommanderWeaponTank@Damage">
         <LaunchAttachQuery Methods="AMPatternRollingStripe"/>
         <LaunchAssets Sound="RaynorCommanderWeaponTank@Launch"/>
         <ImpactPhysics Name="90mmCannonImpact" MatchKeys="Basic" Physics="SiegeTankAttackForce"/>
@@ -1426,7 +1432,7 @@
         <Model value="GenericAttackModel"/>
         <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
-    <CActorAction id="RaynorCommanderWeaponSiegeTank@Attack" parent="GenericAttack" effectAttack="RaynorCommanderWeaponSiegeTank@Blast">
+    <CActorAction id="RaynorCommanderWeaponSiegeTank@Attack" parent="GenericAttack" effectAttack="RaynorCommanderWeaponSiegeTank@Damage">
         <LaunchAssets Model="RaynorCommanderWeaponSiegeTank@Launch"/>
         <ImpactSiteOps Ops="SOpActionCenter SOpTargetUnitZ" HoldPosition="1"/>
         <ImpactMap index="None" Model="RaynorCommanderWeaponSiegeTank@Impact"/>
@@ -1858,9 +1864,9 @@
     </CActorUnit>
     <CActorAction id="RaynorCommanderLanzerTorpedoes@Attack" parent="VikingFighterAttackBase" effectImpact="RaynorCommanderLanzerTorpedoes@Damage" effectLaunch="LanzerTorpedoesLM">
         <On Terms="Effect.RaynorCommanderLanzerTorpedoes@LM.Start; At Caster" Send="Create"/>
-        <LaunchAssets Sound="RaynorCommanderLanzerTorpedoes@LaunchSound"/>
+        <LaunchAssets Sound="RaynorCommanderLanzerTorpedoes@AttackLaunch"/>
         <Missile value="RaynorCommanderLanzerTorpedoes@AttackMissile"/>
-        <ImpactMap index="None" Sound="RaynorCommanderLanzerTorpedoes@ImpactSound"/>
+        <ImpactMap index="None" Sound="RaynorCommanderLanzerTorpedoes@AttackImpact"/>
         <ImpactPhysics Name="LanzerTorpedoImpact" MatchKeys="Basic" Physics="LanzerTorpedoAttackDeathForce"/>
     </CActorAction>
     <CActorMissile id="RaynorCommanderLanzerTorpedoes@AttackMissile">
@@ -1875,12 +1881,13 @@
         <On Terms="UnitDeath" Send="Destroy"/>
         <On Terms="ActorOrphan" Send="Destroy"/>
         <PreHost value="_ActorAction"/>
+        <Model value="RaynorCommanderLanzerTorpedoes@Missile"/>
     </CActorMissile>
-    <CActorAction id="WeaponRaynorSCV@Attack" parent="GenericAttack" effectAttack="WeaponRaynorSCV">
+    <CActorAction id="RaynorCommanderWeaponSCV@Attack" parent="GenericAttack" effectAttack="RaynorCommanderWeaponSCV@Damage">
         <ShieldFlashType value="Header"/>
     </CActorAction>
-    <CActorSound id="WeaponRaynorSCV@AttackLaunch" parent="SoundOneShot">
-        <On Terms="WeaponStart.WeaponRaynorSCV.AttackStart" Send="Create"/>
+    <CActorSound id="RaynorCommanderWeaponSCV@AttackLaunch" parent="SoundOneShot">
+        <On Terms="WeaponStart.RaynorCommanderWeaponSCV.AttackStart" Send="Create"/>
     </CActorSound>
     <CActorRange id="RaynorCommanderYamatoGun@Range" parent="RangeAbil" abil="RaynorCommanderYamatoGun">
         <Icon value="Assets\Textures\RadarIcon2.dds"/>

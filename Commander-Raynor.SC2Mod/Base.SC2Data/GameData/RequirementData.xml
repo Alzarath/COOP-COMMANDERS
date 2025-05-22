@@ -27,6 +27,7 @@
     <CRequirement id="RaynorCommanderBattlecruiser">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>
         <NodeArray index="Use" Link="CountUnitAlias_RaynorTechLabCompleteOnlyAtUnit"/>
+        <NodeArray index="Show" Link="CountUpgradeRaynorCommanderNewUnitBattlecruiserCompleteOnly"/>
     </CRequirement>
     <CRequirement id="RaynorCommanderCommandCenter">
         <EditorCategories value="Race:Raynor,TechType:Unit"/>

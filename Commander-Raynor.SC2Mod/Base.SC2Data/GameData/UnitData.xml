@@ -1398,7 +1398,7 @@
         <AbilArray Link="Repair"/>
         <AbilArray Link="SCVHarvest"/>
         <AbilArray Link="RaynorCommanderBuildSCV"/>
-        <WeaponArray Link="WeaponRaynorSCV"/>
+        <WeaponArray Link="RaynorCommanderWeaponSCV"/>
         <CardLayouts index="0">
             <LayoutButtons Face="RaynorCommanderRepair" Type="AbilCmd" AbilCmd="Repair,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="RaynorCommanderGather" Type="AbilCmd" AbilCmd="SCVHarvest,Gather" Row="1" Column="0"/>

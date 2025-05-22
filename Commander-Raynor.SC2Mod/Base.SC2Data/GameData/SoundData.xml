@@ -76,6 +76,12 @@
     <CSound id="RaynorCommanderFusionCore@Placement" parent="Terran_BuildingPlacement">
         <EditorCategories value="Race:Raynor"/>
     </CSound>
+    <CSound id="RaynorCommanderLoweredSupplies@Lowered" parent="Ambience_Object">
+        <EditorCategories value="Race:Raynor"/>
+    </CSound>
+    <CSound id="RaynorCommanderLoweredSupplies@Raised" parent="Ambience_Object">
+        <EditorCategories value="Race:Raynor"/>
+    </CSound>
     <CSound id="RaynorCommanderMarauder@DeathVoice" parent="DeathVoice">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Marauder\Marauder_Death00.wav" FacialGroup=""/>
@@ -1808,7 +1814,7 @@
         <DupeDestroyCount value="5"/>
         <Volume value="-9.000000,-9.000000"/>
     </CSound>
-    <CSound id="RaynorCommanderLanzerTorpedoes@ImpactSound" parent="Combat">
+    <CSound id="RaynorCommanderLanzerTorpedoes@AttackImpact" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall0.wav" Pitch="-3.000000,3.000000"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionSmall1.wav" Pitch="-3.000000,3.000000"/>
@@ -1928,7 +1934,7 @@
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Viking\Viking_Yes10.ogg" FacialAnim="Viking_Yes10"/>
         <Volume value="-4.000000,-4.000000"/>
     </CSound>
-    <CSound id="RaynorCommanderLanzerTorpedoes@LaunchSound" parent="Combat">
+    <CSound id="RaynorCommanderLanzerTorpedoes@AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Viking\Viking_FighterAttackLaunch0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Viking\Viking_FighterAttackLaunch1.wav"/>
@@ -1955,7 +1961,7 @@
         <Pitch value="4.000000,4.000000"/>
         <Volume value="-12.120000,-10.120000"/>
     </CSound>
-    <CSound id="WeaponRaynorSCV@AttackLaunch" parent="Combat">
+    <CSound id="RaynorCommanderWeaponSCV@AttackLaunch" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\SCV\SCV_AttackLaunch0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SCV\SCV_AttackLaunch1.wav"/>

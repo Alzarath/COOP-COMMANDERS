@@ -98,6 +98,8 @@
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="7"/>
         <Period value="1.04"/>
+        <DisplayEffect value="RaynorCommanderWeaponTank@Damage"/>
+        <Effect value="RaynorCommanderWeaponTank@Damage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderExplode">
         <EditorCategories value="Race:Raynor"/>
@@ -121,6 +123,8 @@
         <Period value="0.8608"/>
         <DamagePoint value="0.05"/>
         <Backswing value="0.75"/>
+        <DisplayEffect value="RaynorCommanderGaussRiffleC14@Damage"/>
+        <Effect value="RaynorCommanderGaussRiffleC14@Damage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPerditionThrower">
         <EditorCategories value="Race:Raynor"/>
@@ -129,6 +133,8 @@
         <DamagePoint value="1.2"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <TargetFilters value="Ground,Visible;Self,Missile,Hidden,Invulnerable"/>
+        <DisplayEffect value="RaynorCommanderPerditionThrower@Damage"/>
+        <Effect value="RaynorCommanderPerditionThrower@Damage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderPunisherGrenades">
         <EditorCategories value="Race:Raynor"/>
@@ -149,12 +155,14 @@
         <Period value="1.694"/>
         <Backswing value="0"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="WeaponRaynorSCV">
+    <CWeaponLegacy id="RaynorCommanderWeaponSCV">
         <EditorCategories value="Race:Raynor"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="0.1"/>
         <Period value="1.5"/>
+        <DisplayEffect value="RaynorCommanderWeaponSCV@Damage"/>
+        <Effect value="RaynorCommanderWeaponSCV@Damage"/>
     </CWeaponLegacy>
 </Catalog>

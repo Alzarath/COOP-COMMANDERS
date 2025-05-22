@@ -194,6 +194,7 @@
         <Fields Reference="DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice" NameOverride="DataCollectionPattern/CommanderWeapon/DamagePerDice_01"/>
         <Fields Reference="DataCollection,^ParamId^,UpgradeInfoWeapon[2].DamagePerDice" NameOverride="DataCollectionPattern/CommanderWeapon/DamagePerDice_02"/>
         <Fields Reference="DataCollection,^ParamId^,UpgradeInfoWeapon[3].DamagePerDice" NameOverride="DataCollectionPattern/CommanderWeapon/DamagePerDice_03"/>
+        <Fields Reference="DataCollection,^ParamId^,TechInfoUpgradeUsed" NameOverride="DataCollectionPattern/CommanderWeapon/TechInfoUpgradeUsed"/>
         <Fields Reference="Weapon,^ParamId^,Period"/>
         <Fields Reference="Weapon,^ParamId^,Range"/>
         <Fields Reference="Weapon,^ParamId^,TargetFilters"/>
@@ -310,7 +311,7 @@
     </CDataCollectionPattern>
     <CDataCollectionPattern id="CommanderWeapon_Missile" parent="CommanderWeapon">
         <Fields Reference="Mover,^ParamId^@Weapon,MotionPhases.MaxSpeed" NameOverride="DataCollectionPattern/CommanderWeapon/SpeedMissile"/>
-        <Fields Reference="Model,^ParamId^@Missile,Model"/>
+        <Fields Reference="Model,^ParamId^@Missile,Model" NameOverride="DataCollectionPattern/CommanderWeapon/MissileModel"/>
     </CDataCollectionPattern>
     <CDataCollectionPattern id="CommanderAbilities_Beam"/>
     <CDataCollectionPattern id="CommanderUpgrade_LevelStats">

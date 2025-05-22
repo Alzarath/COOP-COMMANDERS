@@ -462,7 +462,7 @@
         <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderATSLaserBattery@Missile" parent="MissileFX">
-        <Model value="Assets\Effects\Terran\BattleCruiserMissile\BattleCruiserMissile.m3"/>
+        <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
@@ -1057,7 +1057,7 @@
         <Model value="Assets\Effects\Terran\VikingFighterMissile\VikingFighterMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="RaynorCommanderLanzerTorpedoes@AttackMissile" parent="MissileFX">
+    <CModel id="RaynorCommanderLanzerTorpedoes@Missile" parent="MissileFX">
         <Model value="Assets\Effects\Terran\VikingFighterMissile\VikingFighterMissile.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
@@ -1065,7 +1065,7 @@
         <Model value="Assets\Units\Terran\VikingMorph\VikingMorph.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
-    <CModel id="WeaponRaynorSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
+    <CModel id="RaynorCommanderWeaponSCV@AttackLaunch" parent="RaceImpactFX" Race="Terran">
         <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>

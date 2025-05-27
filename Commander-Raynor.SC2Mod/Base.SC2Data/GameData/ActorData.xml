@@ -155,6 +155,16 @@
     <CActorSound id="RaynorCommanderOrbitaldroppods@Sound" parent="SoundOneShot">
         <EditorCategories value=""/>
     </CActorSound>
+    <CActorUnit id="RaynorCommanderRefinery" parent="CommanderUnitBase" unitName="RaynorCommanderRefinery">
+        <Aliases value="_CreepEngulfable"/>
+        <Aliases value="_UnitHuge"/>
+        <CreepHeightClass value="Medium"/>
+        <CreepRateGrow value="Grow"/>
+        <CreepRateShrink value="Shrink"/>
+        <PlacementSound value="RaynorCommanderRefinery@Placement"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-refinery.dds"/>
+    </CActorUnit>
     <CActorModel id="RaynorCommanderStarport@Build" parent="TerranBuildingBuild">
         <On index="4" Terms="ActorCreation" Send="Create RaynorCommanderConstruction@Attached"/>
     </CActorModel>

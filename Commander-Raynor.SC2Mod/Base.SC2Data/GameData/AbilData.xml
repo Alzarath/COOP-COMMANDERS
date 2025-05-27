@@ -243,8 +243,8 @@
                 <DurationArray index="Duration" value="0.6"/>
             </SectionArray>
         </InfoArray>
-        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Worker,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
-        <AutoCastRange value="2"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="3"/>
         <AutoCastCountMin value="1"/>
         <Cost>
             <Charge Link="Abil/RaynorSpiderUnburrow"/>
@@ -408,7 +408,7 @@
         <InfoArray index="Build2" Unit="RaynorCommanderSupplyDepot">
             <Button DefaultButtonFace="RaynorCommanderSupplyDepot"/>
         </InfoArray>
-        <InfoArray index="Build3" Unit="Refinery" Time="30">
+        <InfoArray index="Build3" Unit="RaynorCommanderRefinery">
             <Button DefaultButtonFace="RaynorCommanderRefinery"/>
             <ValidatorArray value="HasVespene2"/>
         </InfoArray>
@@ -424,7 +424,7 @@
         <InfoArray index="Build7" Unit="RaynorCommanderBunker">
             <Button DefaultButtonFace="RaynorCommanderBunker" State="Restricted"/>
         </InfoArray>
-        <InfoArray index="Build8" Unit="RefineryRich" Time="30">
+        <InfoArray index="Build8" Unit="RaynorCommanderRefinery">
             <Button DefaultButtonFace="RaynorCommanderRefinery"/>
             <ValidatorArray value="HasVespene2"/>
         </InfoArray>

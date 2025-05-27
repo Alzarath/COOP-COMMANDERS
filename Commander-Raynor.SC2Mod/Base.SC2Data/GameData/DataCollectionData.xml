@@ -522,6 +522,15 @@
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderRefinery" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
+        <DataRecord Entry="Actor,RaynorCommanderRefinery"/>
+        <DataRecord Entry="Button,RaynorCommanderRefinery"/>
+        <DataRecord Entry="Model,RaynorCommanderRefinery"/>
+        <DataRecord Entry="Model,RaynorCommanderRefinery@Death"/>
+        <DataRecord Entry="Model,RaynorCommanderRefinery@Build"/>
+        <DataRecord Entry="Model,RaynorCommanderRefinery@Placement"/>
+        <DataRecord Entry="Model,RaynorCommanderRefinery@Portrait"/>
+        <DataRecord Entry="Sound,RaynorCommanderRefinery@Placement"/>
+        <DataRecord Entry="Unit,RaynorCommanderRefinery"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderSiegeTank" parent="CommanderUnitMorphing">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,ObjectType:Unit"/>

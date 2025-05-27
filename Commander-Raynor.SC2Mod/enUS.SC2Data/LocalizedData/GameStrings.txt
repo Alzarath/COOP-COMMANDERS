@@ -395,6 +395,7 @@ Unit/Name/COOP/RaynorCommanderMarauder=Marauder
 Unit/Name/COOP/RaynorCommanderMarine=Marine
 Unit/Name/COOP/RaynorCommanderMedic=Medic
 Unit/Name/COOP/RaynorCommanderMissileTurret=Missile Turret
+Unit/Name/COOP/RaynorCommanderRefinery=Refinery
 Unit/Name/RaynorCommanderATALaserBatteryAir@Damage@Missile=Missile
 Unit/Name/RaynorCommanderATSLaserBattery@Missile=Missile
 Unit/Name/RaynorCommanderAbilPDD@Missile=Missile

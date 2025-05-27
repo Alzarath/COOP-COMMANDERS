@@ -151,6 +151,22 @@
         <Model value="Assets\Effects\Terran\DropPodFalling\DropPodFalling.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
+    <CModel id="RaynorCommanderRefinery" parent="Refinery">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderRefinery@Build" parent="TerranBuildingBuild">
+        <Model value="Assets\Buildings\Terran\RefineryBuild\RefineryBuild.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderRefinery@Death" parent="RefineryDeath">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderRefinery@Placement" parent="RefineryPlacement">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
+    <CModel id="RaynorCommanderRefinery@Portrait" parent="AdjutantPortrait">
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderStarport@Build" parent="TerranBuildingBuild">
         <EditorCategories value="Race:Raynor"/>
     </CModel>

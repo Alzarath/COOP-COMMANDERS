@@ -109,12 +109,14 @@
         <Range value="0.1"/>
         <Effect value="RaynorCommanderExplode@Set"/>
         <Options index="Melee" value="1"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <AcquireScanFilters value="Ground,Visible;Structure,Missile,Dead,Hidden,Hallucination,Invulnerable"/>
         <AcquireTargetSorts RequestCount="1">
             <SortArray value="TSDistance"/>
             <SortArray value="TSEnergy"/>
         </AcquireTargetSorts>
         <AcquireFilters value="Ground,Visible;Structure,Missile,Dead,Hidden,Hallucination,Invulnerable"/>
+        <Arc value="360"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RaynorCommanderGaussRiffleC14">
         <EditorCategories value="Race:Raynor"/>

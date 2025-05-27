@@ -134,6 +134,9 @@
         <OffsetFadeIn Time="1465"/>
         <OffsetFadeIn Time="10925"/>
     </CSound>
+    <CSound id="RaynorCommanderRefinery@Placement" parent="Terran_BuildingPlacement">
+        <EditorCategories value="Race:Raynor"/>
+    </CSound>
     <CSound id="RaynorCommanderSupplyDepot@Sound" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
     </CSound>

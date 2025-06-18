@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="CheatCommand">
+        <Fields>
+            <Id value="alias"/>
+            <Type value="String"/>
+            <Count value="5"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Fields Id="Param Type" Type="String" Count="5"/>
+        <Fields>
+            <Id value="Param_name"/>
+            <Type value="Text"/>
+            <Count value="5"/>
+            <EditorColumn value="2"/>
+        </Fields>
+        <Fields>
+            <Id value="Param_errors"/>
+            <Type value="Text"/>
+            <Count value="5"/>
+            <EditorColumn value="3"/>
+        </Fields>
+        <Fields Id="Type" Type="User" UserType="CheatCodeType"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="spawn">
+            <String String="s">
+                <Field Id="alias"/>
+            </String>
+            <Text Text="UserData/CheatCommand/spawn_Param_name">
+                <Field Id="Param_name"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/spawn_Param_name_001">
+                <Field Id="Param_name" Index="1"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/spawn_Param_name_002">
+                <Field Id="Param_name" Index="2"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/spawn_Param_name_003">
+                <Field Id="Param_name" Index="3"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/spawn_Param_errors_001">
+                <Field Id="Param_errors" Index="1"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/spawn_Param_errors_003">
+                <Field Id="Param_errors" Index="3"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/spawn_Param_errors_004">
+                <Field Id="Param_errors" Index="4"/>
+            </Text>
+            <User Type="CheatCodeType" Instance="Units">
+                <Field Id="Type"/>
+            </User>
+        </Instances>
+        <Instances Id="alliance">
+            <String String="ally">
+                <Field Id="alias"/>
+            </String>
+            <String String="number">
+                <Field Id="Param Type"/>
+            </String>
+            <String String="number">
+                <Field Id="Param Type" Index="1"/>
+            </String>
+            <String String="preset &lt;alliance&gt;">
+                <Field Id="Param Type" Index="2"/>
+            </String>
+            <String String="bool">
+                <Field Id="Param Type" Index="3"/>
+            </String>
+            <Text Text="UserData/CheatCommand/alliance_Param_name">
+                <Field Id="Param_name"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/alliance_Param_name_001">
+                <Field Id="Param_name" Index="1"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/alliance_Param_name_002">
+                <Field Id="Param_name" Index="2"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/alliance_Param_name_003">
+                <Field Id="Param_name" Index="3"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/alliance_Param_errors">
+                <Field Id="Param_errors"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/alliance_Param_errors_001">
+                <Field Id="Param_errors" Index="1"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/alliance_Param_errors_002">
+                <Field Id="Param_errors" Index="2"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/alliance_Param_errors_003">
+                <Field Id="Param_errors" Index="3"/>
+            </Text>
+            <User Type="CheatCodeType" Instance="Players">
+                <Field Id="Type"/>
+            </User>
+        </Instances>
+        <Instances Id="death">
+            <String String="dth">
+                <Field Id="alias"/>
+            </String>
+            <String String="unitgroup">
+                <Field Id="Param Type"/>
+            </String>
+            <String String="player">
+                <Field Id="Param Type" Index="1"/>
+            </String>
+            <String String="number">
+                <Field Id="Param Type" Index="2"/>
+            </String>
+            <Text Text="UserData/CheatCommand/death_Param_name">
+                <Field Id="Param_name"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/death_Param_name_001">
+                <Field Id="Param_name" Index="1"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/death_Param_errors">
+                <Field Id="Param_errors"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/death_Param_errors_001">
+                <Field Id="Param_errors" Index="1"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/death_Param_errors_002">
+                <Field Id="Param_errors" Index="2"/>
+            </Text>
+            <Text Text="UserData/CheatCommand/death_Param_name_002">
+                <Field Id="Param_name" Index="2"/>
+            </Text>
+            <User Type="CheatCodeType" Instance="Units">
+                <Field Id="Type"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="CheatCodeType">
+        <Fields Id="Prefix" Type="String"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Units">
+            <String String="@">
+                <Field Id="Prefix"/>
+            </String>
+        </Instances>
+        <Instances Id="Players">
+            <String String="-">
+                <Field Id="Prefix"/>
+            </String>
+        </Instances>
+        <Instances Id="Weapons">
+            <String String="&gt;">
+                <Field Id="Prefix"/>
+            </String>
+        </Instances>
+    </CUser>
+</Catalog>

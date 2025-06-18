@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="CheatBuilder" parent="GenericUnitStandard" unitName="CheatTrain">
+        <EditorCategories value=""/>
+        <Model value="Sphere"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-ability-protoss-chronoboost.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <On Terms="UnitBirth.CheatTrain2" Send="Create"/>
+        <On Terms="UnitBirth.CheatBuild" Send="Create"/>
+        <On Terms="UnitBirth.CheatBuild2" Send="Create"/>
+    </CActorUnit>
+</Catalog>

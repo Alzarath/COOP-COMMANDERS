@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+    <Constant name="WidthHeightButton" val="50"/>
+
+    <Frame type="CommandPanel" name="CheatSpawnerUnitTemplate" template="CommandPanel/CommandPanelTemplate">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Height val="#WidthHeightButton"/>
+        <DisplayCancelCommandCard val="False"/>
+        <UseGridHotkeys val="True"/>
+
+        <Frame type="CommandButton" name="CommandButton00">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton01">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton00" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton02">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton01" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton03">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton02" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton04">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton03" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton05">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton04" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton06">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton05" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton07">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton06" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton08">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton07" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton09">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton08" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton10">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton09" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton11">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton10" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton12">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton11" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton13">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton12" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton14">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/CommandButton13" pos="Min" offset="0"/>
+            <Width val="#WidthHeightButton"/>
+            <Height val="#WidthHeightButton"/>
+        </Frame>
+
+    </Frame>
+
+    <Frame type="Button" name="RaceSelectButtonTemplate">
+        <Width val="45"/>
+        <Height val="45"/>
+
+        <Frame type="Image" name="NormalImage">
+            <Anchor relative="$parent"/>
+            <Texture val="Assets\Textures\ui_battlenet_glue_bluecheckbox_normalpressed.dds"/>
+            <TextureType val="Normal"/>
+            <StateCount val="2"/>
+        </Frame>
+        
+        <Frame type="Image" name="HoverImage">
+            <Anchor relative="$parent"/>
+            <StateCount val="2"/>
+            <Texture val="Assets\Textures\ui_battlenet_glue_bluecheckbox_normaloverpressedover.dds"/>
+            <TextureType val="Normal"/>
+        </Frame>
+
+        <Frame type="Image" name="RaceIcon">
+            <Anchor relative="$parent"/>
+            <TextureType val="Normal"/>
+        </Frame>
+
+        <StateGroup name="ExistRace">
+            <DefaultState val="Default"/>
+        
+            <State name="1">
+                <When type="Property" Texture="" frame="$this/RaceIcon" operator="NotEqual"/>
+                <Action type="SetProperty" Visible="True" frame="$this"/>
+            </State>
+        
+            <State name="Default">
+                <Action type="SetProperty" Visible="False" frame="$this"/>
+            </State>
+        </StateGroup>
+    </Frame>
+
+    <!-- -->
+
+    <Frame type="Frame" name="GameUI/UIContainer/FullscreenUpperContainer" file="GameUI">
+        <Frame type="Frame" name="CheatSpawner">
+            <Handle val="CheatSpawner"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="150"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Width val="1600"/>
+            <Height val="450"/>
+            <Visible val="False"/>
+
+            <Frame type="Frame" name="RaceSelector">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Height val="45"/>
+
+                <Frame type="Button" name="Race1" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race2" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race1" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race3" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race2" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race4" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race3" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race5" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race4" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race6" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race5" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race7" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race6" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race8" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race7" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race9" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race8" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race10" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race9" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race11" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race10" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+            </Frame>
+
+            <Frame type="Frame" name="Content">
+                <Anchor side="Top" relative="$parent/RaceSelector" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+
+                <Frame type="Image" name="BG">
+                    <Anchor relative="$parent"/>
+                    <ColorAdjustMode val="Fill"/>
+                    <AdjustmentColor val="5a5a5a"/>
+                    <Alpha val="90"/>
+                </Frame>
+    
+                <Frame type="CommandPanel" name="PanelUnit" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
+                </Frame>
+                <Frame type="CommandPanel" name="PanelUnit2" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Top" relative="$parent/PanelUnit" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
+                </Frame>
+    
+                <!-- -->
+    
+                <Frame type="CommandPanel" name="PanelBuilding" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="50"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="CommandPanel" name="PanelBuilding2" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Top" relative="$parent/PanelBuilding" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+
+            </Frame>
+
+            
+        </Frame>
+    </Frame>
+</Desc>

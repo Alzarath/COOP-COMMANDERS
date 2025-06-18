@@ -1,0 +1,72 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Cheat Engine
+//--------------------------------------------------------------------------------------------------
+// Preset Declarations
+const int lib6CA20615_ge_CheatCommandErrors_Notnumber = 0;
+const int lib6CA20615_ge_CheatCommandErrors_Notpreset = 1;
+const int lib6CA20615_ge_CheatCommandErrors_Notbool = 2;
+
+// Structures
+struct lib6CA20615_gs_Cheat_DeathUnits {
+    string lv_deathUnits_unitgroup;
+    string lv_deathUnits_Players;
+    int lv_deathUnits_MaxUnits;
+    playergroup lv_lastPlayerGroup;
+};
+
+struct lib6CA20615_gs_Cheat_SpawnUnits {
+    string lv_spawnUnit_LastCreatedUnitType;
+    bool lv_spawnUnit_Birth;
+    int lv_spawnUnit_Player;
+    int lv_spawnUnit_Amount;
+};
+
+struct lib6CA20615_gs_Player_Cheat {
+    lib6CA20615_gs_Cheat_SpawnUnits lv_unitSpawn;
+    lib6CA20615_gs_Cheat_DeathUnits lv_deathUnits;
+};
+
+// Variable Declarations
+string lib6CA20615_gv_dummyIcon;
+unitgroup lib6CA20615_gv_builderUnit;
+unitgroup lib6CA20615_gv_builderStructure;
+int lib6CA20615_gv_uispawner;
+int[2] lib6CA20615_gv_uiUnit;
+int[2] lib6CA20615_gv_uiStructure;
+int[51] lib6CA20615_gv_selectorRace;
+lib6CA20615_gs_Player_Cheat[16] lib6CA20615_gv_player_Cheat;
+
+// Function Declarations
+void lib6CA20615_gf_updatespawnerui (string lp_race);
+string lib6CA20615_gf_CheckEditorCategoriesObjectType (string lp_unit);
+string lib6CA20615_gf_CheckEditorCategoriesObjectFamily (string lp_unit);
+string lib6CA20615_gf_SearchIconForUnit (string lp_unit);
+unitgroup lib6CA20615_gf_ValueOfCheatUnitGroup (string lp_name);
+playergroup lib6CA20615_gf_ValueOfCheatPlayerGroup (string lp_name);
+void lib6CA20615_gf_Spawnunit (point lp_point, int lp_originPlayer, string lp_command);
+void lib6CA20615_gf_DeathUnit (int lp_originPlayer, string lp_command);
+bool lib6CA20615_gf_CharisInteger (string lp_char);
+string lib6CA20615_gf_StringIsUnitGrouppreset (string lp_string);
+bool lib6CA20615_gf_StringIsPlayerGrouppreset (string lp_string);
+bool lib6CA20615_gf_StringIsPlayer (string lp_string);
+bool lib6CA20615_gf_StringIsString (string lp_string);
+bool lib6CA20615_gf_StringIsBool (string lp_string);
+bool lib6CA20615_gf_StringIsInteger (string lp_string);
+bool lib6CA20615_gf_StringIsReal (string lp_string);
+string lib6CA20615_gf_SearchCheat (string lp_cheat);
+string lib6CA20615_gf_CheatType (string lp_cheat);
+string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_command, int lp_index);
+
+// Trigger Declarations
+trigger lib6CA20615_gt_init;
+trigger lib6CA20615_gt_CheatCodeUnits;
+trigger lib6CA20615_gt_showspawnerui;
+trigger lib6CA20615_gt_hidespawnerui;
+trigger lib6CA20615_gt_createbuilder;
+trigger lib6CA20615_gt_setunitsbuilder;
+
+// Library Initialization
+void lib6CA20615_InitVariables ();
+

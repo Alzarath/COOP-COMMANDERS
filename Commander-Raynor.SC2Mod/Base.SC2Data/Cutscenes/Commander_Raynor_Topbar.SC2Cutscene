@@ -14,6 +14,9 @@
         <CCutsceneNodeActiveCamera guid="13123261292165159476" name="Active Camera">
             <CCutsceneElementActiveCamera guid="7606927803627205597" start="111" cameraIndex="0" objectGuid="11664754513484812410"/>
         </CCutsceneNodeActiveCamera>
+        <CCutsceneNodeActiveLight guid="11381804041937289408" name="Active Light">
+            <CCutsceneElementActiveLight guid="6868828388154973917" lightGUID="0" lightID="ConsoleTerrCalldown" lightIndex="0" blendTime="0"/>
+        </CCutsceneNodeActiveLight>
     </CCutsceneNodeDirector>
     <CCutsceneNodeActor guid="11664754513484812410" name="UI_Screens_Mission_TerranCalldownTwo" position="-0.018684,0.001091,0.000000" modelPath="Assets\UI\Topbars\UI_Screens_Mission_TerranCalldownTwo.m3" shadowBox="0" teamColorDiffuse="0.705800,0.078300,0.117600,1.000000" teamColorEmissive="0.545100,0.062700,0.086100,1.000000">
         <CCutsceneElementObject guid="5143401691657638010" start="111" duration="4390" lockedToEnd="1"/>

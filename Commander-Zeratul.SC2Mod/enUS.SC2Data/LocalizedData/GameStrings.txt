@@ -1,0 +1,7 @@
+﻿DataCollection/Name/ZeratulCommander=Zeratul Data
+DataCollection/Name/ZeratulCommanderAncientNexus=Ancient Nexus
+DataCollectionPattern/CommanderData/BuildingLarge/Model=Building Model (Large)
+DataCollectionPattern/CommanderData/BuildingPortrait/Model=Building Portrait
+DataCollectionPattern/CommanderData/BuildingSmall/Model=Building Model (Small)
+Race/Name/COOPZeratul=Zeratul
+Unit/Name/COOP/ZeratulCommanderAncientNexus=Ancient Nexus

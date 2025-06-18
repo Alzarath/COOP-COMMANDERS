@@ -13,6 +13,13 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium8.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium9.wav" FacialGroup=""/>
     </CSound>
+    <CSound id="RaynorCommanderBansheeAirstrike@Sound" parent="Ambience_Object">
+        <EditorCategories value="Race:Raynor"/>
+        <AssetArray File="Assets\Sounds\AC_Banshee_AirDrop_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\AC_Banshee_AirDrop_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\AC_Banshee_AirDrop_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\AC_Banshee_AirDrop_04.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="RaynorCommanderDuskWingsRockets@AttackImpact" parent="Combat">
         <EditorCategories value="Race:Raynor"/>
         <AssetArray File="Assets\Sounds\Terran\Banshee\Banshee_AttackImpact0.wav"/>

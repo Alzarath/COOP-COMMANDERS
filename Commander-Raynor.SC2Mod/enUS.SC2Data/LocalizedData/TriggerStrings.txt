@@ -1,7 +1,9 @@
 ﻿Category/Name/lib_DD453873_4EBFAD25=Top Bar
 Category/Name/lib_DD453873_97F9A914=Debug
 FunctionDef/Name/lib_DD453873_AE5C6487=Show/Hide TopBar Raynor
+FunctionDef/Name/lib_DD453873_CF40EE8C=Unlock Talent
 Library/Name/DD453873=COMMANDER - Raynor
+ParamDef/Name/lib_DD453873_1862D40F=p
 ParamDef/Name/lib_DD453873_460303D0=Players
 ParamDef/Name/lib_DD453873_CD4C92C3=Show/Hide Options
 Structure/Name/lib_DD453873_64C9F948=UI_TopBar

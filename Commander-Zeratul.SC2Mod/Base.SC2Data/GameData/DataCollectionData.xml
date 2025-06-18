@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollection id="ZeratulCommander">
+        <EditorCategories value="DataGroup:Doodad,Race:Zeratul,ObjectType:Set"/>
+        <DataRecord Entry="Bundle,ZeratulCommander"/>
+        <DataRecord Entry="Model,ZeratulCommander@PortraitStructure"/>
+        <DataRecord Entry="Model,ZeratulCommander@BuildingLarge"/>
+        <DataRecord Entry="Model,ZeratulCommander@BuildingSmall"/>
+        <Pattern value="CommanderData"/>
+    </CDataCollection>
+    <CDataCollectionUnit id="ZeratulCommanderAncientNexus" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Zeratul,ObjectType:Structure"/>
+        <DataRecord Entry="Unit,ZeratulCommanderAncientNexus"/>
+        <DataRecord Entry="Actor,ZeratulCommanderAncientNexus"/>
+        <DataRecord Entry="Model,ZeratulCommanderAncientNexus"/>
+        <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Death"/>
+        <DataRecord Entry="Model,ZeratulCommander@PortraitStructure"/>
+        <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Build"/>
+    </CDataCollectionUnit>
+</Catalog>

@@ -8,6 +8,48 @@
         <PeriodicEffectArray value="RaynorCommanderBackslashRockets@LM"/>
         <PeriodicPeriodArray value="0.15"/>
     </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="RaynorCommanderBansheeAirstrike">
+        <EditorCategories value="Race:Raynor"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="RaynorCommanderBansheeAirstrike@CU"/>
+        <PeriodicEffectArray value="RaynorCommanderBansheeAirstrike@CU"/>
+        <PeriodicEffectArray value="RaynorCommanderBansheeAirstrike@CU"/>
+        <PeriodicEffectArray value="RaynorCommanderBansheeAirstrike@CU"/>
+        <PeriodicEffectArray value="RaynorCommanderBansheeAirstrike@CU"/>
+        <PeriodicOffsetArray value="0,0,0"/>
+        <PeriodicOffsetArray value="0,3,0"/>
+        <PeriodicOffsetArray value="3,0,0"/>
+        <PeriodicOffsetArray value="0,-3,0"/>
+        <PeriodicOffsetArray value="-3,0,0"/>
+        <PeriodicOffsetArray value="0,0,0"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="2"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="RaynorCommanderBansheeAirstrike@CU">
+        <EditorCategories value="Race:Raynor"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <SpawnEffect value="RaynorCommanderBansheeAirstrike@Set"/>
+        <SpawnUnit value="RaynorCommanderDuskWings"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="RaynorCommanderBansheeAirstrike@Drop">
+        <EditorCategories value="Race:Raynor"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="RaynorCommanderBansheeAirstrike@Raise">
+        <EditorCategories value="Race:Raynor"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="RaynorCommanderBansheeAirstrike@Set">
+        <EditorCategories value="Race:Raynor"/>
+        <EffectArray value="RaynorCommanderBansheeAirstrike@Drop"/>
+        <EffectArray value="RaynorCommanderBansheeAirstrike@TimeLifed"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="RaynorCommanderBansheeAirstrike@TimeLifed">
+        <EditorCategories value="Race:Raynor"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="RaynorCommanderDuskWingsRockets">
         <EditorCategories value="Race:Raynor"/>
         <WhichLocation Value="TargetUnit"/>
@@ -18,8 +60,6 @@
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="RaynorCommanderDuskWingsRockets@CP@2">
         <EditorCategories value="Race:Raynor"/>
-        <OffsetVectorStartLocation Value="TargetPoint"/>
-        <OffsetVectorEndLocation Value="CasterPoint"/>
         <PeriodCount value="4"/>
         <PeriodicEffectArray value="RaynorCommanderDuskWingsRockets@Damage@2"/>
         <PeriodicOffsetArray value="0,0.5,0"/>
@@ -30,7 +70,6 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="RaynorCommanderDuskWingsRockets@Damage" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Raynor"/>
-        <ImpactLocation Value="TargetPoint"/>
         <Visibility value="Visible"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
@@ -39,8 +78,6 @@
     <CEffectDamage id="RaynorCommanderDuskWingsRockets@Damage@2">
         <EditorCategories value="Race:Raynor"/>
         <DebugTrace value="1"/>
-        <LaunchLocation Value="OriginPoint"/>
-        <ImpactLocation Value="TargetPoint"/>
         <Amount value="8"/>
         <AreaArray Radius="0.45" Fraction="1"/>
         <SearchFilters value="Ground;Self,Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>

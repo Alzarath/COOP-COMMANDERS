@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel default="1" id="ZeratulCommander@WarpInBuilding">
+        <EditorCategories value="Race:Zeratul"/>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Metal"/>
+        <Events>
+            <Anim value="Stand,Build,End"/>
+            <Name value="BuildingWarpIn"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+        </Events>
+    </CModel>
+    <CModelFoliage id="ZeratulCommander@BuildingLarge" parent="ProtossBuildingBuildLargeBase">
+        <EditorCategories value="Race:Zeratul"/>
+    </CModelFoliage>
+    <CModel id="ZeratulCommander@BuildingSmall" parent="ProtossBuildingBuildSmallBase">
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderAncientNexus" parent="Unit">
+        <Model value="Assets\COOP\Zeratul\Buildings\Nexus_Zeratul_COOP\Nexus_Zeratul_COOP.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderAncientNexus@Build" parent="ZeratulCommander@WarpInBuilding" Prefix="Buildings\" Race="Protoss">
+        <Events index="0">
+            <Anim value="Stand,Build,End"/>
+            <Name value="BuildingWarpIn"/>
+            <Type value="Sound"/>
+            <Time value="1.100000"/>
+        </Events>
+        <Radius value="1.400000"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <SelectionRadius value="2.499700"/>
+        <ShadowRadius value="2.499700"/>
+        <Model value="Assets\COOP\Zeratul\Buildings\Nexus_Zeratul_COOP_WarpIn\Nexus_Zeratul_COOP_WarpIn.m3"/>
+    </CModel>
+    <CModel id="ZeratulCommanderAncientNexus@Death" parent="UnitDeath">
+        <Model value="Assets\COOP\Zeratul\Buildings\Nexus_Zeratul_COOP_Death\Nexus_Zeratul_COOP_Death.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommander@PortraitStructure" parent="Portrait">
+        <Model value="Assets\COOP\Zeratul\Portraits\DarkVoice_Zeratul_COOP_Portrait\DarkVoice_Zeratul_COOP_Portrait.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+        <Image value="Assets\Textures\darkvoice_zeratul_coop_portrait_static.dds"/>
+    </CModel>
+    <CModel id="ZeratulCommanderXelNagaPassageway@Build" parent="ZeratulCommander@WarpInBuilding"/>
+</Catalog>

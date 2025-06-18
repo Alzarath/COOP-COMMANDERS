@@ -28,6 +28,7 @@
         </Cost>
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RaynorCommanderBansheeAirstrike" Requirements="RaynorCommanderAirStrike"/>
+        <Range value="1000"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RaynorCommanderHyperionTopbar">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>
@@ -37,6 +38,7 @@
         <Cost>
             <Cooldown TimeUse="360"/>
         </Cost>
+        <Flags index="RequireTargetVision" value="0"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RaynorCommanderTacticalJump">
         <EditorCategories value="Race:Raynor,AbilityorEffectType:Units"/>

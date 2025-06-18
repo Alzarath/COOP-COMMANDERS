@@ -2,11 +2,356 @@
 <TriggerData>
     <Library Id="DD453873">
         <Root>
+            <Item Type="FunctionDef" Library="DD453873" Id="CF40EE8C"/>
             <Item Type="Category" Library="DD453873" Id="97F9A914"/>
             <Item Type="Trigger" Library="DD453873" Id="427A9981"/>
             <Item Type="Trigger" Library="DD453873" Id="C48AC769"/>
             <Item Type="Category" Library="DD453873" Id="4EBFAD25"/>
         </Root>
+        <Element Type="FunctionDef" Id="CF40EE8C">
+            <FlagAction/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="DEC2462C"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="1CE98174"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="A733145C"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="9A9603CC"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="70581F10"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="02EBAA9F"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="89F2DF9D"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="66A58FE9"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="95C8A473"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="B7EFD80D"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="99289427"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="656C5540"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="4BF24C49"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="1DEECBE4"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="88A8DD15"/>
+        </Element>
+        <Element Type="ParamDef" Id="1862D40F">
+            <ParameterType>
+                <Type Value="int"/>
+            </ParameterType>
+            <Default Type="Param" Library="DD453873" Id="6DD52ADD"/>
+        </Element>
+        <Element Type="Param" Id="6DD52ADD">
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="FunctionCall" Id="DEC2462C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="37F52FCC"/>
+            <Parameter Type="Param" Library="DD453873" Id="7A9C76CE"/>
+            <Parameter Type="Param" Library="DD453873" Id="36DC1F27"/>
+        </Element>
+        <Element Type="Param" Id="37F52FCC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="7A9C76CE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="36DC1F27">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderRapidRecruitment</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1CE98174">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="C6724D75"/>
+            <Parameter Type="Param" Library="DD453873" Id="F8D7CF3B"/>
+            <Parameter Type="Param" Library="DD453873" Id="21E0BDC5"/>
+        </Element>
+        <Element Type="Param" Id="C6724D75">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="F8D7CF3B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="21E0BDC5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderAirStrike</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A733145C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="A28E7908"/>
+            <Parameter Type="Param" Library="DD453873" Id="BA20798E"/>
+            <Parameter Type="Param" Library="DD453873" Id="5745BAD3"/>
+        </Element>
+        <Element Type="Param" Id="A28E7908">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="BA20798E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="5745BAD3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderNanoProjectors</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9A9603CC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="CB2A83E1"/>
+            <Parameter Type="Param" Library="DD453873" Id="E0098764"/>
+            <Parameter Type="Param" Library="DD453873" Id="09C8C279"/>
+        </Element>
+        <Element Type="Param" Id="CB2A83E1">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="E0098764">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="09C8C279">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderInfantryUpgradeCache</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="70581F10">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="76985142"/>
+            <Parameter Type="Param" Library="DD453873" Id="AE14BEC8"/>
+            <Parameter Type="Param" Library="DD453873" Id="1D4EA05E"/>
+        </Element>
+        <Element Type="Param" Id="76985142">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="AE14BEC8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="1D4EA05E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderPointDefenseDrone</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="02EBAA9F">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="11EC8A46"/>
+            <Parameter Type="Param" Library="DD453873" Id="A4737438"/>
+            <Parameter Type="Param" Library="DD453873" Id="66C71669"/>
+        </Element>
+        <Element Type="Param" Id="11EC8A46">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="A4737438">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="66C71669">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderNewUnitBattlecruiser</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="89F2DF9D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="57E458A0"/>
+            <Parameter Type="Param" Library="DD453873" Id="E9C53517"/>
+            <Parameter Type="Param" Library="DD453873" Id="AF75259D"/>
+        </Element>
+        <Element Type="Param" Id="57E458A0">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="E9C53517">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="AF75259D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderBattleBunkers</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="66A58FE9">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="6FDB16F8"/>
+            <Parameter Type="Param" Library="DD453873" Id="8017D346"/>
+            <Parameter Type="Param" Library="DD453873" Id="E0DDC8EE"/>
+        </Element>
+        <Element Type="Param" Id="6FDB16F8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="8017D346">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="E0DDC8EE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderOrbitaldroppods</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="95C8A473">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="F7936578"/>
+            <Parameter Type="Param" Library="DD453873" Id="9DDDCBF5"/>
+            <Parameter Type="Param" Library="DD453873" Id="5181E881"/>
+        </Element>
+        <Element Type="Param" Id="F7936578">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="9DDDCBF5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="5181E881">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderFactoryUpgradeCache</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B7EFD80D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="0C1E9109"/>
+            <Parameter Type="Param" Library="DD453873" Id="7F50E5A3"/>
+            <Parameter Type="Param" Library="DD453873" Id="2C88BC51"/>
+        </Element>
+        <Element Type="Param" Id="0C1E9109">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="7F50E5A3">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="2C88BC51">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderVanadiumPlating</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="99289427">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="BA2A593A"/>
+            <Parameter Type="Param" Library="DD453873" Id="D85FE81C"/>
+            <Parameter Type="Param" Library="DD453873" Id="67D7858D"/>
+        </Element>
+        <Element Type="Param" Id="BA2A593A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="D85FE81C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="67D7858D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderArmoryUpgradeCache</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="656C5540">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="AA9A3FF5"/>
+            <Parameter Type="Param" Library="DD453873" Id="742EEF04"/>
+            <Parameter Type="Param" Library="DD453873" Id="3DBFB26D"/>
+        </Element>
+        <Element Type="Param" Id="AA9A3FF5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="742EEF04">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="3DBFB26D">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderOrbitalDepots</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4BF24C49">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="9E73F882"/>
+            <Parameter Type="Param" Library="DD453873" Id="7D8D2E30"/>
+            <Parameter Type="Param" Library="DD453873" Id="87445DC7"/>
+        </Element>
+        <Element Type="Param" Id="9E73F882">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="7D8D2E30">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="87445DC7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderStarportUpgradeCache</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="1DEECBE4">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="1EE2A6E5"/>
+            <Parameter Type="Param" Library="DD453873" Id="F1966948"/>
+            <Parameter Type="Param" Library="DD453873" Id="5913BF32"/>
+        </Element>
+        <Element Type="Param" Id="1EE2A6E5">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="F1966948">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="5913BF32">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderHyperionAdvancedTargetingSystems</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="88A8DD15">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <Parameter Type="Param" Library="DD453873" Id="39F03662"/>
+            <Parameter Type="Param" Library="DD453873" Id="88731463"/>
+            <Parameter Type="Param" Library="DD453873" Id="49F0521C"/>
+        </Element>
+        <Element Type="Param" Id="39F03662">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+        </Element>
+        <Element Type="Param" Id="88731463">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="49F0521C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>RaynorCommanderMercenaryMunitions</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
         <Element Type="Category" Id="97F9A914">
             <Item Type="Trigger" Library="DD453873" Id="56AB7D1F"/>
         </Element>
@@ -50,6 +395,7 @@
         <Element Type="Trigger" Id="427A9981">
             <Event Type="FunctionCall" Library="DD453873" Id="A84E8A71"/>
             <Action Type="FunctionCall" Library="DD453873" Id="9F986CFE"/>
+            <Action Type="FunctionCall" Library="DD453873" Id="DF4A747E"/>
         </Element>
         <Element Type="FunctionCall" Id="A84E8A71">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
@@ -72,6 +418,15 @@
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000182"/>
             <ValueType Type="trigger"/>
             <ValueElement Type="Trigger" Library="DD453873" Id="C48AC769"/>
+        </Element>
+        <Element Type="FunctionCall" Id="DF4A747E">
+            <FunctionDef Type="FunctionDef" Library="DD453873" Id="CF40EE8C"/>
+            <Parameter Type="Param" Library="DD453873" Id="EF8D5040"/>
+        </Element>
+        <Element Type="Param" Id="EF8D5040">
+            <ParameterDef Type="ParamDef" Library="DD453873" Id="1862D40F"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
         </Element>
         <Element Type="Trigger" Id="C48AC769">
             <Action Type="FunctionCall" Library="DD453873" Id="7D9A5747"/>

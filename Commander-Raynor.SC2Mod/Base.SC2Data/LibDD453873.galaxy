@@ -26,6 +26,26 @@ void libDD453873_InitVariables () {
 }
 
 // Functions
+void libDD453873_gf_UnlockTalent (int lp_p) {
+    // Automatic Variable Declarations
+    // Implementation
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderRapidRecruitment", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderAirStrike", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderNanoProjectors", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderInfantryUpgradeCache", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderPointDefenseDrone", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderNewUnitBattlecruiser", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderBattleBunkers", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderOrbitaldroppods", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderFactoryUpgradeCache", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderVanadiumPlating", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderArmoryUpgradeCache", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderOrbitalDepots", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderStarportUpgradeCache", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderHyperionAdvancedTargetingSystems", 1);
+    TechTreeUpgradeAddLevel(lp_p, "RaynorCommanderMercenaryMunitions", 1);
+}
+
 void libDD453873_gf_ShowHideTopBarRaynor (bool lp_showHideOptions, playergroup lp_players) {
     // Automatic Variable Declarations
     // Implementation
@@ -63,6 +83,7 @@ bool libDD453873_gt_InitializeRaynorCommander_Func (bool testConds, bool runActi
     }
 
     TriggerExecute(libDD453873_gt_InitTopBar, true, false);
+    libDD453873_gf_UnlockTalent(1);
     return true;
 }
 

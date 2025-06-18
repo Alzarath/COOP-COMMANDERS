@@ -65,6 +65,17 @@
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:AbilityTopbars"/>
         <DataRecord Entry="Abil,RaynorCommanderBansheeAirstrike"/>
         <DataRecord Entry="Button,RaynorCommanderBansheeAirstrike"/>
+        <DataRecord Entry="Effect,RaynorCommanderBansheeAirstrike"/>
+        <DataRecord Entry="Effect,RaynorCommanderBansheeAirstrike@CU"/>
+        <DataRecord Entry="Effect,RaynorCommanderBansheeAirstrike@Set"/>
+        <DataRecord Entry="Behavior,RaynorCommanderBansheeAirstrike@Drop"/>
+        <DataRecord Entry="Effect,RaynorCommanderBansheeAirstrike@Drop"/>
+        <DataRecord Entry="Behavior,RaynorCommanderBansheeAirstrike@Raise"/>
+        <DataRecord Entry="Behavior,RaynorCommanderBansheeAirstrike@TimeLifed"/>
+        <DataRecord Entry="Effect,RaynorCommanderBansheeAirstrike@Raise"/>
+        <DataRecord Entry="Effect,RaynorCommanderBansheeAirstrike@TimeLifed"/>
+        <DataRecord Entry="Actor,RaynorCommanderBansheeAirstrike"/>
+        <DataRecord Entry="Model,RaynorCommanderBansheeAirstrike"/>
     </CDataCollectionAbil>
     <CDataCollectionUnit id="RaynorCommanderDuskWingsRockets" parent="CommanderWeaponMissile">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Projectile"/>
@@ -621,7 +632,6 @@
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderTankMode@Siege"/>
         <DataRecord Entry="Abil,RaynorCommanderTankMode@Unsiege"/>
-        <EditorIconSource value="Button"/>
     </CDataCollectionAbil>
     <CDataCollectionAbil id="RaynorCommanderReactorMorphBarrack">
         <EditorCategories value="DataGroup:AbilityBuildTrain,Race:Raynor,ObjectType:Other"/>

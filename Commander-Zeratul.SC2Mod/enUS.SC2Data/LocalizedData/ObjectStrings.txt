@@ -1,0 +1,11 @@
+﻿Actor/Name/ZeratulCommanderAncientNexus=Ancient Nexus
+DataCollectionPattern/Name/CommanderData=Commander Data
+Model/Name/ZeratulCommander@BuildingLarge=Building (Large)
+Model/Name/ZeratulCommander@BuildingSmall=Building (Small)
+Model/Name/ZeratulCommander@PortraitStructure=Portrait - Structure
+Model/Name/ZeratulCommander@WarpInBuilding=Zeratul Warp In Building
+Model/Name/ZeratulCommanderAncientNexus=Ancient Nexus
+Model/Name/ZeratulCommanderAncientNexus@Build=Build
+Model/Name/ZeratulCommanderAncientNexus@Death=Death
+Model/Name/ZeratulCommanderXelNagaPassageway@Build=Build
+Race/EditorPrefix/COOPZeratul=(COOP)

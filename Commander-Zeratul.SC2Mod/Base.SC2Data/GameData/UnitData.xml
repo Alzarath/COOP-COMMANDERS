@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUnit id="ZeratulCommanderAncientNexus" parent="CommanderStructure_Prot">
+        <Race value="Prot"/>
+        <Footprint value="Footprint5x5Contour"/>
+        <PlacementFootprint value="Footprint5x5DropOff"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Coop,Race:Zeratul"/>
+    </CUnit>
+</Catalog>

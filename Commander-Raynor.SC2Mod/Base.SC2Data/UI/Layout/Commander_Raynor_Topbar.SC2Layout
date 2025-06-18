@@ -28,6 +28,7 @@
             <Height val="100"/>
             <VisibilityOnFade val="True"/>
             <Alpha val="0"/>
+            <DisplayCancelCommandCard val="False"/>
 
             <Frame type="CommandTooltip" name="CommandTooltip">
                 <Anchor side="Bottom" relative="$parent" pos="Max" offset="-270"/>
@@ -37,11 +38,20 @@
             <Frame type="CommandButton" name="CommandButton00">
                 <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
                 <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+                <HotkeyUse val="CommanderAbility0"/>
+                <Frame type="CommandHotkeyFrame" name="HotkeyFrame">
+                    <Visible val="True"/>
+                </Frame>
+                <TooltipAnchorPosition val="TopToBottom"/>
             </Frame>
 
             <Frame type="CommandButton" name="CommandButton01">
                 <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
                 <Anchor side="Left" relative="$parent" pos="Mid" offset="15"/>
+                <HotkeyUse val="CommanderAbility1"/>
+                <Frame type="CommandHotkeyFrame" name="HotkeyFrame">
+                    <Visible val="True"/>
+                </Frame>
             </Frame>
 
             <Frame type="CommandButton" name="CommandButton02">

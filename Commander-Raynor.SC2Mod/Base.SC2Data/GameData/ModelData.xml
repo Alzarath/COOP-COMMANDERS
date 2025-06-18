@@ -29,8 +29,12 @@
         <FacialController value="LocalizedData\Facial\AdjutantPortrait.fxa"/>
         <Image value="Assets\Textures\adjutantportrait_static.dds"/>
     </CModel>
+    <CModel id="RaynorCommanderBansheeAirstrike">
+        <Model value="Assets\Effects\Terran\BansheeMercenaryReentry\BansheeMercenaryReentry.m3"/>
+        <EditorCategories value="Race:Raynor"/>
+    </CModel>
     <CModel id="RaynorCommanderDuskWingsRockets@AttackImpact" parent="ImpactFX">
-        <Model value="Assets\Effects\Terran\BansheeMissileImpact\BansheeMissileImpact.m3"/>
+        <Model value="Assets\Effects\Terran\Banshee_Airstrike_Impact\Banshee_Airstrike_Impact.m3"/>
         <EditorCategories value="Race:Raynor"/>
     </CModel>
     <CModel id="RaynorCommanderDuskWingsRockets@Missile" parent="MissileFX">

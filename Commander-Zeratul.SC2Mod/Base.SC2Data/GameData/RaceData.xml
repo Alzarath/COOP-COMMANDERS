@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRace id="COOPZeratul">
+        <PlacementGridColorBlindColor value="255,14,197,179"/>
+        <DefaultConsoleSkin value="ConsoleProtoss_Ihanrii"/>
+    </CRace>
+</Catalog>

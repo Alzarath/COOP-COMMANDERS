@@ -19,6 +19,7 @@ unit libDD453873_gv_raynor_TopBar_Caster;
 libDD453873_gs_UI_TopBar libDD453873_gv_uI_TopBar;
 
 // Function Declarations
+void libDD453873_gf_UnlockTalent (int lp_p);
 void libDD453873_gf_ShowHideTopBarRaynor (bool lp_showHideOptions, playergroup lp_players);
 
 // Trigger Declarations

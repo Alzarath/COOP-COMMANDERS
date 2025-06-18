@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="ZeratulCommanderAncientNexus" parent="CommanderUnitBase" unitName="ZeratulCommanderAncientNexus">
+        <EditorCategories value=""/>
+        <PortraitModel value="ZeratulCommander@PortraitStructure"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+    </CActorUnit>
+</Catalog>

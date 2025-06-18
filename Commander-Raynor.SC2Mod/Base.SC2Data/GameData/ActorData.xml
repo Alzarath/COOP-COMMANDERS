@@ -22,10 +22,21 @@
     <CActorSplat id="RaynorCommanderArmory@Splat" parent="GenericUnitSplat">
         <EditorCategories value=""/>
     </CActorSplat>
+    <CActorModel id="RaynorCommanderBansheeAirstrike" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.RaynorCommanderBansheeAirstrike@Drop.On" Send="Create"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.100000 Hidden"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.000000 0.000000 Hide"/>
+        <On Terms="TimerExpired; TimerName Hidden" Send="ClearOpacity 0.000000 Hide"/>
+        <HostSiteOps Ops="SOpAttachHead"/>
+    </CActorModel>
+    <CActorSound id="RaynorCommanderBansheeAirstrike@Sound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.RaynorCommanderBansheeAirstrike" Send="Create"/>
+    </CActorSound>
     <CActorAction id="RaynorCommanderDuskWingsRockets@Attack" parent="GenericAttack" effectImpact="RaynorCommanderDuskWingsRockets@Damage" effectLaunch="RaynorCommanderDuskWingsRockets@LM">
         <LaunchAttachQuery Methods="AMPatternBanshee"/>
         <Missile value="RaynorCommanderDuskWingsRockets@Missile"/>
-        <ImpactPhysics Name="BacklashRocketsImpact" MatchKeys="Basic" Physics="BansheeAttackForce"/>
         <AcquisitionYawHalfArc value="15.000000"/>
         <AcquisitionPitchHalfArc value="30.000000"/>
         <ShieldRippleScaleFactor value="1.100000"/>

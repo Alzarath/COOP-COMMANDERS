@@ -2,12 +2,29 @@
 <TriggerData>
     <Library Id="DD453873">
         <Root>
+            <Item Type="Category" Library="DD453873" Id="C628FEDA"/>
             <Item Type="FunctionDef" Library="DD453873" Id="CF40EE8C"/>
             <Item Type="Category" Library="DD453873" Id="97F9A914"/>
             <Item Type="Trigger" Library="DD453873" Id="427A9981"/>
             <Item Type="Trigger" Library="DD453873" Id="C48AC769"/>
             <Item Type="Category" Library="DD453873" Id="4EBFAD25"/>
+            <Item Type="Category" Library="DD453873" Id="1108DE6F"/>
         </Root>
+        <Element Type="Category" Id="C628FEDA">
+            <Item Type="Variable" Library="DD453873" Id="DDE86DB2"/>
+        </Element>
+        <Element Type="Variable" Id="DDE86DB2">
+            <VariableType>
+                <Type Value="playergroup"/>
+            </VariableType>
+            <Value Type="Param" Library="DD453873" Id="AAFC7345"/>
+        </Element>
+        <Element Type="Param" Id="AAFC7345">
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="F51169B5"/>
+        </Element>
+        <Element Type="FunctionCall" Id="F51169B5">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000056"/>
+        </Element>
         <Element Type="FunctionDef" Id="CF40EE8C">
             <FlagAction/>
             <Parameter Type="ParamDef" Library="DD453873" Id="1862D40F"/>
@@ -394,11 +411,36 @@
         </Element>
         <Element Type="Trigger" Id="427A9981">
             <Event Type="FunctionCall" Library="DD453873" Id="A84E8A71"/>
+            <Event Type="FunctionCall" Library="DD453873" Id="35807538"/>
             <Action Type="FunctionCall" Library="DD453873" Id="9F986CFE"/>
             <Action Type="FunctionCall" Library="DD453873" Id="DF4A747E"/>
+            <Action Type="Comment" Library="DD453873" Id="41799C42"/>
+            <Action Type="FunctionCall" Library="DD453873" Id="3913C215"/>
+            <Action Type="FunctionCall" Library="DD453873" Id="981722EB"/>
         </Element>
         <Element Type="FunctionCall" Id="A84E8A71">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="35807538">
+            <FunctionDef Type="FunctionDef" Library="BEDD5153" Id="FCDD4537"/>
+            <Parameter Type="Param" Library="DD453873" Id="29DD49DB"/>
+            <Parameter Type="Param" Library="DD453873" Id="3E4ADFD3"/>
+            <Parameter Type="Param" Library="DD453873" Id="BE3B14A5"/>
+        </Element>
+        <Element Type="Param" Id="29DD49DB">
+            <ParameterDef Type="ParamDef" Library="BEDD5153" Id="C392A831"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="3E4ADFD3">
+            <ParameterDef Type="ParamDef" Library="BEDD5153" Id="3DC6E5FB"/>
+            <Value>COOPRaynor</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Race"/>
+        </Element>
+        <Element Type="Param" Id="BE3B14A5">
+            <ParameterDef Type="ParamDef" Library="BEDD5153" Id="22F8B85C"/>
+            <Preset Type="PresetValue" Library="BEDD5153" Id="5F3F0BD5"/>
         </Element>
         <Element Type="FunctionCall" Id="9F986CFE">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000116"/>
@@ -427,6 +469,42 @@
             <ParameterDef Type="ParamDef" Library="DD453873" Id="1862D40F"/>
             <Value>1</Value>
             <ValueType Type="int"/>
+        </Element>
+        <Element Type="Comment" Id="41799C42">
+            <Comment>
+                Comment
+            </Comment>
+        </Element>
+        <Element Type="FunctionCall" Id="3913C215">
+            <Disabled/>
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="0366EE04"/>
+            <Parameter Type="Param" Library="DD453873" Id="28148967"/>
+            <Parameter Type="Param" Library="DD453873" Id="C59CC89B"/>
+        </Element>
+        <Element Type="Param" Id="28148967">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="0D120C33"/>
+            <FunctionCall Type="FunctionCall" Library="DD453873" Id="9E472F69"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9E472F69">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000192"/>
+        </Element>
+        <Element Type="Param" Id="C59CC89B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="A4C19F41"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="875889C8"/>
+        </Element>
+        <Element Type="FunctionCall" Id="981722EB">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="15C2C248"/>
+            <Parameter Type="Param" Library="DD453873" Id="E11DFACE"/>
+            <Parameter Type="Param" Library="DD453873" Id="B014A89E"/>
+        </Element>
+        <Element Type="Param" Id="E11DFACE">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="1D6C8796"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="B014A89E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="F4B91B76"/>
+            <Variable Type="Variable" Library="DD453873" Id="DDE86DB2"/>
         </Element>
         <Element Type="Trigger" Id="C48AC769">
             <Action Type="FunctionCall" Library="DD453873" Id="7D9A5747"/>
@@ -972,6 +1050,8 @@
                 <Type Value="struct"/>
                 <TypeElement Type="Structure" Library="DD453873" Id="64C9F948"/>
             </VariableType>
+        </Element>
+        <Element Type="Category" Id="1108DE6F">
         </Element>
     </Library>
 </TriggerData>

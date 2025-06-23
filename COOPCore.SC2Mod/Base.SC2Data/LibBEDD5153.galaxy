@@ -25,17 +25,9 @@ void libBEDD5153_InitVariables () {
 // Presets
 // Functions
 void libBEDD5153_gf_SetPlayersCommander (playergroup lp_playerGroup, string lp_commander) {
-    // Variable Declarations
-    string lv_tCommander;
-    string lv_pCommander;
-
     // Automatic Variable Declarations
     playergroup autoBFBB2B65_g;
     int autoBFBB2B65_var;
-
-    // Variable Initialization
-    lv_tCommander = ((lp_commander));
-    lv_pCommander = ((lp_commander));
 
     // Implementation
     autoBFBB2B65_g = lp_playerGroup;
@@ -43,19 +35,12 @@ void libBEDD5153_gf_SetPlayersCommander (playergroup lp_playerGroup, string lp_c
     while (true) {
         autoBFBB2B65_var = PlayerGroupNextPlayer(autoBFBB2B65_g, autoBFBB2B65_var);
         if (autoBFBB2B65_var < 0) { break; }
-        lv_pCommander = PlayerCommander(autoBFBB2B65_var);
-        if ((lv_tCommander == lv_pCommander)) {
+        if ((PlayerRace(autoBFBB2B65_var) == lp_commander)) {
             continue;
         }
 
-        TriggerSendEvent((libBEDD5153_gv_eVENT_PlayerCommanderChanges + "[" + IntToString(autoBFBB2B65_var) + "][" + (lv_pCommander) + "][" + ("From") + "]"));
-        if ((CatalogEntryIsValid(c_gameCatalogCommander, (lp_commander)) == false)) {
-            PlayerSetCommander(autoBFBB2B65_var, ((PlayerRace(autoBFBB2B65_var))));
-            TriggerSendEvent((libBEDD5153_gv_eVENT_PlayerCommanderChanges + "[" + IntToString(autoBFBB2B65_var) + "][" + (PlayerRace(autoBFBB2B65_var)) + "][" + ("On") + "]"));
-            return ;
-        }
-
-        PlayerSetCommander(autoBFBB2B65_var, ((lp_commander)));
+        TriggerSendEvent((libBEDD5153_gv_eVENT_PlayerCommanderChanges + "[" + IntToString(autoBFBB2B65_var) + "][" + (PlayerRace(autoBFBB2B65_var)) + "][" + ("From") + "]"));
+        PlayerSetRace(autoBFBB2B65_var, lp_commander);
         TriggerSendEvent((libBEDD5153_gv_eVENT_PlayerCommanderChanges + "[" + IntToString(autoBFBB2B65_var) + "][" + (lp_commander) + "][" + ("On") + "]"));
     }
 }

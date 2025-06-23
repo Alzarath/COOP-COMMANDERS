@@ -250,6 +250,16 @@
                     <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
                     <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
                 </Frame>
+                <Frame type="CommandPanel" name="PanelUnit3" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Top" relative="$parent/PanelUnit2" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
+                </Frame>
+                <Frame type="CommandPanel" name="PanelUnit4" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Top" relative="$parent/PanelUnit3" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
+                </Frame>
     
                 <!-- -->
     
@@ -259,6 +269,16 @@
                 </Frame>
                 <Frame type="CommandPanel" name="PanelBuilding2" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
                     <Anchor side="Top" relative="$parent/PanelBuilding" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="CommandPanel" name="PanelBuilding3" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Top" relative="$parent/PanelBuilding2" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="CommandPanel" name="PanelBuilding4" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                    <Anchor side="Top" relative="$parent/PanelBuilding3" pos="Max" offset="0"/>
                     <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
                     <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
                 </Frame>

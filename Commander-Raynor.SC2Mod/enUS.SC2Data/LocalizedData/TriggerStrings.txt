@@ -1,5 +1,7 @@
-﻿Category/Name/lib_DD453873_4EBFAD25=Top Bar
+﻿Category/Name/lib_DD453873_1108DE6F=Mastery
+Category/Name/lib_DD453873_4EBFAD25=Top Bar
 Category/Name/lib_DD453873_97F9A914=Debug
+Category/Name/lib_DD453873_C628FEDA=Variables
 FunctionDef/Name/lib_DD453873_AE5C6487=Show/Hide TopBar Raynor
 FunctionDef/Name/lib_DD453873_CF40EE8C=Unlock Talent
 Library/Name/DD453873=COMMANDER - Raynor
@@ -18,3 +20,4 @@ Variable/Name/lib_DD453873_77B0D5FF=Raynor_TopBar_Caster
 Variable/Name/lib_DD453873_A410B0E3=CONST_TopBar_event_birth
 Variable/Name/lib_DD453873_B6FB01C8=CommandPanel
 Variable/Name/lib_DD453873_DB6F2A41=UI_TopBar
+Variable/Name/lib_DD453873_DDE86DB2=Players - Raynor

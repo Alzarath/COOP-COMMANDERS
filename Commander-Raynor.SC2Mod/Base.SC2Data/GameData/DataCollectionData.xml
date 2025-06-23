@@ -35,6 +35,7 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderAfterburners">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Unit"/>
@@ -57,11 +58,12 @@
         <DataRecord Entry="Actor,RaynorCommanderArmory@Splat"/>
         <DataRecord Entry="Sound,RaynorCommanderArmory@Death"/>
     </CDataCollectionUnit>
-    <CDataCollectionAbil id="RaynorCommanderArmoryResearch">
+    <CDataCollectionUnit id="RaynorCommanderArmoryResearch">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderArmoryResearch"/>
-    </CDataCollectionAbil>
-    <CDataCollectionAbil id="RaynorCommanderBansheeAirstrike">
+        <TechInfoUpgradeUsed value="RaynorCommanderReduceCostResearch"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderBansheeAirstrike">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,ObjectType:AbilityTopbars"/>
         <DataRecord Entry="Abil,RaynorCommanderBansheeAirstrike"/>
         <DataRecord Entry="Button,RaynorCommanderBansheeAirstrike"/>
@@ -76,7 +78,14 @@
         <DataRecord Entry="Effect,RaynorCommanderBansheeAirstrike@TimeLifed"/>
         <DataRecord Entry="Actor,RaynorCommanderBansheeAirstrike"/>
         <DataRecord Entry="Model,RaynorCommanderBansheeAirstrike"/>
-    </CDataCollectionAbil>
+        <TechInfoUpgradeUsed value="RaynorCommanderBansheeAirstrikeCooldown"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderMedicsHealAdditionalTarget">
+        <EditorCategories value="DataGroup:Mastery,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderMedicsHealAdditionalTarget"/>
+        <Pattern value="CommanderMastery"/>
+        <UpgradeInfoUnitLifeArmorPerLevel value="1.3"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderDuskWingsRockets" parent="CommanderWeaponMissile">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Projectile"/>
         <DataRecord Entry="Actor,RaynorCommanderDuskWingsRockets@Attack"/>
@@ -98,8 +107,27 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
-    <CDataCollectionAbil id="RaynorCommanderHyperionTopbar">
+    <CDataCollectionUnit id="RaynorCommanderBansheeAirstrikeCooldown">
+        <EditorCategories value="DataGroup:Mastery,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderBansheeAirstrikeCooldown"/>
+        <Pattern value="CommanderMastery"/>
+        <UpgradeInfoUnitLifeArmorPerLevel value="-4"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderMechAttackSpeed">
+        <EditorCategories value="DataGroup:Mastery,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderMechAttackSpeed"/>
+        <Pattern value="CommanderMastery"/>
+        <UpgradeInfoUnitLifeArmorPerLevel value="0.01"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderSpeedDropPodUnits">
+        <EditorCategories value="DataGroup:Mastery,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderSpeedDropPodUnits"/>
+        <Pattern value="CommanderMastery"/>
+        <UpgradeInfoUnitLifeArmorPerLevel value="1.2"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderHyperionTopbar">
         <EditorCategories value="Race:Raynor,DataGroup:Ability,ObjectType:AbilityTopbars"/>
         <DataRecord Entry="Abil,RaynorCommanderHyperionTopbar"/>
         <DataRecord Entry="Button,RaynorCommanderHyperionTopbar"/>
@@ -107,7 +135,20 @@
         <DataRecord Entry="Effect,RaynorCommanderHyperionTopbar"/>
         <DataRecord Entry="Effect,RaynorCommanderHyperionTopbar@AB"/>
         <DataRecord Entry="Actor,RaynorCommanderHyperionTopbar"/>
-    </CDataCollectionAbil>
+        <TechInfoUpgradeUsed value="RaynorCommanderHyperionCooldown"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderReduceCostResearch">
+        <EditorCategories value="DataGroup:Mastery,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderReduceCostResearch"/>
+        <Pattern value="CommanderMastery"/>
+        <UpgradeInfoUnitLifeArmorPerLevel value="0.98"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="RaynorCommanderHyperionCooldown">
+        <EditorCategories value="DataGroup:Mastery,Race:Raynor,ObjectType:Other"/>
+        <DataRecord Entry="Upgrade,RaynorCommanderHyperionCooldown"/>
+        <Pattern value="CommanderMastery"/>
+        <UpgradeInfoUnitLifeArmorPerLevel value="-4"/>
+    </CDataCollectionUnit>
     <CDataCollectionUpgrade id="RaynorCommanderVehicleAndShipWeapons" parent="CommanderUpgradeLvLStats">
         <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderVehicleAndShipWeapons@Level1"/>
@@ -181,6 +222,7 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderBanshee" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Unit"/>
@@ -433,6 +475,7 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderMissileTurret" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
@@ -794,6 +837,7 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderWeaponTank" parent="CommanderWeaponInstant">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Other"/>
@@ -809,6 +853,7 @@
         <TechInfoUpgradeUsed value="RaynorCommanderMercenaryMunitions"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderTorpedoes" parent="CommanderWeaponMissile">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,ObjectType:Projectile"/>
@@ -826,6 +871,7 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderTrainFactory" parent="CommanderAbilityBuild">
         <EditorCategories value="Race:Raynor,DataGroup:AbilityBuildTrain,DataFamily:Coop,ObjectType:Other"/>
@@ -853,10 +899,11 @@
         <DataRecord Entry="Sound,RaynorCommanderVulture@Movement"/>
         <DataRecord Entry="Requirement,RaynorCommanderVulture"/>
     </CDataCollectionUnit>
-    <CDataCollectionAbil id="RaynorCommanderBarrackResearch">
+    <CDataCollectionUnit id="RaynorCommanderBarrackResearch">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderBarrackResearch"/>
-    </CDataCollectionAbil>
+        <TechInfoUpgradeUsed value="RaynorCommanderReduceCostResearch"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderBarracks" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Raynor,DataFamily:Coop,ObjectType:Structure"/>
         <DataRecord Entry="Actor,RaynorCommanderBarracks"/>
@@ -946,7 +993,7 @@
         <DataRecord Entry="Sound,RaynorCommanderHeal@Stop"/>
         <DataRecord Entry="Sound,RaynorCommanderHeal@Start"/>
     </CDataCollectionAbil>
-    <CDataCollectionUpgrade id="RaynorCommanderInciniratorGauntlets">
+    <CDataCollectionUnit id="RaynorCommanderInciniratorGauntlets">
         <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderInciniratorGauntlets"/>
         <DataRecord Entry="Upgrade,RaynorCommanderInciniratorGauntlets"/>
@@ -954,7 +1001,7 @@
         <DataRecord Entry="Validator,RaynorCommanderInciniratorGauntlets"/>
         <DataRecord Entry="Requirement,RaynorCommanderInciniratorGauntlets@Not"/>
         <DataRecord Entry="Validator,RaynorCommanderInciniratorGauntlets@Not"/>
-    </CDataCollectionUpgrade>
+    </CDataCollectionUnit>
     <CDataCollectionUpgrade id="RaynorCommanderInfantryWeapon" parent="CommanderUpgradeLvLStats">
         <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderInfantryWeapon@Level1"/>
@@ -965,12 +1012,12 @@
         <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level3"/>
         <DataRecord Entry="Upgrade,RaynorCommanderInfantryWeapon@Level1"/>
     </CDataCollectionUpgrade>
-    <CDataCollectionUpgrade id="RaynorCommanderJuggernautPlating">
+    <CDataCollectionUnit id="RaynorCommanderJuggernautPlating">
         <EditorCategories value="DataGroup:Research,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Button,RaynorCommanderJuggernautPlating"/>
         <DataRecord Entry="Upgrade,RaynorCommanderJuggernautPlating"/>
         <DataRecord Entry="Requirement,RaynorCommanderJuggernautPlating"/>
-    </CDataCollectionUpgrade>
+    </CDataCollectionUnit>
     <CDataCollectionAbil id="RaynorCommanderLiftBarrack">
         <EditorCategories value="DataGroup:Ability,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Abil,RaynorCommanderLiftBarrack@Land"/>
@@ -1360,6 +1407,7 @@
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level2"/>
         <TechInfoUpgradeUsed value="RaynorCommanderVehicleAndShipWeapons@Level3"/>
+        <TechInfoUpgradeUsed value="RaynorCommanderMechAttackSpeed"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="RaynorCommanderWeaponSCV" parent="CommanderWeaponInstant">
         <EditorCategories value="DataGroup:Weapon,Race:Raynor,DataFamily:Coop,ObjectType:Other"/>

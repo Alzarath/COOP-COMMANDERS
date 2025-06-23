@@ -226,6 +226,7 @@
         <value group="Weapon">Weapon</value>
         <value group="Tileset">Tileset</value>
         <value group="LoadOut">LoadOut</value>
+        <value group="Mastery">Mastery</value>
     </category>
     <category name="DataFamily">
         <value>Melee</value>

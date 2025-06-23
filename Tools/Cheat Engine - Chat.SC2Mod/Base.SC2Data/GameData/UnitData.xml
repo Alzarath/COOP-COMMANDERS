@@ -84,4 +84,46 @@
         </CardLayouts>
         <EditorCategories value="ObjectType:Other"/>
     </CUnit>
+    <CUnit id="CheatTrain3">
+        <AbilArray Link="CheatTrain2"/>
+        <CardLayouts>
+            <LayoutButtons Face="TrainCheat31" Type="AbilCmd" AbilCmd="CheatTrain2,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="TrainCheat32" Type="AbilCmd" AbilCmd="CheatTrain2,Build2" Row="0" Column="1"/>
+            <LayoutButtons Face="TrainCheat33" Type="AbilCmd" AbilCmd="CheatTrain2,Build3" Row="0" Column="2"/>
+            <LayoutButtons Face="TrainCheat34" Type="AbilCmd" AbilCmd="CheatTrain2,Build4" Row="0" Column="3"/>
+            <LayoutButtons Face="TrainCheat35" Type="AbilCmd" AbilCmd="CheatTrain2,Build5" Row="0" Column="4"/>
+            <LayoutButtons Face="TrainCheat36" Type="AbilCmd" AbilCmd="CheatTrain2,Build6" Row="1" Column="0"/>
+            <LayoutButtons Face="TrainCheat37" Type="AbilCmd" AbilCmd="CheatTrain2,Build7" Row="1" Column="1"/>
+            <LayoutButtons Face="TrainCheat38" Type="AbilCmd" AbilCmd="CheatTrain2,Build8" Row="1" Column="2"/>
+            <LayoutButtons Face="TrainCheat39" Type="AbilCmd" AbilCmd="CheatTrain2,Build9" Row="1" Column="3"/>
+            <LayoutButtons Face="TrainCheat40" Type="AbilCmd" AbilCmd="CheatTrain2,Build10" Row="1" Column="4"/>
+            <LayoutButtons Face="TrainCheat41" Type="AbilCmd" AbilCmd="CheatTrain2,Build11" Row="2" Column="0"/>
+            <LayoutButtons Face="TrainCheat42" Type="AbilCmd" AbilCmd="CheatTrain2,Build12" Row="2" Column="1"/>
+            <LayoutButtons Face="TrainCheat43" Type="AbilCmd" AbilCmd="CheatTrain2,Build13" Row="2" Column="2"/>
+            <LayoutButtons Face="TrainCheat44" Type="AbilCmd" AbilCmd="CheatTrain2,Build14" Row="2" Column="3"/>
+            <LayoutButtons Face="TrainCheat45" Type="AbilCmd" AbilCmd="CheatTrain2,Build15" Row="2" Column="4"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrain4">
+        <AbilArray Link="CheatTrain2"/>
+        <CardLayouts>
+            <LayoutButtons Face="TrainCheat46" Type="AbilCmd" AbilCmd="CheatTrain2,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="TrainCheat47" Type="AbilCmd" AbilCmd="CheatTrain2,Build17" Row="0" Column="1"/>
+            <LayoutButtons Face="TrainCheat48" Type="AbilCmd" AbilCmd="CheatTrain2,Build18" Row="0" Column="2"/>
+            <LayoutButtons Face="TrainCheat49" Type="AbilCmd" AbilCmd="CheatTrain2,Build19" Row="0" Column="3"/>
+            <LayoutButtons Face="TrainCheat50" Type="AbilCmd" AbilCmd="CheatTrain2,Build20" Row="0" Column="4"/>
+            <LayoutButtons Face="TrainCheat51" Type="AbilCmd" AbilCmd="CheatTrain2,Build21" Row="1" Column="0"/>
+            <LayoutButtons Face="TrainCheat52" Type="AbilCmd" AbilCmd="CheatTrain2,Build22" Row="1" Column="1"/>
+            <LayoutButtons Face="TrainCheat53" Type="AbilCmd" AbilCmd="CheatTrain2,Build23" Row="1" Column="2"/>
+            <LayoutButtons Face="TrainCheat54" Type="AbilCmd" AbilCmd="CheatTrain2,Build24" Row="1" Column="3"/>
+            <LayoutButtons Face="TrainCheat55" Type="AbilCmd" AbilCmd="CheatTrain2,Build25" Row="1" Column="4"/>
+            <LayoutButtons Face="TrainCheat56" Type="AbilCmd" AbilCmd="CheatTrain2,Build26" Row="2" Column="0"/>
+            <LayoutButtons Face="TrainCheat57" Type="AbilCmd" AbilCmd="CheatTrain2,Build27" Row="2" Column="1"/>
+            <LayoutButtons Face="TrainCheat58" Type="AbilCmd" AbilCmd="CheatTrain2,Build28" Row="2" Column="2"/>
+            <LayoutButtons Face="TrainCheat59" Type="AbilCmd" AbilCmd="CheatTrain2,Build29" Row="2" Column="3"/>
+            <LayoutButtons Face="TrainCheat60" Type="AbilCmd" AbilCmd="CheatTrain2,Build30" Row="2" Column="4"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
 </Catalog>

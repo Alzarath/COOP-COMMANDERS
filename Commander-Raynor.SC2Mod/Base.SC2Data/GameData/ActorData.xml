@@ -1135,6 +1135,7 @@
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Marine.dds"/>
         </Wireframe>
+        <PlacementModel value="RaynorCommanderMarine"/>
     </CActorUnit>
     <CActorSound id="RaynorCommanderStimpack@Finish" parent="SoundOneShot">
         <On Terms="Abil.RaynorCommanderStimpack.SourceFinishStart" Send="Create"/>

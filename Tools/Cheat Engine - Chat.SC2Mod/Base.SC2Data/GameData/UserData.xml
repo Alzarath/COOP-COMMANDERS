@@ -52,7 +52,7 @@
             </User>
         </Instances>
         <Instances Id="alliance">
-            <String String="ally">
+            <String String="alli">
                 <Field Id="alias"/>
             </String>
             <String String="number">
@@ -96,7 +96,7 @@
             </User>
         </Instances>
         <Instances Id="death">
-            <String String="dth">
+            <String String="d">
                 <Field Id="alias"/>
             </String>
             <String String="unitgroup">
@@ -107,6 +107,9 @@
             </String>
             <String String="number">
                 <Field Id="Param Type" Index="2"/>
+            </String>
+            <String String="bool">
+                <Field Id="Param Type" Index="3"/>
             </String>
             <Text Text="UserData/CheatCommand/death_Param_name">
                 <Field Id="Param_name"/>
@@ -126,6 +129,19 @@
             <Text Text="UserData/CheatCommand/death_Param_name_002">
                 <Field Id="Param_name" Index="2"/>
             </Text>
+            <Text Text="UserData/CheatCommand/death_Param_name_003">
+                <Field Id="Param_name" Index="3"/>
+            </Text>
+            <User Type="CheatCodeType" Instance="Units">
+                <Field Id="Type"/>
+            </User>
+        </Instances>
+        <Instances Id="copy">
+            <User Type="CheatCodeType" Instance="Units">
+                <Field Id="Type"/>
+            </User>
+        </Instances>
+        <Instances Id="paste">
             <User Type="CheatCodeType" Instance="Units">
                 <Field Id="Type"/>
             </User>

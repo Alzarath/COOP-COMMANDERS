@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionPattern id="CommanderMastery">
+        <Fields index="0" Reference="DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel" NameOverride="DataCollectionPattern/CommanderMastery/Value"/>
+        <Fields Reference="Upgrade,^ParamId^,Name"/>
+        <Fields Reference="Upgrade,^ParamId^,MaxLevel" NameOverride="DataCollectionPattern/CommanderMastery/MaxPoint"/>
+    </CDataCollectionPattern>
+</Catalog>

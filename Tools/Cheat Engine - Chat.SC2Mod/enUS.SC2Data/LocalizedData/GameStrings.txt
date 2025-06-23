@@ -6,8 +6,10 @@ Button/Name/TrainCheat=Cheat Spawn
 DocInfo/DescLong=Completely devoid of any description whatsoever.
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Param/Expression/lib_6CA20615_0762B21C=p1: ~A~<n/>p2: ~B~<n/>aspect: ~C~<n/>oneshot: ~D~
 Param/Expression/lib_6CA20615_3BC6AB16=Текущая единица <c val="FFFF80">~A~</c>.
 Param/Expression/lib_6CA20615_AB8E9B37=Единица <c val="FFFF80">~A~</c> не найдена.
+Param/Value/lib_6CA20615_2F99EFEE=1
 Param/Value/lib_6CA20615_C4B20E5E=Press <c val="FFC600">Ctrl - Tab</c> for opened debug window
 Unit/Name/CheatBuild=Cheat Build
 Unit/Name/CheatBuild2=Cheat Build
@@ -24,9 +26,10 @@ UserData/CheatCommand/alliance_Param_name_003=в одну сторону <True/F
 UserData/CheatCommand/death_Param_errors=не найдена допустимая группа единиц
 UserData/CheatCommand/death_Param_errors_001=не определена возможная принадлежность единиц
 UserData/CheatCommand/death_Param_errors_002=не установлено количество единиц
-UserData/CheatCommand/death_Param_name=группа единиц <select|all>
-UserData/CheatCommand/death_Param_name_001=целевые игроки <number|all>
-UserData/CheatCommand/death_Param_name_002=максимальное количество умираемые единиц
+UserData/CheatCommand/death_Param_name=Группа единиц <select|all>
+UserData/CheatCommand/death_Param_name_001=Целевые игроки <number|all>
+UserData/CheatCommand/death_Param_name_002=Количество умираемые единиц
+UserData/CheatCommand/death_Param_name_003=Удаление
 UserData/CheatCommand/spawn_Param_errors_001=неизвестный тип единиц
 UserData/CheatCommand/spawn_Param_errors_003=не удалось определить игрока
 UserData/CheatCommand/spawn_Param_errors_004=укажите True или False

@@ -1,4 +1,5 @@
 include "TriggerLibs/NativeLib"
+include "LibBEDD5153"
 
 include "LibDD453873_h"
 
@@ -8,6 +9,7 @@ include "LibDD453873_h"
 // External Library Initialization
 void libDD453873_InitLibraries () {
     libNtve_InitVariables();
+    libBEDD5153_InitVariables();
 }
 
 // Variable Initialization
@@ -20,6 +22,7 @@ void libDD453873_InitVariables () {
 
     libDD453873_InitVariables_completed = true;
 
+    libDD453873_gv_playersRaynor = PlayerGroupEmpty();
     libDD453873_gv_uI_TopBar.lv_topBar = c_invalidDialogControlId;
     libDD453873_gv_uI_TopBar.lv_cutsceneFrame = c_invalidDialogControlId;
     libDD453873_gv_uI_TopBar.lv_commandPanel = c_invalidDialogControlId;
@@ -84,6 +87,7 @@ bool libDD453873_gt_InitializeRaynorCommander_Func (bool testConds, bool runActi
 
     TriggerExecute(libDD453873_gt_InitTopBar, true, false);
     libDD453873_gf_UnlockTalent(1);
+    PlayerGroupAdd(libDD453873_gv_playersRaynor, 1);
     return true;
 }
 
@@ -91,6 +95,7 @@ bool libDD453873_gt_InitializeRaynorCommander_Func (bool testConds, bool runActi
 void libDD453873_gt_InitializeRaynorCommander_Init () {
     libDD453873_gt_InitializeRaynorCommander = TriggerCreate("libDD453873_gt_InitializeRaynorCommander_Func");
     TriggerAddEventMapInit(libDD453873_gt_InitializeRaynorCommander);
+    libBEDD5153_gf_PlayerCommanderChanges(libDD453873_gt_InitializeRaynorCommander, 1, "COOPRaynor", "On");
 }
 
 //--------------------------------------------------------------------------------------------------

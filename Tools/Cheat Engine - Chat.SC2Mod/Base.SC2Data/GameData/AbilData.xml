@@ -190,4 +190,194 @@
         </InfoArray>
         <Range value="1000"/>
     </CAbilBuild>
+    <CAbilBuild id="CheatBuild2">
+        <FlagArray index="IgnoreFood" value="1"/>
+        <FlagArray index="IgnoreUnitCost" value="1"/>
+        <InfoArray index="Build1" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat31"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat32"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat33"/>
+        </InfoArray>
+        <InfoArray index="Build4" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat34"/>
+        </InfoArray>
+        <InfoArray index="Build5" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat35"/>
+        </InfoArray>
+        <InfoArray index="Build6" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat36"/>
+        </InfoArray>
+        <InfoArray index="Build7" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat37"/>
+        </InfoArray>
+        <InfoArray index="Build8" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat38"/>
+        </InfoArray>
+        <InfoArray index="Build9" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat39"/>
+        </InfoArray>
+        <InfoArray index="Build10" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat40"/>
+        </InfoArray>
+        <InfoArray index="Build11" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat41"/>
+        </InfoArray>
+        <InfoArray index="Build12" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat42"/>
+        </InfoArray>
+        <InfoArray index="Build13" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat43"/>
+        </InfoArray>
+        <InfoArray index="Build14" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat44"/>
+        </InfoArray>
+        <InfoArray index="Build15" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat45"/>
+        </InfoArray>
+        <InfoArray index="Build16" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat46"/>
+        </InfoArray>
+        <InfoArray index="Build17" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat47"/>
+        </InfoArray>
+        <InfoArray index="Build18" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat48"/>
+        </InfoArray>
+        <InfoArray index="Build19" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat49"/>
+        </InfoArray>
+        <InfoArray index="Build20" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat50"/>
+        </InfoArray>
+        <InfoArray index="Build21" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat51"/>
+        </InfoArray>
+        <InfoArray index="Build22" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat52"/>
+        </InfoArray>
+        <InfoArray index="Build23" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat53"/>
+        </InfoArray>
+        <InfoArray index="Build24" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat54"/>
+        </InfoArray>
+        <InfoArray index="Build25" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat55"/>
+        </InfoArray>
+        <InfoArray index="Build26" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat56"/>
+        </InfoArray>
+        <InfoArray index="Build27" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat57"/>
+        </InfoArray>
+        <InfoArray index="Build28" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat58"/>
+        </InfoArray>
+        <InfoArray index="Build29" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat59"/>
+        </InfoArray>
+        <InfoArray index="Build30" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="BuildCheat60"/>
+        </InfoArray>
+        <Range value="1000"/>
+    </CAbilBuild>
+    <CAbilBuild id="CheatTrain2">
+        <FlagArray index="IgnoreFood" value="1"/>
+        <FlagArray index="IgnoreUnitCost" value="1"/>
+        <InfoArray index="Build1" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat31"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat32"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat33"/>
+        </InfoArray>
+        <InfoArray index="Build4" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat34"/>
+        </InfoArray>
+        <InfoArray index="Build5" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat35"/>
+        </InfoArray>
+        <InfoArray index="Build6" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat36"/>
+        </InfoArray>
+        <InfoArray index="Build7" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat37"/>
+        </InfoArray>
+        <InfoArray index="Build8" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat38"/>
+        </InfoArray>
+        <InfoArray index="Build9" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat39"/>
+        </InfoArray>
+        <InfoArray index="Build10" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat40"/>
+        </InfoArray>
+        <InfoArray index="Build11" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat41"/>
+        </InfoArray>
+        <InfoArray index="Build12" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat42"/>
+        </InfoArray>
+        <InfoArray index="Build13" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat43"/>
+        </InfoArray>
+        <InfoArray index="Build14" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat44"/>
+        </InfoArray>
+        <InfoArray index="Build15" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat45"/>
+        </InfoArray>
+        <InfoArray index="Build16" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat46"/>
+        </InfoArray>
+        <InfoArray index="Build17" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat47"/>
+        </InfoArray>
+        <InfoArray index="Build18" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat48"/>
+        </InfoArray>
+        <InfoArray index="Build19" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat49"/>
+        </InfoArray>
+        <InfoArray index="Build20" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat50"/>
+        </InfoArray>
+        <InfoArray index="Build21" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat51"/>
+        </InfoArray>
+        <InfoArray index="Build22" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat52"/>
+        </InfoArray>
+        <InfoArray index="Build23" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat53"/>
+        </InfoArray>
+        <InfoArray index="Build24" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat54"/>
+        </InfoArray>
+        <InfoArray index="Build25" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat55"/>
+        </InfoArray>
+        <InfoArray index="Build26" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat56"/>
+        </InfoArray>
+        <InfoArray index="Build27" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat57"/>
+        </InfoArray>
+        <InfoArray index="Build28" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat58"/>
+        </InfoArray>
+        <InfoArray index="Build29" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat59"/>
+        </InfoArray>
+        <InfoArray index="Build30" Unit="System_Snapshot_Dummy">
+            <Button DefaultButtonFace="TrainCheat60"/>
+        </InfoArray>
+        <Range value="1000"/>
+    </CAbilBuild>
 </Catalog>

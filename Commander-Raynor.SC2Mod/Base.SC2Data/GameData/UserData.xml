@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="COMMANDERMastery">
+        <Instances Id="Raynor 1-1">
+            <Fixed Fixed="-2">
+                <Field Id="Value per Point"/>
+            </Fixed>
+            <Text Text="UserData/COMMANDERMastery/Raynor 1-1_Text">
+                <Field Id="Text"/>
+            </Text>
+        </Instances>
+        <Instances Id="Raynor 1-2">
+            <Fixed Fixed="2">
+                <Field Id="Value per Point"/>
+            </Fixed>
+            <Text Text="UserData/COMMANDERMastery/Raynor 1-2_Text">
+                <Field Id="Text"/>
+            </Text>
+        </Instances>
+        <Instances Id="Raynor 2-1">
+            <Fixed Fixed="-4">
+                <Field Id="Value per Point"/>
+            </Fixed>
+            <Text Text="UserData/COMMANDERMastery/Raynor 2-1_Text">
+                <Field Id="Text"/>
+            </Text>
+        </Instances>
+        <Instances Id="Raynor 2-2">
+            <Fixed Fixed="-4">
+                <Field Id="Value per Point"/>
+            </Fixed>
+            <Text Text="UserData/COMMANDERMastery/Raynor 2-2_Text">
+                <Field Id="Text"/>
+            </Text>
+        </Instances>
+        <Instances Id="Raynor 3-1">
+            <Fixed Fixed="3">
+                <Field Id="Value per Point"/>
+            </Fixed>
+            <Text Text="UserData/COMMANDERMastery/Raynor 3-1_Text">
+                <Field Id="Text"/>
+            </Text>
+        </Instances>
+        <Instances Id="Raynor 3-2">
+            <Fixed Fixed="1">
+                <Field Id="Value per Point"/>
+            </Fixed>
+            <Text Text="UserData/COMMANDERMastery/Raynor 3-2_Text">
+                <Field Id="Text"/>
+            </Text>
+        </Instances>
+    </CUser>
+</Catalog>

@@ -1684,6 +1684,7 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <BuildTime value="40"/>
     </CUnit>
     <CUnit id="RaynorCommanderStarport">
         <DeathRevealRadius value="3"/>

@@ -50,6 +50,7 @@ EDSTR_CATEGORY_DataGroup_Template=zTemplate
 EDSTR_CATEGORY_DataGroup_Tileset=Tileset
 EDSTR_CATEGORY_DataGroup_Unit=Unit
 EDSTR_CATEGORY_DataGroup_Weapon=Weapon
+EDSTR_CATEGORY_DataGroup_Mastery=Mastery
 EDSTR_CATEGORY_DoodadType=Doodad Type
 EDSTR_CATEGORY_DoodadType_Blocker=Blockers, Pathing and Line Of Sight
 EDSTR_CATEGORY_DoodadType_CliffRamps=Cliff and Ramp

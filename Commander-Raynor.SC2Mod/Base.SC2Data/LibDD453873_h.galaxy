@@ -15,6 +15,7 @@ struct libDD453873_gs_UI_TopBar {
 };
 
 // Variable Declarations
+playergroup libDD453873_gv_playersRaynor;
 unit libDD453873_gv_raynor_TopBar_Caster;
 libDD453873_gs_UI_TopBar libDD453873_gv_uI_TopBar;
 

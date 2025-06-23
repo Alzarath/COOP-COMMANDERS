@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade id="RaynorCommanderBansheeAirstrikeCooldown">
+        <Race value="COOPRaynor"/>
+        <EffectArrayTemplate Reference="Abil,^ParamId^,Cost[0].Cooldown.TimeUse" Value="{DataCollection,RaynorCommanderBansheeAirstrikeCooldown,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+        <MaxLevel value="30"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderMedicsHealAdditionalTarget">
+        <Race value="COOPRaynor"/>
+        <EffectArrayTemplate Reference="Abil,^ParamId^,Cost[0].Cooldown.TimeUse" Value="{DataCollection,RaynorCommanderMedicsHealAdditionalTarget,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+        <MaxLevel value="30"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderMechAttackSpeed">
+        <Race value="COOPRaynor"/>
+        <EffectArrayTemplate Operation="SubtractBaseMultiply" Reference="Weapon,^ParamId^,Period" Value="{DataCollection,RaynorCommanderMechAttackSpeed,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+        <MaxLevel value="30"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderSpeedDropPodUnits">
+        <Race value="COOPRaynor"/>
+        <EffectArrayTemplate Reference="Abil,^ParamId^,InfoArray[0].Resource[Minerals]" Value="{DataCollection,RaynorCommanderSpeedDropPodUnits,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+        <MaxLevel value="30"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderReduceCostResearch">
+        <Race value="COOPRaynor"/>
+        <EffectArrayTemplate Operation="SubtractBaseMultiply" Reference="Abil,^ParamId^,InfoArray[0].Time" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="SubtractBaseMultiply" Reference="Abil,^ParamId^,InfoArray[0].Resource[Vespene]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[1].Resource[Minerals]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[1].Resource[Vespene]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[2].Resource[Minerals]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[2].Resource[Vespene]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[3].Resource[Minerals]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[3].Resource[Vespene]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[4].Resource[Minerals]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="AddBaseMultiply" Reference="Abil,^ParamId^,InfoArray[4].Resource[Vespene]" Value="{DataCollection,RaynorCommanderReduceCostResearch,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+        <MaxLevel value="30"/>
+    </CUpgrade>
+    <CUpgrade id="RaynorCommanderHyperionCooldown">
+        <Race value="COOPRaynor"/>
+        <EffectArrayTemplate Reference="Abil,^ParamId^,Cost[0].Cooldown.TimeUse" Value="{DataCollection,RaynorCommanderHyperionCooldown,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Raynor,UpgradeType:Talents"/>
+        <MaxLevel value="30"/>
+    </CUpgrade>
     <CUpgrade id="RaynorCommanderVehicleAndShipWeapons">
         <InfoTooltipPriority value="61"/>
         <WebPriority value="0"/>

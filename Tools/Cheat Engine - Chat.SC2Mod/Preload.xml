@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Preload>
 <Actor id="SYSTEM_ActorConfig"/>
-<Unit id="CheatTrain"/>
-<Unit id="CheatTrain2"/>
 <Unit id="CheatBuild"/>
 <Unit id="CheatBuild2"/>
+<Unit id="CheatTrain"/>
+<Unit id="CheatTrain2"/>
+<Unit id="CheatTrain3"/>
+<Unit id="CheatTrain4"/>
 </Preload>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="COMMANDERMastery">
+        <Fields Id="Text" Type="Text" EditorColumn="1"/>
+        <Fields Id="Points" Type="Int" Count="15"/>
+        <Fields Id="Value per Point" Type="Fixed" EditorColumn="2"/>
+        <Fields Id="Max points" Type="Int" EditorColumn="3"/>
+        <Instances Id="[Default]">
+            <Int Int="30">
+                <Field Id="Max points"/>
+            </Int>
+        </Instances>
+    </CUser>
+</Catalog>

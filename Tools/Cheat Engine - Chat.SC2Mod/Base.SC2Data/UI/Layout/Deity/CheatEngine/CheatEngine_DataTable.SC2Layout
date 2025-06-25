@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+    <Constant name="CheatEngine_DataTableBGColor" val="93,93,93"/>
+    <Constant name="CheatEngine_DataTableBGAlpha" val="156"/>
+    <Constant name="CheatEngine_DataTableLineCounterBGColor" val="43,43,43"/>
+    <Constant name="CheatEngine_DataTableLineCounterBGAlpha" val="188"/>
+    <Constant name="CheatEngine_DataTableLineBoxBGColor" val="42,42,42"/>
+    <Constant name="CheatEngine_DataTableLineBoxBGAlpha" val="102"/>
+
+    <Constant name="CheatEngine_DataTableHeightLine" val="35"/>
+
+    <!-- Templates -->
+
+    <Frame type="Frame" name="LineTemplate">
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+        <Height val="#CheatEngine_DataTableHeightLine"/>
+
+        <Frame type="EditBox" name="NameDatatable">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Width val="225"/>
+
+            <Frame type="Image" name="BG">
+                <Anchor relative="$parent"/>
+                <ColorAdjustMode val="Fill"/>
+                <AdjustmentColor val="#CheatEngine_DataTableLineBoxBGColor"/>
+                <Alpha val="#CheatEngine_DataTableLineBoxBGAlpha"/>
+            </Frame>
+        </Frame>
+        <Frame type="EditBox" name="ValueDatatable">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/NameDatatable" pos="Max" offset="10"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+
+            <Frame type="Image" name="BG">
+                <Anchor relative="$parent"/>
+                <ColorAdjustMode val="Fill"/>
+                <AdjustmentColor val="#CheatEngine_DataTableLineBoxBGColor"/>
+                <Alpha val="#CheatEngine_DataTableLineBoxBGAlpha"/>
+            </Frame>
+        </Frame>
+    </Frame>
+
+    <!-- Layouts -->
+
+    <Frame type="Frame" name="GameUI/UIContainer/FullscreenUpperContainer" file="GameUI">
+        <Frame type="Frame" name="CheatDataTable">
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Mid" offset="200"/>
+            <Width val="739"/>
+            <Height val="613"/>
+            <Visible val="False"/>
+
+            <Frame type="Image" name="BG">
+                <Anchor relative="$parent"/>
+                <ColorAdjustMode val="Fill"/>
+                <AdjustmentColor val="#CheatEngine_DataTableBGColor"/>
+                <Alpha val="#CheatEngine_DataTableBGAlpha"/>
+            </Frame>
+
+            <Frame type="Frame" name="LineCounter">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent/Options" pos="Min" offset="0"/>
+                <Width val="30"/>
+
+                <Frame type="Image" name="BG">
+                    <Anchor relative="$parent"/>
+                    <ColorAdjustMode val="Fill"/>
+                    <AdjustmentColor val="#CheatEngine_DataTableLineCounterBGColor"/>
+                </Frame>
+            </Frame>
+            <Frame type="Frame" name="Options">
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Height val="40"/>
+
+                <Frame type="Image" name="BG">
+                    <Anchor relative="$parent"/>
+                    <ColorAdjustMode val="Fill"/>
+                    <AdjustmentColor val="#CheatEngine_DataTableLineCounterBGColor"/>
+                    <Alpha val="#CheatEngine_DataTableLineCounterBGAlpha"/>
+                </Frame>
+
+                <Frame type="Button" name="refreshData">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="-10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="-10"/>
+                    <Width val="125"/>
+
+                    <Frame type="Image" name="NormalImage">
+                        <Anchor relative="$parent"/>
+                        <ColorAdjustMode val="Fill"/>
+                        <AdjustmentColor val="cecece"/>
+                        <Alpha val="200"/>
+                    </Frame>
+                    <Frame type="Image" name="HoverImage">
+                        <Anchor relative="$parent"/>
+                        <ColorAdjustMode val="Fill"/>
+                        <AdjustmentColor val="cecece"/>
+                    </Frame>
+                </Frame>
+            </Frame>
+            <Frame type="Frame" name="Container">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent/LineCounter" pos="Max" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Bottom" relative="$parent/Options" pos="Min" offset="0"/>
+
+                <Frame type="Frame" name="line0" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line1" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line0" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line2" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line1" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line3" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line2" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line4" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line3" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line5" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line4" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line6" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line5" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line7" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line6" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line8" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line7" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line9" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line8" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line10" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line9" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line11" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line10" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line12" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line11" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line13" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line12" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line14" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line13" pos="Max" offset="0"/>
+                </Frame>
+                <Frame type="Frame" name="line15" template="CheatEngine_DataTable/LineTemplate">
+                    <Anchor side="Top" relative="$parent/line14" pos="Max" offset="0"/>
+                </Frame>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>

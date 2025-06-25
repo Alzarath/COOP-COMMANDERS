@@ -22,7 +22,17 @@ void lib6CA20615_InitVariables () {
 
     lib6CA20615_InitVariables_completed = true;
 
+    lib6CA20615_gv_mAXIMUM_SIZE_BUFFER = 127;
     lib6CA20615_gv_dummyIcon = "";
+    for (init_i = 0; init_i <= 15; init_i += 1) {
+        lib6CA20615_gv_player_Cheat[init_i].lv_unitSpawn.lv_spawnUnit_LastCreatedUnitType = ("Marine");
+        lib6CA20615_gv_player_Cheat[init_i].lv_unitSpawn.lv_spawnUnit_Player = 1;
+        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_deathUnits_unitgroup = "select";
+        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_deathUnits_Players = "all";
+        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_deathUnits_MaxUnits = 1000;
+        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_lastPlayerGroup = PlayerGroupAll();
+        lib6CA20615_gv_player_Cheat[init_i].lv_alliance.lv_alliance_AspectType = "";
+    }
     lib6CA20615_gv_builderUnit = UnitGroupEmpty();
     lib6CA20615_gv_builderStructure = UnitGroupEmpty();
     lib6CA20615_gv_uispawner = c_invalidDialogControlId;
@@ -35,15 +45,14 @@ void lib6CA20615_InitVariables () {
     for (init_i = 0; init_i <= 50; init_i += 1) {
         lib6CA20615_gv_selectorRace[init_i] = c_invalidDialogControlId;
     }
+    lib6CA20615_gv_datatable_Window = c_invalidDialogControlId;
     for (init_i = 0; init_i <= 15; init_i += 1) {
-        lib6CA20615_gv_player_Cheat[init_i].lv_unitSpawn.lv_spawnUnit_LastCreatedUnitType = ("Marine");
-        lib6CA20615_gv_player_Cheat[init_i].lv_unitSpawn.lv_spawnUnit_Player = 1;
-        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_deathUnits_unitgroup = "select";
-        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_deathUnits_Players = "all";
-        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_deathUnits_MaxUnits = 1000;
-        lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_lastPlayerGroup = PlayerGroupAll();
-        lib6CA20615_gv_player_Cheat[init_i].lv_alliance.lv_alliance_AspectType = "";
+        lib6CA20615_gv_nameDatatable[init_i] = c_invalidDialogControlId;
     }
+    for (init_i = 0; init_i <= 15; init_i += 1) {
+        lib6CA20615_gv_valueDatatable[init_i] = c_invalidDialogControlId;
+    }
+    lib6CA20615_gv_refreshdata_button = c_invalidDialogControlId;
 }
 
 // Functions
@@ -446,8 +455,109 @@ void lib6CA20615_gf_DeathUnit (int lp_originPlayer, string lp_command) {
     lib6CA20615_gv_player_Cheat[lp_originPlayer].lv_deathUnits.lv_deathUnits_IsRemove = lv_isRemoveUnit;
 }
 
-void lib6CA20615_gf_CopyUnit () {
+void lib6CA20615_gf_CopyUnit (int lp_origingplayer) {
+    // Variable Declarations
+    unitgroup lv_selectedunits;
+    unit lv_unit;
+    string lv_stats_array;
+    string lv_unit_array;
+
     // Automatic Variable Declarations
+    unitgroup auto79671B27_g;
+    int auto79671B27_u;
+
+    // Variable Initialization
+    lv_selectedunits = UnitGroupSelected(lp_origingplayer);
+    lv_stats_array = "";
+    lv_unit_array = "";
+
+    // Implementation
+    auto79671B27_g = lv_selectedunits;
+    auto79671B27_u = UnitGroupCount(auto79671B27_g, c_unitCountAll);
+    for (;; auto79671B27_u -= 1) {
+        lv_unit = UnitGroupUnitFromEnd(auto79671B27_g, auto79671B27_u);
+        if (lv_unit == null) { break; }
+        DataTableSetString(true, (lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)), ((DataTableGetString(true, (lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER))) + (UnitGetType(lv_unit))) + ","));
+        DataTableSetString(true, (lib6CA20615_gv_unitsStatsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)), (DataTableGetString(true, (lib6CA20615_gv_unitsStatsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER))) + (FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropLife, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropLifeMax, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropLifeRegen, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropShields, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropShieldsMax, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropShieldsRegen, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropEnergy, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropEnergyMax, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropEnergyRegen, c_unitPropCurrent), 2) + "," + FixedToString(UnitGetPropertyFixed(lv_unit, c_unitPropKills, c_unitPropCurrent), 0) + "," + IntToString(UnitGetOwner(lv_unit)) + "|")));
+        DataTableSetString(true, (lib6CA20615_gv_unitsOrientationBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)), (DataTableGetString(true, (lib6CA20615_gv_unitsOrientationBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER))) + (FixedToString(DistanceBetweenPoints(UnitGroupCenterOfGroup(lv_selectedunits), UnitGetPosition(lv_unit)), c_fixedPrecisionAny) + "," + FixedToString(AngleBetweenPoints(UnitGroupCenterOfGroup(lv_selectedunits), UnitGetPosition(lv_unit)), c_fixedPrecisionAny) + "," + FixedToString(UnitGetFacing(lv_unit), c_fixedPrecisionAny) + "|")));
+    }
+    TextExpressionSetToken("Param/Expression/lib_6CA20615_A238C292", "A", StringToText((lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER))));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_6CA20615_A238C292"));
+    TextExpressionSetToken("Param/Expression/lib_6CA20615_2B42AD6F", "A", StringToText(DataTableGetString(true, (lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)))));
+    TextExpressionSetToken("Param/Expression/lib_6CA20615_2B42AD6F", "B", StringToText(DataTableGetString(true, (lib6CA20615_gv_unitsOrientationBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)))));
+    TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_6CA20615_2B42AD6F"), true);
+    lib6CA20615_gv_cURRENT_SIZE_BUFFER += 1;
+}
+
+void lib6CA20615_gf_PasteUnit (int lp_origingplayer, point lp_spawnpoint, string lp_command) {
+    // Variable Declarations
+    string lv_units;
+    string lv_stats;
+    string lv_orientation;
+    string lv_statseveryunit;
+    string lv_orientationeveryunit;
+    point lv_spawnpoint;
+    int lv_it;
+    unit lv_created_unit;
+    fixed lv_distance;
+    fixed lv_angle;
+    fixed lv_facing;
+
+    // Automatic Variable Declarations
+    const int auto80F3CE8F_ae = 1000;
+    const int auto80F3CE8F_ai = 1;
+
+    // Variable Initialization
+    lv_units = "";
+    lv_stats = "";
+    lv_orientation = "";
+    lv_statseveryunit = "";
+    lv_orientationeveryunit = "";
+    lv_spawnpoint = lp_spawnpoint;
+
+    // Implementation
+    if ((DataTableValueExists(true, (lib6CA20615_gv_unitsBuffer + lp_command)) == false)) {
+        TextExpressionSetToken("Param/Expression/lib_6CA20615_62412B26", "A", StringToText((lib6CA20615_gv_unitsBuffer + lp_command)));
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_6CA20615_62412B26"));
+        TextExpressionSetToken("Param/Expression/lib_6CA20615_DDD97C4F", "A", StringToText(DataTableGetString(true, (lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)))));
+        TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_6CA20615_DDD97C4F"), true);
+        return ;
+    }
+
+    lv_units = DataTableGetString(true, (lib6CA20615_gv_unitsBuffer + lp_command));
+    lv_units = StringReplaceWord(lv_units, ",", " ", c_stringReplaceAll, c_stringCase);
+    lv_stats = DataTableGetString(true, (lib6CA20615_gv_unitsStatsBuffer + lp_command));
+    lv_stats = StringReplaceWord(lv_stats, "|", " ", c_stringReplaceAll, c_stringCase);
+    lv_orientation = DataTableGetString(true, (lib6CA20615_gv_unitsOrientationBuffer + lp_command));
+    lv_orientation = StringReplaceWord(lv_orientation, "|", " ", c_stringReplaceAll, c_stringCase);
+    lv_it = 1;
+    for ( ; ( (auto80F3CE8F_ai >= 0 && lv_it <= auto80F3CE8F_ae) || (auto80F3CE8F_ai < 0 && lv_it >= auto80F3CE8F_ae) ) ; lv_it += auto80F3CE8F_ai ) {
+        if ((StringWord(lv_units, lv_it) == "")) {
+            break;
+        }
+
+        lv_statseveryunit = StringWord(lv_stats, lv_it);
+        lv_statseveryunit = StringReplaceWord(lv_statseveryunit, ",", " ", c_stringReplaceAll, c_stringCase);
+        lv_orientationeveryunit = StringWord(lv_orientation, lv_it);
+        TextExpressionSetToken("Param/Expression/lib_6CA20615_1B3DECFC", "A", StringToText(lv_statseveryunit));
+        TextExpressionSetToken("Param/Expression/lib_6CA20615_1B3DECFC", "B", StringToText(lv_orientationeveryunit));
+        TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_6CA20615_1B3DECFC"), true);
+        lv_distance = StringToFixed(StringWord(StringReplaceWord(lv_orientationeveryunit, ",", " ", c_stringReplaceAll, c_stringCase), 1));
+        lv_angle = StringToFixed(StringWord(StringReplaceWord(lv_orientationeveryunit, ",", " ", c_stringReplaceAll, c_stringCase), 2));
+        lv_facing = StringToFixed(StringWord(StringReplaceWord(lv_orientationeveryunit, ",", " ", c_stringReplaceAll, c_stringCase), 3));
+        UnitCreate(1, (StringWord(lv_units, lv_it)), c_unitCreateIgnorePlacement, StringToInt(StringWord(lv_statseveryunit, 11)), PointWithOffsetPolar(lp_spawnpoint, lv_distance, lv_angle), lv_facing);
+        lv_created_unit = UnitLastCreated();
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropLife, StringToFixed(StringWord(lv_statseveryunit, 1)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropLifeMax, StringToFixed(StringWord(lv_statseveryunit, 2)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropLifeRegen, StringToFixed(StringWord(lv_statseveryunit, 3)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropShields, StringToFixed(StringWord(lv_statseveryunit, 4)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropShieldsMax, StringToFixed(StringWord(lv_statseveryunit, 5)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropShieldsRegen, StringToFixed(StringWord(lv_statseveryunit, 6)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropEnergy, StringToFixed(StringWord(lv_statseveryunit, 7)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropEnergyMax, StringToFixed(StringWord(lv_statseveryunit, 8)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropEnergyRegen, StringToFixed(StringWord(lv_statseveryunit, 9)));
+        UnitSetPropertyFixed(lv_created_unit, c_unitPropKills, StringToFixed(StringWord(lv_statseveryunit, 10)));
+    }
 }
 
 void lib6CA20615_gf_Alliance (int lp_originPlayer, string lp_command) {
@@ -724,40 +834,6 @@ string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
-// Trigger: Check Unit ID
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_CheckUnitID_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    UIDisplayMessage(PlayerGroupSingle(1), c_messageAreaSubtitle, StringToText((UnitGetType(UnitGroupUnit(UnitGroupSelected(EventPlayer()), 1)))));
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_CheckUnitID_Init () {
-    lib6CA20615_gt_CheckUnitID = TriggerCreate("lib6CA20615_gt_CheckUnitID_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_CheckUnitID, c_playerAny, c_keyD, true, c_keyModifierStateExclude, c_keyModifierStateRequire, c_keyModifierStateIgnore);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Check Actor ID
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_CheckActorID_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_CheckActorID_Init () {
-    lib6CA20615_gt_CheckActorID = TriggerCreate("lib6CA20615_gt_CheckActorID_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_CheckActorID, c_playerAny, c_keyD, true, c_keyModifierStateRequire, c_keyModifierStateRequire, c_keyModifierStateIgnore);
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: init
 //--------------------------------------------------------------------------------------------------
 bool lib6CA20615_gt_init_Func (bool testConds, bool runActions) {
@@ -790,9 +866,9 @@ bool lib6CA20615_gt_init_Func (bool testConds, bool runActions) {
         PlayerSetAlliance(auto9CA1A203_var, c_allianceIdPushable, 1, true);
     }
     TriggerExecute(lib6CA20615_gt_createbuilder, true, false);
+    TriggerExecute(lib6CA20615_gt_hookdatatableview, true, false);
     Wait(2.0, c_timeGame);
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_C4B20E5E"));
-    libNtve_gf_SendActorMessageToUnit(null, libNtve_gf_SetRenderToTextureEnabled(false));
     return true;
 }
 
@@ -810,6 +886,7 @@ bool lib6CA20615_gt_CheatCodeUnits_Func (bool testConds, bool runActions) {
     string lv_cheat;
     int lv_word;
     string lv__command;
+    point lv_point;
 
     // Automatic Variable Declarations
     const int auto5CFF8A43_ae = 10;
@@ -819,6 +896,7 @@ bool lib6CA20615_gt_CheatCodeUnits_Func (bool testConds, bool runActions) {
     // Variable Initialization
     lv_cheat = lib6CA20615_gf_SearchCheat(StringWord(EventChatMessage(false), 1));
     lv__command = "";
+    lv_point = Point(0.0, 0.0);
 
     // Conditions
     if (testConds) {
@@ -834,6 +912,10 @@ bool lib6CA20615_gt_CheatCodeUnits_Func (bool testConds, bool runActions) {
 
     lv_word = 2;
     for ( ; ( (auto5CFF8A43_ai >= 0 && lv_word <= auto5CFF8A43_ae) || (auto5CFF8A43_ai < 0 && lv_word >= auto5CFF8A43_ae) ) ; lv_word += auto5CFF8A43_ai ) {
+        if ((StringWord(EventChatMessage(false), lv_word) == "")) {
+            break;
+        }
+
         lv__command = (lv__command + " " + StringWord(EventChatMessage(false), lv_word));
     }
     lv__command = StringSub(lv__command, 2, StringLength(lv__command));
@@ -843,6 +925,12 @@ bool lib6CA20615_gt_CheatCodeUnits_Func (bool testConds, bool runActions) {
     }
     else if (auto952D5BD5_val == "death") {
         lib6CA20615_gf_DeathUnit(EventPlayer(), lv__command);
+    }
+    else if (auto952D5BD5_val == "copy") {
+        lib6CA20615_gf_CopyUnit(EventPlayer());
+    }
+    else if (auto952D5BD5_val == "paste") {
+        lib6CA20615_gf_PasteUnit(EventPlayer(), CameraGetTarget(EventPlayer()), lv__command);
     }
     else {
     }
@@ -943,8 +1031,7 @@ bool lib6CA20615_gt_hidespawnerui_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_hidespawnerui_Init () {
     lib6CA20615_gt_hidespawnerui = TriggerCreate("lib6CA20615_gt_hidespawnerui_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, c_keyTab, false, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
-    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, c_keyControl, false, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, c_keyTab, false, c_keyModifierStateIgnore, c_keyModifierStateRequire, c_keyModifierStateIgnore);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1080,29 +1167,151 @@ void lib6CA20615_gt_setunitsbuilder_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Mouse move
+// Trigger: hook data table view
 //--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_Mousemove_Func (bool testConds, bool runActions) {
+bool lib6CA20615_gt_hookdatatableview_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    const int auto4D62A6F7_ae = 15;
+    int auto4D62A6F7_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogControlHookupStandard(c_triggerControlTypePanel, ("UIContainer/FullscreenUpperContainer/CheatDataTable"));
+    lib6CA20615_gv_datatable_Window = DialogControlLastCreated();
+    auto4D62A6F7_var = 0;
+    for ( ; auto4D62A6F7_var <= auto4D62A6F7_ae; auto4D62A6F7_var += 1 ) {
+        DialogControlHookupStandard(c_triggerControlTypeEditBox, ("UIContainer/FullscreenUpperContainer/CheatDataTable/Container/line" + IntToString(auto4D62A6F7_var) + "/NameDatatable"));
+        lib6CA20615_gv_nameDatatable[auto4D62A6F7_var] = DialogControlLastCreated();
+        DialogControlHookupStandard(c_triggerControlTypeEditBox, ("UIContainer/FullscreenUpperContainer/CheatDataTable/Container/line" + IntToString(auto4D62A6F7_var) + "/ValueDatatable"));
+        lib6CA20615_gv_valueDatatable[auto4D62A6F7_var] = DialogControlLastCreated();
+    }
+    DialogControlHookupStandard(c_triggerControlTypeButton, ("UIContainer/FullscreenUpperContainer/CheatDataTable/Options/refreshData"));
+    lib6CA20615_gv_refreshdata_button = DialogControlLastCreated();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_hookdatatableview_Init () {
+    lib6CA20615_gt_hookdatatableview = TriggerCreate("lib6CA20615_gt_hookdatatableview_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: update data
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_updatedata_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    const int autoAA9EE637_ae = 15;
+    int autoAA9EE637_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((EventDialogControl() == lib6CA20615_gv_refreshdata_button))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoAA9EE637_var = 0;
+    for ( ; autoAA9EE637_var <= autoAA9EE637_ae; autoAA9EE637_var += 1 ) {
+        libNtve_gf_SetDialogItemEditorValue(lib6CA20615_gv_nameDatatable[autoAA9EE637_var], DataTableValueName(true, (autoAA9EE637_var + 1)), PlayerGroupAll());
+        libNtve_gf_SetDialogItemEditorValue(lib6CA20615_gv_valueDatatable[autoAA9EE637_var], DataTableGetString(true, DataTableValueName(true, (autoAA9EE637_var + 1))), PlayerGroupAll());
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_updatedata_Init () {
+    lib6CA20615_gt_updatedata = TriggerCreate("lib6CA20615_gt_updatedata_Func");
+    TriggerAddEventDialogControl(lib6CA20615_gt_updatedata, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: show datatable window
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_showdatatablewindow_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
         return true;
     }
 
-    lib6CA20615_gv_player_Cheat[EventPlayer()].lv_mouseX = EventMouseMovedPosXWorld();
-    lib6CA20615_gv_player_Cheat[EventPlayer()].lv_mouseY = EventMouseMovedPosYWorld();
+    DialogControlSetVisible(lib6CA20615_gv_datatable_Window, PlayerGroupSingle(EventPlayer()), true);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_Mousemove_Init () {
-    lib6CA20615_gt_Mousemove = TriggerCreate("lib6CA20615_gt_Mousemove_Func");
-    TriggerAddEventMouseMoved(lib6CA20615_gt_Mousemove, c_playerAny);
+void lib6CA20615_gt_showdatatablewindow_Init () {
+    lib6CA20615_gt_showdatatablewindow = TriggerCreate("lib6CA20615_gt_showdatatablewindow_Func");
+    TriggerAddEventKeyPressed(lib6CA20615_gt_showdatatablewindow, c_playerAny, c_keyD, true, c_keyModifierStateIgnore, c_keyModifierStateRequire, c_keyModifierStateIgnore);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: hide datatable window
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_hidedatatablewindow_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogControlSetVisible(lib6CA20615_gv_datatable_Window, PlayerGroupSingle(EventPlayer()), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_hidedatatablewindow_Init () {
+    lib6CA20615_gt_hidedatatablewindow = TriggerCreate("lib6CA20615_gt_hidedatatablewindow_Func");
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidedatatablewindow, c_playerAny, c_keyD, false, c_keyModifierStateIgnore, c_keyModifierStateRequire, c_keyModifierStateIgnore);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Mouse click
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_Mouseclick_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_center;
+    fixed lv_angle;
+    fixed lv_distance;
+
+    // Automatic Variable Declarations
+    unitgroup autoD750F029_g;
+    int autoD750F029_u;
+    unit autoD750F029_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreate(1, "System_Snapshot_Dummy", 0, 1, PointWithOffsetPolar(lv_center, 5.0, 140.0), 270.0);
+    autoD750F029_g = UnitLastCreatedGroup();
+    autoD750F029_u = UnitGroupCount(autoD750F029_g, c_unitCountAll);
+    for (;; autoD750F029_u -= 1) {
+        autoD750F029_var = UnitGroupUnitFromEnd(autoD750F029_g, autoD750F029_u);
+        if (autoD750F029_var == null) { break; }
+        lv_distance = DistanceBetweenPoints(UnitGetPosition(autoD750F029_var), UnitGroupCenterOfGroup(UnitLastCreatedGroup()));
+        lv_angle = AngleBetweenPoints(UnitGroupCenterOfGroup(UnitLastCreatedGroup()), UnitGetPosition(autoD750F029_var));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_Mouseclick_Init () {
+    lib6CA20615_gt_Mouseclick = TriggerCreate("lib6CA20615_gt_Mouseclick_Func");
+    TriggerAddEventMouseClicked(lib6CA20615_gt_Mouseclick, c_playerAny, c_mouseButtonLeft, true);
 }
 
 void lib6CA20615_InitTriggers () {
-    lib6CA20615_gt_CheckUnitID_Init();
-    lib6CA20615_gt_CheckActorID_Init();
     lib6CA20615_gt_init_Init();
     lib6CA20615_gt_CheatCodeUnits_Init();
     lib6CA20615_gt_CheatCodePlayers_Init();
@@ -1110,7 +1319,11 @@ void lib6CA20615_InitTriggers () {
     lib6CA20615_gt_hidespawnerui_Init();
     lib6CA20615_gt_createbuilder_Init();
     lib6CA20615_gt_setunitsbuilder_Init();
-    lib6CA20615_gt_Mousemove_Init();
+    lib6CA20615_gt_hookdatatableview_Init();
+    lib6CA20615_gt_updatedata_Init();
+    lib6CA20615_gt_showdatatablewindow_Init();
+    lib6CA20615_gt_hidedatatablewindow_Init();
+    lib6CA20615_gt_Mouseclick_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

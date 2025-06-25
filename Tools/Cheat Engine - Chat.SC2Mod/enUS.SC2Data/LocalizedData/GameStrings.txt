@@ -7,8 +7,13 @@ DocInfo/DescLong=Completely devoid of any description whatsoever.
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
 Param/Expression/lib_6CA20615_0762B21C=p1: ~A~<n/>p2: ~B~<n/>aspect: ~C~<n/>oneshot: ~D~
+Param/Expression/lib_6CA20615_1B3DECFC=Data Table: ~A~<n/>Orientation: ~B~
+Param/Expression/lib_6CA20615_2B42AD6F=Data Table: ~A~<n/>Orientation: ~B~
 Param/Expression/lib_6CA20615_3BC6AB16=Текущая единица <c val="FFFF80">~A~</c>.
+Param/Expression/lib_6CA20615_62412B26=Группа <c val="FFFF80">~A~</c> не найдена
+Param/Expression/lib_6CA20615_A238C292=Добавлена группа <c val="FFFF80">~A~</c> буфер
 Param/Expression/lib_6CA20615_AB8E9B37=Единица <c val="FFFF80">~A~</c> не найдена.
+Param/Expression/lib_6CA20615_DDD97C4F=Data Table: ~A~
 Param/Value/lib_6CA20615_2F99EFEE=1
 Param/Value/lib_6CA20615_C4B20E5E=Press <c val="FFC600">Ctrl - Tab</c> for opened debug window
 Unit/Name/CheatBuild=Cheat Build

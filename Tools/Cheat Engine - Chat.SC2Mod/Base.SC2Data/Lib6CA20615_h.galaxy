@@ -3,6 +3,11 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: Cheat Engine
 //--------------------------------------------------------------------------------------------------
+// Constants
+const string lib6CA20615_gv_unitsBuffer = "CheatEngine.unit";
+const string lib6CA20615_gv_unitsStatsBuffer = "CheatEngine.unitstats";
+const string lib6CA20615_gv_unitsOrientationBuffer = "CheatEngine.unitorientation";
+
 // Structures
 struct lib6CA20615_gs_Cheat_Alliance {
     int lv_alliance_P1;
@@ -35,14 +40,20 @@ struct lib6CA20615_gs_Player_Cheat {
 };
 
 // Variable Declarations
+int lib6CA20615_gv_cURRENT_SIZE_BUFFER;
+int lib6CA20615_gv_mAXIMUM_SIZE_BUFFER;
 string lib6CA20615_gv_dummyIcon;
+lib6CA20615_gs_Player_Cheat[16] lib6CA20615_gv_player_Cheat;
 unitgroup lib6CA20615_gv_builderUnit;
 unitgroup lib6CA20615_gv_builderStructure;
 int lib6CA20615_gv_uispawner;
 int[6] lib6CA20615_gv_uiUnit;
 int[6] lib6CA20615_gv_uiStructure;
 int[51] lib6CA20615_gv_selectorRace;
-lib6CA20615_gs_Player_Cheat[16] lib6CA20615_gv_player_Cheat;
+int lib6CA20615_gv_datatable_Window;
+int[16] lib6CA20615_gv_nameDatatable;
+int[16] lib6CA20615_gv_valueDatatable;
+int lib6CA20615_gv_refreshdata_button;
 
 // Function Declarations
 void lib6CA20615_gf_updatespawnerui (string lp_race);
@@ -54,7 +65,8 @@ unitgroup lib6CA20615_gf_ValueOfCheatUnitGroup (string lp_name);
 playergroup lib6CA20615_gf_ValueOfCheatPlayerGroup (string lp_name);
 void lib6CA20615_gf_Spawnunit (point lp_point, int lp_originPlayer, string lp_command);
 void lib6CA20615_gf_DeathUnit (int lp_originPlayer, string lp_command);
-void lib6CA20615_gf_CopyUnit ();
+void lib6CA20615_gf_CopyUnit (int lp_origingplayer);
+void lib6CA20615_gf_PasteUnit (int lp_origingplayer, point lp_spawnpoint, string lp_command);
 void lib6CA20615_gf_Alliance (int lp_originPlayer, string lp_command);
 bool lib6CA20615_gf_CharisInteger (string lp_char);
 string lib6CA20615_gf_StringIsUnitGrouppreset (string lp_string);
@@ -69,8 +81,6 @@ string lib6CA20615_gf_CheatType (string lp_cheat);
 string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_command, int lp_index);
 
 // Trigger Declarations
-trigger lib6CA20615_gt_CheckUnitID;
-trigger lib6CA20615_gt_CheckActorID;
 trigger lib6CA20615_gt_init;
 trigger lib6CA20615_gt_CheatCodeUnits;
 trigger lib6CA20615_gt_CheatCodePlayers;
@@ -78,7 +88,11 @@ trigger lib6CA20615_gt_showspawnerui;
 trigger lib6CA20615_gt_hidespawnerui;
 trigger lib6CA20615_gt_createbuilder;
 trigger lib6CA20615_gt_setunitsbuilder;
-trigger lib6CA20615_gt_Mousemove;
+trigger lib6CA20615_gt_hookdatatableview;
+trigger lib6CA20615_gt_updatedata;
+trigger lib6CA20615_gt_showdatatablewindow;
+trigger lib6CA20615_gt_hidedatatablewindow;
+trigger lib6CA20615_gt_Mouseclick;
 
 // Library Initialization
 void lib6CA20615_InitVariables ();

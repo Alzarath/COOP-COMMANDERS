@@ -1369,6 +1369,18 @@
         <Radius value="0.5625"/>
         <ScoreMake value="75"/>
         <ScoreKill value="150"/>
+        <RepairTime value="25"/>
+        <KillXP value="15"/>
+        <InnerRadius value="0.375"/>
+        <SubgroupPriority value="14"/>
+        <GlossaryStrongArray value="Thor"/>
+        <GlossaryStrongArray value="Roach"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Marine"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <GlossaryWeakArray value="Zealot"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
     </CUnit>
     <CUnit id="RaynorCommanderMarine" parent="CommanderGround">
         <Race value="COOPRaynor"/>
@@ -1388,6 +1400,25 @@
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="20"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
+        <LateralAcceleration value="46.0625"/>
+        <RepairTime value="20"/>
+        <KillXP value="10"/>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="50"/>
+        <SubgroupPriority value="15"/>
+        <MinimapRadius value="0.375"/>
+        <GlossaryStrongArray value="Marauder"/>
+        <GlossaryStrongArray value="Hydralisk"/>
+        <GlossaryStrongArray value="Immortal"/>
+        <GlossaryWeakArray value="SiegeTankSieged"/>
+        <GlossaryWeakArray value="Baneling"/>
+        <GlossaryWeakArray value="Colossus"/>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
     </CUnit>
     <CUnit id="RaynorCommanderSCV" parent="CommanderGround_Terr">
         <Name value="Unit/Name/RaynorCommanderSCV"/>

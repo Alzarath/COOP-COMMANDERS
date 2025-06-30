@@ -14,7 +14,6 @@
         <DataRecord Entry="Actor,ZeratulCommanderAncientNexus"/>
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus"/>
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Death"/>
-        <DataRecord Entry="Model,ZeratulCommander@PortraitStructure"/>
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Build"/>
     </CDataCollectionUnit>
 </Catalog>

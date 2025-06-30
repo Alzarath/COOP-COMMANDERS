@@ -97,6 +97,7 @@ Variable/Name/lib_6CA20615_1134B15D=Create Flags
 Variable/Name/lib_6CA20615_11EAE42D=aspect_IsDefined?
 Variable/Name/lib_6CA20615_12B3C9E2=SpawnUnit_LastCreatedUnitType
 Variable/Name/lib_6CA20615_15EEC62E=stats every unit
+Variable/Name/lib_6CA20615_174439F1=unit
 Variable/Name/lib_6CA20615_1C995DFA=units_IsDefined?
 Variable/Name/lib_6CA20615_1EF544B3=Alliance_OneShot
 Variable/Name/lib_6CA20615_1FB037D6=selector Race

@@ -7,5 +7,6 @@ Model/Name/ZeratulCommander@WarpInBuilding=Zeratul Warp In Building
 Model/Name/ZeratulCommanderAncientNexus=Ancient Nexus
 Model/Name/ZeratulCommanderAncientNexus@Build=Build
 Model/Name/ZeratulCommanderAncientNexus@Death=Death
+Model/Name/ZeratulCommanderAncientNexus@Portrait=Portrait
 Model/Name/ZeratulCommanderXelNagaPassageway@Build=Build
 Race/EditorPrefix/COOPZeratul=(COOP)

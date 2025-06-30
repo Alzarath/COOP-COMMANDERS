@@ -1043,6 +1043,7 @@ bool lib6CA20615_gt_createbuilder_Func (bool testConds, bool runActions) {
     int lv_itunit;
     int lv_itstructure;
     string lv_race;
+    string lv_unit;
 
     // Automatic Variable Declarations
     int autoE6B461F6_catalog;
@@ -1051,6 +1052,10 @@ bool lib6CA20615_gt_createbuilder_Func (bool testConds, bool runActions) {
     int autoA9F0EDE9_var;
     const int auto72EEFC8B_ae = 4;
     int auto72EEFC8B_var;
+    int auto4FD6202B_catalog;
+    int auto4FD6202B_i;
+    playergroup autoEEAA9610_g;
+    int autoEEAA9610_var;
 
     // Variable Initialization
 
@@ -1118,6 +1123,25 @@ bool lib6CA20615_gt_createbuilder_Func (bool testConds, bool runActions) {
         libNtve_gf_SetDialogItemUnitGroup(lib6CA20615_gv_uiStructure[(auto72EEFC8B_var - 1)], libNtve_gf_ConvertUnitToUnitGroup(UnitGroupUnit(lib6CA20615_gv_builderStructure, auto72EEFC8B_var)), PlayerGroupAll());
     }
 
+    auto4FD6202B_catalog = c_gameCatalogUnit;
+    auto4FD6202B_i = 1;
+    for ( ; auto4FD6202B_i <= CatalogEntryCount(c_gameCatalogUnit) ; auto4FD6202B_i += 1 ) {
+        lv_unit = CatalogEntryGet(auto4FD6202B_catalog, auto4FD6202B_i);
+        if ((CatalogEntryIsValid(c_gameCatalogActor, (lv_unit)) == false)) {
+            continue;
+        }
+
+        if ((CatalogEntryIsValid(c_gameCatalogModel, CatalogFieldValueGet(c_gameCatalogActor, (lv_unit), "PlacementModel", c_playerAny)) == false)) {
+            autoEEAA9610_g = PlayerGroupAll();
+            autoEEAA9610_var = -1;
+            while (true) {
+                autoEEAA9610_var = PlayerGroupNextPlayer(autoEEAA9610_g, autoEEAA9610_var);
+                if (autoEEAA9610_var < 0) { break; }
+                CatalogFieldValueSet(c_gameCatalogActor, (lv_unit), "PlacementModel", autoEEAA9610_var, CatalogFieldValueGet(c_gameCatalogActor, (lv_unit), "Model", c_playerAny));
+            }
+        }
+
+    }
     lib6CA20615_gf_updatespawnerui(PlayerRace(1));
     return true;
 }

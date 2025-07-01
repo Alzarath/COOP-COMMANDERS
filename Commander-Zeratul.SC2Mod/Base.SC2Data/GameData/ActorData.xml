@@ -4,5 +4,23 @@
         <EditorCategories value=""/>
         <PortraitModel value="ZeratulCommander@PortraitStructure"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-building-protoss-zeratulnexus.dds"/>
+    </CActorUnit>
+    <CActorAction id="ZeratulCommanderParticularBeam@Attack" parent="GenericAttack" effectImpact="ZeratulCommanderParticularBeam@Damage" effectLaunch="ZeratulCommanderParticularBeam@LM">
+        <EditorCategories value=""/>
+        <LaunchSiteOps Ops="SOpAttachWeapon"/>
+        <AcquisitionYawHalfArc value="7.500000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="10.000000"/>
+    </CActorAction>
+    <CActorUnit id="ZeratulCommanderParticularBeam@Missile" parent="GenericUnitStandard" unitName="ZeratulCommanderParticularBeam@Missile">
+        <EditorCategories value=""/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+    </CActorUnit>
+    <CActorUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelnagaAmbusher">
+        <EditorCategories value=""/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulstalker.dds"/>
+        <WalkAnimMoveSpeed value="3"/>
     </CActorUnit>
 </Catalog>

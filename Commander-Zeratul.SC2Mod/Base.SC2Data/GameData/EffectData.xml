@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectDamage id="ZeratulCommanderParticularBeam@Damage">
+        <EditorCategories value="Race:Zeratul"/>
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ZeratulCommanderParticularBeam@LM">
+        <EditorCategories value="Race:Zeratul"/>
+        <ImpactEffect value="ZeratulCommanderParticularBeam@Damage"/>
+        <AmmoUnit value="ZeratulCommanderParticularBeam@Missile"/>
+    </CEffectLaunchMissile>
+</Catalog>

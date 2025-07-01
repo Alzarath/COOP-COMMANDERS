@@ -15,5 +15,34 @@
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus"/>
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Death"/>
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Build"/>
+        <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Portrait"/>
+        <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Building"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderParticularBeam" parent="CommanderWeaponMissile">
+        <EditorCategories value="DataGroup:Weapon,Race:Zeratul,DataFamily:Coop,ObjectType:Projectile"/>
+        <DataRecord Entry="Actor,ZeratulCommanderParticularBeam@Missile"/>
+        <DataRecord Entry="Actor,ZeratulCommanderParticularBeam@Attack"/>
+        <DataRecord Entry="Effect,ZeratulCommanderParticularBeam@Damage"/>
+        <DataRecord Entry="Effect,ZeratulCommanderParticularBeam@LM"/>
+        <DataRecord Entry="Model,ZeratulCommanderParticularBeam@Missile"/>
+        <DataRecord Entry="Model,ZeratulCommanderParticularBeam@AttackImpact"/>
+        <DataRecord Entry="Sound,ZeratulCommanderParticularBeam@AttackLaunch"/>
+        <DataRecord Entry="Sound,ZeratulCommanderParticularBeam@AttackImpact"/>
+        <DataRecord Entry="Unit,ZeratulCommanderParticularBeam@Missile"/>
+        <DataRecord Entry="Weapon,ZeratulCommanderParticularBeam"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Zeratul,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,ZeratulCommanderXelnagaAmbusher"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelnagaAmbusher"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelnagaAmbusher@Portrait"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelnagaAmbusher@Death"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelnagaAmbusher@DeathRagdoll"/>
+        <DataRecord Entry="Unit,ZeratulCommanderXelnagaAmbusher"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@Ready"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@Help"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@What"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@Yes"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@Pissed"/>
     </CDataCollectionUnit>
 </Catalog>

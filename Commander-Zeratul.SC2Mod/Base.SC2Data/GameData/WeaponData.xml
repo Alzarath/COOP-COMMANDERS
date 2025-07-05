@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="ZeratulCommanderNullBeam">
+        <EditorCategories value="Race:Zeratul"/>
+        <TargetFilters value="Visible;Missile,Dead,Hidden"/>
+        <Range value="6"/>
+        <Effect value="ZeratulCommanderNullBeam@CP"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ZeratulCommanderParticularBeam">
         <EditorCategories value="Race:Zeratul"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>

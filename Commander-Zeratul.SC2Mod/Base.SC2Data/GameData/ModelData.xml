@@ -39,12 +39,16 @@
         <Image value="Assets\Textures\darkvoice_zeratul_coop_portrait_static.dds"/>
     </CModel>
     <CModel id="ZeratulCommanderAncientNexus@Portrait" parent="ZeratulCommander@PortraitStructure"/>
+    <CModel id="ZeratulCommanderNullBeam@AttackBeam">
+        <Model value="Assets\COOP\Zeratul\Effects\Sentry_Zeratul_COOP_NullBeam\Sentry_Zeratul_COOP_NullBeam.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
     <CModel id="ZeratulCommanderParticularBeam@AttackImpact" parent="ImpactFX">
-        <Model value="Assets\Effects\Protoss\StalkerMissileImpact\StalkerMissileImpact.m3"/>
+        <Model value="Assets\Effects\Protoss\DarkStalkerMissileImpact\DarkStalkerMissileImpact.m3"/>
         <EditorCategories value="Race:Zeratul"/>
     </CModel>
     <CModel id="ZeratulCommanderParticularBeam@Missile" parent="MissileFX">
-        <Model value="Assets\Effects\Protoss\StalkerMissile\StalkerMissile.m3"/>
+        <Model value="Assets\Effects\Protoss\DarkStalkerMissile\DarkStalkerMissile.m3"/>
         <EditorCategories value="Race:Zeratul"/>
     </CModel>
     <CModel id="ZeratulCommanderXelNagaPassageway@Build">
@@ -58,6 +62,26 @@
         <SelectionLayer value="2"/>
         <SquibTypeDefault value="Metal"/>
     </CModel>
+    <CModel id="ZeratulCommanderVoidTemplar" parent="Unit">
+        <Model value="Assets\COOP\Zeratul\Units\DarkTemplar_Zeratul_COOP\DarkTemplar_Zeratul_COOP.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.690000,0.690000,0.690000"/>
+        <ScaleMin value="0.690000,0.690000,0.690000"/>
+        <SelectionRadius value="0.650000"/>
+        <ShadowRadius value="0.650000"/>
+        <Tipability value="1.000000"/>
+        <TipabilityLength value="0.300000"/>
+        <TipabilityWidth value="0.400000"/>
+    </CModel>
+    <CModel id="ZeratulCommanderVoidTemplar@Death" parent="UnitDeath">
+        <Model value="Assets\COOP\Zeratul\Units\DarkTemplar_Zeratul_COOP_Death\DarkTemplar_Zeratul_COOP_Death.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderVoidTemplar@Portrait" parent="Portrait">
+        <Model value="Assets\COOP\Zeratul\Portraits\DarkTemplar_Zeratul_COOP_Portrait\DarkTemplar_Zeratul_COOP_Portrait.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
     <CModel id="ZeratulCommanderXelnagaAmbusher" parent="Unit">
         <Model value="Assets\COOP\Zeratul\Units\Stalker_Zeratul_COOP\Stalker_Zeratul_COOP.m3"/>
         <EditorCategories value="Race:Zeratul"/>
@@ -69,6 +93,30 @@
         <Tipability value="1.000000"/>
         <TipabilityLength value="0.300000"/>
         <TipabilityWidth value="0.400000"/>
+    </CModel>
+    <CModel id="ZeratulCommanderXelNagaShieldguard" parent="Unit">
+        <Model value="Assets\COOP\Zeratul\Units\Sentry_Zeratul_COOP\Sentry_Zeratul_COOP.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.690000,0.690000,0.690000"/>
+        <ScaleMin value="0.690000,0.690000,0.690000"/>
+        <SelectionRadius value="0.650000"/>
+        <ShadowRadius value="0.650000"/>
+        <Tipability value="1.000000"/>
+        <TipabilityLength value="0.300000"/>
+        <TipabilityWidth value="0.400000"/>
+    </CModel>
+    <CModel id="ZeratulCommanderXelNagaShieldguard@Death" parent="UnitDeath">
+        <Model value="Assets\COOP\Zeratul\Units\Sentry_Zeratul_COOP_Death\Sentry_Zeratul_COOP_Death.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderXelNagaShieldguard@DeathRagdoll" parent="UnitDeathRagdoll">
+        <Model value="Assets\COOP\Zeratul\Units\Sentry_Zeratul_COOP_DeathRagdoll\Sentry_Zeratul_COOP_DeathRagdoll.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderXelNagaShieldguard@Portrait" parent="Portrait">
+        <Model value="Assets\COOP\Zeratul\Portraits\Sentry_Zeratul_COOP_Portrait\Sentry_Zeratul_COOP_Portrait.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
     </CModel>
     <CModel id="ZeratulCommanderXelnagaAmbusher@Death" parent="UnitDeath">
         <Model value="Assets\COOP\Zeratul\Units\Stalker_Zeratul_COOP_Death\Stalker_Zeratul_COOP_Death.m3"/>

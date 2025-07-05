@@ -455,6 +455,10 @@ void lib6CA20615_gf_DeathUnit (int lp_originPlayer, string lp_command) {
     lib6CA20615_gv_player_Cheat[lp_originPlayer].lv_deathUnits.lv_deathUnits_IsRemove = lv_isRemoveUnit;
 }
 
+void lib6CA20615_gf_ProgressUnit (int lp_originPlayer, string lp_command) {
+    // Automatic Variable Declarations
+}
+
 void lib6CA20615_gf_CopyUnit (int lp_origingplayer) {
     // Variable Declarations
     unitgroup lv_selectedunits;

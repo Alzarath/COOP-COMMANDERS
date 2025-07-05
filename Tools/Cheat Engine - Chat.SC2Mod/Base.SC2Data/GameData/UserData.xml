@@ -146,6 +146,17 @@
                 <Field Id="Type"/>
             </User>
         </Instances>
+        <Instances Id="progress">
+            <String String="prog">
+                <Field Id="alias"/>
+            </String>
+            <Text Text="UserData/CheatCommand/progress_Param_name">
+                <Field Id="Param_name"/>
+            </Text>
+            <User Type="CheatCodeType" Instance="Units">
+                <Field Id="Type"/>
+            </User>
+        </Instances>
     </CUser>
     <CUser id="CheatCodeType">
         <Fields Id="Prefix" Type="String"/>

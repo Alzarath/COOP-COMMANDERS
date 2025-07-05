@@ -65,6 +65,7 @@ unitgroup lib6CA20615_gf_ValueOfCheatUnitGroup (string lp_name);
 playergroup lib6CA20615_gf_ValueOfCheatPlayerGroup (string lp_name);
 void lib6CA20615_gf_Spawnunit (point lp_point, int lp_originPlayer, string lp_command);
 void lib6CA20615_gf_DeathUnit (int lp_originPlayer, string lp_command);
+void lib6CA20615_gf_ProgressUnit (int lp_originPlayer, string lp_command);
 void lib6CA20615_gf_CopyUnit (int lp_origingplayer);
 void lib6CA20615_gf_PasteUnit (int lp_origingplayer, point lp_spawnpoint, string lp_command);
 void lib6CA20615_gf_Alliance (int lp_originPlayer, string lp_command);

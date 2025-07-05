@@ -35,6 +35,7 @@ UserData/CheatCommand/death_Param_name=Группа единиц <select|all>
 UserData/CheatCommand/death_Param_name_001=Целевые игроки <number|all>
 UserData/CheatCommand/death_Param_name_002=Количество умираемые единиц
 UserData/CheatCommand/death_Param_name_003=Удаление
+UserData/CheatCommand/progress_Param_name=Процент прогресса
 UserData/CheatCommand/spawn_Param_errors_001=неизвестный тип единиц
 UserData/CheatCommand/spawn_Param_errors_003=не удалось определить игрока
 UserData/CheatCommand/spawn_Param_errors_004=укажите True или False

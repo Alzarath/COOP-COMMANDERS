@@ -18,6 +18,20 @@
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Portrait"/>
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Building"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderNullBeam" parent="CommanderWeaponMissile">
+        <EditorCategories value="DataGroup:Weapon,Race:Zeratul,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Actor,ZeratulCommanderNullBeam@Attack"/>
+        <DataRecord Entry="Actor,ZeratulCommanderNullBeam@AttackBeam"/>
+        <DataRecord Entry="Actor,ZeratulCommanderNullBeam@End"/>
+        <DataRecord Entry="Actor,ZeratulCommanderNullBeam@Loop"/>
+        <DataRecord Entry="Effect,ZeratulCommanderNullBeam@CP"/>
+        <DataRecord Entry="Effect,ZeratulCommanderNullBeam@Damage"/>
+        <DataRecord Entry="Model,ZeratulCommanderNullBeam@AttackBeam"/>
+        <DataRecord Entry="Sound,ZeratulCommanderNullBeam@AttackLaunch"/>
+        <DataRecord Entry="Sound,ZeratulCommanderNullBeam@End"/>
+        <DataRecord Entry="Sound,ZeratulCommanderNullBeam@Loop"/>
+        <DataRecord Entry="Weapon,ZeratulCommanderNullBeam"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="ZeratulCommanderParticularBeam" parent="CommanderWeaponMissile">
         <EditorCategories value="DataGroup:Weapon,Race:Zeratul,DataFamily:Coop,ObjectType:Projectile"/>
         <DataRecord Entry="Actor,ZeratulCommanderParticularBeam@Missile"/>
@@ -30,6 +44,19 @@
         <DataRecord Entry="Sound,ZeratulCommanderParticularBeam@AttackImpact"/>
         <DataRecord Entry="Unit,ZeratulCommanderParticularBeam@Missile"/>
         <DataRecord Entry="Weapon,ZeratulCommanderParticularBeam"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderVoidTemplar" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Zeratul,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,ZeratulCommanderVoidTemplar"/>
+        <DataRecord Entry="Model,ZeratulCommanderVoidTemplar"/>
+        <DataRecord Entry="Model,ZeratulCommanderVoidTemplar@Portrait"/>
+        <DataRecord Entry="Model,ZeratulCommanderVoidTemplar@Death"/>
+        <DataRecord Entry="Unit,ZeratulCommanderVoidTemplar"/>
+        <DataRecord Entry="Sound,ZeratulCommanderVoidTemplar@Ready"/>
+        <DataRecord Entry="Sound,ZeratulCommanderVoidTemplar@Help"/>
+        <DataRecord Entry="Sound,ZeratulCommanderVoidTemplar@What"/>
+        <DataRecord Entry="Sound,ZeratulCommanderVoidTemplar@Yes"/>
+        <DataRecord Entry="Sound,ZeratulCommanderVoidTemplar@Pissed"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Zeratul,ObjectType:Unit"/>
@@ -44,5 +71,20 @@
         <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@What"/>
         <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@Yes"/>
         <DataRecord Entry="Sound,ZeratulCommanderXelnagaAmbusher@Pissed"/>
+        <DataRecord Entry="Requirement,ZeratulCommanderXelnagaAmbusher"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderXelNagaShieldguard" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Zeratul,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,ZeratulCommanderXelNagaShieldguard"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelNagaShieldguard"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelNagaShieldguard@Portrait"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelNagaShieldguard@Death"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelNagaShieldguard@DeathRagdoll"/>
+        <DataRecord Entry="Unit,ZeratulCommanderXelNagaShieldguard"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaShieldguard@Ready"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaShieldguard@Help"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaShieldguard@What"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaShieldguard@Yes"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaShieldguard@Pissed"/>
     </CDataCollectionUnit>
 </Catalog>

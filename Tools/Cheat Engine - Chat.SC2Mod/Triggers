@@ -7939,6 +7939,7 @@
         <Element Type="Category" Id="93690813">
             <Item Type="FunctionDef" Library="6CA20615" Id="79C37307"/>
             <Item Type="FunctionDef" Library="6CA20615" Id="4A583AE7"/>
+            <Item Type="FunctionDef" Library="6CA20615" Id="7C2F1D3D"/>
             <Item Type="Comment" Library="6CA20615" Id="89A29ED1"/>
             <Item Type="FunctionDef" Library="6CA20615" Id="51071E39"/>
             <Item Type="FunctionDef" Library="6CA20615" Id="BF51AF2D"/>
@@ -10499,6 +10500,33 @@
         <Element Type="Param" Id="924513D4">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000220"/>
             <Variable Type="Variable" Library="6CA20615" Id="6B40454A"/>
+        </Element>
+        <Element Type="FunctionDef" Id="7C2F1D3D">
+            <Internal/>
+            <FlagAction/>
+            <Parameter Type="ParamDef" Library="6CA20615" Id="C216EBD9"/>
+            <Parameter Type="ParamDef" Library="6CA20615" Id="D2AEC367"/>
+        </Element>
+        <Element Type="ParamDef" Id="C216EBD9">
+            <ParameterType>
+                <Type Value="int"/>
+            </ParameterType>
+            <Default Type="Param" Library="6CA20615" Id="E3B6C8FD"/>
+        </Element>
+        <Element Type="Param" Id="E3B6C8FD">
+            <FunctionCall Type="FunctionCall" Library="6CA20615" Id="AFCB152D"/>
+        </Element>
+        <Element Type="FunctionCall" Id="AFCB152D">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="ParamDef" Id="D2AEC367">
+            <ParameterType>
+                <Type Value="string"/>
+            </ParameterType>
+            <Default Type="Param" Library="6CA20615" Id="86BE6C5A"/>
+        </Element>
+        <Element Type="Param" Id="86BE6C5A">
+            <ValueType Type="string"/>
         </Element>
         <Element Type="Comment" Id="89A29ED1">
             <Comment>

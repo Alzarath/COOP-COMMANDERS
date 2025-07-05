@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="ZeratulCommanderXelNagaShieldguard">
+        <EditorCategories value="Race:Zeratul,TechType:Unit"/>
+    </CRequirement>
+    <CRequirement id="ZeratulCommanderXelnagaAmbusher">
+        <EditorCategories value="Race:Zeratul,TechType:Unit"/>
+    </CRequirement>
+</Catalog>

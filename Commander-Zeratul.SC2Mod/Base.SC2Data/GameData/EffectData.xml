@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreatePersistent id="ZeratulCommanderNullBeam@CP">
+        <EditorCategories value="Race:Zeratul"/>
+        <Flags index="Channeled" value="1"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <InitialEffect value="ZeratulCommanderNullBeam@Damage"/>
+        <PeriodicEffectArray value="ZeratulCommanderNullBeam@Damage"/>
+        <PeriodicPeriodArray value="1"/>
+        <WhichLocation Value="TargetUnit"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="ZeratulCommanderNullBeam@Damage">
+        <EditorCategories value="Race:Zeratul"/>
+        <Amount value="12"/>
+    </CEffectDamage>
     <CEffectDamage id="ZeratulCommanderParticularBeam@Damage">
         <EditorCategories value="Race:Zeratul"/>
         <Amount value="12"/>

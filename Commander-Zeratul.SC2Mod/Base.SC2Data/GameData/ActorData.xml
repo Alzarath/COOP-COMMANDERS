@@ -6,21 +6,53 @@
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-building-protoss-zeratulnexus.dds"/>
     </CActorUnit>
+    <CActorAction id="ZeratulCommanderNullBeam@Attack" parent="GenericAttack" effectAttack="ZeratulCommanderNullBeam@CP">
+        <EditorCategories value=""/>
+        <ActionFlags index="AlignedImpactsAndDamages" value="1"/>
+        <ActionFlags index="ImpactMonitorsTeleports" value="1"/>
+        <!-- Need this so the impact host ops can know which side of the target is closest to 
+             the attacker. -->
+        <ActionFlags index="LaunchForceSite" value="1"/>
+        <On Terms="Effect.ZeratulCommanderNullBeam@Damage.Start; FromEffectTreeDescendant" Send="ActionDamage"/>
+    </CActorAction>
+    <CActorBeamSimple id="ZeratulCommanderNullBeam@AttackBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <Macros value="ActionTargetTeleportDestroy"/>
+        <EditorCategories value=""/>
+        <On Terms="Effect.ZeratulCommanderNullBeam@CP.Stop" Send="AnimBracketStop BSD"/>
+    </CActorBeamSimple>
+    <CActorSound id="ZeratulCommanderNullBeam@End" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ZeratulCommanderNullBeam@CP.Stop" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="ZeratulCommanderNullBeam@Loop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ZeratulCommanderNullBeam@CP.Start" Send="Create"/>
+        <On Terms="Effect.ZeratulCommanderNullBeam@CP.Stop" Send="Destroy"/>
+    </CActorSound>
     <CActorAction id="ZeratulCommanderParticularBeam@Attack" parent="GenericAttack" effectImpact="ZeratulCommanderParticularBeam@Damage" effectLaunch="ZeratulCommanderParticularBeam@LM">
         <EditorCategories value=""/>
         <LaunchSiteOps Ops="SOpAttachWeapon"/>
-        <AcquisitionYawHalfArc value="7.500000"/>
-        <AcquisitionPitchHalfArc value="15.000000"/>
-        <AccuracyHalfArc value="10.000000"/>
+        <Missile value="ZeratulCommanderParticularBeam@Missile"/>
     </CActorAction>
-    <CActorUnit id="ZeratulCommanderParticularBeam@Missile" parent="GenericUnitStandard" unitName="ZeratulCommanderParticularBeam@Missile">
+    <CActorMissile id="ZeratulCommanderParticularBeam@Missile" parent="GenericAttackMissile" unitName="ZeratulCommanderParticularBeam@Missile">
         <EditorCategories value=""/>
+    </CActorMissile>
+    <CActorUnit id="ZeratulCommanderVoidTemplar" parent="CommanderGroundUnit" unitName="ZeratulCommanderVoidTemplar">
+        <EditorCategories value=""/>
+        <WalkAnimMoveSpeed value="3"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratuldarktemplar.dds"/>
     </CActorUnit>
     <CActorUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelnagaAmbusher">
         <EditorCategories value=""/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulstalker.dds"/>
         <WalkAnimMoveSpeed value="3"/>
+    </CActorUnit>
+    <CActorUnit id="ZeratulCommanderXelNagaShieldguard" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelNagaShieldguard">
+        <EditorCategories value=""/>
+        <WalkAnimMoveSpeed value="3"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulsentry.dds"/>
     </CActorUnit>
 </Catalog>

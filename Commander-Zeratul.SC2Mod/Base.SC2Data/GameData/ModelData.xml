@@ -65,11 +65,11 @@
     <CModel id="ZeratulCommanderVoidTemplar" parent="Unit">
         <Model value="Assets\COOP\Zeratul\Units\DarkTemplar_Zeratul_COOP\DarkTemplar_Zeratul_COOP.m3"/>
         <EditorCategories value="Race:Zeratul"/>
-        <Radius value="0.650000"/>
-        <ScaleMax value="0.690000,0.690000,0.690000"/>
-        <ScaleMin value="0.690000,0.690000,0.690000"/>
-        <SelectionRadius value="0.650000"/>
-        <ShadowRadius value="0.650000"/>
+        <Radius value="0.800000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.800000"/>
+        <ShadowRadius value="0.800000"/>
         <Tipability value="1.000000"/>
         <TipabilityLength value="0.300000"/>
         <TipabilityWidth value="0.400000"/>

@@ -43,6 +43,9 @@
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratuldarktemplar.dds"/>
     </CActorUnit>
+    <CActorAction id="ZeratulCommanderWarpBlade@Attack" parent="GenericAttack" effectAttack="ZeratulCommanderWarpBlade">
+        <EditorCategories value=""/>
+    </CActorAction>
     <CActorUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelnagaAmbusher">
         <EditorCategories value=""/>
         <HighlightTooltip value="Unit/Name/Bogus"/>

@@ -6,6 +6,7 @@
         <Range value="6"/>
         <Effect value="ZeratulCommanderNullBeam@CP"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ZeratulCommanderParticularBeam">
         <EditorCategories value="Race:Zeratul"/>
@@ -15,5 +16,11 @@
         <Range value="6"/>
         <Period value="1"/>
         <Effect value="ZeratulCommanderParticularBeam@LM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ZeratulCommanderWarpBlade">
+        <EditorCategories value="Race:Zeratul"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <Range value="0"/>
+        <Period value="1.21"/>
     </CWeaponLegacy>
 </Catalog>

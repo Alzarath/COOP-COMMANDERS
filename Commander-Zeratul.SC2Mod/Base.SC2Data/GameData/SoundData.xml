@@ -65,6 +65,14 @@
         <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\DarkTemplar\DarkTemplar_Yes05.ogg" FacialGroup=""/>
         <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\DarkTemplar\DarkTemplar_Yes06.ogg" FacialGroup=""/>
     </CSound>
+    <CSound id="ZeratulCommanderWarpBlade@AttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray File="Assets\Sounds\Protoss\DarkTemplar\DarkTemplar_AttackLaunch0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\DarkTemplar\DarkTemplar_AttackLaunch1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\DarkTemplar\DarkTemplar_AttackLaunch2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\DarkTemplar\DarkTemplar_AttackLaunch3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\DarkTemplar\DarkTemplar_AttackLaunch4.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="ZeratulCommanderXelNagaShieldguard@Help" parent="ProtossHelp">
         <EditorCategories value="Race:Zeratul"/>
         <AssetArray File="Assets\Sounds\Protoss\Sentry\Sentry_Pissed01.ogg" FacialGroup=""/>

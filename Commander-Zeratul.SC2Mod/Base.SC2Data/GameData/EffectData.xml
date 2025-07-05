@@ -22,4 +22,9 @@
         <ImpactEffect value="ZeratulCommanderParticularBeam@Damage"/>
         <AmmoUnit value="ZeratulCommanderParticularBeam@Missile"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="ZeratulCommanderWarpBlade">
+        <EditorCategories value="Race:Zeratul"/>
+        <Amount value="60"/>
+        <SearchFilters value="Ground,Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
 </Catalog>

@@ -25,12 +25,13 @@
         <CostResource index="Minerals" value="300"/>
         <CostResource index="Vespene" value="50"/>
         <RepairTime value="21"/>
-        <WeaponArray Link="ZeratulCommanderParticularBeam"/>
+        <WeaponArray Link="ZeratulCommanderWarpBlade"/>
         <Radius value="0.625"/>
         <SeparationRadius value="0.625"/>
         <InnerRadius value="0.5"/>
         <MinimapRadius value="0.65"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Zeratul"/>
+        <FlagArray index="Cloaked" value="1"/>
     </CUnit>
     <CUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderGround_Prot">
         <Race value="COOPZeratul"/>

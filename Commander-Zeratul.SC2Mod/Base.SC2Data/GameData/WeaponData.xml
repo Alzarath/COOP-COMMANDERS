@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CWeaponLegacy id="ZeratulCommanderNullBeam">
+    <CWeaponLegacy id="ZeratulCommanderNullBeam" parent="CommanderWeapon_Beam">
         <EditorCategories value="Race:Zeratul"/>
-        <TargetFilters value="Visible;Missile,Dead,Hidden"/>
         <Range value="6"/>
-        <Effect value="ZeratulCommanderNullBeam@CP"/>
-        <LegacyOptions index="KeepChanneling" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="ZeratulCommanderParticularBeam">
+    <CWeaponLegacy id="ZeratulCommanderParticularBeam" parent="CommanderWeapon_Missile">
         <EditorCategories value="Race:Zeratul"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
-        <DisplayEffect value="ZeratulCommanderParticularBeam@Damage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="6"/>
         <Period value="1"/>
-        <Effect value="ZeratulCommanderParticularBeam@LM"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="ZeratulCommanderWarpBlade">
+    <CWeaponLegacy id="ZeratulCommanderPhaseDisruptors" parent="CommanderWeapon_Instant">
         <EditorCategories value="Race:Zeratul"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
-        <Range value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ZeratulCommanderWarpBlade" parent="CommanderWeapon_Melee">
+        <EditorCategories value="Race:Zeratul"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.21"/>
     </CWeaponLegacy>
 </Catalog>

@@ -37,15 +37,30 @@
     <CActorMissile id="ZeratulCommanderParticularBeam@Missile" parent="GenericAttackMissile" unitName="ZeratulCommanderParticularBeam@Missile">
         <EditorCategories value=""/>
     </CActorMissile>
+    <CActorAction id="ZeratulCommanderPhaseDisruptors@Attack" parent="GenericAttack" effectAttack="ZeratulCommanderPhaseDisruptors@Damage">
+        <EditorCategories value=""/>
+    </CActorAction>
     <CActorUnit id="ZeratulCommanderVoidTemplar" parent="CommanderGroundUnit" unitName="ZeratulCommanderVoidTemplar">
         <EditorCategories value=""/>
         <WalkAnimMoveSpeed value="3"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratuldarktemplar.dds"/>
     </CActorUnit>
-    <CActorAction id="ZeratulCommanderWarpBlade@Attack" parent="GenericAttack" effectAttack="ZeratulCommanderWarpBlade">
+    <CActorAction id="ZeratulCommanderWarpBlade@Attack" parent="GenericAttack" effectAttack="ZeratulCommanderWarpBlade@Damage">
         <EditorCategories value=""/>
     </CActorAction>
+    <CActorUnit id="ZeratulCommanderXelNagaEnforcer" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelNagaEnforcer">
+        <EditorCategories value=""/>
+        <WalkAnimMoveSpeed value="1"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulimmortal.dds"/>
+    </CActorUnit>
+    <CActorUnit id="ZeratulCommanderXelNagaDisruptor" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelNagaDisruptor">
+        <EditorCategories value=""/>
+        <WalkAnimMoveSpeed value="3"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratuldisruptor.dds"/>
+    </CActorUnit>
     <CActorUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelnagaAmbusher">
         <EditorCategories value=""/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
@@ -57,5 +72,11 @@
         <WalkAnimMoveSpeed value="3"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulsentry.dds"/>
+    </CActorUnit>
+    <CActorUnit id="ZeratulCommanderXelNagaProbe" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelNagaProbe">
+        <EditorCategories value=""/>
+        <WalkAnimMoveSpeed value="3"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulprobe.dds"/>
     </CActorUnit>
 </Catalog>

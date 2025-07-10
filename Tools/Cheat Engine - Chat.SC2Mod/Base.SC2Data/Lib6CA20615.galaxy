@@ -463,6 +463,7 @@ void lib6CA20615_gf_CopyUnit (int lp_origingplayer) {
     // Variable Declarations
     unitgroup lv_selectedunits;
     unit lv_unit;
+    string lv_behavior;
     string lv_stats_array;
     string lv_unit_array;
 
@@ -487,9 +488,6 @@ void lib6CA20615_gf_CopyUnit (int lp_origingplayer) {
     }
     TextExpressionSetToken("Param/Expression/lib_6CA20615_A238C292", "A", StringToText((lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER))));
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_6CA20615_A238C292"));
-    TextExpressionSetToken("Param/Expression/lib_6CA20615_2B42AD6F", "A", StringToText(DataTableGetString(true, (lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)))));
-    TextExpressionSetToken("Param/Expression/lib_6CA20615_2B42AD6F", "B", StringToText(DataTableGetString(true, (lib6CA20615_gv_unitsOrientationBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)))));
-    TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_6CA20615_2B42AD6F"), true);
     lib6CA20615_gv_cURRENT_SIZE_BUFFER += 1;
 }
 
@@ -523,8 +521,6 @@ void lib6CA20615_gf_PasteUnit (int lp_origingplayer, point lp_spawnpoint, string
     if ((DataTableValueExists(true, (lib6CA20615_gv_unitsBuffer + lp_command)) == false)) {
         TextExpressionSetToken("Param/Expression/lib_6CA20615_62412B26", "A", StringToText((lib6CA20615_gv_unitsBuffer + lp_command)));
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_6CA20615_62412B26"));
-        TextExpressionSetToken("Param/Expression/lib_6CA20615_DDD97C4F", "A", StringToText(DataTableGetString(true, (lib6CA20615_gv_unitsBuffer + IntToString(lib6CA20615_gv_cURRENT_SIZE_BUFFER)))));
-        TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_6CA20615_DDD97C4F"), true);
         return ;
     }
 
@@ -543,9 +539,6 @@ void lib6CA20615_gf_PasteUnit (int lp_origingplayer, point lp_spawnpoint, string
         lv_statseveryunit = StringWord(lv_stats, lv_it);
         lv_statseveryunit = StringReplaceWord(lv_statseveryunit, ",", " ", c_stringReplaceAll, c_stringCase);
         lv_orientationeveryunit = StringWord(lv_orientation, lv_it);
-        TextExpressionSetToken("Param/Expression/lib_6CA20615_1B3DECFC", "A", StringToText(lv_statseveryunit));
-        TextExpressionSetToken("Param/Expression/lib_6CA20615_1B3DECFC", "B", StringToText(lv_orientationeveryunit));
-        TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_6CA20615_1B3DECFC"), true);
         lv_distance = StringToFixed(StringWord(StringReplaceWord(lv_orientationeveryunit, ",", " ", c_stringReplaceAll, c_stringCase), 1));
         lv_angle = StringToFixed(StringWord(StringReplaceWord(lv_orientationeveryunit, ",", " ", c_stringReplaceAll, c_stringCase), 2));
         lv_facing = StringToFixed(StringWord(StringReplaceWord(lv_orientationeveryunit, ",", " ", c_stringReplaceAll, c_stringCase), 3));

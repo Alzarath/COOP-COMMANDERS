@@ -446,4 +446,22 @@
         <BehaviorArray Link="ZergBuildingDies6"/>
     </CUnit>
     <CUnit default="1" id="CommanderStructure_Prot" parent="CommanderStructure"/>
+    <!-- Weapons Template -->
+    <CWeaponLegacy default="1" id="CommanderWeapon">
+        <TargetFilters value="Visible;Missile,Dead,Hidden"/>
+        <DisplayEffect value="##id##@Damage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Beam" parent="CommanderWeapon">
+        <Effect value="##id##@CP"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Missile" parent="CommanderWeapon">
+        <Effect value="##id##@LM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Instant" parent="CommanderWeapon">
+        <Effect value="##id##@Damage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Melee" parent="CommanderWeapon_Instant">
+        <Range value="0"/>
+    </CWeaponLegacy>
 </Catalog>

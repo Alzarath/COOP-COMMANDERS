@@ -1,0 +1,40 @@
+include "TriggerLibs/natives"
+
+include "Lib3A96CF55_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: COMMANDER - Zeratul
+//--------------------------------------------------------------------------------------------------
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Untitled Trigger 001
+//--------------------------------------------------------------------------------------------------
+bool lib3A96CF55_gt_UntitledTrigger001_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib3A96CF55_gt_UntitledTrigger001_Init () {
+    lib3A96CF55_gt_UntitledTrigger001 = TriggerCreate("lib3A96CF55_gt_UntitledTrigger001_Func");
+}
+
+void lib3A96CF55_InitTriggers () {
+    lib3A96CF55_gt_UntitledTrigger001_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib3A96CF55_InitLib_completed = false;
+
+void lib3A96CF55_InitLib () {
+    if (lib3A96CF55_InitLib_completed) {
+        return;
+    }
+
+    lib3A96CF55_InitLib_completed = true;
+
+    lib3A96CF55_InitTriggers();
+}
+

@@ -193,6 +193,7 @@ Variable/Name/lib_6CA20615_D58580A4=_command
 Variable/Name/lib_6CA20615_D7B19C7F=stats
 Variable/Name/lib_6CA20615_D924E558=valueDatatable
 Variable/Name/lib_6CA20615_DA6EB466=_command
+Variable/Name/lib_6CA20615_DA8EF2C8=behavior
 Variable/Name/lib_6CA20615_DC2CBBBB=it structure
 Variable/Name/lib_6CA20615_E337CECD=DeathUnits_IsRemove
 Variable/Name/lib_6CA20615_E3944A49=units

@@ -1,4 +1,4 @@
-include "TriggerLibs/natives"
+include "TriggerLibs/NativeLib"
 
 //--------------------------------------------------------------------------------------------------
 // Library: Cheat Engine
@@ -8,6 +8,11 @@ const int lib6CA20615_ge_ClearSelectionSpawnPanel_Units = 0;
 const int lib6CA20615_ge_ClearSelectionSpawnPanel_Structure = 1;
 
 // Constants
+const int lib6CA20615_gv_kEY_OPEN_PANELS_ALT = c_keyModifierStateRequire;
+const int lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT = c_keyModifierStateIgnore;
+const int lib6CA20615_gv_kEY_OPEN_PANELS_CTRL = c_keyModifierStateIgnore;
+const int lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT = c_keyA;
+const int lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW = c_keyD;
 const int lib6CA20615_gv_cOUNT_BUTTONS = 64;
 const string lib6CA20615_gv_unitsBuffer = "CheatEngine.unit";
 const string lib6CA20615_gv_unitsStatsBuffer = "CheatEngine.unitstats";
@@ -112,9 +117,9 @@ void lib6CA20615_gf_ProgressUnit (int lp_originPlayer, string lp_command);
 void lib6CA20615_gf_CopyUnit (int lp_origingplayer);
 void lib6CA20615_gf_PasteUnit (int lp_origingplayer, point lp_spawnpoint, string lp_command);
 void lib6CA20615_gf_Alliance (int lp_originPlayer, string lp_command);
-bool lib6CA20615_gf_CharisInteger (string lp_char);
 string lib6CA20615_gf_StringIsUnitGrouppreset (string lp_string);
 bool lib6CA20615_gf_StringIsPlayerGrouppreset (string lp_string);
+bool lib6CA20615_gf_CharisInteger (string lp_char);
 bool lib6CA20615_gf_StringIsPlayer (string lp_string);
 bool lib6CA20615_gf_StringIsString (string lp_string);
 bool lib6CA20615_gf_StringIsBool (string lp_string);

@@ -3,7 +3,7 @@
     <CAbilBuild id="CheatTrain">
         <FlagArray index="IgnoreFood" value="1"/>
         <FlagArray index="IgnoreUnitCost" value="1"/>
-        <InfoArray index="Build1" Unit="CheatTrainSpawned">
+        <InfoArray index="Build1" Unit="CheatTrain1x1Ground">
             <Button DefaultButtonFace="TrainCheat1"/>
         </InfoArray>
         <Range value="1000"/>

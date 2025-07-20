@@ -12,9 +12,15 @@
         <On Terms="UnitBirth.CheatBuild" Send="Create"/>
         <On Terms="UnitBirth.CheatBuild2" Send="Create"/>
     </CActorUnit>
-    <CActorUnit id="CheatTrainSpawned" parent="GenericUnitStandard" unitName="CheatTrainSpawned">
+    <CActorUnit id="CheatTrainSpawned" parent="GenericUnitStandard" unitName="CheatTrain1x1Ground">
         <EditorCategories value=""/>
         <Model value=""/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
+        <On Terms="UnitBirth.CheatTrain2x2Ground" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain1x1Air" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain2x2Air" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrainAirUnit" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrainGroundUnit" Send="Create"/>
+        <UnitIcon value="EditorData\Images\FootprintBrushSizeCell.tga"/>
     </CActorUnit>
 </Catalog>

@@ -63,10 +63,33 @@
         </CardLayouts>
         <EditorCategories value="ObjectType:Other"/>
     </CUnit>
-    <CUnit id="CheatTrainSpawned">
-        <Footprint value="CheatBuild"/>
-        <PlacementFootprint value="CheatBuild"/>
+    <CUnit id="CheatTrainGroundUnit">
+        <Footprint value="CheatTrain"/>
+        <DeadFootprint value="CheatTrain"/>
+        <PlacementFootprint value="CheatTrain"/>
         <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrain1x1Ground">
+        <Footprint value="CheatBuild1x1"/>
+        <PlacementFootprint value="CheatBuild1x1"/>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrain1x1Air">
+        <Footprint value="CheatBuild1x1"/>
+        <PlacementFootprint value="CheatBuild1x1"/>
+        <EditorCategories value="ObjectType:Other"/>
+        <Height value="3.75"/>
+    </CUnit>
+    <CUnit id="CheatTrain2x2Ground">
+        <Footprint value="CheatBuild2x2"/>
+        <PlacementFootprint value="CheatBuild2x2"/>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrain2x2Air">
+        <Footprint value="CheatBuild2x2"/>
+        <PlacementFootprint value="CheatBuild2x2"/>
+        <EditorCategories value="ObjectType:Other"/>
+        <Height value="3.75"/>
     </CUnit>
     <CUnit id="CheatTrain3">
         <AbilArray Link="CheatTrain2"/>
@@ -109,5 +132,12 @@
             <LayoutButtons Face="TrainCheat60" Type="AbilCmd" AbilCmd="CheatTrain2,Build30" Row="2" Column="4"/>
         </CardLayouts>
         <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrainAirUnit">
+        <Height value="3.75"/>
+        <Footprint value="CheatTrain"/>
+        <PlacementFootprint value="CheatTrain"/>
+        <EditorCategories value="ObjectType:Other"/>
+        <DeadFootprint value="CheatTrain"/>
     </CUnit>
 </Catalog>

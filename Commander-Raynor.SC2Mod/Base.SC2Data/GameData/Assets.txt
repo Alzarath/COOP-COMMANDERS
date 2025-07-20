@@ -1,0 +1,1 @@
+UI/RaceIcon/COOPRaynor=Assets\Textures\btn-commander-raynor.dds

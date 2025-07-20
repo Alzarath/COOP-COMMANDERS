@@ -11,17 +11,30 @@ Param/Expression/lib_6CA20615_1B3DECFC=Data Table: ~A~<n/>Orientation: ~B~
 Param/Expression/lib_6CA20615_2B42AD6F=Data Table: ~A~<n/>Orientation: ~B~
 Param/Expression/lib_6CA20615_3BC6AB16=Текущая единица <c val="FFFF80">~A~</c>.
 Param/Expression/lib_6CA20615_62412B26=Группа <c val="FFFF80">~A~</c> не найдена
+Param/Expression/lib_6CA20615_A091D0D2=<s val="@@InfoPaneUnitName">~Title~</s><n/><s val="@@InfoPaneUnitSubtitle">~Description~</n></n>ID: ~ID~ </s>
 Param/Expression/lib_6CA20615_A238C292=Добавлена группа <c val="FFFF80">~A~</c> буфер
 Param/Expression/lib_6CA20615_AB8E9B37=Единица <c val="FFFF80">~A~</c> не найдена.
+Param/Expression/lib_6CA20615_C4B20E5E=Press <c val="FFC600">Ctrl - Tab</c> for opened debug window ~A~ - ~B~
+Param/Expression/lib_6CA20615_D7EB082A=<s val="@@InfoPaneUnitName">~Title~</s><n/><s val="@@InfoPaneUnitSubtitle">~Description~</n></n>ID: ~ID~ </s>
 Param/Expression/lib_6CA20615_DDD97C4F=Data Table: ~A~
 Param/Expression/lib_6CA20615_E04B10B2=Build: ~A~<n/>Placement: ~B~<n/>Sound: ~C~
+Param/Value/lib_6CA20615_053876B7=Air Unit
+Param/Value/lib_6CA20615_0885463B=1x1 Ground
 Param/Value/lib_6CA20615_2F99EFEE=1
+Param/Value/lib_6CA20615_52D33A80=1x1 Air
+Param/Value/lib_6CA20615_87368870=Ground Unit
 Param/Value/lib_6CA20615_9D442B78=Target Mode - off
-Param/Value/lib_6CA20615_C4B20E5E=Press <c val="FFC600">Ctrl - Tab</c> for opened debug window
+Param/Value/lib_6CA20615_ED2AD66D=2x2 Air
+Param/Value/lib_6CA20615_F4D8A99C=2x2 Ground
 Unit/Name/CheatBuild=Cheat Build
 Unit/Name/CheatBuild2=Cheat Build
 Unit/Name/CheatTrain=Cheat Train
-Unit/Name/CheatTrainSpawned=Cheat Train
+Unit/Name/CheatTrain1x1Air=Cheat Train
+Unit/Name/CheatTrain1x1Ground=Cheat Train
+Unit/Name/CheatTrain2x2Air=Cheat Train
+Unit/Name/CheatTrain2x2Ground=Cheat Train
+Unit/Name/CheatTrainAirUnit=Cheat Train
+Unit/Name/CheatTrainGroundUnit=Cheat Train
 UserData/CheatCommand/alliance_Param_errors=Не удалось определить игрока 1
 UserData/CheatCommand/alliance_Param_errors_001=Не удалось определить игрока 2
 UserData/CheatCommand/alliance_Param_errors_002=Не удалось определить тип альянса

@@ -2,6 +2,8 @@
 <Desc>
 
     <Constant name="WidthHeightButton" val="50"/>
+    <Constant name="OffsetBG" val="2"/>
+    <Constant name="OffsetBGNegative" val="-2"/>
 
     <Frame type="Frame" name="SectionTemplate">
         <Width val="710"/>
@@ -709,64 +711,33 @@
                 <Anchor side="Right" relative="$parent" pos="Max" offset="-50"/>
                 <Anchor side="Bottom" relative="$parent" pos="Max" offset="-150"/>
 
-                <Frame type="Image" name="BG">
-                    <Anchor relative="$parent"/>
+                <Frame type="Image" name="BGLeft">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="#OffsetBG"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="#OffsetBG"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="#OffsetBGNegative"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="#OffsetBGNegative"/>
                     <Texture val="@CheatEngine/UI/Container"/>
                     <TextureType val="HorizontalBorder"/>
                 </Frame>
-    
-                <!-- <Frame type="CommandPanel" name="PanelUnit" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
+                <Frame type="Image" name="BGRight">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="#OffsetBG"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="#OffsetBG"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="#OffsetBGNegative"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="#OffsetBGNegative"/>
+                    <Texture val="@CheatEngine/UI/Container"/>
+                    <TextureType val="HorizontalBorder"/>
                 </Frame>
-                <Frame type="CommandPanel" name="PanelUnit2" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Top" relative="$parent/PanelUnit" pos="Max" offset="0"/>
-                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
-                </Frame>
-                <Frame type="CommandPanel" name="PanelUnit3" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Top" relative="$parent/PanelUnit2" pos="Max" offset="0"/>
-                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
-                </Frame>
-                <Frame type="CommandPanel" name="PanelUnit4" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Top" relative="$parent/PanelUnit3" pos="Max" offset="0"/>
-                    <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-                    <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
-                </Frame> -->
-    
-                <!-- -->
-    
-                <!-- <Frame type="CommandPanel" name="PanelBuilding" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Left" relative="$parent" pos="Mid" offset="50"/>
-                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
-                </Frame>
-                <Frame type="CommandPanel" name="PanelBuilding2" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Top" relative="$parent/PanelBuilding" pos="Max" offset="0"/>
-                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
-                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
-                </Frame>
-                <Frame type="CommandPanel" name="PanelBuilding3" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Top" relative="$parent/PanelBuilding2" pos="Max" offset="0"/>
-                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
-                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
-                </Frame>
-                <Frame type="CommandPanel" name="PanelBuilding4" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
-                    <Anchor side="Top" relative="$parent/PanelBuilding3" pos="Max" offset="0"/>
-                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
-                    <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
-                </Frame> -->
 
-                <!-- New Feature -->
+                <!-- -->
 
                 <Frame type="Frame" name="Section01" template="CheatEngine_SpawnerUI/SectionTemplate">
-                    <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
-                    <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="22"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="22"/>
                 </Frame>
 
                 <Frame type="Frame" name="Section02" template="CheatEngine_SpawnerUI/SectionTemplate">
-                    <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
-                    <Anchor side="Right" relative="$parent" pos="Max" offset="-10"/>
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="22"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="-18"/>
                 </Frame>
             </Frame>
 
@@ -777,7 +748,7 @@
                 <Anchor side="Bottom" relative="$parent" pos="Max" offset="-50"/>
 
                 <Frame type="Image" name="BG">
-                    <Anchor relative="$parent"/>
+                    <Anchor relative="$parent" offset="#OffsetBGNegative"/>
                     <Texture val="@CheatEngine/UI/Container"/>
                     <TextureType val="HorizontalBorder"/>
                 </Frame>
@@ -786,10 +757,10 @@
                     <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
                     <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
                     <Anchor side="Right" relative="$parent" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Mid" offset="-5"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
                 </Frame>
                 <Frame type="Frame" name="Line2">
-                    <Anchor side="Top" relative="$parent" pos="Mid" offset="5"/>
+                    <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
                     <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
                     <Anchor side="Right" relative="$parent" pos="Max" offset="10"/>
                     <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>

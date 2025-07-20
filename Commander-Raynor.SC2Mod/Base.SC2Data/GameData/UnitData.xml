@@ -436,11 +436,11 @@
         <CostCategory value="None"/>
         <DamageDealtXP value="100"/>
         <DamageTakenXP value="100"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Raynor"/>
+        <WeaponArray Link="RaynorCommanderDuskWingsRockets"/>
+        <EditorCategories value="ObjectType:Hero,ObjectFamily:Coop,Race:Raynor"/>
         <GlossaryCategory value="Unit/Category/RaynorCommanderUnits"/>
         <GlossaryPriority value="250"/>
         <HotkeyCategory value="Unit/Category/RaynorCommanderUnits"/>
-        <WeaponArray Link="RaynorCommanderDuskWingsRockets"/>
     </CUnit>
     <CUnit id="RaynorCommanderHyperion">
         <Subtitle value="Unit/Subtitle/RaynorCommanderHyperion"/>

@@ -119,12 +119,20 @@ void lib6CA20615_gf_updatespawnerui () {
             auto6AE98DDC_val = lib6CA20615_gf_CheckEditorCategoriesObjectType(lv_unit);
             if (auto6AE98DDC_val == lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectCategory1) {
                 libNtve_gf_SetDialogItemImage(lib6CA20615_gv_buttonsUnitSpawn[lv_itunit].lv_icon, (lib6CA20615_gf_SearchIconForUnit(lv_unit)), PlayerGroupSingle(EventPlayer()));
+                TextExpressionSetToken("Param/Expression/lib_6CA20615_D7EB082A", "Title", StringExternal(CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Name", c_playerAny)));
+                TextExpressionSetToken("Param/Expression/lib_6CA20615_D7EB082A", "Description", StringExternal(CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Description", c_playerAny)));
+                TextExpressionSetToken("Param/Expression/lib_6CA20615_D7EB082A", "ID", StringToText((lv_unit)));
+                libNtve_gf_SetDialogItemTooltip(lib6CA20615_gv_buttonsUnitSpawn[lv_itunit].lv_button, TextExpressionAssemble("Param/Expression/lib_6CA20615_D7EB082A"), PlayerGroupAll());
                 lib6CA20615_gv_buttonsUnitSpawn[lv_itunit].lv_unit = lv_unit;
                 lv_itunit += 1;
                 lv_it += 1;
             }
             else if (auto6AE98DDC_val == lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectCategory2) {
                 libNtve_gf_SetDialogItemImage(lib6CA20615_gv_buttonsStructureSpawn[lv_itstructure].lv_icon, (lib6CA20615_gf_SearchIconForUnit(lv_unit)), PlayerGroupSingle(EventPlayer()));
+                TextExpressionSetToken("Param/Expression/lib_6CA20615_A091D0D2", "Title", StringExternal(CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Name", c_playerAny)));
+                TextExpressionSetToken("Param/Expression/lib_6CA20615_A091D0D2", "Description", StringExternal(CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Description", c_playerAny)));
+                TextExpressionSetToken("Param/Expression/lib_6CA20615_A091D0D2", "ID", StringToText((lv_unit)));
+                libNtve_gf_SetDialogItemTooltip(lib6CA20615_gv_buttonsStructureSpawn[lv_itstructure].lv_button, TextExpressionAssemble("Param/Expression/lib_6CA20615_A091D0D2"), PlayerGroupAll());
                 lib6CA20615_gv_buttonsStructureSpawn[lv_itstructure].lv_unit = lv_unit;
                 lv_itstructure += 1;
                 lv_it += 1;
@@ -151,13 +159,16 @@ void lib6CA20615_gf_ClearSelection (int lp_clearSelection, int lp_player) {
         for ( ; auto52F7DA87_var <= auto52F7DA87_ae; auto52F7DA87_var += 1 ) {
             libNtve_gf_SetDialogItemImage(lib6CA20615_gv_buttonsUnitSpawn[auto52F7DA87_var].lv_icon, (""), PlayerGroupSingle(lp_player));
             lib6CA20615_gv_buttonsUnitSpawn[auto52F7DA87_var].lv_unit = null;
+            libNtve_gf_SetDialogItemTooltip(lib6CA20615_gv_buttonsUnitSpawn[auto52F7DA87_var].lv_button, null, PlayerGroupAll());
         }
     }
     else if (autoB84C0816_val == lib6CA20615_ge_ClearSelectionSpawnPanel_Structure) {
+        lib6CA20615_gf_ClearSelection(lib6CA20615_ge_ClearSelectionSpawnPanel_Units, EventPlayer());
         auto38D99D2D_var = 0;
         for ( ; auto38D99D2D_var <= auto38D99D2D_ae; auto38D99D2D_var += 1 ) {
             libNtve_gf_SetDialogItemImage(lib6CA20615_gv_buttonsStructureSpawn[auto38D99D2D_var].lv_icon, (""), PlayerGroupSingle(lp_player));
             lib6CA20615_gv_buttonsStructureSpawn[auto38D99D2D_var].lv_unit = null;
+            libNtve_gf_SetDialogItemTooltip(lib6CA20615_gv_buttonsUnitSpawn[auto38D99D2D_var].lv_button, null, PlayerGroupAll());
         }
     }
     else {
@@ -675,22 +686,6 @@ void lib6CA20615_gf_Alliance (int lp_originPlayer, string lp_command) {
     lib6CA20615_gv_player_Cheat[lp_originPlayer].lv_alliance.lv_alliance_OneShot = lv_oneShot;
 }
 
-bool lib6CA20615_gf_CharisInteger (string lp_char) {
-    // Variable Declarations
-    string lv__char;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv__char = StringSub(lp_char, 1, 1);
-
-    // Implementation
-    if (((lv__char == "0") || ((StringToInt(lv__char) >= 1) && (StringToInt(lv__char) <= 9)))) {
-        return true;
-    }
-
-    return false;
-}
-
 string lib6CA20615_gf_StringIsUnitGrouppreset (string lp_string) {
     // Automatic Variable Declarations
     // Implementation
@@ -710,6 +705,22 @@ bool lib6CA20615_gf_StringIsPlayerGrouppreset (string lp_string) {
 
     // Implementation
     if (((lib6CA20615_gf_StringIsPlayer(lp_string) == true) || (StringCase(lp_string, false) == "all") || (lib6CA20615_gf_ValueOfCheatPlayerGroup(lp_string) != null))) {
+        return true;
+    }
+
+    return false;
+}
+
+bool lib6CA20615_gf_CharisInteger (string lp_char) {
+    // Variable Declarations
+    string lv__char;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv__char = StringSub(lp_char, 1, 1);
+
+    // Implementation
+    if (((lv__char == "0") || ((StringToInt(lv__char) >= 1) && (StringToInt(lv__char) <= 9)))) {
         return true;
     }
 
@@ -793,6 +804,7 @@ bool lib6CA20615_gf_StringIsReal (string lp_string) {
         lv_char = StringSub(lp_string, lv_it, lv_it);
         if (((lv_char == ".") || (lv_char == ","))) {
             lv_decimal = true;
+            continue;
         }
 
         if ((lib6CA20615_gf_CharisInteger(lv_char) == false)) {
@@ -904,7 +916,9 @@ bool lib6CA20615_gt_init_Func (bool testConds, bool runActions) {
     TriggerExecute(lib6CA20615_gt_hookdatatableview, true, false);
     TriggerExecute(lib6CA20615_gt_InitSpawnUnit, true, false);
     Wait(2.0, c_timeGame);
-    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_C4B20E5E"));
+    TextExpressionSetToken("Param/Expression/lib_6CA20615_C4B20E5E", "A", FixedToTextAdvanced(0.0, c_formatNumberStyleNormal, true, 2, 2));
+    TextExpressionSetToken("Param/Expression/lib_6CA20615_C4B20E5E", "B", StringToText(null));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_6CA20615_C4B20E5E"));
     return true;
 }
 
@@ -1129,13 +1143,55 @@ bool lib6CA20615_gt_ClickUnit_Func (bool testConds, bool runActions) {
         }
         lib6CA20615_gv_player_Cheat[EventPlayer()].lv_unitType_Spawn = lv_unit;
         lv_builder = libNtve_gf_ConvertUnitToUnitGroup(lib6CA20615_gv_builderunit);
-        CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "BuildModel", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", lv_p));
-        CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "PlacementModel", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "PlacementModel", lv_p));
+        if (((CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", c_playerAny) == "") || (CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", c_playerAny) == "Invisible"))) {
+            CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "BuildModel", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "Model", lv_p));
+        }
+        else {
+            CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "BuildModel", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", lv_p));
+        }
+        if (((CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "PlacementModel", c_playerAny) == "") || (CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "PlacementModel", c_playerAny) == "Invisible"))) {
+            CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "PlacementModel", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "Model", lv_p));
+        }
+        else {
+            CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "PlacementModel", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "PlacementModel", lv_p));
+        }
         CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "PlacementSound", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "PlacementSound", lv_p));
         TextExpressionSetToken("Param/Expression/lib_6CA20615_E04B10B2", "A", StringToText(CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", lv_p)));
         TextExpressionSetToken("Param/Expression/lib_6CA20615_E04B10B2", "B", StringToText(CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "PlacementModel", lv_p)));
         TextExpressionSetToken("Param/Expression/lib_6CA20615_E04B10B2", "C", StringToText(CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "PlacementSound", lv_p)));
         TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_6CA20615_E04B10B2"), true);
+        if ((CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()) != "")) {
+            if ((StringToInt(CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Height", EventPlayer())) > 1)) {
+                if (((CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(0) + "]", c_playerAny) == "..") || (CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(0) + "]", c_playerAny) == "xx")) && ((CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(1) + "]", c_playerAny) == "..") || (CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(1) + "]", c_playerAny) == "xx"))) {
+                    CatalogFieldValueSet(c_gameCatalogAbil, "CheatTrain", "InfoArray[" + IntToString(0) + "].Unit", lv_p, ("CheatTrain2x2Air"));
+                    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_ED2AD66D"));
+                }
+                else {
+                    CatalogFieldValueSet(c_gameCatalogAbil, "CheatTrain", "InfoArray[" + IntToString(0) + "].Unit", lv_p, ("CheatTrain1x1Air"));
+                    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_52D33A80"));
+                }
+            }
+            else if (true) {
+                if (((CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(0) + "]", c_playerAny) == "..") || (CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(0) + "]", c_playerAny) == "xx")) && ((CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(1) + "]", c_playerAny) == "..") || (CatalogFieldValueGet(c_gameCatalogFootprint, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Footprint", EventPlayer()), "Layers[" + IntToString(0) + "].Rows[" + IntToString(1) + "]", c_playerAny) == "xx"))) {
+                    CatalogFieldValueSet(c_gameCatalogAbil, "CheatTrain", "InfoArray[" + IntToString(0) + "].Unit", lv_p, ("CheatTrain2x2Ground"));
+                    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_F4D8A99C"));
+                }
+                else {
+                    CatalogFieldValueSet(c_gameCatalogAbil, "CheatTrain", "InfoArray[" + IntToString(0) + "].Unit", lv_p, ("CheatTrain1x1Ground"));
+                    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_0885463B"));
+                }
+            }
+        }
+        else if (true) {
+            if ((StringToInt(CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Height", EventPlayer())) > 1)) {
+                CatalogFieldValueSet(c_gameCatalogAbil, "CheatTrain", "InfoArray[" + IntToString(0) + "].Unit", lv_p, ("CheatTrainAirUnit"));
+                UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_053876B7"));
+            }
+            else if (true) {
+                CatalogFieldValueSet(c_gameCatalogAbil, "CheatTrain", "InfoArray[" + IntToString(0) + "].Unit", lv_p, ("CheatTrainGroundUnit"));
+                UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_87368870"));
+            }
+        }
         Wait(0.0625, c_timeGame);
         lib6CA20615_gv_player_Cheat[lv_p].lv_targetMode = true;
         UISetTargetingOrder(PlayerGroupSingle(lv_p), lv_builder, Order(lv_abilitycommand), true);
@@ -1353,7 +1409,7 @@ bool lib6CA20615_gt_showspawnerui_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_showspawnerui_Init () {
     lib6CA20615_gt_showspawnerui = TriggerCreate("lib6CA20615_gt_showspawnerui_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_showspawnerui, c_playerAny, c_keyTab, true, c_keyModifierStateIgnore, c_keyModifierStateRequire, c_keyModifierStateIgnore);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_showspawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1373,7 +1429,7 @@ bool lib6CA20615_gt_hidespawnerui_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_hidespawnerui_Init () {
     lib6CA20615_gt_hidespawnerui = TriggerCreate("lib6CA20615_gt_hidespawnerui_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, c_keyTab, false, c_keyModifierStateIgnore, c_keyModifierStateRequire, c_keyModifierStateIgnore);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1571,7 +1627,7 @@ bool lib6CA20615_gt_showdatatablewindow_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_showdatatablewindow_Init () {
     lib6CA20615_gt_showdatatablewindow = TriggerCreate("lib6CA20615_gt_showdatatablewindow_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_showdatatablewindow, c_playerAny, c_keyD, true, c_keyModifierStateIgnore, c_keyModifierStateRequire, c_keyModifierStateIgnore);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_showdatatablewindow, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1591,7 +1647,7 @@ bool lib6CA20615_gt_hidedatatablewindow_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_hidedatatablewindow_Init () {
     lib6CA20615_gt_hidedatatablewindow = TriggerCreate("lib6CA20615_gt_hidedatatablewindow_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_hidedatatablewindow, c_playerAny, c_keyD, false, c_keyModifierStateIgnore, c_keyModifierStateRequire, c_keyModifierStateIgnore);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidedatatablewindow, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------

@@ -63,25 +63,9 @@
         </CardLayouts>
         <EditorCategories value="ObjectType:Other"/>
     </CUnit>
-    <CUnit id="CheatTrain2">
-        <AbilArray Link="CheatTrain"/>
-        <CardLayouts>
-            <LayoutButtons Face="TrainCheat16" Type="AbilCmd" AbilCmd="CheatTrain,Build16" Row="0" Column="0"/>
-            <LayoutButtons Face="TrainCheat17" Type="AbilCmd" AbilCmd="CheatTrain,Build17" Row="0" Column="1"/>
-            <LayoutButtons Face="TrainCheat18" Type="AbilCmd" AbilCmd="CheatTrain,Build18" Row="0" Column="2"/>
-            <LayoutButtons Face="TrainCheat19" Type="AbilCmd" AbilCmd="CheatTrain,Build19" Row="0" Column="3"/>
-            <LayoutButtons Face="TrainCheat20" Type="AbilCmd" AbilCmd="CheatTrain,Build20" Row="0" Column="4"/>
-            <LayoutButtons Face="TrainCheat21" Type="AbilCmd" AbilCmd="CheatTrain,Build21" Row="1" Column="0"/>
-            <LayoutButtons Face="TrainCheat22" Type="AbilCmd" AbilCmd="CheatTrain,Build22" Row="1" Column="1"/>
-            <LayoutButtons Face="TrainCheat23" Type="AbilCmd" AbilCmd="CheatTrain,Build23" Row="1" Column="2"/>
-            <LayoutButtons Face="TrainCheat24" Type="AbilCmd" AbilCmd="CheatTrain,Build24" Row="1" Column="3"/>
-            <LayoutButtons Face="TrainCheat25" Type="AbilCmd" AbilCmd="CheatTrain,Build25" Row="1" Column="4"/>
-            <LayoutButtons Face="TrainCheat26" Type="AbilCmd" AbilCmd="CheatTrain,Build26" Row="2" Column="0"/>
-            <LayoutButtons Face="TrainCheat27" Type="AbilCmd" AbilCmd="CheatTrain,Build27" Row="2" Column="1"/>
-            <LayoutButtons Face="TrainCheat28" Type="AbilCmd" AbilCmd="CheatTrain,Build28" Row="2" Column="2"/>
-            <LayoutButtons Face="TrainCheat29" Type="AbilCmd" AbilCmd="CheatTrain,Build29" Row="2" Column="3"/>
-            <LayoutButtons Face="TrainCheat30" Type="AbilCmd" AbilCmd="CheatTrain,Build30" Row="2" Column="4"/>
-        </CardLayouts>
+    <CUnit id="CheatTrainSpawned">
+        <Footprint value="CheatBuild"/>
+        <PlacementFootprint value="CheatBuild"/>
         <EditorCategories value="ObjectType:Other"/>
     </CUnit>
     <CUnit id="CheatTrain3">

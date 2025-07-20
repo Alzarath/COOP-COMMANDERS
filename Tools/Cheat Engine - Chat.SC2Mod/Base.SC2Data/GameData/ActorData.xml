@@ -7,10 +7,14 @@
             <Image value="Assets\Textures\btn-ability-protoss-chronoboost.dds"/>
         </GroupIcon>
         <HighlightTooltip value="Unit/Name/Bogus"/>
-        <On Terms="UnitBirth.CheatTrain2" Send="Create"/>
         <On Terms="UnitBirth.CheatTrain3" Send="Create"/>
         <On Terms="UnitBirth.CheatTrain4" Send="Create"/>
         <On Terms="UnitBirth.CheatBuild" Send="Create"/>
         <On Terms="UnitBirth.CheatBuild2" Send="Create"/>
+    </CActorUnit>
+    <CActorUnit id="CheatTrainSpawned" parent="GenericUnitStandard" unitName="CheatTrainSpawned">
+        <EditorCategories value=""/>
+        <Model value=""/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
     </CActorUnit>
 </Catalog>

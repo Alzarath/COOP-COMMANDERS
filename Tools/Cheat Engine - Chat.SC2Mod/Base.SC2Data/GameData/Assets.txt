@@ -1,0 +1,7 @@
+CheatEngine/UI/Container=Assets\Textures\ui_frame_big_innerline_terran.dds
+CheatEngine/UI/GenericSmallButton=Assets\Textures\ui_glue_restorebutton_normalpressed_terran.dds
+CheatEngine/UI/GenericSmallButtonOver=Assets\Textures\ui_glue_restorebutton_normaloverpressedover_terran.dds
+CheatEngine/UI/GenericSmallButton2=Assets\Textures\ui_mission_hackingbutton_normalpressed.dds
+CheatEngine/UI/GenericSmallButtonOver2=Assets\Textures\ui_mission_hackingbutton_normaloverpressedover.dds
+
+UI/RaceIcon/Neut=Assets\Textures\ui_battlenet_glue_icons_random_normal.dds

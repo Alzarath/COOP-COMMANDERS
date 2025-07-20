@@ -2,10 +2,10 @@
 <Preload>
 <Actor id="SYSTEM_ActorConfig"/>
 <Unit id="System_Snapshot_Dummy"/>
+<Unit id="CheatTrainSpawned"/>
 <Unit id="CheatBuild"/>
 <Unit id="CheatBuild2"/>
 <Unit id="CheatTrain"/>
-<Unit id="CheatTrain2"/>
 <Unit id="CheatTrain3"/>
 <Unit id="CheatTrain4"/>
 </Preload>

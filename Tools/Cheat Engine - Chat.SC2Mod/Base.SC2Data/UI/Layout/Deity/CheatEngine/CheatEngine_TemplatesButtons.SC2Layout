@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="Button" name="GenericSmallButton">
+        <Width val="45"/>
+        <Height val="45"/>
+
+        <Frame type="Image" name="NormalImage">
+            <Anchor relative="$parent"/>
+            <Texture val="@CheatEngine/UI/GenericSmallButton"/>
+            <StateCount val="2"/>
+            <TextureType val="EndCap"/>
+        </Frame>
+        <Frame type="Image" name="HoverImage">
+            <Anchor relative="$parent"/>
+            <Texture val="@CheatEngine/UI/GenericSmallButtonOver"/>
+            <StateCount val="2"/>
+            <TextureType val="EndCap"/>
+        </Frame>
+        <Frame type="Image" name="Icon">
+            <Anchor relative="$parent"/>
+            <Texture val="Assets\Textures\btn-lostvinking-bomb.dds"/>
+            <TextureType val="Normal"/>
+        </Frame>
+
+        <StateGroup name="StateGroup1">
+            <DefaultState val="Default"/>
+        
+            <State name="Disable">
+                <When type="Property" frame="$this/Icon" Texture="" operator="Equal"/>
+                <Action type="SetProperty" frame="$this" Enabled="False"/>
+                <Action type="SetProperty" frame="$this/Icon" Visible="False"/>
+            </State>
+        
+            <State name="Default">
+                <Action type="SetProperty" frame="$this" Enabled="True"/>
+                <Action type="SetProperty" frame="$this/Icon" Visible="True"/>
+            </State>
+        </StateGroup>
+    </Frame>
+
+    <Frame type="Button" name="GenericSmallButton2">
+        <Width val="50"/>
+        <Height val="50"/>
+
+        <Frame type="Image" name="NormalImage">
+            <Anchor relative="$parent"/>
+            <Texture val="@CheatEngine/UI/GenericSmallButton2"/>
+            <StateCount val="2"/>
+            <TextureType val="Border"/>
+        </Frame>
+        <Frame type="Image" name="HoverImage">
+            <Anchor relative="$parent"/>
+            <Texture val="@CheatEngine/UI/GenericSmallButtonOver2"/>
+            <StateCount val="2"/>
+            <TextureType val="Border"/>
+        </Frame>
+    </Frame>
+</Desc>

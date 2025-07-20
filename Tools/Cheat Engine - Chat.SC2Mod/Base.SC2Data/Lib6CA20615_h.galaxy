@@ -3,7 +3,12 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: Cheat Engine
 //--------------------------------------------------------------------------------------------------
+// Preset Declarations
+const int lib6CA20615_ge_ClearSelectionSpawnPanel_Units = 0;
+const int lib6CA20615_ge_ClearSelectionSpawnPanel_Structure = 1;
+
 // Constants
+const int lib6CA20615_gv_cOUNT_BUTTONS = 64;
 const string lib6CA20615_gv_unitsBuffer = "CheatEngine.unit";
 const string lib6CA20615_gv_unitsStatsBuffer = "CheatEngine.unitstats";
 const string lib6CA20615_gv_unitsOrientationBuffer = "CheatEngine.unitorientation";
@@ -35,15 +40,50 @@ struct lib6CA20615_gs_Player_Cheat {
     lib6CA20615_gs_Cheat_SpawnUnits lv_unitSpawn;
     lib6CA20615_gs_Cheat_DeathUnits lv_deathUnits;
     lib6CA20615_gs_Cheat_Alliance lv_alliance;
+    bool lv_targetMode;
+    string lv_unitType_Spawn;
+    string lv_selectCategory1;
+    string lv_selectCategory2;
+    string lv_selectRace;
     fixed lv_mouseX;
     fixed lv_mouseY;
 };
 
+struct lib6CA20615_gs_UI {
+    int lv_spawn_Line1;
+    int lv_spawn_Line2;
+};
+
+struct lib6CA20615_gs_ButtonsSpawn {
+    int lv_button;
+    int lv_icon;
+    string lv_unit;
+};
+
+struct lib6CA20615_gs_ButtonsEditorCategories {
+    int lv_button;
+    int lv_icon;
+    string lv_category;
+};
+
+struct lib6CA20615_gs_ButtonsRace {
+    int lv_dialogItem;
+    string lv_race;
+};
+
 // Variable Declarations
+int lib6CA20615_gv_cOUNT_CATEGORIES;
 int lib6CA20615_gv_cURRENT_SIZE_BUFFER;
 int lib6CA20615_gv_mAXIMUM_SIZE_BUFFER;
 string lib6CA20615_gv_dummyIcon;
 lib6CA20615_gs_Player_Cheat[16] lib6CA20615_gv_player_Cheat;
+lib6CA20615_gs_UI lib6CA20615_gv_uI;
+lib6CA20615_gs_ButtonsSpawn[lib6CA20615_gv_cOUNT_BUTTONS + 1] lib6CA20615_gv_buttonsUnitSpawn;
+lib6CA20615_gs_ButtonsSpawn[lib6CA20615_gv_cOUNT_BUTTONS + 1] lib6CA20615_gv_buttonsStructureSpawn;
+lib6CA20615_gs_ButtonsRace[101] lib6CA20615_gv_buttonsRace;
+unit lib6CA20615_gv_builderunit;
+lib6CA20615_gs_ButtonsEditorCategories[51] lib6CA20615_gv_buttonEditorCategory1;
+lib6CA20615_gs_ButtonsEditorCategories[51] lib6CA20615_gv_buttonEditorCategory2;
 unitgroup lib6CA20615_gv_builderUnit;
 unitgroup lib6CA20615_gv_builderStructure;
 int lib6CA20615_gv_uispawner;
@@ -56,11 +96,14 @@ int[16] lib6CA20615_gv_valueDatatable;
 int lib6CA20615_gv_refreshdata_button;
 
 // Function Declarations
-void lib6CA20615_gf_updatespawnerui (string lp_race);
+void lib6CA20615_gf_updatespawnerui ();
+void lib6CA20615_gf_ClearSelection (int lp_clearSelection, int lp_player);
 string lib6CA20615_gf_CheckEditorCategoriesObjectType (string lp_unit);
 string lib6CA20615_gf_CheckEditorCategoriesObjectFamily (string lp_unit);
 string lib6CA20615_gf_SearchIconForUnit (string lp_unit);
 bool lib6CA20615_gf_UnitisBase (string lp_unit);
+string lib6CA20615_gf_RaceOfUnitType (string lp_unitType);
+string lib6CA20615_gf_RaceOfUnit (unit lp_unit);
 unitgroup lib6CA20615_gf_ValueOfCheatUnitGroup (string lp_name);
 playergroup lib6CA20615_gf_ValueOfCheatPlayerGroup (string lp_name);
 void lib6CA20615_gf_Spawnunit (point lp_point, int lp_originPlayer, string lp_command);
@@ -85,6 +128,13 @@ string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_
 trigger lib6CA20615_gt_init;
 trigger lib6CA20615_gt_CheatCodeUnits;
 trigger lib6CA20615_gt_CheatCodePlayers;
+trigger lib6CA20615_gt_InitSpawnUnit;
+trigger lib6CA20615_gt_ClickUnit;
+trigger lib6CA20615_gt_ReplaceUnit;
+trigger lib6CA20615_gt_ReviveBuilder;
+trigger lib6CA20615_gt_GenerateCategories;
+trigger lib6CA20615_gt_ChangeCategory;
+trigger lib6CA20615_gt_TargetModOff;
 trigger lib6CA20615_gt_showspawnerui;
 trigger lib6CA20615_gt_hidespawnerui;
 trigger lib6CA20615_gt_createbuilder;

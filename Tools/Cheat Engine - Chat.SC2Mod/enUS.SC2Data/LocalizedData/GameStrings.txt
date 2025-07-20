@@ -14,12 +14,14 @@ Param/Expression/lib_6CA20615_62412B26=Группа <c val="FFFF80">~A~</c> не
 Param/Expression/lib_6CA20615_A238C292=Добавлена группа <c val="FFFF80">~A~</c> буфер
 Param/Expression/lib_6CA20615_AB8E9B37=Единица <c val="FFFF80">~A~</c> не найдена.
 Param/Expression/lib_6CA20615_DDD97C4F=Data Table: ~A~
+Param/Expression/lib_6CA20615_E04B10B2=Build: ~A~<n/>Placement: ~B~<n/>Sound: ~C~
 Param/Value/lib_6CA20615_2F99EFEE=1
+Param/Value/lib_6CA20615_9D442B78=Target Mode - off
 Param/Value/lib_6CA20615_C4B20E5E=Press <c val="FFC600">Ctrl - Tab</c> for opened debug window
 Unit/Name/CheatBuild=Cheat Build
 Unit/Name/CheatBuild2=Cheat Build
 Unit/Name/CheatTrain=Cheat Train
-Unit/Name/CheatTrain2=Cheat Train
+Unit/Name/CheatTrainSpawned=Cheat Train
 UserData/CheatCommand/alliance_Param_errors=Не удалось определить игрока 1
 UserData/CheatCommand/alliance_Param_errors_001=Не удалось определить игрока 2
 UserData/CheatCommand/alliance_Param_errors_002=Не удалось определить тип альянса

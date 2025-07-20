@@ -3,12 +3,289 @@
 
     <Constant name="WidthHeightButton" val="50"/>
 
+    <Frame type="Frame" name="SectionTemplate">
+        <Width val="710"/>
+        <Height val="275"/>
+
+        <Frame type="Button" name="ButtonUnitSpawn0" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn1" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn2" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn1" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn3" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn2" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn4" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn3" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn5" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn4" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn6" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn5" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn7" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn6" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn8" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn7" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn9" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn8" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn10" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn9" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn11" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn10" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn12" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn11" pos="Max" offset="10"/>
+        </Frame>
+
+        <!-- -->
+
+        <Frame type="Button" name="ButtonUnitSpawn13" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn0" pos="Min" offset="0"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn14" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn15" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn14" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn16" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn15" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn17" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn16" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn18" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn17" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn19" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn18" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn20" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn19" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn21" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn20" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn22" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn21" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn23" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn22" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn24" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn23" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn25" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn0" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn24" pos="Max" offset="10"/>
+        </Frame>
+
+        <!-- -->
+
+        <Frame type="Button" name="ButtonUnitSpawn26" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn13" pos="Min" offset="0"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn27" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn28" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn27" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn29" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn28" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn30" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn29" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn31" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn30" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn32" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn31" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn33" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn32" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn34" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn33" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn35" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn34" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn36" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn35" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn37" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn36" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn38" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn13" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn37" pos="Max" offset="10"/>
+        </Frame>
+
+        <!-- -->
+
+        <Frame type="Button" name="ButtonUnitSpawn39" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn26" pos="Min" offset="0"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn40" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn41" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn40" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn42" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn41" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn43" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn42" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn44" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn43" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn45" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn44" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn46" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn45" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn47" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn46" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn48" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn47" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn49" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn48" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn50" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn49" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn51" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn26" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn50" pos="Max" offset="10"/>
+        </Frame>
+
+        <!-- -->
+
+        <Frame type="Button" name="ButtonUnitSpawn52" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn39" pos="Min" offset="0"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn53" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn52" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn54" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn53" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn55" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn54" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn56" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn55" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn57" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn56" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn58" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn57" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn59" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn58" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn60" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn59" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn61" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn60" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn62" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn61" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn63" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn62" pos="Max" offset="10"/>
+        </Frame>
+        <Frame type="Button" name="ButtonUnitSpawn64" template="CheatEngine_TemplatesButtons/GenericSmallButton">
+            <Anchor side="Top" relative="$parent/ButtonUnitSpawn39" pos="Max" offset="10"/>
+            <Anchor side="Left" relative="$parent/ButtonUnitSpawn63" pos="Max" offset="10"/>
+        </Frame>
+    </Frame>
+
     <Frame type="CommandPanel" name="CheatSpawnerUnitTemplate" template="CommandPanel/CommandPanelTemplate">
         <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
         <Height val="#WidthHeightButton"/>
         <DisplayCancelCommandCard val="False"/>
         <UseGridHotkeys val="True"/>
-
         <Frame type="CommandButton" name="CommandButton00">
             <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
             <Anchor side="Left" relative="$this" pos="Min" offset="0"/>
@@ -163,85 +440,282 @@
             <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
             <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
             <Width val="1600"/>
-            <Height val="450"/>
+            <Height val="550"/>
             <Visible val="False"/>
 
             <Frame type="Frame" name="RaceSelector">
-                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
-                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Anchor relative="$parent"/>
                 <Height val="45"/>
 
                 <Frame type="Button" name="Race1" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
-                    <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Left" relative="$parent/$parent/Content" pos="Min" offset="5"/>
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race2" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race1" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race3" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race2" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race4" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race3" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race5" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race4" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race6" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race5" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race7" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race6" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race8" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race7" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race9" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race8" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race10" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race9" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
                 </Frame>
 
                 <Frame type="Button" name="Race11" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
                     <Anchor side="Left" relative="$parent/Race10" pos="Max" offset="10"/>
-                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race12" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race11" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race13" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race12" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race14" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race13" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race15" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race14" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race16" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race15" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race17" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race16" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race18" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race17" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race19" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race18" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race20" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race19" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race21" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race20" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race22" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race21" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race23" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race22" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race24" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race23" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race25" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race24" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race26" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race25" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race27" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race26" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race1" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race28" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/$parent/Footer" pos="Min" offset="5"/>
+                    <Anchor side="Top" relative="$parent/$parent/Footer" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race29" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race28" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race30" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race29" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race31" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race30" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race32" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race31" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race33" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race32" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race34" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race33" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race35" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race34" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race36" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race35" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race37" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race36" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race38" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race37" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race39" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race38" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race40" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race39" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race41" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race40" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race42" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race41" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race43" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race42" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race44" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race43" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race45" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race44" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race46" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race45" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race47" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race46" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race48" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race47" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race49" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race48" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race50" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race49" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
+                </Frame>
+
+                <Frame type="Button" name="Race51" template="CheatEngine_SpawnerUI/RaceSelectButtonTemplate">
+                    <Anchor side="Left" relative="$parent/Race50" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent/Race28" pos="Max" offset="0"/>
                 </Frame>
             </Frame>
 
             <Frame type="Frame" name="Content">
-                <Anchor side="Top" relative="$parent/RaceSelector" pos="Max" offset="0"/>
-                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
-                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
-                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Top" relative="$parent" pos="Min" offset="50"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="50"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-50"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-150"/>
 
                 <Frame type="Image" name="BG">
                     <Anchor relative="$parent"/>
-                    <ColorAdjustMode val="Fill"/>
-                    <AdjustmentColor val="5a5a5a"/>
-                    <Alpha val="90"/>
+                    <Texture val="@CheatEngine/UI/Container"/>
+                    <TextureType val="HorizontalBorder"/>
                 </Frame>
     
-                <Frame type="CommandPanel" name="PanelUnit" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                <!-- <Frame type="CommandPanel" name="PanelUnit" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
                     <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
                     <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
                 </Frame>
@@ -259,11 +733,11 @@
                     <Anchor side="Top" relative="$parent/PanelUnit3" pos="Max" offset="0"/>
                     <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
                     <Anchor side="Right" relative="$parent" pos="Mid" offset="-100"/>
-                </Frame>
+                </Frame> -->
     
                 <!-- -->
     
-                <Frame type="CommandPanel" name="PanelBuilding" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
+                <!-- <Frame type="CommandPanel" name="PanelBuilding" template="CheatEngine_SpawnerUI/CheatSpawnerUnitTemplate">
                     <Anchor side="Left" relative="$parent" pos="Mid" offset="50"/>
                     <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
                 </Frame>
@@ -281,11 +755,47 @@
                     <Anchor side="Top" relative="$parent/PanelBuilding3" pos="Max" offset="0"/>
                     <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
                     <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                </Frame> -->
+
+                <!-- New Feature -->
+
+                <Frame type="Frame" name="Section01" template="CheatEngine_SpawnerUI/SectionTemplate">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
                 </Frame>
 
+                <Frame type="Frame" name="Section02" template="CheatEngine_SpawnerUI/SectionTemplate">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="-10"/>
+                </Frame>
             </Frame>
 
-            
+            <Frame type="Frame" name="Footer">
+                <Anchor side="Top" relative="$parent/Content" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/Content" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent/Content" pos="Max" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-50"/>
+
+                <Frame type="Image" name="BG">
+                    <Anchor relative="$parent"/>
+                    <Texture val="@CheatEngine/UI/Container"/>
+                    <TextureType val="HorizontalBorder"/>
+                </Frame>
+
+                <Frame type="Frame" name="Line1">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Mid" offset="-5"/>
+                </Frame>
+                <Frame type="Frame" name="Line2">
+                    <Anchor side="Top" relative="$parent" pos="Mid" offset="5"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="10"/>
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                </Frame>
+            </Frame>
         </Frame>
+        
     </Frame>
 </Desc>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="ZeratulCommanderDisruptorPhase">
+        <Icon value="Assets\Textures\btn-ability-zeratul-disruptor-purificationnova.dds"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CButton>
+</Catalog>

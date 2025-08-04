@@ -4,4 +4,4 @@ CheatEngine/UI/GenericSmallButtonOver=Assets\Textures\ui_glue_restorebutton_norm
 CheatEngine/UI/GenericSmallButton2=Assets\Textures\ui_mission_hackingbutton_normalpressed.dds
 CheatEngine/UI/GenericSmallButtonOver2=Assets\Textures\ui_mission_hackingbutton_normaloverpressedover.dds
 
-UI/RaceIcon/Neut=Assets\Textures\ui_battlenet_glue_icons_random_normal.dds
+UI/RaceIcon/Neut=Assets\Textures\ui_battlenet_glue_icons_random_norm

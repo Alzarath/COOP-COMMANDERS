@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectTarget id="ZeratulCommanderDisruptorPhase">
+        <EditorCategories value="Race:Zeratul,AbilityorEffectType:Units"/>
+        <Range value="8"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ZeratulCommanderDisruptorPhase"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+</Catalog>

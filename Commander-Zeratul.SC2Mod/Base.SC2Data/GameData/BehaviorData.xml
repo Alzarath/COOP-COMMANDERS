@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="ZeratulCommanderDisruptorPhase@TimeLife" parent="TimedLife">
+        <EditorCategories value="Race:Zeratul,AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <ExpireEffect value="ZeratulCommanderDisruptorPhase@Set"/>
+    </CBehaviorBuff>
+</Catalog>

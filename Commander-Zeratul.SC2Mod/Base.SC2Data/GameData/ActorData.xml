@@ -6,6 +6,24 @@
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-building-protoss-zeratulnexus.dds"/>
     </CActorUnit>
+    <CActorUnit id="ZeratulCommanderDisruptorPhase" parent="GenericUnitStandard" unitName="ZeratulCommanderDisruptorPhase">
+        <EditorCategories value=""/>
+        <HeroIcon value="Assets\Textures\btn-ability-zeratul-disruptor-purificationnova.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-ability-zeratul-disruptor-purificationnova.dds"/>
+    </CActorUnit>
+    <CActorModel id="ZeratulCommanderDisruptorPhase@Birth" parent="ModelAnimationStyleOneShotNoOrphan">
+        <EditorCategories value=""/>
+        <On Terms="UnitBirth.ZeratulCommanderDisruptorPhase" Send="Create"/>
+    </CActorModel>
+    <CActorSplat id="ZeratulCommanderDisruptorPhase@Cursor" parent="ProtossCursorSplat" abil="ZeratulCommanderDisruptorPhase">
+        <EditorCategories value=""/>
+        <Model value="ZeratulCommanderDisruptorPhase@Cursor"/>
+    </CActorSplat>
+    <CActorModel id="ZeratulCommanderDisruptorPhase@Impact" parent="ModelAnimationStyleOneShotNoOrphan">
+        <EditorCategories value=""/>
+        <On Terms="Effect.ZeratulCommanderDisruptorPhase@Search.Start" Send="Create"/>
+    </CActorModel>
     <CActorAction id="ZeratulCommanderNullBeam@Attack" parent="GenericAttack" effectAttack="ZeratulCommanderNullBeam@CP">
         <EditorCategories value=""/>
         <ActionFlags index="AlignedImpactsAndDamages" value="1"/>

@@ -88,64 +88,43 @@
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="PhysicsDeathsVoidGround"/>
     </CActorUnit>
+    <!-- Weapons Template -->
+    <CWeaponLegacy default="1" id="CommanderWeapon">
+        <TargetFilters value="Visible;Missile,Dead,Hidden"/>
+        <DisplayEffect value="##id##@Damage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Beam" parent="CommanderWeapon">
+        <Effect value="##id##@CP"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Missile" parent="CommanderWeapon">
+        <Effect value="##id##@LM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Instant" parent="CommanderWeapon">
+        <Effect value="##id##@Damage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CommanderWeapon_Melee" parent="CommanderWeapon_Instant">
+        <Range value="0"/>
+    </CWeaponLegacy>
     <!-- Sounds Template -->
     <CSound default="1" id="CommanderVOBase" parent="Voice">
-        <?token id="unitName" type="CUnitLink" value="Bogus"?>
+        <?token id="unitName" value="Bogus"?>
+        <AssetArray File="Assets\Sounds\UI_AC_WarpIn02.wav" FacialGroup=""/>
     </CSound>
     <CSound default="1" id="CommanderVOPissed" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Pissed/10" FacialGroup=""/>
+        <AssetArray index="0" removed="1"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound default="1" id="CommanderVOAttack" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Attack/10" FacialGroup=""/>
+        <AssetArray index="0" removed="1"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound default="1" id="CommanderVOYes" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/Yes/10" FacialGroup=""/>
+        <AssetArray index="0" removed="1"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound default="1" id="CommanderVOWhat" parent="CommanderVOBase">
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/00" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/01" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/02" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/03" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/04" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/05" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/06" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/07" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/08" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/09" FacialGroup=""/>
-        <AssetArray File="LocalizedData/Sounds/COOP_COMMANDERS/VO/##unitName##/What/10" FacialGroup=""/>
+        <AssetArray index="0" removed="1"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <!-- DataCollection -->
@@ -446,22 +425,4 @@
         <BehaviorArray Link="ZergBuildingDies6"/>
     </CUnit>
     <CUnit default="1" id="CommanderStructure_Prot" parent="CommanderStructure"/>
-    <!-- Weapons Template -->
-    <CWeaponLegacy default="1" id="CommanderWeapon">
-        <TargetFilters value="Visible;Missile,Dead,Hidden"/>
-        <DisplayEffect value="##id##@Damage"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy default="1" id="CommanderWeapon_Beam" parent="CommanderWeapon">
-        <Effect value="##id##@CP"/>
-        <LegacyOptions index="KeepChanneling" value="1"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy default="1" id="CommanderWeapon_Missile" parent="CommanderWeapon">
-        <Effect value="##id##@LM"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy default="1" id="CommanderWeapon_Instant" parent="CommanderWeapon">
-        <Effect value="##id##@Damage"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy default="1" id="CommanderWeapon_Melee" parent="CommanderWeapon_Instant">
-        <Range value="0"/>
-    </CWeaponLegacy>
 </Catalog>

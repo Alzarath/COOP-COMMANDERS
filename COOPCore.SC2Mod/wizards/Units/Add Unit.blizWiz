@@ -5,14 +5,38 @@
     <objecttypes create="Unit"/>
 
     <!-- condtitions -->
-    <condition id="selectGround" input="parent" value="CommanderGround"/>
-    <condition id="selectAir" input="parent" value="CommanderAir"/>
-    <condition id="selectStructure" input="parent" value="CommanderStructure"/>
+    <condition id="selectGround" input="parent" value="Ground"/>
+    <condition id="selectAir" input="parent" value="Air"/>
+    <condition id="selectStructure" input="parent" value="Structure"/>
 
     <condition id="NotStructure" logic="or">
         <condition id="selectGround"/>
         <condition id="selectAir"/>
     </condition>
+
+    <condition id="createForCommander" input="isCommander" value="1"/>
+
+    <condition id="life_0" input="Life" operator="greater" value="0"/>
+    <condition id="liferegen_0" input="LifeRegen" operator="greater" value="0"/>
+    <condition id="shield_0" input="Shield" operator="greater" value="0"/>
+    <condition id="shieldregen_0" input="ShieldRegen" operator="greater" value="0"/>
+    <condition id="energy_0" input="Energy" operator="greater" value="0"/>
+    <condition id="energyregen_0" input="EnergyRegen" operator="greater" value="0"/>
+
+    <condition id="IsBirthSound" input="SoundBirth" empty="0"/>
+    <condition id="IsReadySound" input="SoundReady" empty="0"/>
+    <condition id="IsHelpSound" input="SoundHelp" empty="0"/>
+    <condition id="IsWhatSound" input="SoundWhat" empty="0"/>
+    <condition id="IsYesSound" input="SoundYes" empty="0"/>
+    <condition id="IsAttackSound" input="SoundAttack" empty="0"/>
+    <condition id="IsPissedSound" input="SoundPissed" empty="0"/>
+    <condition id="IsMovementSound" input="SoundMovement" empty="0"/>
+    <condition id="IsTurningSound" input="SoundTurning" empty="0"/>
+    <condition id="IsBoardSound" input="SoundBoard" empty="0"/>
+    <condition id="IsConstructionSound" input="SoundConstruction" empty="0"/>
+    <condition id="IsClickSound" input="SoundClick" empty="0"/>
+    <condition id="IsClickErrorSound" input="SoundClickError" empty="0"/>
+    <condition id="IsHighlightSound" input="SoundHighlight" empty="0"/>
 
 
     <!-- Inputs -->
@@ -50,11 +74,11 @@
             </input>
             <input id="Energy" type="real32">
                 <name>Energy Start</name>
-                <layout column="3"/>
+                <layout column="2"/>
             </input>
             <input id="EnergyRegen" type="real32">
                 <name>Energy Regen</name>
-                <layout column="3"/>
+                <layout column="2"/>
             </input>
 
             <input id="race" type="CRaceLink">
@@ -62,30 +86,41 @@
             </input>
             <input id="parent" type="WizardMenu">
                 <name>Родитель</name>
-                <item text="Ground" value="CommanderGround"/>
-                <item text="Air" value="CommanderAir"/>
-                <item text="Structure" value="CommanderStructure"/>
+                <item text="Ground" value="Ground"/>
+                <item text="Air" value="Air"/>
+                <item text="Structure" value="Structure"/>
             </input>
-            <input id="commander" type="WizardMenu">
-                <name>Командир</name>
-                <item text="Рейнор" value="RaynorCommander"/>
-                <item text="Керриган" value="KerriganCommander"/>
-                <item text="Артанис" value="ArtanisCommander"/>
-                <item text="Свонн" value="SwannCommander"/>
-                <item text="Загара" value="ZagaraCommander"/>
-                <item text="Воразун" value="VorazunCommander"/>
-                <item text="Каракс" value="KaraxCommander"/>
-                <item text="Абатур" value="AbathurCommander"/>
-                <item text="Аларак" value="AlarakCommander"/>
-                <item text="Нова" value="NovaCommander"/>
-                <item text="Стуков" value="StukovCommander"/>
-                <item text="Феникс" value="FenixCommander"/>
-                <item text="Дехака" value="DehakaCommander"/>
-                <item text="Хар и Хорнер" value="HanHornerCommander"/>
-                <item text="Тайкус" value="TychusCommander"/>
-                <item text="Зератул" value="ZeratulCommander"/>
-                <item text="Стетманн" value="StetmannCommander"/>
-                <item text="Менгск" value="AMengskCommander"/>
+            <input id="raceCommander" type="WizardMenu">
+                <name>Раса командира</name>
+                <item text="Терран" value="Terr"/>
+                <item text="Зерг" value="Zerg"/>
+                <item text="Протосс" value="Prot"/>
+            </input>
+            <input id="isCommander" type="WizardCheckbox">
+                <name>Это для командира?</name>
+                <default value="1"/>
+            </input>
+            <input id="Commander" type="WizardMenu">
+                <name>Это для командира?</name>
+                <condition id="createForCommander"/>
+                <item text="Рейнор" value="Raynor"/>
+                <item text="Керриган" value="Kerrigan"/>
+                <item text="Артанис" value="Artanis"/>
+                <item text="Свонн" value="Swann"/>
+                <item text="Загара" value="Zagara"/>
+                <item text="Воразун" value="Vorazun"/>
+                <item text="Каракс" value="Karax"/>
+                <item text="Абатур" value="Abathur"/>
+                <item text="Аларак" value="Alarak"/>
+                <item text="Нова" value="Nova"/>
+                <item text="Стуков" value="Stukov"/>
+                <item text="Феникс" value="Fenix"/>
+                <item text="Дехака" value="Dehaka"/>
+                <item text="Хар и Хорнер" value="HanHorner"/>
+                <item text="Тайкус" value="Tychus"/>
+                <item text="Зератул" value="Zeratul"/>
+                <item text="Стетманн" value="Stetmann"/>
+                <item text="Арктур Менгск" value="ArcturusMengsk"/>
             </input>
 
         <!-- Page 2 -->
@@ -123,30 +158,240 @@
                 <layout page="2" column="3"/>
             </input>
 
+        <!-- Page 3 -->
+            <input id="BtnTooltip" type="CStringLink">
+                <name>Описание</name>
+                <layout page="3"/>
+            </input>
+            <input id="BtnText" type="CString">
+                <name>Название</name>
+                <layout page="3"/>
+            </input>
+            <input id="BtnIcon" type="CImagePath">
+                <name>Иконка</name>
+                <layout page="3"/>
+            </input>
+
+            <!-- Sounds -->
+            <input id="SoundBirth" type="CSoundPath">
+                <name>Sound Birth</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundReady" type="CSoundPath">
+                <name>Sound Ready</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundHelp" type="CSoundPath">
+                <name>Sound Help</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundWhat" type="CSoundPath">
+                <name>Sound What</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundYes" type="CSoundPath">
+                <name>Sound Yes</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundAttack" type="CSoundPath">
+                <name>Sound Attack</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundPissed" type="CSoundPath">
+                <name>Sound Pissed</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundMovement" type="CSoundPath">
+                <name>Sound Movement</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundTurning" type="CSoundPath">
+                <name>Sound Turning</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundBoard" type="CSoundPath">
+                <name>Sound Board</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundConstruction" type="CSoundPath">
+                <name>Sound Construction</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundClick" type="CSoundPath">
+                <name>Sound Click</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundClickError" type="CSoundPath">
+                <name>Sound Click Error</name>
+                <layout page="3" column="2"/>
+            </input>
+            <input id="SoundHighlight" type="CSoundPath">
+                <name>Sound Highlight</name>
+                <layout page="3" column="2"/>
+            </input>
+
     <!-- Macros -->
-    <macro id="RemoveCommander" replaceSrc="Commander" replaceDst="">^commander^</macro>
+    <macro id="RaceCommander">^Commander^Commander</macro>
+    <macro id="UnitIDCommander">^Commander^Commander^UnitID^</macro>
+    <macro id="UnitParentCommander">Commander^parent^</macro>
+    <macro id="EntryName">^Commander^ Commander - ^UnitName^</macro>
 
     <!-- Entries -->
+    <entry catalog="DataCollection" type="CDataCollectionUnit">
+        <id>^UnitIDCommander^</id>
+        <field id="Name">
+            <value>^EntryName^</value>
+        </field>
+
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Unit,^UnitIDCommander^</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Actor,^UnitIDCommander^</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Model,^UnitIDCommander^</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Model,^UnitIDCommander^@Portrait</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Model,^UnitIDCommander^@Death</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Attack</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Pissed</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@What</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Yes</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Birth</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Ready</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Help</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Movement</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Turning</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Board</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Construction</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Click</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@ClickError</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Sound,^UnitIDCommander^@Highlight</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Button,^UnitIDCommander^</value>
+        </field>
+
+        <field id="EditorCategories">
+            <value>ObjectType:Unit,DataGroup:^parent^,Race:^Commander^</value>
+        </field>
+    </entry>
+
     <entry catalog="Unit" type="CUnit">
-        <id>^commander^^UnitID^</id>
-        <parentid>^parent^_^race^</parentid>
+        <id>^UnitIDCommander^</id>
+        <parentid>^UnitParentCommander^_^raceCommander^</parentid>
 
         <field id="Name">
             <value>^UnitName^</value>
         </field>
+        <field id="Race">
+            <value>^race^</value>
+        </field>
+        <field id="LifeStart">
+            <condition id="life_0"/>
+            <value>^Life^</value>
+        </field>
+        <field id="LifeMax">
+            <condition id="life_0"/>
+            <value>^Life^</value>
+        </field>
+        <field id="LifeRegenRate">
+            <condition id="liferegen_0"/>
+            <value>^LifeRegen^</value>
+        </field>
+        <field id="ShieldsStart">
+            <condition id="life_0"/>
+            <value>^Shield^</value>
+        </field>
+        <field id="ShieldsMax">
+            <condition id="life_0"/>
+            <value>^Shield^</value>
+        </field>
+        <field id="ShieldRegenRate">
+            <condition id="liferegen_0"/>
+            <value>^ShieldRegen^</value>
+        </field>
+        <field id="EnergyStart">
+            <condition id="life_0"/>
+            <value>^Energy^</value>
+        </field>
+        <field id="EnergyMax">
+            <condition id="life_0"/>
+            <value>^Energy^</value>
+        </field>
+        <field id="EnergyRegenRate">
+            <condition id="liferegen_0"/>
+            <value>^EnergyRegen^</value>
+        </field>
+
         <field id="EditorCategories">
-            <value>ObjectType:Unit,ObjectFamily:Coop,Race:^RemoveCommander^</value>
+            <value>ObjectType:Unit,ObjectFamily:Coop,Race:^Commander^</value>
         </field>
     </entry>
 
     <!-- Main Actor -->
     <entry catalog="Actor" type="CActorUnit">
-        <id>^commander^^UnitID^</id>
+        <id>^UnitIDCommander^</id>
         <condition id="NotStructure"/>
-        <parentid>^parent^Unit</parentid>
+        <parentid>Commander^parent^Unit</parentid>
         <token id="unitName">
-            <value>^commander^^UnitID^</value>
+            <value>^UnitIDCommander^</value>
         </token>
+        <field id="Name">
+            <value>^UnitName^</value>
+        </field>
 
         <field id="UnitIcon">
             <value>^UnitIcon^</value>
@@ -164,22 +409,27 @@
         </field>
     </entry>
     <entry catalog="Actor" type="CActorUnit">
-        <id>^commander^^UnitID^</id>
+        <id>^UnitIDCommander^</id>
         <condition id="selectStructure"/>
         <parentid>CommanderBaseUnit</parentid>
         <token id="unitName">
-            <value>^commander^^UnitID^</value>
+            <value>^UnitIDCommander^</value>
         </token>
+        <field id="Name">
+            <value>^UnitName^</value>
+        </field>
     </entry>
-
     <entry catalog="Actor" type="CActorUnit">
-        <id>^commander^^UnitID^</id>
+        <id>^UnitIDCommander^</id>
         <allowmodify/>
         <condition id="selectStructure"/>
         <parentid>CommanderBaseUnit</parentid>
         <token id="unitName">
-            <value>^commander^^UnitID^</value>
+            <value>^UnitIDCommander^</value>
         </token>
+        <field id="Name">
+            <value>^UnitName^</value>
+        </field>
 
         <field id="UnitIcon">                               <value>^UnitIcon^</value>       </field>
         <field id="GroupIcon">                              <value>^UnitIcon^</value>       </field>
@@ -190,7 +440,7 @@
     </entry>
 
     <entry catalog="Model" type="CModel">
-        <id>^commander^^UnitID^</id>
+        <id>^UnitIDCommander^</id>
         <field id="Name">
             <value>^UnitName^</value>
         </field>
@@ -198,11 +448,11 @@
             <value>^unitModel^</value>
         </field>
         <field id="EditorCategories">
-            <value>Race:^RemoveCommander^</value>
+            <value>Race:^Commander^</value>
         </field>
     </entry>
     <entry catalog="Model" type="CModel">
-        <id>^commander^^UnitID^@Death</id>
+        <id>^UnitIDCommander^@Death</id>
         <parentid>UnitDeath</parentid>
         <field id="Name">
             <value>Death</value>
@@ -211,11 +461,11 @@
             <value>^deathModel^</value>
         </field>
         <field id="EditorCategories">
-            <value>Race:^RemoveCommander^</value>
+            <value>Race:^Commander^</value>
         </field>
     </entry>
     <entry catalog="Model" type="CModel">
-        <id>^commander^^UnitID^@Portrait</id>
+        <id>^UnitIDCommander^@Portrait</id>
         <parentid>Portrait</parentid>
         <field id="Name">
             <value>Portrait</value>
@@ -224,108 +474,259 @@
             <value>^portraitModel^</value>
         </field>
         <field id="EditorCategories">
-            <value>Race:^RemoveCommander^</value>
+            <value>Race:^Commander^</value>
         </field>
     </entry>
 
     <entry catalog="Sound" type="CSound">
-        <id>^commander^^UnitID^@Attack</id>
+        <id>^UnitIDCommander^@Attack</id>
         <parentid>CommanderVOAttack</parentid>
+        <condition id="IsAttackSound"/>
         <token id="unitName">
-            <value>^commander^^UnitID^</value>
+            <value>^UnitIDCommander^</value>
         </token>
 
         <field id="Name">
             <value>Attack</value>
         </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundAttack^</value>
+        </field>
         <field id="EditorCategories">
-            <value>Race:^RemoveCommander^</value>
+            <value>Race:^Commander^</value>
         </field>
     </entry>
     <entry catalog="Sound" type="CSound">
-        <id>^commander^^UnitID^@Pissed</id>
+        <id>^UnitIDCommander^@Pissed</id>
         <parentid>CommanderVOPissed</parentid>
+        <condition id="IsPissedSound"/>
         <token id="unitName">
-            <value>^commander^^UnitID^</value>
+            <value>^UnitIDCommander^</value>
         </token>
 
         <field id="Name">
             <value>Pissed</value>
         </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundPissed^</value>
+        </field>
         <field id="EditorCategories">
-            <value>Race:^RemoveCommander^</value>
+            <value>Race:^Commander^</value>
         </field>
     </entry>
     <entry catalog="Sound" type="CSound">
-        <id>^commander^^UnitID^@What</id>
+        <id>^UnitIDCommander^@What</id>
         <parentid>CommanderVOWhat</parentid>
+        <condition id="IsWhatSound"/>
         <token id="unitName">
-            <value>^commander^^UnitID^</value>
+            <value>^UnitIDCommander^</value>
         </token>
 
         <field id="Name">
             <value>What</value>
         </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundWhat^</value>
+        </field>
         <field id="EditorCategories">
-            <value>Race:^RemoveCommander^</value>
+            <value>Race:^Commander^</value>
         </field>
     </entry>
     <entry catalog="Sound" type="CSound">
-        <id>^commander^^UnitID^@Yes</id>
+        <id>^UnitIDCommander^@Yes</id>
         <parentid>CommanderVOYes</parentid>
+        <condition id="IsYesSound"/>
         <token id="unitName">
-            <value>^commander^^UnitID^</value>
+            <value>^UnitIDCommander^</value>
         </token>
 
         <field id="Name">
             <value>Yes</value>
         </field>
-        <field id="EditorCategories">
-            <value>Race:^RemoveCommander^</value>
-        </field>
-    </entry>
-
-    <entry catalog="DataCollection" type="CDataCollectionUnit">
-        <id>^commander^^UnitID^</id>
-        <field id="Name">
-            <value>^commander^ - ^UnitName^</value>
-        </field>
-
-        <field id="DataRecord">
+        <field id="AssetArray_File">
             <index>0</index>
-            <value>Unit,^commander^^UnitID^</value>
+            <value>^SoundYes^</value>
         </field>
-        <field id="DataRecord">
-            <index>1</index>
-            <value>Actor,^commander^^UnitID^</value>
-        </field>
-        <field id="DataRecord">
-            <index>2</index>
-            <value>Model,^commander^^UnitID^</value>
-        </field>
-        <field id="DataRecord">
-            <index>3</index>
-            <value>Model,^commander^^UnitID^@Portrait</value>
-        </field>
-        <field id="DataRecord">
-            <index>4</index>
-            <value>Model,^commander^^UnitID^@Death</value>
-        </field>
-        <field id="DataRecord">
-            <index>5</index>
-            <value>Sound,^commander^^UnitID^@Attack</value>
-        </field>
-        <field id="DataRecord">
-            <index>6</index>
-            <value>Sound,^commander^^UnitID^@Pissed</value>
-        </field>
-        <field id="DataRecord">
-            <index>7</index>
-            <value>Sound,^commander^^UnitID^@What</value>
-        </field>
-        <field id="DataRecord">
-            <index>8</index>
-            <value>Sound,^commander^^UnitID^@Yes</value>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
         </field>
     </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Birth</id>
+        <parentid>Voice</parentid>
+        <condition id="IsYesSound"/>
+
+        <field id="Name">
+            <value>Birth</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundBirth^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Ready</id>
+        <parentid>Ready</parentid>
+        <condition id="IsReadySound"/>
+
+        <field id="Name">
+            <value>Ready</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundReady^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Help</id>
+        <parentid>Voice</parentid>
+        <condition id="IsHelpSound"/>
+
+        <field id="Name">
+            <value>Help</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundHelp^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Movement</id>
+        <parentid>Movement</parentid>
+        <condition id="IsMovementSound"/>
+
+        <field id="Name">
+            <value>Movement</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundMovement^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Turning</id>
+        <parentid>Voice</parentid>
+        <condition id="IsTurningSound"/>
+
+        <field id="Name">
+            <value>Turning</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundTurning^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Board</id>
+        <parentid>Voice</parentid>
+        <condition id="IsBoardSound"/>
+
+        <field id="Name">
+            <value>Board</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundBoard^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Construction</id>
+        <parentid>Voice</parentid>
+        <condition id="IsConstructionSound"/>
+
+        <field id="Name">
+            <value>Construction</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundConstruction^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Click</id>
+        <parentid>Voice</parentid>
+        <condition id="IsClickSound"/>
+
+        <field id="Name">
+            <value>Click</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundClick^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@ClickError</id>
+        <parentid>Voice</parentid>
+        <condition id="IsClickErrorSound"/>
+
+        <field id="Name">
+            <value>ClickError</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundClickError^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+    <entry catalog="Sound" type="CSound">
+        <id>^UnitIDCommander^@Highlight</id>
+        <parentid>Highlight</parentid>
+        <condition id="IsHighlightSound"/>
+
+        <field id="Name">
+            <value>Highlight</value>
+        </field>
+        <field id="AssetArray_File">
+            <index>0</index>
+            <value>^SoundHighlight^</value>
+        </field>
+        <field id="EditorCategories">
+            <value>Race:^Commander^</value>
+        </field>
+    </entry>
+
+    <entry catalog="Button" type="CButton">
+        <id>^UnitIDCommander^</id>
+        <field id="Name">
+            <value>^BtnText^</value>
+        </field>
+        <field id="Icon">
+            <value>^BtnIcon^</value>
+        </field>
+        <field id="Tooltip">
+            <value>^BtnTooltip^</value>
+        </field>
+    </entry>
+
+    
 </wizard>

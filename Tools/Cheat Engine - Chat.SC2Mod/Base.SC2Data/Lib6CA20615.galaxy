@@ -32,8 +32,8 @@ void lib6CA20615_InitVariables () {
         lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_deathUnits_MaxUnits = 1000;
         lib6CA20615_gv_player_Cheat[init_i].lv_deathUnits.lv_lastPlayerGroup = PlayerGroupAll();
         lib6CA20615_gv_player_Cheat[init_i].lv_alliance.lv_alliance_AspectType = "";
-        lib6CA20615_gv_player_Cheat[init_i].lv_selectCategory1 = "";
-        lib6CA20615_gv_player_Cheat[init_i].lv_selectCategory2 = "";
+        lib6CA20615_gv_player_Cheat[init_i].lv_selectCategory1 = "Unit";
+        lib6CA20615_gv_player_Cheat[init_i].lv_selectCategory2 = "Structure";
     }
     lib6CA20615_gv_uI.lv_spawn_Line1 = c_invalidDialogControlId;
     lib6CA20615_gv_uI.lv_spawn_Line2 = c_invalidDialogControlId;
@@ -59,18 +59,7 @@ void lib6CA20615_InitVariables () {
         lib6CA20615_gv_buttonEditorCategory2[init_i].lv_icon = c_invalidDialogControlId;
         lib6CA20615_gv_buttonEditorCategory2[init_i].lv_category = "";
     }
-    lib6CA20615_gv_builderUnit = UnitGroupEmpty();
-    lib6CA20615_gv_builderStructure = UnitGroupEmpty();
     lib6CA20615_gv_uispawner = c_invalidDialogControlId;
-    for (init_i = 0; init_i <= 5; init_i += 1) {
-        lib6CA20615_gv_uiUnit[init_i] = c_invalidDialogControlId;
-    }
-    for (init_i = 0; init_i <= 5; init_i += 1) {
-        lib6CA20615_gv_uiStructure[init_i] = c_invalidDialogControlId;
-    }
-    for (init_i = 0; init_i <= 50; init_i += 1) {
-        lib6CA20615_gv_selectorRace[init_i] = c_invalidDialogControlId;
-    }
     lib6CA20615_gv_datatable_Window = c_invalidDialogControlId;
     for (init_i = 0; init_i <= 15; init_i += 1) {
         lib6CA20615_gv_nameDatatable[init_i] = c_invalidDialogControlId;
@@ -172,6 +161,320 @@ void lib6CA20615_gf_ClearSelection (int lp_clearSelection, int lp_player) {
         }
     }
     else {
+    }
+}
+
+text lib6CA20615_gf_ConvertKeyToText (int lp_key) {
+    // Automatic Variable Declarations
+    int auto6EBAF216_val;
+
+    // Implementation
+    auto6EBAF216_val = lp_key;
+    if (auto6EBAF216_val == c_key0) {
+        return StringExternal("Param/Value/lib_6CA20615_B68F4BEC");
+    }
+    else if (auto6EBAF216_val == c_key1) {
+        return StringExternal("Param/Value/lib_6CA20615_FDF2A99D");
+    }
+    else if (auto6EBAF216_val == c_key2) {
+        return StringExternal("Param/Value/lib_6CA20615_803FD573");
+    }
+    else if (auto6EBAF216_val == c_key3) {
+        return StringExternal("Param/Value/lib_6CA20615_ED1E0407");
+    }
+    else if (auto6EBAF216_val == c_key4) {
+        return StringExternal("Param/Value/lib_6CA20615_6BAF96DD");
+    }
+    else if (auto6EBAF216_val == c_key5) {
+        return StringExternal("Param/Value/lib_6CA20615_A27525FD");
+    }
+    else if (auto6EBAF216_val == c_key6) {
+        return StringExternal("Param/Value/lib_6CA20615_DEB6261C");
+    }
+    else if (auto6EBAF216_val == c_key7) {
+        return StringExternal("Param/Value/lib_6CA20615_410DBC62");
+    }
+    else if (auto6EBAF216_val == c_key8) {
+        return StringExternal("Param/Value/lib_6CA20615_E31B570B");
+    }
+    else if (auto6EBAF216_val == c_key9) {
+        return StringExternal("Param/Value/lib_6CA20615_ECE8874D");
+    }
+    else if (auto6EBAF216_val == c_keyA) {
+        return StringExternal("Param/Value/lib_6CA20615_464202E4");
+    }
+    else if (auto6EBAF216_val == c_keyAlt) {
+        return StringExternal("Param/Value/lib_6CA20615_5364A9A1");
+    }
+    else if (auto6EBAF216_val == c_keyNone) {
+        return StringExternal("Param/Value/lib_6CA20615_CC0443B2");
+    }
+    else if (auto6EBAF216_val == c_keyApostrophe) {
+        return StringExternal("Param/Value/lib_6CA20615_C699D0B1");
+    }
+    else if (auto6EBAF216_val == c_keyB) {
+        return StringExternal("Param/Value/lib_6CA20615_515F281F");
+    }
+    else if (auto6EBAF216_val == c_keyBackSlash) {
+        return StringExternal("Param/Value/lib_6CA20615_76D4D242");
+    }
+    else if (auto6EBAF216_val == c_keyBackSpace) {
+        return StringExternal("Param/Value/lib_6CA20615_D1CE208F");
+    }
+    else if (auto6EBAF216_val == c_keyBracketClose) {
+        return StringExternal("Param/Value/lib_6CA20615_8AFA7F75");
+    }
+    else if (auto6EBAF216_val == c_keyBracketOpen) {
+        return StringExternal("Param/Value/lib_6CA20615_CEED52EA");
+    }
+    else if (auto6EBAF216_val == c_keyC) {
+        return StringExternal("Param/Value/lib_6CA20615_010EDDF0");
+    }
+    else if (auto6EBAF216_val == c_keyCapsLock) {
+        return StringExternal("Param/Value/lib_6CA20615_1CAD4A37");
+    }
+    else if (auto6EBAF216_val == c_keyComma) {
+        return StringExternal("Param/Value/lib_6CA20615_0AF987C1");
+    }
+    else if (auto6EBAF216_val == c_keyControl) {
+        return StringExternal("Param/Value/lib_6CA20615_9200339A");
+    }
+    else if (auto6EBAF216_val == c_keyD) {
+        return StringExternal("Param/Value/lib_6CA20615_DB9B1828");
+    }
+    else if (auto6EBAF216_val == c_keyDelete) {
+        return StringExternal("Param/Value/lib_6CA20615_A1087398");
+    }
+    else if (auto6EBAF216_val == c_keyDown) {
+        return StringExternal("Param/Value/lib_6CA20615_043B888D");
+    }
+    else if (auto6EBAF216_val == c_keyE) {
+        return StringExternal("Param/Value/lib_6CA20615_A16DF4F8");
+    }
+    else if (auto6EBAF216_val == c_keyEnd) {
+        return StringExternal("Param/Value/lib_6CA20615_1294F94A");
+    }
+    else if (auto6EBAF216_val == c_keyEnter) {
+        return StringExternal("Param/Value/lib_6CA20615_761503FE");
+    }
+    else if (auto6EBAF216_val == c_keyEquals) {
+        return StringExternal("Param/Value/lib_6CA20615_1406FFF4");
+    }
+    else if (auto6EBAF216_val == c_keyEscape) {
+        return StringExternal("Param/Value/lib_6CA20615_901CAC2F");
+    }
+    else if (auto6EBAF216_val == c_keyF) {
+        return StringExternal("Param/Value/lib_6CA20615_6F1799C4");
+    }
+    else if (auto6EBAF216_val == c_keyF1) {
+        return StringExternal("Param/Value/lib_6CA20615_254AC970");
+    }
+    else if (auto6EBAF216_val == c_keyF2) {
+        return StringExternal("Param/Value/lib_6CA20615_11C85B95");
+    }
+    else if (auto6EBAF216_val == c_keyF3) {
+        return StringExternal("Param/Value/lib_6CA20615_E19706FA");
+    }
+    else if (auto6EBAF216_val == c_keyF4) {
+        return StringExternal("Param/Value/lib_6CA20615_479E141F");
+    }
+    else if (auto6EBAF216_val == c_keyF5) {
+        return StringExternal("Param/Value/lib_6CA20615_C526BACF");
+    }
+    else if (auto6EBAF216_val == c_keyF6) {
+        return StringExternal("Param/Value/lib_6CA20615_C10846B5");
+    }
+    else if (auto6EBAF216_val == c_keyF7) {
+        return StringExternal("Param/Value/lib_6CA20615_BCA4F431");
+    }
+    else if (auto6EBAF216_val == c_keyF8) {
+        return StringExternal("Param/Value/lib_6CA20615_B019F154");
+    }
+    else if (auto6EBAF216_val == c_keyF9) {
+        return StringExternal("Param/Value/lib_6CA20615_8846E538");
+    }
+    else if (auto6EBAF216_val == c_keyF10) {
+        return StringExternal("Param/Value/lib_6CA20615_BFDDB545");
+    }
+    else if (auto6EBAF216_val == c_keyF11) {
+        return StringExternal("Param/Value/lib_6CA20615_3F4F0EE3");
+    }
+    else if (auto6EBAF216_val == c_keyF12) {
+        return StringExternal("Param/Value/lib_6CA20615_19DBFC13");
+    }
+    else if (auto6EBAF216_val == c_keyG) {
+        return StringExternal("Param/Value/lib_6CA20615_C990AF4D");
+    }
+    else if (auto6EBAF216_val == c_keyGrave) {
+        return StringExternal("Param/Value/lib_6CA20615_BA6D082D");
+    }
+    else if (auto6EBAF216_val == c_keyH) {
+        return StringExternal("Param/Value/lib_6CA20615_13975F00");
+    }
+    else if (auto6EBAF216_val == c_keyHome) {
+        return StringExternal("Param/Value/lib_6CA20615_2314F3CE");
+    }
+    else if (auto6EBAF216_val == c_keyI) {
+        return StringExternal("Param/Value/lib_6CA20615_63F4E96A");
+    }
+    else if (auto6EBAF216_val == c_keyInsert) {
+        return StringExternal("Param/Value/lib_6CA20615_5D544C85");
+    }
+    else if (auto6EBAF216_val == c_keyJ) {
+        return StringExternal("Param/Value/lib_6CA20615_A0F7FDB0");
+    }
+    else if (auto6EBAF216_val == c_keyK) {
+        return StringExternal("Param/Value/lib_6CA20615_71D4A551");
+    }
+    else if (auto6EBAF216_val == c_keyL) {
+        return StringExternal("Param/Value/lib_6CA20615_84D16891");
+    }
+    else if (auto6EBAF216_val == c_keyLeft) {
+        return StringExternal("Param/Value/lib_6CA20615_F32D9322");
+    }
+    else if (auto6EBAF216_val == c_keyM) {
+        return StringExternal("Param/Value/lib_6CA20615_9DF8FBA8");
+    }
+    else if (auto6EBAF216_val == c_keyMinus) {
+        return StringExternal("Param/Value/lib_6CA20615_6C4454E7");
+    }
+    else if (auto6EBAF216_val == c_keyN) {
+        return StringExternal("Param/Value/lib_6CA20615_150323C9");
+    }
+    else if (auto6EBAF216_val == c_keyNextTrack) {
+        return StringExternal("Param/Value/lib_6CA20615_3720160B");
+    }
+    else if (auto6EBAF216_val == c_keyNone) {
+        return StringExternal("Param/Value/lib_6CA20615_D2B5920F");
+    }
+    else if (auto6EBAF216_val == c_keyNumLock) {
+        return StringExternal("Param/Value/lib_6CA20615_50CF7333");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad0) {
+        return StringExternal("Param/Value/lib_6CA20615_4E14AC4C");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad1) {
+        return StringExternal("Param/Value/lib_6CA20615_7E66F54B");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad2) {
+        return StringExternal("Param/Value/lib_6CA20615_56B68475");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad3) {
+        return StringExternal("Param/Value/lib_6CA20615_1D2738CC");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad4) {
+        return StringExternal("Param/Value/lib_6CA20615_305984B3");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad5) {
+        return StringExternal("Param/Value/lib_6CA20615_E77A5E9E");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad6) {
+        return StringExternal("Param/Value/lib_6CA20615_D4D8F7FB");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad7) {
+        return StringExternal("Param/Value/lib_6CA20615_966FFE8E");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad8) {
+        return StringExternal("Param/Value/lib_6CA20615_C33FC654");
+    }
+    else if (auto6EBAF216_val == c_keyNumPad9) {
+        return StringExternal("Param/Value/lib_6CA20615_BE57ED7D");
+    }
+    else if (auto6EBAF216_val == c_keyNumPadDecimal) {
+        return StringExternal("Param/Value/lib_6CA20615_15E451BE");
+    }
+    else if (auto6EBAF216_val == c_keyNumPadDivide) {
+        return StringExternal("Param/Value/lib_6CA20615_95A634AA");
+    }
+    else if (auto6EBAF216_val == c_keyNumPadMinus) {
+        return StringExternal("Param/Value/lib_6CA20615_8160F962");
+    }
+    else if (auto6EBAF216_val == c_keyNumPadMultiply) {
+        return StringExternal("Param/Value/lib_6CA20615_250CBC92");
+    }
+    else if (auto6EBAF216_val == c_keyNumPadPlus) {
+        return StringExternal("Param/Value/lib_6CA20615_FD468AF7");
+    }
+    else if (auto6EBAF216_val == c_keyO) {
+        return StringExternal("Param/Value/lib_6CA20615_AC07642C");
+    }
+    else if (auto6EBAF216_val == c_keyP) {
+        return StringExternal("Param/Value/lib_6CA20615_373AEBB6");
+    }
+    else if (auto6EBAF216_val == c_keyPageDown) {
+        return StringExternal("Param/Value/lib_6CA20615_07BE93E1");
+    }
+    else if (auto6EBAF216_val == c_keyPageUp) {
+        return StringExternal("Param/Value/lib_6CA20615_9F13307B");
+    }
+    else if (auto6EBAF216_val == c_keyPause) {
+        return StringExternal("Param/Value/lib_6CA20615_7AD4F4D2");
+    }
+    else if (auto6EBAF216_val == c_keyPeriod) {
+        return StringExternal("Param/Value/lib_6CA20615_C4DED285");
+    }
+    else if (auto6EBAF216_val == c_keyPrevTrack) {
+        return StringExternal("Param/Value/lib_6CA20615_8F6BF195");
+    }
+    else if (auto6EBAF216_val == c_keyPrintScreen) {
+        return StringExternal("Param/Value/lib_6CA20615_3E15FD02");
+    }
+    else if (auto6EBAF216_val == c_keyQ) {
+        return StringExternal("Param/Value/lib_6CA20615_D2499C45");
+    }
+    else if (auto6EBAF216_val == c_keyR) {
+        return StringExternal("Param/Value/lib_6CA20615_BF9144F3");
+    }
+    else if (auto6EBAF216_val == c_keyRight) {
+        return StringExternal("Param/Value/lib_6CA20615_4E8B39DE");
+    }
+    else if (auto6EBAF216_val == c_keyS) {
+        return StringExternal("Param/Value/lib_6CA20615_CCD57F39");
+    }
+    else if (auto6EBAF216_val == c_keyScrollLock) {
+        return StringExternal("Param/Value/lib_6CA20615_E8630D92");
+    }
+    else if (auto6EBAF216_val == c_keySemiColon) {
+        return StringExternal("Param/Value/lib_6CA20615_B591CB25");
+    }
+    else if (auto6EBAF216_val == c_keyShift) {
+        return StringExternal("Param/Value/lib_6CA20615_E3520DA6");
+    }
+    else if (auto6EBAF216_val == c_keySlash) {
+        return StringExternal("Param/Value/lib_6CA20615_D13DDCF8");
+    }
+    else if (auto6EBAF216_val == c_keySpace) {
+        return StringExternal("Param/Value/lib_6CA20615_A2CB0B17");
+    }
+    else if (auto6EBAF216_val == c_keyT) {
+        return StringExternal("Param/Value/lib_6CA20615_D0159E0B");
+    }
+    else if (auto6EBAF216_val == c_keyTab) {
+        return StringExternal("Param/Value/lib_6CA20615_6A206A3F");
+    }
+    else if (auto6EBAF216_val == c_keyU) {
+        return StringExternal("Param/Value/lib_6CA20615_CAAC6836");
+    }
+    else if (auto6EBAF216_val == c_keyUp) {
+        return StringExternal("Param/Value/lib_6CA20615_C7E9B003");
+    }
+    else if (auto6EBAF216_val == c_keyV) {
+        return StringExternal("Param/Value/lib_6CA20615_76FC68D5");
+    }
+    else if (auto6EBAF216_val == c_keyW) {
+        return StringExternal("Param/Value/lib_6CA20615_3C0C4F23");
+    }
+    else if (auto6EBAF216_val == c_keyX) {
+        return StringExternal("Param/Value/lib_6CA20615_3BED5836");
+    }
+    else if (auto6EBAF216_val == c_keyY) {
+        return StringExternal("Param/Value/lib_6CA20615_3CCD4806");
+    }
+    else if (auto6EBAF216_val == c_keyZ) {
+        return StringExternal("Param/Value/lib_6CA20615_001A1217");
+    }
+    else {
+        return null;
     }
 }
 
@@ -912,12 +1215,11 @@ bool lib6CA20615_gt_init_Func (bool testConds, bool runActions) {
         PlayerSetAlliance(auto9CA1A203_var, c_allianceIdSpend, 1, true);
         PlayerSetAlliance(auto9CA1A203_var, c_allianceIdPushable, 1, true);
     }
-    TriggerExecute(lib6CA20615_gt_createbuilder, true, false);
     TriggerExecute(lib6CA20615_gt_hookdatatableview, true, false);
     TriggerExecute(lib6CA20615_gt_InitSpawnUnit, true, false);
     Wait(2.0, c_timeGame);
-    TextExpressionSetToken("Param/Expression/lib_6CA20615_C4B20E5E", "A", FixedToTextAdvanced(0.0, c_formatNumberStyleNormal, true, 2, 2));
-    TextExpressionSetToken("Param/Expression/lib_6CA20615_C4B20E5E", "B", StringToText(null));
+    TextExpressionSetToken("Param/Expression/lib_6CA20615_C4B20E5E", "A", lib6CA20615_gf_ConvertKeyToText(c_keyAlt));
+    TextExpressionSetToken("Param/Expression/lib_6CA20615_C4B20E5E", "B", lib6CA20615_gf_ConvertKeyToText(lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT));
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_6CA20615_C4B20E5E"));
     return true;
 }
@@ -1059,12 +1361,15 @@ bool lib6CA20615_gt_InitSpawnUnit_Func (bool testConds, bool runActions) {
     int autoB93573C4_i;
 
     // Variable Initialization
+    lv_iter = 1;
 
     // Actions
     if (!runActions) {
         return true;
     }
 
+    DialogControlHookupStandard(c_triggerControlTypePanel, ("UIContainer/FullscreenUpperContainer/CheatSpawner"));
+    lib6CA20615_gv_uispawner = DialogControlLastCreated();
     DialogControlHookupStandard(c_triggerControlTypePanel, ("UIContainer/FullscreenUpperContainer/CheatSpawner/Footer/Line1"));
     lib6CA20615_gv_uI.lv_spawn_Line1 = DialogControlLastCreated();
     DialogControlHookupStandard(c_triggerControlTypePanel, ("UIContainer/FullscreenUpperContainer/CheatSpawner/Footer/Line2"));
@@ -1087,14 +1392,23 @@ bool lib6CA20615_gt_InitSpawnUnit_Func (bool testConds, bool runActions) {
     autoB93573C4_i = 1;
     for ( ; autoB93573C4_i <= CatalogEntryCount(c_gameCatalogUnit) ; autoB93573C4_i += 1 ) {
         lv_unit = CatalogEntryGet(autoB93573C4_catalog, autoB93573C4_i);
-        if ((lib6CA20615_gf_RaceOfUnitType(lv_unit) == ("Zerg")) && (lib6CA20615_gf_CheckEditorCategoriesObjectFamily(lv_unit) == "Melee") && (lib6CA20615_gf_CheckEditorCategoriesObjectType(lv_unit) == "Unit")) {
+        if ((DataTableValueExists(false, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny)) == false)) {
+            DataTableSetBool(false, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny), true);
+            DialogControlHookupStandard(c_triggerControlTypeButton, ("UIContainer/FullscreenUpperContainer/CheatSpawner/RaceSelector/Race" + IntToString(lv_iter)));
+            lib6CA20615_gv_buttonsRace[lv_iter].lv_dialogItem = DialogControlLastCreated();
+            lib6CA20615_gv_buttonsRace[lv_iter].lv_race = CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny);
+            if ((CatalogEntryIsValid(c_gameCatalogRace, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny)) == true)) {
+                libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringExternal(CatalogFieldValueGet(c_gameCatalogRace, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny), "Name", c_playerAny)), PlayerGroupAll());
+            }
+            else {
+                libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringToText(CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny)), PlayerGroupAll());
+            }
+            DialogControlHookupStandard(c_triggerControlTypeImage, ("UIContainer/FullscreenUpperContainer/CheatSpawner/RaceSelector/Race" + IntToString(lv_iter) + "/RaceIcon"));
+            libNtve_gf_SetDialogItemImage(DialogControlLastCreated(), (CatalogFieldValueGet(c_gameCatalogRace, (CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny)), "RaceIcon", c_playerAny)), PlayerGroupAll());
+            lib6CA20615_gv_cOUNT_RACE = lv_iter;
+            lv_iter += 1;
         }
-        else {
-            continue;
-        }
-        libNtve_gf_SetDialogItemImage(lib6CA20615_gv_buttonsUnitSpawn[lv_iter].lv_icon, (lib6CA20615_gf_SearchIconForUnit(lv_unit)), PlayerGroupAll());
-        lib6CA20615_gv_buttonsUnitSpawn[lv_iter].lv_unit = lv_unit;
-        lv_iter += 1;
+
     }
     return true;
 }
@@ -1102,6 +1416,246 @@ bool lib6CA20615_gt_InitSpawnUnit_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_InitSpawnUnit_Init () {
     lib6CA20615_gt_InitSpawnUnit = TriggerCreate("lib6CA20615_gt_InitSpawnUnit_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Revive Builder
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_ReviveBuilder_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreate(1, UnitGetType(EventUnit()), c_unitCreateIgnorePlacement, EventPlayer(), Point(0.0, 0.0), 270.0);
+    lib6CA20615_gv_builderunit = UnitLastCreated();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_ReviveBuilder_Init () {
+    lib6CA20615_gt_ReviveBuilder = TriggerCreate("lib6CA20615_gt_ReviveBuilder_Func");
+    TriggerAddEventUnitDied(lib6CA20615_gt_ReviveBuilder, UnitRefFromVariable("lib6CA20615_gv_builderunit"));
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: TargetMod Off
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_TargetModOff_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_9D442B78"));
+    lib6CA20615_gv_player_Cheat[EventPlayer()].lv_targetMode = false;
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_TargetModOff_Init () {
+    lib6CA20615_gt_TargetModOff = TriggerCreate("lib6CA20615_gt_TargetModOff_Func");
+    TriggerAddEventTargetModeUpdate(lib6CA20615_gt_TargetModOff, c_playerAny, AbilityCommand("CheatTrain", 0), c_targetModeStateOff);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Change Category
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_ChangeCategory_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_iter;
+
+    // Automatic Variable Declarations
+    int auto87686BF6_ae;
+    const int auto87686BF6_ai = 1;
+    int auto0CAD4103_ae;
+    int auto0CAD4103_var;
+    int auto4E94FB5D_ae;
+    int auto4E94FB5D_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto87686BF6_ae = lib6CA20615_gv_cOUNT_CATEGORIES;
+    lv_iter = 0;
+    for ( ; ( (auto87686BF6_ai >= 0 && lv_iter <= auto87686BF6_ae) || (auto87686BF6_ai < 0 && lv_iter >= auto87686BF6_ae) ) ; lv_iter += auto87686BF6_ai ) {
+        if ((EventDialogControl() == lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_button)) {
+            libNtve_gf_SetDialogItemToggled(EventDialogControl(), true, PlayerGroupSingle(EventPlayer()));
+            lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectCategory1 = lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_category;
+            auto0CAD4103_ae = lib6CA20615_gv_cOUNT_CATEGORIES;
+            auto0CAD4103_var = 0;
+            for ( ; auto0CAD4103_var <= auto0CAD4103_ae; auto0CAD4103_var += 1 ) {
+                if ((EventDialogControl() != lib6CA20615_gv_buttonEditorCategory1[auto0CAD4103_var].lv_button)) {
+                    libNtve_gf_SetDialogItemToggled(lib6CA20615_gv_buttonEditorCategory1[auto0CAD4103_var].lv_button, false, PlayerGroupSingle(EventPlayer()));
+                }
+
+            }
+            lib6CA20615_gf_updatespawnerui();
+            break;
+        }
+
+        if ((EventDialogControl() == lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_button)) {
+            libNtve_gf_SetDialogItemToggled(EventDialogControl(), true, PlayerGroupSingle(EventPlayer()));
+            lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectCategory2 = lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_category;
+            auto4E94FB5D_ae = lib6CA20615_gv_cOUNT_CATEGORIES;
+            auto4E94FB5D_var = 0;
+            for ( ; auto4E94FB5D_var <= auto4E94FB5D_ae; auto4E94FB5D_var += 1 ) {
+                if ((EventDialogControl() != lib6CA20615_gv_buttonEditorCategory2[auto4E94FB5D_var].lv_button)) {
+                    libNtve_gf_SetDialogItemToggled(lib6CA20615_gv_buttonEditorCategory2[auto4E94FB5D_var].lv_button, false, PlayerGroupSingle(EventPlayer()));
+                }
+
+            }
+            lib6CA20615_gf_updatespawnerui();
+            break;
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_ChangeCategory_Init () {
+    lib6CA20615_gt_ChangeCategory = TriggerCreate("lib6CA20615_gt_ChangeCategory_Func");
+    TriggerAddEventDialogControl(lib6CA20615_gt_ChangeCategory, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Generate Categories
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_GenerateCategories_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_unit;
+    string lv_category;
+    int lv_iter;
+    int lv_x;
+
+    // Automatic Variable Declarations
+    int auto0D25A615_catalog;
+    int auto0D25A615_i;
+
+    // Variable Initialization
+    lv_category = "";
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto0D25A615_catalog = c_gameCatalogUnit;
+    auto0D25A615_i = 1;
+    for ( ; auto0D25A615_i <= CatalogEntryCount(c_gameCatalogUnit) ; auto0D25A615_i += 1 ) {
+        lv_unit = CatalogEntryGet(auto0D25A615_catalog, auto0D25A615_i);
+        lv_category = lib6CA20615_gf_CheckEditorCategoriesObjectType(lv_unit);
+        if ((DataTableValueExists(false, lv_category) == true)) {
+            continue;
+        }
+
+        DataTableSetBool(false, lv_category, true);
+        DialogControlCreateInPanelFromTemplate(lib6CA20615_gv_uI.lv_spawn_Line1, c_triggerControlTypeButton, "CheatEngine_TemplatesButtons/GenericSmallButton2");
+        lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_button = DialogControlLastCreated();
+        lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_category = lv_category;
+        DialogControlSetPosition(lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_button, PlayerGroupAll(), c_anchorTopLeft, lv_x, 0);
+        libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringToText(lv_category), PlayerGroupAll());
+
+        DialogControlCreateInPanelFromTemplate(lib6CA20615_gv_uI.lv_spawn_Line2, c_triggerControlTypeButton, "CheatEngine_TemplatesButtons/GenericSmallButton2");
+        lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_button = DialogControlLastCreated();
+        lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_category = lv_category;
+        DialogControlSetPosition(lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_button, PlayerGroupAll(), c_anchorTopLeft, lv_x, 0);
+        libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringToText(lv_category), PlayerGroupAll());
+
+        lv_iter += 1;
+        lib6CA20615_gv_cOUNT_CATEGORIES += 1;
+        lv_x += 55;
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_GenerateCategories_Init () {
+    lib6CA20615_gt_GenerateCategories = TriggerCreate("lib6CA20615_gt_GenerateCategories_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: show spawner ui
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_showspawnerui_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogControlSetVisible(lib6CA20615_gv_uispawner, PlayerGroupSingle(EventPlayer()), true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_showspawnerui_Init () {
+    lib6CA20615_gt_showspawnerui = TriggerCreate("lib6CA20615_gt_showspawnerui_Func");
+    TriggerAddEventKeyPressed(lib6CA20615_gt_showspawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: hide spawner ui
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_hidespawnerui_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogControlSetVisible(lib6CA20615_gv_uispawner, PlayerGroupSingle(EventPlayer()), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_hidespawnerui_Init () {
+    lib6CA20615_gt_hidespawnerui = TriggerCreate("lib6CA20615_gt_hidespawnerui_Func");
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Select Race
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_SelectRace_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_it;
+
+    // Automatic Variable Declarations
+    int auto26DC52E1_ae;
+    int auto26DC52E1_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto26DC52E1_ae = lib6CA20615_gv_cOUNT_RACE;
+    auto26DC52E1_var = 1;
+    for ( ; auto26DC52E1_var <= auto26DC52E1_ae; auto26DC52E1_var += 1 ) {
+        if ((EventDialogControl() == lib6CA20615_gv_buttonsRace[auto26DC52E1_var].lv_dialogItem)) {
+            lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectRace = (lib6CA20615_gv_buttonsRace[auto26DC52E1_var].lv_race);
+            lib6CA20615_gf_updatespawnerui();
+            break;
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_SelectRace_Init () {
+    lib6CA20615_gt_SelectRace = TriggerCreate("lib6CA20615_gt_SelectRace_Func");
+    TriggerAddEventDialogControl(lib6CA20615_gt_SelectRace, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1143,7 +1697,7 @@ bool lib6CA20615_gt_ClickUnit_Func (bool testConds, bool runActions) {
         }
         lib6CA20615_gv_player_Cheat[EventPlayer()].lv_unitType_Spawn = lv_unit;
         lv_builder = libNtve_gf_ConvertUnitToUnitGroup(lib6CA20615_gv_builderunit);
-        if (((CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", c_playerAny) == "") || (CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", c_playerAny) == "Invisible"))) {
+        if (((CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", c_playerAny) == "") || (CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", c_playerAny) == "Invisible") || (CatalogEntryIsValid(c_gameCatalogModel, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "BuildModel", c_playerAny)) == false))) {
             CatalogFieldValueSet(c_gameCatalogActor, "CheatTrainSpawned", "BuildModel", lv_p, CatalogFieldValueGet(c_gameCatalogActor, ((lv_unit)), "Model", lv_p));
         }
         else {
@@ -1227,321 +1781,6 @@ bool lib6CA20615_gt_ReplaceUnit_Func (bool testConds, bool runActions) {
 void lib6CA20615_gt_ReplaceUnit_Init () {
     lib6CA20615_gt_ReplaceUnit = TriggerCreate("lib6CA20615_gt_ReplaceUnit_Func");
     TriggerAddEventUnitCreated(lib6CA20615_gt_ReplaceUnit, null, "CheatTrain", null);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Revive Builder
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_ReviveBuilder_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    UnitCreate(1, UnitGetType(EventUnit()), c_unitCreateIgnorePlacement, EventPlayer(), Point(0.0, 0.0), 270.0);
-    lib6CA20615_gv_builderunit = UnitLastCreated();
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_ReviveBuilder_Init () {
-    lib6CA20615_gt_ReviveBuilder = TriggerCreate("lib6CA20615_gt_ReviveBuilder_Func");
-    TriggerAddEventUnitDied(lib6CA20615_gt_ReviveBuilder, UnitRefFromVariable("lib6CA20615_gv_builderunit"));
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Generate Categories
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_GenerateCategories_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    string lv_unit;
-    string lv_category;
-    int lv_iter;
-    int lv_x;
-
-    // Automatic Variable Declarations
-    int auto0D25A615_catalog;
-    int auto0D25A615_i;
-
-    // Variable Initialization
-    lv_category = "";
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    auto0D25A615_catalog = c_gameCatalogUnit;
-    auto0D25A615_i = 1;
-    for ( ; auto0D25A615_i <= CatalogEntryCount(c_gameCatalogUnit) ; auto0D25A615_i += 1 ) {
-        lv_unit = CatalogEntryGet(auto0D25A615_catalog, auto0D25A615_i);
-        lv_category = lib6CA20615_gf_CheckEditorCategoriesObjectType(lv_unit);
-        if ((DataTableValueExists(false, lv_category) == true)) {
-            continue;
-        }
-
-        DataTableSetBool(false, lv_category, true);
-        DialogControlCreateInPanelFromTemplate(lib6CA20615_gv_uI.lv_spawn_Line1, c_triggerControlTypeButton, "CheatEngine_TemplatesButtons/GenericSmallButton2");
-        lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_button = DialogControlLastCreated();
-        lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_category = lv_category;
-        DialogControlSetPosition(lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_button, PlayerGroupAll(), c_anchorTopLeft, lv_x, 0);
-        libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringToText(lv_category), PlayerGroupAll());
-
-        DialogControlCreateInPanelFromTemplate(lib6CA20615_gv_uI.lv_spawn_Line2, c_triggerControlTypeButton, "CheatEngine_TemplatesButtons/GenericSmallButton2");
-        lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_button = DialogControlLastCreated();
-        lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_category = lv_category;
-        DialogControlSetPosition(lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_button, PlayerGroupAll(), c_anchorTopLeft, lv_x, 0);
-        libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringToText(lv_category), PlayerGroupAll());
-
-        lv_iter += 1;
-        lib6CA20615_gv_cOUNT_CATEGORIES += 1;
-        lv_x += 55;
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_GenerateCategories_Init () {
-    lib6CA20615_gt_GenerateCategories = TriggerCreate("lib6CA20615_gt_GenerateCategories_Func");
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Change Category
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_ChangeCategory_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    int lv_iter;
-
-    // Automatic Variable Declarations
-    int auto87686BF6_ae;
-    const int auto87686BF6_ai = 1;
-    int auto0CAD4103_ae;
-    int auto0CAD4103_var;
-    int auto4E94FB5D_ae;
-    int auto4E94FB5D_var;
-
-    // Variable Initialization
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    auto87686BF6_ae = lib6CA20615_gv_cOUNT_CATEGORIES;
-    lv_iter = 0;
-    for ( ; ( (auto87686BF6_ai >= 0 && lv_iter <= auto87686BF6_ae) || (auto87686BF6_ai < 0 && lv_iter >= auto87686BF6_ae) ) ; lv_iter += auto87686BF6_ai ) {
-        if ((EventDialogControl() == lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_button)) {
-            libNtve_gf_SetDialogItemToggled(EventDialogControl(), true, PlayerGroupSingle(EventPlayer()));
-            lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectCategory1 = lib6CA20615_gv_buttonEditorCategory1[lv_iter].lv_category;
-            auto0CAD4103_ae = lib6CA20615_gv_cOUNT_CATEGORIES;
-            auto0CAD4103_var = 0;
-            for ( ; auto0CAD4103_var <= auto0CAD4103_ae; auto0CAD4103_var += 1 ) {
-                if ((EventDialogControl() != lib6CA20615_gv_buttonEditorCategory1[auto0CAD4103_var].lv_button)) {
-                    libNtve_gf_SetDialogItemToggled(lib6CA20615_gv_buttonEditorCategory1[auto0CAD4103_var].lv_button, false, PlayerGroupSingle(EventPlayer()));
-                }
-
-            }
-            lib6CA20615_gf_updatespawnerui();
-            break;
-        }
-
-        if ((EventDialogControl() == lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_button)) {
-            libNtve_gf_SetDialogItemToggled(EventDialogControl(), true, PlayerGroupSingle(EventPlayer()));
-            lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectCategory2 = lib6CA20615_gv_buttonEditorCategory2[lv_iter].lv_category;
-            auto4E94FB5D_ae = lib6CA20615_gv_cOUNT_CATEGORIES;
-            auto4E94FB5D_var = 0;
-            for ( ; auto4E94FB5D_var <= auto4E94FB5D_ae; auto4E94FB5D_var += 1 ) {
-                if ((EventDialogControl() != lib6CA20615_gv_buttonEditorCategory2[auto4E94FB5D_var].lv_button)) {
-                    libNtve_gf_SetDialogItemToggled(lib6CA20615_gv_buttonEditorCategory2[auto4E94FB5D_var].lv_button, false, PlayerGroupSingle(EventPlayer()));
-                }
-
-            }
-            lib6CA20615_gf_updatespawnerui();
-            break;
-        }
-
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_ChangeCategory_Init () {
-    lib6CA20615_gt_ChangeCategory = TriggerCreate("lib6CA20615_gt_ChangeCategory_Func");
-    TriggerAddEventDialogControl(lib6CA20615_gt_ChangeCategory, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: TargetMod Off
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_TargetModOff_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6CA20615_9D442B78"));
-    lib6CA20615_gv_player_Cheat[EventPlayer()].lv_targetMode = false;
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_TargetModOff_Init () {
-    lib6CA20615_gt_TargetModOff = TriggerCreate("lib6CA20615_gt_TargetModOff_Func");
-    TriggerAddEventTargetModeUpdate(lib6CA20615_gt_TargetModOff, c_playerAny, AbilityCommand("CheatTrain", 0), c_targetModeStateOff);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: show spawner ui
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_showspawnerui_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    DialogControlSetVisible(lib6CA20615_gv_uispawner, PlayerGroupSingle(EventPlayer()), true);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_showspawnerui_Init () {
-    lib6CA20615_gt_showspawnerui = TriggerCreate("lib6CA20615_gt_showspawnerui_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_showspawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: hide spawner ui
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_hidespawnerui_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    DialogControlSetVisible(lib6CA20615_gv_uispawner, PlayerGroupSingle(EventPlayer()), false);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_hidespawnerui_Init () {
-    lib6CA20615_gt_hidespawnerui = TriggerCreate("lib6CA20615_gt_hidespawnerui_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: create builder
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_createbuilder_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    int lv_int;
-    int lv_itunit;
-    int lv_itstructure;
-    string lv_race;
-    string lv_unit;
-
-    // Automatic Variable Declarations
-    int autoE6B461F6_catalog;
-    int autoE6B461F6_i;
-
-    // Variable Initialization
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    DialogControlHookupStandard(c_triggerControlTypePanel, "UIContainer/FullscreenUpperContainer/CheatSpawner");
-    lib6CA20615_gv_uispawner = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelUnit");
-    lib6CA20615_gv_uiUnit[0] = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelUnit2");
-    lib6CA20615_gv_uiUnit[1] = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelUnit3");
-    lib6CA20615_gv_uiUnit[2] = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelUnit4");
-    lib6CA20615_gv_uiUnit[3] = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelBuilding");
-    lib6CA20615_gv_uiStructure[0] = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelBuilding2");
-    lib6CA20615_gv_uiStructure[1] = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelBuilding3");
-    lib6CA20615_gv_uiStructure[2] = DialogControlLastCreated();
-    DialogControlHookupStandard(c_triggerControlTypeCommandPanel, "UIContainer/FullscreenUpperContainer/CheatSpawner/Content/PanelBuilding4");
-    lib6CA20615_gv_uiStructure[3] = DialogControlLastCreated();
-    lv_int = 0;
-    autoE6B461F6_catalog = c_gameCatalogUnit;
-    autoE6B461F6_i = 1;
-    for ( ; autoE6B461F6_i <= CatalogEntryCount(c_gameCatalogUnit) ; autoE6B461F6_i += 1 ) {
-        lv_unit = CatalogEntryGet(autoE6B461F6_catalog, autoE6B461F6_i);
-        lv_race = (CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny));
-        if ((DataTableValueExists(false, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny)) == true)) {
-            continue;
-        }
-        else {
-            DataTableSetBool(false, CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny), true);
-        }
-        DialogControlHookupStandard(c_triggerControlTypeButton, ("UIContainer/FullscreenUpperContainer/CheatSpawner/RaceSelector/Race" + IntToString((lv_int + 1))));
-        lib6CA20615_gv_buttonsRace[lv_int].lv_dialogItem = DialogControlLastCreated();
-        lib6CA20615_gv_buttonsRace[lv_int].lv_race = CatalogFieldValueGet(c_gameCatalogUnit, lv_unit, "Race", c_playerAny);
-        DialogControlHookupStandard(c_triggerControlTypeImage, ("UIContainer/FullscreenUpperContainer/CheatSpawner/RaceSelector/Race" + IntToString((lv_int + 1)) + "/RaceIcon"));
-        libNtve_gf_SetDialogItemImage(DialogControlLastCreated(), (CatalogFieldValueGet(c_gameCatalogRace, lv_race, "RaceIcon", c_playerAny)), PlayerGroupAll());
-        libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringExternal(CatalogFieldValueGet(c_gameCatalogRace, lv_race, "Name", c_playerAny)), PlayerGroupAll());
-        lv_int += 1;
-    }
-    lv_int = 0;
-
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_createbuilder_Init () {
-    lib6CA20615_gt_createbuilder = TriggerCreate("lib6CA20615_gt_createbuilder_Func");
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: set units builder
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_setunitsbuilder_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    string lv_race;
-    int lv_it;
-
-    // Automatic Variable Declarations
-    const int autoCDFF163E_ae = 100;
-    int autoCDFF163E_var;
-
-    // Variable Initialization
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    autoCDFF163E_var = 0;
-    for ( ; autoCDFF163E_var <= autoCDFF163E_ae; autoCDFF163E_var += 1 ) {
-        if ((lib6CA20615_gv_buttonsRace[lv_it].lv_dialogItem == c_invalidDialogControlId)) {
-            break;
-        }
-
-        if ((EventDialogControl() == lib6CA20615_gv_buttonsRace[lv_it].lv_dialogItem)) {
-            lib6CA20615_gv_player_Cheat[EventPlayer()].lv_selectRace = (lib6CA20615_gv_buttonsRace[lv_it].lv_race);
-            lib6CA20615_gf_updatespawnerui();
-            break;
-        }
-
-        lv_it += 1;
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_setunitsbuilder_Init () {
-    lib6CA20615_gt_setunitsbuilder = TriggerCreate("lib6CA20615_gt_setunitsbuilder_Func");
-    TriggerAddEventDialogControl(lib6CA20615_gt_setunitsbuilder, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1694,16 +1933,15 @@ void lib6CA20615_InitTriggers () {
     lib6CA20615_gt_CheatCodeUnits_Init();
     lib6CA20615_gt_CheatCodePlayers_Init();
     lib6CA20615_gt_InitSpawnUnit_Init();
-    lib6CA20615_gt_ClickUnit_Init();
-    lib6CA20615_gt_ReplaceUnit_Init();
     lib6CA20615_gt_ReviveBuilder_Init();
-    lib6CA20615_gt_GenerateCategories_Init();
-    lib6CA20615_gt_ChangeCategory_Init();
     lib6CA20615_gt_TargetModOff_Init();
+    lib6CA20615_gt_ChangeCategory_Init();
+    lib6CA20615_gt_GenerateCategories_Init();
     lib6CA20615_gt_showspawnerui_Init();
     lib6CA20615_gt_hidespawnerui_Init();
-    lib6CA20615_gt_createbuilder_Init();
-    lib6CA20615_gt_setunitsbuilder_Init();
+    lib6CA20615_gt_SelectRace_Init();
+    lib6CA20615_gt_ClickUnit_Init();
+    lib6CA20615_gt_ReplaceUnit_Init();
     lib6CA20615_gt_hookdatatableview_Init();
     lib6CA20615_gt_updatedata_Init();
     lib6CA20615_gt_showdatatablewindow_Init();

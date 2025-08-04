@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectCreateUnit id="ZeratulCommanderDisruptorPhase">
+        <EditorCategories value="Race:Zeratul"/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnEffect value="ZeratulCommanderDisruptorPhase@TimeLife"/>
+        <SpawnUnit value="ZeratulCommanderDisruptorPhase"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="ZeratulCommanderDisruptorPhase@TimeLife">
+        <EditorCategories value="Race:Zeratul"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="ZeratulCommanderDisruptorPhase@Damage">
+        <EditorCategories value="Race:Zeratul"/>
+        <Amount value="175"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="ZeratulCommanderDisruptorPhase@Search">
+        <EditorCategories value="Race:Zeratul"/>
+        <DebugTrace value="1"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Hidden,Invulnerable"/>
+        <AreaArray Radius="1.5" Effect="ZeratulCommanderDisruptorPhase@Damage"/>
+    </CEffectEnumArea>
+    <CEffectSet id="ZeratulCommanderDisruptorPhase@Set">
+        <EditorCategories value="Race:Zeratul"/>
+        <EffectArray value="TimedLifeFate"/>
+        <EffectArray value="ZeratulCommanderDisruptorPhase@Search"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
     <CEffectCreatePersistent id="ZeratulCommanderNullBeam@CP">
         <EditorCategories value="Race:Zeratul"/>
         <Flags index="Channeled" value="1"/>

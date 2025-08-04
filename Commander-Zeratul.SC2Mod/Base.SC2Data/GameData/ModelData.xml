@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="ZeratulCommanderDisruptorPhase" parent="Unit">
+        <Model value="Assets\COOP\Zeratul\Effects\Disruptor_Zeratul_COOP_PhaseMode\Disruptor_Zeratul_COOP_PhaseMode.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
     <CModel id="ZeratulCommander@BuildingLarge" parent="ProtossBuildingBuildLargeBase">
         <EditorCategories value="Race:Zeratul"/>
     </CModel>
@@ -39,6 +43,18 @@
         <Image value="Assets\Textures\darkvoice_zeratul_coop_portrait_static.dds"/>
     </CModel>
     <CModel id="ZeratulCommanderAncientNexus@Portrait" parent="ZeratulCommander@PortraitStructure"/>
+    <CModel id="ZeratulCommanderDisruptorPhase@Birth">
+        <Model value="Assets\COOP\Zeratul\Effects\Disruptor_Zeratul_COOP_PhaseMode_Birth\Disruptor_Zeratul_COOP_PhaseMode_Birth.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderDisruptorPhase@Cursor" parent="Splat">
+        <Model value="Assets\UI\SOA_MassRecallCursor\SOA_MassRecallCursor.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderDisruptorPhase@Impact">
+        <Model value="Assets\COOP\Zeratul\Effects\Disruptor_Zeratul_COOP_PurificationNova\Disruptor_Zeratul_COOP_PurificationNova.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
     <CModel id="ZeratulCommanderNullBeam@AttackBeam">
         <Model value="Assets\COOP\Zeratul\Effects\Sentry_Zeratul_COOP_NullBeam\Sentry_Zeratul_COOP_NullBeam.m3"/>
         <EditorCategories value="Race:Zeratul"/>

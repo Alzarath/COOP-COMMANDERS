@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CDataCollectionUnit id="ZeratulCommanderDisruptorPhase">
+        <EditorCategories value="DataGroup:Weapon,Race:Zeratul,ObjectType:Other"/>
+        <DataRecord Entry="Abil,ZeratulCommanderDisruptorPhase"/>
+        <DataRecord Entry="Actor,ZeratulCommanderDisruptorPhase"/>
+        <DataRecord Entry="Button,ZeratulCommanderDisruptorPhase"/>
+        <DataRecord Entry="Effect,ZeratulCommanderDisruptorPhase"/>
+        <DataRecord Entry="Model,ZeratulCommanderDisruptorPhase"/>
+        <DataRecord Entry="Unit,ZeratulCommanderDisruptorPhase"/>
+        <DataRecord Entry="Behavior,ZeratulCommanderDisruptorPhase@TimeLife"/>
+        <DataRecord Entry="Effect,ZeratulCommanderDisruptorPhase@Set"/>
+        <DataRecord Entry="Effect,ZeratulCommanderDisruptorPhase@Search"/>
+        <DataRecord Entry="Effect,ZeratulCommanderDisruptorPhase@Damage"/>
+        <DataRecord Entry="Effect,ZeratulCommanderDisruptorPhase@TimeLife"/>
+        <DataRecord Entry="Actor,ZeratulCommanderDisruptorPhase@Cursor"/>
+        <DataRecord Entry="Model,ZeratulCommanderDisruptorPhase@Cursor"/>
+        <DataRecord Entry="Actor,ZeratulCommanderDisruptorPhase@Impact"/>
+        <DataRecord Entry="Model,ZeratulCommanderDisruptorPhase@Impact"/>
+        <DataRecord Entry="Model,ZeratulCommanderDisruptorPhase@Birth"/>
+        <DataRecord Entry="Actor,ZeratulCommanderDisruptorPhase@Birth"/>
+    </CDataCollectionUnit>
     <CDataCollection id="ZeratulCommander">
         <EditorCategories value="DataGroup:Doodad,Race:Zeratul,ObjectType:Set"/>
         <DataRecord Entry="Bundle,ZeratulCommander"/>

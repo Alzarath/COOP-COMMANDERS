@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizard id="AddMorph">
+    <name>Add Morph for unit</name>
+    <category>COOP Commanders/Unit</category>
+    <objecttypes create="Unit"/>
+    <instructions>
+        Визард для добавление возможности морфа к юнитам в других юнитов
+    </instructions>
+
+    <input id="selectUnit" type="CUnitLink">
+        <name>Unit</name>
+    </input>
+</wizard>

@@ -53,34 +53,6 @@
             <input id="UnitID" type="CString">
                 <name>Unit ID</name>
             </input>
-
-            <input id="Life" type="real32">
-                <name>Life</name>
-                <minimum value="1"/>
-                <default value="1"/>
-                <layout column="2"/>
-            </input>
-            <input id="LifeRegen" type="real32">
-                <name>Life Regen</name>
-                <layout column="2"/>
-            </input>
-            <input id="Shield" type="real32">
-                <name>Shield</name>
-                <layout column="2"/>
-            </input>
-            <input id="ShieldRegen" type="real32">
-                <name>Shield Regen</name>
-                <layout column="2"/>
-            </input>
-            <input id="Energy" type="real32">
-                <name>Energy Start</name>
-                <layout column="2"/>
-            </input>
-            <input id="EnergyRegen" type="real32">
-                <name>Energy Regen</name>
-                <layout column="2"/>
-            </input>
-
             <input id="race" type="CRaceLink">
                 <name>Раса единицы</name>
             </input>
@@ -121,6 +93,33 @@
                 <item text="Зератул" value="Zeratul"/>
                 <item text="Стетманн" value="Stetmann"/>
                 <item text="Арктур Менгск" value="ArcturusMengsk"/>
+            </input>
+
+            <input id="Life" type="real32">
+                <name>Life</name>
+                <minimum value="1"/>
+                <default value="1"/>
+                <layout column="2"/>
+            </input>
+            <input id="LifeRegen" type="real32">
+                <name>Life Regen</name>
+                <layout column="2"/>
+            </input>
+            <input id="Shield" type="real32">
+                <name>Shield</name>
+                <layout column="2"/>
+            </input>
+            <input id="ShieldRegen" type="real32">
+                <name>Shield Regen</name>
+                <layout column="2"/>
+            </input>
+            <input id="Energy" type="real32">
+                <name>Energy Start</name>
+                <layout column="2"/>
+            </input>
+            <input id="EnergyRegen" type="real32">
+                <name>Energy Regen</name>
+                <layout column="2"/>
             </input>
 
         <!-- Page 2 -->
@@ -726,6 +725,10 @@
         <field id="Tooltip">
             <value>^BtnTooltip^</value>
         </field>
+    </entry>
+
+    <entry catalog="Requirement" type="CRequirement">
+        <id>^UnitIDCommander^@Requirement</id>
     </entry>
 
     

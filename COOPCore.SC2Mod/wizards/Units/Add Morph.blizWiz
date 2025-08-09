@@ -5,9 +5,78 @@
     <objecttypes create="Unit"/>
     <instructions>
         Визард для добавление возможности морфа к юнитам в других юнитов
+        
+        КАК ПРАВИЛЬНО ИСПОЛЬЗОВАТЬ?
+
+        - Выберите нужного вам юнита в поле "Unit", которому хотите дать возможность превращения в другого юнита
+
+        - В поле "Morph unit ID" пропишите ID для новосоздаваемого юнита, В КОТОРОГО юнит будет морфится
     </instructions>
+
+    <condition id="usedDC" input="useCollection" value="1"/>
 
     <input id="selectUnit" type="CUnitLink">
         <name>Unit</name>
     </input>
+    <input id="morphUnitID" type="CString">
+        <name>Morph unit ID</name>
+        <tooltip>ID юнита будет задано: "UnitID + @ + MorphUnitID"</tooltip>
+    </input>
+
+    <input id="useCollection" type="WizardCheckbox">
+        <name>exist Data Collection</name>
+        <tooltip>Ставь галку если существует дата коллекция с таким же ID как у указанного юнита</tooltip>
+        <layout column="3"/>
+    </input>
+
+    <!-- Macros -->
+     <macro id="UnitMorphID">^selectUnit^@^morphUnitID^</macro>
+
+    <!-- Entries -->
+
+    <entry catalog="DataCollection" type="CDataCollectionUnit">
+        <id>^selectUnit^</id>
+        <condition id="usedDC"/>
+        <allowmodify/>
+        <token id="parent">
+            <value>CommanderUnitMorphing</value>
+        </token>
+
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Unit,^UnitMorphID^</value>
+        </field>
+    </entry>
+
+    <entry catalog="Unit" type="CUnit">
+        <id>^UnitMorphID^</id>
+    </entry>
+
+    <field id="LifeStart">
+        <value>ref=Unit,^selectUnit^,LifeStart</value>
+    </field>
+    <field id="LifeMax">
+        <value>ref=Unit,^selectUnit^,LifeMax</value>
+    </field>
+    <field id="LifeRegenRate">
+        <value>ref=Unit,^selectUnit^,LifeRegenRate</value>
+    </field>
+    <field id="ShieldsStart">
+        <value>ref=Unit,^selectUnit^,ShieldsStart</value>
+    </field>
+    <field id="ShieldsMax">
+        <value>ref=Unit,^selectUnit^,ShieldsMax</value>
+    </field>
+    <field id="ShieldRegenRate">
+        <value>ref=Unit,^selectUnit^,ShieldRegenRate</value>
+    </field>
+    <field id="EnergyStart">
+        <value>ref=Unit,^selectUnit^,EnergyStart</value>
+    </field>
+    <field id="EnergyMax">
+        <value>ref=Unit,^selectUnit^,EnergyMax</value>
+    </field>
+    <field id="EnergyRegenRate">
+        <value>ref=Unit,^selectUnit^,EnergyRegenRate</value>
+    </field>
 </wizard>

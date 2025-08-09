@@ -128,6 +128,10 @@
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <!-- DataCollection -->
+    <CDataCollection default="1" id="COOPCommanders">
+        <EditorCategories value="DataGroup:Mechanic,Race:Neutral,ObjectType:Other"/>
+    </CDataCollection>
+    
     <CDataCollectionAbil default="1" id="CommanderAbilityBuild">
         <EditorIconSource value="Abil"/>
         <Pattern value="CommanderAbilities_Build"/>
@@ -138,6 +142,16 @@
         <Pattern value="CommanderAbilities_ABEffectInstant"/>
         <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
     </CDataCollectionAbil>
+    <CDataCollectionAbil default="1" id="CommanderAbilityBeam">
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_Beam"/>
+    </CDataCollectionAbil>
+    <CDataCollectionAbil default="1" id="CommanderAbilityMorph">
+        <EditorIconSource value="Abil"/>
+        <Pattern value="CommanderAbilities_Morph"/>
+    </CDataCollectionAbil>
+
     <CDataCollectionUnit default="1" id="CommanderWeaponInstant">
         <EditorIconSource value="Weapon"/>
         <Pattern value="CommanderWeapon_Instant"/>
@@ -157,6 +171,15 @@
         <EditorIconSource value="Actor"/>
         <Pattern value="CommanderUnits"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit default="1" id="CommanderUnitMorphing">
+        <EditorIconSource value="Actor"/>
+        <Pattern value="CommanderUnits_Morphing"/>
+    </CDataCollectionUnit>
+
+    <CDataCollectionUpgrade default="1" id="CommanderUpgradeLvLStats">
+        <EditorCategories value="DataGroup:Template,Race:Neutral,DataFamily:Coop"/>
+        <Pattern value="CommanderUpgrade_LevelStats"/>
+    </CDataCollectionUpgrade>
     <!-- DataCollection Pattern -->
     <CDataCollectionPattern default="1" id="CommanderWeapon">
         <Fields Reference="Model,^ParamId^@AttackLaunch,Model" NameOverride="DataCollectionPattern/CommanderWeapon/LaunchModel"/>

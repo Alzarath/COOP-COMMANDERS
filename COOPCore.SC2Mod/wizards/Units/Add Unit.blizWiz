@@ -238,6 +238,7 @@
     <!-- Entries -->
     <entry catalog="DataCollection" type="CDataCollectionUnit">
         <id>^UnitIDCommander^</id>
+        <parentid>CommanderUnit</parentid>
         <field id="Name">
             <value>^EntryName^</value>
         </field>

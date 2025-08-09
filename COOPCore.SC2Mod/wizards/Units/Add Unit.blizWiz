@@ -423,7 +423,7 @@
         <id>^UnitIDCommander^</id>
         <allowmodify/>
         <condition id="selectStructure"/>
-        <parentid>CommanderBaseUnit</parentid>
+        <parentid>CommanderUnitBase</parentid>
         <token id="unitName">
             <value>^UnitIDCommander^</value>
         </token>

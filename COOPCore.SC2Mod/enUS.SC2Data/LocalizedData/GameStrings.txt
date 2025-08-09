@@ -20,6 +20,7 @@ DataCollection/Name/WeaponRaynorSCV=Raynor Commander - Fusion Cutter
 DataCollectionPattern/CommanderAbilitiesMorph/SiegeUnit=Siege mode
 DataCollectionPattern/CommanderAbilitiesMorph/UnsiegeUnit=Normal Mode
 DataCollectionPattern/CommanderUnits/ButtonIcon=Button Icon
+DataCollectionPattern/CommanderUnits/UnitUpgrade=Upgrades
 DataCollectionPattern/CommanderUnitsMorphing/Abilties=Alternate Abilities
 DataCollectionPattern/CommanderUnitsMorphing/Behaviors=Alternate Behaviors
 DataCollectionPattern/CommanderUnitsMorphing/CargoSize=Alternate Cargo Size

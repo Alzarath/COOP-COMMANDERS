@@ -232,6 +232,9 @@
     <CActorSplat id="RaynorCommanderReactorBarrack@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderReactorBarrack"/>
     <CActorUnit id="RaynorCommanderReactorFactory" parent="ReactorBase" unitName="RaynorCommanderReactorFactory">
         <On index="69" Send="Create RaynorCommanderReactor@Build"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderReactor@Death" SoundLink="RaynorCommanderReactor@Explode"/>
+        <SoundArray index="Ready" value="RaynorCommanderReactor@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderReactor@What"/>
     </CActorUnit>
     <CActorModel id="RaynorCommanderReactorFactory@Build" parent="TerranBuildingBuildSmall">
         <On Terms="ActorCreation" Send="SetScale 1.350000"/>
@@ -239,6 +242,9 @@
     <CActorSplat id="RaynorCommanderReactorFactory@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderReactorFactory"/>
     <CActorUnit id="RaynorCommanderReactorStarport" parent="ReactorBase" unitName="RaynorCommanderReactorStarport">
         <On index="69" Send="Create RaynorCommanderReactor@Build"/>
+        <DeathArray index="Normal" ModelLink="RaynorCommanderReactor@Death" SoundLink="RaynorCommanderReactor@Explode"/>
+        <SoundArray index="Ready" value="RaynorCommanderReactor@Ready"/>
+        <SoundArray index="What" value="RaynorCommanderReactor@What"/>
     </CActorUnit>
     <CActorSplat id="RaynorCommanderReactorStarport@Splat" parent="GenericUnitSplat" unitName="RaynorCommanderReactorStarport"/>
     <CActorAction id="RaynorCommanderYamatoGun@Attack" parent="GenericAttack" effectImpact="RaynorCommanderYamatoGun@Damage" effectLaunch="RaynorCommanderYamatoGun">

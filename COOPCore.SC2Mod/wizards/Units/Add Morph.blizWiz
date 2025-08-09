@@ -14,7 +14,10 @@
     </instructions>
 
     <condition id="usedDC" input="useCollection" value="1"/>
+    <condition id="makeDCAbil" input="makeDCAbil" value="1"/>
 
+    <!-- Inputs -->
+    <!-- page 1 -->
     <input id="selectUnit" type="CUnitLink">
         <name>Unit</name>
     </input>
@@ -28,9 +31,15 @@
         <tooltip>Ставь галку если существует дата коллекция с таким же ID как у указанного юнита</tooltip>
         <layout column="3"/>
     </input>
+    <input id="makeDCAbil" type="WizardCheckbox">
+        <name>make Data Collection for ability?</name>
+        <layout column="3"/>
+    </input>
 
     <!-- Macros -->
      <macro id="UnitMorphID">^selectUnit^@^morphUnitID^</macro>
+     <macro id="UnitToMorph">^selectUnit^To^morphUnitID^</macro>
+     <macro id="MorphTo">Morph To ^morphUnitID^</macro>
 
     <!-- Entries -->
 
@@ -38,45 +47,70 @@
         <id>^selectUnit^</id>
         <condition id="usedDC"/>
         <allowmodify/>
-        <token id="parent">
-            <value>CommanderUnitMorphing</value>
-        </token>
 
         <field id="DataRecord">
             <index>^VALUEINDEX^</index>
             <value>Unit,^UnitMorphID^</value>
         </field>
     </entry>
+    <entry catalog="DataCollection" type="CDataCollectionUnit">
+        <id>^UnitToMorph^</id>
+        <condition id="makeDCAbil"/>
+
+        <field id="Name">
+            <value>^MorphTo^</value>
+        </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Ability,^UnitToMorph^</value>
+        </field>
+    </entry>
 
     <entry catalog="Unit" type="CUnit">
         <id>^UnitMorphID^</id>
+        <field id="LifeStart">
+            <value>ref=Unit,^selectUnit^,LifeStart</value>
+        </field>
+        <field id="LifeMax">
+            <value>ref=Unit,^selectUnit^,LifeMax</value>
+        </field>
+        <field id="LifeRegenRate">
+            <value>ref=Unit,^selectUnit^,LifeRegenRate</value>
+        </field>
+        <field id="ShieldsStart">
+            <value>ref=Unit,^selectUnit^,ShieldsStart</value>
+        </field>
+        <field id="ShieldsMax">
+            <value>ref=Unit,^selectUnit^,ShieldsMax</value>
+        </field>
+        <field id="ShieldRegenRate">
+            <value>ref=Unit,^selectUnit^,ShieldRegenRate</value>
+        </field>
+        <field id="EnergyStart">
+            <value>ref=Unit,^selectUnit^,EnergyStart</value>
+        </field>
+        <field id="EnergyMax">
+            <value>ref=Unit,^selectUnit^,EnergyMax</value>
+        </field>
+        <field id="EnergyRegenRate">
+            <value>ref=Unit,^selectUnit^,EnergyRegenRate</value>
+        </field>
     </entry>
 
-    <field id="LifeStart">
-        <value>ref=Unit,^selectUnit^,LifeStart</value>
-    </field>
-    <field id="LifeMax">
-        <value>ref=Unit,^selectUnit^,LifeMax</value>
-    </field>
-    <field id="LifeRegenRate">
-        <value>ref=Unit,^selectUnit^,LifeRegenRate</value>
-    </field>
-    <field id="ShieldsStart">
-        <value>ref=Unit,^selectUnit^,ShieldsStart</value>
-    </field>
-    <field id="ShieldsMax">
-        <value>ref=Unit,^selectUnit^,ShieldsMax</value>
-    </field>
-    <field id="ShieldRegenRate">
-        <value>ref=Unit,^selectUnit^,ShieldRegenRate</value>
-    </field>
-    <field id="EnergyStart">
-        <value>ref=Unit,^selectUnit^,EnergyStart</value>
-    </field>
-    <field id="EnergyMax">
-        <value>ref=Unit,^selectUnit^,EnergyMax</value>
-    </field>
-    <field id="EnergyRegenRate">
-        <value>ref=Unit,^selectUnit^,EnergyRegenRate</value>
-    </field>
+    <entry catalog="Abil" type="CAbilMorph">
+        <id>^UnitToMorph^</id>
+        <field id="Name">
+            <value>^MorphTo^</value>
+        </field>
+
+        <field id="InfoArray_Unit">
+            <index>0</index>
+            <value>^selectUnit^</value>
+        </field>
+        <field id="InfoArray_Unit">
+            <index>1</index>
+            <value>^morphUnitID^</value>
+        </field>
+    </entry>
+
 </wizard>

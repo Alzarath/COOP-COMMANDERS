@@ -16,11 +16,18 @@
         <EditorCategories value=""/>
         <Model value=""/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
-        <On Terms="UnitBirth.CheatTrain2x2Ground" Send="Create"/>
         <On Terms="UnitBirth.CheatTrain1x1Air" Send="Create"/>
         <On Terms="UnitBirth.CheatTrain2x2Air" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain2x2Ground" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain3x3Air" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain3x3Ground" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain4x4Air" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain4x4Ground" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain5x5Air" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain5x5Ground" Send="Create"/>
         <On Terms="UnitBirth.CheatTrainAirUnit" Send="Create"/>
         <On Terms="UnitBirth.CheatTrainGroundUnit" Send="Create"/>
+        <On Terms="UnitBirth.CheatTrain5x5Resource" Send="Create"/>
         <UnitIcon value="EditorData\Images\FootprintBrushSizeCell.tga"/>
     </CActorUnit>
 </Catalog>

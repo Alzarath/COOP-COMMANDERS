@@ -232,6 +232,96 @@
         <AssetArray File="Assets\Sounds\Protoss\Probe\Probe_Yes2.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Protoss\Probe\Probe_Yes3.ogg" FacialGroup=""/>
     </CSound>
+    <CSound id="ZeratulCommanderXelNagaVoidArray@Birth" parent="Voice">
+        <EditorCategories value="Race:Zeratul"/>
+    </CSound>
+    <CSound id="ZeratulCommanderXelNagaVoidArray@Pissed" parent="CommanderVOPissed" unitName="ZeratulCommanderXelNagaVoidArray">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray>
+            <TemplateParam value=""/>
+            <File value="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Pissed00.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Pissed01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Pissed02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Pissed03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Pissed04.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ZeratulCommanderXelNagaVoidArray@Ready" parent="Ready">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Ready00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Ready01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Ready02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Ready03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Ready04.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ZeratulCommanderXelNagaVoidArray@What" parent="CommanderVOWhat" unitName="ZeratulCommanderXelNagaVoidArray">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray>
+            <TemplateParam value=""/>
+            <File value="Assets\Sounds\Protoss\PhasePrism\PhasePrism_What00.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_What01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_What02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_What03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_What04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_What05.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ZeratulCommanderXelNagaVoidArray@Yes" parent="CommanderVOYes" unitName="ZeratulCommanderXelNagaVoidArray">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray>
+            <TemplateParam value=""/>
+            <File value="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes00.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Protoss\PhasePrism\PhasePrism_Yes07.ogg" FacialGroup=""/>
+    </CSound>
     <CSound id="ZeratulCommanderXelnagaAmbusher@Help" parent="ProtossHelp">
         <EditorCategories value="Race:Zeratul"/>
         <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\Stalker\Stalker_Help00.ogg" FacialGroup=""/>

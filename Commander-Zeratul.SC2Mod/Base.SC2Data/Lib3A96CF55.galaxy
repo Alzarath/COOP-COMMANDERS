@@ -1,26 +1,112 @@
-include "TriggerLibs/natives"
+include "TriggerLibs/NativeLib"
+include "LibBEDD5153"
 
 include "Lib3A96CF55_h"
 
 //--------------------------------------------------------------------------------------------------
 // Library: COMMANDER - Zeratul
 //--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib3A96CF55_InitLibraries () {
+    libNtve_InitVariables();
+    libBEDD5153_InitVariables();
+}
+
+// Variable Initialization
+bool lib3A96CF55_InitVariables_completed = false;
+
+void lib3A96CF55_InitVariables () {
+    if (lib3A96CF55_InitVariables_completed) {
+        return;
+    }
+
+    lib3A96CF55_InitVariables_completed = true;
+
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
-// Trigger: Untitled Trigger 001
+// Trigger: Commander - Enable
 //--------------------------------------------------------------------------------------------------
-bool lib3A96CF55_gt_UntitledTrigger001_Func (bool testConds, bool runActions) {
+bool lib3A96CF55_gt_CommanderEnable_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_3A96CF55_12790481"));
+    UnitCreate(1, "Pylon", 0, libBEDD5153_gf_TriggeringPlayerCC(), RegionGetCenter(RegionPlayableMap()), 270.0);
+    lib3A96CF55_gv_topBarCaster = UnitLastCreated();
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib3A96CF55_gt_UntitledTrigger001_Init () {
-    lib3A96CF55_gt_UntitledTrigger001 = TriggerCreate("lib3A96CF55_gt_UntitledTrigger001_Func");
+void lib3A96CF55_gt_CommanderEnable_Init () {
+    lib3A96CF55_gt_CommanderEnable = TriggerCreate("lib3A96CF55_gt_CommanderEnable_Func");
+    libBEDD5153_gf_PlayerRaceChangesCC(lib3A96CF55_gt_CommanderEnable, c_playerAny, "COOPZeratul", "On");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Commander - Disable
+//--------------------------------------------------------------------------------------------------
+bool lib3A96CF55_gt_CommanderDisable_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((lib3A96CF55_gv_topBarCaster == null)) {
+        UnitRemove(lib3A96CF55_gv_topBarCaster);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib3A96CF55_gt_CommanderDisable_Init () {
+    lib3A96CF55_gt_CommanderDisable = TriggerCreate("lib3A96CF55_gt_CommanderDisable_Func");
+    libBEDD5153_gf_PlayerRaceChangesCC(lib3A96CF55_gt_CommanderDisable, c_playerAny, "COOPZeratul", "From");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Change Race
+//--------------------------------------------------------------------------------------------------
+bool lib3A96CF55_gt_ChangeRace_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_race;
+
+    // Automatic Variable Declarations
+    string auto322CF5EB_val;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto322CF5EB_val = StringWord(EventChatMessage(false), 1);
+    if (auto322CF5EB_val == "zer") {
+        lv_race = "COOPZeratul";
+    }
+    else {
+    }
+    libBEDD5153_gf_SetPlayerRaceCC(StringToInt(StringWord(EventChatMessage(false), 2)), lv_race);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib3A96CF55_gt_ChangeRace_Init () {
+    lib3A96CF55_gt_ChangeRace = TriggerCreate("lib3A96CF55_gt_ChangeRace_Func");
+    TriggerAddEventChatMessage(lib3A96CF55_gt_ChangeRace, c_playerAny, "", false);
 }
 
 void lib3A96CF55_InitTriggers () {
-    lib3A96CF55_gt_UntitledTrigger001_Init();
+    lib3A96CF55_gt_CommanderEnable_Init();
+    lib3A96CF55_gt_CommanderDisable_Init();
+    lib3A96CF55_gt_ChangeRace_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -35,6 +121,8 @@ void lib3A96CF55_InitLib () {
 
     lib3A96CF55_InitLib_completed = true;
 
+    lib3A96CF55_InitLibraries();
+    lib3A96CF55_InitVariables();
     lib3A96CF55_InitTriggers();
 }
 

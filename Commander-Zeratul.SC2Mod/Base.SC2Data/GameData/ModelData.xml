@@ -155,6 +155,22 @@
         <Model value="Assets\COOP\Zeratul\Portraits\Disruptor_Zeratul_COOP_Portrait\Disruptor_Zeratul_COOP_Portrait.m3"/>
         <EditorCategories value="Race:Zeratul"/>
     </CModel>
+    <CModel id="ZeratulCommanderXelNagaVoidArray">
+        <Model value="Assets\COOP\Zeratul\Units\WarpPrism_Zeratul_COOP\WarpPrism_Zeratul_COOP.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <SelectionLayer value="1"/>
+        <SelectionRadius value="1.500000"/>
+    </CModel>
+    <CModel id="ZeratulCommanderXelNagaVoidArray@Death" parent="UnitDeath">
+        <Model value="Assets\COOP\Zeratul\Units\WarpPrism_Zeratul_COOP_Death\WarpPrism_Zeratul_COOP_Death.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderXelNagaVoidArray@Portrait" parent="Portrait">
+        <Model value="Assets\COOP\Zeratul\Portraits\WarpPrism_Zeratul_COOP_Portrait\WarpPrism_Zeratul_COOP_Portrait.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
     <CModel id="ZeratulCommanderXelnagaAmbusher" parent="Unit">
         <Model value="Assets\COOP\Zeratul\Units\Stalker_Zeratul_COOP\Stalker_Zeratul_COOP.m3"/>
         <EditorCategories value="Race:Zeratul"/>

@@ -38,6 +38,11 @@
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Portrait"/>
         <DataRecord Entry="Model,ZeratulCommanderAncientNexus@Building"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderMorphVoidArray">
+        <EditorCategories value="DataGroup:Ability,Race:Zeratul,ObjectType:Other"/>
+        <DataRecord Entry="Abil,ZeratulCommanderMorphVoidArray"/>
+        <DataRecord Entry="Abil,ZeratulCommanderMorphVoidArray@Phased"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="ZeratulCommanderNullBeam" parent="CommanderWeaponMissile">
         <EditorCategories value="DataGroup:Weapon,Race:Zeratul,DataFamily:Coop,ObjectType:Other"/>
         <DataRecord Entry="Actor,ZeratulCommanderNullBeam@Attack"/>
@@ -123,6 +128,22 @@
         <DataRecord Entry="Sound,ZeratulCommanderXelNagaDisruptor@Yes"/>
         <DataRecord Entry="Sound,ZeratulCommanderXelNagaDisruptor@Pissed"/>
         <DataRecord Entry="Requirement,ZeratulCommanderXelNagaDisruptor"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderXelNagaVoidArray" parent="CommanderUnitMorphing">
+        <EditorCategories value="DataGroup:Unit,Race:Zeratul,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,ZeratulCommanderXelNagaVoidArray"/>
+        <DataRecord Entry="Button,ZeratulCommanderXelNagaVoidArray"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelNagaVoidArray"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelNagaVoidArray@Death"/>
+        <DataRecord Entry="Model,ZeratulCommanderXelNagaVoidArray@Portrait"/>
+        <DataRecord Entry="Requirement,ZeratulCommanderXelNagaVoidArray@Requirement"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaVoidArray@Birth"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaVoidArray@Ready"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaVoidArray@What"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaVoidArray@Yes"/>
+        <DataRecord Entry="Sound,ZeratulCommanderXelNagaVoidArray@Pissed"/>
+        <DataRecord Entry="Unit,ZeratulCommanderXelNagaVoidArray"/>
+        <DataRecord Entry="Unit,ZeratulCommanderXelNagaVoidArray@Alternate"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Zeratul,ObjectType:Unit"/>

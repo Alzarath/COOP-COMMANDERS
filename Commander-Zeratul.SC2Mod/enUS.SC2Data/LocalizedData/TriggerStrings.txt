@@ -1,2 +1,8 @@
-﻿Library/Name/3A96CF55=COMMANDER - Zeratul
-Trigger/Name/lib_3A96CF55_25219D2A=Untitled Trigger 001
+﻿Category/Name/lib_3A96CF55_3EB9F7DC=Variables
+Category/Name/lib_3A96CF55_4D32349B=Constants
+Library/Name/3A96CF55=COMMANDER - Zeratul
+Trigger/Name/lib_3A96CF55_05B104F3=Commander - Enable
+Trigger/Name/lib_3A96CF55_ADA63520=Change Race
+Trigger/Name/lib_3A96CF55_D02D4832=Commander - Disable
+Variable/Name/lib_3A96CF55_503BF66C=TopBar Caster
+Variable/Name/lib_3A96CF55_F2C3E8B0=race

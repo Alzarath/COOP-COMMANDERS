@@ -3,6 +3,14 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: COMMANDER - Zeratul
 //--------------------------------------------------------------------------------------------------
+// Variable Declarations
+unit lib3A96CF55_gv_topBarCaster;
+
 // Trigger Declarations
-trigger lib3A96CF55_gt_UntitledTrigger001;
+trigger lib3A96CF55_gt_CommanderEnable;
+trigger lib3A96CF55_gt_CommanderDisable;
+trigger lib3A96CF55_gt_ChangeRace;
+
+// Library Initialization
+void lib3A96CF55_InitVariables ();
 

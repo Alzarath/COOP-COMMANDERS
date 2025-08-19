@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Desc>
+    <Constant name="SelectorRaceWith" val="700"/>
+    <Constant name="SelectorRaceHeight" val="90"/>
 
-    <Constant name="delayheight" val="0.25"/>
+    <Frame type="Frame" name="GameUI/UIContainer/FullscreenUpperContainer" file="GameUI">
+        <Frame type="Frame" name="CheatSelectorRace">
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-400"/>
+            <Width val="#SelectorRaceWith"/>
+            <Height val="#SelectorRaceHeight"/>
 
-    <Frame type="ChatBar" name="GameUI/UIContainer/FullscreenUpperContainer/ChatBar" file="GameUI">
-        
-        <Frame type="Image" name="BackgroundImage">
-            <Texture val="Assets\Textures\ui_chat_frame_terran.dds"/>
+            <Frame type="ScrollableFrame" name="ScrollFrame" template="CheatEngine_GenericTemplate/ScrollHorizontalTemplate">
+                <Anchor relative="$parent"/>
+            </Frame>
         </Frame>
-        
-        <Animation name="Shown">
-            <Event event="OnShown" action="Reset,Play" frame="$this"/>
-
-            <Controller type="Dimension" end="Pause" frame="$this/BackgroundImage" dimension="Height" relative="True">
-                <Key type="Curve" time="0.0" out="Slow" value="-85"/>
-                <Key type="Curve" time="#delayheight" value="0"/>
-            </Controller>
-
-            <Controller type="Fade" end="Pause" frame="$this/BackgroundImage">
-                <Key type="Curve" time="0.0" out="Slow" value="0"/>
-                <Key type="Curve" time="#delayheight" value="255"/>
-            </Controller>
-        </Animation>
     </Frame>
 </Desc>

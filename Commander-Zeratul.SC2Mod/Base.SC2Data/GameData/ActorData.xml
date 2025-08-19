@@ -79,6 +79,25 @@
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratuldisruptor.dds"/>
     </CActorUnit>
+    <CActorUnit id="ZeratulCommanderXelNagaVoidArray" parent="CommanderAirUnit" unitName="ZeratulCommanderXelNagaVoidArray">
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-protoss-zeratulwarpprism.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-zeratulwarpprism.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulwarpprism.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-protoss-warpprism00.dds"/>
+        </Wireframe>
+        <On Terms="UnitBirth.ZeratulCommanderXelNagaVoidArray@Alternate" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo ZeratulCommanderXelNagaVoidArray@Alternate" Send="AnimBracketStart Morph Stand,Work,Start Stand,Work Stand,Work,End"/>
+        <On Terms="AbilMorph.*.Start; MorphTo ZeratulCommanderXelNagaVoidArray" Send="AnimBracketStop Morph"/>
+    </CActorUnit>
+    <CActorTurret id="ZeratulCommanderXelNagaVoidArray@Turret">
+        <EditorCategories value=""/>
+        <On Terms="TurretEnable.ZeratulCommanderXelNagaVoidArray@Alternate" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ZeratulCommanderXelNagaVoidArray@Alternate" Send="Destroy"/>
+    </CActorTurret>
     <CActorUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderGroundUnit" unitName="ZeratulCommanderXelnagaAmbusher">
         <EditorCategories value=""/>
         <HighlightTooltip value="Unit/Name/Bogus"/>

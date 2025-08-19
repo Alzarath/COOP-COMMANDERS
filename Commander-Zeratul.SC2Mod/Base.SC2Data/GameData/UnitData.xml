@@ -88,6 +88,33 @@
         </CardLayouts>
         <FlagArray index="Turnable" value="0"/>
     </CUnit>
+    <CUnit id="ZeratulCommanderXelNagaVoidArray" parent="CommanderAir_Prot">
+        <Race value="COOPZeratul"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmor value="1"/>
+        <ShieldsStart value="200"/>
+        <ShieldsMax value="200"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Zeratul"/>
+        <Speed value="4.789"/>
+        <Acceleration value="3"/>
+        <Deceleration value="3"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <AbilArray Link="ZeratulCommanderMorphVoidArray@Phased"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="CommanderZeratulLevel09" Type="AbilCmd" AbilCmd="ZeratulCommanderMorphVoidArray@Phased,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="ZeratulCommanderXelNagaVoidArray@Alternate" parent="ZeratulCommanderXelNagaVoidArray">
+        <Speed value="0"/>
+        <Acceleration value="0"/>
+        <AbilArray index="3" Link="ZeratulCommanderMorphVoidArray"/>
+        <WeaponArray Turret="ZeratulCommanderXelNagaVoidArray@Alternate"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Face="CommanderZeratulLevel09" Type="AbilCmd" AbilCmd="ZeratulCommanderMorphVoidArray,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="ZeratulCommanderXelnagaAmbusher" parent="CommanderGround_Prot">
         <Race value="COOPZeratul"/>
         <Collide index="Small" value="1"/>

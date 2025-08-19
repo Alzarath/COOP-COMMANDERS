@@ -55,4 +55,16 @@
             <TextureType val="Border"/>
         </Frame>
     </Frame>
+
+    <Frame type="Button" name="PlayerRaceSelect" template="StandardBattlenetTemplates/BattlenetMediumButtonTemplate">
+        <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
+        <Width val="60"/>
+        <Height val="60"/>
+
+        <Frame type="Image" name="RaceIcon">
+            <Anchor relative="$parent" offset="-10"/>
+            <TextureType val="Normal"/>
+        </Frame>
+    </Frame>
 </Desc>

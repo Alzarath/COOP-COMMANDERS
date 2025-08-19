@@ -6,11 +6,26 @@ include "TriggerLibs/natives"
 // Preset Declarations
 
 // Constants
-const string libBEDD5153_gv_eVENT_PlayerCommanderChanges = "COOP_PlayerCommanderChanges";
+const string libBEDD5153_gv_eVENT_PlayerRaceChanges = "PlayerRaceChangesCC";
+const string libBEDD5153_gv_eVENT_PARAM_TrigPlayer = "TrigPlayer";
+const string libBEDD5153_gv_eVENT_PARAM_ChangedRace = "ChangedRace";
+const string libBEDD5153_gv_eVENT_PARAM_ChangingRace = "ChangingRace";
+const string libBEDD5153_gv_eVENT_Constant_anyPlayer = "anyplayer";
+const string libBEDD5153_gv_eVENT_Constant_anyRace = "anyrace";
 
 // Function Declarations
-void libBEDD5153_gf_SetPlayersCommander (playergroup lp_playerGroup, string lp_commander);
-void libBEDD5153_gf_PlayerCommanderChanges (trigger t, int lp_player, string lp_commander, string lp_direction);
+void libBEDD5153_gf_SetPlayerRaceCC (int lp_player, string lp_race);
+string libBEDD5153_gf_ResponsePRC (string lp_player, string lp_race, string lp_inOut, string lp_parameter);
+void libBEDD5153_gf_PlayerRaceChangesCC (trigger t, int lp_player, string lp_race, string lp_inOut);
+int libBEDD5153_gf_TriggeringPlayerCC ();
+string libBEDD5153_gf_ChangedRaceCC ();
+string libBEDD5153_gf_ChangingRaceCC ();
+
+// Trigger Declarations
+trigger libBEDD5153_gt_Init;
+trigger libBEDD5153_gt_CommanderForPlayerOn;
+trigger libBEDD5153_gt_CommanderForPlayerFrom;
+trigger libBEDD5153_gt_ChangeRace;
 
 // Library Initialization
 void libBEDD5153_InitVariables ();

@@ -52,6 +52,10 @@
             <index>^VALUEINDEX^</index>
             <value>Unit,^UnitMorphID^</value>
         </field>
+        <field id="DataRecord">
+            <index>^VALUEINDEX^</index>
+            <value>Actor,^UnitMorphID^</value>
+        </field>
     </entry>
     <entry catalog="DataCollection" type="CDataCollectionUnit">
         <id>^UnitToMorph^</id>
@@ -97,6 +101,27 @@
         </field>
     </entry>
 
+    <entry catalog="Actor" type="CActorUnit">
+        <id>^UnitMorphID^</id>
+
+        <field id="On_Send">
+            <index>^VALUEINDEX^</index>
+            <value>Create</value>
+        </field>
+        <field id="On_Terms">
+            <index>^VALUEINDEX^-1</index>
+            <value>AbilMorph.*.Finish; MorphTo ##unitName##</value>
+        </field>
+        <field id="On_Send">
+            <index>^VALUEINDEX^</index>
+            <value>Destroy</value>
+        </field>
+        <field id="On_Terms">
+            <index>^VALUEINDEX^-1</index>
+            <value>AbilMorph.*.Start; MorphTo ##unitName##</value>
+        </field>
+    </entry>
+
     <entry catalog="Abil" type="CAbilMorph">
         <id>^UnitToMorph^</id>
         <field id="Name">
@@ -107,9 +132,25 @@
             <index>0</index>
             <value>^selectUnit^</value>
         </field>
+        <field id="InfoArray[0]_SectionArrayActor_DurationArray">
+            <index>1</index>
+            <value>1.5</value>
+        </field>
+        <field id="InfoArray[0]_SectionArrayStats_DurationArray">
+            <index>1</index>
+            <value>1.5</value>
+        </field>
         <field id="InfoArray_Unit">
             <index>1</index>
             <value>^morphUnitID^</value>
+        </field>
+        <field id="InfoArray[1]_SectionArrayActor_DurationArray">
+            <index>1</index>
+            <value>1.5</value>
+        </field>
+        <field id="InfoArray[1]_SectionArrayStats_DurationArray">
+            <index>1</index>
+            <value>1.5</value>
         </field>
     </entry>
 

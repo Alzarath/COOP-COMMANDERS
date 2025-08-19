@@ -6,4 +6,16 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="ZeratulCommanderDisruptorPhase"/>
         <Arc value="360"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="ZeratulCommanderMorphVoidArray">
+        <EditorCategories value="Race:Zeratul,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CommanderZeratulLevel09"/>
+        <InfoArray Unit="ZeratulCommanderXelNagaVoidArray"/>
+    </CAbilMorph>
+    <CAbilMorph id="ZeratulCommanderMorphVoidArray@Phased">
+        <EditorCategories value="Race:Zeratul,AbilityorEffectType:Units"/>
+        <DataCollection value="ZeratulCommanderMorphVoidArray"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CommanderZeratulLevel09"/>
+        <ActorKey value="ZeratulCommanderMorphVoidArray"/>
+        <InfoArray Unit="ZeratulCommanderXelNagaVoidArray@Alternate"/>
+    </CAbilMorph>
 </Catalog>

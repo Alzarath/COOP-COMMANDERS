@@ -8,6 +8,7 @@ const int lib6CA20615_ge_ClearSelectionSpawnPanel_Units = 0;
 const int lib6CA20615_ge_ClearSelectionSpawnPanel_Structure = 1;
 
 // Constants
+const int lib6CA20615_gv_sIZE_SELECT_RACE_BUTTON = 60;
 const int lib6CA20615_gv_kEY_OPEN_PANELS_ALT = c_keyModifierStateRequire;
 const int lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT = c_keyModifierStateIgnore;
 const int lib6CA20615_gv_kEY_OPEN_PANELS_CTRL = c_keyModifierStateIgnore;
@@ -52,11 +53,17 @@ struct lib6CA20615_gs_Player_Cheat {
     string lv_selectRace;
     fixed lv_mouseX;
     fixed lv_mouseY;
+    int lv_ownerUnitSpawn;
 };
 
 struct lib6CA20615_gs_UI {
     int lv_spawn_Line1;
     int lv_spawn_Line2;
+};
+
+struct lib6CA20615_gs_ButtonSelectRace {
+    int lv_button;
+    string lv_race;
 };
 
 struct lib6CA20615_gs_ButtonsSpawn {
@@ -84,6 +91,8 @@ int lib6CA20615_gv_mAXIMUM_SIZE_BUFFER;
 string lib6CA20615_gv_dummyIcon;
 lib6CA20615_gs_Player_Cheat[16] lib6CA20615_gv_player_Cheat;
 lib6CA20615_gs_UI lib6CA20615_gv_uI;
+lib6CA20615_gs_ButtonSelectRace[101] lib6CA20615_gv_buttonSelectRace;
+int lib6CA20615_gv_frameSelectorRace;
 lib6CA20615_gs_ButtonsSpawn[lib6CA20615_gv_cOUNT_BUTTONS + 1] lib6CA20615_gv_buttonsUnitSpawn;
 lib6CA20615_gs_ButtonsSpawn[lib6CA20615_gv_cOUNT_BUTTONS + 1] lib6CA20615_gv_buttonsStructureSpawn;
 lib6CA20615_gs_ButtonsRace[101] lib6CA20615_gv_buttonsRace;
@@ -99,7 +108,13 @@ int lib6CA20615_gv_refreshdata_button;
 // Function Declarations
 void lib6CA20615_gf_updatespawnerui ();
 void lib6CA20615_gf_ClearSelection (int lp_clearSelection, int lp_player);
+bool lib6CA20615_gf_footprint1x1 (string lp_entry);
+bool lib6CA20615_gf_footprint2x2 (string lp_entry);
+bool lib6CA20615_gf_footprint3x3 (string lp_entry);
+bool lib6CA20615_gf_footprint4x4 (string lp_entry);
+bool lib6CA20615_gf_footprint5x5 (string lp_entry);
 text lib6CA20615_gf_ConvertKeyToText (int lp_key);
+string lib6CA20615_gf_ConvertKeyToString (int lp_key);
 string lib6CA20615_gf_CheckEditorCategoriesObjectType (string lp_unit);
 string lib6CA20615_gf_CheckEditorCategoriesObjectFamily (string lp_unit);
 string lib6CA20615_gf_SearchIconForUnit (string lp_unit);
@@ -130,9 +145,12 @@ string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_
 trigger lib6CA20615_gt_init;
 trigger lib6CA20615_gt_CheatCodeUnits;
 trigger lib6CA20615_gt_CheatCodePlayers;
+trigger lib6CA20615_gt_InitSelectRace;
+trigger lib6CA20615_gt_ChangeRace;
 trigger lib6CA20615_gt_InitSpawnUnit;
 trigger lib6CA20615_gt_ReviveBuilder;
 trigger lib6CA20615_gt_TargetModOff;
+trigger lib6CA20615_gt_ChangeOwner;
 trigger lib6CA20615_gt_ChangeCategory;
 trigger lib6CA20615_gt_GenerateCategories;
 trigger lib6CA20615_gt_showspawnerui;

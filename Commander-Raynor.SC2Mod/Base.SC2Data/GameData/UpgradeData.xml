@@ -49,23 +49,11 @@
         <InfoTooltipPriority value="61"/>
         <WebPriority value="0"/>
         <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
-        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel^ParamLevel^.dds"/>
         <EditorCategories value="Race:Raynor,UpgradeType:AttackBonus"/>
-    </CUpgrade>
-    <CUpgrade id="RaynorCommanderVehicleAndShipWeapons@Level1" parent="RaynorCommanderVehicleAndShipWeapons">
-        <Name value="Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
-        <EffectArrayTemplate Operation="Set" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
-    </CUpgrade>
-    <CUpgrade id="RaynorCommanderVehicleAndShipWeapons@Level2" parent="RaynorCommanderVehicleAndShipWeapons">
-        <Name value="Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level2"/>
-        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
-        <EffectArrayTemplate Operation="Set" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
-    </CUpgrade>
-    <CUpgrade id="RaynorCommanderVehicleAndShipWeapons@Level3" parent="RaynorCommanderVehicleAndShipWeapons">
-        <Name value="Upgrade/Name/RaynorCommanderVehicleAndShipWeapons@Level3"/>
-        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
-        <EffectArrayTemplate Operation="Set" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <MaxLevel value="3"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderOrbitalDepots">
         <Icon value="Assets\Textures\talent-raynor-level12-orbitaldepots.dds"/>
@@ -119,23 +107,11 @@
         <InfoTooltipPriority value="61"/>
         <WebPriority value="0"/>
         <EffectArrayTemplate Reference="Weapon,^ParamId^,Level" Value="1"/>
-        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel^ParamLevel^.dds"/>
         <EditorCategories value="Race:Raynor,UpgradeType:AttackBonus"/>
-    </CUpgrade>
-    <CUpgrade id="RaynorCommanderInfantryWeapon@Level1" parent="RaynorCommanderInfantryWeapon">
-        <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
-        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
-    </CUpgrade>
-    <CUpgrade id="RaynorCommanderInfantryWeapon@Level2" parent="RaynorCommanderInfantryWeapon">
-        <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level2"/>
-        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
-        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
-    </CUpgrade>
-    <CUpgrade id="RaynorCommanderInfantryWeapon@Level3" parent="RaynorCommanderInfantryWeapon">
-        <Name value="Upgrade/Name/RaynorCommanderInfantryWeapon@Level3"/>
-        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
-        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <MaxLevel value="4"/>
     </CUpgrade>
     <CUpgrade id="RaynorCommanderJuggernautPlating">
         <Icon value="Assets\Textures\btn-upgrade-raynor-juggernautplating.dds"/>

@@ -22,6 +22,7 @@
     <condition id="shieldregen_0" input="ShieldRegen" operator="greater" value="0"/>
     <condition id="energy_0" input="Energy" operator="greater" value="0"/>
     <condition id="energyregen_0" input="EnergyRegen" operator="greater" value="0"/>
+    <condition id="armor_0" input="Armor" operator="greater" value="0"/>
 
     <condition id="IsBirthSound" input="SoundBirth" empty="0"/>
     <condition id="IsReadySound" input="SoundReady" empty="0"/>
@@ -119,6 +120,10 @@
             </input>
             <input id="EnergyRegen" type="real32">
                 <name>Energy Regen</name>
+                <layout column="2"/>
+            </input>
+            <input id="Armor" type="real32">
+                <name>Unit Armor</name>
                 <layout column="2"/>
             </input>
 
@@ -352,28 +357,32 @@
             <value>^LifeRegen^</value>
         </field>
         <field id="ShieldsStart">
-            <condition id="life_0"/>
+            <condition id="shield_0"/>
             <value>^Shield^</value>
         </field>
         <field id="ShieldsMax">
-            <condition id="life_0"/>
+            <condition id="shield_0"/>
             <value>^Shield^</value>
         </field>
         <field id="ShieldRegenRate">
-            <condition id="liferegen_0"/>
+            <condition id="shieldregen_0"/>
             <value>^ShieldRegen^</value>
         </field>
         <field id="EnergyStart">
-            <condition id="life_0"/>
+            <condition id="energy_0"/>
             <value>^Energy^</value>
         </field>
         <field id="EnergyMax">
-            <condition id="life_0"/>
+            <condition id="energy_0"/>
             <value>^Energy^</value>
         </field>
         <field id="EnergyRegenRate">
-            <condition id="liferegen_0"/>
+            <condition id="energyregen_0"/>
             <value>^EnergyRegen^</value>
+        </field>
+        <field id="LifeArmor">
+            <condition id="armor_0"/>
+            <value>^Armor^</value>
         </field>
 
         <field id="EditorCategories">

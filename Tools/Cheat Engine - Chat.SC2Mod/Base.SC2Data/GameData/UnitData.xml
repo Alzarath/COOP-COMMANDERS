@@ -63,6 +63,44 @@
         </CardLayouts>
         <EditorCategories value="ObjectType:Other"/>
     </CUnit>
+    <CUnit id="CheatTrain3x3Air">
+        <Footprint value="CheatBuild3x3"/>
+        <PlacementFootprint value="CheatBuild3x3"/>
+        <EditorCategories value="ObjectType:Other"/>
+        <Height value="3.75"/>
+    </CUnit>
+    <CUnit id="CheatTrain4x4Air">
+        <Footprint value="CheatBuild4x4"/>
+        <PlacementFootprint value="CheatBuild4x4"/>
+        <EditorCategories value="ObjectType:Other"/>
+        <Height value="3.75"/>
+    </CUnit>
+    <CUnit id="CheatTrain3x3Ground">
+        <Footprint value="CheatBuild3x3"/>
+        <PlacementFootprint value="CheatBuild3x3"/>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrain5x5Air">
+        <Footprint value="CheatBuild5x5"/>
+        <PlacementFootprint value="CheatBuild5x5"/>
+        <EditorCategories value="ObjectType:Other"/>
+        <Height value="3.75"/>
+    </CUnit>
+    <CUnit id="CheatTrain4x4Ground">
+        <Footprint value="CheatBuild4x4"/>
+        <PlacementFootprint value="CheatBuild4x4"/>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrain5x5Ground">
+        <Footprint value="CheatBuild5x5"/>
+        <PlacementFootprint value="CheatBuild5x5"/>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
+    <CUnit id="CheatTrain5x5Resource">
+        <Footprint value="CheatBuild5x5"/>
+        <PlacementFootprint value="CheatBuild5x5Resource"/>
+        <EditorCategories value="ObjectType:Other"/>
+    </CUnit>
     <CUnit id="CheatTrainGroundUnit">
         <Footprint value="CheatTrain"/>
         <DeadFootprint value="CheatTrain"/>

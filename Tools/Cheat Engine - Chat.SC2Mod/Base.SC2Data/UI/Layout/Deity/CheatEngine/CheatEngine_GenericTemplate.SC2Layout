@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+    <Constant name="scrollwidth" val="20"/>
+    <Constant name="scrollwidthnegative" val="-20"/>
+
+    <!-- BG -->
+
+    <Frame type="Image" name="BGTemplate">
+        <Anchor relative="$parent"/>
+        <Texture val="@CheatEngine/UI/Container"/>
+        <TextureType val="HorizontalBorder"/>
+    </Frame>
+    <Frame type="Image" name="BGNoAnchorTemplate">
+        <Texture val="@CheatEngine/UI/Container"/>
+        <TextureType val="HorizontalBorder"/>
+    </Frame>
+
+    <!-- -->
+
+    <Frame type="ScrollableFrame" name="ScrollVerticalTemplate">
+        <AcceptsMouse val="True"/>
+ 
+        <Frame type="ScrollBar" name="ScrollBar">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Orientation val="Vertical"/>
+            <StepValue val="50"/>
+            <Width val="#scrollwidth"/>
+            <Continuous val="True"/>
+ 
+            <Frame type="Image" name="Image">
+                <Anchor relative="$parent"/>
+                <Texture val="@@UI/StandardScrollBar"/>
+                <TextureType val="NineSlice"/>
+                <Tiled val="true"/>
+            </Frame>
+ 
+            <Frame type="Button" name="Button">
+                <Frame type="Image" name="NormalImage">
+                    <Anchor relative="$parent"/>
+                    <Texture val="@@UI/StandardScrollBarButton"/>
+                    <TextureType val="NineSlice"/>
+                    <StateCount val="2"/>
+                    <Tiled val="true"/>
+                </Frame>
+ 
+                <Frame type="Image" name="HoverImage">
+                    <Anchor relative="$parent"/>
+                    <Texture val="@@UI/StandardScrollBarButtonHover"/>
+                    <TextureType val="NineSlice"/>
+                    <StateCount val="2"/>
+                    <Tiled val="true"/>
+                </Frame>
+            </Frame>
+        </Frame>
+
+        <Frame type="Image" name="BG" template="CheatEngine_GenericTemplate/BGTemplate"/>
+ 
+        <Frame type="Frame" name="ContainerFrame">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="#scrollwidthnegative"/>
+            <Height val="700"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="ScrollableFrame" name="ScrollHorizontalTemplate">
+        <AcceptsMouse val="True"/>
+
+        <Frame type="ScrollBar" name="ScrollBar">
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Orientation val="Horizontal"/>
+            <StepValue val="60"/>
+            <Height val="#scrollwidth"/>
+            <Continuous val="False"/>
+ 
+            <Frame type="Image" name="Image">
+                <Anchor relative="$parent"/>
+                <Texture val="@@UI/StandardScrollBar"/>
+                <TextureType val="NineSlice"/>
+                <Tiled val="true"/>
+            </Frame>
+ 
+            <Frame type="Button" name="Button">
+                <Frame type="Image" name="NormalImage">
+                    <Anchor relative="$parent"/>
+                    <Texture val="@@UI/StandardScrollBarButton"/>
+                    <TextureType val="NineSlice"/>
+                    <StateCount val="2"/>
+                    <Tiled val="true"/>
+                </Frame>
+ 
+                <Frame type="Image" name="HoverImage">
+                    <Anchor relative="$parent"/>
+                    <Texture val="@@UI/StandardScrollBarButtonHover"/>
+                    <TextureType val="NineSlice"/>
+                    <StateCount val="2"/>
+                    <Tiled val="true"/>
+                </Frame>
+            </Frame>
+        </Frame>
+
+        <Frame type="Image" name="BG" template="CheatEngine_GenericTemplate/BGNoAnchorTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/ScrollBar" pos="Min" offset="0"/>
+        </Frame>
+ 
+        <Frame type="Frame" name="ContainerFrame">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="#scrollwidthnegative"/>
+            <Width val="60"/>
+        </Frame>
+
+    </Frame>
+    
+</Desc>

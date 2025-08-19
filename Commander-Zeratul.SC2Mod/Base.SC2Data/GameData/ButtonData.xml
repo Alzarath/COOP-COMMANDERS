@@ -4,4 +4,7 @@
         <Icon value="Assets\Textures\btn-ability-zeratul-disruptor-purificationnova.dds"/>
         <EditorCategories value="Race:Zeratul"/>
     </CButton>
+    <CButton id="ZeratulCommanderXelNagaVoidArray">
+        <Icon value="Assets\Textures\btn-unit-protoss-zeratulwarpprism.dds"/>
+    </CButton>
 </Catalog>

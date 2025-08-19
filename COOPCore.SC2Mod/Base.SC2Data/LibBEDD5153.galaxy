@@ -24,31 +24,184 @@ void libBEDD5153_InitVariables () {
 
 // Presets
 // Functions
-void libBEDD5153_gf_SetPlayersCommander (playergroup lp_playerGroup, string lp_commander) {
+void libBEDD5153_gf_SetPlayerRaceCC (int lp_player, string lp_race) {
     // Automatic Variable Declarations
-    playergroup autoBFBB2B65_g;
-    int autoBFBB2B65_var;
+    int auto572C0C88_ae;
+    int auto572C0C88_var;
 
     // Implementation
-    autoBFBB2B65_g = lp_playerGroup;
-    autoBFBB2B65_var = -1;
-    while (true) {
-        autoBFBB2B65_var = PlayerGroupNextPlayer(autoBFBB2B65_g, autoBFBB2B65_var);
-        if (autoBFBB2B65_var < 0) { break; }
-        if ((PlayerRace(autoBFBB2B65_var) == lp_commander)) {
-            continue;
-        }
-
-        TriggerSendEvent((libBEDD5153_gv_eVENT_PlayerCommanderChanges + "[" + IntToString(autoBFBB2B65_var) + "][" + (PlayerRace(autoBFBB2B65_var)) + "][" + ("From") + "]"));
-        PlayerSetRace(autoBFBB2B65_var, lp_commander);
-        TriggerSendEvent((libBEDD5153_gv_eVENT_PlayerCommanderChanges + "[" + IntToString(autoBFBB2B65_var) + "][" + (lp_commander) + "][" + ("On") + "]"));
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), PlayerRace(lp_player), "From", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), (libBEDD5153_gv_eVENT_Constant_anyRace), "From", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, PlayerRace(lp_player), "From", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, (libBEDD5153_gv_eVENT_Constant_anyRace), "From", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), PlayerRace(lp_player), "From", null), libBEDD5153_gv_eVENT_PARAM_ChangingRace), (PlayerRace(lp_player)));
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), (libBEDD5153_gv_eVENT_Constant_anyRace), "From", null), libBEDD5153_gv_eVENT_PARAM_ChangingRace), (PlayerRace(lp_player)));
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, PlayerRace(lp_player), "From", null), libBEDD5153_gv_eVENT_PARAM_ChangingRace), (PlayerRace(lp_player)));
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, (libBEDD5153_gv_eVENT_Constant_anyRace), "From", null), libBEDD5153_gv_eVENT_PARAM_ChangingRace), (PlayerRace(lp_player)));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), PlayerRace(lp_player), "From", null));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), (libBEDD5153_gv_eVENT_Constant_anyRace), "From", null));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, PlayerRace(lp_player), "From", null));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, (libBEDD5153_gv_eVENT_Constant_anyRace), "From", null));
+    PlayerSetRace(lp_player, lp_race);
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), PlayerRace(lp_player), "On", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), (libBEDD5153_gv_eVENT_Constant_anyRace), "On", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, PlayerRace(lp_player), "On", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetInt(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, (libBEDD5153_gv_eVENT_Constant_anyRace), "On", null), libBEDD5153_gv_eVENT_PARAM_TrigPlayer), lp_player);
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), PlayerRace(lp_player), "On", null), libBEDD5153_gv_eVENT_PARAM_ChangedRace), (PlayerRace(lp_player)));
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), (libBEDD5153_gv_eVENT_Constant_anyRace), "On", null), libBEDD5153_gv_eVENT_PARAM_ChangedRace), (PlayerRace(lp_player)));
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, PlayerRace(lp_player), "On", null), libBEDD5153_gv_eVENT_PARAM_ChangedRace), (PlayerRace(lp_player)));
+    DataTableSetString(false, TriggerEventParamName(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, (libBEDD5153_gv_eVENT_Constant_anyRace), "On", null), libBEDD5153_gv_eVENT_PARAM_ChangedRace), (PlayerRace(lp_player)));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), PlayerRace(lp_player), "On", null));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(IntToString(lp_player), (libBEDD5153_gv_eVENT_Constant_anyRace), "On", null));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, PlayerRace(lp_player), "On", null));
+    TriggerSendEvent(libBEDD5153_gf_ResponsePRC(libBEDD5153_gv_eVENT_Constant_anyPlayer, (libBEDD5153_gv_eVENT_Constant_anyRace), "On", null));
+    auto572C0C88_ae = DataTableValueCount(false);
+    auto572C0C88_var = 1;
+    for ( ; auto572C0C88_var <= auto572C0C88_ae; auto572C0C88_var += 1 ) {
+        TextExpressionSetToken("Param/Expression/lib_BEDD5153_4867A655", "A", StringToText(DataTableValueName(false, auto572C0C88_var)));
+        TextExpressionSetToken("Param/Expression/lib_BEDD5153_4867A655", "B", IntToText(DataTableGetInt(false, DataTableValueName(false, auto572C0C88_var))));
+        TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_BEDD5153_4867A655"), true);
     }
 }
 
-void libBEDD5153_gf_PlayerCommanderChanges (trigger t, int lp_player, string lp_commander, string lp_direction) {
+string libBEDD5153_gf_ResponsePRC (string lp_player, string lp_race, string lp_inOut, string lp_parameter) {
     // Automatic Variable Declarations
     // Implementation
-    TriggerAddEventGeneric(t, (libBEDD5153_gv_eVENT_PlayerCommanderChanges + "[" + IntToString(lp_player) + "][" + (lp_commander) + "][" + (lp_direction) + "]"));
+    if ((lp_parameter == null)) {
+        return (libBEDD5153_gv_eVENT_PlayerRaceChanges + "[" + lp_player + "][" + (lp_race) + "][" + (lp_inOut) + "]");
+    }
+
+    return TriggerEventParamName((libBEDD5153_gv_eVENT_PlayerRaceChanges + "[" + lp_player + "][" + (lp_race) + "][" + (lp_inOut) + "]"), lp_parameter);
+}
+
+void libBEDD5153_gf_PlayerRaceChangesCC (trigger t, int lp_player, string lp_race, string lp_inOut) {
+    // Automatic Variable Declarations
+    // Implementation
+    TriggerAddEventGeneric(t, (libBEDD5153_gv_eVENT_PlayerRaceChanges + "[" + IntToString(lp_player) + "][" + (lp_race) + "][" + (lp_inOut) + "]"));
+    TriggerAddEventGeneric(t, (libBEDD5153_gv_eVENT_PlayerRaceChanges + "[" + IntToString(lp_player) + "][" + (lp_race) + "][" + (lp_inOut) + "]"));
+}
+
+int libBEDD5153_gf_TriggeringPlayerCC () {
+    // Automatic Variable Declarations
+    // Implementation
+    return DataTableGetInt(false, TriggerEventParamName(EventGenericName(), libBEDD5153_gv_eVENT_PARAM_TrigPlayer));
+}
+
+string libBEDD5153_gf_ChangedRaceCC () {
+    // Automatic Variable Declarations
+    // Implementation
+    return (DataTableGetString(false, TriggerEventParamName(EventGenericName(), libBEDD5153_gv_eVENT_PARAM_ChangedRace)));
+}
+
+string libBEDD5153_gf_ChangingRaceCC () {
+    // Automatic Variable Declarations
+    // Implementation
+    return (DataTableGetString(false, TriggerEventParamName(EventGenericName(), libBEDD5153_gv_eVENT_PARAM_ChangingRace)));
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init
+//--------------------------------------------------------------------------------------------------
+bool libBEDD5153_gt_Init_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBEDD5153_gt_Init_Init () {
+    libBEDD5153_gt_Init = TriggerCreate("libBEDD5153_gt_Init_Func");
+    TriggerAddEventMapInit(libBEDD5153_gt_Init);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Commander For Player - On
+//--------------------------------------------------------------------------------------------------
+bool libBEDD5153_gt_CommanderForPlayerOn_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TextExpressionSetToken("Param/Expression/lib_BEDD5153_94F359C5", "B", TextWithColor(PlayerName(libBEDD5153_gf_TriggeringPlayerCC()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libBEDD5153_gf_TriggeringPlayerCC(), false))));
+    TextExpressionSetToken("Param/Expression/lib_BEDD5153_94F359C5", "A", StringExternal(CatalogFieldValueGet(c_gameCatalogRace, libBEDD5153_gf_ChangedRaceCC(), "Name", c_playerAny)));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_BEDD5153_94F359C5"));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBEDD5153_gt_CommanderForPlayerOn_Init () {
+    libBEDD5153_gt_CommanderForPlayerOn = TriggerCreate("libBEDD5153_gt_CommanderForPlayerOn_Func");
+    libBEDD5153_gf_PlayerRaceChangesCC(libBEDD5153_gt_CommanderForPlayerOn, 1, "anyrace", "On");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Commander For Player - From
+//--------------------------------------------------------------------------------------------------
+bool libBEDD5153_gt_CommanderForPlayerFrom_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TextExpressionSetToken("Param/Expression/lib_BEDD5153_232B3CE1", "B", TextWithColor(PlayerName(libBEDD5153_gf_TriggeringPlayerCC()), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libBEDD5153_gf_TriggeringPlayerCC(), false))));
+    TextExpressionSetToken("Param/Expression/lib_BEDD5153_232B3CE1", "A", StringExternal(CatalogFieldValueGet(c_gameCatalogRace, libBEDD5153_gf_ChangingRaceCC(), "Name", c_playerAny)));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_BEDD5153_232B3CE1"));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBEDD5153_gt_CommanderForPlayerFrom_Init () {
+    libBEDD5153_gt_CommanderForPlayerFrom = TriggerCreate("libBEDD5153_gt_CommanderForPlayerFrom_Func");
+    libBEDD5153_gf_PlayerRaceChangesCC(libBEDD5153_gt_CommanderForPlayerFrom, 1, ("Zerg"), "On");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Change Race
+//--------------------------------------------------------------------------------------------------
+bool libBEDD5153_gt_ChangeRace_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_race;
+
+    // Automatic Variable Declarations
+    string autoD602B2AA_val;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoD602B2AA_val = StringWord(EventChatMessage(false), 1);
+    if (autoD602B2AA_val == "terr") {
+        lv_race = ("Terr");
+    }
+    else if (autoD602B2AA_val == "zerg") {
+        lv_race = ("Zerg");
+    }
+    else if (autoD602B2AA_val == "prot") {
+        lv_race = ("Prot");
+    }
+    else {
+    }
+    libBEDD5153_gf_SetPlayerRaceCC(StringToInt(StringWord(EventChatMessage(false), 2)), lv_race);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBEDD5153_gt_ChangeRace_Init () {
+    libBEDD5153_gt_ChangeRace = TriggerCreate("libBEDD5153_gt_ChangeRace_Func");
+    TriggerAddEventChatMessage(libBEDD5153_gt_ChangeRace, c_playerAny, "", false);
+}
+
+void libBEDD5153_InitTriggers () {
+    libBEDD5153_gt_Init_Init();
+    libBEDD5153_gt_CommanderForPlayerOn_Init();
+    libBEDD5153_gt_CommanderForPlayerFrom_Init();
+    libBEDD5153_gt_ChangeRace_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -65,5 +218,6 @@ void libBEDD5153_InitLib () {
 
     libBEDD5153_InitLibraries();
     libBEDD5153_InitVariables();
+    libBEDD5153_InitTriggers();
 }
 

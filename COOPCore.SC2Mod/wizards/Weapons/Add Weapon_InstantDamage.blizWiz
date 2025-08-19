@@ -3,17 +3,17 @@
     <name>Add Weapon - Instant Damage</name>
     <category>COOP Commanders/Not implemented/Weapon</category>
     <objecttypes create="Weapon"/>
+    <instructions>
+        Создание оружия с мгновенным уроном, например: Оружие морпеха, вызывающее моментальное срабатывания эффекта урона
+
+        Как использовать? 
+    </instructions>
 
     <!-- conditions -->
 
     <condition id="targetDCnotEmpty" input="TargetDC" empty="0"/>
 
     <!-- inputs -->
-
-    <input id="SectionMakeWeapon" type="WizardText">
-        <default value="СОЗДАНИЕ ОРУЖИЯ С МГНОВЕННЫМ УРОНОМ"/>
-        <color value="255,255,0,0"/>
-    </input>
 
     <!-- PAGE 1 -->
     <!-- COLUMN 1 -->
@@ -95,10 +95,11 @@
 
     <entry catalog="Weapon">
         <id>^WeaponID^</id>
+        <parentid>CommanderWeapon_Instant</parentid>
     </entry>
 
     <entry catalog="Effect" type="CEffectDamage">
-        <id>^WeaponID^</id>
+        <id>^WeaponID^@Damage</id>
     </entry>
 
 </wizard>

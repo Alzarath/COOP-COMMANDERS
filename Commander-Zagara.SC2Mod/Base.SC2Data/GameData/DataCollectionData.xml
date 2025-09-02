@@ -47,13 +47,15 @@
         <DataRecord Entry="Sound,ZagaraCommanderWeaponZergling@AttackImpact"/>
         <DataRecord Entry="Weapon,ZagaraCommanderWeaponZergling"/>
         <Pattern value=""/>
+        <TechInfoUpgradeUsed value="ZagaraCommanderAdrenalOverload"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="ZagaraCommanderZergling" parent="CommanderUnit">
         <EditorCategories value="DataGroup:Unit,Race:Zagara,ObjectType:Unit,DataFamily:Coop"/>
         <DataRecord Entry="Actor,ZagaraCommanderZergling"/>
-        <DataRecord Entry="Actor,ZagaraCommanderZergling@DodgeImpact"/>
         <DataRecord Entry="Actor,ZagaraCommanderZergling@SoundDeath"/>
-        <DataRecord Entry="Behavior,ZagaraCommanderZergling@Evasion"/>
+        <DataRecord Entry="Actor,ZagaraCommanderZergling@DodgeImpact"/>
+        <DataRecord Entry="Actor,ZagaraCommanderZergling@BurrowedSplat"/>
+        <DataRecord Entry="Behavior,ZagaraCommanderZergling"/>
         <DataRecord Entry="Button,ZagaraCommanderZergling"/>
         <DataRecord Entry="Button,ZagaraCommanderZergling@3"/>
         <DataRecord Entry="Button,ZagaraCommanderZergling@1"/>
@@ -62,30 +64,32 @@
         <DataRecord Entry="Effect,ZagaraCommanderZergling"/>
         <DataRecord Entry="Light,ZagaraCommanderZergling@Portrait"/>
         <DataRecord Entry="Model,ZagaraCommanderZergling@1"/>
-        <DataRecord Entry="Model,ZagaraCommanderZergling@Death"/>
-        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathDisintegrate"/>
-        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathEviscerate"/>
-        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathFire"/>
         <DataRecord Entry="Model,ZagaraCommanderZergling@DeathUpgrade"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathDisintegrate"/>
         <DataRecord Entry="Model,ZagaraCommanderZergling@DeathFireUpgrade"/>
         <DataRecord Entry="Model,ZagaraCommanderZergling@DeathEviscerateUpgrade"/>
-        <DataRecord Entry="Model,ZagaraCommanderZergling@Portrait"/>
         <DataRecord Entry="Model,ZagaraCommanderZergling"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@Death"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathEviscerate"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathFire"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@Portrait"/>
         <DataRecord Entry="Model,ZagaraCommanderZergling@DodgeImpact"/>
         <DataRecord Entry="Sound,ZagaraCommanderZergling@Death"/>
-        <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathEviscerate"/>
         <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathFire"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathEviscerate"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathVoice"/>
         <DataRecord Entry="Sound,ZagaraCommanderZergling@Ready"/>
         <DataRecord Entry="Sound,ZagaraCommanderZergling@What"/>
         <DataRecord Entry="Sound,ZagaraCommanderZergling@Yes"/>
         <DataRecord Entry="Sound,ZagaraCommanderZergling@Attack"/>
         <DataRecord Entry="Sound,ZagaraCommanderZergling@Pissed"/>
-        <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathVoice"/>
         <DataRecord Entry="Unit,ZagaraCommanderZergling@Burrowed"/>
         <DataRecord Entry="Unit,ZagaraCommanderZergling"/>
         <DataRecord Entry="Validator,ZagaraCommanderZergling@DeathByAcidUpgraded"/>
         <DataRecord Entry="Validator,ZagaraCommanderZergling@DeathByFireUpgraded"/>
         <DataRecord Entry="Validator,ZagaraCommanderZergling@DeathByEviscerateUpgraded"/>
+        <TechInfoUpgradeUsed value="ZagaraCommanderMetabolicBoost"/>
+        <TechInfoUpgradeUsed value="ZagaraCommanderHardenedCarapace"/>
         <TechInfoUpgradeUsed value="ZagaraCommanderZerglingDodgeChance"/>
     </CDataCollectionUnit>
     <CDataCollectionUpgrade id="ZagaraCommanderAdrenalOverload">

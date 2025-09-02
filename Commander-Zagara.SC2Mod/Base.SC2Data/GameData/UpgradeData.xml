@@ -3,7 +3,7 @@
     <CUpgrade id="ZagaraCommanderZerglingDodgeChance">
         <Flags index="UpgradeCheat" value="0"/>
         <EffectArrayTemplate Reference="Effect,^ParamId^,Amount" Value="{DataCollection,ZagaraCommanderZerglingDodgeChance,UpgradeInfoUnitLifeArmorPerLevel * 100}"/>
-        <EffectArrayTemplate Reference="Behavior,^ParamId^,DamageResponse.Chance" Value="{DataCollection,ZagaraCommanderZerglingDodgeChance,UpgradeInfoUnitLifeArmorPerLevel * 100}"/>
+        <EffectArrayTemplate Reference="Behavior,^ParamId^,DamageResponse.Chance" Value="{DataCollection,ZagaraCommanderZerglingDodgeChance,UpgradeInfoUnitLifeArmorPerLevel}"/>
         <EditorCategories value="Race:Zagara"/>
         <MaxLevel value="30"/>
         <LeaderAlias value=""/>
@@ -11,8 +11,10 @@
     </CUpgrade>
     <CUpgrade id="ZagaraCommanderHardenedCarapace">
         <Icon value="Assets\Textures\btn-upgrade-zerg-hardenedcarapace.dds"/>
-        <EffectArray Reference="Unit,^ParamId^,LifeMax" Value="10"/>
-        <EffectArray Reference="Unit,^ParamId^@Burrowed,LifeMax" Value="10"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeMax" Value="10"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeStart" Value="10"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^@Burrowed,LifeMax" Value="10"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^@Burrowed,LifeStart" Value="10"/>
         <EditorCategories value="Race:Zagara,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="ZagaraCommanderShreddingClaws">
@@ -39,7 +41,7 @@
         <Alert value="ResearchComplete"/>
         <Race value="Zerg"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Reference="Unit,^ParamId^,Speed" Value="1.746000"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,Speed" Value="1.746000"/>
         <EditorCategories value="Race:Zagara,UpgradeType:Talents"/>
     </CUpgrade>
 </Catalog>

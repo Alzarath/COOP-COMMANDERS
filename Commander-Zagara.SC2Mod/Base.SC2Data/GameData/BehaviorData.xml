@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CBehaviorBuff id="ZagaraCommanderZergling@Evasion">
+    <CBehaviorBuff id="ZagaraCommanderZergling">
         <InfoFlags index="Hidden" value="1"/>
         <RemoveValidatorArray value="ZagaraCommanderZerglingDodgeChance@Use"/>
         <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1">

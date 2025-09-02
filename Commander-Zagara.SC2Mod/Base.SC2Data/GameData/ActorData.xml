@@ -77,7 +77,7 @@
     <CActorModel id="ZagaraCommanderZergling@DodgeImpact">
         <Inherits index="BaseModelScale" value="1"/>
         <Inherits index="Scale" value="1"/>
-        <On Terms="Behavior.ZagaraCommanderZergling@Evasion.DamageHandled" Send="Create"/>
+        <On Terms="Behavior.ZagaraCommanderZergling.DamageHandled" Send="Create"/>
         <On Terms="ActorCreation" Send="AnimPlay Dodge Stand,Victory"/>
         <On Terms="ActorCreation" Send="AnimSetTime Dodge 0.500000"/>
         <On Terms="ActorCreation" Send="SetOpacity 0.800000"/>

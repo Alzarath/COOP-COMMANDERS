@@ -25,7 +25,7 @@
         <AbilArray Link="que1"/>
         <AbilArray Link="ZagaraCommanderZerglingBurrow@Down"/>
         <AbilArray Link="ZagaraCommanderMorphZerglingToBaneling"/>
-        <BehaviorArray Link="ZagaraCommanderZergling@Evasion"/>
+        <BehaviorArray Link="ZagaraCommanderZergling"/>
         <WeaponArray Link="ZagaraCommanderWeaponZergling"/>
         <CardLayouts index="0">
             <LayoutButtons Face="ZagaraCommanderBaneling" Type="AbilCmd" AbilCmd="ZagaraCommanderMorphZerglingToBaneling,Train1" Row="2" Column="0"/>

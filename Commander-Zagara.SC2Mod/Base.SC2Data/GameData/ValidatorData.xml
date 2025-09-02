@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorPlayerRequirement id="ZagaraCommanderShreddingClaws@Use">
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="ZagaraCommanderShreddingClaws@Use"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="ZagaraCommanderZerglingDodgeChance@Use">
+        <Find value="1"/>
+        <Value value="ZagaraCommanderZerglingDodgeChance@Show"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="ZagaraCommanderMetabolicBoost@Use">
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="ZagaraCommanderMetabolicBoost@Use"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="ZagaraCommanderZergling@DeathByAcidUpgraded">
+        <Type value="And"/>
+        <CombineArray value="ZagaraCommanderMetabolicBoost@Use"/>
+        <CombineArray value="DeathByAcid"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="ZagaraCommanderZergling@DeathByEviscerateUpgraded">
+        <Type value="And"/>
+        <CombineArray value="ZagaraCommanderMetabolicBoost@Use"/>
+        <CombineArray value="DeathByEviscerate"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="ZagaraCommanderZergling@DeathByFireUpgraded">
+        <Type value="And"/>
+        <CombineArray value="ZagaraCommanderMetabolicBoost@Use"/>
+        <CombineArray value="DeathByFire"/>
+    </CValidatorCombine>
+</Catalog>

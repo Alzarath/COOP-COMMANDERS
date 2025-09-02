@@ -21,7 +21,7 @@ Button/Tooltip/ZagaraCommanderHardenedCarapace=<c val="ffff8a">Zerglings</c> gai
 Button/Tooltip/ZagaraCommanderMetabolicBoost=Increases the movement speed of <c val="ffff8a">Zerglings</c>.
 Button/Tooltip/ZagaraCommanderShreddingClaws=<c val="ffff8a">Zergling</c> attacks reduce their target's armor to 0 for <d ref="Behavior,ZagaraCommanderWeaponZergling@ArmorNegated,Duration"/> seconds.
 Button/Tooltip/ZagaraCommanderWeaponZergling@1=Attack speed increased by 40%.
-Button/Tooltip/ZagaraCommanderWeaponZergling@2=Zergling attacks reduce their target's armor to 0 for <d ref="Behavior,ZagaraCommanderZerglingClaws@ArmorNegated,Duration"/> seconds.
+Button/Tooltip/ZagaraCommanderWeaponZergling@2=Zergling attacks reduce their target's armor to 0 for <d ref="Behavior,ZagaraCommanderWeaponZergling@ArmorNegated,Duration"/> seconds.
 Button/Tooltip/ZagaraCommanderZergling=Swarmling Strain<n/><n/>Fast melee unit. Spawns in groups of three. Morphs almost instantly. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
 Button/Tooltip/ZagaraCommanderZergling@1=Movement speed increased by 60%.
 Button/Tooltip/ZagaraCommanderZergling@2=Zergling gains +10 maximum life.
@@ -48,8 +48,12 @@ RequirementNode/Tooltip/CountUpgradeZagaraCommanderAdrenalOverloadCompleteOnly34
 RequirementNode/Tooltip/CountUpgradeZagaraCommanderHardenedCarapaceCompleteOnly2346380126TechTreeCheat=Evolve Hardened Carapace at the Spawning Pool
 RequirementNode/Tooltip/CountUpgradeZagaraCommanderMetabolicBoostCompleteOnly3154718206TechTreeCheat=Evolve Metabolic Boost at the Spawning Pool
 RequirementNode/Tooltip/CountUpgradeZagaraCommanderShreddingClawsCompleteOnly4266628015TechTreeCheat=Evolve Shredding Claws at the Spawning Pool
+Unit/Name/COOP/ZagaraCommanderBaneling=Baneling
+Unit/Name/COOP/ZagaraCommanderZergling=Zergling
+Unit/Name/ZagaraCommanderBaneling=Baneling
 Unit/Name/ZagaraCommanderZerglig=Zergling
 Unit/Name/ZagaraCommanderZergling=Zergling
+UnitSubtitle/ZagaraCommanderBaneling=Swarmling Strain
 UnitSubtitle/ZagaraCommanderZerglig=Swarmling Strain
 UnitSubtitle/ZagaraCommanderZergling=Swarmling Strain
 Upgrade/Name/ZagaraCommanderAdrenalOverload=Adrenal Overload

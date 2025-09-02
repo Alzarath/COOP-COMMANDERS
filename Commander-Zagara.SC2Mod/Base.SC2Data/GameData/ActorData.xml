@@ -8,14 +8,10 @@
         <On Terms="WeaponStart.ZagaraCommanderWeaponZergling.AttackStart" Send="Create"/>
         <Sound value="ZagaraCommanderWeaponZergling@AttackLaunch"/>
     </CActorSound>
-    <CActorUnit id="ZagaraCommanderZergling" parent="CommanderGroundUnit" unitName="ZagaraCommanderZergling">
+    <CActorUnit id="ZagaraCommanderZergling" parent="CommanderGroundUnitBurrower" unitName="ZagaraCommanderZergling">
         <Aliases value="_UnitSmall"/>
-        <Macros index="1" value="ZergBurrowStandardAnimMacro"/>
-        <Macros index="2" value="ZergSmallBurrowEffects"/>
-        <Macros index="3" value="UnloadDropAnim"/>
-        <Macros index="4" value="TerrainSquibAnimations"/>
-        <On Terms="UnitBirth.ZagaraCommanderZerglingBurrowed" Send="Create"/>
-        <On Terms="UnitBirth.ZagaraCommanderZerglingBurrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant,DontResetOnUnhide"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergSmallBurrowEffects"/>
         <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Birth" Send="AnimClear Birth"/>
         <On Terms="AbilMorph.ZagaraCommanderMorphZerglingToBaneling.Finish; MorphTo HotSSwarmling; !AbilKey BurrowUp" Send="Create"/>
         <On Terms="AbilMorph.ZagaraCommanderMorphZerglingToBaneling.Start; MorphFrom HotSSwarmling; !AbilKey BurrowDown" Send="Destroy"/>
@@ -36,59 +32,12 @@
         <On Terms="UnitDeathCustomize; ValidateUnit ZagaraCommanderZergling@DeathByEviscerateUpgraded" Send="DeathCustomize UpgradedEviscerate"/>
         <On Terms="UnitDeathCustomize; ValidateUnit ZagaraCommanderMetabolicBoost@Use" Send="DeathCustomize Upgrade"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
-        <BuildModel value="ZagaraCommanderZergling"/>
-        <DeathArray index="Normal" VoiceLink="ZagaraCommanderZerglingDeathVoice"/>
-        <DeathArray index="Blast" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid" VoiceLink=""/>
-        <DeathArray index="Eat" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Electrocute" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Eviscerate" VoiceLink=""/>
-        <DeathArray index="Fire" VoiceLink=""/>
-        <DeathArray index="Freeze" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Impact" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Morph" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Reincarnation" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Silentkill" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Squish" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Timeout" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Unlink" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="UnderConstruction" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Salvage" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="Cancel" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="TrainingComplete" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathArray index="TrainingCancel" ModelLink="" SoundLink="" VoiceLink=""/>
-        <DeathCustoms index="5">
-            <ModelLink value="ZagaraCommanderZergling@DeathUpgrade"/>
-            <SoundLink value="ZagaraCommanderZergling@Death"/>
-            <Name value="Upgrade"/>
-            <InheritsFrom value=""/>
-        </DeathCustoms>
-        <DeathCustoms index="6" ModelLink="ZagaraCommanderZergling@DeathDisintegrate" SoundLink="Uni_DeathFXAcid" Name="UpgradedAcid">
-            <BodySquibs index="0" removed="1"/>
-        </DeathCustoms>
-        <DeathCustoms index="7">
-            <ModelLink value="ZagaraCommanderZergling@DeathFireUpgrade"/>
-            <SoundLink value="ZagaraCommanderZergling@DeathFire"/>
-            <Name value="UpgradedFire"/>
-            <InheritsFrom value=""/>
-            <BodySquibs index="0" removed="1"/>
-        </DeathCustoms>
-        <DeathCustoms index="8">
-            <ModelLink value="ZagaraCommanderZergling@DeathEviscerateUpgrade"/>
-            <SoundLink value="ZagaraCommanderZergling@DeathEviscerate"/>
-            <Name value="UpgradedEviscerate"/>
-            <InheritsFrom value=""/>
-            <BodySquibs index="0" removed="1"/>
-        </DeathCustoms>
-        <DeathCustoms index="9" removed="1"/>
-        <DeathCustoms index="10" removed="1"/>
-        <DeathCustoms index="11" removed="1"/>
-        <DeathCustoms index="12" removed="1"/>
-        <DeathCustoms index="13" removed="1"/>
-        <DeathCustoms index="14" removed="1"/>
-        <DeathCustoms index="15" removed="1"/>
+        <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid"/>
+        <DeathCustoms ModelLink="ZagaraCommanderZergling@DeathUpgrade" SoundLink="ZagaraCommanderZergling@Death" Name="Upgrade"/>
+        <DeathCustoms ModelLink="ZagaraCommanderZergling@DeathDisintegrate" SoundLink="Uni_DeathFXAcid" Name="UpgradedAcid"/>
+        <DeathCustoms ModelLink="ZagaraCommanderZergling@DeathFireUpgrade" SoundLink="ZagaraCommanderZergling@DeathFire" Name="UpgradedFire"/>
+        <DeathCustoms ModelLink="ZagaraCommanderZergling@DeathEviscerateUpgrade" SoundLink="ZagaraCommanderZergling@DeathEviscerate" Name="UpgradedEviscerate"/>
         <DeathActorModel value="UnitDeathModel"/>
-        <PlacementModel value="ZagaraCommanderZergling"/>
         <TerrainSquibs index="0">
             <GroupName value="RippleStandard"/>
             <MovementDistance value="0.250000,0.250000"/>
@@ -96,7 +45,7 @@
             <RangeUp value="1.000000"/>
             <RangeDown value="1.000000"/>
             <RangeDownFade value="0.000000"/>
-            <Visuals index="0" TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
+            <Visuals index="0" ModelLink="WaterRippleTiny"/>
         </TerrainSquibs>
         <WalkAnimMoveSpeed value="3.1328"/>
         <BarOffset value="30"/>
@@ -138,4 +87,7 @@
         <On Terms="TimerExpired; TimerName DelayDestroy" Send="Destroy"/>
         <HostSiteOps Ops="SOpAttachOrigin" HoldPosition="1" HoldRotation="1"/>
     </CActorModel>
+    <CActorSplat id="ZagaraCommanderZergling@BurrowedSplat" parent="CommanderBurrowedSplat" unitName="ZagaraCommanderZergling">
+        <HostSiteOps Ops="SOpAttachHardPoint"/>
+    </CActorSplat>
 </Catalog>

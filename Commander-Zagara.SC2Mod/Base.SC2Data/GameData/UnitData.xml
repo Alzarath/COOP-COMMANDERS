@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CUnit id="ZagaraCommanderZergling" parent="CommanderGround_Zerg">
-        <Name value="Unit/Name/ZagaraCommanderZergling"/>
         <Subtitle value="UnitSubtitle/ZagaraCommanderZergling"/>
         <Race value="Zerg"/>
         <Mob value="Multiplayer"/>
@@ -23,28 +22,20 @@
         <CostResource index="Minerals" value="25"/>
         <DamageDealtXP value="0"/>
         <DamageTakenXP value="0"/>
-        <AbilArray index="0" Link="stop"/>
-        <AbilArray index="1" Link="attack"/>
-        <AbilArray index="2" Link="move"/>
         <AbilArray Link="que1"/>
         <AbilArray Link="ZagaraCommanderZerglingBurrow@Down"/>
         <AbilArray Link="ZagaraCommanderMorphZerglingToBaneling"/>
         <BehaviorArray Link="ZagaraCommanderZergling@Evasion"/>
         <WeaponArray Link="ZagaraCommanderWeaponZergling"/>
         <CardLayouts index="0">
-            <LayoutButtons index="0" Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons index="1" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons index="2" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons index="3" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons index="4" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="ZagaraCommanderBaneling" Type="AbilCmd" AbilCmd="ZagaraCommanderMorphZerglingToBaneling,Train1" Row="2" Column="0"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="ZagaraCommanderZerglingBurrow@Down,Execute" Row="2" Column="4"/>
-            <LayoutButtons Face="ZagaraCommanderZergling@2" Type="Passive" Row="1" Column="2"/>
-            <LayoutButtons Face="ZagaraCommanderWeaponZergling@1" Type="Passive" Row="1" Column="1"/>
-            <LayoutButtons Face="ZagaraCommanderZergling@1" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="ZagaraCommanderZergling@1" Type="Passive" Requirements="ZagaraCommanderMetabolicBoost@Use" Row="1" Column="0"/>
+            <LayoutButtons Face="ZagaraCommanderWeaponZergling@1" Type="Passive" Requirements="ZagaraCommanderAdrenalOverload@Use" Row="1" Column="1"/>
+            <LayoutButtons Face="ZagaraCommanderZergling@2" Type="Passive" Requirements="ZagaraCommanderHardenedCarapace@Use" Row="1" Column="2"/>
+            <LayoutButtons Face="ZagaraCommanderWeaponZergling@2" Type="Passive" Requirements="ZagaraCommanderShreddingClaws@Use" Row="1" Column="3"/>
             <LayoutButtons Face="ZagaraCommanderZergling@3" Type="Passive" Row="2" Column="3"/>
-            <LayoutButtons Face="ZagaraCommanderWeaponZergling@2" Type="Passive" Row="1" Column="3"/>
-            <LayoutButtons Face="ZagaraCommanderZergling@4" Type="Passive" Row="1" Column="4"/>
+            <LayoutButtons Face="ZagaraCommanderZergling@4" Type="Passive" Requirements="ZagaraCommanderZerglingDodgeChance@Show" Row="1" Column="4"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -71,8 +62,9 @@
         <TauntDuration index="Cheer" value="5"/>
         <TauntDuration index="Dance" value="5"/>
     </CUnit>
+    <CUnit id="ZagaraCommanderBaneling" parent="CommanderGround_Zerg"/>
     <CUnit id="ZagaraCommanderZergling@Burrowed" parent="CommanderGround_Zerg">
-        <Name value="Unit/Name/ZagaraCommanderZergling"/>
+        <Name value="Unit/Name/COOP/ZagaraCommanderZergling"/>
         <Subtitle value="UnitSubtitle/ZagaraCommanderZergling"/>
         <Description value="Button/Tooltip/ZagaraCommanderZergling"/>
         <Race value="Zerg"/>
@@ -106,11 +98,32 @@
         <CardLayouts index="0">
             <LayoutButtons index="0" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons index="1" Face="BurrowUp" Type="AbilCmd" AbilCmd="ZagaraCommanderZerglingBurrow@Up,Execute" Row="2" Column="4"/>
-            <LayoutButtons index="2" Face="ZagaraCommanderZergling@2" Type="Passive" AbilCmd="" Row="1" Column="2"/>
-            <LayoutButtons index="3" Face="ZagaraCommanderWeaponZergling@1" Type="Passive" AbilCmd="" Row="1" Column="1"/>
-            <LayoutButtons index="4" Face="ZagaraCommanderMetabolicBoost" Type="Passive" AbilCmd="" Row="1" Column="0"/>
+            <LayoutButtons index="2">
+                <Face value="ZagaraCommanderZergling@2"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="ZagaraCommanderHardenedCarapace@Use"/>
+                <Row value="1"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons index="3">
+                <Face value="ZagaraCommanderWeaponZergling@1"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="ZagaraCommanderAdrenalOverload@Use"/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons index="4">
+                <Face value="ZagaraCommanderMetabolicBoost"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="ZagaraCommanderMetabolicBoost@Use"/>
+                <Row value="1"/>
+                <Column value="0"/>
+            </LayoutButtons>
             <LayoutButtons Face="ZagaraCommanderZergling@3" Type="Passive" Row="2" Column="3"/>
-            <LayoutButtons Face="ZagaraCommanderWeaponZergling@2" Type="Passive" Row="1" Column="3"/>
+            <LayoutButtons Face="ZagaraCommanderWeaponZergling@2" Type="Passive" Requirements="ZagaraCommanderShreddingClaws@Use" Row="1" Column="3"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0"/>

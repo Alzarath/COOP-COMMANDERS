@@ -2,6 +2,7 @@
 Actor/Name/ZagaraCommanderWeaponZergling@Attack=Attack
 Actor/Name/ZagaraCommanderWeaponZergling@SoundStart=Sound
 Actor/Name/ZagaraCommanderZergling=Zergling
+Actor/Name/ZagaraCommanderZergling@BurrowedSplat=Burrowed Splat
 Actor/Name/ZagaraCommanderZergling@DodgeImpact=Dodge Impact
 Actor/Name/ZagaraCommanderZergling@SoundDeath=Sound Death
 Behavior/Name/ZagaraCommanderZergling@Evasion=Evasion

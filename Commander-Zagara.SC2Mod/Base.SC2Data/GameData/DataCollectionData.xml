@@ -24,7 +24,6 @@
     </CDataCollectionUpgrade>
     <CDataCollectionAbil id="ZagaraCommanderMorphZerglingToBaneling" parent="CommanderAbilityMorph">
         <EditorCategories value="DataFamily:Coop,Race:Zagara,DataGroup:Ability,ObjectType:Other"/>
-        <EditorIconSource value="Button"/>
         <DataRecord Entry="Abil,ZagaraCommanderMorphZerglingToBaneling"/>
     </CDataCollectionAbil>
     <CDataCollectionUpgrade id="ZagaraCommanderShreddingClaws">

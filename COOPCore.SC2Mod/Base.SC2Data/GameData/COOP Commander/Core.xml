@@ -88,6 +88,10 @@
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="PhysicsDeathsVoidGround"/>
     </CActorUnit>
+    <CActorUnit default="1" id="CommanderGroundUnitBurrower" parent="CommanderGroundUnit">
+        <On Terms="UnitBirth.##unitName##@Burrowed" Send="Create"/>
+        <On Terms="UnitBirth.##unitName##@Burrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant,DontResetOnUnhide"/>
+    </CActorUnit>
     <!-- Weapons Template -->
     <CWeaponLegacy default="1" id="CommanderWeapon">
         <TargetFilters value="Visible;Missile,Dead,Hidden"/>

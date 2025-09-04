@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="ZagaraCommanderZerglingDodgeChance">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^,Amount" Value="{DataCollection,ZagaraCommanderZerglingDodgeChance,UpgradeInfoUnitLifeArmorPerLevel * 100}"/>
+        <EffectArrayTemplate Reference="Behavior,^ParamId^,DamageResponse.Chance" Value="{DataCollection,ZagaraCommanderZerglingDodgeChance,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Zagara"/>
+        <MaxLevel value="30"/>
+        <LeaderAlias value=""/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-zagara-zerglingdodge.dds"/>
+    </CUpgrade>
+    <CUpgrade id="ZagaraCommanderHardenedCarapace">
+        <Icon value="Assets\Textures\btn-upgrade-zerg-hardenedcarapace.dds"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeMax" Value="10"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeStart" Value="10"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^@Burrowed,LifeMax" Value="10"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^@Burrowed,LifeStart" Value="10"/>
+        <EditorCategories value="Race:Zagara,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="ZagaraCommanderShreddingClaws">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zergling-armorshredding.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Zerg"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Zagara,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ZagaraCommanderZergling"/>
+    </CUpgrade>
+    <CUpgrade id="ZagaraCommanderAdrenalOverload">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-adrenalglands.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Zerg"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Weapon,^ParamId^,RateMultiplier" Value="0.4"/>
+        <EditorCategories value="Race:Zagara,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="ZagaraCommanderMetabolicBoost">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-metabolicboost.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Zerg"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,Speed" Value="1.746000"/>
+        <EditorCategories value="Race:Zagara,UpgradeType:Talents"/>
+    </CUpgrade>
+</Catalog>

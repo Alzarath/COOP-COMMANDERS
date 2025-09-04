@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderAdrenalOverloadCompleteOnly3499318896TechTreeCheat">
+        <Count Link="ZagaraCommanderAdrenalOverload" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderAdrenalOverloadQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ZagaraCommanderAdrenalOverload" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderHardenedCarapaceCompleteOnly2346380126TechTreeCheat">
+        <Count Link="ZagaraCommanderHardenedCarapace" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderHardenedCarapaceQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ZagaraCommanderHardenedCarapace" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderMetabolicBoostCompleteOnly3154718206TechTreeCheat">
+        <Count Link="ZagaraCommanderMetabolicBoost" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderMetabolicBoostQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ZagaraCommanderMetabolicBoost" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderShreddingClawsCompleteOnly4266628015TechTreeCheat">
+        <Count Link="ZagaraCommanderShreddingClaws" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderShreddingClawsQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ZagaraCommanderShreddingClaws" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZagaraCommanderZerglingDodgeChanceCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ZagaraCommanderZerglingDodgeChance" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementNot id="NotCountUpgradeZagaraCommanderAdrenalOverloadQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeZagaraCommanderAdrenalOverloadQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeZagaraCommanderHardenedCarapaceQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeZagaraCommanderHardenedCarapaceQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeZagaraCommanderMetabolicBoostQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeZagaraCommanderMetabolicBoostQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeZagaraCommanderShreddingClawsQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeZagaraCommanderShreddingClawsQueuedOrBetter"/>
+    </CRequirementNot>
+</Catalog>

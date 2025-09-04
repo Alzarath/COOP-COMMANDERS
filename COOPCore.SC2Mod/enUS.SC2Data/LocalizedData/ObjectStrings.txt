@@ -1,5 +1,7 @@
 ﻿Actor/Name/CommanderAirUnit=Commander Air Unit
+Actor/Name/CommanderBurrowedSplat=Commander Burrowed Splat
 Actor/Name/CommanderGroundUnit=Commander Ground Unit
+Actor/Name/CommanderGroundUnitBurrower=Commander Ground Unit Burrower
 Actor/Name/CommanderUnitBase=Commander Unit
 DataCollection/EditorSuffix/CommanderUpgradeLvLStats=(Level Stats)
 DataCollectionPattern/Name/CommanderAbilities_ABEffectInstant=Commander Abilities_AB (Effect Instant)

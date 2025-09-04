@@ -1,0 +1,4 @@
+﻿Button/Hotkey/ZagaraCommanderAdrenalOverload=A
+Button/Hotkey/ZagaraCommanderHardenedCarapace=C
+Button/Hotkey/ZagaraCommanderMetabolicBoost=M
+Button/Hotkey/ZagaraCommanderShreddingClaws=R

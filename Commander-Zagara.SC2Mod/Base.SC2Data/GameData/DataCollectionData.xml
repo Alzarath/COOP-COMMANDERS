@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionUnit id="ZagaraCommanderBaneling" parent="CommanderUnit">
+        <EditorCategories value="Race:Zagara,DataGroup:Unit,ObjectType:Unit,DataFamily:Coop"/>
+        <EditorIconSource value="Button"/>
+        <DataRecord Entry="Button,ZagaraCommanderBaneling"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderBaneling"/>
+        <Pattern value=""/>
+    </CDataCollectionUnit>
+    <CDataCollectionUpgrade id="ZagaraCommanderHardenedCarapace">
+        <EditorCategories value="DataGroup:Research,Race:Zagara,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Button,ZagaraCommanderHardenedCarapace"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderHardenedCarapace"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderHardenedCarapace@Use"/>
+        <DataRecord Entry="Upgrade,ZagaraCommanderHardenedCarapace"/>
+    </CDataCollectionUpgrade>
+    <CDataCollectionUpgrade id="ZagaraCommanderMetabolicBoost">
+        <EditorCategories value="Race:Zagara,DataGroup:Research,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Button,ZagaraCommanderMetabolicBoost"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderMetabolicBoost"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderMetabolicBoost@Use"/>
+        <DataRecord Entry="Upgrade,ZagaraCommanderMetabolicBoost"/>
+        <DataRecord Entry="Validator,ZagaraCommanderMetabolicBoost@Use"/>
+    </CDataCollectionUpgrade>
+    <CDataCollectionAbil id="ZagaraCommanderMorphZerglingToBaneling" parent="CommanderAbilityMorph">
+        <EditorCategories value="DataFamily:Coop,Race:Zagara,DataGroup:Ability,ObjectType:Other"/>
+        <DataRecord Entry="Abil,ZagaraCommanderMorphZerglingToBaneling"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUpgrade id="ZagaraCommanderShreddingClaws">
+        <EditorCategories value="Race:Zagara,DataGroup:Research,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Button,ZagaraCommanderShreddingClaws"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderShreddingClaws"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderShreddingClaws@Use"/>
+        <DataRecord Entry="Upgrade,ZagaraCommanderShreddingClaws"/>
+    </CDataCollectionUpgrade>
+    <CDataCollectionUnit id="ZagaraCommanderWeaponZergling" parent="CommanderWeaponInstant">
+        <EditorCategories value="DataGroup:Weapon,Race:Zagara,ObjectType:Other,DataFamily:Coop"/>
+        <DataRecord Entry="Actor,ZagaraCommanderWeaponZergling@Attack"/>
+        <DataRecord Entry="Actor,ZagaraCommanderWeaponZergling@SoundStart"/>
+        <DataRecord Entry="Behavior,ZagaraCommanderWeaponZergling@ArmorNegated"/>
+        <DataRecord Entry="Button,ZagaraCommanderWeaponZergling@1"/>
+        <DataRecord Entry="Button,ZagaraCommanderWeaponZergling@2"/>
+        <DataRecord Entry="Effect,ZagaraCommanderWeaponZergling@Set"/>
+        <DataRecord Entry="Effect,ZagaraCommanderWeaponZergling@ABArmorNegated"/>
+        <DataRecord Entry="Effect,ZagaraCommanderWeaponZergling@Damage"/>
+        <DataRecord Entry="Sound,ZagaraCommanderWeaponZergling@AttackLaunch"/>
+        <DataRecord Entry="Sound,ZagaraCommanderWeaponZergling@AttackImpact"/>
+        <DataRecord Entry="Weapon,ZagaraCommanderWeaponZergling"/>
+        <Pattern value=""/>
+        <TechInfoUpgradeUsed value="ZagaraCommanderAdrenalOverload"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZagaraCommanderZergling" parent="CommanderUnit">
+        <EditorCategories value="DataGroup:Unit,Race:Zagara,ObjectType:Unit,DataFamily:Coop"/>
+        <DataRecord Entry="Actor,ZagaraCommanderZergling"/>
+        <DataRecord Entry="Actor,ZagaraCommanderZergling@SoundDeath"/>
+        <DataRecord Entry="Actor,ZagaraCommanderZergling@DodgeImpact"/>
+        <DataRecord Entry="Actor,ZagaraCommanderZergling@BurrowedSplat"/>
+        <DataRecord Entry="Behavior,ZagaraCommanderZergling"/>
+        <DataRecord Entry="Button,ZagaraCommanderZergling"/>
+        <DataRecord Entry="Button,ZagaraCommanderZergling@3"/>
+        <DataRecord Entry="Button,ZagaraCommanderZergling@1"/>
+        <DataRecord Entry="Button,ZagaraCommanderZergling@2"/>
+        <DataRecord Entry="Button,ZagaraCommanderZergling@4"/>
+        <DataRecord Entry="Effect,ZagaraCommanderZergling"/>
+        <DataRecord Entry="Light,ZagaraCommanderZergling@Portrait"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@1"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathUpgrade"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathDisintegrate"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathFireUpgrade"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathEviscerateUpgrade"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@Death"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathEviscerate"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DeathFire"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@Portrait"/>
+        <DataRecord Entry="Model,ZagaraCommanderZergling@DodgeImpact"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@Death"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathFire"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathEviscerate"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@DeathVoice"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@Ready"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@What"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@Yes"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@Attack"/>
+        <DataRecord Entry="Sound,ZagaraCommanderZergling@Pissed"/>
+        <DataRecord Entry="Unit,ZagaraCommanderZergling@Burrowed"/>
+        <DataRecord Entry="Unit,ZagaraCommanderZergling"/>
+        <DataRecord Entry="Validator,ZagaraCommanderZergling@DeathByAcidUpgraded"/>
+        <DataRecord Entry="Validator,ZagaraCommanderZergling@DeathByFireUpgraded"/>
+        <DataRecord Entry="Validator,ZagaraCommanderZergling@DeathByEviscerateUpgraded"/>
+        <TechInfoUpgradeUsed value="ZagaraCommanderMetabolicBoost"/>
+        <TechInfoUpgradeUsed value="ZagaraCommanderHardenedCarapace"/>
+        <TechInfoUpgradeUsed value="ZagaraCommanderZerglingDodgeChance"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUpgrade id="ZagaraCommanderAdrenalOverload">
+        <EditorCategories value="Race:Zagara,DataGroup:Research,DataFamily:Coop,ObjectType:Other"/>
+        <DataRecord Entry="Button,ZagaraCommanderAdrenalOverload"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderAdrenalOverload"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderAdrenalOverload@Use"/>
+        <DataRecord Entry="Upgrade,ZagaraCommanderAdrenalOverload"/>
+    </CDataCollectionUpgrade>
+    <CDataCollectionAbil id="ZagaraCommanderZerglingBurrow" parent="CommanderAbilityMorph">
+        <EditorCategories value="DataGroup:Ability,Race:Zagara,ObjectType:Other,DataFamily:Coop"/>
+        <EditorIconSource value="Button"/>
+        <DataRecord Entry="Abil,ZagaraCommanderZerglingBurrow@Up"/>
+        <DataRecord Entry="Abil,ZagaraCommanderZerglingBurrow@Down"/>
+    </CDataCollectionAbil>
+    <CDataCollectionUnit id="ZagaraCommanderZerglingDodgeChance">
+        <EditorCategories value="Race:Zagara,ObjectType:Other,DataGroup:Mastery,DataFamily:Coop"/>
+        <DataRecord Entry="Requirement,ZagaraCommanderZerglingDodgeChance@Show"/>
+        <DataRecord Entry="Upgrade,ZagaraCommanderZerglingDodgeChance"/>
+        <DataRecord Entry="Validator,ZagaraCommanderZerglingDodgeChance@Use"/>
+        <UpgradeInfoUnitLifeArmorPerLevel value="0.015"/>
+    </CDataCollectionUnit>
+</Catalog>

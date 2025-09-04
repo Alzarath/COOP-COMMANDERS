@@ -1,0 +1,64 @@
+﻿Abil/Name/ZagaraCommanderMorphZerglingToBaneling=Morph Zergling To Splitterling
+Abil/Name/ZagaraCommanderZerglingBurrow@Down=Burrow
+Abil/Name/ZagaraCommanderZerglingBurrow@Up=Unburrow
+Behavior/Name/ZagaraCommanderWeaponZergling@ArmorNegated=Armor Negated
+Behavior/Tooltip/ZagaraCommanderWeaponZergling@ArmorNegated=This unit's armor has been reduced to 0.
+Button/Name/ZagaraCommanderAdrenalOverload=Evolve Adrenal Overload
+Button/Name/ZagaraCommanderBaneling=Morph to Baneling
+Button/Name/ZagaraCommanderHardenedCarapace=Evolve Hardened Carapace
+Button/Name/ZagaraCommanderMetabolicBoost=Evolve Metabolic Boost
+Button/Name/ZagaraCommanderShreddingClaws=Evolve Shredding Claws
+Button/Name/ZagaraCommanderWeaponZergling@1=Adrenal Overload
+Button/Name/ZagaraCommanderWeaponZergling@2=Shredding Claws
+Button/Name/ZagaraCommanderZergling=Morph to Zergling
+Button/Name/ZagaraCommanderZergling@1=Metabolic Boost
+Button/Name/ZagaraCommanderZergling@2=Hardened Carapace
+Button/Name/ZagaraCommanderZergling@3=Rapid Gestation
+Button/Name/ZagaraCommanderZergling@4=Evasion
+Button/Tooltip/ZagaraCommanderAdrenalOverload=Increases the attack speed of <c val="ffff8a">Zerglings</c> by 40%.
+Button/Tooltip/ZagaraCommanderBaneling=Splitter Strain<n/><n/>Suicide unit. Deals damage over a small area upon death. Splits into smaller units as it dies. <n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/ZagaraCommanderHardenedCarapace=<c val="ffff8a">Zerglings</c> gain +10 maximum life.
+Button/Tooltip/ZagaraCommanderMetabolicBoost=Increases the movement speed of <c val="ffff8a">Zerglings</c>.
+Button/Tooltip/ZagaraCommanderShreddingClaws=<c val="ffff8a">Zergling</c> attacks reduce their target's armor to 0 for <d ref="Behavior,ZagaraCommanderWeaponZergling@ArmorNegated,Duration"/> seconds.
+Button/Tooltip/ZagaraCommanderWeaponZergling@1=Attack speed increased by 40%.
+Button/Tooltip/ZagaraCommanderWeaponZergling@2=Zergling attacks reduce their target's armor to 0 for <d ref="Behavior,ZagaraCommanderWeaponZergling@ArmorNegated,Duration"/> seconds.
+Button/Tooltip/ZagaraCommanderZergling=Swarmling Strain<n/><n/>Fast melee unit. Spawns in groups of three. Morphs almost instantly. Can morph into a Baneling.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/ZagaraCommanderZergling@1=Movement speed increased by 60%.
+Button/Tooltip/ZagaraCommanderZergling@2=Zergling gains +10 maximum life.
+Button/Tooltip/ZagaraCommanderZergling@3=Morphs almost instantly. Spawns in groups of three.
+Button/Tooltip/ZagaraCommanderZergling@4=Zerglings have a <d ref="Effect,ZagaraCommanderZergling,Amount" precision="2"/>% chance to dodge an attack.
+Commander/Name/COOPZagara=Zagara
+DataCollection/Name/ZagaraCommanderAdrenalOverload=Adrenal Overload
+DataCollection/Name/ZagaraCommanderBaneling=Baneling
+DataCollection/Name/ZagaraCommanderHardenedCarapace=Hardened Carapace
+DataCollection/Name/ZagaraCommanderMetabolicBoost=Metabolic Boost
+DataCollection/Name/ZagaraCommanderMorphZerglingToBaneling=Morph Zergling To Baneling
+DataCollection/Name/ZagaraCommanderShreddingClaws=Shredding Claws
+DataCollection/Name/ZagaraCommanderWeaponZergling=Zergling
+DataCollection/Name/ZagaraCommanderZergling=Zergling
+DataCollection/Name/ZagaraCommanderZerglingBurrow=Zergling Burrow
+DataCollection/Name/ZagaraCommanderZerglingDodgeChance=Zergling Dodge Chance
+DocInfo/DescShort=Any
+DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/ZagaraCommanderWeaponZergling@ABArmorNegated=Apply Behavior
+Effect/Name/ZagaraCommanderWeaponZergling@Damage=Damage
+Effect/Name/ZagaraCommanderWeaponZergling@Set=Set
+Effect/Name/ZagaraCommanderZergling=Dodge Chance
+RequirementNode/Tooltip/CountUpgradeZagaraCommanderAdrenalOverloadCompleteOnly3499318896TechTreeCheat=Evolve Adrenal Overload at the Spawning Pool
+RequirementNode/Tooltip/CountUpgradeZagaraCommanderHardenedCarapaceCompleteOnly2346380126TechTreeCheat=Evolve Hardened Carapace at the Spawning Pool
+RequirementNode/Tooltip/CountUpgradeZagaraCommanderMetabolicBoostCompleteOnly3154718206TechTreeCheat=Evolve Metabolic Boost at the Spawning Pool
+RequirementNode/Tooltip/CountUpgradeZagaraCommanderShreddingClawsCompleteOnly4266628015TechTreeCheat=Evolve Shredding Claws at the Spawning Pool
+Unit/Name/COOP/ZagaraCommanderBaneling=Baneling
+Unit/Name/COOP/ZagaraCommanderZergling=Zergling
+Unit/Name/ZagaraCommanderBaneling=Baneling
+Unit/Name/ZagaraCommanderZerglig=Zergling
+Unit/Name/ZagaraCommanderZergling=Zergling
+UnitSubtitle/ZagaraCommanderBaneling=Swarmling Strain
+UnitSubtitle/ZagaraCommanderZerglig=Swarmling Strain
+UnitSubtitle/ZagaraCommanderZergling=Swarmling Strain
+Upgrade/Name/ZagaraCommanderAdrenalOverload=Adrenal Overload
+Upgrade/Name/ZagaraCommanderHardenedCarapace=Hardened Carapace
+Upgrade/Name/ZagaraCommanderMetabolicBoost=Metabolic Boost
+Upgrade/Name/ZagaraCommanderShreddingClaws=Shredding Claws
+Upgrade/Name/ZagaraCommanderZerglingDodgeChance=Zergling Dodge Chance
+Weapon/Name/ZagaraCommanderWeaponZergling=Claws

@@ -46,7 +46,7 @@
         <ScoreKillCostFactor index="Vespene" value="0"/>
         <SubgroupPriority value="108"/>
         <MinimapRadius value="0.375"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:FactionEvolved"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Zagara"/>
         <GlossaryCategory value="Unit/Category/ZergUnits"/>
         <GlossaryPriority value="52"/>
         <GlossaryStrongArray value="Marauder"/>
@@ -62,7 +62,10 @@
         <TauntDuration index="Cheer" value="5"/>
         <TauntDuration index="Dance" value="5"/>
     </CUnit>
-    <CUnit id="ZagaraCommanderBaneling" parent="CommanderGround_Zerg"/>
+    <CUnit id="ZagaraCommanderBaneling" parent="CommanderGround_Zerg">
+        <Race value="Zerg"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Zagara"/>
+    </CUnit>
     <CUnit id="ZagaraCommanderZergling@Burrowed" parent="CommanderGround_Zerg">
         <Name value="Unit/Name/COOP/ZagaraCommanderZergling"/>
         <Subtitle value="UnitSubtitle/ZagaraCommanderZergling"/>
@@ -135,7 +138,7 @@
         <ScoreResult value=""/>
         <SubgroupPriority value="108"/>
         <MinimapRadius value="0.375"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:FactionEvolved"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Zagara"/>
         <LeaderAlias value="ZagaraCommanderZergling"/>
         <HotkeyAlias value="ZagaraCommanderZergling"/>
         <GlossaryAlias value=""/>

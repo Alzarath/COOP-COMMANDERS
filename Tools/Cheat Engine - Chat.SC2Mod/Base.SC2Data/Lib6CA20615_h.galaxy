@@ -12,14 +12,17 @@ const int lib6CA20615_gv_sIZE_SELECT_RACE_BUTTON = 60;
 const int lib6CA20615_gv_kEY_OPEN_PANELS_ALT = c_keyModifierStateRequire;
 const int lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT = c_keyModifierStateIgnore;
 const int lib6CA20615_gv_kEY_OPEN_PANELS_CTRL = c_keyModifierStateIgnore;
-const int lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT = c_keyA;
-const int lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW = c_keyD;
 const int lib6CA20615_gv_cOUNT_BUTTONS = 64;
 const string lib6CA20615_gv_unitsBuffer = "CheatEngine.unit";
 const string lib6CA20615_gv_unitsStatsBuffer = "CheatEngine.unitstats";
 const string lib6CA20615_gv_unitsOrientationBuffer = "CheatEngine.unitorientation";
 
 // Structures
+struct lib6CA20615_gs_button {
+    int lv_btn;
+    string lv_abil;
+};
+
 struct lib6CA20615_gs_Cheat_Alliance {
     int lv_alliance_P1;
     int lv_alliance_P2;
@@ -84,6 +87,13 @@ struct lib6CA20615_gs_ButtonsRace {
 };
 
 // Variable Declarations
+int lib6CA20615_gv_dialog;
+lib6CA20615_gs_button[49] lib6CA20615_gv_button;
+unit lib6CA20615_gv_caster;
+int lib6CA20615_gv_abil;
+int lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT;
+int lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW;
+int lib6CA20615_gv_kEY_OPEN_PANELS_RACECHANGER;
 int lib6CA20615_gv_cOUNT_CATEGORIES;
 int lib6CA20615_gv_cOUNT_RACE;
 int lib6CA20615_gv_cURRENT_SIZE_BUFFER;
@@ -142,11 +152,14 @@ string lib6CA20615_gf_CheatType (string lp_cheat);
 string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_command, int lp_index);
 
 // Trigger Declarations
+trigger lib6CA20615_gt_Test;
 trigger lib6CA20615_gt_init;
 trigger lib6CA20615_gt_CheatCodeUnits;
 trigger lib6CA20615_gt_CheatCodePlayers;
 trigger lib6CA20615_gt_InitSelectRace;
 trigger lib6CA20615_gt_ChangeRace;
+trigger lib6CA20615_gt_showspawneruiselectrace;
+trigger lib6CA20615_gt_hidespawneruiselectrace;
 trigger lib6CA20615_gt_InitSpawnUnit;
 trigger lib6CA20615_gt_ReviveBuilder;
 trigger lib6CA20615_gt_TargetModOff;
@@ -162,7 +175,6 @@ trigger lib6CA20615_gt_hookdatatableview;
 trigger lib6CA20615_gt_updatedata;
 trigger lib6CA20615_gt_showdatatablewindow;
 trigger lib6CA20615_gt_hidedatatablewindow;
-trigger lib6CA20615_gt_Mouseclick;
 
 // Library Initialization
 void lib6CA20615_InitVariables ();

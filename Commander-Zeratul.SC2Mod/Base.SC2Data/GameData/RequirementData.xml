@@ -13,4 +13,5 @@
     <CRequirement id="ZeratulCommanderXelNagaProbe">
         <EditorCategories value="Race:Zeratul,TechType:Unit"/>
     </CRequirement>
+    <CRequirement id="ZeratulCommanderZeratul@Requirement"/>
 </Catalog>

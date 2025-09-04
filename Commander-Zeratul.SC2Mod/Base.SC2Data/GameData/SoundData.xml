@@ -370,4 +370,99 @@
         <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\Stalker\Stalker_What06.ogg" FacialGroup=""/>
         <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\Stalker\Stalker_What07.ogg" FacialGroup=""/>
     </CSound>
+    <CSound id="ZeratulCommanderZeratul@Attack" parent="CommanderVOAttack" unitName="ZeratulCommanderZeratul">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray>
+            <TemplateParam value=""/>
+            <File value="LocalizedData\Sounds\VO\Zeratul_Announcer\ZeratulA_BaseUnderAttack00.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+    </CSound>
+    <CSound id="ZeratulCommanderZeratul@Birth" parent="Voice">
+        <EditorCategories value="Race:Zeratul"/>
+    </CSound>
+    <CSound id="ZeratulCommanderZeratul@Help" parent="Voice">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray File="LocalizedData\Sounds\VO\Zeratul_Announcer\Clean\ZeratulA_AllyUnderAttack00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ZeratulCommanderZeratul@Pissed" parent="CommanderVOPissed" unitName="ZeratulCommanderZeratul">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray>
+            <TemplateParam value=""/>
+            <File value="LocalizedData\Sounds\VO\Zeratul_Announcer\Clean\ZeratulA_Transmission00.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+    </CSound>
+    <CSound id="ZeratulCommanderZeratul@Ready" parent="Ready">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray File="LocalizedData\Sounds\VO\Zeratul_Announcer\ZeratulA_StartGame00.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="ZeratulCommanderZeratul@What" parent="CommanderVOWhat" unitName="ZeratulCommanderZeratul">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray>
+            <TemplateParam value=""/>
+            <File value="LocalizedData\Sounds\VO\Zeratul_Announcer\Clean\ZeratulA_CalldownLaunch00.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+    </CSound>
+    <CSound id="ZeratulCommanderZeratul@Yes" parent="CommanderVOYes" unitName="ZeratulCommanderZeratul">
+        <EditorCategories value="Race:Zeratul"/>
+        <AssetArray>
+            <TemplateParam value=""/>
+            <File value="LocalizedData\Sounds\VO\Zeratul_Announcer\Clean\ZeratulA_Countdown00.ogg"/>
+            <LoopCount value="0"/>
+            <LoopTime value="0,0"/>
+            <Offset value="0,0"/>
+            <Pitch value="0.000000,0.000000"/>
+            <Volume value="0.000000,0.000000"/>
+            <Weight value="100"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitAnim value=""/>
+            <FacialFile value=""/>
+            <PortraitModel value=""/>
+            <PortraitActor value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+    </CSound>
 </Catalog>

@@ -1,11 +1,14 @@
-﻿Abil/Name/CheatBuild=Cheat - Build
+﻿Abil/Name/CastAbilPoint=Cast Abil (Point)
+Abil/Name/CheatBuild=Cheat - Build
 Abil/Name/CheatTrain=Cheat - Train
 Button/Name/BuildCheat=Cheat Spawn
+Button/Name/CastAbilPoint=Cast Abil (Point)
 Button/Name/CheatSpawn=Cheat Spawn
 Button/Name/TrainCheat=Cheat Spawn
 DocInfo/DescLong=Completely devoid of any description whatsoever.
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/CastAbilPoint=Cast Abil (Point)
 Param/Expression/lib_6CA20615_0762B21C=p1: ~A~<n/>p2: ~B~<n/>aspect: ~C~<n/>oneshot: ~D~
 Param/Expression/lib_6CA20615_1B3DECFC=Data Table: ~A~<n/>Orientation: ~B~
 Param/Expression/lib_6CA20615_2B42AD6F=Data Table: ~A~<n/>Orientation: ~B~

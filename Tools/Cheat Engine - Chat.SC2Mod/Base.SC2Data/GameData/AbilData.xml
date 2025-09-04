@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="CastAbilPoint">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Range value="1000"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CastAbilPoint"/>
+    </CAbilEffectTarget>
     <CAbilBuild id="CheatTrain">
         <FlagArray index="IgnoreFood" value="1"/>
         <FlagArray index="IgnoreUnitCost" value="1"/>

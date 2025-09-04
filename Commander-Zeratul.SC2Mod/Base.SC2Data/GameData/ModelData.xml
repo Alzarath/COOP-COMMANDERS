@@ -243,4 +243,18 @@
         <Model value="Assets\COOP\Zeratul\Portraits\Stalker_Zeratul_COOP_Portrait\Stalker_Zeratul_COOP_Portrait.m3"/>
         <EditorCategories value="Race:Zeratul"/>
     </CModel>
+    <CModel id="ZeratulCommanderZeratul">
+        <Model value="Assets\COOP\Zeratul\Units\Zeratul_Zeratul_COOP\Zeratul_Zeratul_COOP.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+    </CModel>
+    <CModel id="ZeratulCommanderZeratul@Death" parent="UnitDeath">
+        <Model value="Assets\Units\Protoss\DarkTemplarDeath\DarkTemplarDeath_01.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
+    <CModel id="ZeratulCommanderZeratul@Portrait" parent="Portrait">
+        <Model value="Assets\COOP\Zeratul\Portraits\DarkVoice_Zeratul_COOP_Portrait\DarkVoice_Zeratul_COOP_Portrait.m3"/>
+        <EditorCategories value="Race:Zeratul"/>
+    </CModel>
 </Catalog>

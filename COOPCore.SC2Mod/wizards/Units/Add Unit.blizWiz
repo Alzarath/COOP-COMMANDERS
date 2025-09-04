@@ -43,11 +43,6 @@
     <!-- Inputs -->
 
         <!-- Page 1 -->
-            <input id="SectionMakeUnit" type="WizardText">
-                <default value="СОЗДАНИЕ ЕДИНИЦЫ"/>
-                <color value="255,0,0"/>
-            </input>
-
             <input id="UnitName" type="CString">
                 <name>Unit Name</name>
             </input>
@@ -55,26 +50,27 @@
                 <name>Unit ID</name>
             </input>
             <input id="race" type="CRaceLink">
-                <name>Раса единицы</name>
+                <name>Race Unit</name>
+                <tooltip>You need to choose a specific commander.</tooltip>
             </input>
             <input id="parent" type="WizardMenu">
-                <name>Родитель</name>
+                <name>Parent</name>
                 <item text="Ground" value="Ground"/>
                 <item text="Air" value="Air"/>
                 <item text="Structure" value="Structure"/>
             </input>
             <input id="raceCommander" type="WizardMenu">
-                <name>Раса командира</name>
+                <name>General Race Commander</name>
                 <item text="Терран" value="Terr"/>
                 <item text="Зерг" value="Zerg"/>
                 <item text="Протосс" value="Prot"/>
             </input>
             <input id="isCommander" type="WizardCheckbox">
-                <name>Это для командира?</name>
+                <name>This is Commander?</name>
                 <default value="1"/>
             </input>
             <input id="Commander" type="WizardMenu">
-                <name>Это для командира?</name>
+                <name>Командир</name>
                 <condition id="createForCommander"/>
                 <item text="Рейнор" value="Raynor"/>
                 <item text="Керриган" value="Kerrigan"/>
@@ -130,32 +126,33 @@
         <!-- Page 2 -->
             <!-- Icons -->
             <input id="UnitIcon" type="CImagePath">
-                <name>Иконка юнита</name>
+                <name>Unit Icon</name>
                 <layout page="2" column="2"/>
             </input>
             <input id="LifeArmorIcon" type="CImagePath">
-                <name>Иконка Брони</name>
+                <name>Life Armor Icon</name>
                 <layout page="2" column="2"/>
             </input>
             <input id="WireframeIcon" type="CImagePath">
-                <name>Иконка каркаса</name>
+                <name>Wireframe Icon</name>
                 <layout page="2" column="2"/>
             </input>
 
             <!-- Model -->
             <input id="unitModel" type="CModelPath">
-                <name>Модель единицы</name>
+                <name>unit Model</name>
                 <layout page="2" column="3"/>
             </input>
             <input id="deathModel" type="CModelPath">
-                <name>Модель Смерти единицы</name>
+                <name>Death Model</name>
                 <layout page="2" column="3"/>
             </input>
             <input id="portraitModel" type="CModelPath">
-                <name>Портрет единицы</name>
+                <name>Portrait</name>
                 <layout page="2" column="3"/>
             </input>
             <input id="useFXA" type="WizardRadio">
+                <name>Use FXA Portrait?</name>
                 <item text="с FXA" value="isFacial"/>
                 <item text="Без FXA" value="notFacial"/>
                 <default value="notFacial"/>
@@ -164,15 +161,15 @@
 
         <!-- Page 3 -->
             <input id="BtnTooltip" type="CStringLink">
-                <name>Описание</name>
+                <name>Tooltip Button Train</name>
                 <layout page="3"/>
             </input>
             <input id="BtnText" type="CString">
-                <name>Название</name>
+                <name>Name Button Train</name>
                 <layout page="3"/>
             </input>
             <input id="BtnIcon" type="CImagePath">
-                <name>Иконка</name>
+                <name>Icon Button</name>
                 <layout page="3"/>
             </input>
 

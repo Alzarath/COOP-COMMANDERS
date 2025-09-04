@@ -22,6 +22,13 @@ void lib6CA20615_InitVariables () {
 
     lib6CA20615_InitVariables_completed = true;
 
+    lib6CA20615_gv_dialog = c_invalidDialogId;
+    for (init_i = 0; init_i <= 48; init_i += 1) {
+        lib6CA20615_gv_button[init_i].lv_btn = c_invalidDialogControlId;
+    }
+    lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT = c_keyS;
+    lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW = c_keyD;
+    lib6CA20615_gv_kEY_OPEN_PANELS_RACECHANGER = c_keyV;
     lib6CA20615_gv_mAXIMUM_SIZE_BUFFER = 127;
     lib6CA20615_gv_dummyIcon = "";
     for (init_i = 0; init_i <= 15; init_i += 1) {
@@ -1106,21 +1113,13 @@ void lib6CA20615_gf_DeathUnit (int lp_originPlayer, string lp_command) {
             break;
         }
 
-        if ((lib6CA20615_gf_StringIsUnitGrouppreset(StringWord(lp_command, lv_index_param)) != "") && (lv_units_IsDefined == false)) {
-            if ((lib6CA20615_gf_ValueOfCheatUnitGroup(lv_argument) != null)) {
-                lv_units = "unitvar";
-                lv__unitsmode = lv_argument;
+        if (((StringCase(lv_argument, false) == "numselect") || (lib6CA20615_gf_StringIsInteger(lv_argument) == true)) && (lv_number_IsDefined == false)) {
+            if ((StringCase(lv_argument, false) == "numselect")) {
+                lv_numberDeath = UnitGroupCount(UnitGroupSelected(lp_originPlayer), c_unitCountAlive);
             }
-            else if ((lib6CA20615_gf_StringIsUnitGrouppreset(lv_argument) == "all")) {
-                lv_units = "all";
+            else if ((lib6CA20615_gf_StringIsInteger(lv_argument) == true)) {
+                lv_numberDeath = StringToInt(lv_argument);
             }
-            else if ((lib6CA20615_gf_StringIsUnitGrouppreset(lv_argument) == "select")) {
-                lv_units = "select";
-            }
-            lv_units_IsDefined = true;
-        }
-        else if ((lib6CA20615_gf_StringIsInteger(lv_argument) == true) && (lv_number_IsDefined == false)) {
-            lv_numberDeath = StringToInt(lv_argument);
             lv_number_IsDefined = true;
         }
         else if ((lib6CA20615_gf_StringIsPlayerGrouppreset(lv_argument) == true) && (lv_players_IsDefined == false)) {
@@ -1134,6 +1133,19 @@ void lib6CA20615_gf_DeathUnit (int lp_originPlayer, string lp_command) {
                 lib6CA20615_gv_player_Cheat[lp_originPlayer].lv_deathUnits.lv_lastPlayerGroup = lib6CA20615_gf_ValueOfCheatPlayerGroup(lv_argument);
             }
             lv_players_IsDefined = true;
+        }
+        else if ((lib6CA20615_gf_StringIsUnitGrouppreset(lv_argument) != "") && (lv_units_IsDefined == false)) {
+            if ((lib6CA20615_gf_ValueOfCheatUnitGroup(lv_argument) != null)) {
+                lv_units = "unitvar";
+                lv__unitsmode = lv_argument;
+            }
+            else if ((lib6CA20615_gf_StringIsUnitGrouppreset(lv_argument) == "all")) {
+                lv_units = "all";
+            }
+            else if ((lib6CA20615_gf_StringIsUnitGrouppreset(lv_argument) == "select")) {
+                lv_units = "select";
+            }
+            lv_units_IsDefined = true;
         }
         else if ((lib6CA20615_gf_StringIsBool(lv_argument) == true) && (lv_remove_IsDefined == false)) {
             lv__removeUnit = libNtve_gf_ConvertStringToBoolean(lv_argument);
@@ -1557,6 +1569,123 @@ string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Test
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_Test_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_it;
+    int lv_itGlobal;
+    int lv_x;
+    int lv_y;
+    int lv_abilindex;
+
+    // Automatic Variable Declarations
+    const int auto017F3B5E_ae = 6;
+    const int auto017F3B5E_ai = 1;
+    const int auto998E5D18_ae = 8;
+    const int auto998E5D18_ai = 1;
+
+    // Variable Initialization
+    lv_itGlobal = -1;
+    lv_abilindex = 45;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogCreate(500, 400, c_anchorCenter, 0, 0, true);
+    lib6CA20615_gv_dialog = DialogLastCreated();
+    DialogSetVisible(DialogLastCreated(), PlayerGroupAll(), true);
+    lv_y = 1;
+    for ( ; ( (auto017F3B5E_ai >= 0 && lv_y <= auto017F3B5E_ae) || (auto017F3B5E_ai < 0 && lv_y >= auto017F3B5E_ae) ) ; lv_y += auto017F3B5E_ai ) {
+        lv_x = 1;
+        for ( ; ( (auto998E5D18_ai >= 0 && lv_x <= auto998E5D18_ae) || (auto998E5D18_ai < 0 && lv_x >= auto998E5D18_ae) ) ; lv_x += auto998E5D18_ai ) {
+            lv_itGlobal += 1;
+            if ((CatalogEntryClass(c_gameCatalogAbil, CatalogEntryGet(c_gameCatalogAbil, lv_itGlobal)) != c_classIdCAbilEffectTarget)) {
+                lv_x -= 1;
+                Wait(0.0625, c_timeGame);
+                continue;
+            }
+
+            DialogControlCreate(DialogLastCreated(), c_triggerControlTypeButton);
+            lib6CA20615_gv_button[lv_it].lv_btn = DialogControlLastCreated();
+            DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 50, 50);
+            DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopLeft, (50 * lv_x), (50 * lv_y));
+            lib6CA20615_gv_button[lv_it].lv_abil = ((CatalogEntryGet(c_gameCatalogAbil, (lv_abilindex + lv_itGlobal))));
+            libNtve_gf_SetDialogItemTooltip(DialogControlLastCreated(), StringExternal(CatalogFieldValueGet(c_gameCatalogAbil, lib6CA20615_gv_button[lv_it].lv_abil, "Name", c_playerAny)), PlayerGroupAll());
+            lv_it += 1;
+        }
+    }
+    UnitCreate(1, "CheatBuild", c_unitCreateIgnorePlacement, 1, Point(0.0, 0.0), 270.0);
+    lib6CA20615_gv_caster = UnitLastCreated();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_Test_Init () {
+    lib6CA20615_gt_Test = TriggerCreate("lib6CA20615_gt_Test_Func");
+    TriggerAddEventMapInit(lib6CA20615_gt_Test);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Cast Abil
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_CastAbil_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unitgroup lv_unit;
+    bool lv_bool;
+
+    // Automatic Variable Declarations
+    const int auto2BE82E44_ae = 48;
+    int auto2BE82E44_var;
+
+    // Variable Initialization
+    lv_unit = libNtve_gf_ConvertUnitToUnitGroup(lib6CA20615_gv_caster);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto2BE82E44_var = 0;
+    for ( ; auto2BE82E44_var <= auto2BE82E44_ae; auto2BE82E44_var += 1 ) {
+        if ((EventDialogControl() == lib6CA20615_gv_button[auto2BE82E44_var].lv_btn)) {
+            lv_bool = true;
+            TriggerDebugOutput(1, StringExternal(CatalogFieldValueGet(c_gameCatalogAbil, lib6CA20615_gv_button[auto2BE82E44_var].lv_abil, "Name", c_playerAny)), true);
+            CatalogFieldValueSet(c_gameCatalogEffect, "CastAbilPoint", "EffectArray[" + IntToString(0) + "]", EventPlayer(), CatalogFieldValueGet(c_gameCatalogAbil, lib6CA20615_gv_button[auto2BE82E44_var].lv_abil, "Effect[" + IntToString(0) + "]", c_playerAny));
+        }
+
+    }
+    if ((lv_bool == true)) {
+        Wait(0.0625, c_timeGame);
+        UISetTargetingOrder(PlayerGroupSingle(1), lv_unit, OrderTargetingPoint(AbilityCommand("CastAbilPoint", 0), Point(0.0, 0.0)), true);
+        Wait(5.0, c_timeGame);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_CastAbil_Init () {
+    lib6CA20615_gt_CastAbil = TriggerCreate("lib6CA20615_gt_CastAbil_Func");
+    TriggerAddEventDialogControl(lib6CA20615_gt_CastAbil, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Set Abil
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_SetAbil_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_SetAbil_Init () {
+    lib6CA20615_gt_SetAbil = TriggerCreate("lib6CA20615_gt_SetAbil_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: init
 //--------------------------------------------------------------------------------------------------
 bool lib6CA20615_gt_init_Func (bool testConds, bool runActions) {
@@ -1819,6 +1948,60 @@ bool lib6CA20615_gt_ChangeRace_Func (bool testConds, bool runActions) {
 void lib6CA20615_gt_ChangeRace_Init () {
     lib6CA20615_gt_ChangeRace = TriggerCreate("lib6CA20615_gt_ChangeRace_Func");
     TriggerAddEventDialogControl(lib6CA20615_gt_ChangeRace, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: show spawner ui (select race)
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_showspawneruiselectrace_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventKeyPressed() == lib6CA20615_gv_kEY_OPEN_PANELS_RACECHANGER))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogControlSetVisible(lib6CA20615_gv_frameSelectorRace, PlayerGroupSingle(EventPlayer()), true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_showspawneruiselectrace_Init () {
+    lib6CA20615_gt_showspawneruiselectrace = TriggerCreate("lib6CA20615_gt_showspawneruiselectrace_Func");
+    TriggerAddEventKeyPressed(lib6CA20615_gt_showspawneruiselectrace, c_playerAny, c_keyNone, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: hide spawner ui (select race)
+//--------------------------------------------------------------------------------------------------
+bool lib6CA20615_gt_hidespawneruiselectrace_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventKeyPressed() == lib6CA20615_gv_kEY_OPEN_PANELS_RACECHANGER))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogControlSetVisible(lib6CA20615_gv_frameSelectorRace, PlayerGroupSingle(EventPlayer()), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6CA20615_gt_hidespawneruiselectrace_Init () {
+    lib6CA20615_gt_hidespawneruiselectrace = TriggerCreate("lib6CA20615_gt_hidespawneruiselectrace_Func");
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawneruiselectrace, c_playerAny, c_keyNone, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2090,6 +2273,13 @@ void lib6CA20615_gt_GenerateCategories_Init () {
 //--------------------------------------------------------------------------------------------------
 bool lib6CA20615_gt_showspawnerui_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventKeyPressed() == lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT))) {
+            return false;
+        }
+    }
+
     // Actions
     if (!runActions) {
         return true;
@@ -2102,7 +2292,7 @@ bool lib6CA20615_gt_showspawnerui_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_showspawnerui_Init () {
     lib6CA20615_gt_showspawnerui = TriggerCreate("lib6CA20615_gt_showspawnerui_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_showspawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_showspawnerui, c_playerAny, c_keyNone, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2110,6 +2300,13 @@ void lib6CA20615_gt_showspawnerui_Init () {
 //--------------------------------------------------------------------------------------------------
 bool lib6CA20615_gt_hidespawnerui_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventKeyPressed() == lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT))) {
+            return false;
+        }
+    }
+
     // Actions
     if (!runActions) {
         return true;
@@ -2122,7 +2319,7 @@ bool lib6CA20615_gt_hidespawnerui_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_hidespawnerui_Init () {
     lib6CA20615_gt_hidespawnerui = TriggerCreate("lib6CA20615_gt_hidespawnerui_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_SPAWNUNIT, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidespawnerui, c_playerAny, c_keyNone, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2380,6 +2577,13 @@ void lib6CA20615_gt_updatedata_Init () {
 //--------------------------------------------------------------------------------------------------
 bool lib6CA20615_gt_showdatatablewindow_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventKeyPressed() == lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW))) {
+            return false;
+        }
+    }
+
     // Actions
     if (!runActions) {
         return true;
@@ -2392,7 +2596,7 @@ bool lib6CA20615_gt_showdatatablewindow_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_showdatatablewindow_Init () {
     lib6CA20615_gt_showdatatablewindow = TriggerCreate("lib6CA20615_gt_showdatatablewindow_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_showdatatablewindow, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_showdatatablewindow, c_playerAny, c_keyNone, true, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2400,6 +2604,13 @@ void lib6CA20615_gt_showdatatablewindow_Init () {
 //--------------------------------------------------------------------------------------------------
 bool lib6CA20615_gt_hidedatatablewindow_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((EventKeyPressed() == lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW))) {
+            return false;
+        }
+    }
+
     // Actions
     if (!runActions) {
         return true;
@@ -2412,54 +2623,20 @@ bool lib6CA20615_gt_hidedatatablewindow_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_hidedatatablewindow_Init () {
     lib6CA20615_gt_hidedatatablewindow = TriggerCreate("lib6CA20615_gt_hidedatatablewindow_Func");
-    TriggerAddEventKeyPressed(lib6CA20615_gt_hidedatatablewindow, c_playerAny, lib6CA20615_gv_kEY_OPEN_PANELS_DATATABLEVIEW, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Mouse click
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_Mouseclick_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    point lv_center;
-    fixed lv_angle;
-    fixed lv_distance;
-
-    // Automatic Variable Declarations
-    unitgroup autoD750F029_g;
-    int autoD750F029_u;
-    unit autoD750F029_var;
-
-    // Variable Initialization
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    UnitCreate(1, "System_Snapshot_Dummy", 0, 1, PointWithOffsetPolar(lv_center, 5.0, 140.0), 270.0);
-    autoD750F029_g = UnitLastCreatedGroup();
-    autoD750F029_u = UnitGroupCount(autoD750F029_g, c_unitCountAll);
-    for (;; autoD750F029_u -= 1) {
-        autoD750F029_var = UnitGroupUnitFromEnd(autoD750F029_g, autoD750F029_u);
-        if (autoD750F029_var == null) { break; }
-        lv_distance = DistanceBetweenPoints(UnitGetPosition(autoD750F029_var), UnitGroupCenterOfGroup(UnitLastCreatedGroup()));
-        lv_angle = AngleBetweenPoints(UnitGroupCenterOfGroup(UnitLastCreatedGroup()), UnitGetPosition(autoD750F029_var));
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_Mouseclick_Init () {
-    lib6CA20615_gt_Mouseclick = TriggerCreate("lib6CA20615_gt_Mouseclick_Func");
-    TriggerAddEventMouseClicked(lib6CA20615_gt_Mouseclick, c_playerAny, c_mouseButtonLeft, true);
+    TriggerAddEventKeyPressed(lib6CA20615_gt_hidedatatablewindow, c_playerAny, c_keyNone, false, lib6CA20615_gv_kEY_OPEN_PANELS_SHIFT, lib6CA20615_gv_kEY_OPEN_PANELS_CTRL, lib6CA20615_gv_kEY_OPEN_PANELS_ALT);
 }
 
 void lib6CA20615_InitTriggers () {
+    lib6CA20615_gt_Test_Init();
+    lib6CA20615_gt_CastAbil_Init();
+    lib6CA20615_gt_SetAbil_Init();
     lib6CA20615_gt_init_Init();
     lib6CA20615_gt_CheatCodeUnits_Init();
     lib6CA20615_gt_CheatCodePlayers_Init();
     lib6CA20615_gt_InitSelectRace_Init();
     lib6CA20615_gt_ChangeRace_Init();
+    lib6CA20615_gt_showspawneruiselectrace_Init();
+    lib6CA20615_gt_hidespawneruiselectrace_Init();
     lib6CA20615_gt_InitSpawnUnit_Init();
     lib6CA20615_gt_ReviveBuilder_Init();
     lib6CA20615_gt_TargetModOff_Init();
@@ -2475,7 +2652,6 @@ void lib6CA20615_InitTriggers () {
     lib6CA20615_gt_updatedata_Init();
     lib6CA20615_gt_showdatatablewindow_Init();
     lib6CA20615_gt_hidedatatablewindow_Init();
-    lib6CA20615_gt_Mouseclick_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

@@ -189,4 +189,21 @@
         <DataRecord Entry="Sound,ZeratulCommanderXelNagaProbe@Pissed"/>
         <DataRecord Entry="Requirement,ZeratulCommanderXelNagaProbe"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit id="ZeratulCommanderZeratul" parent="CommanderUnit">
+        <EditorCategories value="ObjectType:Unit,DataGroup:Unit,Race:Zeratul"/>
+        <DataRecord Entry="Button,ZeratulCommanderZeratul"/>
+        <DataRecord Entry="Actor,ZeratulCommanderZeratul"/>
+        <DataRecord Entry="Model,ZeratulCommanderZeratul@Death"/>
+        <DataRecord Entry="Model,ZeratulCommanderZeratul@Portrait"/>
+        <DataRecord Entry="Model,ZeratulCommanderZeratul"/>
+        <DataRecord Entry="Requirement,ZeratulCommanderZeratul@Requirement"/>
+        <DataRecord Entry="Sound,ZeratulCommanderZeratul@Birth"/>
+        <DataRecord Entry="Sound,ZeratulCommanderZeratul@Ready"/>
+        <DataRecord Entry="Sound,ZeratulCommanderZeratul@Help"/>
+        <DataRecord Entry="Sound,ZeratulCommanderZeratul@What"/>
+        <DataRecord Entry="Sound,ZeratulCommanderZeratul@Yes"/>
+        <DataRecord Entry="Sound,ZeratulCommanderZeratul@Attack"/>
+        <DataRecord Entry="Sound,ZeratulCommanderZeratul@Pissed"/>
+        <DataRecord Entry="Unit,ZeratulCommanderZeratul"/>
+    </CDataCollectionUnit>
 </Catalog>

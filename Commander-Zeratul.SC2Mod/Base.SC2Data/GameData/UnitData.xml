@@ -178,4 +178,16 @@
         <MinimapRadius value="0.65"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Zeratul"/>
     </CUnit>
+    <CUnit id="ZeratulCommanderZeratul" parent="CommanderGround_Prot">
+        <Race value="COOPZeratul"/>
+        <LifeStart value="150"/>
+        <LifeMax value="150"/>
+        <LifeArmor value="1"/>
+        <LifeRegenRate value="1"/>
+        <ShieldsStart value="450"/>
+        <ShieldsMax value="450"/>
+        <ShieldRegenRate value="15"/>
+        <Speed value="3"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop,Race:Zeratul"/>
+    </CUnit>
 </Catalog>

@@ -116,4 +116,14 @@
         <HighlightTooltip value="Unit/Name/Bogus"/>
         <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulprobe.dds"/>
     </CActorUnit>
+    <CActorUnit id="ZeratulCommanderZeratul" parent="CommanderGroundUnit" unitName="ZeratulCommanderZeratul">
+        <WalkAnimMoveSpeed value="3"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-protoss-zeratulcoop.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-zeratulcoop.dds"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulcoop.dds"/>
+    </CActorUnit>
 </Catalog>

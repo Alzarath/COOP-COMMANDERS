@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CButton id="CastAbilPoint">
+        <Icon value="Assets\Textures\aicommand_assault1.dds"/>
+    </CButton>
     <CButton id="TrainCheat1"/>
     <CButton id="TrainCheat2"/>
     <CButton id="TrainCheat3"/>

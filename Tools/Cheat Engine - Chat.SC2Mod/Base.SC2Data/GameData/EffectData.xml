@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectSet id="CastAbilPoint">
+        <EditorCategories value=""/>
+        <EffectArray value=""/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+</Catalog>

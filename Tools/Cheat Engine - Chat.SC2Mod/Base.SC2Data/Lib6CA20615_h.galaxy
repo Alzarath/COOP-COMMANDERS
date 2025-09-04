@@ -153,8 +153,6 @@ string lib6CA20615_gf_CheckParametersForCheatnumber (string lp_cheat, string lp_
 
 // Trigger Declarations
 trigger lib6CA20615_gt_Test;
-trigger lib6CA20615_gt_CastAbil;
-trigger lib6CA20615_gt_SetAbil;
 trigger lib6CA20615_gt_init;
 trigger lib6CA20615_gt_CheatCodeUnits;
 trigger lib6CA20615_gt_CheatCodePlayers;

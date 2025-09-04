@@ -28,7 +28,6 @@
             <Variable Type="Variable" Library="6CA20615" Id="C617A4FD"/>
             <Variable Type="Variable" Library="6CA20615" Id="82DDD566"/>
             <Variable Type="Variable" Library="6CA20615" Id="D52EDED4"/>
-            <Event Type="FunctionCall" Library="6CA20615" Id="4074DF8E"/>
             <Action Type="FunctionCall" Library="6CA20615" Id="F794DC68"/>
             <Action Type="FunctionCall" Library="6CA20615" Id="1BF5B49F"/>
             <Action Type="FunctionCall" Library="6CA20615" Id="801DDEF2"/>
@@ -85,9 +84,6 @@
         <Element Type="Param" Id="217013B3">
             <Value>45</Value>
             <ValueType Type="int"/>
-        </Element>
-        <Element Type="FunctionCall" Id="4074DF8E">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
         </Element>
         <Element Type="FunctionCall" Id="F794DC68">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="BD9AF7D6"/>
@@ -739,6 +735,7 @@
             <Preset Type="PresetValue" Library="Ntve" Id="C9DCA6C0"/>
         </Element>
         <Element Type="Trigger" Id="5382F3E8">
+            <Disabled/>
             <Variable Type="Variable" Library="6CA20615" Id="43ACDCEC"/>
             <Variable Type="Variable" Library="6CA20615" Id="F82046E5"/>
             <Event Type="FunctionCall" Library="6CA20615" Id="2171C184"/>
@@ -1127,6 +1124,7 @@
             <Preset Type="PresetValue" Library="Ntve" Id="00000013"/>
         </Element>
         <Element Type="Trigger" Id="21936220">
+            <Disabled/>
         </Element>
         <Element Type="Variable" Id="5CA6C4AA">
             <VariableType>

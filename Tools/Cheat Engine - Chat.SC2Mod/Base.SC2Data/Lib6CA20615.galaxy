@@ -1625,64 +1625,6 @@ bool lib6CA20615_gt_Test_Func (bool testConds, bool runActions) {
 //--------------------------------------------------------------------------------------------------
 void lib6CA20615_gt_Test_Init () {
     lib6CA20615_gt_Test = TriggerCreate("lib6CA20615_gt_Test_Func");
-    TriggerAddEventMapInit(lib6CA20615_gt_Test);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Cast Abil
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_CastAbil_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    unitgroup lv_unit;
-    bool lv_bool;
-
-    // Automatic Variable Declarations
-    const int auto2BE82E44_ae = 48;
-    int auto2BE82E44_var;
-
-    // Variable Initialization
-    lv_unit = libNtve_gf_ConvertUnitToUnitGroup(lib6CA20615_gv_caster);
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    auto2BE82E44_var = 0;
-    for ( ; auto2BE82E44_var <= auto2BE82E44_ae; auto2BE82E44_var += 1 ) {
-        if ((EventDialogControl() == lib6CA20615_gv_button[auto2BE82E44_var].lv_btn)) {
-            lv_bool = true;
-            TriggerDebugOutput(1, StringExternal(CatalogFieldValueGet(c_gameCatalogAbil, lib6CA20615_gv_button[auto2BE82E44_var].lv_abil, "Name", c_playerAny)), true);
-            CatalogFieldValueSet(c_gameCatalogEffect, "CastAbilPoint", "EffectArray[" + IntToString(0) + "]", EventPlayer(), CatalogFieldValueGet(c_gameCatalogAbil, lib6CA20615_gv_button[auto2BE82E44_var].lv_abil, "Effect[" + IntToString(0) + "]", c_playerAny));
-        }
-
-    }
-    if ((lv_bool == true)) {
-        Wait(0.0625, c_timeGame);
-        UISetTargetingOrder(PlayerGroupSingle(1), lv_unit, OrderTargetingPoint(AbilityCommand("CastAbilPoint", 0), Point(0.0, 0.0)), true);
-        Wait(5.0, c_timeGame);
-    }
-
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_CastAbil_Init () {
-    lib6CA20615_gt_CastAbil = TriggerCreate("lib6CA20615_gt_CastAbil_Func");
-    TriggerAddEventDialogControl(lib6CA20615_gt_CastAbil, c_playerAny, c_invalidDialogControlId, c_triggerControlEventTypeClick);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Set Abil
-//--------------------------------------------------------------------------------------------------
-bool lib6CA20615_gt_SetAbil_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6CA20615_gt_SetAbil_Init () {
-    lib6CA20615_gt_SetAbil = TriggerCreate("lib6CA20615_gt_SetAbil_Func");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2628,8 +2570,6 @@ void lib6CA20615_gt_hidedatatablewindow_Init () {
 
 void lib6CA20615_InitTriggers () {
     lib6CA20615_gt_Test_Init();
-    lib6CA20615_gt_CastAbil_Init();
-    lib6CA20615_gt_SetAbil_Init();
     lib6CA20615_gt_init_Init();
     lib6CA20615_gt_CheatCodeUnits_Init();
     lib6CA20615_gt_CheatCodePlayers_Init();
